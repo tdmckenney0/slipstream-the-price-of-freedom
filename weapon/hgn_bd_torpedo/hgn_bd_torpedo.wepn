@@ -1,0 +1,16 @@
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","Hgn_BD_ClusterTorpedoA","Normal Only",120,5000,0,0,0,0,1,0,1,15,0,0,1,1,0,0,0.1,"Normal",1,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",400,500,"")
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",10,40,"")
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"Vgr_SmallMissileBurst")
+setPenetration(NewWeaponType,60,0.5,{
+  LightArmour = 0.8,
+},{
+  ResArmour = 0.6,
+},{
+  PlanetKillerArmour = 0,
+},{
+  unarmoured = 0.02,
+})
+setAccuracy(NewWeaponType,1)
+setAngles(NewWeaponType,179,0,0,0,0)
+setMiscValues(NewWeaponType,0,1)

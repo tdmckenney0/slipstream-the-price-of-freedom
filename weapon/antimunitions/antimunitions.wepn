@@ -1,0 +1,31 @@
+-- LuaDC version 0.9.20
+-- 9/9/2007 3:54:31 AM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+StartWeaponConfig(NewWeaponType, "AnimatedTurret", "InstantHit", "Laser", "Normal", 0, 6000, 0, 4, 2, 0, 20, 0, 1, 12, 0, 0, 1, 0, 20, 20, 0.1, "Normal", 1, 0, 1000)
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 1000, 1000, "")
+setPenetration(NewWeaponType, 30, 1, 
+{ 
+    PlanetKillerArmour = 0, 
+}, 
+{ 
+    Unarmoured = 1.0, 
+}, 
+{ 
+    LightArmour = 0.5, 
+}, 
+{ 
+    ResArmour = 0.5, })
+setAccuracy(NewWeaponType, 1, 
+{ 
+    Fighter = 0.0, 
+}, 
+{ 
+    Corvette = 0.0, 
+}, 
+{ 
+    munition = 0.9, })
+setAngles(NewWeaponType, 20, -180, 180, -4, 60)
+setMiscValues(NewWeaponType, 0, 0.5)
+addAnimTurretSound(NewWeaponType, "Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

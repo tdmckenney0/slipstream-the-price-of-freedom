@@ -1,0 +1,11 @@
+StartWeaponConfig(NewWeaponType,"Fixed","SphereBurst","hgn_BD_torpedolauncher","Normal",0,0,32,2,0,0,10,0,0,0,0,0,0,0,0,0,0.1,"Normal",1,0,0)
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",10,20,"")
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",10,25,"")
+setPenetration(NewWeaponType,5,1,{
+    unarmoured = 1,
+},{
+  lightarmour = 0.38,
+},{
+  PlanetKillerArmour = 0,
+})
+setAngles(NewWeaponType,180,0,0,0,0)

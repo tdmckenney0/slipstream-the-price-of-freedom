@@ -1,0 +1,188 @@
+fx = {
+style = "STYLE_HYPERSPACE",
+properties = {
+property_09 = {
+name = "EdgeColour",
+type = "VARTYPE_ARRAY_TIMECOLOUR",
+value = {
+entry_00 = {
+0,
+1,
+1,
+1,
+0,
+},
+entry_01 = {
+1,
+1,
+1,
+1,
+0,
+},
+},
+},
+property_14 = {
+name = "EdgeTexture2",
+type = "VARTYPE_STRING",
+value = "",
+},
+property_13 = {
+name = "EdgeTexture",
+type = "VARTYPE_STRING",
+value = "",
+},
+property_06 = {
+name = "EdgeTexture2_U_Offset",
+type = "VARTYPE_ARRAY_TIMEFLOAT",
+value = {
+0,
+0.33333,
+1,
+0,
+},
+},
+property_05 = {
+name = "EdgeTexture_U_Repeat",
+type = "VARTYPE_ARRAY_TIMEFLOAT",
+value = {
+0,
+0,
+1,
+0,
+},
+},
+property_08 = {
+name = "Colour",
+type = "VARTYPE_ARRAY_TIMECOLOUR",
+value = {
+entry_00 = {
+0,
+1,
+1,
+1,
+0.33962,
+},
+entry_01 = {
+1,
+1,
+1,
+1,
+1,
+},
+},
+},
+property_07 = {
+name = "EdgeTexture2_U_Repeat",
+type = "VARTYPE_ARRAY_TIMEFLOAT",
+value = {
+0,
+0,
+1,
+0,
+},
+},
+property_02 = {
+name = "Offset",
+type = "VARTYPE_ARRAY_TIMEVECTOR3",
+value = {
+entry_00 = {
+0,
+0,
+0,
+1.20000,
+},
+entry_01 = {
+0.34328,
+0,
+0,
+0.50000,
+},
+entry_02 = {
+0.70299,
+0,
+0,
+-0.50000,
+},
+entry_03 = {
+1,
+0,
+0,
+-1.20000,
+},
+},
+},
+property_01 = {
+name = "Height",
+type = "VARTYPE_ARRAY_TIMEFLOAT",
+value = {
+0,
+0,
+0.12500,
+3,
+0.87125,
+3,
+1,
+0,
+},
+},
+property_04 = {
+name = "EdgeTexture_U_Offset",
+type = "VARTYPE_ARRAY_TIMEFLOAT",
+value = {
+0,
+0,
+1,
+1.20000,
+},
+},
+property_03 = {
+name = "LineWidth",
+type = "VARTYPE_ARRAY_TIMEFLOAT",
+value = {
+0,
+0,
+0.01750,
+0.89167,
+0.29500,
+0.89167,
+0.33750,
+1.75000,
+0.80875,
+1.74584,
+0.86750,
+0.55000,
+1,
+0.55000,
+},
+},
+property_12 = {
+name = "Texture",
+type = "VARTYPE_STRING",
+value = "DATA:ART/FX/HYPERSPACE FX/HYPERSPACE_EFFECT_BEAM.TGA",
+},
+property_11 = {
+name = "Blending",
+type = "VARTYPE_INT",
+value = 1,
+},
+property_00 = {
+name = "Width",
+type = "VARTYPE_ARRAY_TIMEFLOAT",
+value = {
+0,
+0,
+0.12625,
+3.13333,
+0.87500,
+3.13333,
+1,
+0,
+},
+},
+property_10 = {
+name = "Duration",
+type = "VARTYPE_FLOAT",
+value = 3,
+},
+},
+}
