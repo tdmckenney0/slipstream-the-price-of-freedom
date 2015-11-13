@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "Defender"
-NewShipType.sobDescription = "Defender\nDesignation: Anti-Strike Fighter\nManufacturer: Paktu Defence Systems"
-NewShipType.maxhealth = 70
+NewShipType.sobDescription = "Defender\nDesignation: Anti-Strike Fighter\nManufacturer: "
+NewShipType.maxhealth = 150
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -16,8 +16,8 @@ NewShipType.defensiveFormation = "Delta"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 10
 NewShipType.collisionMultiplier = 3
-NewShipType.thrusterMaxSpeed = 255
-NewShipType.mainEngineMaxSpeed = 255
+NewShipType.thrusterMaxSpeed = 400
+NewShipType.mainEngineMaxSpeed = 400
 NewShipType.rotationMaxSpeed = 205
 NewShipType.thrusterAccelTime = 2
 NewShipType.thrusterBrakeTime = 1
@@ -153,12 +153,9 @@ addAbility(NewShipType,"GuardCommand",1,3000,500)
 addAbility(NewShipType,"HyperspaceViaGateCommand",1,3,1,0.3)
 addAbility(NewShipType,"RetireAbility",1,0)
 LoadModel(NewShipType,1)
-StartShipWeaponConfig(NewShipType,"hgn_defendergun","Weapon_FrontGun","Fire")
-StartShipWeaponConfig(NewShipType,"hgn_defendergun","Weapon_R1","Fire")
-StartShipWeaponConfig(NewShipType,"hgn_defendergun","Weapon_R2","Fire")
-StartShipWeaponConfig(NewShipType,"hgn_defendergunImp","Weapon_FrontGun","Fire")
-StartShipWeaponConfig(NewShipType,"hgn_defendergunImp","Weapon_R1","Fire")
-StartShipWeaponConfig(NewShipType,"hgn_defendergunImp","Weapon_R2","Fire")
+StartShipWeaponConfig(NewShipType,"hgn_defendergun","Weapon_FrontGun","")
+StartShipWeaponConfig(NewShipType,"kpr_kineticdriverattackdroid","Weapon_R1","")
+StartShipWeaponConfig(NewShipType,"kpr_kineticdriverattackdroid","Weapon_R2","")
 addShield(NewShipType,"EMP",75,20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2

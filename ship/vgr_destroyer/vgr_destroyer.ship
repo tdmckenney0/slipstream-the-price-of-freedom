@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "$1634"
 NewShipType.sobDescription = "$1635"
-NewShipType.maxhealth = 85000
+NewShipType.maxhealth = 500000
 NewShipType.regentime = 1500
 NewShipType.minRegenTime = 450
 NewShipType.sideArmourDamage = 1
@@ -171,9 +171,9 @@ addShield(NewShipType, "EMP", 1000, 20)
 
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_Des_Engine", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret_Top", "System", "Innate", "Damageable", "vgr_DT1_Turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret_Top", "System", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Bottom_Turret", "Hardpoint_Turret_Bot", "System", "Innate", "Damageable", "vgr_DT1_Turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Bottom_Turret", "Hardpoint_Turret_Bot", "System", "Innate", "Damageable", "Vgr_railgun_turret", "", "", "", "", "", "", "", "")
 
 
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)

@@ -9,7 +9,7 @@ NewMainMenu =
         backgroundColor = 
             { 0, 0, 0, 255, }, }, 
     pixelUVCoords = 1, 
-; 
+;
 { 
     type = "Frame", 
     position = 
@@ -173,9 +173,9 @@ NewMainMenu =
     type = "TextButton", 
     buttonStyle = "", 
     text = "", 
-    name = "btnExit", 
+    name = "", 
     width = 240, 
-    onMouseClicked = "UI_ExitApp();", }, 
+    onMouseClicked = "", }, 
 }, 
 { 
     type = "Frame", 
@@ -193,17 +193,26 @@ NewMainMenu =
         textStyle = "FEListBoxItemTextStyle", }, 
 }, 
 { 
+    type = "TextButton", 
+    buttonStyle = "ButtonStyle1", 
+    text = "", 
+    name = "btnExit", 
+    position = 
+        { 280, 198, }, 
+    width = 15, 
+    onMouseClicked = "UI_ExitApp();", }, 
+{ 
     type = "TextLabel", 
     name = "lblVersion", 
     size = 
-        { 400, 13, }, 
+        { 200, 13, }, 
     position = 
-        { -110, 448, }, 
+        { 25, 200, }, 
     Text = 
     { 
-        text = "Alpha v6", 
+        text = "TPOF: Beta Release Canidate v0.8a", 
         font = "ButtonFont", 
-        hAlign = "Right", 
+        hAlign = "Left", 
         vAlign = "Top", 
         color = 
             { 255, 255, 255, 255, }, 

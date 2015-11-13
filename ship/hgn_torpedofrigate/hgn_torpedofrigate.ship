@@ -151,8 +151,8 @@ addAbility(NewShipType, "RetireAbility", 1, 1);
 LoadModel(NewShipType, 1);
 StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "weapon_Torpedo", "");
 StartShipWeaponConfig(NewShipType, "Hgn_DestroyerTorpedoLauncher", "weapon_Torpedo", "");
-StartShipHardPointConfig(NewShipType,"DF","Weapon_Turret","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC")
-StartShipHardPointConfig(NewShipType,"DF2","Weapon_Turret2","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC")
+StartShipHardPointConfig(NewShipType,"DF","Weapon_Turret","Weapon","Innate","Indestructible","hgn_monitor_ptrt")
+StartShipHardPointConfig(NewShipType,"DF2","Weapon_Turret2","Weapon","Innate","Indestructible","hgn_monitor_ptrt")
 addShield(NewShipType, "EMP", 310, 20);
 NewShipType["battleScarMaxTriBase"]=75;
 NewShipType["battleScarMaxTriInc"]=100;

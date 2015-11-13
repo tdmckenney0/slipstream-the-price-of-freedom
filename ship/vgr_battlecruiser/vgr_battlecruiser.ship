@@ -65,9 +65,9 @@ NewShipType.targetRandomPointZMax = 0.9
 NewShipType.dustCloudDamageTime = 280
 NewShipType.nebulaDamageTime = 800
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
-NewShipType.BuildFamily = "Battlecruiser_Vgr"
+NewShipType.BuildFamily = "Shipyard_Vgr"
 NewShipType.AttackFamily = "BigCapitalShip"
-NewShipType.DockFamily = "BattleCruiser"
+NewShipType.DockFamily = "SuperCap"
 NewShipType.AvoidanceFamily = "BattleCruiser"
 NewShipType.DisplayFamily = "Capital"
 NewShipType.AutoFormationFamily = "CapShip"
@@ -169,19 +169,23 @@ addAbility(NewShipType, "CloakAbility", 0, 2, 2000, 4000, 3, 100, 1, 1000)
 addAbility(NewShipType, "RetireAbility", 1, 1)
 addAbility(NewShipType, "HyperspaceInhibitorAbility", 0, 12000)
 LoadModel(NewShipType, 1)
-StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "Weapon_HullD1", "Fire_Missile")
-StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "Weapon_HullD2", "Fire_Missile")
-StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "Weapon_HullD3", "Fire_Missile")
-StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "Weapon_HullD4", "Fire_Missile")
-StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "Weapon_HullD5", "Fire_Missile")
-StartShipWeaponConfig(NewShipType, "Vgr_BCLaser", "Weapon_BCHeavyLaser1", "")
-StartShipWeaponConfig(NewShipType, "Vgr_BCLaser", "Weapon_BCHeavyLaser2", "")
-StartShipWeaponConfig(NewShipType, "Vgr_BCLaser", "Weapon_BCHeavyLaser3", "")
-StartShipWeaponConfig(NewShipType, "Vgr_BCLaser", "Weapon_BCHeavyLaser4", "")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD1", "Fire_Missile")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD2", "Fire_Missile")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD3", "Fire_Missile")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD4", "Fire_Missile")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD5", "Fire_Missile")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser1", "")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser2", "")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser3", "")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser4", "")
 StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtIonCannon", "Weapon_BCUberPulseSlave", "")
 addShield(NewShipType, "EMP", 10000, 20)
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_BattleCruiserEngine", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Heavy Fusion Missile Launcher", "Weapon_MissileBattery", "Weapon", "Innate", "Damageable", "Vgr_HeavyFusionMissileLauncherBC", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Ion Battery 1", "Hardpoint_IonCannon1", "Weapon", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Ion Battery 2", "Hardpoint_IonCannon2", "Weapon", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "RailGun 1", "Hardpoint_Railgun1", "Weapon", "Innate", "Damageable", "Vgr_railgun_turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "RailGun 2", "Hardpoint_Railgun2", "Weapon", "Innate", "Damageable", "Vgr_railgun_turret", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_FireControl", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Generic 2", "HardpointGeneric2", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_FireControl", "", "", "", "")
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)

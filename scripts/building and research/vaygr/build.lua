@@ -311,6 +311,14 @@ build =
         DisplayPriority = 310, 
         DisplayedName = "$7154", 
         Description = "$7155", }, 
+ { 
+        Type = Ship, 
+        ThingToBuild = "Vgr_Dreadnaught", 
+        RequiredResearch = "BattlecruiserIonWeapons", 
+        RequiredShipSubSystems = "CapShipProduction", 
+        DisplayPriority = 311, 
+        DisplayedName = "Combat Cruiser", 
+        Description = "", }, 
     { 
         Type = Ship, 
         ThingToBuild = "Vgr_BattleCruiser", 
@@ -318,6 +326,14 @@ build =
         RequiredShipSubSystems = "CapShipProduction", 
         DisplayPriority = 330, 
         DisplayedName = "$7158", 
+        Description = "$7159", }, 
+   { 
+        Type = Ship, 
+        ThingToBuild = "Vgr_Battlebarge", 
+        RequiredResearch = "BattlecruiserIonWeapons", 
+        RequiredShipSubSystems = "CapShipProduction", 
+        DisplayPriority = 331, 
+        DisplayedName = "Super-Tanker", 
         Description = "$7159", }, 
     { 
         Type = Ship, 

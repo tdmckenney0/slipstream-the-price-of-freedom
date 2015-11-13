@@ -7,7 +7,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName="UNCG Dawn Under Heaven"
 NewShipType.sobDescription="UNCG Super Carrier\nTask Force Leader"
-NewShipType.maxhealth=250000
+NewShipType.maxhealth=1000000
 NewShipType.regentime=1500
 NewShipType.minRegenTime=1500
 NewShipType.sideArmourDamage=1.2
@@ -117,10 +117,8 @@ NewShipType.dotRenderLimit=10
 NewShipType.visibleInSecondary=1
 NewShipType.goblinsStartFade=3000
 NewShipType.goblinsOff=3000
-NewShipType.upLOD=4000
-NewShipType.upLOD=5950
-NewShipType.downLOD=4015
-NewShipType.downLOD=5965
+NewShipType.upLOD=10000
+NewShipType.downLOD=10000
 NewShipType.minimumZoomFactor=0.5
 NewShipType.selectionLimit=150000
 NewShipType.preciseATILimit=0
@@ -171,6 +169,7 @@ StartShipHardPointConfig(NewShipType,"Production 3","HardpointProduction3","Syst
 StartShipHardPointConfig(NewShipType,"Production 4","Hardpoint_Production4","System","Production","Destroyable","","Hgn_MS_Production_Fighter","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Generic 1","HardpointGeneric1","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_C_Module_FireControl","Hgn_C_Module_build","Hgn_C_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed","Hgn_BCFighter_mod","Hgn_CarrierCruiserIonBeamTurret2","Hgn_BattleCruiserKineticFLAKCannon1");
 StartShipHardPointConfig(NewShipType,"Generic 2","HardpointGeneric2","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_C_Module_FireControl","Hgn_C_Module_build","Hgn_C_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed","Hgn_BCFighter_mod","Hgn_CarrierCruiserIonBeamTurret3","Hgn_BattleCruiserKineticFLAKCannon");
+StartShipHardPointConfig(NewShipType,"Generic 3","Hardpoint_Subsystem3","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_C_Module_FireControl","Hgn_C_Module_build","Hgn_C_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed","Hgn_BCFighter_mod","Hgn_CarrierCruiserIonBeamTurret3","Hgn_BattleCruiserKineticFLAKCannon");
 StartShipHardPointConfig(NewShipType,"Sensors 1","HardpointSensors1","System","Sensors","Destroyable","","Hgn_C_Sensors_DetectHyperspace","Hgn_C_Sensors_AdvancedArray","Hgn_C_Sensors_DetectCloaked","","","","","");
 StartShipHardPointConfig(NewShipType,"Flak1","Hardpoint_FlakCannon","System","Innate","Damageable","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Torp1","Hardpoint_TorpCannon","System","Innate","Damageable","hgn_carriercruiserionbeamturret","","","","","","","","");

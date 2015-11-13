@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "$1512"
+NewShipType.displayedName = "Gatling Gun Sentry"
 NewShipType.sobDescription = "$1513"
 NewShipType.maxhealth = 10000
 NewShipType.regentime = 0
@@ -133,6 +133,7 @@ NewShipType.launchFormation = "n_delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip", "JustShoot")
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
+addAbility(NewShipType,"MinelayerAbility",1,3.5)
 NewShipType.disableOnRaceChange = 0
 LoadModel(NewShipType, 1)
 StartShipHardPointConfig(NewShipType,"Weapon2","Weapon_Top","Weapon","Innate","Damageable","Hgn_GatLing_Gun","","","","","","","","")

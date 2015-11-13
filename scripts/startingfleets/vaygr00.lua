@@ -3,12 +3,12 @@ PersistantData = {
    },
    Squadrons = {
       {
-         type = "Vgr_mothership",
+         type = "Vgr_Shipyard",
          subsystems = {
          },
          shiphold = {
          },
-         name = "Agamemnon III",
+         name = "",
          size = 1,
       },
 
@@ -24,7 +24,7 @@ PersistantData = {
       },
 
       {
-         type = "Vgr_Dreadnaught",
+         type = "Vgr_Carrier",
          subsystems = {
          },
          shiphold = {
