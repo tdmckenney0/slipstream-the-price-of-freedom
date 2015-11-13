@@ -174,7 +174,7 @@ StartShipHardPointConfig(NewShipType,"Generic 2","HardpointGeneric2","Weapon","G
 StartShipHardPointConfig(NewShipType,"Sensors 1","HardpointSensors1","System","Sensors","Destroyable","","Hgn_C_Sensors_DetectHyperspace","Hgn_C_Sensors_AdvancedArray","Hgn_C_Sensors_DetectCloaked","","","","","");
 StartShipHardPointConfig(NewShipType,"Flak1","Hardpoint_FlakCannon","System","Innate","Damageable","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Torp1","Hardpoint_TorpCannon","System","Innate","Damageable","hgn_carriercruiserionbeamturret","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"MG1","Weapon_MiniGun","Weapon","Innate","Damageable","test_bc_turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"MG1","Weapon_MiniGun","Weapon","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"MG2","Weapon_MiniGun2","Weapon","Innate","Damageable","HGN_SCC_2xPulsar_Turret","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Engine","Hardpoint_Engine","System","Innate","Damageable","Hgn_C_Engine","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Resource","Hardpoint_Resource","System","Innate","Damageable","Hgn_C_Innate_Resource","","","","","","","","");

@@ -5,8 +5,8 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName="Fighter Constructor"
-NewSubSystemType.sobDescription="Used on Battlecruisers\nTo Build fighter class ships."
+NewSubSystemType.displayedName="Mini Fighter Mod"
+NewSubSystemType.sobDescription="Builds Fighters"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
 NewSubSystemType.tacticalIconMinFadeSize=0.0045
@@ -26,7 +26,7 @@ NewSubSystemType.selectionLimit=5000
 NewSubSystemType.preciseATILimit=5000
 NewSubSystemType.selectionPriority=37.5
 NewSubSystemType.type="System"
-NewSubSystemType.typeString="SubFighter"
+NewSubSystemType.typeString="FighterProduction"
 NewSubSystemType.collateralDamage=100
 NewSubSystemType.inactiveTimeAfterDamage=10
 NewSubSystemType.activateHealthPercentage=0.1
@@ -35,7 +35,7 @@ NewSubSystemType.timeToBuild=45
 NewSubSystemType.isResearch=0
 NewSubSystemType.visible=1
 LoadHODFile(NewSubSystemType,1);
-NewSubSystemType.BuildFamily="SubSystem_Hgn"
+NewSubSystemType.BuildFamily="SubSystem_Vgr"
 NewSubSystemType.AttackFamily="SubSystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"

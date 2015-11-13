@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "4x4 Hail Maker"
-NewSubSystemType.sobDescription = "Innate Weapon\nBishop Battle Carrier/Bishop Dreadnaught Missile Launcher"
+NewSubSystemType.displayedName = "4x4 Vertical Nuclear Missile Launcher"
+NewSubSystemType.sobDescription = "Innate Weapon\nVertical Nuclear Missile Silos."
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.1
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045
@@ -36,5 +36,7 @@ NewSubSystemType.AttackFamily = "SubSystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType, "Hgn_DestroyerTorpedoLauncher", "Weapon_MBarR", "Fire_MBar")
-StartSubSystemWeaponConfig(NewSubSystemType, "Hgn_DestroyerTorpedoLauncher", "Weapon_MBarL", "Fire_MBar")
+StartSubSystemWeaponConfig(NewSubSystemType, "hgn_StandardMissile", "Weapon_MBarR", "Fire_MBar")
+StartSubSystemWeaponConfig(NewSubSystemType, "hgn_StandardMissile", "Weapon_MBarL", "Fire_MBar")
+StartSubSystemWeaponConfig(NewSubSystemType, "Hgn_DestroyerTorpedoLauncher", "Weapon_Nuke", "Fire_MBar")
+StartSubSystemWeaponConfig(NewSubSystemType, "Hgn_DestroyerTorpedoLauncher", "Weapon_Nuke2", "Fire_MBar")

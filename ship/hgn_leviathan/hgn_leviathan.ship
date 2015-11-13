@@ -143,11 +143,10 @@ addAbility(NewShipType,"ShipHold",1,0,5,"rallypoint","Fighter, Corvette",25,{
 addAbility(NewShipType,"ParadeCommand",1)
 addAbility(NewShipType,"WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",0,2,500,1000,0,3)
-addAbility(NewShipType,"CanAttack",1,1,0,0,0.35,1.2,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","Frontal",{
+addAbility(NewShipType,"CanAttack",1,1,0,0,0.35,1.2,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","Circlestrafe",{
   SubSystem = "movetotargetandshootVsSubSystem",
 })
 addAbility(NewShipType,"GuardCommand",1,3000,1000)
-addAbility(NewShipType,"CanBuildShips",1,"SubSystem_Hgn","SubSystemModule")
 --addAbility(NewShipType,"CanBeCaptured",160,0.5)
 --addAbility(NewShipType,"CanBeRepaired")
 addAbility(NewShipType,"CloakAbility",0,2,2000,4000,3,100,1,1000)
@@ -170,11 +169,10 @@ StartShipHardPointConfig(NewShipType,"RailBeam 1","Hardpoint_Railgun1","Weapon",
 StartShipHardPointConfig(NewShipType,"RailBeam 2","Weapon_Railgun2","Weapon","Innate","Damageable","Hgn_StrikeBattlecruiserRailBeamTBack","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"Weapon","Hardpoint_SuperDriver","Weapon","Innate","Damageable","HGN_SCC_6xAC_Turret","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"Weapon1","Weapon_Weapon1","Weapon","Innate","Damageable","HGN_SCC_6xAC_Turret","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"Weapon2","Weapon_Weapon1","Weapon","Innate","Damageable","HGN_SCC_6xAC_Turret","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"Weapon2","Weapon_OUTWeapon1","Weapon","Innate","Damageable","HGN_SCC_2xPulsar_Turret","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"Weapon2","Weapon_OUTWeapon2","Weapon","Innate","Damageable","HGN_SCC_2xPulsar_Turret","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"Weapon2","Weapon_SIDEWeapon1","Weapon","Innate","Damageable","test_bc_turret","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"Weapon2","Weapon_SIDEWeapon2","Weapon","Innate","Damageable","test_bc_turret","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Weapon2","Weapon_SIDEWeapon1","Weapon","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Weapon2","Weapon_SIDEWeapon2","Weapon","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","")
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg03",1,0.75,0,0,0,50,0,0,0,200,0,0,0,50,0,0,0,50)
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg02",1,0.05,30,-20,200,25,300,150,85,50,0,0,0,85,0,0,0,50)
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg04",1,0.05,50,40,-150,50,65,25,5,25,0,0,0,95,0,0,0,50)

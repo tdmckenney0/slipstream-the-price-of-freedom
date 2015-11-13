@@ -5,7 +5,7 @@
 --
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "$1508"
-NewShipType.sobDescription = "Designation: Heavy Anti-Corvette\nManufacturer: "
+NewShipType.sobDescription = "Designation: Heavy Anti-Corvette\nManufacturer: Orion Inc"
 NewShipType.maxhealth = 1000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
@@ -21,9 +21,9 @@ NewShipType.defensiveFormation = "Delta"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 15
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 375
-NewShipType.mainEngineMaxSpeed = 375
-NewShipType.rotationMaxSpeed = 195
+NewShipType.thrusterMaxSpeed = 320
+NewShipType.mainEngineMaxSpeed = 320
+NewShipType.rotationMaxSpeed = 175
 NewShipType.thrusterAccelTime = 2
 NewShipType.thrusterBrakeTime = 1
 NewShipType.mainEngineAccelTime = 2
@@ -158,7 +158,7 @@ addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadModel(NewShipType, 1)
-StartShipWeaponConfig(NewShipType, "Hgn_lightIonbeam", "Weapon_Pulsar", "Fire")
+StartShipWeaponConfig(NewShipType, "hgn_EMPbeam_small", "Weapon_Pulsar", "Fire")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1

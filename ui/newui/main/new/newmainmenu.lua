@@ -201,7 +201,7 @@ NewMainMenu =
         { -110, 448, }, 
     Text = 
     { 
-        text = "Alpha v5", 
+        text = "Alpha v6", 
         font = "ButtonFont", 
         hAlign = "Right", 
         vAlign = "Top", 

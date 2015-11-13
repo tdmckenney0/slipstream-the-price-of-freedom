@@ -5,7 +5,7 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName="FT-2 AC Minigun Turret"
+NewSubSystemType.displayedName="FT-2 Minigun Turret"
 NewSubSystemType.sobDescription="$2029"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="SubSystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"Hgn_MGPlasma","Weapon_Gun","Weapon_Gun");
+StartSubSystemWeaponConfig(NewSubSystemType,"Hgn_MGPlasma_small","Weapon_Gun","Weapon_Gun");

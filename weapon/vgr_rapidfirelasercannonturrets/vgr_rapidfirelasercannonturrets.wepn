@@ -1,4 +1,4 @@
-StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","Vgr_Laser_Small","Normal",3000,3000,0,0,0,0,1,1,0,0.2,0.7,0.5,1,1,200,200,0.1,"Normal",1,0,0)
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","vgr_ionbeam","Normal",3000,3000,0,0,0,0,1,1,0,0.2,0.7,0.5,1,1,200,200,0.1,"Normal",1,0,0)
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",30,30,"")
 setPenetration(NewWeaponType,5,1,{
   PlanetKillerArmour = 0,
