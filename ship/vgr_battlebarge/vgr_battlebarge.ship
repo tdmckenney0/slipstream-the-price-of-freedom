@@ -62,7 +62,7 @@ NewShipType.nebulaDamageTime = 800
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "Shipyard_vgr"
 NewShipType.AttackFamily = "BigCapitalShip"
-NewShipType.DockFamily = "SuperCap"
+NewShipType.DockFamily = "UltraCap"
 NewShipType.AvoidanceFamily = "Battlecruiser"
 NewShipType.DisplayFamily = "Capital"
 NewShipType.AutoFormationFamily = "CapShip"
@@ -139,7 +139,7 @@ addAbility(NewShipType,"ShipHold",1,0,5,"rallypoint","Fighter, Corvette",25,{
 })
 addAbility(NewShipType,"ParadeCommand",1)
 addAbility(NewShipType,"WaypointMove")
-addAbility(NewShipType,"HyperSpaceCommand",0,2,500,1000,0,3)
+addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,0)
 addAbility(NewShipType,"CanAttack",1,1,0,0,0.35,1.2,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","Frontal",{
   SubSystem = "movetotargetandshootVsSubSystem",
 })

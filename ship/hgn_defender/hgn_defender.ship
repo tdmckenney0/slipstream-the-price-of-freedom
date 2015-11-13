@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Defender"
 NewShipType.sobDescription = "Atlas Class\nAnti-Strike Fighter"
-NewShipType.maxhealth = 150
+NewShipType.maxhealth = 550
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -77,7 +77,7 @@ NewShipType.antiFighterValue = 8
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 0
 NewShipType.totalValue = 8
-NewShipType.buildCost = 820
+NewShipType.buildCost = 200
 NewShipType.buildTime = 55
 NewShipType.buildPriorityOrder = 20
 NewShipType.retaliationRange = 5500

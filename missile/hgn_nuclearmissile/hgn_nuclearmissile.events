@@ -65,7 +65,7 @@ effects = {
       },
       {
         "sound",
-        "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_PLASMA",
+        "EXPLOSION/LARGE/etg_explode_large_sajuuk_supernova",
       },
       {
         "fx_scale",

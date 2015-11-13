@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Heavy Destroyer"
-NewShipType.sobDescription = " Hannibal Class\nCapital Lineship"
+NewShipType.sobDescription = "Hannibal Class\nCapital Lineship"
 NewShipType.maxhealth=320000
 NewShipType.regentime=1500
 NewShipType.minRegenTime=1500
@@ -137,7 +137,7 @@ NewShipType.launchNrOfShipsInDockFormation=1
 NewShipType.launchFormation="delta"
 addAbility(NewShipType,"ParadeCommand",1);
 addAbility(NewShipType,"WaypointMove");
-addAbility(NewShipType,"HyperSpaceCommand",0,2,400,800,0,3);
+addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,0)
 addAbility(NewShipType,"CanAttack",1,1,0,1,0.35,1.5,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","Frontal",{Fighter="Flyround"},{Corvette="Flyround"},{Munition="Justshoot"},{BigCapitalShip="Flyround"});
 addAbility(NewShipType,"GuardCommand",1,3000,800);
 addAbility(NewShipType,"HyperspaceViaGateCommand",1,3,1,0.3);
@@ -158,11 +158,11 @@ StartShipHardPointConfig(NewShipType,"Right_Engine","Hardpoint_R_Engine","System
 
 StartShipHardPointConfig(NewShipType,"Upper_Front_Turret","Turret_UF","Weapon","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Upper_Center_Turret","Turret_UC","Weapon","Innate","Damageable","HGN_DCT_HD_3x_AC_UC","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Upper_Center_Turret","Turret_UC","Weapon","Innate","Damageable","HGN_SCC_6xAC_Turret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Upper_Back_Turret","Turret_UB","Weapon","Innate","Damageable","HGN_DCT_HD_2x_AC_UBk","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Upper_Back_Turret","Turret_UB","Weapon","Innate","Damageable","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Bottom_Center_Turret","Turret_BC","Weapon","Innate","Damageable","HGN_DCT_HD_3x_AC_BC","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Bottom_Center_Turret","Turret_BC","Weapon","Innate","Damageable","HGN_SCC_2xPulsar_Turret","","","","","","","","");
 
 StartShipHardPointConfig(NewShipType,"Left_Turret","Turret_L","Weapon","Innate","Damageable","HGN_DCT_HD_4x_Flak_L","","","","","","","","");
 

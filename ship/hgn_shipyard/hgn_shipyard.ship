@@ -143,7 +143,7 @@ NewShipType.launchFormation="delta"
 addAbility(NewShipType,"ShipHold",1,40,10,"rallypoint","Fighter,Corvette,Utility",25,{Fighter="12"},{Corvette="75"});
 addAbility(NewShipType,"ParadeCommand",1);
 addAbility(NewShipType,"WaypointMove");
-addAbility(NewShipType,"HyperSpaceCommand",0,1,400,800,0,3);
+addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,0);
 addAbility(NewShipType,"CanAttack",1,1,0,0,0.35,1,"Fighter, Corvette, Frigate,  SmallCapitalShip, BigCapitalShip, Utility","JustShoot");
 addAbility(NewShipType,"GuardCommand",1,3000,1000);
 addAbility(NewShipType,"CanBuildShips",1,"Fighter_Hgn, Corvette_Hgn, Frigate_Hgn, Utility_Hgn, Platform_Hgn, SubSystem_Hgn,Battlecruiser_Hgn, SuperCap_Hgn, Probe_Hgn, SubSystemLarge_Hgn","Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors, Capital");

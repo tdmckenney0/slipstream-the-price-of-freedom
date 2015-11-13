@@ -137,7 +137,7 @@ NewShipType.launchFormation = "delta"
 addAbility(NewShipType,"ShipHold",1,40,0,"rallypoint","",25)
 addAbility(NewShipType,"ParadeCommand",1)
 addAbility(NewShipType,"WaypointMove")
-addAbility(NewShipType,"HyperSpaceCommand",0,1,300,500,0,3)
+addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,0)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "Frontal", 
 { 
     Fighter = "Flyround", 

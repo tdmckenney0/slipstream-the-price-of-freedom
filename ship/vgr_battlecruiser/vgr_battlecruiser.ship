@@ -6,11 +6,12 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "Dominion Judgement"
 NewShipType.sobDescription = "Battlecruiser"
-NewShipType.maxhealth = 500000
+NewShipType.maxhealth = 750000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 750
-NewShipType.sideArmourDamage = 1.2
-NewShipType.rearArmourDamage = 1.2
+NewShipType.sideArmourDamage = 0.85
+NewShipType.rearArmourDamage = 0.90
+NewShipType.frontArmourDamage = 0.75
 NewShipType.isTransferable = 0
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 8
@@ -21,8 +22,8 @@ NewShipType.defensiveFormation = "broad"
 NewShipType.aggressiveFormation = "delta"
 NewShipType.mass = 1000
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 69
-NewShipType.mainEngineMaxSpeed = 69
+NewShipType.thrusterMaxSpeed = 110
+NewShipType.mainEngineMaxSpeed = 110
 NewShipType.rotationMaxSpeed = 6
 NewShipType.thrusterAccelTime = 6
 NewShipType.thrusterBrakeTime = 2
@@ -67,7 +68,7 @@ NewShipType.nebulaDamageTime = 800
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "Shipyard_Vgr"
 NewShipType.AttackFamily = "BigCapitalShip"
-NewShipType.DockFamily = "SuperCap"
+NewShipType.DockFamily = "UltraCap"
 NewShipType.AvoidanceFamily = "BattleCruiser"
 NewShipType.DisplayFamily = "Capital"
 NewShipType.AutoFormationFamily = "CapShip"
@@ -148,8 +149,8 @@ addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 
     Corvette = "75", })
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "HyperSpaceCommand", 0, 2, 600, 1200, 0, 3)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "Frontal", 
+addAbility(NewShipType, "HyperSpaceCommand", 0, 0, 0, 0, 0, 0)
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "Circlestrafe", 
 { 
     Fighter = "MoveToTargetAndShoot", 
 }, 
@@ -162,7 +163,8 @@ addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, 
 { 
     SubSystem = "FrontalVsSubSystem", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
-addAbility(NewShipType, "CanBuildShips", 1, "SubSystem_Vgr", "SubSystemModule")
+--addAbility(NewShipType, "CanBuildShips", 1, "SubSystem_Vgr", "SubSystemModule")
+addAbility(NewShipType, "CanBuildShips", 1,"Fighter_Vgr,  SubSystem_Vgr","Fighter, SubSystemModule")
 addAbility(NewShipType, "CanBeCaptured", 160, 0.1)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "CloakAbility", 0, 2, 2000, 4000, 3, 100, 1, 1000)
@@ -178,12 +180,15 @@ StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser1",
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser2", "")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser3", "")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser4", "")
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtIonCannon", "Weapon_BCUberPulseSlave", "")
+StartShipWeaponConfig(NewShipType, "Vgr_IonCannonFixed", "Weapon_BCUberPulse", "")
 addShield(NewShipType, "EMP", 10000, 20)
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_BattleCruiserEngine", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "SuperBeam!!", "Hardpoint_Superturret", "Weapon", "Innate", "Damageable", "vgr_bcfighter_mod", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Heavy Fusion Missile Launcher", "Weapon_MissileBattery", "Weapon", "Innate", "Damageable", "Vgr_HeavyFusionMissileLauncherBC", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Ion Battery 1", "Hardpoint_IonCannon1", "Weapon", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Ion Battery 2", "Hardpoint_IonCannon2", "Weapon", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Gatbattery 1", "Hardpoint_IonCannon1", "Weapon", "Innate", "Damageable", "vgr_DT1_Turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "GatBattery 2", "Hardpoint_IonCannon2", "Weapon", "Innate", "Damageable", "vgr_DT1_Turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Ion Battery 3", "Weapon_IonCannon3", "Weapon", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Ion Battery 4", "Weapon_IonCannon4", "Weapon", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "RailGun 1", "Hardpoint_Railgun1", "Weapon", "Innate", "Damageable", "Vgr_railgun_turret", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "RailGun 2", "Hardpoint_Railgun2", "Weapon", "Innate", "Damageable", "Vgr_railgun_turret", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_FireControl", "", "", "", "")

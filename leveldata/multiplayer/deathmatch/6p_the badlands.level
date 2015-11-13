@@ -147,7 +147,7 @@ function NonDetermChunk()
   fogSetDensity(0.00)
   setGlareIntensity(0.11)
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("m13")
+  loadBackground("m12")
   setSensorsManagerCameraDistances(12000, 60000)
   setDefaultMusic("Data:sound/music/battle/battle_04")
 end

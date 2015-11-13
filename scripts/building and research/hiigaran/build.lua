@@ -442,11 +442,19 @@ build =
     { 
         Type = Ship, 
         ThingToBuild = "Hgn_IonTurret", 
-        RequiredResearch = "PlatformIonWeapons", 
+        RequiredResearch = "", 
         RequiredShipSubSystems = "PlatformProduction", 
         DisplayPriority = 143, 
         DisplayedName = "Ion Beam Sentry", 
         Description = "$7065", }, 
+   { 
+        Type = Ship, 
+        ThingToBuild = "Hgn_PlanetSmasher", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "PlatformProduction", 
+        DisplayPriority = 144, 
+        DisplayedName = "Planet Smasher", 
+        Description = "Smashes Planets among other things", }, 
     { 
         Type = Ship, 
         ThingToBuild = "Hgn_ResourceCollector", 

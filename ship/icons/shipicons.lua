@@ -26,6 +26,48 @@ Hgn_AssaultCorvette = {
     stretchOnDraw = 1,
   },
 }
+hgn_Crossbow_Cruiser = {
+  LargeIcon = {
+    texture = "DATA:\\Ship\\Icons\\ships\\hgn_Crossbow.tga",
+    textureUV_TL = {
+      0,
+      0,
+    },
+    textureUV_WH = {
+      384,
+      128,
+    },
+    stretchOnDraw = 1,
+  },
+}
+hgn_Sword_Cruiser = {
+  LargeIcon = {
+    texture = "DATA:\\Ship\\Icons\\ships\\hgn_Sword_Cruiser.tga",
+    textureUV_TL = {
+      0,
+      0,
+    },
+    textureUV_WH = {
+      384,
+      128,
+    },
+    stretchOnDraw = 1,
+  },
+}
+hgn_DestroyerHeavy= {
+  LargeIcon = {
+    texture = "DATA:\\Ship\\Icons\\ships\\hgn_DestroyerHeavy.tga",
+    textureUV_TL = {
+      0,
+      0,
+    },
+    textureUV_WH = {
+      384,
+      128,
+    },
+    stretchOnDraw = 1,
+  },
+}
 Hgn_AssaultCorvetteElite = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
@@ -97,7 +139,7 @@ Hgn_BattleCruiser = {
     stretchOnDraw = 1,
   },
 }
-Hgn_Mothership = {
+Hgn_Shipyard = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
     textureUV_TL = {
@@ -423,7 +465,7 @@ Hgn_Scout = {
     stretchOnDraw = 1,
   },
 }
-Hgn_Shipyard = {
+Hgn_Shipyard_Spg = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
     textureUV_TL = {
@@ -437,7 +479,7 @@ Hgn_Shipyard = {
     stretchOnDraw = 1,
   },
 }
-Hgn_Shipyard_Elohim = Hgn_Shipyard
+Hgn_Shipyard_Elohim = Hgn_Shipyard_Spg
 Hgn_SupportFrigate = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
@@ -2322,3 +2364,4 @@ Hgn_drone_frigate_3 = Hgn_Marinefrigate
 Kpr_Mover_Capture = Kpr_Mover_Capture
 Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
 Hgn_DestroyerHeavy = Hgn_destroyer
+Hgn_PlanetSmasher = Vgr_planetkiller

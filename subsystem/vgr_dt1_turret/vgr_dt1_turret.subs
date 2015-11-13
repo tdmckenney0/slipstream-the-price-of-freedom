@@ -5,8 +5,8 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName="DT-1 2xAC DC Turret"
-NewSubSystemType.sobDescription="$2029"
+NewSubSystemType.displayedName="Dual FT-33 Assualt Gatling"
+NewSubSystemType.sobDescription="Assault Turret"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
 NewSubSystemType.tacticalIconMinFadeSize=0.0045
@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="SubSystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"vgr_flechettecannondestroyer","Weapon_DT","Weapon_Turret");
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_FT2_weapon","Weapon_DT","Weapon_Turret");

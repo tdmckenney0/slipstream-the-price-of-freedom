@@ -210,7 +210,7 @@ NewMainMenu =
         { 25, 200, }, 
     Text = 
     { 
-        text = "Slipstream: The Price of Freedom v0.9", 
+        text = "Slipstream: The Price of Freedom v0.9b", 
         font = "ButtonFont", 
         hAlign = "Left", 
         vAlign = "Top", 

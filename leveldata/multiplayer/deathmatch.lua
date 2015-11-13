@@ -38,7 +38,7 @@ GameSetupOptions =
         locName = "$3220", 
         tooltip = "$3235", 
         default = 0, 
-        visible = 1, 
+        visible = 0, 
         choices = 
             { "$3221", "yes", "$3222", "no", }, }, 
     { 
@@ -138,6 +138,7 @@ function MainRule()
     while  playerIndex<playerCount do
         if  Player_IsAlive(playerIndex)==1 then
             if  Player_HasShipWithBuildQueue(playerIndex)==0 then
+
                 Player_Kill(playerIndex)
             end 
 

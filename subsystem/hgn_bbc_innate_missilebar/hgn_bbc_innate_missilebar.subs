@@ -38,5 +38,3 @@ NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "SubSystemArmour"
 StartSubSystemWeaponConfig(NewSubSystemType, "hgn_StandardMissile", "Weapon_MBarR", "Fire_MBar")
 StartSubSystemWeaponConfig(NewSubSystemType, "hgn_StandardMissile", "Weapon_MBarL", "Fire_MBar")
-StartSubSystemWeaponConfig(NewSubSystemType, "Hgn_DestroyerTorpedoLauncher", "Weapon_Nuke", "Fire_MBar")
-StartSubSystemWeaponConfig(NewSubSystemType, "Hgn_DestroyerTorpedoLauncher", "Weapon_Nuke2", "Fire_MBar")

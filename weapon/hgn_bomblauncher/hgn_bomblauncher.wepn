@@ -1,5 +1,5 @@
 StartWeaponConfig(NewWeaponType,"Gimble","Bullet","Plasma_Bomb","Normal Only",1200,1800,0,0,0,0,1,1,0,2.1,0,0,0,0,260,40,0.1,"Normal",0,0,0)
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",135,135,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",350,350,"")
 setPenetration(NewWeaponType,5,1,{
   ResArmour = 0.2,
 },{

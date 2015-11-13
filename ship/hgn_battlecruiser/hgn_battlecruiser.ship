@@ -6,6 +6,9 @@ NewShipType.regentime = 2000
 NewShipType.minRegenTime = 2000
 NewShipType.sideArmourDamage = 0.9
 NewShipType.rearArmourDamage = 0.85
+NewShipType.topArmourDamage = 0.5
+NewShipType.bottomArmourDamage = 0.5
+NewShipType.frontArmourDamage = 0.75
 NewShipType.isTransferable = 0
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 8
@@ -142,7 +145,7 @@ addAbility(NewShipType,"ShipHold",1,0,5,"rallypoint","Fighter, Corvette",25,{
 })
 addAbility(NewShipType,"ParadeCommand",1)
 addAbility(NewShipType,"WaypointMove")
-addAbility(NewShipType,"HyperSpaceCommand",0,2,500,1000,0,3)
+addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,0)
 addAbility(NewShipType,"CanAttack",1,1,0,0,0.35,1.2,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","Flyround",{SubSystem = "Flyround"},{Mothership = "Flyround"},{BigCapitalShip = "Flyround"})
 addAbility(NewShipType,"GuardCommand",1,3000,1000)
 addAbility(NewShipType,"CanBuildShips",1,"Fighter_Hgn, SubSystem_Hgn","Fighter, SubSystemModule")
