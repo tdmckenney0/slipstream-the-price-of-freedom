@@ -4,9 +4,9 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "$1632"
-NewShipType.sobDescription = "$1633"
-NewShipType.maxhealth = 240000
+NewShipType.displayedName = "BattleCruiser"
+NewShipType.sobDescription = "Purifier"
+NewShipType.maxhealth = 500000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 750
 NewShipType.sideArmourDamage = 1.2
@@ -169,16 +169,16 @@ addAbility(NewShipType, "CloakAbility", 0, 2, 2000, 4000, 3, 100, 1, 1000)
 addAbility(NewShipType, "RetireAbility", 1, 1)
 addAbility(NewShipType, "HyperspaceInhibitorAbility", 0, 12000)
 LoadModel(NewShipType, 1)
-StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_HullD1", "Fire_Missile")
-StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_HullD2", "Fire_Missile")
-StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_HullD3", "Fire_Missile")
-StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_HullD4", "Fire_Missile")
-StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_HullD5", "Fire_Missile")
+StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "Weapon_HullD1", "Fire_Missile")
+StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "Weapon_HullD2", "Fire_Missile")
+StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "Weapon_HullD3", "Fire_Missile")
+StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "Weapon_HullD4", "Fire_Missile")
+StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "Weapon_HullD5", "Fire_Missile")
 StartShipWeaponConfig(NewShipType, "Vgr_BCLaser", "Weapon_BCHeavyLaser1", "")
 StartShipWeaponConfig(NewShipType, "Vgr_BCLaser", "Weapon_BCHeavyLaser2", "")
 StartShipWeaponConfig(NewShipType, "Vgr_BCLaser", "Weapon_BCHeavyLaser3", "")
 StartShipWeaponConfig(NewShipType, "Vgr_BCLaser", "Weapon_BCHeavyLaser4", "")
-StartShipWeaponConfig(NewShipType, "Vgr_BCForwardWeapon", "Weapon_BCUberPulse", "Weapon_BCUberPulse")
+StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtIonCannon", "Weapon_BCUberPulseSlave", "")
 addShield(NewShipType, "EMP", 10000, 20)
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_BattleCruiserEngine", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Heavy Fusion Missile Launcher", "Weapon_MissileBattery", "Weapon", "Innate", "Damageable", "Vgr_HeavyFusionMissileLauncherBC", "", "", "", "", "", "", "", "")

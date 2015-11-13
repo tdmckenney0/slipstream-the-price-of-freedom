@@ -309,7 +309,7 @@ build =
         RequiredResearch = "", 
         RequiredShipSubSystems = "FrigateProduction", 
         DisplayPriority = 60, 
-        DisplayedName = "$7046", 
+        DisplayedName = "Missile Frigate", 
         Description = "$7047", }, 
     { 
         Type = Ship, 
@@ -317,7 +317,7 @@ build =
         RequiredResearch = "InstaAdvancedFrigateTech", 
         RequiredShipSubSystems = "FrigateProduction", 
         DisplayPriority = 65, 
-        DisplayedName = "$7048", 
+        DisplayedName = "Assault Frigate", 
         Description = "$7049", }, 
     { 
         Type = Ship, 

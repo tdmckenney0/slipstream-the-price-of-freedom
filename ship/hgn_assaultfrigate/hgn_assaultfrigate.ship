@@ -4,7 +4,7 @@
 -- On error(s), send source (compiled) file to 4E534B@gmail.com
 
 NewShipType=StartShipConfig();
-NewShipType["displayedName"]="$1518";
+NewShipType["displayedName"]="UNCG Gladiator";
 NewShipType["sobDescription"]="$1519";
 NewShipType["maxhealth"]=50000;
 NewShipType["regentime"]=1200;
@@ -140,16 +140,17 @@ NewShipType["launchNrOfShipsInDockFormation"]=1;
 NewShipType["launchFormation"]="delta";
 addAbility(NewShipType, "ParadeCommand", 1);
 addAbility(NewShipType, "WaypointMove");
+addAbility(NewShipType, "MinelayerAbility",1,3.5);
 addAbility(NewShipType, "HyperSpaceCommand", 0, 1, 200, 500, 0, 3);
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.5, "Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip", "Frontal", {Fighter="MoveToTargetAndShoot"}, {Corvette="MoveToTargetAndShoot"}, {Munition="MoveToTargetAndShoot"}, {Frigate="Movetotargetandshoot"}, {SubSystem="FrontalVsSubSystem"});
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.5, "Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip", "flyround", {Fighter="flyround"}, {Corvette="flyround"}, {Munition="flyround"}, {Frigate="flyround"}, {SubSystem="FrontalVsSubSystem"});
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600);
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3);
 addAbility(NewShipType, "CanBeCaptured", 30, 0.1);
 addAbility(NewShipType, "CanBeRepaired");
 addAbility(NewShipType, "RetireAbility", 1, 1);
 LoadModel(NewShipType, 1);
-StartShipHardPointConfig(NewShipType,"T","Weapon_Top","Weapon","Innate","Indestructible","HGN_MG_Small","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"B","Weapon_Bottom","Weapon","Innate","Indestructible","HGN_MG_Small","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"T","Weapon_Top","Weapon","Innate","Indestructible","Hgn_GatLing_Gun","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"B","Weapon_Bottom","Weapon","Innate","Indestructible","Hgn_GatLing_Gun","","","","","","","","");
 addShield(NewShipType, "EMP", 310, 20);
 NewShipType["battleScarMaxTriBase"]=75;
 NewShipType["battleScarMaxTriInc"]=100;

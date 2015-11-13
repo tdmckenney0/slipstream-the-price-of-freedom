@@ -99,20 +99,20 @@ NewMainMenu =
 { 
     type = "Frame", 
     size = 
-        { 296, 15, }, 
+        { 296, 16, }, 
 }, 
 { 
     type = "TextButton", 
     buttonStyle = "", 
     text = "", 
     name = "btnCampaign", 
-    enabled = 0, 
+    enabled = 1, 
     width = 240, 
 }, 
 { 
     type = "Frame", 
     size = 
-        { 296, 20, }, 
+        { 296, 21, }, 
 }, 
 { 
     type = "TextButton", 
@@ -124,7 +124,7 @@ NewMainMenu =
 { 
     type = "Frame", 
     size = 
-        { 296, 15, }, 
+        { 296, 17, }, 
 }, 
 { 
     type = "TextButton", 
@@ -137,7 +137,7 @@ NewMainMenu =
 { 
     type = "Frame", 
     size = 
-        { 296, 15, }, 
+        { 296, 19, }, 
 }, 
 { 
     type = "TextButton", 
@@ -145,12 +145,16 @@ NewMainMenu =
     text = "", 
     name = "btnProfile", 
     width = 240, 
-    onMouseClicked = [[\n					UI_SetNextScreen("UserProfile", "NewMainMenu");\n					UI_SetPreviousScreen("UserProfile", "NewMainMenu");\n					UI_ShowScreen("UserProfile", eTransition);\n				]], 
+    onMouseClicked = [[
+					UI_SetNextScreen("UserProfile", "NewMainMenu");
+					UI_SetPreviousScreen("UserProfile", "NewMainMenu");
+					UI_ShowScreen("UserProfile", eTransition);
+				]], 
 }, 
 { 
     type = "Frame", 
     size = 
-        { 296, 15, }, 
+        { 296, 20, }, 
 }, 
 { 
     type = "TextButton", 
@@ -194,15 +198,15 @@ NewMainMenu =
     size = 
         { 400, 13, }, 
     position = 
-        { (578 + -400), (518 + -56), }, 
+        { -110, 448, }, 
     Text = 
     { 
-        text = "", 
+        text = "Alpha v5", 
         font = "ButtonFont", 
         hAlign = "Right", 
         vAlign = "Top", 
         color = 
-            { 119, 166, 191, 255, }, 
+            { 255, 255, 255, 255, }, 
         offset = 
-            { -2, 0, }, }, }, 
+            { 0, 0, }, }, }, 
 }

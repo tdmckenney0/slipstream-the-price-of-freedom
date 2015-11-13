@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName="LOW Mega-Laser"
-NewShipType.sobDescription="Huge Fucking Laser"
+NewShipType.displayedName="DOL Mega-Laser"
+NewShipType.sobDescription="Triple Barrel Laser"
 NewShipType.maxhealth=20000
 NewShipType.regentime=750
 NewShipType.minRegenTime=700

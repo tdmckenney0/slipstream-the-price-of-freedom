@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "$1626"
+NewShipType.displayedName = "DOL Cityship"
 NewShipType.sobDescription = "$1627"
 NewShipType.maxhealth = 200000
 NewShipType.regentime = 2000
@@ -164,6 +164,10 @@ StartShipHardPointConfig(NewShipType, "Generic 4", "HardPoint_System4", "System"
 StartShipHardPointConfig(NewShipType, "Sensors1", "HardPoint_Sensors", "System", "Sensors", "Destroyable", "", "Vgr_MS_Sensors_AdvancedArray", "Vgr_MS_Sensors_DetectHyperspace", "Vgr_MS_Sensors_DetectCloaked", "", "", "", "", "")
 --StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_MS_Innate_Engine", "", "", "", "", "", "", "", "")
 --StartShipHardPointConfig(NewShipType, "Resource", "Hardpoint_Resource", "System", "Innate", "Damageable", "Vgr_MS_Innate_Resource", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Weapon1", "Hardpoint_TopGun1", "System", "Sensors", "Damageable", "vgr_DT1_Turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Weapon2", "Weapon_TopGun2", "System", "Sensors", "Damageable", "vgr_DT1_Turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Weapon3", "Weapon_BotGun1", "System", "Sensors", "Damageable", "vgr_DT1_Turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Weapon4", "Hardpoint_BotGun2", "System", "Sensors", "Damageable", "vgr_DT1_Turret", "", "", "", "", "", "", "", "")
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg04", 1, 0.05, 50, 40, -150, 50, 65, 25, 5, 25, 0, 0, 0, 95, 0, 0, 0, 50)

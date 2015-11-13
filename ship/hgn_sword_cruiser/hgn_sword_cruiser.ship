@@ -1,5 +1,5 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Sword Cruiser"
+NewShipType.displayedName = "UNCG Excalibur"
 NewShipType.sobDescription = "Cruiser designed for Close Range Combat"
 NewShipType.maxhealth = 375000
 NewShipType.regentime = 850
@@ -187,42 +187,10 @@ StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP4","System
 
 StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP5","System","Innate","Indestructible","HGN_Sword_Side_Plasma_Cannon","","","","","","","","");
 -----------------------------------PDS--Hardpoints
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS1","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS2","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS3","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS3","Weapon","Innate","Indestructible","Hgn_GatLing_Gun","","","","","","","","");
 
 
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS4","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS5","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS6","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS7","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS8","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS9","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS10","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS11","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS12","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS13","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS14","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS15","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
 
 
 addShield(NewShipType,"EMP",400,12)

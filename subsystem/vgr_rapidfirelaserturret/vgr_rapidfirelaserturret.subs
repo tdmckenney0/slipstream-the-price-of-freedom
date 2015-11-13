@@ -28,10 +28,10 @@ NewSubSystemType.costToBuild = 250
 NewSubSystemType.timeToBuild = 35
 NewSubSystemType.isResearch = 0
 NewSubSystemType.visible = 1
-LoadHODFile(NewSubSystemType,1)
+LoadHODFile(NewSubSystemType,1);
 NewSubSystemType.BuildFamily = "SubSystem_vgr"
 NewSubSystemType.AttackFamily = "SubSystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"vgr_Turret_rapidlaser","Weapon_TurretTop","Fire_L")
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_rapidfirelasercannonturrets","Weapon_SCT","")

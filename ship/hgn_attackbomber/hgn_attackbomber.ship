@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "AFSN Volgograd"
-NewShipType.sobDescription = "Attack Bomber\nDesignation: Anti-Capital bomber\nManufacturer: "
+NewShipType.displayedName = "UNCG Volgograd"
+NewShipType.sobDescription = "Attack Bomber\nDesignation: Anti-Capital bomber\nManufacturer: UNCG Military"
 NewShipType.maxhealth = 100
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0

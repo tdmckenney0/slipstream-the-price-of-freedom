@@ -1,5 +1,5 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "LOW Ceberes"
+NewShipType.displayedName = "UNCG Ceberes"
 NewShipType.sobDescription = "Capital Class Lineship"
 NewShipType.maxhealth=320000
 NewShipType.regentime=1500
@@ -138,7 +138,7 @@ NewShipType.launchFormation="delta"
 addAbility(NewShipType,"ParadeCommand",1);
 addAbility(NewShipType,"WaypointMove");
 addAbility(NewShipType,"HyperSpaceCommand",0,2,400,800,0,3);
-addAbility(NewShipType,"CanAttack",1,1,0,1,0.35,1.5,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","Frontal",{Fighter="MoveToTargetAndShoot"},{Corvette="MoveToTargetAndShoot"},{Munition="MoveToTargetAndShoot"},{SubSystem="MoveToTargetAndShoot"});
+addAbility(NewShipType,"CanAttack",1,1,0,1,0.35,1.5,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","Frontal",{Fighter="Flyround"},{Corvette="Flyround"},{Munition="Justshoot"},{BigCapitalShip="Flyround"});
 addAbility(NewShipType,"GuardCommand",1,3000,800);
 addAbility(NewShipType,"HyperspaceViaGateCommand",1,3,1,0.3);
 addAbility(NewShipType,"CanBeCaptured",90,0.5);
@@ -156,7 +156,7 @@ StartShipHardPointConfig(NewShipType,"Left_Engine","Hardpoint_L_Engine","System"
 
 StartShipHardPointConfig(NewShipType,"Right_Engine","Hardpoint_R_Engine","System","Innate","Damageable","Hgn_HDes_R_Eng","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Upper_Front_Turret","Turret_UF","Weapon","Innate","Damageable","HGN_DCT_HD_2x_AC_UF","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Upper_Front_Turret","Turret_UF","Weapon","Innate","Damageable","Hgn_GatLing_Gun","","","","","","","","");
 
 StartShipHardPointConfig(NewShipType,"Upper_Center_Turret","Turret_UC","Weapon","Innate","Damageable","HGN_DCT_HD_3x_AC_UC","","","","","","","","");
 
@@ -167,30 +167,6 @@ StartShipHardPointConfig(NewShipType,"Bottom_Center_Turret","Turret_BC","Weapon"
 StartShipHardPointConfig(NewShipType,"Left_Turret","Turret_L","Weapon","Innate","Damageable","HGN_DCT_HD_4x_Flak_L","","","","","","","","");
 
 StartShipHardPointConfig(NewShipType,"Right_Turret","Turret_R","Weapon","Innate","Damageable","HGN_DCT_HD_4x_Flak_R","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Port_PDSVM1","PDS_P_VM1","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Port_PDSVM2","PDS_P_VM2","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Port_PDSVM3","PDS_P_VM3","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Starboard_PDSVM1","PDS_S_VM1","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Starboard_PDSVM2","PDS_S_VM2","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Starboard_PDSVM3","PDS_S_VM3","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Aft_PDSHM1","PDS_A_HM1","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Aft_PDSHM2","PDS_A_HM2","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Aft_PDSHM3","PDS_A_HM3","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Bottom_Center_PDSHM1","PDS_BC_HM1","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Bottom_Center_PDSHM2","PDS_BC_HM2","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Bottom_Center_PDSHM3","PDS_BC_HM3","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC","","","","","","","","");
 
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg03",1,0.75,0,0,0,50,0,0,0,200,0,0,0,50,0,0,0,50);
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg02",1,0.05,30,-20,200,25,300,150,85,50,0,0,0,85,0,0,0,50);

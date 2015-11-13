@@ -4,8 +4,8 @@
 -- On error(s), send source (compiled) file to 4E534B@gmail.com
 
 NewShipType=StartShipConfig();
-NewShipType["displayedName"]="$1522";
-NewShipType["sobDescription"]="$1523";
+NewShipType["displayedName"]="UNCG Archer";
+NewShipType["sobDescription"]="Missile Frigate";
 NewShipType["maxhealth"]=50000;
 NewShipType["regentime"]=1200;
 NewShipType["minRegenTime"]=1200;
@@ -149,9 +149,8 @@ addAbility(NewShipType, "CanBeCaptured", 30, 0.1);
 addAbility(NewShipType, "CanBeRepaired");
 addAbility(NewShipType, "RetireAbility", 1, 1);
 LoadModel(NewShipType, 1);
-StartShipWeaponConfig(NewShipType, "Hgn_TorpedoLauncher", "weapon_Torpedo", "");
-StartShipWeaponConfig(NewShipType, "Hgn_BigTorpedoLauncher", "weapon_Torpedo", "");
-StartShipWeaponConfig(NewShipType, "Hgn_ClusterTorpedoLauncher", "weapon_Torpedo", "");
+StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "weapon_Torpedo", "");
+StartShipWeaponConfig(NewShipType, "Hgn_DestroyerTorpedoLauncher", "weapon_Torpedo", "");
 StartShipHardPointConfig(NewShipType,"DF","Weapon_Turret","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC")
 StartShipHardPointConfig(NewShipType,"DF2","Weapon_Turret2","Weapon","Innate","Indestructible","HGN_PDS-HM_2xAC")
 addShield(NewShipType, "EMP", 310, 20);

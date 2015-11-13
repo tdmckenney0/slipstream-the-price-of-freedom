@@ -5,7 +5,7 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewShipType = StartShipConfig()
-NewShipType.displayedName="LOW Seeker"
+NewShipType.displayedName="UNCG Seeker"
 NewShipType.sobDescription="Scout\nDesignation: Recon Group\nManufacturer: SRI Corporation"
 NewShipType.maxhealth=50
 NewShipType.regentime=0
