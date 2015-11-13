@@ -167,16 +167,28 @@ StartShipHardPointConfig(NewShipType,"Production 1","HardpointProduction1","Syst
 StartShipHardPointConfig(NewShipType,"Production 2","HardpointProduction2","System","Production","Destroyable","","Hgn_MS_Production_Frigate","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Production 3","HardpointProduction3","System","Production","Destroyable","","Hgn_MS_Production_CapShip","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Production 4","Hardpoint_Production4","System","Production","Destroyable","","Hgn_MS_Production_Fighter","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Generic 1","HardpointGeneric1","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_C_Module_FireControl","Hgn_C_Module_build","Hgn_C_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed","Hgn_BCFighter_mod","Hgn_CarrierCruiserIonBeamTurret2","Hgn_BattleCruiserKineticFLAKCannon1");
-StartShipHardPointConfig(NewShipType,"Generic 2","HardpointGeneric2","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_C_Module_FireControl","Hgn_C_Module_build","Hgn_C_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed","Hgn_BCFighter_mod","Hgn_CarrierCruiserIonBeamTurret3","Hgn_BattleCruiserKineticFLAKCannon");
-StartShipHardPointConfig(NewShipType,"Generic 3","Hardpoint_Subsystem3","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_C_Module_FireControl","Hgn_C_Module_build","Hgn_C_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed","Hgn_BCFighter_mod","Hgn_CarrierCruiserIonBeamTurret3","Hgn_BattleCruiserKineticFLAKCannon");
-StartShipHardPointConfig(NewShipType,"Sensors 1","HardpointSensors1","System","Sensors","Destroyable","","Hgn_C_Sensors_DetectHyperspace","Hgn_C_Sensors_AdvancedArray","Hgn_C_Sensors_DetectCloaked","","","","","");
+StartShipHardPointConfig(NewShipType,"Generic 1","HardpointGeneric1","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_MS_Module_FireControl","Hgn_C_Module_build","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
+StartShipHardPointConfig(NewShipType,"Generic 2","HardpointGeneric2","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_MS_Module_FireControl","Hgn_C_Module_build","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
+StartShipHardPointConfig(NewShipType,"Generic 3","Hardpoint_Subsystem3","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_MS_Module_FireControl","Hgn_C_Module_build","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
+StartShipHardPointConfig(NewShipType,"Generic 4","Hardpoint_Subsystem4","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_MS_Module_FireControl","Hgn_C_Module_build","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
+StartShipHardPointConfig(NewShipType,"Sensors 1","Hardpoint_Sensors","System","Sensors","Destroyable","","Hgn_C_Sensors_DetectHyperspace","Hgn_C_Sensors_AdvancedArray","Hgn_C_Sensors_DetectCloaked","","","","","");
 StartShipHardPointConfig(NewShipType,"Flak1","Hardpoint_FlakCannon","System","Innate","Damageable","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Torp1","Hardpoint_TorpCannon","System","Innate","Damageable","hgn_carriercruiserionbeamturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Torp1","Hardpoint_TorpCannon","System","Innate","Damageable","HGN_SCC_2xPulsar_Turret","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"MG1","Weapon_MiniGun","Weapon","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"MG2","Weapon_MiniGun2","Weapon","Innate","Damageable","HGN_SCC_2xPulsar_Turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"MG2","Weapon_MiniGun2","Weapon","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Engine","Hardpoint_Engine","System","Innate","Damageable","Hgn_C_Engine","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Resource","Hardpoint_Resource","System","Innate","Damageable","Hgn_C_Innate_Resource","","","","","","","","");
+
+--StartShipWeaponConfig(NewShipType,"Hgn_PlanetSmasher","Weapon_SmasherTube","Weapon_SmasherTube");
+
+StartShipHardPointConfig(NewShipType,"ML1","Hardpoint_Mpod3","Weapon","Innate","Damageable","hgn_BD_Mpod","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"ML2","Hardpoint_Mpod4","Weapon","Innate","Damageable","hgn_BD_Mpod","","","","","","","","");
+
+StartShipHardPointConfig(NewShipType,"M","Hardpoint_Mount","Weapon","Innate","Damageable","Hgn_mount","","","","","","","","");
+
+StartShipHardPointConfig(NewShipType,"ME","Hardpoint_Equipment1","Weapon","Innate","Damageable","HGN_SCC_2xPulsar_Turret","","","","","","","","");
+
+
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg03",1,0.75,0,0,0,50,0,0,0,200,0,0,0,50,0,0,0,50);
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg02",1,0.05,30,-20,200,25,300,150,85,50,0,0,0,85,0,0,0,50);
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg04",1,0.05,50,40,-150,50,65,25,5,25,0,0,0,95,0,0,0,50);

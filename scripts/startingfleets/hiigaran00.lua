@@ -45,18 +45,7 @@ PersistantData = {
          size = 1,
          number = 1,
     },
-    {
-      type = "hgn_pulsarplatform",
-      name = "",
-      size = 1,
-      number = 5,
-  },
-
    },
    Research = {
    },
 }
-
-
-
-

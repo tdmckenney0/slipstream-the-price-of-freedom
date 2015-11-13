@@ -5,37 +5,12 @@ PersistantData = {
       {
          type = "Vgr_Shipyard",
          subsystems = {
-     {
-          index = 0,
-          name = "vgr_ms_module_research",
-        },
-        {
-          index = 0,
-          name = "vgr_ms_module_hyperspace",
-        },
-        {
-          index = 0,
-          name = "vgr_sy_production_capship",
-          },
-          {
-          index = 0,
-          name = "vgr_ms_production_fighter",
-          },
-          {
-          index = 0,
-          name = "vgr_ms_production_corvette",
-          },
-          {
-          index = 0,
-          name = "vgr_ms_production_frigate",
-          },
          },
          shiphold = {
          },
-         name = "Agamemnon III",
+         name = "",
          size = 1,
       },
-
       {
          type = "Vgr_ResourceCollector",
          subsystems = {
@@ -54,9 +29,8 @@ PersistantData = {
          },
          name = "",
          size = 1,
-         number = 3, 
+         number = 5, 
       },
-
       {
          type = "Vgr_Battlecruiser",
          subsystems = {
@@ -65,9 +39,8 @@ PersistantData = {
          },
          name = "",
          size = 1,
-         number = 2, 
+         number = 4, 
       },
-
       {
          type = "Vgr_Dreadnaught",
          subsystems = {
@@ -78,7 +51,6 @@ PersistantData = {
          size = 1,
          number = 1, 
       },
-
       {
          type = "vgr_resourcecontroller",
          subsystems = {
@@ -88,6 +60,39 @@ PersistantData = {
          name = "",
          size = 1,
          number = 1,
+   },
+
+      {
+         type = "vgr_assaultfrigate",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 5,
+   },
+
+      {
+         type = "vgr_battlebarge",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 1,
+  },
+
+      {
+         type = "vgr_carrier",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 3,
 
       },
 

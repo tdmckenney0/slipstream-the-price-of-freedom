@@ -35,6 +35,6 @@ NewSubSystemType.AttackFamily = "SubSystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_BD_plasmacannon","Weapon_TurretTop","Fire_TurretTop")
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_BD_plasmacannon","Weapon_TurretTop2","Fire_TurretTop2")
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_BD_plasmacannon","Weapon_TurretTop3","Fire_TurretTop3")
+StartSubSystemWeaponConfig(NewSubSystemType,"HGN_SCC_6x_AC_Turret_W","Weapon_TurretTop","Fire_TurretTop")
+StartSubSystemWeaponConfig(NewSubSystemType,"HGN_SCC_6x_AC_Turret_W","Weapon_TurretTop2","Fire_TurretTop2")
+StartSubSystemWeaponConfig(NewSubSystemType,"HGN_SCC_6x_AC_Turret_W","Weapon_TurretTop3","Fire_TurretTop3")

@@ -7,7 +7,7 @@
 NewShipType = StartMissileConfig()
 NewShipType.displayedName="$1556"
 NewShipType.sobDescription="$1557"
-NewShipType.TOIcon="InvertedY"
+NewShipType.TOIcon="Triangle"
 NewShipType.TOScale=1
 NewShipType.TODistanceFade0=7000
 NewShipType.TODistanceDisappear0=5000

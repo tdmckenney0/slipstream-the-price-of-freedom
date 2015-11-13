@@ -1,4 +1,4 @@
-StartWeaponConfig(NewWeaponType,"Fixed","Missile","Hgn_planetkillerbomb","Normal",120,90000,0,0,0,0,1,1,1,7,0,0,0,0,0,0,0.1,"Normal",1,0,0)
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","Hgn_planetkillerbomb","Normal",120,90000,0,0,0,0,1,1,1,60,0,0,0,0,0,0,0.1,"Normal",1,0,0)
 
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",10000,10000,"")
 AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"Hgn_NukeEffect")
@@ -6,8 +6,8 @@ AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"Hgn_NukeEffe
 AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"Hgn_NukeEffect")
 AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"Hgn_NukeEffect")
 AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"Hgn_NukeEffect")
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",3500,4000,"")
 AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"Hgn_NukeEffect")
+AddWeaponResult(NewWeaponType,"","","",0,0,"")
 
 setAngles(NewWeaponType,179,0,0,0,0)
 

@@ -1,12 +1,15 @@
 --Written by: Tanner "Sajuuk" Mckenney, SRI Corporation - 2007, 2008 All rights Reserved. That means you Fucktard, AKA TELQUSSIER. 
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DOL Leviathan"
-NewShipType.sobDescription = "Long Range Fire Support"
+NewShipType.displayedName = "DOL Dreadnaught"
+NewShipType.sobDescription = "Leviathan Class/nArtillery Combatant"
 NewShipType.maxhealth = 750000 
 NewShipType.regentime = 1000
 NewShipType.minRegenTime = 333
-NewShipType.sideArmourDamage = 0.6
-NewShipType.rearArmourDamage = 0.7
+NewShipType.sideArmourDamage = 0.5
+NewShipType.rearArmourDamage = 0.45
+NewShipType.topArmourDamage = 0.5
+NewShipType.bottomArmourDamage = 0.5
+NewShipType.frontArmourDamage = 0.4
 NewShipType.isTransferable = 0
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 1
@@ -141,8 +144,8 @@ NewShipType.dockQueueSelectionOccupiedMultiplier = 100000
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
-addAbility(NewShipType, "HyperSpaceCommand", 1, 5, 1000, 3500, 0, 3)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "BigCapitalShip, SmallCapitalShip, Capturer, Frigate, SubSystem, Mothership, Corvette, Fighter, Utility", "Frontal", 
+addAbility(NewShipType, "HyperSpaceCommand", 1, 0, 0, 0, 0, 0)
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "BigCapitalShip, SmallCapitalShip, Capturer, Frigate, SubSystem, Mothership, Corvette, Fighter, Utility", "Circlestrafe", 
 { 
     Fighter = "MoveToTargetAndShoot", 
 }, 
@@ -161,7 +164,6 @@ addAbility(NewShipType, "GuardCommand", 74, 3000, 1400)
 addAbility(NewShipType, "CanBeCaptured", 160, 0.5)
 addAbility(NewShipType, "CanBeRepaired")
 LoadModel(NewShipType, 1)
---hey,tel: FUCK YOU! :P
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense1", "Weapon_HullDefense1")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense2", "Weapon_HullDefense2")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense3", "Weapon_HullDefense3")
@@ -172,24 +174,12 @@ StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense7", 
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense8", "Weapon_HullDefense8")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense9", "Weapon_HullDefense9")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense10", "Weapon_HullDefense10")
+StartShipWeaponConfig(NewShipType, "kpr_sajuukheavycannon", "Weapon_Triton1", "Weapon_Triton1")
 
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtIonCannon", "Weapon_Triton1", "Weapon_Triton1");
-
-StartShipWeaponConfig(NewShipType, "Vgr_HeavyFusionMissileLauncherWeak", "Hardpoint_Missile1bank", "Hardpoint_Missile1bank")
-StartShipWeaponConfig(NewShipType, "Vgr_HeavyFusionMissileLauncherWeak", "Hardpoint_Missile2bank", "Hardpoint_Missile2bank")
-StartShipWeaponConfig(NewShipType, "Vgr_HeavyFusionMissileLauncherWeak", "Hardpoint_Missile3bank", "Hardpoint_Missile3bank")
-StartShipWeaponConfig(NewShipType, "Vgr_HeavyFusionMissileLauncherWeak", "Hardpoint_Missile4bank", "Hardpoint_Missile4bank")
-StartShipWeaponConfig(NewShipType, "Vgr_HeavyFusionMissileLauncherWeak", "Hardpoint_Missile5bank", "Hardpoint_Missile5bank")
-StartShipWeaponConfig(NewShipType, "Vgr_HeavyFusionMissileLauncherWeak", "Hardpoint_Missile6bank", "Hardpoint_Missile6bank")
-
-
---StartShipHardPointConfig(NewShipType,"CwsBot","Hardpoint_Bot_SBA","System","Generic","Destroyable","hgn_bbx_2xHvyPlasma")
-StartShipHardPointConfig(NewShipType,"CwsChin","Hardpoint_CWSChin","System","Generic","Destroyable","Vgr_IonBeamTurret")
-
-
---StartShipHardPointConfig(NewShipType,"Plas1","Hardpoint_BottomCWS","System","Generic","Destroyable","hgnws_4xhvyplasbty")
---StartShipHardPointConfig(NewShipType,"Cws1","Hardpoint_CWS1","System","Generic","Destroyable","hgnws_100-hvyplas-CWS")
---StartShipHardPointConfig(NewShipType,"Cws2","Hardpoint_CWS2","System","Generic","Destroyable","hgnws_100-hvyplas-CWS")
+StartShipHardPointConfig(NewShipType,"Rocket1","Hardpoint_Rocket","System","Generic","Damageable","Vgr_D_Mpod")
+StartShipHardPointConfig(NewShipType,"Gat1","Hardpoint_Gat1","System","Generic","Damageable","vgr_DT1_Turret")
+StartShipHardPointConfig(NewShipType,"Gat2","Hardpoint_Gat2","System","Generic","Damageable","vgr_DT1_Turret")
+StartShipHardPointConfig(NewShipType,"Ion1","Weapon_DreadTurret","System","Generic","Damageable","Vgr_IonBeamTurretx3")
 --StartShipHardPointConfig(NewShipType,"MRAC3","Hardpoint_CWSTop","System","Generic","Destroyable","hgnws_2xAC100")
 --StartShipHardPointConfig(NewShipType,"MRAC4","Hardpoint_CWSTop2","System","Generic","Destroyable","hgnws_2xAC100")
 

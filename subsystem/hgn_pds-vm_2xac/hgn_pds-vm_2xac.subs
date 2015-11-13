@@ -43,8 +43,4 @@ addAbility(NewShipType,"CanAttack",1,1,0,0,0.35,1.5,"Corvette, Capturer, Frigate
 },{
   SubSystem = "FrontalVsSubSystem",
 })
---StartSubSystemWeaponConfig(NewSubSystemType,"","Weapon_Top","Weapon_Top")
-
---StartSubSystemWeaponConfig(NewSubSystemType,"VM_PDS_autogun","Weapon_Top","Weapon_Top")
-
-StartSubSystemWeaponConfig(NewSubSystemType,"VM_PDS_autogun","Weapon_Turret","Weapon_Turret")
+StartSubSystemWeaponConfig(NewSubSystemType,"","Weapon_Turret","Weapon_Turret")

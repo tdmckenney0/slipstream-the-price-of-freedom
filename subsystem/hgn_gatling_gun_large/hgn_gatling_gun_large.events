@@ -106,11 +106,11 @@ effects = {
       },
       {
         "marker",
-        "Weapon_Gun_Muzzle",
+        "Weapon_Turret_Muzzle",
       },
       {
         "fx",
-        "muzzle_flash_combo",
+        "muzzle_flash_combo_plasma_kpr_repeat",
       },
       {
         "sound",

@@ -168,6 +168,9 @@ StartShipHardPointConfig(NewShipType,"Left_Turret","Turret_L","Weapon","Innate",
 
 StartShipHardPointConfig(NewShipType,"Right_Turret","Turret_R","Weapon","Innate","Damageable","HGN_DCT_HD_4x_Flak_R","","","","","","","","");
 
+StartShipHardPointConfig(NewShipType,"MPOD","Hardpoint_Mpod","Weapon","Innate","Damageable","hgn_BD_MPOD","","","","","","","","");
+
+
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg03",1,0.75,0,0,0,50,0,0,0,200,0,0,0,50,0,0,0,50);
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg02",1,0.05,30,-20,200,25,300,150,85,50,0,0,0,85,0,0,0,50);
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg04",1,0.05,50,40,-150,50,65,25,5,25,0,0,0,95,0,0,0,50);

@@ -1,4 +1,4 @@
---Copyright Tanner "Sajuuk" Mckenney
+--Copyright Tanner "Emperor" Mckenney
 NewMainMenu = 
 { 
     size = 
@@ -29,7 +29,7 @@ NewMainMenu =
     autosize = 1, 
     backgroundColor = "", 
     position = 
-        { 20, 190, }, 
+        { 20, 187, }, 
     autoarrange = 1, 
     autoarrangeWidth = 304, 
     autoarrangeSpace = 0, 
@@ -210,7 +210,7 @@ NewMainMenu =
         { 25, 200, }, 
     Text = 
     { 
-        text = "Slipstream: The Price of Freedom v0.9b", 
+        text = "Slipstream: The Price of Freedom", 
         font = "ButtonFont", 
         hAlign = "Left", 
         vAlign = "Top", 

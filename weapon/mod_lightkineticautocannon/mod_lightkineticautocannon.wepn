@@ -21,4 +21,4 @@ setAccuracy(NewWeaponType,1,{
 },{
   Resource = 0.1,
 })
-setAngles(NewWeaponType,80,0,0,0,0)
+setAngles(NewWeaponType,5,0,0,0,0)

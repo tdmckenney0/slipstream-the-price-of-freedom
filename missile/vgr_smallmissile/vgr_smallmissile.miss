@@ -80,7 +80,6 @@ NewShipType.DisplayFamily="Munition"
 NewShipType.AutoFormationFamily="Fighter"
 NewShipType.ArmourFamily="Unarmoured"
 LoadHODFile(NewShipType,1);
-setEngineTrail(NewShipType,0,3,"trail_ribbon.tga",0.2,0.5,0.025,8);
 setEngineBurn(NewShipType,10,0.5,1,10,0,0.7,0.1,13);
 loadShipPatchList(NewShipType,"data:sound/sfx/ship/vaygr/NonMilitary/Engines/"
                              ,0,"VMissleEng");

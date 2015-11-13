@@ -22,6 +22,6 @@ setAccuracy(NewWeaponType,0.3,
 {Resource = 0.3, damage = 1,},
 {ResourceLarge = 0.3, damage = 1,})
 
-setAngles(NewWeaponType,0,-180,180,0,90)
+setAngles(NewWeaponType,0,-180,180,-5,90)
 setMiscValues(NewWeaponType,0,0)
 addAnimTurretSound(NewWeaponType,"Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

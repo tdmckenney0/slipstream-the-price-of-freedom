@@ -36,14 +36,14 @@ PersistantData = {
          size = 1,
       },
       {
-         type = "hgn_pulsarplatform",
+         type = "hgn_Crossbow_Cruiser",
          subsystems = {
          },
          shiphold = {
          },
          name = "",
          size = 1,
-         number = 5,
+         number = 3,
     },
     {
       type = "Hgn_Carrier",
@@ -68,6 +68,12 @@ PersistantData = {
       name = "",
       size = 1,
       number = 2,
+ },
+  {
+      type = "Hgn_Battleship",
+      name = "",
+      size = 1,
+      number = 1,
   },
 
    },

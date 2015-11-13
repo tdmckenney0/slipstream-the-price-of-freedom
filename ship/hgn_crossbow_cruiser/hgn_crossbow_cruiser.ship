@@ -137,8 +137,8 @@ NewShipType.launchFormation = "delta"
 addAbility(NewShipType,"ShipHold",1,40,0,"rallypoint","",25)
 addAbility(NewShipType,"ParadeCommand",1)
 addAbility(NewShipType,"WaypointMove")
-addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,0)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "Frontal", 
+addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,0)
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "Flyround", 
 { 
     Fighter = "Flyround", 
 }, 
@@ -170,11 +170,9 @@ StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTBottom","System
 
 StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Turret_Bottom","System","Innate","Indestructible","HGN_DC_2x_AC_Turret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCT_Left","System","Innate","Indestructible","HGN_DC_2x_AC_Turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCT_Left","System","Innate","Indestructible","Hgn_GatLing_Gun_large","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCT_Right","System","Innate","Indestructible","HGN_DC_2x_AC_Turret","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_PDS3","System","Innate","Indestructible","Hgn_GatLing_Gun","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCT_Right","System","Innate","Indestructible","Hgn_GatLing_Gun_large","","","","","","","","");
 
 
 addShield(NewShipType,"EMP",400,12)

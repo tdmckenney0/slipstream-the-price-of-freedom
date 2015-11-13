@@ -4,8 +4,8 @@
 --
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
-StartWeaponConfig(NewWeaponType,"Gimble","Bullet","Plasma_Bomb","Normal",1200,1500,0,0,0,0,1,1,0,0.2,2,1,0,0,0,0,0.1,"Normal",0,0,0);
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",100,100,"");
+StartWeaponConfig(NewWeaponType,"Gimble","Bullet","Plasma_Bomb","Normal",1200,5000,0,0,0,0,1,1,0,0.2,2,1,0,0,0,0,0.1,"Normal",0,0,0);
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",500,500,"");
 setPenetration(NewWeaponType,5,1,{MediumArmour=1},{HeavyArmour=2},{PlanetKillerArmour=0},{ResArmour=0.9},{ChunkArmour=200});
-setAccuracy(NewWeaponType,1,{Fighter=0.20},{Corvette=0.3},{munition=0.5});
-setAngles(NewWeaponType,15,0,0,0,0);
+setAccuracy(NewWeaponType,1,{Fighter=0.5},{Corvette=0.7},{munition=0.5});
+setAngles(NewWeaponType,0,-75,75,-90,90)

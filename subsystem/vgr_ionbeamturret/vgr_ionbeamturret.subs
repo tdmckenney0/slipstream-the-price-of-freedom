@@ -5,8 +5,8 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName="Particle Projection Laser"
-NewSubSystemType.sobDescription="$2027"
+NewSubSystemType.displayedName="2x PPC Turret"
+NewSubSystemType.sobDescription="Partical Projector\n150 kW/sec"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
 NewSubSystemType.tacticalIconMinFadeSize=0.0045
@@ -22,16 +22,16 @@ NewSubSystemType.nlipsFar=0
 NewSubSystemType.nlipsFarRange=0
 NewSubSystemType.meshRenderLimit=0.004
 NewSubSystemType.minimumZoomFactor=0.68
-NewSubSystemType.selectionLimit=5000
-NewSubSystemType.preciseATILimit=5000
+NewSubSystemType.selectionLimit=2000
+NewSubSystemType.preciseATILimit=2000
 NewSubSystemType.selectionPriority=37.5
 NewSubSystemType.type="Weapon"
-NewSubSystemType.typeString="C_IonBeamTurret"
+NewSubSystemType.typeString="BCKineticflakCannon"
 NewSubSystemType.collateralDamage=100
-NewSubSystemType.inactiveTimeAfterDamage=90
+NewSubSystemType.inactiveTimeAfterDamage=80
 NewSubSystemType.activateHealthPercentage=0.1
-NewSubSystemType.costToBuild=1800
-NewSubSystemType.timeToBuild=80
+NewSubSystemType.costToBuild=800
+NewSubSystemType.timeToBuild=45
 NewSubSystemType.isResearch=0
 NewSubSystemType.visible=1
 LoadHODFile(NewSubSystemType,1);
@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="SubSystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"Vgr_TurretedIonCannon","Weapon_IonCan1","Weapon_IonCan1");
+StartSubSystemWeaponConfig(NewSubSystemType,"Vgr_TurretedIonCannon","Weapon_IC","Weapon_Turret");

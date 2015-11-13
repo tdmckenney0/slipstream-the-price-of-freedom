@@ -17,25 +17,25 @@ LoadingScreen =
 { 
     type = "Frame", 
     position = 
-        { 0, 100, }, 
+        { 0, 0, }, 
     size = 
-        { 800, 400, }, 
+        { 800, 600, }, 
     name = "bgImage", 
     BackgroundGraphic = 
     { 
         size = 
-            { 800, 400, }, 
+            { 800, 600, }, 
         texture = "DATA:UI/NewUI/Background/load_background.mres", 
         textureUV = 
-            { 0, 56, 800, 455, }, }, 
+            { 0, 0, 800, 600, }, }, 
 ; 
 { 
     type = "Frame", 
     position = 
-        { 14, 378, }, 
+        { 14, 525, }, 
     size = 
         { 772, 16, }, 
-    outerBorderWidth = 2, 
+    outerBorderWidth = 0, 
     borderColor = 
         { 100, 100, 100, 255, }, 
     backgroundColor = 
@@ -44,25 +44,25 @@ LoadingScreen =
 { 
     type = "ProgressBar", 
     progressColor = 
-        { 0, 0, 255, 255, }, 
+        { 255, 255, 255, 190, }, 
     position = 
-        { 16, 380, }, 
+        { 43, 300, }, 
     size = 
-        { 768, 12, }, 
+        { 717, 15, }, 
     name = "loadingProgress", }, 
 }, 
 { 
     type = "TextLabel", 
     name = "moduleLabel", 
     position = 
-        { 0, 550, }, 
+        { 0, 300, }, 
     size = 
         { 800, 50, }, 
     Text = 
     { 
         textStyle = "FEButtonTextStyle", 
         color = 
-            { 255, 255, 255, 255, }, 
+            { 0, 0, 0, 255, }, 
         vAlign = "Middle", 
         hAlign = "Center", }, 
 }, 

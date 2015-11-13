@@ -158,7 +158,7 @@ addAbility(NewShipType,"RetireAbility",1,0)
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
 LoadModel(NewShipType,1)
 --StartShipWeaponConfig(NewShipType,"Ftr_IntMissileLauncher","Weapon_FrontGun","FireM")
-StartShipWeaponConfig(NewShipType,"mod_lightkineticautocannon","Weapon_FrontGun","Fire")
+StartShipWeaponConfig(NewShipType,"kpr_kineticdriverattackdroid","Weapon_FrontGun","Fire")
 addShield(NewShipType,"EMP",75,20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2

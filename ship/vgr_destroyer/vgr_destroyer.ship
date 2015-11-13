@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "$1634"
-NewShipType.sobDescription = "$1635"
+NewShipType.displayedName = "DOL Destroyer"
+NewShipType.sobDescription = "Kruszchev Class/nNaval Destroyer"
 NewShipType.maxhealth = 500000
 NewShipType.regentime = 1500
 NewShipType.minRegenTime = 450
@@ -142,7 +142,7 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "HyperSpaceCommand", 0, 2, 500, 1000, 0, 3)
+addAbility(NewShipType, "HyperSpaceCommand", 0, 0, 0, 0, 0, 0)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.5, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "Flyround", 
 { 
     Fighter = "MoveToTargetAndShoot", 
@@ -172,9 +172,9 @@ addShield(NewShipType, "EMP", 1000, 20)
 
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_Des_Engine", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret_Top", "System", "Innate", "Damageable", "vgr_DT1_Turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret_Top", "System", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Bottom_Turret", "Hardpoint_Turret_Bot", "System", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Bottom_Turret", "Hardpoint_Turret_Bot", "System", "Innate", "Damageable", "vgr_DT1_Turret", "", "", "", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "Side_turret1", "Hardpoint_Turret_side1", "System", "Innate", "Damageable", "Vgr_railgun_turret", "", "", "", "", "", "", "", "")
 

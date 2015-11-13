@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "UNCG Heavy Carrier"
-NewShipType.sobDescription = "White Cloud Class\nHeavy Carrier"
+NewShipType.displayedName = "UNCG Assault Carrier"
+NewShipType.sobDescription = "White Cloud Class\nHeavy Assault Carrier"
 NewShipType.maxhealth = 400000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 300
@@ -144,7 +144,7 @@ addAbility(NewShipType,"ShipHold",1,40,10,"rallypoint","Fighter,Corvette,Utility
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,0)
+addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,0)
 addAbility(NewShipType, "CanBuildShips",1,"Fighter_Hgn, Corvette_Hgn, Platform_Hgn, SubSystem_Hgn,  Probe_Hgn","Utility, Fighter, Corvette, Platform, SubSystemModule, SubSystemSensors")
 addAbility(NewShipType, "CanBeCaptured",160,0.5)
 addAbility(NewShipType, "CanBeRepaired")
@@ -159,23 +159,17 @@ StartShipWeaponConfig(NewShipType, "Hgn_KineticBurstCannon", "Weapon_HullDefense
 StartShipWeaponConfig(NewShipType, "Hgn_KineticBurstCannon", "Weapon_HullDefense5", "Fire_HullDefense5")
 StartShipWeaponConfig(NewShipType, "Hgn_KineticBurstCannon", "Weapon_HullDefense6", "Fire_HullDefense6")
 
-StartShipHardPointConfig(NewShipType,"SubGeneric01","SubGeneric01","System","Generic","Destroyable","Hgn_BBC_module_firecontrol","hgn_BBC_module_research","hgn_BBC_module_platformcontrol","Hgn_BBC_module_cloakgenerator","Hgn_BBC_module_hyperspaceinhibitor","Hgn_BBC_module_firecontrol","Hgn_BBC_module_researchadvanced","Hgn_BBC_module_buildspeed")
-StartShipHardPointConfig(NewShipType,"SubGeneric02","SubGeneric02","System","Generic","Destroyable","hgn_BBC_module_hyperspace","hgn_BBC_module_research","hgn_BBC_module_platformcontrol","Hgn_BBC_module_cloakgenerator","Hgn_BBC_module_hyperspaceinhibitor","Hgn_BBC_module_firecontrol","Hgn_BBC_module_researchadvanced","Hgn_BBC_module_buildspeed")
-StartShipHardPointConfig(NewShipType,"SubGeneric03","SubGeneric03","System","Generic","Damageable","hgn_BBC_module_platformcontrol","hgn_BBC_module_hyperspace","hgn_BBC_module_platformcontrol","Hgn_BBC_module_cloakgenerator","Hgn_BBC_module_hyperspaceinhibitor","Hgn_BBC_module_firecontrol","Hgn_BBC_module_researchadvanced","Hgn_BBC_module_buildspeed")
+StartShipHardPointConfig(NewShipType,"SubGeneric01","SubGeneric01","System","Generic","Destroyable","","hgn_BBC_module_research","hgn_BBC_module_platformcontrol","Hgn_BBC_module_cloakgenerator","Hgn_BBC_module_hyperspaceinhibitor","Hgn_BBC_module_firecontrol","Hgn_BBC_module_researchadvanced","Hgn_BBC_module_buildspeed")
+StartShipHardPointConfig(NewShipType,"SubGeneric02","SubGeneric02","System","Generic","Destroyable","","hgn_BBC_module_research","hgn_BBC_module_platformcontrol","Hgn_BBC_module_cloakgenerator","Hgn_BBC_module_hyperspaceinhibitor","Hgn_BBC_module_firecontrol","Hgn_BBC_module_researchadvanced","Hgn_BBC_module_buildspeed")
+StartShipHardPointConfig(NewShipType,"SubGeneric03","SubGeneric03","System","Generic","Destroyable","","hgn_BBC_module_research","hgn_BBC_module_platformcontrol","hgn_BBC_module_hyperspace","Hgn_BBC_module_cloakgenerator","Hgn_BBC_module_hyperspaceinhibitor","Hgn_BBC_module_firecontrol","Hgn_BBC_module_researchadvanced","Hgn_BBC_module_buildspeed")
 StartShipHardPointConfig(NewShipType,"Sensor","Sensor","System","Generic","Destroyable","","hgn_BBC_sensors_detecthyperspace","hgn_BBC_sensors_advancedarray","hgn_BBC_Sensors_detectcloaked","","","","")
 StartShipHardPointConfig(NewShipType,"Engine","Engine","System","Innate","Damageable","hgn_BBC_innate_engine")
-StartShipHardPointConfig(NewShipType,"Research Carrier Fleet","Hardpoint_Research","System","Generic","Damageable","hgn_C_module_Research","","","","")
 StartShipHardPointConfig(NewShipType,"Missilebar","Missilebar","Weapon","Innate","Damageable","hgn_BBC_innate_missilebar")
 StartShipHardPointConfig(NewShipType,"Resource","Resource","System","Innate","Damageable","hgn_BBC_innate_resource","","","","")
 StartShipHardPointConfig(NewShipType,"Corvette","Corvette","System","Production","Destroyable","","hgn_c_production_corvette")
 StartShipHardPointConfig(NewShipType,"Fighter","Fighter","System","Production","Destroyable","","hgn_c_production_fighter")
-StartShipHardPointConfig(NewShipType,"Frigate","Frigate","System","Production","Destroyable","","hgn_BBC_production_frigate")
-
-
-
 
 StartShipHardPointConfig(NewShipType,"Weapon_Gat1","Weapon_Gat1","Weapon","Generic","indestructible","Hgn_GatLing_Gun_large","","","")
---StartShipHardPointConfig(NewShipType,"Weapon_Gat2","Weapon_Gat2","Weapon","Generic","indestructible","Hgn_GatLing_Gun_large","","","")
 
 StartShipHardPointConfig(NewShipType,"HpBL_01","HpBL_01","Weapon","Generic","Destroyable","Hgn_GatLing_Gun","hgn_BD_CannonTurret","hgn_BD_QuadCannon","hgn_BD_ionbeamturret")
 StartShipHardPointConfig(NewShipType,"HpBR_01","HpBR_01","Weapon","Generic","Destroyable","Hgn_GatLing_Gun","hgn_BD_CannonTurret2","hgn_BD_QuadCannon2","hgn_BD_ionbeamturret2")

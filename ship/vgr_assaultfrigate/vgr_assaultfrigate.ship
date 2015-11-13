@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "$1618"
-NewShipType.sobDescription = "$1619"
+NewShipType.displayedName = "DOL Assault Frigate"
+NewShipType.sobDescription = "Taiga Class/nAssualt Frigate"
 NewShipType.maxhealth = 32000
 NewShipType.regentime = 1200
 NewShipType.minRegenTime = 450
@@ -140,7 +140,7 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "HyperSpaceCommand", 0, 1, 500, 1000, 0, 3)
+addAbility(NewShipType, "HyperSpaceCommand", 0, 0, 0, 0, 0, 0)
 
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1.5, "Fighter, Corvette, Capturer, Frigate, Utility, SmallCapitalShip, BigCapitalShip", "FrontalVsSubSystem_Corvette", 
 { 

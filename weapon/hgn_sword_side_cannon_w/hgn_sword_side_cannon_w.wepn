@@ -3,8 +3,8 @@
 -- LuaDC by Age2uN
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
-StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "Dread_Bomb", "Normal", 1500, 2000, 0, 0, 0, 0, 1, 1, 1, 5, 0, 0, 1, 1, 120, 120, 0.1, "Normal", 1, 0, 0)
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 800, 1000, "")
+StartWeaponConfig(NewWeaponType, "AnimatedTurret", "Bullet", "Dread_Bomb", "Normal", 1500, 5000, 0, 0, 0, 0, 1, 1, 1, 5, 0, 0, 1, 1, 120, 120, 0.1, "Normal", 1, 0, 0)
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 1800, 3000, "")
 
 setPenetration(NewWeaponType, 30, 2, 
 { 

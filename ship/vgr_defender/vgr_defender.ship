@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Defender"
-NewShipType.sobDescription = "Big ship defender"
+NewShipType.displayedName = "DOL Defender"
+NewShipType.sobDescription = "Grozny Class/nDefence Fighter"
 NewShipType.maxhealth = 45
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0

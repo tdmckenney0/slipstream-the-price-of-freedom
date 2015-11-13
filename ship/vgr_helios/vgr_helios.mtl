@@ -1,0 +1,56 @@
+newmtl Big_Shader
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+map_Kd .\Big_EXPORT.DDS
+
+newmtl DEngine_Shader
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+map_Kd .\DEngines_EXPORT.DDS
+
+newmtl Small_Shader
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+map_Kd .\Small_EXPORT.DDS
+
+newmtl V_DH_Badge_Shader
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+map_Kd .\V_DH_Badge_EXPORT.DDS
+
+newmtl lambert1
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+
+newmtl vgr_destroyer_LOD2_TEX
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+map_Kd .\Vgr_Destroyer_LOD2_TEX_EXPORT.DDS
+
+newmtl Turret_Shader
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+map_Kd .\Turret_EXPORT.DDS
+
+

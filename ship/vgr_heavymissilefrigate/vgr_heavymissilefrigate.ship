@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "$1622"
-NewShipType.sobDescription = "$1623"
+NewShipType.displayedName = "DOL Missile Frigate"
+NewShipType.sobDescription = "Irkutsk Class/nMissile Frigate"
 NewShipType.maxhealth = 32000
 NewShipType.regentime = 1200
 NewShipType.minRegenTime = 450
@@ -140,7 +140,7 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "HyperSpaceCommand", 0, 1, 500, 1000, 0, 3)
+addAbility(NewShipType, "HyperSpaceCommand", 0, 0, 0, 0, 0, 0)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.5, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Utility, Corvette, Fighter", "Frontal", 
 { 
     Fighter = "MoveToTargetAndShoot", 
