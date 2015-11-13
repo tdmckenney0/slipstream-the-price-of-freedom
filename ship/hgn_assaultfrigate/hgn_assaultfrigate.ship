@@ -4,8 +4,8 @@
 -- On error(s), send source (compiled) file to 4E534B@gmail.com
 
 NewShipType=StartShipConfig();
-NewShipType["displayedName"]="UNCG Gladiator";
-NewShipType["sobDescription"]="$1519";
+NewShipType["displayedName"]="UNCG Assault Frigate";
+NewShipType["sobDescription"]="Gladiator Class\nStandard Frigate";
 NewShipType["maxhealth"]=50000;
 NewShipType["regentime"]=1200;
 NewShipType["minRegenTime"]=1200;

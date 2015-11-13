@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "UNCG Crossbow"
-NewShipType.sobDescription = "Medium Range Combat Cruiser"
+NewShipType.displayedName = "UNCG Ranged Cruiser"
+NewShipType.sobDescription = "Crossbow Class\nLong Range Strike Cruiser "
 NewShipType.maxhealth = 240000
 NewShipType.regentime = 850
 NewShipType.minRegenTime = 150

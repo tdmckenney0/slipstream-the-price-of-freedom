@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "Dominion Super Tanker"
-NewShipType.sobDescription = "Armed SRI CORPORATION\nBattlebarge\nYeah Tel, its OURS"
+NewShipType.sobDescription = "Armed SRI CORPORATION\nBattlebarge"
 NewShipType.maxhealth = 1500000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 2000

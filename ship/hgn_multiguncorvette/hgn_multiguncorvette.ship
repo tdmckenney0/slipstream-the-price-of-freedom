@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Multigun Corvette"
-NewShipType.sobDescription = "Multigun Corvette\nDesignation: Multiple Interception\nManufacturer: Spacetech"
+NewShipType.displayedName = "UNCG Multigun Corvette"
+NewShipType.sobDescription = "Tracker Class\nMultiple Targeting Corvette"
 NewShipType.maxhealth = 800
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0

@@ -5,8 +5,8 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewShipType = StartShipConfig()
-NewShipType.displayedName="$1500"
-NewShipType.sobDescription="Scout\nDesignation: Recon Group\nManufacturer: Deep space Inc."
+NewShipType.displayedName="UNCG Scout"
+NewShipType.sobDescription="Recon Class\nArmed Reconissance"
 NewShipType.maxhealth=30
 NewShipType.regentime=0
 NewShipType.minRegenTime=0

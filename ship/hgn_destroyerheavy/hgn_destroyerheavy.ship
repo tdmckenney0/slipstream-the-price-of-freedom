@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "UNCG Ceberes"
-NewShipType.sobDescription = "Capital Class Lineship"
+NewShipType.displayedName = "UNCG Heavy Destroyer"
+NewShipType.sobDescription = " Hannibal Class\nCapital Lineship"
 NewShipType.maxhealth=320000
 NewShipType.regentime=1500
 NewShipType.minRegenTime=1500
@@ -15,23 +15,23 @@ NewShipType.defensiveFormation="x"
 NewShipType.aggressiveFormation="Claw"
 NewShipType.mass=600
 NewShipType.collisionMultiplier=1
-NewShipType.thrusterMaxSpeed=130 ---
-NewShipType.mainEngineMaxSpeed=130 ---
-NewShipType.rotationMaxSpeed=9
-NewShipType.thrusterAccelTime=6
-NewShipType.thrusterBrakeTime=2
-NewShipType.mainEngineAccelTime=6
-NewShipType.mainEngineBrakeTime=2
-NewShipType.rotationAccelTime=0.5
-NewShipType.rotationBrakeTime=0.5
-NewShipType.thrusterUsage=1
-NewShipType.accelerationAngle=30
-NewShipType.mirrorAngle=0
-NewShipType.secondaryTurnAngle=0
-NewShipType.maxBankingAmount=20
-NewShipType.descendPitch=10
-NewShipType.goalReachEpsilon=25
-NewShipType.slideMoveRange=350
+NewShipType.thrusterMaxSpeed = 100
+NewShipType.mainEngineMaxSpeed = 100
+NewShipType.rotationMaxSpeed = 18
+NewShipType.thrusterAccelTime = 7
+NewShipType.thrusterBrakeTime = 2
+NewShipType.mainEngineAccelTime = 8
+NewShipType.mainEngineBrakeTime = 2
+NewShipType.rotationAccelTime = 0.75
+NewShipType.rotationBrakeTime = 0.3
+NewShipType.thrusterUsage = 1
+NewShipType.accelerationAngle = 60
+NewShipType.mirrorAngle = 0
+NewShipType.secondaryTurnAngle = 0
+NewShipType.maxBankingAmount = 20
+NewShipType.descendPitch = 20
+NewShipType.goalReachEpsilon = 30
+NewShipType.slideMoveRange = 100
 NewShipType.controllerType="Ship"
 NewShipType.tumbleStaticX=10
 NewShipType.tumbleStaticY=20
@@ -156,7 +156,7 @@ StartShipHardPointConfig(NewShipType,"Left_Engine","Hardpoint_L_Engine","System"
 
 StartShipHardPointConfig(NewShipType,"Right_Engine","Hardpoint_R_Engine","System","Innate","Damageable","Hgn_HDes_R_Eng","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Upper_Front_Turret","Turret_UF","Weapon","Innate","Damageable","Hgn_GatLing_Gun","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Upper_Front_Turret","Turret_UF","Weapon","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","");
 
 StartShipHardPointConfig(NewShipType,"Upper_Center_Turret","Turret_UC","Weapon","Innate","Damageable","HGN_DCT_HD_3x_AC_UC","","","","","","","","");
 

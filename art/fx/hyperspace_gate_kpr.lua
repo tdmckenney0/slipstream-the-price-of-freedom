@@ -60,14 +60,14 @@ entry_00 = {
 1,
 1,
 1,
-0.33962,
+0.93333,
 },
 entry_01 = {
 1,
 1,
 1,
 1,
-1,
+0.93396,
 },
 },
 },
@@ -158,7 +158,7 @@ value = {
 property_12 = {
 name = "Texture",
 type = "VARTYPE_STRING",
-value = "DATA:ART/FX/HYPERSPACE FX/HYPERSPACE_EFFECT_BEAM_ALIEN.TGA",
+value = "DATA:ART/FX/HYPERSPACE FX/hyperspace_effect_beam_kpr.tga",
 },
 property_11 = {
 name = "Blending",
@@ -182,7 +182,7 @@ value = {
 property_10 = {
 name = "Duration",
 type = "VARTYPE_FLOAT",
-value = 4,
+value = 2,
 },
 },
 }

@@ -41,4 +41,5 @@ NewSubSystemType.AttackFamily="SubSystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
+AddSubSystemAbility(NewSubSystemType, "Hyperspace", 1, "ThisShipOnly", 0)
 AddSubSystemMultiplier(NewSubSystemType,"Speed","ThisShipOnly","Linear",1,0.6,0);

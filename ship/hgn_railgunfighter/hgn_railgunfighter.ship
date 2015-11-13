@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Railgun Fighter"
-NewShipType.sobDescription = "Real kickass machine"
+NewShipType.displayedName = "UNCG Rail-Fighter"
+NewShipType.sobDescription = "Scorpion Class\nAnti-Fighter"
 NewShipType.maxhealth = 300
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0

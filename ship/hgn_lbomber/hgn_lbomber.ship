@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Light Bomber"
-NewShipType.sobDescription = "AntiShip craft"
+NewShipType.displayedName = "UNCG Smart Bomber"
+NewShipType.sobDescription = "Phoenix Class\nSmart Strike Bomber"
 NewShipType.maxhealth = 30
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
@@ -155,7 +155,7 @@ LoadModel(NewShipType,1)
 StartShipWeaponConfig(NewShipType,"Hgn_BombLauncher","Weapon_Autogun","Weapon_Tube")
 StartShipWeaponConfig(NewShipType,"Hgn_AntiShipBombLauncher","Weapon_Autogun","Weapon_Tube")
 StartShipWeaponConfig(NewShipType,"Hgn_AntiSubSystemBombLauncher","Weapon_Autogun","Weapon_Tube")
-StartShipWeaponConfig(NewShipType,"hgn_EMPbeam_small","Weapon_Autogun","EMPlaser")
+StartShipWeaponConfig(NewShipType,"mod_lightkineticautocannon","Weapon_Autogun","EMPlaser")
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2
 NewShipType.specialDeathSpeed = 40

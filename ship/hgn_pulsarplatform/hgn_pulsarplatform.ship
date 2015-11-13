@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Laser Sentry"
-NewShipType.sobDescription = "$1513"
+NewShipType.displayedName = "UNCG Sentry Platform"
+NewShipType.sobDescription = "Sniper Version\nLong Range Anti-Ship"
 NewShipType.maxhealth = 10000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0

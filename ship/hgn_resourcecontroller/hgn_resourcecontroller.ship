@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "HGN Monitor"
-NewShipType.sobDescription = "Armed ResourceControler"
+NewShipType.displayedName = "UNCG Mobile Refinery"
+NewShipType.sobDescription = "Monitor Class\nArmed Resource Controller"
 NewShipType.maxhealth = 34000
 NewShipType.regentime = 850
 NewShipType.minRegenTime = 150

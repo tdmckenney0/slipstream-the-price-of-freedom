@@ -210,7 +210,7 @@ NewMainMenu =
         { 25, 200, }, 
     Text = 
     { 
-        text = "TPOF: Beta Release Canidate v0.8a", 
+        text = "Slipstream: The Price of Freedom v0.9", 
         font = "ButtonFont", 
         hAlign = "Left", 
         vAlign = "Top", 

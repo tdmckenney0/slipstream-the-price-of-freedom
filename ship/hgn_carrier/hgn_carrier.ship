@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "UNCG White Cloud"
-NewShipType.sobDescription = "Heavy Carrier\nDepleted-Urainium Armor Plating"
+NewShipType.displayedName = "UNCG Heavy Carrier"
+NewShipType.sobDescription = "White Cloud Class\nHeavy Carrier"
 NewShipType.maxhealth = 400000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 300

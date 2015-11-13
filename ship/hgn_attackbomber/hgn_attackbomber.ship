@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "$1504"
-NewShipType.sobDescription = "Attack Bomber\nDesignation: Anti-Capital bomber\nManufacturer: Sobani Miltia"
+NewShipType.displayedName = "UNCG Attack Bomber"
+NewShipType.sobDescription = "Gettysburg Class\nAnti-Capital bomber"
 NewShipType.maxhealth = 70
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0

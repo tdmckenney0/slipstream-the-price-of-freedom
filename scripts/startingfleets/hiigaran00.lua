@@ -3,7 +3,7 @@ PersistantData = {
    },
    Squadrons = {
       {
-         type = "Hgn_Mothership",
+         type = "Hgn_Shipyard",
          subsystems = {
          },
          shiphold = {
@@ -36,20 +36,20 @@ PersistantData = {
          size = 1,
       },
       {
-         type = "hgn_pulsarplatform",
+         type = "Hgn_Carrier",
          subsystems = {
          },
          shiphold = {
          },
          name = "",
          size = 1,
-         number = 5,
+         number = 1,
     },
     {
-      type = "Hgn_Carrier",
+      type = "hgn_pulsarplatform",
       name = "",
       size = 1,
-      number = 1,
+      number = 5,
   },
 
    },
