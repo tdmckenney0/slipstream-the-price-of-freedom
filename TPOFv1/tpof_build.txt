@@ -1,0 +1,28 @@
+---THIS IS NOT A PUBLIC BUILD!---
+Slipstream: The Price of Freedom
+Built at: 11:28 PM 6/20/2008
+Built By: SRI-Emperor
+Build System: Microsoft Windows Vista Ultimate x64 [Version 6.0.6000]
+	     AMD Athlon x2 @ 2.6 GHz, 2.5 GB RAM, Nvidia Geforce 8600 GT
+Build Folder: D:\Program Files (x86)\Sierra\Homeworld2-TPOF\Data\Compile
+Build Locale: United States, North America, English
+Build version: v1.4
+Hw2 Version: v1.1
+SubRealTech Version: v1.4 (Listed Build Tree Below) <----Finally Built up to 1.4!
+ |- Post Epoch v2.0
+ |       |-Homeworld 2 EX v2.0 <-----Pretty Sure Most of this content is gone out of TPOF, will do a check next build
+ |       |-Modernization Mod <-----Removed Some COntent
+ |       |-Bishopship
+ |
+ | - Rehash Mod <-----Added More Rehash Files
+ | - Axels mod 2.0
+
+Copyright SRI Corp 2008.
+Homeworld 2 Engine Copyright THQ and Relic Entertainment 2003-2008
+All Rights Are Reserved.
+
+Notes: 
+
+-Build is pretty stable. A lot of new stuff, however the code is not as clean as i want it to be.
+  
+    
