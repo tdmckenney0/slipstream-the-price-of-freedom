@@ -2,7 +2,7 @@
 -- By 4E534B
 -- Date: 12-12-2007 Time: 21:38:47
 -- On error(s), send source (compiled) file to 4E534B@gmail.com
-
+	
 TRUE=1;
 FALSE=0;
 MusicTuning={{volMax=1,
@@ -32,7 +32,7 @@ fadeTime=5}};
 SensorsVolFactor=0.1;
 CameraMaxVelocity=1000;
 SpeechVolDuckingLevel=0.2;
-FEMusic="data:sound/music/staging/staging_01";
+FEMusic = "Data:sound/music/staging/staging_01"
 FEmusicVol=1;
 GameMusicVol=1;
 MinMusicVol=0.4;
@@ -45,4 +45,6 @@ EnableMusic=TRUE;
 MaxAmbients=32;
 SpeechQueueTimeout=5;
 SpeechQueueInterruptPriority=100;
+
+
 

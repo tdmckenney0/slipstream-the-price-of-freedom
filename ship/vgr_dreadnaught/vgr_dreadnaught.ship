@@ -181,6 +181,7 @@ StartShipHardPointConfig(NewShipType,"Rocket1","Hardpoint_Rocket","System","Gene
 StartShipHardPointConfig(NewShipType,"Gat1","Hardpoint_Gat1","System","Generic","Damageable","vgr_gatlingx2")
 StartShipHardPointConfig(NewShipType,"Gat2","Hardpoint_Gat2","System","Generic","Damageable","vgr_gatlingx2")
 StartShipHardPointConfig(NewShipType,"Ion1","Weapon_DreadTurret","System","Generic","Damageable","Vgr_IonBeamTurretx3")
+StartShipHardPointConfig(NewShipType,"Rail1","Hardpoint_TopRail","System","Generic","Damageable","Vgr_Railgun")
 StartShipHardPointConfig(NewShipType,"MissileT","Hardpoint_MpodT","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"MissileT2","Hardpoint_MpodT2","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
 

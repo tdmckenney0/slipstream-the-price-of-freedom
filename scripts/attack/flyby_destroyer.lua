@@ -1,9 +1,9 @@
 AttackStyleName = AttackRun
 Data = {
   howToBreakFormation = StraightAndScatter,
-  maxBreakDistance = 7000,
-  distanceFromTargetToBreak = 1000,
-  safeDistanceFromTargetToDoActions = 3000,
+  maxBreakDistance = 10000,
+  distanceFromTargetToBreak = 2500,
+  safeDistanceFromTargetToDoActions = 5000,
   useTargetUp = 0,
   coordSysToUse = Target,
   horizontalMin = 0,
@@ -19,7 +19,7 @@ Data = {
     },
     {
       Type = InterpolateTarget,
-      Weighting = 500,
+      Weighting = 2000,
     },
     {
       Type = NoAction,

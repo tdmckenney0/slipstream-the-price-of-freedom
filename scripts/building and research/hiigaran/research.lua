@@ -14,51 +14,10 @@ AllShips = 0
 Family = 1
 Ship = 2
 
-research = 
+research =
 {
-	--======================================================================
-	-- Tiers
-	--======================================================================
 
-
-
-	--======================================================================
-	-- Tech
-	--======================================================================
-
-	-- ** IMPORTANT NOTE ABOUT TECHS
-	-- Even though techs are global, and are applied to all ships we still need
-	--  to specify a location to place them in the UI.  In the case of techs,
-	--  targetName must be specified in order for your tech to show up in the UI.
-	--  The tech will show up under the ship specified by targetName
-	--
-	
-	
-	
-	
-	--{
-	--	Name =					"PlasmaBombs",
-	--	RequiredResearch =		"",
-	--	RequiredSubSystems =	"FighterProduction",
-	--	Cost = 					500,
-	--	Time = 					30,
-	--	DisplayedName =			"Plasma Bombs",
-	--	DisplayPriority =		21,
-	--	Description =			"(500 RUs)",
-	--},
-
-	 
-	--{
-	--	Name =					"CorvettePulsarWeapons",
-	--	RequiredResearch =		"",
-	--	RequiredSubSystems =	"Research & CorvetteProduction",
-	--	Cost = 					500,
-	--	Time = 					60,
-	--	DisplayedName =			"Pulsar Weapons",
-	--	DisplayPriority =		22,
-	--	Description =			" (500 RUs)",
-	--},
-	{ 
+	{
 		Name =			"InstaAdvancedFrigateTech",
 		RequiredResearch =	"",                                               -- <list of prerequisite research items>
 		RequiredSubSystems =	"AdvancedResearch",                              -- <list of prerequisite sub systems>
@@ -69,8 +28,8 @@ research =
 		Description =		"",
 		TargetName = 		"Hgn_Mothership",
 	},
-	
-	
+
+
 		{
 		Name =					"GraviticAttractionMines",
 		RequiredResearch =		"",
@@ -98,7 +57,7 @@ research =
 		Icon = Icon_Tech,
 		ShortDisplayedName = "$7201",
 	},
-		
+
 	{
 		Name =					"DestroyerTech",
 		RequiredResearch =		"",
@@ -138,7 +97,7 @@ research =
 		Icon = Icon_Tech,
 		ShortDisplayedName = "$7202",
 	},
-	
+
 	{
 		Name =					"ECMProbe",
 		RequiredResearch =		"",
@@ -152,7 +111,7 @@ research =
 		Icon = Icon_Tech,
 		ShortDisplayedName = "$7204",
 	},
-	
+
 	{
 		Name =					"SensDisProbe",
 		RequiredResearch =		"",
@@ -166,7 +125,7 @@ research =
 		Icon = Icon_Tech,
 		ShortDisplayedName = "$7214",
 	},
-	
+
 	{
 		Name =					"DamageMoverTech",
 		RequiredResearch =		"",
@@ -196,27 +155,10 @@ research =
 		Icon = Icon_Tech,
 		ShortDisplayedName =	"$7907",
 	},
-	
--- NOW BACK TO BEING A SUBSYSTEM - THEREFORE UNNEEDED
---	{
---		Name =					"MoverConstruction",
---		RequiredResearch =		"",
---		RequiredSubSystems =	"Research | AdvancedResearch",
---		Cost = 					500,
---		Time = 					60,
---		DisplayedName =			"$7910",
---		DisplayPriority =		29,
---		Description =			"$7911",
---		TargetName = 		"Kpr_Mover",
---		Icon = Icon_Tech,
---		ShortDisplayedName = 	"$7912",
---	},
 
-	--======================================================================
 	-- Ability Upgrades
-	--======================================================================
 
-	 
+
 	{
 		Name =					"RepairAbility",
 		RequiredResearch =		"",
@@ -234,7 +176,7 @@ research =
 		ShortDisplayedName = "$7205",
 	},
 
-	 
+
 	{
 		Name =					"ScoutPingAbility",
 		RequiredResearch =		"",
@@ -252,7 +194,7 @@ research =
 		ShortDisplayedName = "$7206",
         },
 
-	
+
 	{
 		Name =					"ImprovedTorpedo",
 		RequiredResearch =		"",
@@ -270,7 +212,7 @@ research =
 		ShortDisplayedName = "$7207",
 	},
 
-	 
+
 	{
 		Name =					"AttackBomberImprovedBombs",
 		RequiredResearch =		"",
@@ -288,7 +230,7 @@ research =
 		ShortDisplayedName = "$7208",
 	},
 
-	 
+
 	{
 		Name =					"ScoutEMPAbility",
 		RequiredResearch =		"",
@@ -315,17 +257,13 @@ research =
 		DisplayedName =			"$7521",
 		DisplayPriority =		32,
 		Description =			"$7522",
-		TargetName =			"Hgn_DefenseFieldFrigate",   	
+		TargetName =			"Hgn_DefenseFieldFrigate",
 		Icon = Icon_Ability,
 		ShortDisplayedName = "$7210",
 	},
-
-
-	--======================================================================
 	-- Mothership Upgrades
-	--======================================================================
 
-	 
+
 	{
 		Name =					"MothershipHealthUpgrade1",
 		RequiredResearch =		"",
@@ -340,11 +278,11 @@ research =
 		TargetName =			"Hgn_MotherShip",
         UpgradeName =			"MAXHEALTH",
         UpgradeValue =			1.5,
-	Icon = Icon_Health,
-	ShortDisplayedName = "$7211",
+		Icon = Icon_Health,
+		ShortDisplayedName = "$7211",
 	},
 
-	 
+
 	{
 		Name =					"MothershipHealthUpgrade2",
 		RequiredResearch =		"MothershipHealthUpgrade1",
@@ -359,8 +297,8 @@ research =
 		TargetName =			"Hgn_MotherShip",
         UpgradeName =			"MAXHEALTH",
         UpgradeValue =			2,
-	Icon = Icon_Health,
-	ShortDisplayedName = "$7212",
+		Icon = Icon_Health,
+		ShortDisplayedName = "$7212",
 	},
 
 	{
@@ -377,11 +315,11 @@ research =
 		TargetName =			"Hgn_MotherShip",
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.2,
-	Icon = Icon_Speed,
-	ShortDisplayedName = "$7211",
+		Icon = Icon_Speed,
+		ShortDisplayedName = "$7211",
 	},
 
-	 
+
 	{
 		Name =					"MothershipMAXSPEEDUpgrade2",
 		RequiredResearch =		"MothershipMAXSPEEDUpgrade1",
@@ -418,11 +356,8 @@ research =
 		ShortDisplayedName = "$7240",
 	},
 
-	--======================================================================
 	-- Carrier Upgrades
-	--======================================================================
 
-	
 	{
 		Name =					"CarrierHealthUpgrade1",
 		RequiredResearch =		"",
@@ -438,10 +373,10 @@ research =
         UpgradeName =			"MAXHEALTH",
         UpgradeValue =			1.3,
 		Icon = Icon_Health,
-	ShortDisplayedName = "$7221",
+		ShortDisplayedName = "$7221",
 	},
 
-	 
+
 	{
 		Name =					"CarrierHealthUpgrade2",
 		RequiredResearch =		"CarrierHealthUpgrade1",
@@ -457,10 +392,10 @@ research =
         UpgradeName =			"MAXHEALTH",
         UpgradeValue =			1.6,
 		Icon = Icon_Health,
-	ShortDisplayedName = "$7222",
+		ShortDisplayedName = "$7222",
 	},
 
-	 
+
 	{
 		Name =					"CarrierMAXSPEEDUpgrade1",
 		RequiredResearch =		"",
@@ -476,10 +411,10 @@ research =
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.2,
 		Icon = Icon_Speed,
-	ShortDisplayedName = "$7221",
+		ShortDisplayedName = "$7221",
 	},
 
-	 
+
 	{
 		Name =					"CarrierMAXSPEEDUpgrade2",
 		RequiredResearch =		"CarrierMAXSPEEDUpgrade1",
@@ -494,8 +429,8 @@ research =
 		TargetName =			"Hgn_Carrier",
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.35,
-	Icon = Icon_Speed,
-	ShortDisplayedName = "$7222",
+		Icon = Icon_Speed,
+		ShortDisplayedName = "$7222",
 	},
 
 
@@ -511,18 +446,14 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_Carrier",
-	        UpgradeName =			"BUILDSPEED",
-        	UpgradeValue =			1.3,
+		UpgradeName =			"BUILDSPEED",
+		UpgradeValue =			1.3,
 		Icon = Icon_Build,
 		ShortDisplayedName = "$7240",
 	},
-	 
-	
-	--======================================================================
-	-- Fighter Upgrades
-	--======================================================================
 
-	 
+	-- Fighter Upgrades
+
 	{
 		Name =					"InterceptorMAXSPEEDUpgrade1",
 		RequiredResearch =		"",
@@ -537,9 +468,8 @@ research =
 		TargetName =			"Hgn_Interceptor",
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.25,
-	
-	Icon = Icon_Speed,
-	ShortDisplayedName = "$7231"
+		Icon = Icon_Speed,
+		ShortDisplayedName = "$7231"
 	},
 
 	{
@@ -556,9 +486,8 @@ research =
 		TargetName =			"Hgn_Interceptor",
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.5,
-	
-	Icon = Icon_Speed,
-	ShortDisplayedName = "$7232",
+		Icon = Icon_Speed,
+		ShortDisplayedName = "$7232",
 	},
 
 	{
@@ -575,9 +504,8 @@ research =
 		TargetName =			"Hgn_AttackBomber",
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.25,
-	
-	Icon = Icon_Speed,
-	ShortDisplayedName = "$7234",
+		Icon = Icon_Speed,
+		ShortDisplayedName = "$7234",
 	},
 
 	{
@@ -594,15 +522,10 @@ research =
 		TargetName =			"Hgn_AttackBomber",
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.5,
-	
-	Icon = Icon_Speed,
-	ShortDisplayedName = "$7235",
+		Icon = Icon_Speed,
+		ShortDisplayedName = "$7235",
 	},
-
-	--======================================================================
 	-- Corvette Upgrades
-	--======================================================================
-
 	{
 		Name =					"AssaultCorvetteHealthUpgrade1",
 		RequiredResearch =		"",
@@ -618,7 +541,7 @@ research =
         UpgradeName =			"MAXHEALTH",
         UpgradeValue =			1.3,
 		Icon = Icon_Health,
-	ShortDisplayedName = "$7237",
+		ShortDisplayedName = "$7237",
 	},
 
 	{
@@ -636,7 +559,7 @@ research =
         UpgradeName =			"MAXHEALTH",
         UpgradeValue =			1.6,
 		Icon = Icon_Health,
-	ShortDisplayedName = "$7238",
+		ShortDisplayedName = "$7238",
 	},
 
 	{
@@ -653,8 +576,8 @@ research =
 		TargetName =			"Hgn_AssaultCorvette",
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.2,
-	Icon = Icon_Speed,
-	ShortDisplayedName = "$7237",
+		Icon = Icon_Speed,
+		ShortDisplayedName = "$7237",
 	},
 
 	{
@@ -671,8 +594,8 @@ research =
 		TargetName =			"Hgn_AssaultCorvette",
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.35,
-	Icon = Icon_Speed,
-	ShortDisplayedName = "$7238",
+		Icon = Icon_Speed,
+		ShortDisplayedName = "$7238",
 	},
 
 	{
@@ -687,8 +610,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_PulsarCorvette",
-        	UpgradeName =			"MAXHEALTH",
-        	UpgradeValue =			1.3,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.3,
 		Icon = Icon_Health,
 		ShortDisplayedName = "$7241",
 	},
@@ -708,7 +631,7 @@ research =
         UpgradeName =			"MAXHEALTH",
         UpgradeValue =			1.6,
 		Icon = Icon_Health,
-	ShortDisplayedName = "$7242",
+		ShortDisplayedName = "$7242",
 	},
 
 	{
@@ -725,9 +648,8 @@ research =
 		TargetName =			"Hgn_PulsarCorvette",
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.2,
-	
-	Icon = Icon_Speed,
-	ShortDisplayedName = "$7241",
+		Icon = Icon_Speed,
+		ShortDisplayedName = "$7241",
 	},
 
 	{
@@ -744,15 +666,10 @@ research =
 		TargetName =			"Hgn_PulsarCorvette",
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.35,
-	
-	Icon = Icon_Speed,
-	ShortDisplayedName = "$7242",
+		Icon = Icon_Speed,
+		ShortDisplayedName = "$7242",
 	},
-
-	--======================================================================
 	-- Frigate Upgrades
-	--======================================================================
-
 	{
 		Name =					"TorpedoFrigateHealthUpgrade1",
 		RequiredResearch =		"",                                          -- <list of prerequisite research items>
@@ -768,7 +685,7 @@ research =
         UpgradeName =			"MAXHEALTH",
         UpgradeValue =			1.3,
 		Icon = Icon_Health,
-	ShortDisplayedName = "$7244",
+		ShortDisplayedName = "$7244",
 	},
 
 	{
@@ -786,7 +703,7 @@ research =
         UpgradeName =			"MAXHEALTH",
         UpgradeValue =			1.6,
 		Icon = Icon_Health,
-	ShortDisplayedName = "$7245",
+		ShortDisplayedName = "$7245",
 	},
 
 	{
@@ -804,7 +721,7 @@ research =
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.2,
 		Icon = Icon_Speed,
-	ShortDisplayedName = "$7244",
+		ShortDisplayedName = "$7244",
 	},
 
 	{
@@ -822,7 +739,7 @@ research =
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.35,
 		Icon = Icon_Speed,
-	ShortDisplayedName = "$7245",
+		ShortDisplayedName = "$7245",
 	},
 
 	{
@@ -840,7 +757,7 @@ research =
         UpgradeName =			"MAXHEALTH",
         UpgradeValue =			1.3,
 		Icon = Icon_Health,
-	ShortDisplayedName = "$7247",
+		ShortDisplayedName = "$7247",
 	},
 
 	{
@@ -858,7 +775,7 @@ research =
         UpgradeName =			"MAXHEALTH",
         UpgradeValue =			1.6,
 		Icon = Icon_Health,
-	ShortDisplayedName = "$7248",
+		ShortDisplayedName = "$7248",
 	},
 
 	{
@@ -876,8 +793,7 @@ research =
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.2,
 		Icon = Icon_Speed,
-	ShortDisplayedName = "$7247",
-
+		ShortDisplayedName = "$7247",
 	},
 
 	{
@@ -895,8 +811,7 @@ research =
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.35,
 		Icon = Icon_Speed,
-	ShortDisplayedName = "$7248",
-
+		ShortDisplayedName = "$7248",
 	},
 
 	{
@@ -911,8 +826,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_AssaultFrigate",
-        	UpgradeName =			"MAXHEALTH",
-       		UpgradeValue =			1.3,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.3,
 		Icon = Icon_Health,
 		ShortDisplayedName = "$7251",
 	},
@@ -929,8 +844,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_AssaultFrigate",
-        	UpgradeName =			"MAXHEALTH",
-        	UpgradeValue =			1.6,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.6,
 		Icon = Icon_Health,
 		ShortDisplayedName = "$7252",
 	},
@@ -947,8 +862,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_AssaultFrigate",
-      		UpgradeName =			"MAXSPEED",
-        	UpgradeValue =			1.2,
+		UpgradeName =			"MAXSPEED",
+		UpgradeValue =			1.2,
 		Icon = Icon_Speed,
 		ShortDisplayedName = "$7251",
 
@@ -969,14 +884,9 @@ research =
         UpgradeName =			"MAXSPEED",
         UpgradeValue =			1.35,
 		Icon = Icon_Speed,
-	ShortDisplayedName = "$7252",
+		ShortDisplayedName = "$7252",
 	},
-
-	
-	--======================================================================
 	-- Capital Ship Upgrades
-	--======================================================================
-
 	{
 		Name =					"BattlecruiserHealthUpgrade1",
 		RequiredResearch =		"BattlecruiserIonWeapons",                             -- <list of prerequisite research items>
@@ -1052,7 +962,7 @@ research =
 	},
 
 
-{
+	{
 		Name =				"DestroyerHealthUpgrade1",
 		RequiredResearch =		"DestroyerTech",                             -- <list of prerequisite research items>
 		RequiredSubSystems =		"Research | AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
@@ -1067,7 +977,7 @@ research =
 		UpgradeName =			"MAXHEALTH",
 		UpgradeValue =			1.3,
 		ShortDisplayedName = 		"$7274",
-		Icon = 				Icon_Health,	
+		Icon = 				Icon_Health,
 	},
 
 	{
@@ -1126,10 +1036,154 @@ research =
 
 	},
 
-	--======================================================================
-	-- Platform Upgrades
-	--======================================================================
+	{
+		Name =					"CrossbowHealthUpgrade1",
+		RequiredResearch =		"LightCruisers",                             -- <list of prerequisite research items>
+		RequiredSubSystems =	"Research | AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
+		Cost = 					2000,
+		Time = 					60,
+		DisplayedName =			"Crossbow Hull 1",
+		DisplayPriority =		407,                                                    -- <display priority (used to sort on screen)>,
+		Description =			"Improves the Crossbow's Armor to withstand greater damage.",
+		UpgradeType =			Modifier,
+		TargetType =			Ship,
+		TargetName =			"hgn_Crossbow_Cruiser",
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.2,
+		Icon = Icon_Health,
+		ShortDisplayedName = "Lvl 1 Crossbow",
+	},
 
+	{
+		Name =					"CrossbowHealthUpgrade2",
+		RequiredResearch =		"CrossbowHealthUpgrade1",                             -- <list of prerequisite research items>
+		RequiredSubSystems =	"Research | AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
+		Cost = 					2500,
+		Time = 					60,
+		DisplayedName =			"Crossbow Hull 2",
+		DisplayPriority =		407,                                                    -- <display priority (used to sort on screen)>,
+		Description =			"Improves the Crossbow's Armor to withstand ever more damage.",
+		UpgradeType =			Modifier,
+		TargetType =			Ship,
+		TargetName =			"hgn_Crossbow_Cruiser",
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.4,
+		Icon = Icon_Health,
+		ShortDisplayedName = "Lvl 2 Crossbow",
+	},
+
+	{
+		Name =					"CrossbowMAXSPEEDUpgrade1",
+		RequiredResearch =		"LightCruisers",                             -- <list of prerequisite research items>
+		RequiredSubSystems =	"Research | AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
+		Cost = 					1000,
+		Time = 					30,
+		DisplayedName =			"Crossbow Engine 1",
+		DisplayPriority =		408,                                                   -- <display priority (used to sort on screen)>,
+		Description =			"Improves the Crossbow's Conventional Engines",
+		UpgradeType =			Modifier,
+		TargetType =			Ship,
+		TargetName =			"hgn_Crossbow_Cruiser",
+		UpgradeName =			"MAXSPEED",
+		UpgradeValue =			1.2,
+		Icon = Icon_Speed,
+		ShortDisplayedName = "Lvl 1 Crossbow",
+
+	},
+
+	{
+		Name =					"CrossbowMAXSPEEDUpgrade2",
+		RequiredResearch =		"LightCruisers",                             -- <list of prerequisite research items>
+		RequiredSubSystems =	"Research | AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
+		Cost = 					1000,
+		Time = 					30,
+		DisplayedName =			"Crossbow Engine 2",
+		DisplayPriority =		408,                                                   -- <display priority (used to sort on screen)>,
+		Description =			"Improves the Crossbow's Conventional Engines",
+		UpgradeType =			Modifier,
+		TargetType =			Ship,
+		TargetName =			"hgn_Crossbow_Cruiser",
+		UpgradeName =			"MAXSPEED",
+		UpgradeValue =			1.4,
+		Icon = Icon_Speed,
+		ShortDisplayedName = "Lvl 2 Crossbow",
+
+	},
+
+	{
+		Name =					"SwordHealthUpgrade1",
+		RequiredResearch =		"LightCruisers",                             -- <list of prerequisite research items>
+		RequiredSubSystems =	"Research | AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
+		Cost = 					2000,
+		Time = 					60,
+		DisplayedName =			"Sword Hull 1",
+		DisplayPriority =		409,                                                    -- <display priority (used to sort on screen)>,
+		Description =			"Improves the swords's Armor to withstand greater damage.",
+		UpgradeType =			Modifier,
+		TargetType =			Ship,
+		TargetName =			"hgn_sword_cruiser",
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.2,
+		Icon = Icon_Health,
+		ShortDisplayedName = "Lvl 1 Sword",
+	},
+
+	{
+		Name =					"swordHealthUpgrade2",
+		RequiredResearch =		"swordHealthUpgrade1",                             -- <list of prerequisite research items>
+		RequiredSubSystems =	"Research | AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
+		Cost = 					2500,
+		Time = 					60,
+		DisplayedName =			"Sword Hull 2",
+		DisplayPriority =		409,                                                    -- <display priority (used to sort on screen)>,
+		Description =			"Improves the Sword's Armor to withstand ever more damage.",
+		UpgradeType =			Modifier,
+		TargetType =			Ship,
+		TargetName =			"hgn_sword_cruiser",
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.4,
+		Icon = Icon_Health,
+		ShortDisplayedName = "Lvl 2 Sword",
+	},
+
+	{
+		Name =					"swordMAXSPEEDUpgrade1",
+		RequiredResearch =		"LightCruisers",                             -- <list of prerequisite research items>
+		RequiredSubSystems =	"Research | AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
+		Cost = 					1000,
+		Time = 					30,
+		DisplayedName =			"Sword Engine 1",
+		DisplayPriority =		410,                                                   -- <display priority (used to sort on screen)>,
+		Description =			"Improves the sword's Conventional Engines",
+		UpgradeType =			Modifier,
+		TargetType =			Ship,
+		TargetName =			"hgn_sword_cruiser",
+		UpgradeName =			"MAXSPEED",
+		UpgradeValue =			1.2,
+		Icon = Icon_Speed,
+		ShortDisplayedName = "Lvl 1 Sword",
+
+	},
+
+	{
+		Name =					"swordMAXSPEEDUpgrade2",
+		RequiredResearch =		"swordMAXSPEEDUpgrade1",                             -- <list of prerequisite research items>
+		RequiredSubSystems =	"Research | AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
+		Cost = 					1000,
+		Time = 					30,
+		DisplayedName =			"Sword Engine 2",
+		DisplayPriority =		410,                                                   -- <display priority (used to sort on screen)>,
+		Description =			"Improves the Swords's Conventional Engines",
+		UpgradeType =			Modifier,
+		TargetType =			Ship,
+		TargetName =			"hgn_sword_cruiser",
+		UpgradeName =			"MAXSPEED",
+		UpgradeValue =			1.4,
+		Icon = Icon_Speed,
+		ShortDisplayedName = "Lvl 2 Sword",
+
+	},
+	-- Platform Upgrades
 	{
 		Name =					"GunTurretHealthUpgrade1",
 		RequiredResearch =		"",                                                    -- <list of prerequisite research items>
@@ -1142,8 +1196,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_GunTurret",
-        	UpgradeName =			"MAXHEALTH",
-       		UpgradeValue =			1.3,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.3,
 		Icon = Icon_Health,
 		ShortDisplayedName = "$7257",
 	},
@@ -1160,8 +1214,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_GunTurret",
-        	UpgradeName =			"MAXHEALTH",
-        	UpgradeValue =			1.6,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.6,
 		Icon = Icon_Health,
 		ShortDisplayedName =		"$7258",
 	},
@@ -1178,8 +1232,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_IonTurret",
-        	UpgradeName =			"MAXHEALTH",
-        	UpgradeValue =			1.3,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.3,
 		Icon = 				Icon_Health,
 		ShortDisplayedName = 		"$7261",
 	},
@@ -1196,16 +1250,12 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_IonTurret",
-        	UpgradeName =			"MAXHEALTH",
-        	UpgradeValue =			1.6,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.6,
 		Icon = 				Icon_Health,
 		ShortDisplayedName = 		"$7262",
 	},
-
-	--======================================================================
 	-- Utility Upgrades
-	--======================================================================
-
 	{
 		Name =				"ResourceCollectorHealthUpgrade1",
 		RequiredResearch =		"",                                                    -- <list of prerequisite research items>
@@ -1218,8 +1268,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_ResourceCollector",
-        	UpgradeName =			"MAXHEALTH",
-        	UpgradeValue =			1.5,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.5,
 		Icon = Icon_Health,
 		ShortDisplayedName = "$7264",
 	},
@@ -1236,8 +1286,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_ResourceCollector",
-        	UpgradeName =			"MAXHEALTH",
-        	UpgradeValue =			2,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			2,
 		Icon = 				Icon_Health,
 		ShortDisplayedName = 		"$7265",
 	},
@@ -1254,8 +1304,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_ResourceController",
-        	UpgradeName =			"MAXHEALTH",
-        	UpgradeValue =			1.3,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.3,
 		Icon = 				Icon_Health,
 		ShortDisplayedName = 		"$7267",
 	},
@@ -1272,97 +1322,12 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_ResourceController",
-        	UpgradeName =			"MAXHEALTH",
-        	UpgradeValue =			1.6,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.6,
 		Icon = 				Icon_Health,
 		ShortDisplayedName = 		"$7268",
 	},
-
-	--======================================================================
-	-- Hyperspace Research
-	--======================================================================
-
-	{
-		Name =				"HyperspaceCostUpgrade1",
-		RequiredResearch =		"",
-		RequiredSubSystems =		"Research | AdvancedResearch & Hyperspace",
-		Cost = 					0,
-		Time = 					0,
-		DisplayedName =			"$7627",
-		DisplayPriority =			1000,
-		Description =			"$7628",
-		UpgradeType =			Modifier,
-		TargetType =			AllShips,
-        	UpgradeName =			"HyperspaceCost",
-        	UpgradeValue =			0.8,
-		TargetName = 			"Hgn_Mothership", 
-		Icon = 				Icon_Tech,
-		ShortDisplayedName = 		"$7280",
-	},
-
-
--- Hyperspace
-
-
-	{
-		Name =				"HyperspaceCostUpgrade2",
-		RequiredResearch =		"HyperspaceCostUpgrade1",
-		RequiredSubSystems =		"AdvancedResearch | AdvancedResearch & Hyperspace",
-		Cost = 					0,
-		Time = 					0,
-		DisplayedName =			"$7629",
-		DisplayPriority =			1000,
-		Description =			"$7630",
-		UpgradeType =			Modifier,
-		TargetType =			AllShips,
-        	UpgradeName =			"HyperspaceCost",
-        	UpgradeValue =			0.6,
-		TargetName = 			"Hgn_Mothership", 
-		Icon = 				Icon_Tech,
-		ShortDisplayedName = 		"$7281",
-	},
-
---	{
---		Name =				"HyperspaceRecoveryTimeUpgrade1",
---		RequiredResearch =		"",
---		RequiredSubSystems =		"Research | AdvancedResearch & Hyperspace",
---		Cost = 					500,
---		Time = 					30,
---		DisplayedName =			"$7635",
---		DisplayPriority =			1007,
---		Description =			"$7636",
---		UpgradeType =			Modifier,
---		TargetType =			AllShips,
---     	UpgradeName =			"HyperspaceRecoveryTime",
---	  	UpgradeValue =			0.33,
---		TargetName = 			"Hgn_Mothership",
---		Icon = 				Icon_Tech,
---		ShortDisplayedName = 		"$7284",
---	},
-
---	{
---		Name =				"HyperspaceRecoveryTimeUpgrade2",
---		RequiredResearch =		"HyperspaceRecoveryTimeUpgrade1",
---		RequiredSubSystems =		"AdvancedResearch & Hyperspace",
---		Cost = 					1000,
---		Time = 					45,
---		DisplayedName =			"$7637",
---		DisplayPriority =			1007,
---		Description =			"$7638",
---		UpgradeType =			Modifier,
---		TargetType =			AllShips,
---     	UpgradeName =			"HyperspaceRecoveryTime",
---  	UpgradeValue =			0.33,
---		TargetName = 			"Hgn_Mothership", 
---		Icon = 				Icon_Tech,
---		ShortDisplayedName = 		"$7285",
---	},
-
-	
-	--======================================================================
 	-- Shipyard Upgrades
-	--======================================================================
-
 	{
 		Name =				"ShipyardHealthUpgrade1",
 		RequiredResearch =		"",                                                    -- <list of prerequisite research items>
@@ -1375,8 +1340,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_Shipyard",
-        	UpgradeName =			"MAXHEALTH",
-        	UpgradeValue =			1.3,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.3,
 		Icon = 				Icon_Health,
 		ShortDisplayedName = 		"$7271",
 	},
@@ -1393,8 +1358,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_Shipyard",
-        	UpgradeName =			"MAXHEALTH",
-        	UpgradeValue =			1.6,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.6,
 		Icon = 				Icon_Health,
 		ShortDisplayedName = 		"$7272",
 	},
@@ -1411,8 +1376,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_Shipyard",
-        	UpgradeName =			"MAXSPEED",
-        	UpgradeValue =			1.2,
+		UpgradeName =			"MAXSPEED",
+		UpgradeValue =			1.2,
 		Icon = 				Icon_Speed,
 		ShortDisplayedName = 		"$7271",
 	},
@@ -1429,8 +1394,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_Shipyard",
-        	UpgradeName =			"MAXSPEED",
-        	UpgradeValue =			1.35,
+		UpgradeName =			"MAXSPEED",
+		UpgradeValue =			1.35,
 		Icon = 				Icon_Speed,
 		ShortDisplayedName = 		"$7272",
 	},
@@ -1447,17 +1412,12 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Hgn_Shipyard",
-	        UpgradeName =			"BUILDSPEED",
-        	UpgradeValue =			1.3,
+		UpgradeName =			"BUILDSPEED",
+		UpgradeValue =			1.3,
 		Icon = 				Icon_Build,
 		ShortDisplayedName = 		"$7240",
 	},
-
-
-	--======================================================================
 	-- TEMPORARY - for SP Game Use
-	--======================================================================
-
 	{
 		Name =			"SensorsDowngrade1",
 		RequiredResearch =	"RESEARCH HACK",                        -- <list of prerequisite research items>
@@ -1470,8 +1430,8 @@ research =
 		UpgradeType =		Modifier,
 		TargetType =		Ship,
 		TargetName =		"Hgn_MotherShip",
-	        UpgradeName =		"PrimarySensorsRange",
-	        UpgradeValue =		0.3,
+		UpgradeName =		"PrimarySensorsRange",
+		UpgradeValue =		0.3,
 	},
 
 	{
@@ -1486,8 +1446,8 @@ research =
 		UpgradeType =		Modifier,
 		TargetType =		Ship,
 		TargetName =		"Hgn_MotherShip",
-	        UpgradeName =		"SecondarySensorsRange",
-	        UpgradeValue =		0.3,
+		UpgradeName =		"SecondarySensorsRange",
+		UpgradeValue =		0.3,
 	},
 
 	{
@@ -1502,8 +1462,8 @@ research =
 		UpgradeType =		Modifier,
 		TargetType =		Ship,
 		TargetName =		"Hgn_MotherShip",
-	        UpgradeName =		"VisualRange",
-	        UpgradeValue =		0.3,
+		UpgradeName =		"VisualRange",
+		UpgradeValue =		0.3,
 	},
 
 	{
@@ -1518,8 +1478,8 @@ research =
 		UpgradeType =		Modifier,
 		TargetType =		Ship,
 		TargetName =		"Hgn_MotherShip",
-	        UpgradeName =		"PrimarySensorsRange",
-	        UpgradeValue =		1.0,
+		UpgradeName =		"PrimarySensorsRange",
+		UpgradeValue =		1.0,
 	},
 
 	{
@@ -1534,8 +1494,8 @@ research =
 		UpgradeType =		Modifier,
 		TargetType =		Ship,
 		TargetName =		"Hgn_MotherShip",
-	        UpgradeName =		"SecondarySensorsRange",
-	        UpgradeValue =		1.0,
+		UpgradeName =		"SecondarySensorsRange",
+		UpgradeValue =		1.0,
 	},
 
 	{
@@ -1550,8 +1510,8 @@ research =
 		UpgradeType =		Modifier,
 		TargetType =		Ship,
 		TargetName =		"Hgn_MotherShip",
-	        UpgradeName =		"VisualRange",
-	        UpgradeValue =		1.0,
+		UpgradeName =		"VisualRange",
+		UpgradeValue =		1.0,
 	},
 
 	{
@@ -1566,8 +1526,8 @@ research =
 		UpgradeType =		Modifier,
 		TargetType =		Ship,
 		TargetName =		"Hgn_AssaultCorvetteElite",
-	        UpgradeName =		"WeaponDamage",
-	        UpgradeValue =		2.0,
+		UpgradeName =		"WeaponDamage",
+		UpgradeValue =		2.0,
 	},
 
 	{
@@ -1582,8 +1542,8 @@ research =
 		UpgradeType =		Modifier,
 		TargetType =		Ship,
 		TargetName =		"Hgn_AttackBomberElite",
-	        UpgradeName =		"WeaponDamage",
-	        UpgradeValue =		1.8,
+		UpgradeName =		"WeaponDamage",
+		UpgradeValue =		1.8,
 	},
 	{
 		Name =				"MoverHealthUpgrade",
@@ -1628,8 +1588,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Family,
 		TargetName =			"Frigate",
-	        UpgradeName =			"MAXHEALTH",
-	        UpgradeValue =			2.5,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			2.5,
 	},
 
 	{
@@ -1644,8 +1604,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_Destroyer",
-	        UpgradeName =			"MAXHEALTH",
-	        UpgradeValue =			2.5,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			2.5,
 	},
 
 	{
@@ -1660,8 +1620,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_Destroyer",
-	        UpgradeName =			"MAXHEALTH",
-	        UpgradeValue =			3.5,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			3.5,
 	},
 
 
@@ -1677,8 +1637,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_Destroyer",
-	        UpgradeName =			"MAXHEALTH",
-	        UpgradeValue =			4.5,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			4.5,
 	},
 
 	{
@@ -1693,10 +1653,10 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_DestroyerM10",
-	        UpgradeName =			"WeaponDamage",
-	        UpgradeValue =			0.1,
+		UpgradeName =			"WeaponDamage",
+		UpgradeValue =			0.1,
 	},
-	
+
 	{
 		Name =				"KeeperWeaponUpgradeSPGAME_M10_LVL_2",
 		RequiredResearch =		"RESEARCH HACK",                                          -- <list of prerequisite research items>
@@ -1709,10 +1669,10 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_DestroyerM10",
-	        UpgradeName =			"WeaponDamage",
-	        UpgradeValue =			0.2,
+		UpgradeName =			"WeaponDamage",
+		UpgradeValue =			0.2,
 	},
-	
+
 	{
 		Name =				"KeeperWeaponUpgradeSPGAME_M10_LVL_3",
 		RequiredResearch =		"RESEARCH HACK",                                          -- <list of prerequisite research items>
@@ -1725,10 +1685,10 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_DestroyerM10",
-	        UpgradeName =			"WeaponDamage",
-	        UpgradeValue =			0.3,
+		UpgradeName =			"WeaponDamage",
+		UpgradeValue =			0.3,
 	},
-	
+
 	{
 		Name =				"KeeperWeaponUpgradeSPGAME_M10_LVL_4",
 		RequiredResearch =		"RESEARCH HACK",                                          -- <list of prerequisite research items>
@@ -1741,10 +1701,10 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_DestroyerM10",
-	        UpgradeName =			"WeaponDamage",
-	        UpgradeValue =			0.4,
+		UpgradeName =			"WeaponDamage",
+		UpgradeValue =			0.4,
 	},
-	
+
 	{
 		Name =				"KeeperWeaponUpgradeSPGAME_M10_LVL_5",
 		RequiredResearch =		"RESEARCH HACK",                                          -- <list of prerequisite research items>
@@ -1757,10 +1717,10 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_DestroyerM10",
-	        UpgradeName =			"WeaponDamage",
-	        UpgradeValue =			0.5,
+		UpgradeName =			"WeaponDamage",
+		UpgradeValue =			0.5,
 	},
-	
+
 	{
 		Name =				"KeeperWeaponUpgradeSPGAME_M10_LVL_6",
 		RequiredResearch =		"RESEARCH HACK",                                          -- <list of prerequisite research items>
@@ -1773,10 +1733,10 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_DestroyerM10",
-	        UpgradeName =			"WeaponDamage",
-	        UpgradeValue =			0.6,
+		UpgradeName =			"WeaponDamage",
+		UpgradeValue =			0.6,
 	},
-	
+
 	{
 		Name =				"KeeperHealthUpgradeSPGAME_M10_LVL_1",
 		RequiredResearch =		"RESEARCH HACK",                                          -- <list of prerequisite research items>
@@ -1789,9 +1749,10 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_DestroyerM10",
-	        UpgradeName =			"MAXHEALTH",
-	        UpgradeValue =			2,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			2,
 	},
+
 	{
 		Name =				"KeeperHealthUpgradeSPGAME_M10_LVL_2",
 		RequiredResearch =		"RESEARCH HACK",                                          -- <list of prerequisite research items>
@@ -1804,9 +1765,10 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_DestroyerM10",
-	        UpgradeName =			"MAXHEALTH",
-	        UpgradeValue =			3,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			3,
 	},
+
 	{
 		Name =				"KeeperHealthUpgradeSPGAME_M10_LVL_3",
 		RequiredResearch =		"RESEARCH HACK",                                          -- <list of prerequisite research items>
@@ -1819,8 +1781,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_DestroyerM10",
-	        UpgradeName =			"MAXHEALTH",
-	        UpgradeValue =			4,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			4,
 	},
 
 	{
@@ -1835,8 +1797,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_AttackDroid",
-	        UpgradeName =			"MAXHEALTH",
-	        UpgradeValue =			2.0,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			2.0,
 	},
 
 	{
@@ -1851,8 +1813,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_AttackDroid",
-	        UpgradeName =			"MAXHEALTH",
-	        UpgradeValue =			3.0,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			3.0,
 	},
 
 	{
@@ -1867,8 +1829,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_AttackDroid",
-	        UpgradeName =			"MAXHEALTH",
-	        UpgradeValue =			4.0,
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			4.0,
 	},
 
 	{
@@ -1883,8 +1845,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_AttackDroid",
-	        UpgradeName =			"WeaponDamage",
-	        UpgradeValue =			1.3,
+		UpgradeName =			"WeaponDamage",
+		UpgradeValue =			1.3,
 	},
 
 	{
@@ -1899,8 +1861,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_AttackDroid",
-	        UpgradeName =			"WeaponDamage",
-	        UpgradeValue =			1.6,
+		UpgradeName =			"WeaponDamage",
+		UpgradeValue =			1.6,
 	},
 
 	{
@@ -1915,8 +1877,8 @@ research =
 		UpgradeType =			Modifier,
 		TargetType =			Ship,
 		TargetName =			"Kpr_AttackDroid",
-	        UpgradeName =			"WeaponDamage",
-	        UpgradeValue =			2.0,
+		UpgradeName =			"WeaponDamage",
+		UpgradeValue =			2.0,
 	},
 
 }

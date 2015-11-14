@@ -45,6 +45,12 @@ CreditsList =
 		creditsImage = [[Data:UI\MapThumbnails\Campaign\Default.tga]],
 	},
 	{
+		creditsName = [[Enterprise-E]],
+		creditsText = [[For his awesomely done Taiidan Cruisers, The Vanaar-Jet and the Qwaar-Jet, Thanks so much!]],
+		creditsToolTip = [[Enterprise-E]],
+		creditsImage = [[Data:UI\MapThumbnails\Campaign\Default.tga]],
+	},
+	{
 		creditsName = [[Cannonjack]],
 		creditsText = [[Provided the Bishop Carrier mod. Very cool by the way, you should try the original if you come across it.]],
 		creditsToolTip = [[Cannonjack]],
@@ -60,18 +66,6 @@ CreditsList =
 		creditsName = [[EvilJedi]],
 		creditsText = [[Rehash Mod, which helped improve the way ships act, the True 3d movement, and new ATI subsystem.]],
 		creditsToolTip = [[EvilJedi]],
-		creditsImage = [[Data:UI\MapThumbnails\Campaign\Default.tga]],
-	},
-	{
-		creditsName = [[Lipton Ice Tea]],
-		creditsText = [[Thousand of Gallons of Ice Tea helped me keep up at night, and got me through building TPOF. Dont listen to everyone else, tea is the real gamer fuel...]],
-		creditsToolTip = [[OMG TEA!]],
-		creditsImage = [[Data:Ui\creditspics\tea.tga]],
-	},
-	{
-		creditsName = [[Other Contributors]],
-		creditsText = [[For all of the people who came and went. Thanks for the help guys.]],
-		creditsToolTip = [[Other Contributors]],
 		creditsImage = [[Data:UI\MapThumbnails\Campaign\Default.tga]],
 	},
 }

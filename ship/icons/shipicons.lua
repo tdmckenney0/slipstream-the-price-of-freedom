@@ -2396,10 +2396,14 @@ Hgn_drone_frigate = Hgn_Torpedofrigate
 Hgn_drone_frigate_2 = Hgn_Assaultfrigate
 Hgn_drone_frigate_3 = Hgn_Marinefrigate
 hgn_heavybattlecruiser  = Hgn_Destroyer
+vgr_qwaarjetii = Vgr_BattleCruiser
+vgr_vanaarjet = Vgr_BattleCruiser
 vgr_gravityfrigate = Vgr_AssaultFrigate
 vgr_cloakingFrigate = Vgr_HeavyMissileFrigate
 Kpr_Mover_Capture = Kpr_Mover_Capture
 Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
+--SUBSYSTEMS
+--UNCG
 Hgn_BBC_Production_Frigate = Icon_Subsystem_Frigate
 Hgn_BBC_Module_PlatformControl = Icon_Subsystem_PlatformControl
 Hgn_BBC_Module_Research = Icon_Subsystem_Research
@@ -2414,7 +2418,6 @@ Hgn_BBC_Sensors_DetectCloaked = Icon_Subsystem_DetectCloaked
 Hgn_BBC_Innate_Engine = Icon_Subsystem_Engine
 Hgn_BBC_Innate_Resource = Icon_Subsystem_Resource
 Hgn_BBC_innate_missilebar = Icon_Subsystem_TorpedoLauncher
---UNCG
 hgn_missilebay = Icon_Subsystem_TorpedoLauncher
 hgn_missilebayfrigate = Icon_Subsystem_TorpedoLauncher
 hgn_ioncannonx2 = Icon_Subsystem_IonTurret

@@ -82,6 +82,26 @@ PersistantData = {
          size = 1,
          number = 3,
    },
+{
+         type = "vgr_vanaarjet",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 1,
+   },
+{
+         type = "vgr_qwaarjetii",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 1,
+   },
 
       {
          type = "vgr_carrier",

@@ -178,13 +178,13 @@ addShield(NewShipType, "EMP", 10000, 20)
 --------------------------------------------------------------------
 -------------------------------------Main--Turrets
 
-StartShipHardPointConfig(NewShipType, "Plaque", "Hardpoint_Plaque", "System", "Innate", "Damageable", "hgn_valencia", "", "", "", "", "", "", "", "")
+--StartShipHardPointConfig(NewShipType, "Plaque", "Hardpoint_Plaque", "System", "Innate", "Damageable", "hgn_valencia", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "SCC_Turret", "Weapon_TurretTop", "System", "Innate", "Damageable", "hgn_ioncannonx2", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "SCC_Turret", "Weapon_TurretTop", "System", "Innate", "Damageable", "hgn_gatlinggun", "", "", "", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "SCC_Turret1", "Weapon_TurretTop2", "System", "Innate", "Damageable", "hgn_missilebay", "", "", "", "", "", "", "", "")
 
---StartShipHardPointConfig(NewShipType, "SCC_Turret2", "Weapon_TurretTop3", "System", "Innate", "Damageable", "hgn_gatlinggun", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "SCC_Turret2", "Weapon_TurretTop3", "System", "Innate", "Damageable", "hgn_missilebay", "", "", "", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "SCC_Turret3", "Hardpoint_TurretBot1", "System", "Innate", "Damageable", "hgn_railgun", "", "", "", "", "", "", "", "")
 

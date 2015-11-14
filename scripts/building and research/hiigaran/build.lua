@@ -97,14 +97,6 @@ build =
         Description = "$7007", }, 
     { 
         Type = SubSystem, 
-        ThingToBuild = "Hgn_C_Module_PlatformControl", 
-        RequiredResearch = "", 
-        RequiredShipSubSystems = "", 
-        DisplayPriority = 10, 
-        DisplayedName = "$7008", 
-        Description = "$7009", }, 
-    { 
-        Type = SubSystem, 
         ThingToBuild = "Hgn_MS_Module_PlatformControl", 
         RequiredResearch = "", 
         RequiredShipSubSystems = "", 
@@ -113,19 +105,11 @@ build =
         Description = "$7009", }, 
     { 
         Type = SubSystem, 
-        ThingToBuild = "Hgn_C_Module_Research", 
-        RequiredResearch = "", 
-        RequiredShipSubSystems = "", 
-        DisplayPriority = 0, 
-        DisplayedName = "$7010", 
-        Description = "$7011", }, 
-    { 
-        Type = SubSystem, 
         ThingToBuild = "Hgn_MS_Module_Research", 
         RequiredResearch = "", 
         RequiredShipSubSystems = "", 
         DisplayPriority = 0, 
-        DisplayedName = "$7010", 
+        DisplayedName = "Technology Module", 
         Description = "$7011", }, 
    { 
         Type = SubSystem, 
@@ -137,19 +121,11 @@ build =
         Description = "The Agincourt Super Carrier uses a Second Generation Researching Method, by mounting a large Researching Bay overtop of the hangar bay, to allow faster technology devlopment.", }, 
     { 
         Type = SubSystem, 
-        ThingToBuild = "Hgn_C_Module_ResearchAdvanced", 
-        RequiredResearch = "", 
-        RequiredFleetSubSystems = "Research", 
-        DisplayPriority = 10, 
-        DisplayedName = "$7012", 
-        Description = "$7013", }, 
-    { 
-        Type = SubSystem, 
         ThingToBuild = "Hgn_MS_Module_ResearchAdvanced", 
         RequiredResearch = "", 
         RequiredFleetSubSystems = "Research", 
         DisplayPriority = 10, 
-        DisplayedName = "$7012", 
+        DisplayedName = "Advanced Technology Module", 
         Description = "$7013", }, 
     { 
         Type = SubSystem, 
@@ -241,14 +217,6 @@ build =
         Description = "$7021", }, 
     { 
         Type = SubSystem, 
-        ThingToBuild = "Hgn_C_Sensors_DetectHyperspace", 
-        RequiredResearch = "", 
-        RequiredShipSubSystems = "", 
-        DisplayPriority = 150, 
-        DisplayedName = "$7036", 
-        Description = "$7037", }, 
-    { 
-        Type = SubSystem, 
         ThingToBuild = "Hgn_MS_Sensors_DetectHyperspace", 
         RequiredResearch = "", 
         RequiredShipSubSystems = "", 
@@ -265,14 +233,6 @@ build =
         Description = "$7037", }, 
     { 
         Type = SubSystem, 
-        ThingToBuild = "Hgn_C_Sensors_AdvancedArray", 
-        RequiredResearch = "", 
-        RequiredShipSubSystems = "", 
-        DisplayPriority = 151, 
-        DisplayedName = "$7022", 
-        Description = "$7023", }, 
-    { 
-        Type = SubSystem, 
         ThingToBuild = "Hgn_MS_Sensors_AdvancedArray", 
         RequiredResearch = "", 
         RequiredShipSubSystems = "", 
@@ -287,14 +247,6 @@ build =
         DisplayPriority = 151, 
         DisplayedName = "$7022", 
         Description = "$7023", }, 
-    { 
-        Type = SubSystem, 
-        ThingToBuild = "Hgn_C_Sensors_DetectCloaked", 
-        RequiredResearch = "", 
-        RequiredShipSubSystems = "", 
-        DisplayPriority = 152, 
-        DisplayedName = "$7024", 
-        Description = "$7025", }, 
     { 
         Type = SubSystem, 
         ThingToBuild = "Hgn_MS_Sensors_DetectCloaked", 
@@ -325,7 +277,7 @@ build =
         RequiredResearch = "",
         RequiredShipSubSystems = "",
         DisplayPriority = 0,
-        DisplayedName = "$7010",
+        DisplayedName = "Technology Module",
         Description = "$7011", },
     {
         Type = SubSystem,
@@ -333,7 +285,7 @@ build =
         RequiredResearch = "",
         RequiredFleetSubSystems = "Research",
         DisplayPriority = 10,
-        DisplayedName = "$7012",
+        DisplayedName = "Advanced Technology Module",
         Description = "$7013", },
     {
         Type = SubSystem,

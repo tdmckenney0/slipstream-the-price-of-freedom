@@ -7,27 +7,27 @@ PersistantData = {
          subsystems = {
          },
          shiphold = {
-{	  
+{
 	   type = "Hgn_ResourceCollector",
 	   size = 1,
                     },
-	  {	  
+	  {
 	   type = "Hgn_ResourceCollector",
 	   size = 1,
 	  },
-	  {	  
+	  {
 	   type = "Hgn_ResourceCollector",
 	   size = 1,
 	  },
-	  {	  
+	  {
 	   type = "Hgn_ResourceCollector",
 	   size = 1,
 	  },
-	  {	  
+	  {
 	   type = "Hgn_ResourceCollector",
 	   size = 1,
 	  },
-	  {	  
+	  {
 	   type = "Hgn_ResourceCollector",
 	   size = 1,
 	  },
@@ -61,13 +61,13 @@ PersistantData = {
       type = "hgn_heavybattlecruiser",
       name = "",
       size = 1,
-      number = 1,
+      number = 2,
  },
   {
       type = "hgn_heavydestroyer",
       name = "",
       size = 1,
-      number = 2,
+      number = 3,
  },
   {
       type = "hgn_Battleship",

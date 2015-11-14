@@ -321,14 +321,6 @@ build =
         Description = "<b>Type: Light Frigate</b>\n<b>Codename: Subverter</b>\n<b>Description:</b>\n\nThe Subverter is a lightly armored troop carrier that launches Marines into ships and takes them over.\n\n<b>Armed with:</b>\n1x Light Missile Tube\n1x FLak Cannon Small\n<b>Requires:</b>\nPod Research", }, 
  { 
         Type = Ship, 
-        ThingToBuild = "vgr_lightdestroyer", 
-        RequiredResearch = "", 
-        RequiredShipSubSystems = "CapShipProduction", 
-        DisplayPriority = 299, 
-        DisplayedName = "Light Destroyer", 
-        Description = "<b>Type: Heavy Carrier</b>\n<b>Codename: Vostok</b>\n<b>Description:</b>\n\nThe Vostok was originally a Shipping carrier used to transport goods and supplies to the outer UNCG Colonies. While the UNCG still has the original designs, It was modified to serve as an armed carrier for the Dominom.\n\n<b>Armed with:</b>\n2x Railgun\n2x Gatling Turret\nDefense Lasers.\n<b>Requires:</b>\nNothing", }, 
- { 
-        Type = Ship, 
         ThingToBuild = "Vgr_Carrier", 
         RequiredResearch = "", 
         RequiredShipSubSystems = "CapShipProduction", 
@@ -349,6 +341,14 @@ build =
         RequiredResearch = "AdvDestroyer", 
         RequiredShipSubSystems = "CapShipProduction", 
         DisplayPriority = 311, 
+        DisplayedName = "Super Destroyer", 
+        Description = "<b>Type: Heavy Destroyer</b>\n<b>Codename: Helios</b>\n<b>Description:</b>\n\nThe Helios is a marvel of Dominion Technology. It Sports 3 Kruszchev Hulls Fused Together in a circular formation. This is indeed a very deadly design.\n\n<b>Armed with:</b>\n2x Railgunt\n2x Dual PPC\n2x Pulse Cannon\nDefense Lasers.\n30x Missile Tubes.\n<b>Requires:</b>\nDestroyer Chassis", }, 
+  { 
+        Type = Ship, 
+        ThingToBuild = "vgr_qwaarjetii", 
+        RequiredResearch = "AdvDestroyer", 
+        RequiredShipSubSystems = "CapShipProduction", 
+        DisplayPriority = 312, 
         DisplayedName = "Combat Cruiser", 
         Description = "<b>Type: Heavy Destroyer</b>\n<b>Codename: Helios</b>\n<b>Description:</b>\n\nThe Helios is a marvel of Dominion Technology. It Sports 6 Kruszchev Hulls Fused Together in a circular formation. This is indeed a very deadly design.\n\n<b>Armed with:</b>\n2x Railgunt\n2x Dual PPC\n2x Pulse Cannon\nDefense Lasers.\n30x Missile Tubes.\n<b>Requires:</b>\nDestroyer Chassis", }, 
  {
@@ -356,7 +356,7 @@ build =
         ThingToBuild = "Vgr_Dreadnaught", 
         RequiredResearch = "AncientHullEngineering", 
         RequiredShipSubSystems = "CapShipProduction", 
-        DisplayPriority = 312, 
+        DisplayPriority = 313, 
         DisplayedName = "Ranged Cruiser", 
         Description = "<b>Type: Dreadnaught</b>\n<b>Codename: Leviathan</b>\n<b>Description:</b>\n\nNot Much is known about the Leviathan. It is an Ancient warship that is easily recreated, but never understood. Recreating her power subsystems are difficult. So much, that the original Defense weapons are replaced with Dominion lasers and Ion Cannons. The Main Reactor is used to power her Massive Front Particle beam. This Beam can travel 15 KM and burn a hole through and armor.\n\n<b>Armed with:</b>\n1x Tri-PPC\n1x Missile pod\n2x Gatling Guns\nDefense lasers\n1x Massive Particle Projector\n<b>Requires:</b>\nBattlecruiser Chassis", }, 
     { 
@@ -366,6 +366,14 @@ build =
         RequiredShipSubSystems = "CapShipProduction", 
         DisplayPriority = 320, 
         DisplayedName = "$7158", 
+        Description = "<b>Type: Heavy Cruiser</b>\n<b>Codename: Judgement</b>\n<b>Description:</b>\n\nThe Judgement is one of the most feared cruisers in the galaxy. This cruiser sports some heavy weaponry, rivaled Only by the UNCG Trafalgar class cruisers.\n\n<b>Armed with:</b>\n2x Railgunt\n2x Tri-PPC\n2x Pulse Cannon\n2x Gatling Turrets\n2x Standard Missile Pods\nDefense Lasers.\n8x Missile Tubes.\n<b>Requires:</b>\nBattlecruiser Chassis", }, 
+   { 
+        Type = Ship, 
+        ThingToBuild = "vgr_vanaarjet", 
+        RequiredResearch = "BattlecruiserIonWeapons", 
+        RequiredShipSubSystems = "CapShipProduction", 
+        DisplayPriority = 321, 
+        DisplayedName = "Heavy Cruiser", 
         Description = "<b>Type: Heavy Cruiser</b>\n<b>Codename: Judgement</b>\n<b>Description:</b>\n\nThe Judgement is one of the most feared cruisers in the galaxy. This cruiser sports some heavy weaponry, rivaled Only by the UNCG Trafalgar class cruisers.\n\n<b>Armed with:</b>\n2x Railgunt\n2x Tri-PPC\n2x Pulse Cannon\n2x Gatling Turrets\n2x Standard Missile Pods\nDefense Lasers.\n8x Missile Tubes.\n<b>Requires:</b>\nBattlecruiser Chassis", }, 
    { 
         Type = Ship, 

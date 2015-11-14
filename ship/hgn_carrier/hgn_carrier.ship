@@ -175,7 +175,7 @@ StartShipHardPointConfig(NewShipType,"Weapon_Gat1","Weapon_Gat1","Weapon","Gener
 StartShipHardPointConfig(NewShipType,"Weapon_Gat2","Weapon_Gat2","Weapon","Generic","indestructible","hgn_gatlinggunright","","","")
 
 StartShipHardPointConfig(NewShipType,"HpBL_01","HpBL_01","Weapon","Generic","indestructible","hgn_flakturretleft","hgn_BD_CannonTurret","hgn_BD_QuadCannon","hgn_BD_ionbeamturret")
-StartShipHardPointConfig(NewShipType,"HpBR_01","HpBR_01","Weapon","Generic","indestructible","hgn_flakturretright","hgn_BD_CannonTurret2","hgn_BD_QuadCannon2","hgn_BD_ionbeamturret2")
+StartShipHardPointConfig(NewShipType,"HpBL_02","HpBL_02","Weapon","Generic","indestructible","hgn_flakturretright","hgn_BD_CannonTurret2","hgn_BD_QuadCannon2","hgn_BD_ionbeamturret2")
 
 addAbility(NewShipType, "DefenseFieldAbility", 0, 0, 1500, 500, 500, 1, 0.6, 0, "defensefield_sphere_spray")
 addAbility(NewShipType, "DefenseFieldShieldAbility", 1, 1500, 0, 0)

@@ -6,7 +6,7 @@
 -- (and faster) to refer to a ship based on its generalized properties.
 --
 -- Custom classes can be added at the end but have to be added in a very specific way.
--- 
+--
 
 aitrace("CPU: CLASSDEF LOADED")
 
@@ -17,7 +17,7 @@ squadclass = {}
 -- is mothership
 squadclass[eMotherShip] = {
 	HGN_MOTHERSHIP,
-	
+
 	VGR_MOTHERSHIP,
 	VGR_MOTHERSHIP_MAKAAN,
 }
@@ -25,7 +25,7 @@ squadclass[eMotherShip] = {
 -- can harvest
 squadclass[eCollector] = {
 	HGN_RESOURCECOLLECTOR,
-	
+
 	VGR_RESOURCECOLLECTOR,
 }
 
@@ -35,7 +35,7 @@ squadclass[eScout] = {
 	HGN_PROBE,
 	HGN_PROXIMITYSENSOR,
 	HGN_ECMPROBE,
-	
+
 	VGR_SCOUT,
 	VGR_PROBE,
 	VGR_PROBE_PROX,
@@ -45,7 +45,7 @@ squadclass[eScout] = {
 -- is a refinery
 squadclass[eRefinery] = {
 	HGN_RESOURCECONTROLLER,
-	
+
 	VGR_RESOURCECONTROLLER,
 }
 
@@ -55,7 +55,7 @@ squadclass[eBuilder] = {
 	HGN_CARRIER,  -- will need subsystem
 	HGN_SHIPYARD,
 	hgn_Supercarrier,
-		
+
 	VGR_MOTHERSHIP,
 	VGR_MOTHERSHIP_MAKAAN,
 	VGR_CARRIER,  -- will need subsystem
@@ -69,7 +69,7 @@ squadclass[eDropOff] = {
 	HGN_SHIPYARD,
 	HGN_RESOURCECONTROLLER,
 	hgn_Supercarrier,
-	
+
 	VGR_MOTHERSHIP,
 	VGR_MOTHERSHIP_MAKAAN,
 	VGR_CARRIER,  -- will need subsystem
@@ -94,7 +94,7 @@ squadclass[eFighter] = {
 	HGN_INTERCEPTOR,
 	HGN_ATTACKBOMBER,
 	HGN_ATTACKBOMBERELITE,
-	
+
 	VGR_INTERCEPTOR,
 	VGR_BOMBER,
 	VGR_LANCEFIGHTER,
@@ -105,7 +105,7 @@ squadclass[eCorvette] = {
 	HGN_ASSAULTCORVETTE,
 	HGN_PULSARCORVETTE,
 	HGN_MINELAYERCORVETTE,
-	
+
 	VGR_MISSILECORVETTE,
 	VGR_LASERCORVETTE,
 	VGR_MINELAYERCORVETTE,
@@ -121,11 +121,11 @@ squadclass[eFrigate] = {
 	HGN_MARINEFRIGATE_SOBAN,
 	HGN_TORPEDOFRIGATE,
 	HGN_TORPEDOFRIGATEELITE,
-	
+
 	VGR_ASSAULTFRIGATE,
 	VGR_HEAVYMISSILEFRIGATE,
 	VGR_INFILTRATORFRIGATE,
-	
+
 }
 
 -- can capture other ships
@@ -148,7 +148,7 @@ squadclass[eShield] = {
 squadclass[ePlatform] = {
 	HGN_GUNTURRET,
 	HGN_IONTURRET,
-	
+
 	VGR_WEAPONPLATFORM_GUN,
 	VGR_WEAPONPLATFORM_MISSILE,
 	VGR_HYPERSPACE_PLATFORM,
@@ -160,7 +160,7 @@ squadclass[eAntiFighter] = {
 	HGN_ASSAULTCORVETTE,
 	HGN_ASSAULTFRIGATE,
 	HGN_GUNTURRET,
-	
+
 	VGR_INTERCEPTOR,
 	VGR_ASSAULTFRIGATE,
 	VGR_WEAPONPLATFORM_GUN,
@@ -173,7 +173,7 @@ squadclass[eAntiCorvette] = {
 	HGN_TORPEDOFRIGATE,
 	HGN_TORPEDOFRIGATEELITE,
 	HGN_DESTROYER,
-	
+
 	VGR_LANCEFIGHTER,
 	VGR_LAZERCORVETTE,
 	VGR_DESTROYER,
@@ -194,8 +194,9 @@ squadclass[eAntiFrigate] = {
 	HGN_CROSSBOW_CRUISER,
 	HGN_HEAVYDESTROYER,
 	HGN_BATTLESHIP,
+	HGN_HEAVYBATTLECRUISER,
 
-	
+
 	VGR_BOMBER,
 	VGR_HEAVYMISSILEFRIGATE,
 	VGR_INFILTRATORFRIGATE,
@@ -203,6 +204,8 @@ squadclass[eAntiFrigate] = {
 	VGR_BATTLECRUISER,
 	VGR_WEAPONPLATFORM_MISSILE,
 	VGR_HELIOS,
+	VGR_QWAARJETII,
+	VGR_VANAARJET,
 	VGR_BATTLESHIP,
 }
 
@@ -218,15 +221,18 @@ squadclass[eCapital] = {
 	HGN_HEAVYDESTROYER,
 	HGN_DREADNAUGHT,
 	HGN_BATTLESHIP,
+	HGN_HEAVYBATTLECRUISER,
 	HGN_SUPERCARRIER,
-	
+
 	VGR_CARRIER,
 	VGR_MOTHERSHIP,
 	VGR_MOTHERSHIP_MAKAAN,
 	VGR_SHIPYARD,
 	VGR_DESTROYER,
 	VGR_HELIOS,
+	VGR_QWAARJETII,
 	VGR_BATTLESHIP,
+	VGR_VANAARJET,
 	VGR_BATTLECRUISER,
 }
 -- eCollector + eScout (maybe refineries - but those things are pretty tough?)
@@ -236,7 +242,7 @@ squadclass[eNonThreat] = {
 	VGR_RESOURCECOLLECTOR,
 	HGN_RESOURCECONTROLLER,
 	VGR_RESOURCECONTROLLER,
-	
+
 	HGN_CARRIER,
 	HGN_MOTHERSHIP,
 	HGN_SHIPYARD,
@@ -244,28 +250,28 @@ squadclass[eNonThreat] = {
 	VGR_MOTHERSHIP,
 	VGR_MOTHERSHIP_MAKAAN,
 	VGR_SHIPYARD,
-	
+
 	HGN_SCOUT,
 	HGN_PROBE,
 	HGN_PROXIMITYSENSOR,
 	HGN_ECMPROBE,
-		
+
 	VGR_SCOUT,
 	VGR_PROBE,
 	VGR_PROBE_PROX,
 	VGR_PROBE_ECM,
-	
+
 	VGR_HYPERSPACE_PLATFORM,
 }
 
 -- is a hyperspace gate
-squadclass[eHyperspaceGate] = 
+squadclass[eHyperspaceGate] =
 {
 	VGR_HYPERSPACE_PLATFORM
 }
 
 -- good at killing subsystems
-squadclass[eSubSystemAttackers] = 
+squadclass[eSubSystemAttackers] =
 {
 	HGN_ATTACKBOMBER,
 	HGN_ATTACKBOMBERELITE,
@@ -273,7 +279,7 @@ squadclass[eSubSystemAttackers] =
 }
 
 -- non critical subsystems
-squadclass[eNonCriticalSubSys] = 
+squadclass[eNonCriticalSubSys] =
 {
 	CLOAKGENERATOR,
 	FIRECONTROLTOWER,
@@ -284,7 +290,7 @@ squadclass[eNonCriticalSubSys] =
 }
 
 -- good at killing repairing collectors
-squadclass[eGoodRepairAttackers] = 
+squadclass[eGoodRepairAttackers] =
 {
 	HGN_INTERCEPTOR,
 	HGN_ASSAULTFRIGATE,
@@ -293,7 +299,7 @@ squadclass[eGoodRepairAttackers] =
 	HGN_HEAVYDESTROYER,
 	HGN_SWORD_CRUISER,
 	HGN_BATTLECRUISER,
-	
+
 	VGR_INTERCEPTOR,
 	VGR_MISSILECORVETTE,
 	VGR_ASSAULTFRIGATE,
@@ -314,22 +320,25 @@ eBattleCruiser = eMaxCount + 1
 sg_maxClasses = eBattleCruiser+1
 
 -- ships that the AI should not build because they are not used properly
-squadclass[ eUselessShips ] = 
+squadclass[ eUselessShips ] =
 {
 	HGN_MINELAYERCORVETTE,
-	
+
 	VGR_MINELAYERCORVETTE,
 	VGR_COMMANDCORVETTE,
 }
 
 -- is a battlecruiser
-squadclass[eBattleCruiser] = 
+squadclass[eBattleCruiser] =
 {
 	HGN_BATTLECRUISER,
 	HGN_BATTLESHIP,
+	HGN_HEAVYBATTLECRUISER,
 
 	VGR_BATTLESHIP,
 	VGR_BATTLECRUISER,
+	VGR_VANAARJET,
+	VGR_DREADNAUGHT,
 }
 
 --
@@ -349,7 +358,7 @@ function ClassInitialize()
 			FastAddToClass( squadclass[i], i )
 		end
 	end
-	
+
 	-- debug: name all the classes to be displayed on screen
 	AddClassName( eMotherShip, "Motherships")
 	AddClassName( eCollector, "Collectors")
@@ -368,7 +377,7 @@ function ClassInitialize()
 	AddClassName( eCapture, "Capture")
 	AddClassName( eSubSystemAttackers, "SubSysKillas")
 	AddClassName( eBattleCruiser, "BattleCruiser")
-	
-	
+
+
 end
 
