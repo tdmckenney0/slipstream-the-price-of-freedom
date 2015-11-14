@@ -1,6 +1,6 @@
 WARNING: NOT FOR PUBLIC!!!!!1111
 Slipstream: The Price of Freedom
-Built on:1:44 AM 7/16/2008
+Built on:12:20 AM 7/17/2008
 Built By: SRI-Emperor
 Build System: Microsoft Windows Vista Ultimate x64 [Version 6.0.6000]
 	     AMD Athlon x2 @ 2.6 GHz, 2.5 GB RAM, Nvidia Geforce 8600 GT

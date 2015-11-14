@@ -1,12 +1,12 @@
 -- LuaDC version 0.9.19
--- 5/23/2004 7:24:05 PM
+-- 5/3/2008 6:51:25 PM
 -- LuaDC by Age2uN
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "$1532"
 NewShipType.sobDescription = "$1533"
-NewShipType.maxhealth = 15000
+NewShipType.maxhealth = 2000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
