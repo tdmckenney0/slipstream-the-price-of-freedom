@@ -1,4 +1,4 @@
-  StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","kinetic_rapid_mg","Normal",1400,2200,0,0,0,0,1,1,1,0.1,0,0,1,1,120,120,0.1,"Normal",1,0,0)
+  StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","smallplasma","Normal",1400,2200,0,0,0,0,1,1,1,0.1,0,0,1,1,120,120,0.1,"Normal",1,0,0)
 
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",5,10,"")
 
@@ -23,6 +23,6 @@ setAccuracy(NewWeaponType,0.3,
 {Resource = 0.3, damage = 1,},
 {ResourceLarge = 0.3, damage = 1,})
 
-setAngles(NewWeaponType,0,-160,160,-40,70)
+setAngles(NewWeaponType,0,-160,160,0,70)
 setMiscValues(NewWeaponType,0,0)
 addAnimTurretSound(NewWeaponType,"Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

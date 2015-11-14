@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName="Marine Frigate"
-NewShipType.sobDescription="Boarding Frigate"
+NewShipType.displayedName="UNCG Marine Frigate"
+NewShipType.sobDescription="Seal Class\nBoarding Frigate"
 NewShipType.maxhealth=50000
 NewShipType.regentime=1200
 NewShipType.minRegenTime=1200

@@ -5,8 +5,8 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName="Rail Gun Turret"
-NewSubSystemType.sobDescription="$2029"
+NewSubSystemType.displayedName="DT-2 2x Railgun"
+NewSubSystemType.sobDescription="Armor Piercing Weapon"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
 NewSubSystemType.tacticalIconMinFadeSize=0.0045
@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="SubSystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_rail","Weapon_SCT","Weapon_Turret");
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_rail","Weapon_DT","null");

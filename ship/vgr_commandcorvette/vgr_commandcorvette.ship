@@ -5,8 +5,8 @@
 --
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Commander"
-NewShipType.sobDescription = "Caspian Class/nCommand Corvette"
-NewShipType.maxhealth = 600
+NewShipType.sobDescription = "Caspian Class\nCommand Corvette"
+NewShipType.maxhealth = 7000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -21,8 +21,8 @@ NewShipType.defensiveFormation = "broad"
 NewShipType.aggressiveFormation = "delta"
 NewShipType.mass = 15
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 215
-NewShipType.mainEngineMaxSpeed = 215
+NewShipType.thrusterMaxSpeed = 395
+NewShipType.mainEngineMaxSpeed = 395
 NewShipType.rotationMaxSpeed = 131
 NewShipType.thrusterAccelTime = 1
 NewShipType.thrusterBrakeTime = 1

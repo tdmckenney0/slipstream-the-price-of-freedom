@@ -5,8 +5,8 @@
 --
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Interceptor"
-NewShipType.sobDescription = "Pamir Class/nStandard Fighter"
-NewShipType.maxhealth = 30
+NewShipType.sobDescription = "Pamir Class\nStandard Fighter"
+NewShipType.maxhealth = 5000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -21,8 +21,8 @@ NewShipType.defensiveFormation = "ScatterDelta_Long"
 NewShipType.aggressiveFormation = "ScatterNarrow"
 NewShipType.mass = 10
 NewShipType.collisionMultiplier = 35
-NewShipType.thrusterMaxSpeed = 325
-NewShipType.mainEngineMaxSpeed = 325
+NewShipType.thrusterMaxSpeed = 520
+NewShipType.mainEngineMaxSpeed = 520
 NewShipType.rotationMaxSpeed = 105
 NewShipType.thrusterAccelTime = 2
 NewShipType.thrusterBrakeTime = 1
@@ -82,7 +82,7 @@ NewShipType.antiFighterValue = 8
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 0
 NewShipType.totalValue = 8
-NewShipType.buildCost = 500
+NewShipType.buildCost = 150
 NewShipType.buildTime = 35
 NewShipType.buildPriorityOrder = 20
 NewShipType.retaliationRange = 5500
@@ -142,6 +142,7 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "n_delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
+addAbility(NewShipType,"MinelayerAbility",1,3.5)
 addAbility(NewShipType, "CanAttack", 1, 9, 1, 0, 0.35, 1, "Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership", "FlyBy_VInterceptor_vs_Frigate", 
 { 
     Fighter = "Flyby_VInterceptor_vs_Fighter", 
@@ -164,7 +165,7 @@ addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadModel(NewShipType, 1)
-StartShipWeaponConfig(NewShipType, "Vgr_FlechetteCannon", "Weapon_LongGun", "Weapon_LongGun")
+StartShipWeaponConfig(NewShipType, "kpr_kineticdriverattackdroid", "Weapon_LongGun", "Weapon_LongGun")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2

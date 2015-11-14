@@ -36,4 +36,5 @@ NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "MediumArmour"
 StartSubSystemWeaponConfig(NewSubSystemType,"hgn_BD_bigtorpedo","Weapon_Missile","Fire_Missile")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_standardMissile","Weapon_Missile","Fire_Missile")
 

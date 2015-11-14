@@ -1,5 +1,0 @@
-Copyright SRI corp 2008
-
-This is a Pre-Release BIG FILE and SHOULD NOT be distributed to the public.
-
-10:43 PM 4/21/2008

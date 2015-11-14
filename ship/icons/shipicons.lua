@@ -40,6 +40,20 @@ hgn_Crossbow_Cruiser = {
     stretchOnDraw = 1,
   },
 }
+Hgn_MotherShip={
+  LargeIcon={
+   texture="DATA:\\Ship\\Icons\\icon_ships.mres",
+    textureUV_TL={
+             400,
+	768,
+       },
+textureUV_WH={
+            100,
+	64,
+      },
+stretchOnDraw=1
+    },
+}
 hgn_Sword_Cruiser = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\ships\\hgn_Sword_Cruiser.tga",
@@ -77,6 +91,20 @@ Hgn_AssaultCorvetteElite = {
     },
     textureUV_WH = {
       150,
+      64,
+    },
+    stretchOnDraw = 1,
+  },
+}
+Hgn_TorpedoFrigate = {
+  LargeIcon = {
+    texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
+    textureUV_TL = {
+      0,
+      256,
+    },
+    textureUV_WH = {
+      105,
       64,
     },
     stretchOnDraw = 1,
@@ -124,20 +152,29 @@ Hgn_AttackBomberElite = {
     stretchOnDraw = 1,
   },
 }
-Hgn_BadgedCruiser = Hgn_BattleCruiser
-Hgn_BattleCruiser = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\ships\\Hgn_StrikeBattlecruiser.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      238,
-      111,
-    },
-    stretchOnDraw = 1,
-  },
+Hgn_BattleCruiser = 
+{ 
+    LargeIcon = 
+    { 
+        texture = "DATA:\\Ship\\Icons\\icon_ships.mres", 
+        textureUV_TL = 
+            { 0, 64, }, 
+        textureUV_WH = 
+            { 172, 64, }, 
+        stretchOnDraw = 1, 
+}, 
+}
+Hgn_Battleship = 
+{ 
+    LargeIcon = 
+    { 
+        texture = "DATA:\\Ship\\Icons\\icon_ships.mres", 
+        textureUV_TL = 
+            { 0, 64, }, 
+        textureUV_WH = 
+            { 172, 64, }, 
+        stretchOnDraw = 1, 
+}, 
 }
 Hgn_Shipyard = {
   LargeIcon = {
@@ -489,20 +526,6 @@ Hgn_SupportFrigate = {
     },
     textureUV_WH = {
       156,
-      64,
-    },
-    stretchOnDraw = 1,
-  },
-}
-Hgn_TorpedoFrigate = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
-    textureUV_TL = {
-      0,
-      512,
-    },
-    textureUV_WH = {
-      116,
       64,
     },
     stretchOnDraw = 1,
@@ -1416,6 +1439,7 @@ Vgr_MotherShip = {
   },
 }
 Vgr_MotherShip_Makaan = Vgr_MotherShip
+Vgr_Battleship = Vgr_MotherShip
 Vgr_PlanetKillerMissile = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
@@ -2265,6 +2289,7 @@ Icon_Subsystem_Resource = {
 }
 Hgn_C_Production_Fighter = Icon_Subsystem_Fighter
 Hgn_MS_Production_Fighter = Icon_Subsystem_Fighter
+hgn_bcfighter_mod = Icon_Subsystem_Fighter
 Hgn_C_Production_Corvette = Icon_Subsystem_Corvette
 Hgn_MS_Production_Corvette = Icon_Subsystem_Corvette
 Hgn_C_Production_Frigate = Icon_Subsystem_Frigate
@@ -2304,6 +2329,7 @@ Hgn_MS_Innate_Resource = Icon_Subsystem_Resource
 Hgn_SY_Innate_Resource = Icon_Subsystem_Resource
 Vgr_C_Production_Fighter = Icon_Subsystem_Fighter
 Vgr_MS_Production_Fighter = Icon_Subsystem_Fighter
+Vgr_bcfighter_mod = Icon_Subsystem_Fighter
 Vgr_C_Production_Corvette = Icon_Subsystem_Corvette
 Vgr_MS_Production_Corvette = Icon_Subsystem_Corvette
 Vgr_C_Production_Frigate = Icon_Subsystem_Frigate
@@ -2338,7 +2364,7 @@ HGN_SHIPYARD_SPG = Hgn_Shipyard
 HGN_BATTLECRUISERENGINE = Icon_Subsystem_Engine
 HGN_BATTLECRUISERIONBEAMTURRET = Icon_Subsystem_IonTurret
 HGN_BATTLECRUISERIONBEAMTURRETBACK = Icon_Subsystem_IonTurret
-HGN_STRIKEBATTLECRUISERRAILBEAMTURRET = Icon_Subsystem_RailTurret
+HGN_STRIKEBATTLECRUISERRAILBEAMTURRET = Icon_Subsystem_IonTurret
 HGN_STRIKEBATTLECRUISERRAILBEAMTBACK  = Icon_Subsystem_RailTurret
 HGN_HEAVYGUIDEDPLASMABOMBTUBES = Icon_Subsystem_HeavyGuidedPlasmaBombTubes
 HGN_ADVANCEDCONTROLTOWER = Icon_Subsystem_AdvancedControlTower
@@ -2358,10 +2384,67 @@ Meg_Gehenna_4 = Meg_Gehenna
 Meg_Gehenna_5 = Meg_Gehenna
 Meg_Gehenna_6 = Meg_Gehenna
 Meg_Gehenna_7 = Meg_Gehenna
+hgn_superbomber = Hgn_AttackBomber
 Hgn_drone_frigate = Hgn_Torpedofrigate
 Hgn_drone_frigate_2 = Hgn_Assaultfrigate
 Hgn_drone_frigate_3 = Hgn_Marinefrigate
 Kpr_Mover_Capture = Kpr_Mover_Capture
 Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
-Hgn_DestroyerHeavy = Hgn_destroyer
-Hgn_PlanetSmasher = Vgr_planetkiller
+Hgn_BBC_Production_Frigate = Icon_Subsystem_Frigate
+Hgn_BBC_Module_PlatformControl = Icon_Subsystem_PlatformControl
+Hgn_BBC_Module_Research = Icon_Subsystem_Research
+Hgn_BBC_Module_ResearchAdvanced = Icon_Subsystem_ResearchAdvanced
+Hgn_BBC_Module_Hyperspace = Icon_Subsystem_Hyperspace
+Hgn_BBC_Module_HyperspaceInhibitor = Icon_Subsystem_HyperspaceInhibitor
+Hgn_BBC_Module_CloakGenerator = Icon_Subsystem_CloakGenerator
+Hgn_BBC_Module_FireControl = Icon_Subsystem_FireControl
+Hgn_BBC_Sensors_DetectHyperspace = Icon_Subsystem_DetectHyperspace
+Hgn_BBC_Sensors_AdvancedArray = Icon_Subsystem_AdvancedArray
+Hgn_BBC_Sensors_DetectCloaked = Icon_Subsystem_DetectCloaked
+Hgn_BBC_Innate_Engine = Icon_Subsystem_Engine
+Hgn_BBC_Innate_Resource = Icon_Subsystem_Resource
+Hgn_BBC_innate_missilebar = Icon_Subsystem_TorpedoLauncher
+hgn_BD_Mpod = Icon_Subsystem_TorpedoLauncher
+Vgr_D_Mpod = Icon_Subsystem_TorpedoLauncher
+Missile_box = Icon_Subsystem_TorpedoLauncher
+Hgn_BD_innate_missilebar = Icon_Subsystem_TorpedoLauncher
+Hgn_BD_AuxBridge = Icon_Subsystem_CommStation_bottom
+hgn_BD_FireControl = Icon_Subsystem_FireControl
+hgn_BD_TurretControl = Icon_Subsystem_FireControl
+hgn_BD_HSDrive = Icon_Subsystem_Hyperspace
+HGN_SCC_2xPulsar_Turret = Icon_Subsystem_IonTurret
+Vgr_IonBeamTurret = Icon_Subsystem_IonTurret
+Vgr_IonBeamTurretx3 = Icon_Subsystem_IonTurret
+hgn_pulsarplatform = Hgn_IonTurret
+vgr_Helios = Vgr_Destroyer
+vgr_weaponplatform_Plasma = Vgr_WeaponPlatform_gun
+vgr_railgun_turret = Icon_Subsystem_IonTurret
+vgr_IonBeamTurret = Icon_Subsystem_IonTurret
+vgr_IonBeamTurretx3 = Icon_Subsystem_IonTurret
+HGN_SCC_2xPulsar_Turret = Icon_Subsystem_IonTurret
+HGN_SCC_6xAC_Turret = Icon_Subsystem_RailTurret
+Hgn_GatLing_Gun_large =  Icon_Subsystem_HeavyCannonTurrets
+Hgn_GatLing_Gun =  Icon_Subsystem_HeavyCannonTurrets
+HGN_Sword_Side_Plasma_Cannon = Icon_Subsystem_RailTurret
+Hgn_HDes_C_Eng = Icon_Subsystem_Engine
+Hgn_HDes_L_Eng = Icon_Subsystem_Engine
+Hgn_HDes_R_Eng = Icon_Subsystem_Engine
+HGN_DC_4x_FLAK_Turret = Icon_Subsystem_HeavyCannonTurrets
+HGN_DCT_HD_4x_Flak_L = Icon_Subsystem_HeavyCannonTurrets
+HGN_DCT_HD_4x_Flak_R = Icon_Subsystem_HeavyCannonTurrets
+vgr_DT1_Turret = Icon_Subsystem_HeavyCannonTurrets
+vgr_DT3_Turret = Icon_Subsystem_RailTurret
+vgr_FT2_Turret = Icon_Subsystem_HeavyCannonTurrets
+vgr_FT2_AF_Right = Icon_Subsystem_HeavyCannonTurrets
+vgr_FT2_AF_left = Icon_Subsystem_HeavyCannonTurrets
+vgr_FT2_AF_bottom = Icon_Subsystem_HeavyCannonTurrets
+Hgn_mount = Icon_Subsystem_PlatformControl
+Hgn_mount2 = Icon_Subsystem_PlatformControl
+vgr_mount = Icon_Subsystem_PlatformControl
+hgn_monitor_autogun1 = Icon_Subsystem_HeavyCannonTurrets
+hgn_monitor_autogun1b = Icon_Subsystem_HeavyCannonTurrets
+vgr_Frigate_Pulse = Icon_Subsystem_HeavyCannonTurrets
+vgr_Frigate_Pulse_Left = Icon_Subsystem_HeavyCannonTurrets
+vgr_Frigate_Pulse_Right = Icon_Subsystem_HeavyCannonTurrets
+Hgn_MS_Production_Capital = Icon_Subsystem_CapShip
+hgn_monitor_ptrt = Icon_Subsystem_IonTurret

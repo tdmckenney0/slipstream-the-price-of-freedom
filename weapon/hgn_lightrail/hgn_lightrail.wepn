@@ -1,5 +1,5 @@
 StartWeaponConfig(NewWeaponType,"AnimatedTurret","InstantHit","LightRail","Normal",0,3400,0,0.4,0,0,1,1,1,1,2,4,0,0,120,120,0.1,"Normal",1,0,300)
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",360,360,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",400,400,"")
 setPenetration(NewWeaponType,5,1,{
   ResArmour = 0.5,
 },{

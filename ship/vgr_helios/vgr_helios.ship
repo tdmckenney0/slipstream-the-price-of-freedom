@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DOL Ranged Cruiser"
-NewShipType.sobDescription = "$1635"
+NewShipType.displayedName = "Ranged Cruiser"
+NewShipType.sobDescription = "Helios Class\nRanged Cruiser"
 NewShipType.maxhealth = 650000
 NewShipType.regentime = 1500
 NewShipType.minRegenTime = 450
@@ -82,7 +82,7 @@ NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 30
 NewShipType.totalValue = 50
-NewShipType.buildCost = 2000
+NewShipType.buildCost = 3000
 NewShipType.buildTime = 165
 NewShipType.buildPriorityOrder = 20
 NewShipType.retaliationRange = 6000
@@ -158,6 +158,7 @@ addAbility(NewShipType, "GuardCommand", 1, 3000, 800)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "CanBeCaptured", 90, 0.1)
 addAbility(NewShipType, "CanBeRepaired")
+addAbility(NewShipType,"MinelayerAbility",1,3.5)
 addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
 
@@ -171,12 +172,12 @@ addShield(NewShipType, "EMP", 1000, 20)
 
 --StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_Des_Engine", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret_Top", "System", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret2", "System", "Innate", "Damageable", "Vgr_railgun_turret", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret3", "System", "Innate", "Damageable", "Vgr_railgun_turret", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret4", "System", "Innate", "Damageable", "Vgr_railgun_turret", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret5", "System", "Innate", "Damageable", "Vgr_railgun_turret", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret6", "System", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Top_Turret1", "Hardpoint_Turret_Top", "System", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Top_Turret2", "Hardpoint_Turret2", "System", "Innate", "Damageable", "Vgr_railgun_turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Top_Turret3", "Hardpoint_Turret3", "System", "Innate", "Damageable", "vgr_DT3_Turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Top_Turret4", "Hardpoint_Turret4", "System", "Innate", "Damageable", "vgr_DT3_Turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Top_Turret5", "Hardpoint_Turret5", "System", "Innate", "Damageable", "Vgr_railgun_turret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Top_Turret6", "Hardpoint_Turret6", "System", "Innate", "Damageable", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
 
 
 

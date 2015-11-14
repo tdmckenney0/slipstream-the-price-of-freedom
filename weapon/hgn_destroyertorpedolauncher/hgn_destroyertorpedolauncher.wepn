@@ -2,7 +2,7 @@ StartWeaponConfig(NewWeaponType,"Fixed","Missile","NuclearMissile","Normal",120,
 
 AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"Hgn_NukeEffect")
 AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"Hgn_NukeEffect")
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",3500,4000,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",2500,3000,"")
 
 setAngles(NewWeaponType,179,0,0,0,0)
 

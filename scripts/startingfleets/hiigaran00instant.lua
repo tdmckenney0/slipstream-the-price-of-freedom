@@ -50,18 +50,12 @@ PersistantData = {
       name = "",
       size = 1,
       number = 3,
-  },
-  {
-      type = "Hgn_Destroyer",
-      name = "",
-      size = 1,
-      number = 2,
  },
   {
       type = "Hgn_Battlecruiser",
       name = "",
       size = 1,
-      number = 1,
+      number = 2,
  },
   {
       type = "Hgn_DestroyerHeavy",

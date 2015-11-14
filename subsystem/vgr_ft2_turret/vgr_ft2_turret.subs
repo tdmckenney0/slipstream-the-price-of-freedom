@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="SubSystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"vgr_FT2_weapon","Weapon_FT","Weapon_Turret");
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_FT2_weapon","Weapon_FT","null");

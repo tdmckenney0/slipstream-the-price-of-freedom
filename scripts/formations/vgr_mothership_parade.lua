@@ -35,7 +35,7 @@ paradeSlot("Vgr_BattleCruiser", {2078, 392, -2041},	{0,0,1}, {1,0,0},       400 
 paradeSlot("Vgr_Destroyer", {2129, 216, -568},	{0,0,1}, {1,0,0},       400 );
 paradeSlot("Vgr_HeavyMissileFrigate", {1136, -74, 1869},	{0,0,1}, {1,0,0},       0 );
 paradeSlot("Vgr_InfiltratorFrigate", {1532, -5, 1184},	{0,0,1}, {1,0,0},       0 );
-paradeSlot("Vgr_ShipYard", 	{1121, -424, -5023},	{0,0,1}, {1,0,0},       0 );
+paradeSlot("Vgr_Battleship", 	{1121, -424, -5023},	{0,0,1}, {1,0,0},       0 );
 paradeSlot("Vgr_TransportFrigate", 	{1862, 111, 434}, {0,0,1}, {1,0,0},       0 );
 
 

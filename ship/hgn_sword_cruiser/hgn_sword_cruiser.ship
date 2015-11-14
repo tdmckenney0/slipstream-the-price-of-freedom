@@ -159,13 +159,13 @@ LoadModel(NewShipType,1)
 ------------------------------Main--Turrets
 StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTFront","System","Innate","Indestructible","HGN_SCC_6xAC_Turret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTBack","System","Innate","Indestructible","HGN_DC_2x_AC_Turret","","","","","","","","");
+--StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTBack","System","Innate","Indestructible","HGN_DC_2x_AC_Turret","","","","","","","","");
 
 StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTTop","System","Innate","Indestructible","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
 
 StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTBottom","System","Innate","Indestructible","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Turret_Bottom","System","Innate","Indestructible","HGN_DC_2x_AC_Turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Turret_Bottom","System","Innate","Indestructible","HGN_BD_Mpod","","","","","","","","");
 ------------------------------Side--Cannons
 StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP1","System","Innate","Indestructible","HGN_Sword_Side_Plasma_Cannon","","","","","","","","");
 
@@ -190,7 +190,7 @@ StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP5","System
 
 StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS3","Weapon","Innate","Indestructible","Hgn_GatLing_Gun","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"PDS_Back_Left","Hardpoint_PDS2","Weapon","Innate","Indestructible","Hgn_GatLing_Gun","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"PDS_Back_Left","Hardpoint_Gat","Weapon","Innate","Indestructible","Hgn_GatLing_Gun","","","","","","","","");
 
 
 addShield(NewShipType,"EMP",400,12)

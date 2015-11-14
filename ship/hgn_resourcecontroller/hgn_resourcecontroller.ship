@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Mobile Refinery"
 NewShipType.sobDescription = "Monitor Class\nArmed Resource Controller"
-NewShipType.maxhealth = 34000
+NewShipType.maxhealth = 50000
 NewShipType.regentime = 850
 NewShipType.minRegenTime = 150
 NewShipType.sideArmourDamage = 1
@@ -146,7 +146,7 @@ addAbility(NewShipType,"RetireAbility",1,1)
 LoadModel(NewShipType,1)
 
 -------------------------------------------------
-StartShipHardPointConfig(NewShipType,"Generic 1","HardpointTurretTop1","Weapon","Generic","Damageable","hgn_monitor_ptrt","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Generic 1","HardpointTurretTop1","Weapon","Generic","Damageable","hgn_gatling_gun","","","","","","","","")
  
 StartShipHardPointConfig(NewShipType,"Generic 2","HardpointTurretTop2","Weapon","Generic","Damageable","hgn_monitor_autogun1","","","","","","","","")
 

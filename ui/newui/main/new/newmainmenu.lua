@@ -173,9 +173,9 @@ NewMainMenu =
     type = "TextButton", 
     buttonStyle = "", 
     text = "", 
-    name = "", 
+    name = "btnCredits", 
     width = 240, 
-    onMouseClicked = "", }, 
+    onMouseClicked = [[UI_ShowScreen("CreditsScreen", eTransition)]], },
 }, 
 { 
     type = "Frame", 

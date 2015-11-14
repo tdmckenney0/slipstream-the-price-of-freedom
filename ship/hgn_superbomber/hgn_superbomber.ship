@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Advanced Bomber"
 NewShipType.sobDescription = "Acolyte Class\nAnti-Super Capital bomber"
-NewShipType.maxhealth = 1500
+NewShipType.maxhealth = 5700
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.topArmourDamage = 0.3
@@ -18,8 +18,8 @@ NewShipType.defensiveFormation = "Delta"
 NewShipType.aggressiveFormation = "Spear"
 NewShipType.mass = 10
 NewShipType.collisionMultiplier = 3
-NewShipType.thrusterMaxSpeed = 390
-NewShipType.mainEngineMaxSpeed = 400
+NewShipType.thrusterMaxSpeed = 355
+NewShipType.mainEngineMaxSpeed = 355
 NewShipType.rotationMaxSpeed = 150
 NewShipType.thrusterAccelTime = 3
 NewShipType.thrusterBrakeTime = 1
@@ -74,7 +74,7 @@ NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 8
 NewShipType.totalValue = 8
-NewShipType.buildCost = 175
+NewShipType.buildCost = 250
 NewShipType.buildTime = 40
 NewShipType.buildPriorityOrder = 30
 NewShipType.retaliationRange = 5500
@@ -152,8 +152,18 @@ addAbility(NewShipType,"GuardCommand",1,3000,500)
 addAbility(NewShipType,"HyperspaceViaGateCommand",1,3,1,0.3)
 addAbility(NewShipType,"RetireAbility",1,0)
 LoadModel(NewShipType,1)
-StartShipWeaponConfig(NewShipType,"hgn_dreadnaughtautogun","Weapon_L","Weapon_L")
-StartShipWeaponConfig(NewShipType,"hgn_dreadnaughtautogun","Weapon_R","Weapon_R")
+StartShipWeaponConfig(NewShipType,"Hgn_BombLauncher","Weapon_L","Weapon_L")
+StartShipWeaponConfig(NewShipType,"Hgn_BombLauncher","Weapon_R","Weapon_R")
+StartShipWeaponConfig(NewShipType,"Hgn_AntiShipBombLauncher","Weapon_L","Weapon_L")
+StartShipWeaponConfig(NewShipType,"Hgn_AntiShipBombLauncher","Weapon_R","Weapon_R")
+StartShipWeaponConfig(NewShipType,"Hgn_AntiSubSystemBombLauncher","Weapon_L","Weapon_L")
+StartShipWeaponConfig(NewShipType,"Hgn_AntiSubSystemBombLauncher","Weapon_R","Weapon_R")
+StartShipWeaponConfig(NewShipType,"Hgn_BombLauncher","Weapon_S1","Weapon_S1")
+StartShipWeaponConfig(NewShipType,"Hgn_BombLauncher","Weapon_S2","Weapon_S2")
+StartShipWeaponConfig(NewShipType,"Hgn_AntiShipBombLauncher","Weapon_S1","Weapon_S1")
+StartShipWeaponConfig(NewShipType,"Hgn_AntiShipBombLauncher","Weapon_S2","Weapon_S2")
+StartShipWeaponConfig(NewShipType,"Hgn_AntiSubSystemBombLauncher","Weapon_S1","Weapon_S1")
+StartShipWeaponConfig(NewShipType,"Hgn_AntiSubSystemBombLauncher","Weapon_S2","Weapon_S2")
 addShield(NewShipType,"EMP",75,20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2

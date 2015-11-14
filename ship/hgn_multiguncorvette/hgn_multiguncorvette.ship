@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Multigun Corvette"
 NewShipType.sobDescription = "Tracker Class\nMultiple Targeting Corvette"
-NewShipType.maxhealth = 3500
+NewShipType.maxhealth = 7000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -73,7 +73,7 @@ NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 0
 NewShipType.totalValue = 10
-NewShipType.buildCost = 800
+NewShipType.buildCost = 500
 NewShipType.buildTime = 55
 NewShipType.buildPriorityOrder = 30
 NewShipType.retaliationRange = 5500

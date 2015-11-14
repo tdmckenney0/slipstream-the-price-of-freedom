@@ -32,11 +32,41 @@ player[1] = {
 }
 function DetermChunk()
 --Start Points
-  addPoint("StartPos0", {61500, 0, -26000}, {0, 0, 0})
-  addPoint("StartPos1", {-61500, 0, -26000}, {0, 0, 0})
+  addPoint("StartPos0", {31500, 0, -26000}, {0, 0, 0})
+  addPoint("StartPos1", {-31500, 0, -26000}, {0, 0, 0})
 
 
 
+
+
+addDustCloud("polySurface1", "DustCloud_Teal", {15000, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, 87000.0)
+addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {-15000, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, 87000.0)
+addDustCloud("polySurface1", "DustCloud_Teal", {0.0, 15000, 0.0,}, {0, 245, 255, 1}, 0.0, 87000.0)
+addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {0.0, -15000, 0.0,}, {0, 245, 255, 1}, 0.0, 87000.0)
+addDustCloud("polySurface1", "DustCloud_Teal", {0.0, 0.0, -15000,}, {0, 245, 255, 1}, 0.0, 87000.0)
+addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {0.0, 0.0, 15000,}, {0, 245, 255, 1}, 0.0, 87000.0)
+addDustCloud("polySurface1", "DustCloud_Teal", {0.0, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, 87000.0)
+addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {0.0, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, 87000.0)
+
+addDustCloud("polySurface1", "DustCloud_Teal", {0.0, 45000, 0.0,}, {0, 245, 255, 1}, 0.0, 87000.0)
+addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {0.0, -45000, 0.0,}, {0, 245, 255, 1}, 0.0, 87000.0)
+addDustCloud("polySurface1", "DustCloud_Teal", {45000, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, 87000.0)
+addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {-45000, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, 87000.0)
+addDustCloud("polySurface1", "DustCloud_Teal", {0.0, 0.0, 45000,}, {0, 245, 255, 1}, 0.0, 87000.0)
+addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {0.0, 0.0, -45000,}, {0, 245, 255, 1}, 0.0,87000.0)
+
+addDustCloud("polySurface1", "DustCloud_Teal", {0.0, 0, 70000,}, {0, 245, 255, 1}, 0.0, 60000.0)
+addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {0.0, -70000, 0.0,}, {0, 245, 255, 1}, 0.0, 50000.0)
+addDustCloud("polySurface1", "DustCloud_Teal", {-5000, -5000, -77000,}, {0, 245, 255, 1}, 0.0, 17000.0)
+addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {7000, -8000, 90000,}, {0, 245, 255, 1}, 0.0, 57000.0)
+
+
+
+  setWorldBoundsInner({-4.4, 0, 0}, {60000, 60000, 60000})
+end
+
+function NonDetermChunk()
+  
 addPebble("Pebble_0", {10000, -5809, -10876,}, 0, 0, 0) 
   addPebble("Pebble_1", {-10000, -19809, 1876,}, 0, 0, 0)
   addPebble("Pebble_0", {21000, 21809, 21876,}, 0, 0, 0)
@@ -59,36 +89,12 @@ addPebble("Pebble_0", {10000, 5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_0", { -13657, 36709, -37806,}, 0, 0, 0)
   addPebble("Pebble_1", { 47043, 26709, 28806,}, 0, 0, 0)
 
-addDustCloud("polySurface1", "DustCloud_Teal", {0.0, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, -87000.0)
-addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {0.0, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, -87000.0)
-addDustCloud("polySurface1", "DustCloud_Teal", {0.0, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, -87000.0)
-addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {0.0, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, -87000.0)
-addDustCloud("polySurface1", "DustCloud_Teal", {0.0, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, -87000.0)
-addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {0.0, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, -87000.0)
-addDustCloud("polySurface1", "DustCloud_Teal", {0.0, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, -87000.0)
-addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {0.0, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, -87000.0)
-
-addDustCloud("polySurface1", "DustCloud_Teal", {0.0, 45000, 0.0,}, {0, 245, 255, 1}, 0.0, -87000.0)
-addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {0.0, -45000, 0.0,}, {0, 245, 255, 1}, 0.0, -87000.0)
-addDustCloud("polySurface1", "DustCloud_Teal", {45000, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, -87000.0)
-addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {-45000, 0.0, 0.0,}, {0, 245, 255, 1}, 0.0, -87000.0)
-addDustCloud("polySurface1", "DustCloud_Teal", {0.0, 0.0, 45000,}, {0, 245, 255, 1}, 0.0, -87000.0)
-addNebula("Nebula4_OLD1", "M08_NoDamage_Radiation", {0.0, 0.0, -45000,}, {0, 245, 255, 1}, 0.0,-87000.0)
-
-addSquadron("BigProduction", "hgn_attackbomber", {44755, 40000, 12047,}, -1, {0, 0, 0,}, 0, 0);
-
-
-  setWorldBoundsInner({-4.4, 0, 0}, {75000, 75000, 75000})
-end
-
-function NonDetermChunk()
-  
   fogSetActive(1)
   fogSetStart(1)
   fogSetEnd(18000)
   fogSetColour(0, 245, 255, 1)
   fogSetType("linear")
-  fogSetDensity(.90)
+  fogSetDensity(.40)
   setGlareIntensity(.30)
   setLevelShadowColour(0, 0, 0, 1)
   loadBackground("black")

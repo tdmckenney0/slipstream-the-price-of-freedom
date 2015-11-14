@@ -106,7 +106,7 @@ effects = {
       },
       {
         "marker",
-        "Weapon_Turret_Muzzle",
+        "Weapon_DT_Muzzle",
       },
       {
         "fx",
@@ -124,7 +124,7 @@ effects = {
     event3 = {
       {
         "anim",
-        "Weapon_Turret",
+        "Weapon_turret",
       },
       {
         "animtime",
@@ -132,7 +132,7 @@ effects = {
       },
       {
         "marker",
-        "Weapon_TurretSlave_Muzzle",
+        "Weapon_DTSlave_Muzzle",
       },
       {
         "fx",

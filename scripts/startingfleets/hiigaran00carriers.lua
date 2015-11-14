@@ -37,14 +37,14 @@ PersistantData = {
          size = 1,
       },
       {
-         type = "hgn_pulsarplatform",
+         type = "hgn_destroyer",
          subsystems = {
          },
          shiphold = {
          },
          name = "",
          size = 1,
-         number = 5,
+         number = 1,
     },
    },
    Research = {

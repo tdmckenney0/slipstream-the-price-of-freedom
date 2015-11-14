@@ -5,8 +5,8 @@
 --
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Missile Corvette"
-NewShipType.sobDescription = "Heimdall Class/nRocket Launching Corvette"
-NewShipType.maxhealth = 400
+NewShipType.sobDescription = "Heimdall Class\nRocket Launching Corvette"
+NewShipType.maxhealth = 7000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -21,8 +21,8 @@ NewShipType.defensiveFormation = "2x2_wall"
 NewShipType.aggressiveFormation = "charging_wall"
 NewShipType.mass = 15
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 215
-NewShipType.mainEngineMaxSpeed = 215
+NewShipType.thrusterMaxSpeed = 425
+NewShipType.mainEngineMaxSpeed = 425
 NewShipType.rotationMaxSpeed = 131
 NewShipType.thrusterAccelTime = 2
 NewShipType.thrusterBrakeTime = 1
@@ -162,7 +162,7 @@ addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadModel(NewShipType, 1)
-StartShipWeaponConfig(NewShipType, "Vgr_ConcussionMissileLauncher", "Weapon_MissileVette", "Fire_Missile")
+StartShipWeaponConfig(NewShipType, "vgr_heavyconcussionmissilelauncher", "Weapon_MissileVette", "Fire_Missile")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1

@@ -1,5 +1,5 @@
 StartWeaponConfig(NewWeaponType,"Fixed","Missile","Hgn_LongRangeTorpedo","Normal",120,10000,0,0,0,0,1,0,1,15,0,0,1,1,0,0,0.1,"Normal",1,0,0)
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",1000,1000,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",2000,2000,"")
 AddWeaponResult(NewWeaponType,"Hit","Disable","Target",135,135,"")
 setPenetration(NewWeaponType,60,1,{
   PlanetKillerArmour = 0,

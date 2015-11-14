@@ -1,16 +1,19 @@
 -- Cold Fusion LUA Decompiler v1.0.0
 -- By 4E534B
--- Date: 10-14-2007 Time: 00:22:45
+-- Date: 10-14-2007 Time: 00:08:11
 -- On error(s), send source (compiled) file to 4E534B@gmail.com
 
 NewShipType=StartShipConfig();
 NewShipType["displayedName"]="UNCG Missile Frigate";
-NewShipType["sobDescription"]="Archer Class\nMulti-Missile Laucher Frigate";
+NewShipType["sobDescription"]="Archer Class\nDefence Frigate";
 NewShipType["maxhealth"]=50000;
 NewShipType["regentime"]=1200;
 NewShipType["minRegenTime"]=1200;
-NewShipType["sideArmourDamage"]=1.2;
-NewShipType["rearArmourDamage"]=1.2;
+NewShipType["sideArmourDamage"]=0.5;
+NewShipType["rearArmourDamage"]=0.55;
+NewShipType["bottomArmourDamage"]=0.7;
+NewShipType["topArmourDamage"]=0.65;
+NewShipType["frontArmourDamage"]=0.45;
 NewShipType["isTransferable"]=1;
 NewShipType["useEngagementRanges"]=1;
 NewShipType["unitCapsNumber"]=2;
@@ -53,15 +56,15 @@ NewShipType["swayUpdateTime"]=4;
 NewShipType["swayOffsetRandomX"]=10;
 NewShipType["swayOffsetRandomY"]=10;
 NewShipType["swayOffsetRandomZ"]=10;
-NewShipType["swayBobbingFactor"]=0.05;
+NewShipType["swayBobbingFactor"]=0.15;
 NewShipType["swayRotateFactor"]=0;
 NewShipType["useTargetRandom"]=1;
-NewShipType["targetRandomPointXMin"]=-0.1;
-NewShipType["targetRandomPointXMax"]=0.47;
-NewShipType["targetRandomPointYMin"]=-0.48;
-NewShipType["targetRandomPointYMax"]=0.8;
-NewShipType["targetRandomPointZMin"]=-0.8;
-NewShipType["targetRandomPointZMax"]=0.8;
+NewShipType["targetRandomPointXMin"]=-0.2;
+NewShipType["targetRandomPointXMax"]=0.19;
+NewShipType["targetRandomPointYMin"]=-0.7;
+NewShipType["targetRandomPointYMax"]=-0.18;
+NewShipType["targetRandomPointZMin"]=-0.6;
+NewShipType["targetRandomPointZMax"]=0.9;
 NewShipType["dustCloudDamageTime"]=160;
 NewShipType["nebulaDamageTime"]=200;
 NewShipType["MinimalFamilyToFindPathAround"]="MotherShip";
@@ -74,18 +77,17 @@ NewShipType["AutoFormationFamily"]="Frigate";
 NewShipType["CollisionFamily"]="Big";
 NewShipType["ArmourFamily"]="MediumArmour";
 NewShipType["UnitCapsFamily"]="Frigate";
-NewShipType["UnitCapsShipType"]="TorpedoFrigate";
 NewShipType["fighterValue"]=0;
 NewShipType["corvetteValue"]=0;
-NewShipType["frigateValue"]=10;
+NewShipType["frigateValue"]=12;
 NewShipType["neutralValue"]=0;
-NewShipType["antiFighterValue"]=0;
-NewShipType["antiCorvetteValue"]=9;
-NewShipType["antiFrigateValue"]=4;
-NewShipType["totalValue"]=10;
+NewShipType["antiFighterValue"]=12;
+NewShipType["antiCorvetteValue"]=0;
+NewShipType["antiFrigateValue"]=0;
+NewShipType["totalValue"]=12;
 NewShipType["buildCost"]=700;
-NewShipType["buildTime"]=55;
-NewShipType["buildPriorityOrder"]=40;
+NewShipType["buildTime"]=50;
+NewShipType["buildPriorityOrder"]=10;
 NewShipType["retaliationRange"]=5500;
 NewShipType["retaliationDistanceFromGoal"]=160;
 NewShipType["visualRange"]=1000;
@@ -105,9 +107,9 @@ NewShipType["TOGroupMergeSize"]=0;
 NewShipType["mouseOverMinFadeSize"]=0.045;
 NewShipType["mouseOverMaxFadeSize"]=0.1;
 NewShipType["healthBarStyle"]=1;
-NewShipType["nlips"]=0.000125;
+NewShipType["nlips"]=0.00015;
 NewShipType["nlipsRange"]=6000;
-NewShipType["nlipsFar"]=0.0001;
+NewShipType["nlipsFar"]=0.00015;
 NewShipType["nlipsFarRange"]=10000;
 NewShipType["SMRepresentation"]="HardDot";
 NewShipType["meshRenderLimit"]=13000;
@@ -141,18 +143,17 @@ NewShipType["launchNrOfShipsInDockFormation"]=1;
 NewShipType["launchFormation"]="delta";
 addAbility(NewShipType, "ParadeCommand", 1);
 addAbility(NewShipType, "WaypointMove");
-addAbility(NewShipType, "HyperSpaceCommand", 0, 1, 200, 500, 0, 3);
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.5, "Corvette, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Utility, Fighter", "Frontal", {Fighter="MoveToTargetAndShoot"}, {Corvette="MoveToTargetAndShoot"}, {Munition="MoveToTargetAndShoot"}, {Frigate="Movetotargetandshoot"}, {SubSystem="FrontalVsSubSystem"});
+addAbility(NewShipType, "MinelayerAbility",1,3.5);
+addAbility(NewShipType, "HyperSpaceCommand", 0, 0, 0, 0, 0, 0);
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.5, "Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip", "Flyround");
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600);
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3);
 addAbility(NewShipType, "CanBeCaptured", 30, 0.1);
 addAbility(NewShipType, "CanBeRepaired");
 addAbility(NewShipType, "RetireAbility", 1, 1);
 LoadModel(NewShipType, 1);
-StartShipWeaponConfig(NewShipType, "hgn_StandardMissile", "weapon_Torpedo", "");
-StartShipWeaponConfig(NewShipType, "Hgn_DestroyerTorpedoLauncher", "weapon_Torpedo", "");
-StartShipHardPointConfig(NewShipType,"DF","Weapon_Turret","Weapon","Innate","Indestructible","hgn_monitor_ptrt")
-StartShipHardPointConfig(NewShipType,"DF2","Weapon_Turret2","Weapon","Innate","Indestructible","hgn_monitor_ptrt")
+StartShipHardPointConfig(NewShipType,"T","Weapon_Top","Weapon","Innate","Indestructible","Missile_box","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"B","Weapon_Bottom","Weapon","Innate","Indestructible","Missile_box","","","","","","","","");
 addShield(NewShipType, "EMP", 310, 20);
 NewShipType["battleScarMaxTriBase"]=75;
 NewShipType["battleScarMaxTriInc"]=100;
@@ -162,6 +163,7 @@ NewShipType["specialDeathSpeed"]=40;
 NewShipType["chanceOfSpecialDeath"]=0;
 NewShipType["deadSobFadeTime"]=0;
 NewShipType["trailLinger"]=4;
+setEngineBurn(NewShipType, 6, 1, 1.5, 60, 1.1, 0.1, 0.25, 120);
 setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5, {0.27,
 	0.47,
 	0.69,

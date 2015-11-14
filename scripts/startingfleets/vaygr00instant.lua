@@ -29,7 +29,7 @@ PersistantData = {
          },
          name = "",
          size = 1,
-         number = 5, 
+         number = 4, 
       },
       {
          type = "Vgr_Battlecruiser",
@@ -39,7 +39,7 @@ PersistantData = {
          },
          name = "",
          size = 1,
-         number = 4, 
+         number = 2, 
       },
       {
          type = "Vgr_Dreadnaught",
@@ -63,18 +63,18 @@ PersistantData = {
    },
 
       {
-         type = "vgr_assaultfrigate",
+         type = "vgr_Helios",
          subsystems = {
          },
          shiphold = {
          },
          name = "",
          size = 1,
-         number = 5,
+         number = 3,
    },
 
       {
-         type = "vgr_battlebarge",
+         type = "vgr_Battleship",
          subsystems = {
          },
          shiphold = {

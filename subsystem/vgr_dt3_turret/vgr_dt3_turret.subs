@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="SubSystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"test_weapon","Weapon_DT","Weapon_Turret");
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_kineticmodcannon","Weapon_DT","Weapon_Turret");

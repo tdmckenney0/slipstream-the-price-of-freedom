@@ -5,7 +5,7 @@
 --
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Assault Frigate"
-NewShipType.sobDescription = "Taiga Class/nAssualt Frigate"
+NewShipType.sobDescription = "Taiga Class\nAssualt Frigate"
 NewShipType.maxhealth = 32000
 NewShipType.regentime = 1200
 NewShipType.minRegenTime = 450
@@ -168,6 +168,7 @@ addAbility(NewShipType, "GuardCommand", 1, 3000, 600)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "CanBeCaptured", 45, 0.1)
 addAbility(NewShipType, "CanBeRepaired")
+addAbility(NewShipType,"MinelayerAbility",1,3.5)
 addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
 
@@ -177,9 +178,9 @@ addShield(NewShipType, "EMP", 310, 20)
 
 StartShipHardPointConfig(NewShipType, "Turret_Front", "Weapon_Bottom", "System", "Innate", "Damageable", "vgr_FT2_AF_Bottom", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Turret_Left", "Weapon_Left", "System", "Innate", "Damageable", "vgr_FT1_AF_Left", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Turret_Left", "Weapon_Left", "System", "Innate", "Damageable", "vgr_Frigate_Pulse_left", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Turret_Right", "Weapon_Right", "System", "Innate", "Damageable", "vgr_FT1_AF_Right", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Turret_Right", "Weapon_Right", "System", "Innate", "Damageable", "vgr_Frigate_Pulse_right", "", "", "", "", "", "", "", "")
 
 NewShipType.battleScarMaxTriBase = 75
 NewShipType.battleScarMaxTriInc = 100
