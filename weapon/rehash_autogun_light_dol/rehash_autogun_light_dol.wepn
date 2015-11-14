@@ -1,0 +1,41 @@
+StartWeaponConfig(NewWeaponType,"Gimble","Bullet","KprBeam","Normal",2200,3000,0,0,0,0,1,1,0,0.5,1.5,0.8,0,0,0,0,0.1,"Normal",0,0,0)
+
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",150,150,"")
+AddWeaponResult(NewWeaponType,"Hit","Disable","Target",2,4,"")
+
+setAngles(NewWeaponType,25,0,0,0,0)
+
+setPenetration(NewWeaponType,5,1,
+{Unarmoured=1,},
+{SuperConducting=1,},
+{AntiChemical=1,},
+{AntiMassImpact=1,},
+{Composite=1,},
+{LightArmour=1,},
+{MediumArmour=0.7,},
+{HeavyArmour=1,},
+{SubSystemArmour=3,},
+{TurretArmour=1,},
+{ResArmour=0.6,},
+{MoverArmour=1,},
+{PlanetKillerArmour=0,},
+{MineArmour=1,},
+{ChunkArmour=1,})
+
+setAccuracy(NewWeaponType,1,
+{Fighter=0.35,},
+{Corvette=0.45,},
+{Frigate=0.6, damage=1,},
+{Utility=1,},
+{munition=0.25,},
+{SmallCapitalShip=0.6, damage=1,},
+{BigCapitalShip=0.6, damage=1,},
+{Mothership=1,},
+{Emplacement=1,},
+{UnAttackable=1,},
+{SubSystem=1,},
+{Resource=1,},
+{ResourceLarge=0.6, damage=1,},
+{Capturer=1,},
+{Chimera=1,})
+
