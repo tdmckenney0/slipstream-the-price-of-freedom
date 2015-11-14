@@ -34,4 +34,5 @@ NewSubSystemType.AttackFamily = "SubSystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemSensors"
 NewSubSystemType.ArmourFamily = "MediumArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"Hgn_IonCannonTurret","Weapon_Top","Weapon_Top")
+StartSubSystemWeaponConfig(NewSubSystemType,"Hgn_IonCannonTurret","Weapon_Top","Null")
+--Designated to NULL because the effects are now called in the Weaponfire file.

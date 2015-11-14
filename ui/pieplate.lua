@@ -22,10 +22,9 @@ pieTwkShipOnPlaneColour            = {0,0,1,1.0}                -- colour of a s
 pieTwkClosestShipOnPlaneColour     = {0,1,0,1}                          -- colour of a ship's drop down on the pieplate when the moveto point is near it
 pieTwkScaleUpTime                  = 1                                -- how many seconds it takes for the pieplate to scale up
 pieTwkScaleDownTime                = 2                                -- how many seconds it takes for the pieplate to scale down
-pieTwkSeperateDiscs                = false                              -- if this is false the transparent ring and the wireframe ring will be connected	
---pieLocaleID          		    = "$2857"                          -- the localized ru text of hyperspace cost
-pieLocaleID          		    = "!"                          -- the localized ru text of hyperspace cost	                           
-	                           
+pieTwkSeperateDiscs                = false                              -- if this is false the transparent ring and the wireframe ring will be connected
+pieLocaleID          		    = "Slipstream Jump"                          -- the localized ru text of hyperspace cost
+
 
 -- order specific values -----------------------------------------------------
 -- valid order names are:   NoOrder,Move,Attack,Build,Dock,Resource,Idle,

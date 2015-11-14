@@ -136,7 +136,7 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "dockline"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "CanAttack", 1, 3, 1, 0, 0.35, 1, "Corvette, Frigate, Fighter, SmallCapitalShip, BigCapitalShip, Utility", "FlyRound_PulsarCorvette_vs_Frigate", 
+addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "Corvette, Frigate, Fighter, SmallCapitalShip, BigCapitalShip, Utility", "FlyRound_PulsarCorvette_vs_Frigate", 
 { 
     Fighter = "FlyRound_PulsarCorvette_vs_Fighter", 
 }, 

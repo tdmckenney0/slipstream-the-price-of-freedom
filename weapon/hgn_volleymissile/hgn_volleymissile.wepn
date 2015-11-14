@@ -1,11 +1,12 @@
-StartWeaponConfig(NewWeaponType,"AnimatedTurret","Missile","ranged_torpedo","Normal",120,10000,0,0,0,0,1,1,1,25,0,0,1,0,360,360,0.1,"Normal",1,0,0)
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","Missile","SmallTorpedo","Normal",120,10000,0,0,0,0,1,1,1,25,0,0,1,0,360,360,0.1,"Normal",1,0,0)
 
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",2000,2500,"")
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"HGN_FlakBurst")
 AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"HGN_FlakBurst")
 
 setAngles(NewWeaponType,5,-180,180,0,10)
 
-setMiscValues(NewWeaponType,0,0.25)
+setMiscValues(NewWeaponType,0,0.1)
 
 setPenetration(NewWeaponType,60,1,
 {Unarmoured=1,},
@@ -21,15 +22,15 @@ setPenetration(NewWeaponType,60,1,
 {ChunkArmour=1,})
 
 setAccuracy(NewWeaponType,1,
-{Fighter=0.25, damage=1,},
-{Corvette=0.3, damage=1,},
-{Frigate=0.85, damage=1,},
+{Fighter=1, damage=1,},
+{Corvette=1, damage=1,},
+{Frigate=1, damage=1,},
 {Utility=1,},
-{munition=0,},
-{SmallCapitalShip=1, damage=1,},
-{BigCapitalShip=1,},
-{Mothership=1,},
-{Emplacement=1,},
+{munition=1, damage=1,},
+{SmallCapitalShip=0,},
+{BigCapitalShip=0,},
+{Mothership=0,},
+{Emplacement=0,},
 {UnAttackable=0,},
 {SubSystem=1,},
 {Resource=1,},

@@ -1,0 +1,141 @@
+-- The Graveyard 
+-- By: Nick
+-- Created: August 20, 2007
+-- Last update: May 4 2008
+-- Version 1.1
+-- Teams: 1 v 1
+-- Change log V1.2
+--V1.2
+--Placement adjustments
+--V1.1
+-- Added Dustclouds
+-- Shrunk the map by 8 kilometers 
+-- Added patches of radiation 
+-- Added some randomly placed pebbles 
+
+levelDesc = "The Graveyard"
+
+maxPlayers = 2
+
+player = {}
+
+player[0] = {
+  resources = 2500,
+  startPos = 1,
+  raceID = 1,
+  id = 0,
+  name = "",
+}
+
+player[1] = {
+  resources = 2500,
+  startPos = 1,
+  raceID = 2,
+  id = 1,
+  name = "",
+}
+
+
+
+function DetermChunk()
+  addPoint("StartPos0", {0, 0, 30000}, {0, 180, 0})
+  addPoint("StartPos1", {0, 0, -30000}, {0, 0, 0})
+  addAsteroid("Asteroid_4", {758, 2093, -35839}, 100, -472.282, 48.701, -245.926, 0)
+  addAsteroid("Asteroid_4", {238, 1274, -36500}, 100, -46.282, 7.7401, -25.926, 0)
+  addAsteroid("Asteroid_3", {-400, -200, -36584}, 100, -6.282, 7.701, -55.926, 0)
+ addAsteroid("Asteroid_3", {1372, -596, -36500}, 100, -46.282, 27.701, -25.926, 0)
+ addAsteroid("Asteroid_3", {-203, 946, -35567}, 100, -46.282, 27.701, -22.926, 0)
+ addAsteroid("Asteroid_4", {758, 2093, 35839}, 100, -472.282, 48.701, -25.926, 0)
+  addAsteroid("Asteroid_4", {238, 1274, 36500}, 100, -46.282, 274.701, -55.926, 0)
+  addAsteroid("Asteroid_3", {-400, -200, 36584}, 100, -6.282, 7.701, -25.926, 0)
+ addAsteroid("Asteroid_3", {1372, -596, 36500}, 100, -46.22, 257.701, -25.926, 0)
+ addAsteroid("Asteroid_3", {-203, 946, 35567}, 100, -46, 27.701, -25.926, 0)
+
+ addAsteroid("Asteroid_5", {-136, -264, 381}, 100, -46.282, 91.701, -2452.9526, 0)
+ addAsteroid("Asteroid_4", {437, -360, 462}, 100, -49.282, 26.61, -5.926, 0)
+ addAsteroid("Asteroid_4", {-1284, 847, -865}, 100, -46.282, 57.701, -3.926, 0)
+ addAsteroid("Asteroid_3", {1000, -384, 527}, 100, -180.282, 27.701, -45.926, 0)
+ addAsteroid("Asteroid_3", {1387, 173, -775}, 100, -46.282, 47.701, -14.926, 0)
+  addAsteroid("Asteroid_3", {274, -737, 1000}, 100, -23.282, 7.71, -63.926, 0)
+  addAsteroid("Asteroid_3", {-467, 472, -1000}, 100, -456.282, 24, -262.926, 0)
+  addSquadron("Meg_SajHulkPanels2", "Meg_SajHulkPanels", {7000, 1000, 6005}, -1, {-8.864000000000001, 20.864, -69.471}, 0, 0)
+  addSquadron("Meg_SajHulkPanels", "Meg_SajHulkPanels", {-7000, 1000, -6005}, -1, {76.592, 2.683, 49.123}, 0, 0)  
+addSquadron("Meg_SajHulkTurret", "Meg_SajHulkTurret", {20000, 1273, 7099}, -1, {-58.112, 0, -17.069}, 0, 0)
+  addSquadron("Meg_SajHulkTurret1", "Meg_SajHulkTurret", {8349, 0, 2731}, -1, {-8.590999999999999, 55.229, -80.346}, 0, 0)
+  addSquadron("Meg_SajHulkPanels4", "Meg_SajHulkPanels", {6083, 3309, 1529}, -1, {1.648, -40.132, -29.45}, 0, 0)
+  addSquadron("Meg_SajHulkPanels5", "Meg_SajHulkPanels", {-3433, 1459, 3050}, -1, {120.108, -38.66, -149.942}, 0, 0)
+  addSquadron("meg_sajhulknose", "meg_sajhulknose", {7000, 10000, -9000}, -1, {-6, -50, 150}, 0, 0)   
+  addSalvage("container", {-1050, 0, 21000}, 500, 0, 0, 100, 100)  
+  addSalvage("container", {-1200, -1000, 20989}, 500, 15, -50, 100, 100)  
+  addSalvage("container", {-2000, -1160, 22000}, 500, 159, -9, -100, 111)
+  addSalvage("container", {-507, -2100, 21000}, 500, -66, 222, -10, 100)
+  addSalvage("container", {1050, 0, -21000}, 500, 0, 0, 100, 100)  
+  addSalvage("container", {1200, -1000, -20989}, 500, 15, -50, 100, 100)  
+  addSalvage("container", {2000, -1160, -22000}, 500, 159, -9, -100, 111)
+  addSalvage("container", {507, -2100, -21000}, 500, -66, 222, -10, 100)
+   addSalvage("container", {-32000, 0, 0}, 500, 0, 0, -100, 160)  
+  addSalvage("container", {-31000, -67, 0}, 500, 15, -50, 100, 100)  
+  addSalvage("container", {-31089, -1160, 0}, 500, 159, -9, -100, 111)
+  addSalvage("container", {-31678, -2000, 79}, 500, -66, 222, -10, 100)
+  addSalvage("container", {32000, 0, 50}, 500, 0, 0, 100, 100)  
+  addSalvage("container", {32099, -1000, 250}, 500, -15, 50, 900, 100)  
+  addSalvage("container", {31073, -1160, -150}, 500, -159, -9, -100, 111)
+  addSalvage("container", {32703, -2100, 500}, 500, -66, -222, -10, 100)
+  addDustCloud("Dustcloud", "DustCloud_NoRes", {0, 5000, 0,}, {0.404, 0.223, 0.000, 1,}, 0, 20000) 
+  addDustCloud("Dustcloud", "DustCloud_NoRes", {35000, 0, 0,}, {0.404, 0.223, 0.000, 1,}, 0, 13000)
+addDustCloud("Dustcloud", "DustCloud_NoRes", {-35000, 0, 0,}, {0.404, 0.223, 0.000, 1,}, 0, 13000) 
+  addDustCloud("Dustcloud", "DustCloud_NoRes", {0, -5000, 0,}, {0.404, 0.223, 0.000, 1,}, 0, 20000)
+ addDustCloud("Dustcloud", "DustCloud_NoRes", {0, 5000, 0,}, {0.404, 0.223, 0.000, 1,}, 0, 20000) 
+  addDustCloud("Dustcloud", "DustCloud_NoRes", {35000, 0, 0,}, {0.404, 0.223, 0.000, 1,}, 0, 13000)
+addDustCloud("Dustcloud", "DustCloud_NoRes", {-35000, 0, 0,}, {0.404, 0.223, 0.000, 1,}, 0, 13000) 
+  addDustCloud("Dustcloud", "DustCloud_NoRes", {0, -5000, 0,}, {0.404, 0.223, 0.000, 1,}, 0, 20000)
+ addDustCloud("Dustcloud", "DustCloud_NoRes", {0, 5000, 0,}, {0.404, 0.223, 0.000, 1,}, 0, 20000) 
+  
+  addNebula("Nebula", "M11_Bentusi_Radiation", {15185, 0, 5637,}, {0.910, 0.519, 365, 0.923,}, 0, 3000)
+  addNebula("Nebula", "M11_Bentusi_Radiation", {23880, 0, -16052,}, {0.910, 0.519, 365, 1,}, 0, 3000)
+  addNebula("Nebula", "M11_Bentusi_Radiation", {33880, 0, 20936,}, {0.910, 0.519, 365, 1,}, 0, 7000)  
+addNebula("Nebula", "M11_Bentusi_Radiation", {-30185, -5000, -23637,}, {0.910, 0.519, 365, 0.923,}, 0, 10000)
+  addNebula("Nebula", "M11_Bentusi_Radiation", {-17480, 0, 26745,}, {0.910, 0.519, 365, 1,}, 0, 10000)
+  addNebula("Nebula", "M11_Bentusi_Radiation", {-20880, 500, 20936,}, {0.910, 0.519, 365, 1,}, 0, 3000)  
+
+  
+  setWorldBoundsInner({-4.4, 0, 0}, {42000, 42000, 42000})
+end
+
+function NonDetermChunk()
+ 
+addPebble("Pebble_1", {10000, -5809, -10876,}, 0, 0, 0) 
+  addPebble("Pebble_1", {-10000, 19809, 1876,}, 0, 0, 0)
+  addPebble("Pebble_1", {21000, 21809, -21876,}, 0, 0, 0)
+  addPebble("Pebble_1", {16894, -21809, 50639,}, 0, 0, 0)
+  addPebble("Pebble_1", {27894, 20809, -639,}, 0, 0, 0)
+  addPebble("Pebble_1", {30687, -20587, -5000,}, 0, 0, 0)
+  addPebble("Pebble_1", {-35687, 26099, 7045,}, 0, 0, 0)
+  addPebble("Pebble_1", {-34967, 16709, 14085,}, 0, 0, 0)
+  addPebble("Pebble_1", { 14967, -36709, 19806,}, 0, 0, 0)
+addPebble("Pebble_1", {10000, -5809, -10876,}, 0, 0, 0) 
+  addPebble("Pebble_1", {40000, 19809, 1876,}, 0, 0, 0)
+  addPebble("Pebble_1", {21000, 21809, -21876,}, 0, 0, 0)
+  addPebble("Pebble_1", {-10894, -21809, 55639,}, 0, 0, 0)
+  addPebble("Pebble_1", {27894, -20809, -639,}, 0, 0, 0)
+  addPebble("Pebble_1", {30687, 2087, -5400,}, 0, 0, 0)
+  addPebble("Pebble_1", {-35687, 26099, 7045,}, 0, 0, 0)
+  addPebble("Pebble_1", {-4967, -16709, -14085,}, 0, 0, 0)
+  addPebble("Pebble_1", { 14967, -36709, 56806,}, 0, 0, 0)
+  addPebble("Pebble_1", { -43907, 26709, -1406,}, 0, 0, 0)  
+  addPebble("Pebble_1", { -43907, 26709, 15806,}, 0, 0, 0)
+
+ 
+  fogSetActive(1)
+  fogSetStart(800)
+  fogSetEnd(18000)
+  fogSetColour(0.404, 0.223, 0.000, 0.859)
+  fogSetType("linear")
+  fogSetDensity(0.30)
+  setGlareIntensity(0.44)
+  setLevelShadowColour(0, 0, 0, 1)
+  loadBackground("deepspace")
+  setSensorsManagerCameraDistances(12000, 60000)
+  setDefaultMusic("Data:sound/music/battle/battle_keeper")
+end
+

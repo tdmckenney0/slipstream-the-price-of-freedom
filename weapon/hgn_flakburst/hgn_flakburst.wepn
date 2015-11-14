@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 StartWeaponConfig(NewWeaponType, "Fixed", "SphereBurst", "ArtilleryBurst", "Normal", 0, 0, 80, 2, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, "Normal", 1, 0, 0)
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 500, 500, "")
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 2000, 5000, "")
 
 setPenetration(NewWeaponType,5,0,
 {Unarmoured=1},

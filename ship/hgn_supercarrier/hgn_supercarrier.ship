@@ -90,9 +90,9 @@ NewShipType.buildTime=65
 NewShipType.buildPriorityOrder=30
 NewShipType.retaliationRange=4800
 NewShipType.retaliationDistanceFromGoal=160
-NewShipType.visualRange=1000
-NewShipType.prmSensorRange=5000
-NewShipType.secSensorRange=6000
+NewShipType.visualRange = 10000
+NewShipType.prmSensorRange = 10000
+NewShipType.secSensorRange = 15000
 NewShipType.detectionStrength=1
 NewShipType.TOScale=1
 NewShipType.TODistanceFade0=14000
@@ -189,8 +189,8 @@ StartShipHardPointConfig(NewShipType,"Flak1","Hardpoint_FlakCannon","System","In
 StartShipHardPointConfig(NewShipType,"Torp1","Hardpoint_TorpCannon","System","Innate","Damageable","hgn_ioncannonx2","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"MG1","Weapon_MiniGun","Weapon","Innate","Damageable","hgn_missileturret","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"MG2","Weapon_MiniGun2","Weapon","Innate","Damageable","hgn_missileturret","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"ML1","Hardpoint_Mpod3","Weapon","Innate","Damageable","hgn_missilebay","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"ML2","Hardpoint_Mpod4","Weapon","Innate","Damageable","hgn_missilebay","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"ML1","Hardpoint_Mpod3","Weapon","Innate","Damageable","hgn_missileturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"ML2","Hardpoint_Mpod4","Weapon","Innate","Damageable","hgn_missileturret","","","","","","","","");
 --Superstructures
 StartShipHardPointConfig(NewShipType,"M","Hardpoint_Mount","Weapon","Innate","Damageable","Hgn_SC_CommandIsland","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"ME","Hardpoint_Equipment1","Weapon","Innate","Damageable","hgn_missileturret","","","","","","","","");

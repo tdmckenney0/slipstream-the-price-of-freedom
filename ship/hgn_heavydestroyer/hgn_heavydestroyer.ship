@@ -85,9 +85,9 @@ NewShipType.buildTime=170
 NewShipType.buildPriorityOrder=20
 NewShipType.retaliationRange=6000
 NewShipType.retaliationDistanceFromGoal=160
-NewShipType.visualRange=1000
-NewShipType.prmSensorRange=6500
-NewShipType.secSensorRange=7500
+NewShipType.visualRange=7000
+NewShipType.prmSensorRange=7000
+NewShipType.secSensorRange=8500
 NewShipType.detectionStrength=1
 NewShipType.TOIcon="Parallelogram"
 NewShipType.TOScale=1
@@ -168,7 +168,7 @@ StartShipHardPointConfig(NewShipType,"Left_Turret","Turret_L","Weapon","Innate",
 
 StartShipHardPointConfig(NewShipType,"Right_Turret","Turret_R","Weapon","Innate","Damageable","hgn_flakturretright","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"MPOD","Hardpoint_Mpod","Weapon","Innate","Damageable","hgn_missilebay","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"MPOD","Hardpoint_Mpod","Weapon","Innate","Damageable","hgn_missileturret","","","","","","","","");
 
 
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg03",1,0.75,0,0,0,50,0,0,0,200,0,0,0,50,0,0,0,50);

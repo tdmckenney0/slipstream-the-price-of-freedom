@@ -140,7 +140,6 @@ squadclass[eShield] = {
 	HGN_DEFENSEFIELDFRIGATE,
 	hgn_battlecruiser,
 	hgn_battleship,
-	Hgn_Supercarrier,
 	Hgn_Carrier,
 }
 
@@ -246,6 +245,7 @@ squadclass[eNonThreat] = {
 	HGN_CARRIER,
 	HGN_MOTHERSHIP,
 	HGN_SHIPYARD,
+	HGN_SUPERCARRIER,
 	VGR_CARRIER,
 	VGR_MOTHERSHIP,
 	VGR_MOTHERSHIP_MAKAAN,

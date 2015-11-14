@@ -85,7 +85,7 @@ API_TOMesh                  = 17
 API_HealthBackgroundColour  = 18
 API_TotalResourceValue      = 19
 API_CommandColourDim        = 20
-API_GateCost                = 21
+API_Gate                = 21
 API_AuxiliaryPower          = 22
 API_AuxiliaryColour         = 23
 API_UnknownResourceValue    = 24
@@ -1462,7 +1462,7 @@ friendly =
         stringParam = API_GateCost,
         text =
         {
-            colour = {1,1,1,1},
+            colour = {1,1,1,0},
 	        dropshadow = 1,
             renderFlags = {"justifyHorizCentre"},
             LODs =
@@ -1530,7 +1530,7 @@ enemy =
             visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0"},
             placementFlags = {"clampCentre"} -- originally orthogonal
        }
-	
+
     },
     i21 = --healthBarStyle0 =
     {
@@ -1557,7 +1557,7 @@ enemy =
             placementFlags = {"clampCentre"} -- originally orthogonal
         }
     },
-	
+
     i24 = --healthBarOutlineStyle1 =
     {
         colourParam = API_HealthBackgroundColour,

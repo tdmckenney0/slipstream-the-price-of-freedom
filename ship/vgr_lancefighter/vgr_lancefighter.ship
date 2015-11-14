@@ -138,7 +138,7 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "n_delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "CanAttack", 1, 5, 1, 0, 0.35, 1, "Corvette, Capturer, Frigate, Fighter, SmallCapitalShip, BigCapitalShip, Utility", "FlyBy_Bomber_vs_Frigate", 
+addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "Corvette, Capturer, Frigate, Fighter, SmallCapitalShip, BigCapitalShip, Utility", "FlyBy_Bomber_vs_Frigate", 
 { 
     Fighter = "Flyby_Bomber_vs_Fighter", 
 }, 

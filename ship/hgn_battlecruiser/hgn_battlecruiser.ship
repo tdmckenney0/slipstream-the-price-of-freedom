@@ -86,9 +86,9 @@ NewShipType.buildTime = 350
 NewShipType.buildPriorityOrder = 40
 NewShipType.retaliationRange = 6500
 NewShipType.retaliationDistanceFromGoal = 160
-NewShipType.visualRange = 1000
-NewShipType.prmSensorRange = 7000
-NewShipType.secSensorRange = 8000
+NewShipType.visualRange = 10000
+NewShipType.prmSensorRange =10000
+NewShipType.secSensorRange = 12500
 NewShipType.detectionStrength = 1
 NewShipType.TOIcon = "Arrow"
 NewShipType.TOScale = 1
@@ -176,7 +176,7 @@ StartShipHardPointConfig(NewShipType,"Gat2","Weapon_TurretTop2","Weapon","Innate
 StartShipHardPointConfig(NewShipType,"Generic 1","HardpointGeneric1","System","Generic","Destroyable","","Hgn_C_Module_FireControl","Hgn_C_Module_CloakGenerator","Hgn_C_Module_HyperspaceInhibitor","Hgn_C_Module_Hyperspace","hgn_bcfighter","","","")
 StartShipHardPointConfig(NewShipType,"Generic 2","HardpointGeneric2","System","Generic","Destroyable","","Hgn_C_Module_FireControl","Hgn_C_Module_CloakGenerator","Hgn_C_Module_HyperspaceInhibitor","Hgn_C_Module_Hyperspace","hgn_bcfighter","","","")
 StartShipHardPointConfig(NewShipType,"Advanced Control Tower","Hardpoint_AdvControlTower","System","Innate","Damageable","Hgn_AdvancedControlTower","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"Torp Launcher","Hardpoint_Mpod","System","Innate","Damageable","hgn_missilebay","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Torp Launcher","Hardpoint_Mpod","System","Innate","Damageable","hgn_missileturret","","","","","","","","")
 
 StartShipHardPointConfig(NewShipType,"MissileT","Hardpoint_MpodT","Weapon","Innate","Indestructible","hgn_missileturret","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"MissileT2","Hardpoint_MpodT2","Weapon","Innate","Indestructible","hgn_missileturret","","","","","","","","")

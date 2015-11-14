@@ -85,9 +85,9 @@ NewShipType.buildTime = 165
 NewShipType.buildPriorityOrder = 20
 NewShipType.retaliationRange = 6000
 NewShipType.retaliationDistanceFromGoal = 160
-NewShipType.visualRange = 1000
-NewShipType.prmSensorRange = 6500
-NewShipType.secSensorRange = 7500
+NewShipType.visualRange = 10000
+NewShipType.prmSensorRange =10000
+NewShipType.secSensorRange = 12500
 NewShipType.detectionStrength = 1
 NewShipType.TOIcon = "Parallelogram"
 NewShipType.TOScale = 1
@@ -158,8 +158,8 @@ StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Torpedo2", "nul
 
 StartShipHardPointConfig(NewShipType, "MT1", "Hardpoint_MT1", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "MT2", "Hardpoint_MT2", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "TubeL", "Hardpoint_TubeL", "System", "Innate", "Damageable", "hgn_missilebay", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "TubeR", "Hardpoint_TubeR", "System", "Innate", "Damageable", "hgn_missilebay", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "TubeL", "Hardpoint_TubeL", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "TubeR", "Hardpoint_TubeR", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretTop", "Weapon_TurretTop", "System", "Innate", "Damageable", "hgn_plasmabatteryx6", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretBottom", "Weapon_TurretBottom", "System", "Innate", "Damageable", "hgn_plasmabatteryx6", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretFront", "Weapon_TurretFront", "System", "Innate", "Damageable", "hgn_railgun", "", "", "", "", "", "", "", "")

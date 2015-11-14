@@ -86,9 +86,9 @@ NewShipType.buildTime = 45
 NewShipType.buildPriorityOrder = 20
 NewShipType.retaliationRange = 4800
 NewShipType.retaliationDistanceFromGoal = 160
-NewShipType.visualRange = 1000
-NewShipType.prmSensorRange = 3500
-NewShipType.secSensorRange = 4500
+NewShipType.visualRange = 10000
+NewShipType.prmSensorRange =10000
+NewShipType.secSensorRange = 12500
 NewShipType.detectionStrength = 1
 NewShipType.TOIcon = "Parallelogram"
 NewShipType.TOScale = 1
@@ -168,7 +168,7 @@ StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System",
 
 StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Indestructible","hgn_railgun","","","","","","","","");
 
---StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Indestructible","hgn_missilebay","","","","","","","","");
+--StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Indestructible","hgn_missileturret","","","","","","","","");
 ------------------------------Side--Cannons
 StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP1","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
 

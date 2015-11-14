@@ -25,7 +25,7 @@ LoadingScreen =
     {
         size =
             { 800, 600, },
-        texture = "DATA:UI/NewUI/Background/menu1600.tga",
+        texture = "DATA:UI/NewUI/Background/menu1600.dds",
         textureUV =
             { 0, 0, 1600, 1200, }, },
 ;
@@ -43,7 +43,7 @@ LoadingScreen =
     type = "TextLabel",
     name = "moduleLabel",
     position =
-        { 75, 575, },
+        { 5, 575, },
     size =
         { 800, 50, },
     Text =
@@ -58,7 +58,7 @@ LoadingScreen =
     type = "TextLabel",
     name = "loadingtext",
     position =
-        { 5, 575, },
+        { 5, 560, },
 	size = {300, 20},
     Text =
     {

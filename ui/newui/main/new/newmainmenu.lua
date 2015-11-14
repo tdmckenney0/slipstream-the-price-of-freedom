@@ -20,7 +20,7 @@ NewMainMenu =
     {
         size =
             { 800, 600, },
-        texture = "Data:UI\\NewUI\\Background\\mainmenu1600.tga",
+        texture = "Data:UI\\NewUI\\Background\\mainmenu1600.dds",
         textureUV =
             { 0, 0, 1600, 1200, }, },
 },
@@ -205,14 +205,29 @@ NewMainMenu =
 {
     type = "TextLabel",
     name = "lblVersion",
-    size =
-        { 200, 13, },
     position =
-        { 25, 200, },
+        { 500, 588, },
+    size = {300, 20},
     Text =
     {
-        text = "Slipstream: The Price of Freedom v2.0 Mac",
-        font = "ButtonFont",
+        font = "Buttonfont",
+        text = "Build Version 2.1.5996 - November 13, 2008",
+        color =
+            { 255, 255, 255, 255, },
+        hAlign = "Right",
+        vAlign = "Top", },
+},
+{
+    type = "TextLabel",
+    name = "title",
+    size =
+        { 235, 13, },
+    position =
+        { 23, 196, },
+    Text =
+    {
+        text = "Slipstream: The Price of Freedom",
+        textStyle = "FEHeading3",
         hAlign = "Left",
         vAlign = "Top",
         color =
