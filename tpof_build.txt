@@ -1,14 +1,13 @@
-WARNING: RELEASE CANIDATE. NOT FOR PUBLIC USE.
+WARNING: MAC OS X VERSION ONLY!
 Slipstream: The Price of Freedom
-Built on: 9:42 PM 9/24/2008
+Built on: 4:25 PM 9/26/2008
 Built By: Emperor_Khane
 Build System: Microsoft Windows Vista Ultimate x64 [Version 6.0.6000]
 	     AMD Athlon x2 @ 2.6 GHz, 4.00 GB RAM, Nvidia Geforce 8600 GT
-Build Folder: D:\Program Files (x86)\Sierra\Homeworld2-TPOF\Data\Compile_pc
+Build Folder: D:\Program Files (x86)\Sierra\Homeworld2-TPOF\Data\Compile_Mac
 Build Locale: United States, North America, English
-Build version: RC3 (v1.9.9996)
+Build version: v2.0
 Hw2 Version: v1.1
-SubRealTech Version: v2.0
 Copyright Sub-Real Industries 2008.
 Homeworld 2 Engine Copyright THQ and Relic Entertainment 2003-2008
 All Rights Are Reserved.

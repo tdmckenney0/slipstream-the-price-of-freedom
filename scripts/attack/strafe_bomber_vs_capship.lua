@@ -1,8 +1,8 @@
 AttackStyleName = AttackRun
 Data = {
   howToBreakFormation = ClimbAndPeelOff,
-  maxBreakDistance = 1300,
-  distanceFromTargetToBreak = 500,
+  maxBreakDistance = 3000,
+  distanceFromTargetToBreak = 1000,
   safeDistanceFromTargetToDoActions = 1500,
   coordSysToUse = Target,
   horizontalMin = 0.6,

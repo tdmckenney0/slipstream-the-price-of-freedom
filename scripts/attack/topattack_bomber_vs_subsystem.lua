@@ -1,8 +1,8 @@
 AttackStyleName = AttackRun
 Data = {
   howToBreakFormation = StraightAndScatter,
-  maxBreakDistance = 1300,
-  distanceFromTargetToBreak = 800,
+  maxBreakDistance = 3000,
+  distanceFromTargetToBreak = 2000,
   safeDistanceFromTargetToDoActions = 1500,
   coordSysToUse = Target,
   horizontalMin = 0.6,

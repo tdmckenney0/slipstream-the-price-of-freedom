@@ -20,7 +20,7 @@ NewMainMenu =
     {
         size =
             { 800, 600, },
-        texture = "Data:UI\\NewUI\\Background\\mainmenu1600.dds",
+        texture = "Data:UI\\NewUI\\Background\\mainmenu1600.tga",
         textureUV =
             { 0, 0, 1600, 1200, }, },
 },
@@ -211,7 +211,7 @@ NewMainMenu =
         { 25, 200, },
     Text =
     {
-        text = "Slipstream: The Price of Freedom RC3",
+        text = "Slipstream: The Price of Freedom v2.0 Mac",
         font = "ButtonFont",
         hAlign = "Left",
         vAlign = "Top",
