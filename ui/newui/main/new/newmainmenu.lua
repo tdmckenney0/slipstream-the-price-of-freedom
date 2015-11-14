@@ -20,9 +20,9 @@ NewMainMenu =
     { 
         size = 
             { 800, 600, }, 
-        texture = "Data:UI\\NewUI\\Background\\Menu.mres", 
+        texture = "Data:UI\\NewUI\\Background\\mainmenu1600.dds", 
         textureUV = 
-            { 0, 0, 800, 600, }, }, 
+            { 0, 0, 1600, 1200, }, }, 
 }, 
 { 
     type = "Frame", 
@@ -95,6 +95,7 @@ NewMainMenu =
     name = "btnTutorial", 
     enabled = 1, 
     width = 260, 
+    onMouseClicked = "UI_ShowScreen('UniverseScreen', eTransition);", 
 }, 
 { 
     type = "Frame", 
@@ -210,7 +211,7 @@ NewMainMenu =
         { 25, 200, }, 
     Text = 
     { 
-        text = "Slipstream: The Price of Freedom v1.64", 
+        text = "Slipstream: The Price of Freedom v1.85", 
         font = "ButtonFont", 
         hAlign = "Left", 
         vAlign = "Top", 

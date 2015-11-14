@@ -7,11 +7,14 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName="UNCG Scout"
 NewShipType.sobDescription="Recon Class\nArmed Reconissance"
-NewShipType.maxhealth=2500
+NewShipType.maxhealth=150
 NewShipType.regentime=0
 NewShipType.minRegenTime=0
-NewShipType.sideArmourDamage=1
-NewShipType.rearArmourDamage=1
+NewShipType.sideArmourDamage = 0.95
+NewShipType.rearArmourDamage = 1
+NewShipType.topArmourDamage = 0.75
+NewShipType.bottomArmourDamage = 0.85
+NewShipType.frontArmourDamage = 0.75
 NewShipType.isTransferable=1
 NewShipType.useEngagementRanges=0
 NewShipType.unitCapsNumber=3

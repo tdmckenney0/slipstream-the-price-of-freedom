@@ -4,13 +4,16 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "$1562"
-NewShipType.sobDescription = "$1563"
-NewShipType.maxhealth = 5200
+NewShipType.displayedName = "UNCG Elite Attack Bomber"
+NewShipType.sobDescription = "Gettysburg Class\nAnti-Capital bomber"
+NewShipType.maxhealth = 525
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
-NewShipType.sideArmourDamage = 1
+NewShipType.sideArmourDamage = 0.95
 NewShipType.rearArmourDamage = 1
+NewShipType.topArmourDamage = 0.75
+NewShipType.bottomArmourDamage = 0.85
+NewShipType.frontArmourDamage = 0.75
 NewShipType.isTransferable = 1
 NewShipType.useEngagementRanges = 0
 NewShipType.unitCapsNumber = 3
@@ -21,8 +24,8 @@ NewShipType.defensiveFormation = "Delta"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 10
 NewShipType.collisionMultiplier = 3
-NewShipType.thrusterMaxSpeed =520
-NewShipType.mainEngineMaxSpeed = 520
+NewShipType.thrusterMaxSpeed =500
+NewShipType.mainEngineMaxSpeed = 500
 NewShipType.rotationMaxSpeed = 105
 NewShipType.thrusterAccelTime = 3
 NewShipType.thrusterBrakeTime = 1
@@ -167,6 +170,8 @@ StartShipWeaponConfig(NewShipType, "Hgn_AntiShipBombLauncher", "Weapon_L", "Weap
 StartShipWeaponConfig(NewShipType, "Hgn_AntiShipBombLauncher", "Weapon_R", "Weapon_R")
 StartShipWeaponConfig(NewShipType, "Hgn_AntiSubSystemBombLauncher", "Weapon_L", "Weapon_L")
 StartShipWeaponConfig(NewShipType, "Hgn_AntiSubSystemBombLauncher", "Weapon_R", "Weapon_R")
+StartShipWeaponConfig(NewShipType, "hgn_smalltorpedoftr", "Weapon_L", "Weapon_L")
+StartShipWeaponConfig(NewShipType, "hgn_smalltorpedoftr", "Weapon_R", "Weapon_R")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2

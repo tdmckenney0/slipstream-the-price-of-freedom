@@ -66,7 +66,7 @@ GameSetupOptions =
         name = "hyperspacestate", 
         locName = "Slipstreaming", 
         tooltip = "Sets Slipstreaming On or Off during the match", 
-        default = 1, 
+        default = 0, 
         visible = 1, 
         choices = 
             { "Enabled", "on", "Disabled", "off", }, }, 

@@ -146,17 +146,17 @@ addAbility(NewShipType,"RetireAbility",1,1)
 LoadModel(NewShipType,1)
 
 -------------------------------------------------
-StartShipHardPointConfig(NewShipType,"Generic 1","HardpointTurretTop1","Weapon","Generic","Damageable","hgn_gatling_gun","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Generic 1","HardpointTurretTop1","Weapon","Generic","Damageable","hgn_gatlinggunsmall","","","","","","","","")
  
---StartShipHardPointConfig(NewShipType,"Generic 2","HardpointTurretTop2","Weapon","Generic","Damageable","hgn_monitor_autogun1b","","","","","","","","")
+--StartShipHardPointConfig(NewShipType,"Generic 2","HardpointTurretTop2","Weapon","Generic","Damageable","hgn_mountedflak","","","","","","","","")
 
-StartShipHardPointConfig(NewShipType,"Generic 3","HardpointAC","Weapon","Generic","Damageable","hgn_monitor_autogun1b","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Generic 3","HardpointAC","Weapon","Generic","Damageable","hgn_mountedflak","","","","","","","","")
 
-StartShipHardPointConfig(NewShipType,"Generic 4","HardpointAC2","Weapon","Generic","Damageable","hgn_monitor_autogun1b","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Generic 4","HardpointAC2","Weapon","Generic","Damageable","hgn_mountedflak","","","","","","","","")
 
-StartShipHardPointConfig(NewShipType,"Generic 5","HardpointAD","Weapon","Generic","Damageable","hgn_monitor_autogun1b","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Generic 5","HardpointAD","Weapon","Generic","Damageable","hgn_mountedflak","","","","","","","","")
 
-StartShipHardPointConfig(NewShipType,"Generic 6","HardpointAD2","Weapon","Generic","Damageable","hgn_monitor_autogun1b","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Generic 6","HardpointAD2","Weapon","Generic","Damageable","hgn_mountedflak","","","","","","","","")
 
 addShield(NewShipType,"EMP",400,12)
 NewShipType.battleScarMaxTriBase = 75

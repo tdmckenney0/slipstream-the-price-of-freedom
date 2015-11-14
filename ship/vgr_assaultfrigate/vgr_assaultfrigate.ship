@@ -179,11 +179,11 @@ StartShipWeaponConfig(NewShipType, "vgr_heavyfusionmissilelauncherbc", "Weapon_M
 
 addShield(NewShipType, "EMP", 310, 20)
 
-StartShipHardPointConfig(NewShipType, "Turret_Front", "Weapon_Bottom", "System", "Innate", "Damageable", "vgr_FT2_AF_Bottom", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Turret_Front", "Weapon_Bottom", "System", "Innate", "Damageable", "vgr_frigategatlingbottom", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Turret_Left", "Weapon_Left", "System", "Innate", "Damageable", "vgr_Frigate_Pulse_left", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Turret_Left", "Weapon_Left", "System", "Innate", "Damageable", "vgr_pmortarfrigateleft", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Turret_Right", "Weapon_Right", "System", "Innate", "Damageable", "vgr_Frigate_Pulse_right", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Turret_Right", "Weapon_Right", "System", "Innate", "Damageable", "vgr_pmortarfrigateright", "", "", "", "", "", "", "", "")
 
 NewShipType.battleScarMaxTriBase = 75
 NewShipType.battleScarMaxTriInc = 100

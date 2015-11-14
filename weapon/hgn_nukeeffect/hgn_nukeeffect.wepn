@@ -1,23 +1,23 @@
-StartWeaponConfig(NewWeaponType,"Fixed","SphereBurst","None","Normal",0,0,500,1,0,0,1,0,0,0,0,0,0,0,0,0,0.1,"Normal",0,0,0)
+StartWeaponConfig(NewWeaponType,"Fixed","SphereBurst","EMP","Normal",0,0,500,2,0,0,10,0,0,0,0,0,0,0,0,0,0.1,"Normal",1,0,0)
 
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",10000,10000,"")
 
-setAngles(NewWeaponType,180,0,0,0,0)
+setAngles(NewWeaponType,0,0,0,0,0)
 
-setPenetration(NewWeaponType,100,1,
+setPenetration(NewWeaponType,5,1,
 {Unarmoured=1,},
 {LightArmour=1,},
 {MediumArmour=1,},
-{HeavyArmour=0.75,},
+{HeavyArmour=1,},
 {SubSystemArmour=1,},
 {TurretArmour=1,},
 {ResArmour=1,},
 {MoverArmour=1,},
-{PlanetKillerArmour=0,},
+{PlanetKillerArmour=1,},
 {MineArmour=1,},
 {ChunkArmour=1,})
 
-setAccuracy(NewWeaponType,1,
+setAccuracy(NewWeaponType,0,
 {Fighter=1,},
 {Corvette=1,},
 {Frigate=1,},

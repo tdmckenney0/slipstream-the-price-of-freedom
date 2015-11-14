@@ -29,10 +29,20 @@ PersistantData = {
          },
          name = "",
          size = 1,
-         number = 3, 
+         number = 2, 
       },
       {
          type = "Vgr_Battlecruiser",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 2, 
+      },
+      {
+         type = "Vgr_Battleship",
          subsystems = {
          },
          shiphold = {
@@ -70,19 +80,8 @@ PersistantData = {
          },
          name = "",
          size = 1,
-         number = 2,
+         number = 3,
    },
-
-      {
-         type = "vgr_Battleship",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 1,
-  },
 
       {
          type = "vgr_carrier",

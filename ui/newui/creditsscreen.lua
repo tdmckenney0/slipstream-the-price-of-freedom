@@ -1,4 +1,4 @@
-dofilepath("data:Ui/newui/ModCheckList.lua")
+dofilepath("data:Ui/newui/CreditsList.lua")
 
 local listBox = {}
 listBox.type = "ListBox"

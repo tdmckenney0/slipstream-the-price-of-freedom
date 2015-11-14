@@ -25,7 +25,7 @@ build =
         Description = "$7101", }, 
     { 
         Type = SubSystem, 
-        ThingToBuild = "vgr_bcfighter_mod", 
+        ThingToBuild = "vgr_bcfighter", 
         RequiredResearch = "", 
         RequiredShipSubSystems = "", 
         DisplayPriority = 0, 
@@ -159,6 +159,14 @@ build =
         DisplayPriority = 21, 
         DisplayedName = "$7120", 
         Description = "$7121", }, 
+   { 
+        Type = SubSystem, 
+        ThingToBuild = "vgr_supercannon", 
+        RequiredResearch = "", 
+        RequiredFleetSubSystems = "Research", 
+        DisplayPriority = 30, 
+        DisplayedName = "Long Range Sniper Cannons", 
+        Description = "$7021", }, 
     { 
         Type = SubSystem, 
         ThingToBuild = "Vgr_C_Module_Hyperspace", 
@@ -311,6 +319,14 @@ build =
         DisplayPriority = 232, 
         DisplayedName = "Cloaking Frigate", 
         Description = "<b>Type: Light Frigate</b>\n<b>Codename: Subverter</b>\n<b>Description:</b>\n\nThe Subverter is a lightly armored troop carrier that launches Marines into ships and takes them over.\n\n<b>Armed with:</b>\n1x Light Missile Tube\n1x FLak Cannon Small\n<b>Requires:</b>\nPod Research", }, 
+ { 
+        Type = Ship, 
+        ThingToBuild = "vgr_lightdestroyer", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "CapShipProduction", 
+        DisplayPriority = 299, 
+        DisplayedName = "Light Destroyer", 
+        Description = "<b>Type: Heavy Carrier</b>\n<b>Codename: Vostok</b>\n<b>Description:</b>\n\nThe Vostok was originally a Shipping carrier used to transport goods and supplies to the outer UNCG Colonies. While the UNCG still has the original designs, It was modified to serve as an armed carrier for the Dominom.\n\n<b>Armed with:</b>\n2x Railgun\n2x Gatling Turret\nDefense Lasers.\n<b>Requires:</b>\nNothing", }, 
  { 
         Type = Ship, 
         ThingToBuild = "Vgr_Carrier", 

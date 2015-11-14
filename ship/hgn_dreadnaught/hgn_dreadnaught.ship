@@ -4,13 +4,16 @@
 -- On error(s), send source (compiled) file to 4E534B@gmail.com
 
 NewShipType=StartShipConfig();
-NewShipType["displayedName"]="$1540";
-NewShipType["sobDescription"]="$1541";
-NewShipType["maxhealth"]=1000000;
+NewShipType["displayedName"]="Tsaraii Dreadnaught";
+NewShipType["sobDescription"]="Unknown Class\nUnknown Type";
+NewShipType["maxhealth"]=750000;
 NewShipType["regentime"]=0;
 NewShipType["minRegenTime"]=8000;
-NewShipType["sideArmourDamage"]=1.2;
-NewShipType["rearArmourDamage"]=1.2;
+NewShipType.sideArmourDamage = 0.5
+NewShipType.rearArmourDamage = 0.45
+NewShipType.topArmourDamage = 0.5
+NewShipType.bottomArmourDamage = 0.5
+NewShipType.frontArmourDamage = 0.4
 NewShipType["isTransferable"]=0;
 NewShipType["useEngagementRanges"]=1;
 NewShipType["unitCapsNumber"]=1;
@@ -123,8 +126,6 @@ NewShipType["selectionLimit"]=150000;
 NewShipType["preciseATILimit"]=0;
 NewShipType["selectionPriority"]=75;
 NewShipType["militaryUnit"]=1;
-NewShipType["alternativeHyperspaceV"]="hyperspace_gate_kpr";
-NewShipType["alternativeHyperspaceA"]="etg/special/SPECIAL_ABILITIES_HYPERSPACE_IN";
 NewShipType["SMHighlightDistMin"]=20000;
 NewShipType["SMHighlightDistMax"]=30000;
 addAbility(NewShipType, "MoveCommand", 1, 0);
@@ -152,17 +153,17 @@ addAbility(NewShipType, "GuardCommand", 74, 3000, 1400);
 addAbility(NewShipType, "CanBeCaptured", 160, 0.5);
 addAbility(NewShipType, "CanBeRepaired");
 LoadModel(NewShipType, 1);
-StartShipWeaponConfig(NewShipType, "vgr_laser", "Weapon_HullDefense1", "Weapon_HullDefense1");
-StartShipWeaponConfig(NewShipType, "vgr_laser", "Weapon_HullDefense2", "Weapon_HullDefense2");
-StartShipWeaponConfig(NewShipType, "vgr_laser", "Weapon_HullDefense3", "Weapon_HullDefense3");
-StartShipWeaponConfig(NewShipType, "vgr_laser", "Weapon_HullDefense4", "Weapon_HullDefense4");
-StartShipWeaponConfig(NewShipType, "vgr_laser", "Weapon_HullDefense5", "Weapon_HullDefense5");
-StartShipWeaponConfig(NewShipType, "vgr_laser", "Weapon_HullDefense6", "Weapon_HullDefense6");
-StartShipWeaponConfig(NewShipType, "vgr_laser", "Weapon_HullDefense7", "Weapon_HullDefense7");
-StartShipWeaponConfig(NewShipType, "vgr_laser", "Weapon_HullDefense8", "Weapon_HullDefense8");
-StartShipWeaponConfig(NewShipType, "vgr_laser", "Weapon_HullDefense9", "Weapon_HullDefense9");
-StartShipWeaponConfig(NewShipType, "vgr_laser", "Weapon_HullDefense10", "Weapon_HullDefense10");
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtIonCannon", "Weapon_Triton1", "Weapon_Triton1");
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense1", "Weapon_HullDefense1");
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense2", "Weapon_HullDefense2");
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense3", "Weapon_HullDefense3");
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense4", "Weapon_HullDefense4");
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense5", "Weapon_HullDefense5");
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense6", "Weapon_HullDefense6");
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense7", "Weapon_HullDefense7");
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense8", "Weapon_HullDefense8");
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense9", "Weapon_HullDefense9");
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense10", "Weapon_HullDefense10");
+StartShipWeaponConfig(NewShipType, "vgr_superheavybeam", "Weapon_Triton1", "Weapon_Triton1");
 addShield(NewShipType, "EMP", 10000, 20);
 NewShipType["battleScarMaxTriBase"]=175;
 NewShipType["battleScarMaxTriInc"]=250;

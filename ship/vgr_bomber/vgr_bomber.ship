@@ -5,8 +5,8 @@
 --
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Plasma Bomber"
-NewShipType.sobDescription = "Berlin Class\nPlasma Bomber"
-NewShipType.maxhealth = 5100
+NewShipType.sobDescription = "Berin class Bomber"
+NewShipType.maxhealth = 35
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -21,8 +21,8 @@ NewShipType.defensiveFormation = "ScatterDelta_Long"
 NewShipType.aggressiveFormation = "ScatterNarrow"
 NewShipType.mass = 10
 NewShipType.collisionMultiplier = 3
-NewShipType.thrusterMaxSpeed = 260
-NewShipType.mainEngineMaxSpeed = 260
+NewShipType.thrusterMaxSpeed = 425
+NewShipType.mainEngineMaxSpeed = 425
 NewShipType.rotationMaxSpeed = 100
 NewShipType.thrusterAccelTime = 3
 NewShipType.thrusterBrakeTime = 1
@@ -169,7 +169,8 @@ addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadModel(NewShipType, 1)
 StartShipWeaponConfig(NewShipType, "rehash_plasma_bomb_launcher", "Weapon_L", "Weapon_L")
 StartShipWeaponConfig(NewShipType, "rehash_plasma_bomb_launcher", "Weapon_R", "Weapon_R")
-
+StartShipWeaponConfig(NewShipType, "vgr_heavyconcussionmissilelauncher", "Weapon_L", "Weapon_L")
+StartShipWeaponConfig(NewShipType, "vgr_heavyconcussionmissilelauncher", "Weapon_R", "Weapon_R")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2

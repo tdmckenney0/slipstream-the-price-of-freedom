@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
 NewSubSystemType.displayedName = "Advanced Control Tower"
-NewSubSystemType.sobDescription = "Improves Ship Weapon System"
+NewSubSystemType.sobDescription = "Command Center\nDepreciates Stock Bridge to Auxilary"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045

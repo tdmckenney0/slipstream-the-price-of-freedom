@@ -59,15 +59,13 @@ paradeSlot("Sp_Tanker5",		{-1303, -381, 2468},	{0,0,1}, {0,1,0},      400);
 paradeSlot("Sp_Tanker6",		{-1879, -381, 2468},	{0,0,1}, {0,1,0},      400);
 paradeSlot("hgn_heavydestroyer",  		    {871, -448, 2406}, 	{0,0,1}, {1,0,0},      500);
 --paradeSlot("",			    {871, -448, 2406}, 	{0,0,1}, {1,0,0},      500);
-paradeSlot("Hgn_Battlecruiser",		        {0, -750, 2500},	{0,0,1}, {0,1,0},      750);
-paradeSlot("Hgn_Destroyer",		    {-880, 500, 1516}, 	{0,0,1}, {1,0,0},      1000);
---paradeSlot("Hgn_Battleship", 	{1121, -424, -5023},	{0,0,1}, {1,0,0},       0 );
+paradeSlot("Hgn_Battlecruiser",		        {0, -750, 4500},	{0,0,1}, {0,1,0},      750);
+paradeSlot("Hgn_Destroyer",		    {-900, 500, 2516}, 	{0,0,1}, {1,0,0},      1000);
 paradeSlot("Hgn_Battleship",	{-1809, -858, -1823},	{0,0,1}, {0,1,0},      750);
 --paradeSlot("Sp_Tanker",		    {880, -66, -1516}, 	{0,0,1}, {1,0,0},      500);
 
 -- up
 paradeSlot("Hgn_Carrier",		        {1809, -858, -1823},	{0,0,1}, {0,1,0},      750);
---paradeSlot("Hgn_Carrier",		        {0, -750, 2500},	{0,0,1}, {0,1,0},      750);
 paradeSlot("Hgn_GunTurret",           {-364, 0, 296},     	{0,0,1}, {0,1,0},      0);
 paradeSlot("Hgn_IonTurret",        {-535, 0, 292},    	{0,0,1}, {0,1,0},      0);
 

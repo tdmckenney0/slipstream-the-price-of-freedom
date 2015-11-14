@@ -1,11 +1,14 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Multigun Corvette"
 NewShipType.sobDescription = "Tracker Class\nMultiple Targeting Corvette"
-NewShipType.maxhealth = 7000
+NewShipType.maxhealth = 1000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
-NewShipType.sideArmourDamage = 1
-NewShipType.rearArmourDamage = 1
+NewShipType.sideArmourDamage = 0.95
+NewShipType.rearArmourDamage = 0.85
+NewShipType.topArmourDamage = 0.75
+NewShipType.bottomArmourDamage = 0.85
+NewShipType.frontArmourDamage = 0.75
 NewShipType.isTransferable = 1
 NewShipType.useEngagementRanges = 0
 NewShipType.unitCapsNumber = 2
@@ -149,10 +152,10 @@ addAbility(NewShipType,"GuardCommand",1,3000,500)
 addAbility(NewShipType,"HyperspaceViaGateCommand",1,3,1,0.3)
 addAbility(NewShipType,"RetireAbility",1,0)
 LoadModel(NewShipType,1)
-StartShipWeaponConfig(NewShipType,"hgn_rapidfireturret","Weapon_TurretBottom","Weapon_TurretBottom")
-StartShipWeaponConfig(NewShipType,"hgn_rapidfireturret","Weapon_Turret1","Weapon_Turret1")
-StartShipWeaponConfig(NewShipType,"hgn_rapidfireturret","Weapon_Turret2","Weapon_Turret2")
-StartShipWeaponConfig(NewShipType,"hgn_rapidfireturret","Weapon_Turret3","Weapon_Turret3")
+StartShipWeaponConfig(NewShipType,"Hgn_VulcanKineticTurret","Weapon_TurretBottom","Weapon_TurretBottom")
+StartShipWeaponConfig(NewShipType,"Hgn_VulcanKineticTurret","Weapon_Turret1","Weapon_Turret1")
+StartShipWeaponConfig(NewShipType,"Hgn_VulcanKineticTurret","Weapon_Turret2","Weapon_Turret2")
+StartShipWeaponConfig(NewShipType,"Hgn_VulcanKineticTurret","Weapon_Turret3","Weapon_Turret3")
 addShield(NewShipType,"EMP",75,20)
 NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1

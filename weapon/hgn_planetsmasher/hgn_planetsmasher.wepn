@@ -1,7 +1,6 @@
 StartWeaponConfig(NewWeaponType,"Fixed","Missile","Hgn_planetkillerbomb","Normal",120,90000,0,0,0,0,1,0,1,60,0,0,0,0,0,0,0.1,"Normal",1,0,0)
 
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",100000,100000,"")
-AddWeaponResult(NewWeaponType,"","","",0,0,"")
 
 setAngles(NewWeaponType,179,0,0,0,0)
 

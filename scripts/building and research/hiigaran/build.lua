@@ -25,7 +25,7 @@ build =
         Description = "$7001", }, 
     { 
         Type = SubSystem, 
-        ThingToBuild = "Hgn_BCFighter_mod", 
+        ThingToBuild = "hgn_bcfighter", 
         RequiredResearch = "", 
         RequiredShipSubSystems = "", 
         DisplayPriority = 0, 
@@ -89,7 +89,7 @@ build =
         Description = "$7007", }, 
     { 
         Type = SubSystem, 
-        ThingToBuild = "Hgn_MS_Production_Capital", 
+        ThingToBuild = "hgn_sc_productioncapital", 
         RequiredResearch = "", 
         RequiredShipSubSystems = "", 
         DisplayPriority = 0, 
@@ -257,7 +257,7 @@ build =
         Description = "$7037", }, 
   { 
         Type = SubSystem, 
-        ThingToBuild = "Hgn_SY_Sensors_DetectHyperspace", 
+        ThingToBuild = "Hgn_SC_Sensors_DetectHyperspace", 
         RequiredResearch = "", 
         RequiredShipSubSystems = "", 
         DisplayPriority = 150, 
@@ -279,9 +279,9 @@ build =
         DisplayPriority = 151, 
         DisplayedName = "$7022", 
         Description = "$7023", }, 
-   { 
+ { 
         Type = SubSystem, 
-        ThingToBuild = "Hgn_SY_Sensors_AdvancedArray", 
+        ThingToBuild = "Hgn_SC_Sensors_AdvancedArray", 
         RequiredResearch = "", 
         RequiredShipSubSystems = "", 
         DisplayPriority = 151, 
@@ -305,7 +305,7 @@ build =
         Description = "$7025", }, 
     { 
         Type = SubSystem, 
-        ThingToBuild = "Hgn_SY_Sensors_DetectCloaked", 
+        ThingToBuild = "Hgn_SC_Sensors_DetectCloaked", 
         RequiredResearch = "", 
         RequiredShipSubSystems = "", 
         DisplayPriority = 152, 
@@ -551,20 +551,28 @@ build =
         DisplayPriority = 119, 
         DisplayedName = "Ranged Cruiser", 
         Description = "<b>Type: Medium Cruiser</b>\n<b>Classname: Crossbow</b>\n<b>Description:</b>\n\nThe Crossbow is a medium Cruiser built for long range conflicts.\n\n<b>Armed With:</b>\n2x Railgun\n2x Heavy Gatling Gun\n1x Sixtuplet Plasma Pulse\n2x Turreted PPC\nNuclear Missiles\n<b>Requires:</b>\nCapital Production, Light Cruiser Chassis", }, 
- { 
+{ 
+        Type = Ship, 
+        ThingToBuild = "hgn_heavybattlecruiser", 
+        RequiredResearch = "BattlecruiserIonWeapons", 
+        RequiredShipSubSystems = "CapShipProduction", 
+        DisplayPriority = 121, 
+        DisplayedName = "Heavy Cruiser", 
+        Description = "<b>Type: Heavy Cruiser</b>\n<b>Classname: Ironclad</b>\n<b>Description:</b>\n\nInsert teh cleaver bullshit here.\n\n<b>Armed With:</b>\n2x Railgun\n2x Heavy Gatling Gun\n2x Sixtuplet Plasma Pulse\n1x Missile Box\n1x PPC Turret\n2x Nuclear Missile Bays\n2x Flak Cannons\n<b>Requires:</b>\nCapital Production, Battlecruiser Chassis", }, 
+{ 
         Type = Ship, 
         ThingToBuild = "Hgn_Battlecruiser", 
         RequiredResearch = "BattlecruiserIonWeapons", 
         RequiredShipSubSystems = "CapShipProduction", 
         DisplayPriority = 120, 
         DisplayedName = "$7060", 
-        Description = "<b>Type: Heavy Cruiser</b>\n<b>Classname: Trafalgar</b>\n<b>Description:</b>\n\nThe Trafalgar is a massive cruiser built to instill terror in its enemies. With its Speed, armor, and weaponry, a lone trafalgar can take out an weakly defended planet.\n\n<b>Armed With:</b>\n2x Railgun\n2x Heavy Gatling Gun\n2x Sixtuplet Plasma Pulse\n1x Missile Box\n1x PPC Turret\n2x Nuclear Missile Bays\n2x Flak Cannons\n<b>Requires:</b>\nCapital Production, Battlecruiser Chassis", }, 
+        Description = "<b>Type: Heavy Battlecruiser</b>\n<b>Classname: Trafalgar</b>\n<b>Description:</b>\n\nThe Trafalgar is a massive cruiser built to instill terror in its enemies. With its Speed, armor, and weaponry, a lone trafalgar can take out an weakly defended planet.\n\n<b>Armed With:</b>\n2x Railgun\n2x Heavy Gatling Gun\n2x Sixtuplet Plasma Pulse\n1x Missile Box\n1x PPC Turret\n2x Nuclear Missile Bays\n2x Flak Cannons\n<b>Requires:</b>\nCapital Production, Battlecruiser Chassis", }, 
  { 
         Type = Ship, 
         ThingToBuild = "Hgn_Battleship", 
         RequiredResearch = "BattlecruiserIonWeapons", 
         RequiredShipSubSystems = "CapShipProduction", 
-        DisplayPriority = 121, 
+        DisplayPriority = 122, 
         DisplayedName = "Battleship", 
         Description = "<b>Type: Super-Heavy Cruiser</b>\n<b>Classname: Valencia</b>\n<b>Description:</b>\n\nThe Freedom is nothing more than a scaled up Trafalgar Chassis, with more weaponry, larger reactors, heavier armor. It was designed to smash any and ALL resistance in its path. Commanded by the elite guard of the UNCG, along with her Very Large array of weapons, allow a cruiser of this magnitude to be able to smash an entire fully-populated and defended world into bits.\n\n<b>Armed With:</b>\n4x Railgun\n5x Heavy Gatling Gun\n2x Sixtuplet Plasma Pulse\n3x Missile Box\n3x PPC Turret\n4x Nuclear Missile Bays\n2x Flak Cannons\n<b>Requires:</b>\nCapital Production, Battlecruiser Chassis", }, 
     { 

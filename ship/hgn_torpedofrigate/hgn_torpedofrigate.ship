@@ -152,9 +152,9 @@ addAbility(NewShipType, "CanBeCaptured", 30, 0.1);
 addAbility(NewShipType, "CanBeRepaired");
 addAbility(NewShipType, "RetireAbility", 1, 1);
 LoadModel(NewShipType, 1);
-StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK","Weapon","Innate","Indestructible","hgn_monitor_autogun1b","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK2","Weapon","Innate","Indestructible","hgn_monitor_autogun1b","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"T","Hardpoint_MB","Weapon","Innate","Indestructible","Missile_box","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK","Weapon","Innate","Indestructible","hgn_mountedflak","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK2","Weapon","Innate","Indestructible","hgn_mountedflak","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"T","Hardpoint_MB","Weapon","Innate","Indestructible","hgn_missilebayfrigate","","","","","","","","");
 
 StartShipWeaponConfig(NewShipType, "Hgn_DestroyerTorpedoLauncher", "weapon_Torpedo", "")
 

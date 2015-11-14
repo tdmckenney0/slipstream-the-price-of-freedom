@@ -54,6 +54,12 @@ function RestrictOptions( playerid )
 		Player_RestrictResearchOption(playerid, "MothershipMAXSPEEDUpgrade2")
 		Player_RestrictResearchOption(playerid, "MothershipBUILDSPEEDUpgrade1")
 
+		Player_RestrictResearchOption(playerid, "ShipyardHealthUpgrade1")
+		Player_RestrictResearchOption(playerid, "ShipyardHealthUpgrade2")
+		Player_RestrictResearchOption(playerid, "ShipyardMAXSPEEDUpgrade1")
+		Player_RestrictResearchOption(playerid, "ShipyardMAXSPEEDUpgrade2")
+		Player_RestrictResearchOption(playerid, "ShipyardBUILDSPEEDUpgrade2")
+
 	
 
 

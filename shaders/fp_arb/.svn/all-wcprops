@@ -33,17 +33,17 @@ svn:wc:ra_dav:version-url
 V 57
 /svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/shipbasepass.fp
 END
-additive.fp
-K 25
-svn:wc:ra_dav:version-url
-V 53
-/svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/additive.fp
-END
 shadowandlightsmall.fp
 K 25
 svn:wc:ra_dav:version-url
 V 64
 /svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/shadowandlightsmall.fp
+END
+additive.fp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/additive.fp
 END
 megalith.fp
 K 25
@@ -63,11 +63,11 @@ svn:wc:ra_dav:version-url
 V 59
 /svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/spareprograms.txt
 END
-thrusterglowpass.fp
+shadowandlight.fp
 K 25
 svn:wc:ra_dav:version-url
-V 61
-/svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/thrusterglowpass.fp
+V 59
+/svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/shadowandlight.fp
 END
 currentproblems.txt
 K 25
@@ -75,23 +75,23 @@ svn:wc:ra_dav:version-url
 V 61
 /svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/currentproblems.txt
 END
-shadowandlight.fp
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/shadowandlight.fp
-END
-thrusterbasepass.fp
+thrusterglowpass.fp
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/thrusterbasepass.fp
+/svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/thrusterglowpass.fp
 END
 badge.fp
 K 25
 svn:wc:ra_dav:version-url
 V 50
 /svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/badge.fp
+END
+thrusterbasepass.fp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/hw2u/!svn/ver/71/Data/Shaders/fp_arb/thrusterbasepass.fp
 END
 ship.fp
 K 25

@@ -1,0 +1,42 @@
+function DetermChunk()
+	addSquadron("MS", "hgn_mothership", {0, 0, 0}, 0, {0, 0, 0}, 0, 1)
+	addSquadron("CR", "hgn_carrier", {0, 0, 5000}, 0, {0, 0, 0}, 0, 0)
+	addSquadron("Vgr_Bomber1", "Vgr_Bomber", {5000, 0, 0}, 1, {0, 0, 0}, 0, 0)
+	addSquadron("Vgr_Bomber2", "Vgr_Bomber", {5000, 0, 0}, 1, {0, 0, 0}, 0, 0)
+	addSquadron("Vgr_Bomber3", "Vgr_Bomber", {5000, 0, 0}, 1, {0, 0, 0}, 0, 0)
+	addSquadron("Vgr_Bomber4", "Vgr_Bomber", {5000, 0, 0}, 1, {0, 0, 0}, 0, 0)
+	addSquadron("Vgr_Bomber5", "Vgr_Bomber", {5000, 0, 0}, 1, {0, 0, 0}, 0, 0)
+	addSquadron("Vgr_Bomber6", "Vgr_Bomber", {5000, 0, 0}, 1, {0, 0, 0}, 0, 0)
+
+	createSOBGroup("CRGroup")
+	createSOBGroup("MSGroup")
+	addToSOBGroup("CR", "CRGroup")
+	addToSOBGroup("MS", "MSGroup")
+	createSOBGroup("EnyGroup")
+	for i = 1, 6 do
+		addToSOBGroup("Vgr_Bomber" .. i, "EnyGroup")
+	end
+
+	addSphere("MS_EnterVolume", {0, 0, 0}, 1000)
+	setWorldBoundsInner({0, 0, 0}, {30000, 30000, 30000})
+end
+
+function NonDetermChunk()
+        fogSetActive(0)
+	setGlareIntensity(0)
+	setLevelShadowColour(0, 0, 0, 1)
+	loadBackground("m03")
+	setSensorsManagerCameraDistances(12000, 60000)
+	setDefaultMusic("Data:sound/music/STAGING/STAGING_04")
+end
+
+
+-- HeaderInfo: max number of players allowed on this level
+maxPlayers = 2
+
+-- PlayerInfo: info on each possible player in this level
+player =
+{
+	{ id = 0, name = "", resources = 0, raceID = 1, startPos = 0, },
+	{ id = 1, name = "", resources = 0, raceID = 2, startPos = 0, },
+}

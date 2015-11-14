@@ -1,4 +1,4 @@
-StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","ionbeam_kpr","Normal",0,7500,0,3,1,0,20,1,1,10,0,0,1,0,360,360,0.1,"Normal",1,0,0)
+StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","ionbeam_kpr","Normal",0,6000,0,3,1,0,20,1,1,10,0,0,1,0,360,360,0.1,"Normal",1,0,0)
 
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",4500,5500,"")
 

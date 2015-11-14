@@ -154,23 +154,21 @@ StartShipWeaponConfig(NewShipType,"Hgn_HDIonCannon","Weapon_IonCannon","Fire_Ion
 
 addShield(NewShipType,"EMP",5000,20);
 
---StartShipHardPointConfig(NewShipType,"Center_Engine","Hardpoint_C_Engine","System","Innate","Damageable","Hgn_HDes_C_Eng","","","","","","","","");
-
 StartShipHardPointConfig(NewShipType,"Center_Engine","Hardpoint_C_Engine","System","Innate","Damageable","hgn_des_engine","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Upper_Front_Turret","Turret_UF","Weapon","Innate","Damageable","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Upper_Front_Turret","Turret_UF","Weapon","Innate","Damageable","hgn_railgun","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Upper_Center_Turret","Turret_UC","Weapon","Innate","Damageable","HGN_SCC_6xAC_Turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Upper_Center_Turret","Turret_UC","Weapon","Innate","Damageable","hgn_plasmabatteryx6","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Upper_Back_Turret","Turret_UB","Weapon","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Upper_Back_Turret","Turret_UB","Weapon","Innate","Damageable","hgn_gatlinggun","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Bottom_Center_Turret","Turret_BC","Weapon","Innate","Damageable","hgn_scc_3xac_turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Bottom_Center_Turret","Turret_BC","Weapon","Innate","Damageable","hgn_coilcannonx3","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Left_Turret","Turret_L","Weapon","Innate","Damageable","HGN_DCT_HD_4x_Flak_L","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Left_Turret","Turret_L","Weapon","Innate","Damageable","hgn_flakturretleft","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Right_Turret","Turret_R","Weapon","Innate","Damageable","HGN_DCT_HD_4x_Flak_R","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Right_Turret","Turret_R","Weapon","Innate","Damageable","hgn_flakturretright","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"MPOD","Hardpoint_Mpod","Weapon","Innate","Damageable","hgn_BD_MPOD","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"MPOD","Hardpoint_Mpod","Weapon","Innate","Damageable","hgn_missilebay","","","","","","","","");
 
 
 SpawnSalvageOnDeath(NewShipType,"Slv_Chunk_Lrg03",1,0.75,0,0,0,50,0,0,0,200,0,0,0,50,0,0,0,50);

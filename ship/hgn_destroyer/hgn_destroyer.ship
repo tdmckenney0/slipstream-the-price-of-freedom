@@ -4,9 +4,12 @@ NewShipType.sobDescription = "Resolute Class\nDestroyer"
 NewShipType.maxhealth = 350000
 NewShipType.regentime=1500
 NewShipType.minRegenTime=1500
-NewShipType.sideArmourDamage=0.65
-NewShipType.rearArmourDamage=0.95
-NewShipType.isTransferable=0
+NewShipType.sideArmourDamage = 0.65
+NewShipType.rearArmourDamage = 0.6
+NewShipType.topArmourDamage = 0.75
+NewShipType.bottomArmourDamage = 0.65
+NewShipType.frontArmourDamage = 0.5
+NewShipType.isTransferable=1
 NewShipType.useEngagementRanges=1
 NewShipType.unitCapsNumber=4
 NewShipType.SquadronSize=1
@@ -150,13 +153,13 @@ StartShipWeaponConfig(NewShipType, "hgn_destroyertorpedolauncher", "Weapon_Nuke"
 
 ----------------------------------------------------------------------------------
 
-StartShipHardPointConfig(NewShipType,"DC_Top_Front_Turret","Hardpoint_DCTFront","System","Innate","Damageable","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"DC_Top_Front_Turret","Hardpoint_DCTFront","System","Innate","Damageable","hgn_railgun","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"DC_Top_Back_Turret","Hardpoint_DCTBack","System","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"DC_Top_Back_Turret","Hardpoint_DCTBack","System","Innate","Damageable","hgn_gatlinggun","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"DC_Top_Center_Turret","Hardpoint_DCTTop","System","Innate","Damageable","hgn_scc_3xac_turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"DC_Top_Center_Turret","Hardpoint_DCTTop","System","Innate","Damageable","hgn_coilcannonx3","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"DC_Bottom_Center_Turret","Hardpoint_DCTBottom","System","Innate","Damageable","hgn_scc_3xac_turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"DC_Bottom_Center_Turret","Hardpoint_DCTBottom","System","Innate","Damageable","hgn_coilcannonx3","","","","","","","","");
 
 
 addShield(NewShipType,"EMP",400,12)

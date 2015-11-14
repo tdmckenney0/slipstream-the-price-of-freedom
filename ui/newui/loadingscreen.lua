@@ -25,16 +25,16 @@ LoadingScreen =
     { 
         size = 
             { 800, 600, }, 
-        texture = "DATA:UI/NewUI/Background/load_background.mres", 
+        texture = "DATA:UI/NewUI/Background/loading1600.dds", 
         textureUV = 
-            { 0, 0, 800, 600, }, }, 
+            { 0, 0, 1600, 1200, }, }, 
 ; 
 { 
     type = "ProgressBar", 
     progressColor = 
         { 255, 255, 255, 190, }, 
     position = 
-        { 43, 300, }, 
+        { 44, 300, }, 
     size = 
         { 717, 15, }, 
     name = "loadingProgress", }, 
@@ -43,14 +43,14 @@ LoadingScreen =
     type = "TextLabel", 
     name = "moduleLabel", 
     position = 
-        { 0, 300, }, 
+        { 0, 283, }, 
     size = 
         { 800, 50, }, 
     Text = 
     { 
         textStyle = "FEButtonTextStyle", 
         color = 
-            { 0, 0, 0, 255, }, 
+            { 7, 82, 141, 255, }, 
         vAlign = "Middle", 
         hAlign = "Center", }, 
 }, 

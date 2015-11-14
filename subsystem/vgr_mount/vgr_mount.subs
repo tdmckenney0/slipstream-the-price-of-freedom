@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "Mount"
-NewSubSystemType.sobDescription = "Mount"
+NewSubSystemType.displayedName = "Super Structure"
+NewSubSystemType.sobDescription = "Super Structure"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045

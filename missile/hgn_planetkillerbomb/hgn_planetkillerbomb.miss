@@ -6,7 +6,7 @@
 --===========================================================================
 NewShipType = StartMissileConfig()
 NewShipType.displayedName="BIG HUGE BOMB"
-NewShipType.sobDescription="THIS ONE IF FOR TEL AND ALL OF PDS\nFROM SRI WITH LOVE FUCKTARDS"
+NewShipType.sobDescription="THIS ONE IS FOR TEL AND ALL OF PDS\nFROM SRI WITH LOVE FUCKERS"
 NewShipType.TOIcon="Diamond"
 NewShipType.TOScale=1
 NewShipType.TODistanceFade0=50
@@ -19,7 +19,7 @@ NewShipType.TOGroupScale=1
 NewShipType.TOGroupMergeSize=0
 NewShipType.mouseOverMinFadeSize=0.045
 NewShipType.mouseOverMaxFadeSize=0.1
-NewShipType.maxhealth=40
+NewShipType.maxhealth=100000
 NewShipType.regentime=0
 NewShipType.sideArmourDamage=1
 NewShipType.rearArmourDamage=1

@@ -1,0 +1,43 @@
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","Missile","superprojectile","Normal",120,100000,0,0,0,0,1,0,0,30,0,0,0,0,10,10,0.1,"Normal",1,0,0)
+
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",250000,550000,"")
+AddWeaponResult(NewWeaponType,"Hit","Push","Target",200,500,"")
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"vgr_supercannonhit")
+
+setAngles(NewWeaponType,5,-120,120,0,75)
+
+setMiscValues(NewWeaponType,30,0)
+
+setPenetration(NewWeaponType,60,1,
+{Unarmoured=1,},
+{SuperConducting=1,},
+{AntiChemical=1,},
+{AntiMassImpact=1,},
+{Composite=1,},
+{LightArmour=1,},
+{MediumArmour=1,},
+{HeavyArmour=1,},
+{SubSystemArmour=1,},
+{TurretArmour=1,},
+{ResArmour=1,},
+{MoverArmour=1,},
+{PlanetKillerArmour=0,},
+{MineArmour=1,},
+{ChunkArmour=1,})
+
+setAccuracy(NewWeaponType,1,
+{Fighter=0,},
+{Corvette=0,},
+{Frigate=0,},
+{Utility=0,},
+{munition=0,},
+{SmallCapitalShip=1, damage=1,},
+{BigCapitalShip=1, damage=1,},
+{Mothership=1, damage=1,},
+{Emplacement=1, damage=1,},
+{UnAttackable=0,},
+{SubSystem=0,},
+{Resource=0,},
+{ResourceLarge=1, damage=1,},
+{Capturer=0,},
+{Chimera=1, damage=1,})

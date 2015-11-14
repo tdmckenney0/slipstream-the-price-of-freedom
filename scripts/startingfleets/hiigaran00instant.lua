@@ -58,13 +58,19 @@ PersistantData = {
       number = 2,
  },
   {
+      type = "hgn_heavybattlecruiser",
+      name = "",
+      size = 1,
+      number = 1,
+ },
+  {
       type = "hgn_heavydestroyer",
       name = "",
       size = 1,
       number = 2,
  },
   {
-      type = "Hgn_Battleship",
+      type = "hgn_Battleship",
       name = "",
       size = 1,
       number = 1,

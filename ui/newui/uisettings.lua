@@ -34,6 +34,11 @@ FrontEndScreens =
 		activated = 0,
 	},
 	{
+		name = "UniverseScreen",
+		filename = "DATA:\\UI\\NewUI\\universescreen.lua",
+		activated = 0,
+	},
+	{
 		name = "PasswordScreen",
 		filename = "DATA:\\UI\\NewUI\\Shared\\PasswordScreen.lua",
 		activated = 0,

@@ -169,7 +169,7 @@ StartShipWeaponConfig(NewShipType, "Vgr_ConcussionMissileLauncher", "Weapon_Hull
 StartShipWeaponConfig(NewShipType, "Vgr_InfiltrationPodLauncher", "Weapon_PodLauncher", "Fire_Missile")
 addShield(NewShipType, "EMP", 310, 20)
 
-StartShipHardPointConfig(NewShipType, "Turret_Front", "Weapon_Bottom", "System", "Innate", "Damageable", "vgr_FT2_AF_Bottom", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Turret_Front", "Weapon_Bottom", "System", "Innate", "Damageable", "vgr_frigategatlingbottom", "", "", "", "", "", "", "", "")
 
 NewShipType.battleScarMaxTriBase = 75
 NewShipType.battleScarMaxTriInc = 100

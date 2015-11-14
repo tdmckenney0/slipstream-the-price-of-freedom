@@ -161,9 +161,9 @@ addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadSharedModel(NewShipType, "Hgn_MarineFrigate")
 StartShipHardPointConfig(NewShipType,"T","Weapon_TurretTop","Weapon","Innate","Indestructible","hgn_smallionturret","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK","Weapon","Innate","Indestructible","hgn_monitor_autogun1b","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK2","Weapon","Innate","Indestructible","hgn_monitor_autogun1b","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK3","Weapon","Innate","Indestructible","hgn_monitor_autogun1b","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK","Weapon","Innate","Indestructible","hgn_mountedflak","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK2","Weapon","Innate","Indestructible","hgn_mountedflak","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK3","Weapon","Innate","Indestructible","hgn_mountedflak","","","","","","","","");
 addShield(NewShipType, "EMP", 220, 20)
 NewShipType.battleScarMaxTriBase = 75
 NewShipType.battleScarMaxTriInc = 100

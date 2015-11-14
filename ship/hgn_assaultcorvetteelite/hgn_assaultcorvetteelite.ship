@@ -4,13 +4,16 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "$1570"
-NewShipType.sobDescription = "$1507"
-NewShipType.maxhealth = 10000
+NewShipType.displayedName = "UNCG Elite Corvette"
+NewShipType.sobDescription = "Bum-Rush Class\nStandard Corvette7"
+NewShipType.maxhealth = 1250
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
-NewShipType.sideArmourDamage = 1
+NewShipType.sideArmourDamage = 0.95
 NewShipType.rearArmourDamage = 1
+NewShipType.topArmourDamage = 0.75
+NewShipType.bottomArmourDamage = 0.85
+NewShipType.frontArmourDamage = 0.75
 NewShipType.isTransferable = 1
 NewShipType.useEngagementRanges = 0
 NewShipType.unitCapsNumber = 2
@@ -159,7 +162,8 @@ addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadSharedModel(NewShipType, "Hgn_AssaultCorvette")
 StartShipWeaponConfig(NewShipType, "Hgn_VulcanKineticTurret", "Weapon_TurretTop", "Fire_Top")
-StartShipWeaponConfig(NewShipType, "Hgn_VulcanKineticTurret", "Weapon_TurretBottom", "Fire_Bottom")
+
+StartShipHardPointConfig(NewShipType,"TurretBottom","Weapon_TurretBottom","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","");
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1

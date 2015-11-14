@@ -95,7 +95,7 @@ NewShipType.visualRange = 3000
 NewShipType.prmSensorRange = 3000
 NewShipType.secSensorRange = 5000
 NewShipType.detectionStrength = 1
-NewShipType.TOIcon = "Parallelogram"
+NewShipType.TOIcon="Rectangle"
 NewShipType.TOScale = 1
 NewShipType.TODistanceFade0 = 14000
 NewShipType.TODistanceDisappear0 = 12000
@@ -171,11 +171,11 @@ StartShipHardPointConfig(NewShipType,"Corvette","Corvette","System","Production"
 StartShipHardPointConfig(NewShipType,"Fighter","Fighter","System","Production","Destroyable","","hgn_c_production_fighter")
 StartShipHardPointConfig(NewShipType,"Frigate","Frigate","System","Production","Destroyable","","hgn_BBC_production_frigate")
 
-StartShipHardPointConfig(NewShipType,"Weapon_Gat1","Weapon_Gat1","Weapon","Generic","indestructible","Hgn_Gatling_Gun_large_L","","","")
-StartShipHardPointConfig(NewShipType,"Weapon_Gat2","Weapon_Gat2","Weapon","Generic","indestructible","Hgn_Gatling_Gun_large_R","","","")
+StartShipHardPointConfig(NewShipType,"Weapon_Gat1","Weapon_Gat1","Weapon","Generic","indestructible","hgn_gatlinggunleft","","","")
+StartShipHardPointConfig(NewShipType,"Weapon_Gat2","Weapon_Gat2","Weapon","Generic","indestructible","hgn_gatlinggunright","","","")
 
-StartShipHardPointConfig(NewShipType,"HpBL_01","HpBL_01","Weapon","Generic","indestructible","HGN_DCT_HD_4x_Flak_L","hgn_BD_CannonTurret","hgn_BD_QuadCannon","hgn_BD_ionbeamturret")
-StartShipHardPointConfig(NewShipType,"HpBR_01","HpBR_01","Weapon","Generic","indestructible","HGN_DCT_HD_4x_Flak_R","hgn_BD_CannonTurret2","hgn_BD_QuadCannon2","hgn_BD_ionbeamturret2")
+StartShipHardPointConfig(NewShipType,"HpBL_01","HpBL_01","Weapon","Generic","indestructible","hgn_flakturretleft","hgn_BD_CannonTurret","hgn_BD_QuadCannon","hgn_BD_ionbeamturret")
+StartShipHardPointConfig(NewShipType,"HpBR_01","HpBR_01","Weapon","Generic","indestructible","hgn_flakturretright","hgn_BD_CannonTurret2","hgn_BD_QuadCannon2","hgn_BD_ionbeamturret2")
 
 addAbility(NewShipType, "DefenseFieldAbility", 0, 0, 1500, 500, 500, 1, 0.6, 0, "defensefield_sphere_spray")
 addAbility(NewShipType, "DefenseFieldShieldAbility", 1, 1500, 0, 0)

@@ -157,40 +157,40 @@ addAbility(NewShipType, "MinelayerAbility", 1, 3.5)
 LoadModel(NewShipType,1)
 
 ------------------------------Main--Turrets
-StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Indestructible","Missile_turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Indestructible","hgn_missileturret","","","","","","","","");
 
---StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Indestructible","HGN_DC_4x_FLAK_Turret","","","","","","","","");
+--StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Indestructible","hgn_flakturret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Indestructible","HGN_DC_4x_FLAK_Turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Indestructible","hgn_flakturret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Indestructible","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Indestructible","hgn_railgun","","","","","","","","");
 
---StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Indestructible","HGN_BD_Mpod","","","","","","","","");
+--StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Indestructible","hgn_missilebay","","","","","","","","");
 ------------------------------Side--Cannons
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP1","System","Innate","Indestructible","HGN_Sword_Side_Plasma_Cannon","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP1","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP2","System","Innate","Indestructible","HGN_Sword_Side_Plasma_Cannon","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP2","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP3","System","Innate","Indestructible","HGN_Sword_Side_Plasma_Cannon","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP3","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP4","System","Innate","Indestructible","HGN_Sword_Side_Plasma_Cannon","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP4","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP5","System","Innate","Indestructible","HGN_Sword_Side_Plasma_Cannon","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP5","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP1","System","Innate","Indestructible","HGN_Sword_Side_Plasma_Cannon","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP1","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP2","System","Innate","Indestructible","HGN_Sword_Side_Plasma_Cannon","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP2","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP3","System","Innate","Indestructible","HGN_Sword_Side_Plasma_Cannon","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP3","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP4","System","Innate","Indestructible","HGN_Sword_Side_Plasma_Cannon","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP4","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP5","System","Innate","Indestructible","HGN_Sword_Side_Plasma_Cannon","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP5","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
 -----------------------------------PDS--Hardpoints
 
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS3","Weapon","Innate","Indestructible","Hgn_GatLing_Gun","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS3","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"PDS_Back_Left","Hardpoint_Gat","Weapon","Innate","Indestructible","Hgn_GatLing_Gun","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"PDS_Back_Left","Hardpoint_Gat","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","");
 
 
 addShield(NewShipType,"EMP",400,12)
