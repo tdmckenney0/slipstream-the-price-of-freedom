@@ -165,7 +165,7 @@ addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
 
-StartShipWeaponConfig(NewShipType, "Vgr_HeavyMissile", "Weapon_Missile", "Fire_Missle")
+StartShipWeaponConfig(NewShipType, "vgr_largemissile", "Weapon_Missile", "Fire_Missle")
 StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_Defence1", "")
 StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_Defence2", "")
 StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_Defence3", "")

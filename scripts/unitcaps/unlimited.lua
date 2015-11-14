@@ -15,7 +15,7 @@ UC_Family("Frigate", 300);
 
 --
 UC_Family("Capital", 250);
-	
+
 --
 UC_Family("Utility", 500);
 
@@ -26,5 +26,7 @@ UC_Family("Platform", 250);
 UC_Family("Mothership", 60);
 
 UC_Family("SinglePlayerMisc", 1000);
+
+UC_ShipType("Battleship", 10)
 
 

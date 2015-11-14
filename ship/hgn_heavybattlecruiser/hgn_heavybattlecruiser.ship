@@ -80,7 +80,7 @@ NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 30
 NewShipType.totalValue = 50
-NewShipType.buildCost = 2000
+NewShipType.buildCost = 9000
 NewShipType.buildTime = 165
 NewShipType.buildPriorityOrder = 20
 NewShipType.retaliationRange = 6000
@@ -151,8 +151,8 @@ addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
 
 --old Weapons
-StartShipWeaponConfig(NewShipType, "Hgn_GimbleIonCannon180", "Weapon_Torpedo2", "null")
-StartShipWeaponConfig(NewShipType, "Hgn_GimbleIonCannon180", "Weapon_Torpedo2", "null")
+StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Torpedo", "null")
+StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Torpedo2", "null")
 
 --Replacement Turrets
 

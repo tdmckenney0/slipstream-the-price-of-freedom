@@ -7,6 +7,10 @@ GUID =
     { 110, 91, 157, 190, 18, 23, 250, 78, 144, 20, 41, 246, 181, 128, 214, 12, }
 GameRulesName = "TPOF: Deathmatch"
 Description = "Default Game Options for Slipstream: The Price of Freedom"
+Directories =
+{
+  Levels = "data:LevelData\\Multiplayer\\slipstream\\",
+}
 GameSetupOptions =
     {
     {
@@ -69,7 +73,7 @@ GameSetupOptions =
 		default = 0,
 		visible = 1,
 		choices =
-		{ "HW2 Normal", 0, "Kill Team Production", 1, "Kill All Enemy Ships", 2, "Quit Manually", 3, },
+		{ "HW2 Normal", 0, "Kill All Enemy Ships", 2, "Quit Manually", 3, },
 	},
     {
 		name = "bgmusic",
@@ -126,8 +130,10 @@ function OnInit()
 
 	if (GetGameSettingAsString("bgmusic") == "shuffle") then
 		dofilepath("data:soundscripts/randommusic.lua")
+		print("Random Music")
 	else
 		Rule_Add("PlayMusicRule")
+		print("Custom Music")
 	end
 
 if (GetGameSettingAsNumber("wincondition") == 0) then
@@ -143,10 +149,13 @@ if (GetGameSettingAsNumber("wincondition") == 0) then
 
    if (GetGameSettingAsString("startwith") == "one") then
           SetStartFleetSuffix("")
+		  print("Normal Start")
       elseif (GetGameSettingAsString("startwith") == "carriers") then
           SetStartFleetSuffix("Carriers")
+		  print("Carrier Start")
 	  elseif (GetGameSettingAsString("startwith") == "instant") then
           SetStartFleetSuffix("instant")
+		  print("Instant Action")
       end
 end
 

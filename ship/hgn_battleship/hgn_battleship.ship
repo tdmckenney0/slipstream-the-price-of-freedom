@@ -166,7 +166,7 @@ addAbility(NewShipType, "DefenseFieldAbility", 0, 0, 2000, 500, 500, 1, 0.6, 0, 
 addAbility(NewShipType, "DefenseFieldShieldAbility", 1, 2000, 0, 0)
 LoadModel(NewShipType, 1)
 
-StartShipWeaponConfig(NewShipType, "Hgn_DestroyerTorpedoLauncher", "Weapon_Nuke", "Weapon_Nuke");
+StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Nuke", "Weapon_Nuke");
 
 StartShipWeaponConfig(NewShipType, "Hgn_GimbleIonCannon", "Weapon_Pulsar", "Weapon_Pulsar")
 StartShipWeaponConfig(NewShipType, "Hgn_GimbleIonCannon", "Weapon_Pulsar2", "Weapon_Pulsar2")

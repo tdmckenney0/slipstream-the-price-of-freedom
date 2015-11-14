@@ -132,6 +132,7 @@ NewShipType["SMHighlightDistMax"]=30000;
 NewShipType["dontDockWithOtherRaceShips"]=0;
 NewShipType["ignoreRaceWhenDocking"]=1;
 addAbility(NewShipType, "CanLaunch")
+addAbility(NewShipType, "CanDock", 1, 0);
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "MoveCommand", 1, 0);
 addAbility(NewShipType, "WaypointMove");

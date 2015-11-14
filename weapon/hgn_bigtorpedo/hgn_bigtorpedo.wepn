@@ -1,18 +1,14 @@
-StartWeaponConfig(NewWeaponType,"Fixed","Missile","hgn_longrangetorpedo","Normal",120,10000,0,0,0,0,1,0,1,35,0,0,0,0,0,0,0.1,"Normal",1,0,0)
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","hgn_longrangetorpedo","Normal",120,8000,0,0,0,0,1,0,1,35,0,0,1,0,0,0,0.1,"Normal",1,0,0)
 
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",3000,3500,"")
-AddWeaponResult(NewWeaponType,"Hit","Disable","Target",140,140,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",3500,4000,"")
+AddWeaponResult(NewWeaponType,"","","",0,0,"")
 
 setAngles(NewWeaponType,179,0,0,0,0)
 
-setMiscValues(NewWeaponType,0,1)
+setMiscValues(NewWeaponType,0,0.5)
 
 setPenetration(NewWeaponType,60,1,
 {Unarmoured=1,},
-{SuperConducting=1,},
-{AntiChemical=1,},
-{AntiMassImpact=1,},
-{Composite=1,},
 {LightArmour=1,},
 {MediumArmour=1,},
 {HeavyArmour=1,},

@@ -40,5 +40,5 @@ NewSubSystemType["AttackFamily"]="SubSystem";
 NewSubSystemType["DockFamily"]="CantDock";
 NewSubSystemType["DisplayFamily"]="SubSystemModule";
 NewSubSystemType["ArmourFamily"]="SubSystemArmour";
-StartSubSystemWeaponConfig(NewSubSystemType, "Hgn_Destroyertorpedolauncher", "Weapon_BCMissile", "Weapon_BCMissile");
+StartSubSystemWeaponConfig(NewSubSystemType, "hgn_nuclearmissile", "Weapon_BCMissile", "Weapon_BCMissile");
 

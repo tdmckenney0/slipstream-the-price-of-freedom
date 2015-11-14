@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Plasma Bomber"
 NewShipType.sobDescription = "Berlin class Bomber"
-NewShipType.maxhealth = 350
+NewShipType.maxhealth = 550
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1

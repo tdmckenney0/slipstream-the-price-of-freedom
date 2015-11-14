@@ -30,7 +30,7 @@ NewSubSystemType.collateralDamage = 100
 NewSubSystemType.inactiveTimeAfterDamage = 80
 NewSubSystemType.activateHealthPercentage = 0.1
 NewSubSystemType.costToBuild = 6500
-NewSubSystemType.timeToBuild = 75
+NewSubSystemType.timeToBuild = 100
 NewSubSystemType.isResearch = 0
 NewSubSystemType.visible = 1
 LoadHODFile(NewSubSystemType, 1)

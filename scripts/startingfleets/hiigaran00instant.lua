@@ -82,7 +82,7 @@ PersistantData = {
          },
          name = "",
          size = 1,
-         number = 1,
+         number = 2,
 	  },
 	  {
          type = "Hgn_battlecruiser",
@@ -127,5 +127,45 @@ PersistantData = {
 	  },
    },
    Research = {
+	[1] = {
+      name = "DestroyerTech",
+      progress = 1,
+    },
+	[2] = {
+      name = "LightCruisers",
+      progress = 1,
+    },
+	[3] = {
+      name = "BattlecruiserIonWeapons",
+      progress = 1,
+	},
+	[4] = {
+      name = "PlatformIonWeapons",
+      progress = 1,
+    },
+	[5] = {
+      name = "RepairAbility",
+      progress = 1,
+    },
+	[6] = {
+      name = "ScoutPingAbility",
+      progress = 1,
+    },
+	[7] = {
+      name = "DefenseFieldFrigateShield",
+      progress = 1,
+	},
+	[8] = {
+      name = "ScoutEMPAbility",
+      progress = 1,
+    },
+	[9] = {
+      name = "ECMProbe",
+      progress = 1,
+    },
+	[10] = {
+      name = "SensDisProbe",
+      progress = 1,
+    },
    },
 }

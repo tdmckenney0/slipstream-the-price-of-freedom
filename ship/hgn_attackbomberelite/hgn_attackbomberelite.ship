@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Elite Attack Bomber"
 NewShipType.sobDescription = "Gettysburg Class\nAnti-Capital bomber"
-NewShipType.maxhealth = 525
+NewShipType.maxhealth = 725
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 0.95

@@ -6,11 +6,14 @@
 NewShipType=StartShipConfig();
 NewShipType["displayedName"]="DOL Carrier";
 NewShipType["sobDescription"]="Vostok Class\nCombat Carrier";
-NewShipType["maxhealth"]=420000;
+NewShipType["maxhealth"]=500000;
 NewShipType["regentime"]=2000;
 NewShipType["minRegenTime"]=1000;
-NewShipType["sideArmourDamage"]=1.2;
-NewShipType["rearArmourDamage"]=1.2;
+NewShipType.sideArmourDamage = 0.6
+NewShipType.rearArmourDamage = 0.5
+NewShipType.topArmourDamage = 0.4
+NewShipType.bottomArmourDamage = 0.65
+NewShipType.frontArmourDamage = 0.35
 NewShipType["isTransferable"]=0;
 NewShipType["useEngagementRanges"]=1;
 NewShipType["unitCapsNumber"]=1;
@@ -164,8 +167,8 @@ addShield(NewShipType, "EMP", 10000, 20);
 StartShipHardPointConfig(NewShipType, "Production 1", "HardPoint_Production1", "System", "Production", "Destroyable", "", "Vgr_C_Production_Fighter", "Vgr_C_Production_Corvette", "Vgr_C_Production_Frigate", "", "", "", "", "");
 StartShipHardPointConfig(NewShipType, "Generic 1", "HardPoint_System1", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Research", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_PlatformControl", "Vgr_C_Module_FireControl", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_BuildSpeed", "");
 StartShipHardPointConfig(NewShipType, "Generic 2", "HardPoint_System2", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Research", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_PlatformControl", "Vgr_C_Module_FireControl", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_BuildSpeed", "");
-StartShipHardPointConfig(NewShipType, "Rail 1", "Hardpoint_Railgun1", "System", "Generic", "Damageable", "vgr_railgun", "Vgr_C_Module_Research", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_PlatformControl", "Vgr_C_Module_FireControl", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_BuildSpeed", "");
-StartShipHardPointConfig(NewShipType, "Rail 2", "Weapon_Railgun2", "System", "Generic", "Damageable", "vgr_railgun", "Vgr_C_Module_Research", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_PlatformControl", "Vgr_C_Module_FireControl", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_BuildSpeed", "");
+StartShipHardPointConfig(NewShipType, "Rail 1", "Hardpoint_Railgun1", "System", "Generic", "Damageable", "vgr_missileturret", "Vgr_C_Module_Research", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_PlatformControl", "Vgr_C_Module_FireControl", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_BuildSpeed", "");
+StartShipHardPointConfig(NewShipType, "Rail 2", "Weapon_Railgun2", "System", "Generic", "Damageable", "vgr_missileturret", "Vgr_C_Module_Research", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_PlatformControl", "Vgr_C_Module_FireControl", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_BuildSpeed", "");
 StartShipHardPointConfig(NewShipType, "Gat 1", "Hardpoint_Gat", "System", "Generic", "Damageable", "vgr_gatlingx2", "Vgr_C_Module_Research", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_PlatformControl", "Vgr_C_Module_FireControl", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_BuildSpeed", "");
 StartShipHardPointConfig(NewShipType, "Gat 2", "Hardpoint_Gat2", "System", "Generic", "Damageable", "vgr_gatlingx2", "Vgr_C_Module_Research", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_PlatformControl", "Vgr_C_Module_FireControl", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_BuildSpeed", "");
 StartShipHardPointConfig(NewShipType, "Sensors1", "HardPoint_Sensors", "System", "Sensors", "Destroyable", "", "Vgr_C_Sensors_AdvancedArray", "Vgr_C_Sensors_DetectHyperspace", "Vgr_C_Sensors_DetectCloaked", "", "", "", "", "");

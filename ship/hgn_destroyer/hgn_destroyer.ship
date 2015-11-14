@@ -149,7 +149,7 @@ addAbility(NewShipType,"RetireAbility",1,1);
 addAbility(NewShipType, "MinelayerAbility", 1, 3.5)
 LoadModel(NewShipType,1);
 
-StartShipWeaponConfig(NewShipType, "hgn_destroyertorpedolauncher", "Weapon_Nuke", "Weapon_Torpedo");
+StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Nuke", "Weapon_Torpedo");
 
 ----------------------------------------------------------------------------------
 

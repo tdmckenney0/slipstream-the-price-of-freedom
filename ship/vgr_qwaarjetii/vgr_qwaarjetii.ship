@@ -2,7 +2,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "Combat Cruiser"
 NewShipType.sobDescription = "Qwaar-Jet II Class\nCombat Cruiser"
-NewShipType.maxhealth=240000
+NewShipType.maxhealth=250000
 NewShipType.regentime=9000
 NewShipType.minRegenTime=1450
 NewShipType.sideArmourDamage = 0.6
@@ -66,7 +66,7 @@ NewShipType.nebulaDamageTime=800
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "Battlecruiser_Vgr"
 NewShipType.AttackFamily = "BigCapitalShip"
-NewShipType.DockFamily = "BattleCruiser"
+NewShipType.DockFamily = "Ultracap"
 NewShipType.AvoidanceFamily = "BattleCruiser"
 NewShipType.DisplayFamily = "Capital"
 NewShipType.AutoFormationFamily = "CapShip"

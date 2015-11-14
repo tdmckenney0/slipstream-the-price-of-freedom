@@ -29,8 +29,8 @@ NewSubSystemType.typeString="PlanetSmasher"
 NewSubSystemType.collateralDamage = 100
 NewSubSystemType.inactiveTimeAfterDamage = 80
 NewSubSystemType.activateHealthPercentage = 0.5
-NewSubSystemType.costToBuild = 5000
-NewSubSystemType.timeToBuild = 60
+NewSubSystemType.costToBuild = 7500
+NewSubSystemType.timeToBuild = 120
 NewSubSystemType.isResearch = 0
 NewSubSystemType.visible = 0
 LoadHODFile(NewSubSystemType, 1)

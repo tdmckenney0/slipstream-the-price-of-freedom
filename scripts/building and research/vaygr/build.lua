@@ -1,3 +1,4 @@
+
 -- LuaDC version 0.9.19
 -- 5/23/2004 7:23:42 PM
 -- LuaDC by Age2uN
@@ -166,7 +167,7 @@ build =
         RequiredFleetSubSystems = "Research",
         DisplayPriority = 30,
         DisplayedName = "Long Range Sniper Cannons",
-        Description = "$7021", },
+        Description = "<b>Description:</b>\n\nThese Long Range Sniper Cannons will make Fighter Squadrons think twice about attacking.\n\n<b>Type: Module (Takes 1 Module Slot)</b>\n\n<b>Perquisites:</b>\nResearch Module", },
     {
         Type = SubSystem,
         ThingToBuild = "Vgr_C_Module_Hyperspace",
@@ -222,7 +223,7 @@ build =
         RequiredShipSubSystems = "",
         DisplayPriority = 20,
         DisplayedName = "$7130",
-        Description = "<b>Type: Light Fighter</b>\n<b>Codename: Seeker</b>\n<b>Description:</b>\n\nThe Seeker Codename scout craft is a highly maneuverable strikcraft that can seek the location of enemys, or patrol the area. These ships have almost become obsolete, due to unmanned probes and active sensors.\n\n<b>Armed with:</b>\n1x Small Energy Gun\n1x Small EMP", },
+        Description = "<b>Type: Light Fighter</b>\n<b>Codename: Seeker</b>\n<b>Description:</b>\n\nThe Seeker Codename scout craft is a highly maneuverable strikcraft that can seek the location of enemies or patrol an area. These ships have become nearly obsolete, due to unmanned probes and active sensors.\n\n<b>Armed with:</b>\n1x Integrated Vulcan Turret\n1x Small Integrated EMP System (Once Upgraded)\n<b>Requires:</b>\nNothing", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_Interceptor",
@@ -230,7 +231,7 @@ build =
         RequiredShipSubSystems = "FighterProduction",
         DisplayPriority = 21,
         DisplayedName = "$7132",
-        Description = "<b>Type: Medium Fighter</b>\n<b>Codename: Pamir</b>\n<b>Description:</b>\n\nThe Interceptor Codename Medium Fighter is the industry standard when it comes to dogfights. THis Fighter is build to take the extreme heat of capship combat, and the high speed turns of dogfights.\n\n<b>Armed with:</b>\n1x Plasma Driver, 1x Guided Plasma Torpedo", },
+        Description = "<b>Type: Medium Fighter</b>\n<b>Codename: Pamir</b>\n<b>Description:</b>\n\nThe Interceptor Codename Pamir is the industry standard when it comes to dogfights. This fighter is built to take the extreme heat of capship combat, and the high speed turns of dogfights.\n\n<b>Armed with:</b>\n1x Plasma Driver, 1x Guided Plasma Torpedo Launch Tube\n<b>Requires:</b>\nFighter Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_Bomber",
@@ -238,7 +239,7 @@ build =
         RequiredShipSubSystems = "FighterProduction",
         DisplayPriority = 22,
         DisplayedName = "$7134",
-        Description = "<b>Type: Medium Fighter</b>\n<b>Codename: Berlin</b>\n<b>Description:</b>\n\nThe Berlin bomber got its name from the UNCG codename of the project that was developing a Plasma bomber. A Solution was needed to take care of frigates while using very little resources, and time. This came arise to mounting to plasma tubes on the the side of a experimental strike fighter with an oversized powerplant. The Dominion Aquired these plans before the War.\n\n<b>Armed with:</b>\n2x Plasma Bomb Launchers", },
+        Description = "<b>Type: Medium Fighter</b>\n<b>Codename: Berlin</b>\n<b>Description:</b>\n\nThe Berlin bomber got its name from the UNCG codename of a project that was later cancelled after its details had been leaked. A solution was needed to take care of frigates while using very little resources and time. Then the idea arose of mounting two plasma tubes on the the side of a experimental strike fighter with an oversized powerplant. The Dominion acquired these leaked plans before the War.\n\n<b>Armed with:</b>\n2x Plasma Bomb Launchers\n<b>Requires:</b>\nFighter Production Facility\nFusion Bomb Research", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_LanceFighter",
@@ -246,15 +247,15 @@ build =
         RequiredShipSubSystems = "FighterProduction",
         DisplayPriority = 23,
         DisplayedName = "$7136",
-        Description = "<b>Type: Medium Fighter</b>\n<b>Codename: Beowulf</b>\n<b>Description:</b>\n\nThe Beowulf Laser fighter is a Medium fighter that carriers a Sniper Laser. This ship is devistating to frigates, and can be to fighters.\n\n<b>Armed with:</b>\n1x Sniper Laser\n<b>Requires:</b>\nLance Research", },
-    {
+        Description = "<b>Type: Medium Fighter</b>\n<b>Codename: Beowulf</b>\n<b>Description:</b>\n\nThe Beowulf Laser fighter is a Medium fighter that carriers a Sniper Laser. This ship is devastating to frigates, and can be to fighters.\n\n<b>Armed with:</b>\n1x Sniper Laser\n<b>Requires:</b>\nLance Research\nFighter Production Facility", },
+	{
         Type = Ship,
         ThingToBuild = "Vgr_MissileCorvette",
         RequiredResearch = "",
         RequiredShipSubSystems = "CorvetteProduction",
         DisplayPriority = 100,
         DisplayedName = "$7138",
-        Description = "<b>Type: Standard Corvette</b>\n<b>Codename: Heimdall</b>\n<b>Description:</b>\n\nThe Missile Corvette is an awesome breakthrough in technology. Using Microslipstreams to launch capital grade missiles from a corvette.\n\n<b>Armed with:</b>\n2x Missile Launcher", },
+        Description = "<b>Type: Standard Corvette</b>\n<b>Codename: Heimdall</b>\n<b>Description:</b>\n\nThe Missile Corvette is an awesome breakthrough in technology. Using Microslipstreams to launch capital grade missiles from a corvette, the DOL has created a monster of a corvette.\n\n<b>Armed with:</b>\n2x Missile Launchers\n<b>Requires:</b>\nCorvette Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_LaserCorvette",
@@ -262,7 +263,7 @@ build =
         RequiredShipSubSystems = "CorvetteProduction",
         DisplayPriority = 105,
         DisplayedName = "$7140",
-        Description = "<b>Type: Standard Corvette</b>\n<b>Codename: Odin</b>\n<b>Description:</b>\n\nThe Laser corvette is nothing more than a scaled up laser fighter, but with more armor.\n\n<b>Armed with:</b>\n2x Laser\n<b>Requires:</b>\nLance Research", },
+        Description = "<b>Type: Standard Corvette</b>\n<b>Codename: Odin</b>\n<b>Description:</b>\n\nThe Laser Corvette is nothing more than a scaled up Lance Fighter, but with more armor.\n\n<b>Armed with:</b>\n2x Sniper Lasers\n<b>Requires:</b>\nLance Corvette Chassis Research\nCorvette Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_CommandCorvette",
@@ -270,7 +271,7 @@ build =
         RequiredShipSubSystems = "CorvetteProduction",
         DisplayPriority = 110,
         DisplayedName = "$7144",
-        Description = "<b>Type: Standard Corvette</b>\n<b>Codename: Caspian</b>\n<b>Description:</b>\n\nThe COmmand corvette is a leader in battle that directs fighter, corvettes, and frigates to victory.\n\n<b>Armed with:</b>\nNothing\n<b>Requires:</b>\nCommand Corvette Research", },
+        Description = "<b>Type: Support Corvette</b>\n<b>Codename: Caspian</b>\n<b>Description:</b>\n\nThe Command corvette is a leader in battle that directs fighter, corvettes, and frigates to victory.\n\n<b>Armed with:</b>\nFirecontrol and other Command Facilities\n<b>Requires:</b>\nCommand Corvette Chassis Research\nCorvette Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_AssaultFrigate",
@@ -278,7 +279,7 @@ build =
         RequiredShipSubSystems = "FrigateProduction",
         DisplayPriority = 220,
         DisplayedName = "$7146",
-        Description = "<b>Type: Heavy Frigate</b>\n<b>Codename: Taiga</b>\n<b>Description:</b>\n\nWhile its UNCG Cousin tends to only defend vs. Fighters, the Taiga Can shoot down fighters, as well as punch holes in capital ships.\n\n<b>Armed with:</b>\n1x Gatling Turret\n2x Pulse Guns\n<b>Requires:</b>\nAssualt Frigate Tech", },
+        Description = "<b>Type: Heavy Frigate</b>\n<b>Codename: Taiga</b>\n<b>Description:</b>\n\nWhile its UNCG cousin tends to only defend against fighters, the Taiga can shoot down fighters, as well as punch holes in capital ships.\n\n<b>Armed with:</b>\n1x Small Gatling Turret\n2x 2x-Barrel Small Plasma Mortar\n1x Vertical Missile Launcher Tube\n<b>Requires:</b>\nAssualt Frigate Chassis Research\nFrigate Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_HeavyMissileFrigate",
@@ -286,7 +287,7 @@ build =
         RequiredShipSubSystems = "FrigateProduction",
         DisplayPriority = 200,
         DisplayedName = "$7148",
-        Description = "<b>Type: Heavy Frigate</b>\n<b>Codename: Irkutsk</b>\n<b>Description:</b>\n\nThe Irkutsk missile frigate was based off of stolen UNCG technology. What seems to be a problem with using physical missiles, is that they are in limited supply on the carrier. Before nano construction it was no where near possible. However, with research into ancient technology, the UNCG found that microslipstream conduits can be used to transport nanocells between the construction ship and the armed ship, making the missile frigate possible.\n\n<b>Armed with:</b>\n2x Missile Tube\n<b>Requires:</b>\nNothing", },
+        Description = "<b>Type: Heavy Frigate</b>\n<b>Codename: Irkutsk</b>\n<b>Description:</b>\n\nThe Irkutsk Missile Frigate was based off of stolen UNCG technology. The main problem with using physical missiles is that they are in limited supply on the carrier so, before nano construction, it was nowhere near possible to have a frigate stock enough missiles to last through a battle. However, with research into ancient technology, the UNCG found that microslipstream conduits can be used to transport nanocells between the construction ship and the armed ship, making the missile frigate possible. Schematics were stolen in the Gettysburg battle of the Solar System Wars and modified afterwards.\n\n<b>Armed with:</b>\n2x Missile Tubes\n<b>Requires:</b>\nFrigate Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_InfiltratorFrigate",
@@ -294,23 +295,23 @@ build =
         RequiredShipSubSystems = "FrigateProduction",
         DisplayPriority = 230,
         DisplayedName = "$7150",
-        Description = "<b>Type: Light Frigate</b>\n<b>Codename: Subverter</b>\n<b>Description:</b>\n\nThe Subverter is a lightly armored troop carrier that launches Marines into ships and takes them over.\n\n<b>Armed with:</b>\n1x Light Missile Tube\n1x FLak Cannon Small\n<b>Requires:</b>\nPod Research", },
+        Description = "<b>Type: Light Frigate</b>\n<b>Codename: Subverter</b>\n<b>Description:</b>\n\nThe Subverter is a lightly armored troop carrier that launches Marines into ships and takes them over.\n\n<b>Armed with:</b>\n1x Light Missile Tube\nMarine Boarding Team\n<b>Requires:</b>\nInfiltration Pod Research\nFrigate Production Facility", },
   {
         Type = Ship,
         ThingToBuild = "vgr_gravityfrigate",
-        RequiredResearch = "",
+        RequiredResearch = "FrigateGravity",
         RequiredShipSubSystems = "FrigateProduction",
-        DisplayPriority = 231,
+        DisplayPriority = 233,
         DisplayedName = "Gravity Well Frigate",
-        Description = "<b>Type: Light Frigate</b>\n<b>Codename: Subverter</b>\n<b>Description:</b>\n\nThe Subverter is a lightly armored troop carrier that launches Marines into ships and takes them over.\n\n<b>Armed with:</b>\n1x Light Missile Tube\n1x FLak Cannon Small\n<b>Requires:</b>\nPod Research", },
+        Description = "<b>Type: Light Frigate</b>\n<b>Codename: Trapper</b>\n<b>Description:</b>\n\nThe Trapper is a breakthrough in military technology. Originally, the DOL used this to pull asteroids closer together so it was easier to mine. However due to the breakout of war, it was refit as a way to disable enemy vessels. Most DOL ships are equiped with a canceller that cancels the effect of this frigate.\n\n<b>Armed with:</b>\n1x Light Missile Tube\n<b>Requires:</b>\nFrigate Production Facility\nGravity Frigate Research", },
   {
         Type = Ship,
         ThingToBuild = "vgr_CloakingFrigate",
-        RequiredResearch = "",
+        RequiredResearch = "FrigateCloak",
         RequiredShipSubSystems = "FrigateProduction",
         DisplayPriority = 232,
         DisplayedName = "Cloaking Frigate",
-        Description = "<b>Type: Light Frigate</b>\n<b>Codename: Subverter</b>\n<b>Description:</b>\n\nThe Subverter is a lightly armored troop carrier that launches Marines into ships and takes them over.\n\n<b>Armed with:</b>\n1x Light Missile Tube\n1x FLak Cannon Small\n<b>Requires:</b>\nPod Research", },
+        Description = "<b>Type: Light Frigate</b>\n<b>Codename: Dagger</b>\n<b>Description:</b>\n\nThe Dagger is an alternative to building module sub-systems for cloaking. When activated, the Dagger's cloaking field will shield all ships within the fields radius from all but the most advanced sensors. A necessity for surprise attacks.\n\n<b>Armed with:</b>\n1x Light Missile Tube\n1x Recharge\n<b>Requires:</b>\nFrigate Production Facility\nCloaking Frigate Research", },
  {
         Type = Ship,
         ThingToBuild = "Vgr_Carrier",
@@ -318,7 +319,7 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 300,
         DisplayedName = "$7154",
-        Description = "<b>Type: Heavy Carrier</b>\n<b>Codename: Vostok</b>\n<b>Description:</b>\n\nThe Vostok was originally a Shipping carrier used to transport goods and supplies to the outer UNCG Colonies. While the UNCG still has the original designs, It was modified to serve as an armed carrier for the Dominom.\n\n<b>Armed with:</b>\n2x Railgun\n2x Gatling Turret\nDefense Lasers.\n<b>Requires:</b>\nNothing", },
+        Description = "<b>Type: Heavy Carrier</b>\n<b>Codename: Vostok</b>\n<b>Description:</b>\n\nThe Vostok was originally a Shipping carrier used to transport goods and supplies to the outer UNCG Colonies. While the UNCG still has the original designs, It was modified to serve as an armed carrier for the Dominion.\n\n<b>Armed with:</b>\n2x Missile Turret\n2x Gatling Turret\nDefense Lasers.\n<b>Requires:</b>\nCapital Production", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_Destroyer",
@@ -326,7 +327,7 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 310,
         DisplayedName = "$7152",
-        Description = "<b>Type: Destroyer</b>\n<b>Codename: Kruszchev</b>\n<b>Description:</b>\n\nThe Kruszchev is the standard destroyer of the dominion. It is capable of holding its own against Fighters, Corvettes, and Frigates, and can give a cruiser a run for its money.\n\n<b>Armed with:</b>\n1x Railgun\n1x Gatling Turret\n1x Dual PPC\n1x Pulse Cannon\nDefense Lasers.\n5x Missile Tubes.\n<b>Requires:</b>\nDestroyer Chassis", },
+        Description = "<b>Type: Destroyer</b>\n<b>Codename: Kruszchev</b>\n<b>Description:</b>\n\nThe Kruszchev is the standard Destroyer of the Dominion. It is capable of holding its own against Fighters, Corvettes, Frigates, and can give a cruiser a run for its money.\n\n<b>Armed with:</b>\n1x 4x-Barrel Heavy Plasma Batteries\n1x 2x-Barrel Helican Railguns\n1x 2x-Barrel Gatling Turrets\n1x 2x-Barrel PPC\n1x Missile Turret\nDefense Lasers.\n5x Nuclear Missile Tubes.\n<b>Requires:</b>\nDestroyer Chassis Research\nCapital Production Facility", },
    {
         Type = Ship,
         ThingToBuild = "Vgr_Helios",
@@ -334,15 +335,15 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 311,
         DisplayedName = "Super Destroyer",
-        Description = "<b>Type: Heavy Destroyer</b>\n<b>Codename: Helios</b>\n<b>Description:</b>\n\nThe Helios is a marvel of Dominion Technology. It Sports 3 Kruszchev Hulls Fused Together in a circular formation. This is indeed a very deadly design.\n\n<b>Armed with:</b>\n2x Railgunt\n2x Dual PPC\n2x Pulse Cannon\nDefense Lasers.\n30x Missile Tubes.\n<b>Requires:</b>\nDestroyer Chassis", },
+        Description = "<b>Type: Heavy Destroyer</b>\n<b>Codename: Helios</b>\n<b>Description:</b>\n\nThe Helios is a marvel of Dominion Technology. It Sports 3 Kruszchev Hulls Fused Together in a circular formation. This is indeed a very deadly design.\n\n<b>Armed with:</b>\n2x Railgun Turret\n1x 2x-Barrel PPC\n2x Pulse Cannon\n1x 2x-Barrel Helican Railguns\n1x 4x-Barrel Heavy Plasma Batteries\n<b>Requires:</b>\nAdvanced Hull Research\nCapital Production Facility", },
   {
         Type = Ship,
         ThingToBuild = "vgr_qwaarjetii",
-        RequiredResearch = "AdvDestroyer",
+        RequiredResearch = "BattlecruiserIonWeapons",
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 312,
         DisplayedName = "Combat Cruiser",
-        Description = "<b>Type: Heavy Destroyer</b>\n<b>Codename: Helios</b>\n<b>Description:</b>\n\nThe Helios is a marvel of Dominion Technology. It Sports 6 Kruszchev Hulls Fused Together in a circular formation. This is indeed a very deadly design.\n\n<b>Armed with:</b>\n2x Railgunt\n2x Dual PPC\n2x Pulse Cannon\nDefense Lasers.\n30x Missile Tubes.\n<b>Requires:</b>\nDestroyer Chassis", },
+        Description = "<b>Type: Combat Cruiser</b>\n<b>Codename: Qwaar-Jet II</b>\n<b>Description:</b>\n\nThe Qwaar-Jet II is the first in a series of two ships designed by a Hungarian Engineer. They were designed to be like no other Dominion Ship, and could wipe out a small UNCG fleet with no problem. Sadly, the UNCG has adapted to withstand its Mighty Firepower.\n\n<b>Armed with:</b>\n4x heavy Plasma Batterys\n4x Heavy PPC Cannons\n4x Rail Guns\n2xMissile Batterys\nVarious Defence Lasers\n<b>Requires:</b>\nBattlecruiser Chassis Research\nCapital Production Facility", },
  {
         Type = Ship,
         ThingToBuild = "Vgr_Dreadnaught",
@@ -350,7 +351,7 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 313,
         DisplayedName = "Ranged Cruiser",
-        Description = "<b>Type: Dreadnaught</b>\n<b>Codename: Leviathan</b>\n<b>Description:</b>\n\nNot Much is known about the Leviathan. It is an Ancient warship that is easily recreated, but never understood. Recreating her power subsystems are difficult. So much, that the original Defense weapons are replaced with Dominion lasers and Ion Cannons. The Main Reactor is used to power her Massive Front Particle beam. This Beam can travel 15 KM and burn a hole through and armor.\n\n<b>Armed with:</b>\n1x Tri-PPC\n1x Missile pod\n2x Gatling Guns\nDefense lasers\n1x Massive Particle Projector\n<b>Requires:</b>\nBattlecruiser Chassis", },
+        Description = "<b>Type: Dreadnaught</b>\n<b>Codename: Leviathan</b>\n<b>Description:</b>\n\nNot Much is known about the Leviathan. It is an Ancient warship that is easily recreated, but never understood. Recreating her power subsystems are difficult. So much, that the original Defense weapons are replaced with Dominion lasers and Ion Cannons. The Main Reactor is used to power her Massive Front Particle beam. This Beam can travel 15 KM and burn a hole through and armor.\n\n<b>Armed with:</b>\n1x 2x-Barrel Helican Railguns\n2x Missile Box\n1x Massive Particle Projector\n2x 2x-Barrel Gatling Guns\n2x 4x-Barrel Heavy Plasma Batteries\n10x Fusion Missile Launcher Tubes\n1x 3x-Barrel PPC Turrets\nDefense lasers\n<b>Requires:</b>\nBattlecruiser Chassis Research\nCapital Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_BattleCruiser",
@@ -358,7 +359,7 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 320,
         DisplayedName = "$7158",
-        Description = "<b>Type: Heavy Cruiser</b>\n<b>Codename: Judgement</b>\n<b>Description:</b>\n\nThe Judgement is one of the most feared cruisers in the galaxy. This cruiser sports some heavy weaponry, rivaled Only by the UNCG Trafalgar class cruisers.\n\n<b>Armed with:</b>\n2x Railgunt\n2x Tri-PPC\n2x Pulse Cannon\n2x Gatling Turrets\n2x Standard Missile Pods\nDefense Lasers.\n8x Missile Tubes.\n<b>Requires:</b>\nBattlecruiser Chassis", },
+        Description = "<b>Type: BattleCruiser</b>\n<b>Codename: Judgement</b>\n<b>Description:</b>\n\nThe Judgement is one of the most feared cruisers in the galaxy. This cruiser sports some heavy weaponry, rivaled Only by the UNCG Trafalgar class cruisers.\n\n<b>Armed with:</b>\n2x Railgunt\n2x Tri-PPC\n2x 2x-Barrel Helican Railguns\n2x Heavy Gatling Turrets\n2x Standard Missile Pods\nDefense Lasers.\n1x Nuclear Missile Bay\n<b>Requires:</b>\nBattlecruiser Chassis Research\nCapital Production Facility", },
    {
         Type = Ship,
         ThingToBuild = "vgr_vanaarjet",
@@ -366,15 +367,15 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 321,
         DisplayedName = "Heavy Cruiser",
-        Description = "<b>Type: Heavy Cruiser</b>\n<b>Codename: Judgement</b>\n<b>Description:</b>\n\nThe Judgement is one of the most feared cruisers in the galaxy. This cruiser sports some heavy weaponry, rivaled Only by the UNCG Trafalgar class cruisers.\n\n<b>Armed with:</b>\n2x Railgunt\n2x Tri-PPC\n2x Pulse Cannon\n2x Gatling Turrets\n2x Standard Missile Pods\nDefense Lasers.\n8x Missile Tubes.\n<b>Requires:</b>\nBattlecruiser Chassis", },
+        Description = "<b>Type: Heavy Cruiser</b>\n<b>Codename: Vanaar-Jet</b>\n<b>Description:</b>\n\nThe Vanaar-Jet is the second in a series of two ships designed by a Hungarian Engineer. They were designed to be like no other Dominion Ship, and could wipe out a small UNCG fleet with no problem. Sadly, the UNCG has adapted to withstand its Mighty Firepower.\n\n<b>Armed with:</b>\n4x heavy Plasma Batterys\n2x Heavy PPC Cannons\n2x Custom Super-PPC Cannons\n2xMissile Batterys\nVarious Defence Lasers\n<b>Requires:</b>\nBattlecruiser Chassis Research\nCapital Production Facility", },
    {
         Type = Ship,
         ThingToBuild = "Vgr_Battleship",
-        RequiredResearch = "BattlecruiserIonWeapons",
+        RequiredResearch = "BattleshipHullEngineering & AncientHullEngineering",
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 330,
         DisplayedName = "Battleship",
-        Description = "<b>Type: Battleship</b>\n<b>Codename: Thor</b>\n<b>Description:</b>\n\nThe Dominion Battleship is not the best piece of technology. The Dominion threw it together in order to combat the UNCG battleship Freedom.\n\n<b>Armed with:</b>\n4x Tri-PPC\n2x Missile pod\n2x Gatling Guns\nDefense lasers\n2x Railgun Turret\n<b>Requires:</b>\nBattlecruiser Chassis", },
+        Description = "<b>Type: Battleship</b>\n<b>Codename: Jupiter</b>\n<b>Description:</b>\n\nThe Dominion Battleship is not the best piece of technology. The Dominion threw it together based on Ancient Super-Ships in order to combat the UNCG Battleship Valencia. With mixed success, The Jupiter can Destroy 2 Valencia-Class ships, or be destroyed by one, so be careful where you deploy this massive machine.\n\n<b>Armed with:</b>\n4x Tri-PPC\n2x Missile pod\n2x Gatling Guns\nDefense lasers\n2x Railgun Turret\n1x Turreted Super Cannon\n<b>Requires:</b>\nBattleship Chassis Research\nCapital Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "vgr_weaponplatform_Plasma",
@@ -382,7 +383,7 @@ build =
         RequiredShipSubSystems = "PlatformProduction",
         DisplayPriority = 401,
         DisplayedName = "Plasma Platform",
-        Description = "$7163", },
+        Description = "<b>Type: Mobile Platform</b>\n<b>Description:</b>\n\nThe Plasma platform, although slightly less exspensive than its older cousin, the Heavy Missile Platform, is much easier to deploy in vast numbers. Devastating to Capital Ships.\n\n<b>Armed with:</b>\n2x 4x-Barrel Heavy Plasma Battery\n\n<b>Requires:</b>\nPlatform Production Facility", },
    {
         Type = Ship,
         ThingToBuild = "Vgr_WeaponPlatform_gun",
@@ -390,7 +391,7 @@ build =
         RequiredShipSubSystems = "PlatformProduction",
         DisplayPriority = 400,
         DisplayedName = "$7160",
-        Description = "$7161", },
+        Description = "<b>Type: Mobile Platform</b>\n<b>Description:</b>\n\nThe Gun Platform is a cheap and effective alternative to fighter squadron defenses for outposts. Devastating to Fighters and Corvettes.\n\n<b>Armed with:</b>\n2x Heavy Gatling Turrets\n\n<b>Requires:</b>\nPlatform Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_WeaponPlatform_missile",
@@ -398,7 +399,7 @@ build =
         RequiredShipSubSystems = "PlatformProduction",
         DisplayPriority = 410,
         DisplayedName = "$7162",
-        Description = "$7163", },
+        Description = "<b>Type:Mobile Platform</b>\n<b>Description:</b>\n\nThe Heavy Missile platform is feared throughout space for being able to fire off a impressively powerful projectile and a modest range.\n\n<b>Armed with:</b>\n2x Heavy Missile Launcher Tubes\n\n<b>Requires:</b>\nPlatform Production Facility\nHeavy Missile Platform Research", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_ResourceCollector",
@@ -406,7 +407,7 @@ build =
         RequiredShipSubSystems = "",
         DisplayPriority = 500,
         DisplayedName = "$7164",
-        Description = "$7165", },
+        Description = "<b>Type: Resource Collector</b>\n<b>Description:</b>\n\nBasic utility ship. Can gather Resources for conversion into Resource Units.\n\n<b>Armed with:</b>\nRepair Tools (Once Upgraded)<b>Requires:</b>\nNothing", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_ResourceController",
@@ -414,7 +415,7 @@ build =
         RequiredShipSubSystems = "",
         DisplayPriority = 510,
         DisplayedName = "$7166",
-        Description = "$7167", },
+        Description = "<b>Type: Mobile Resource Refinery</b>\n<b>Codename: Lapper</b>\n\n<b>Description:</b>\n\nThe Lapper serves as a mobile resource collection point that can dock up to 2 resource collectors at a time.\n\n<b>Armed with:</b>\n3x Small Gatling Turrets\n<b>Requires:</b>\nNothing", },
     {
         Type = Ship,
         ThingToBuild = "Vgr_HyperSpace_Platform",
@@ -454,5 +455,5 @@ build =
         RequiredShipSubSystems = "",
         DisplayPriority = 612,
         DisplayedName = "Honking big planet killing missile",
-        Description = "", },
+        Description = "ITS GONNA DIVIDE BY ZERO OH SHI-", },
     }

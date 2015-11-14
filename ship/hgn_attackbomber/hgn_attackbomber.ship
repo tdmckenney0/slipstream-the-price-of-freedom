@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Attack Bomber"
 NewShipType.sobDescription = "Acolyte Class\nAnti-Super Capital bomber"
-NewShipType.maxhealth = 500
+NewShipType.maxhealth = 750
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 0.95
@@ -80,7 +80,7 @@ NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 8
 NewShipType.totalValue = 8
-NewShipType.buildCost = 550
+NewShipType.buildCost = 250
 NewShipType.buildTime = 40
 NewShipType.buildPriorityOrder = 30
 NewShipType.retaliationRange = 5500

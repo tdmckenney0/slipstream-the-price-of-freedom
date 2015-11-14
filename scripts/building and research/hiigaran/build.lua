@@ -6,7 +6,7 @@
 Ship = 0
 SubSystem = 1
 build =
-  {
+    {
     {
         Type = SubSystem,
         ThingToBuild = "Hgn_C_Production_Fighter",
@@ -67,7 +67,7 @@ build =
         Type = SubSystem,
         ThingToBuild = "hgn_BBC_production_frigate",
         RequiredResearch = "",
-        RequiredFleetSubSystems = "",
+        RequiredFleetSubSystems = "Hyperspace",
         DisplayPriority = 0,
         DisplayedName = "$7004",
         Description = "$7005", },
@@ -174,7 +174,7 @@ build =
         RequiredFleetSubSystems = "Research",
         DisplayPriority = 30,
         DisplayedName = "Slipstream Generator",
-        Description = "<b>Description:</b>  Slipstream Generators and Field Projectors. Allows nearby Frigates and Capital ships to hyperspace.  \n\n<b>Type:</b> Module (Takes 1 Module Slot). \n\n<b>Prerequisites:</b> Research Module.", },
+        Description = "<b>Description:</b>  Slipstream Generators and Field Projectors. Allows nearby Frigates and Capital ships to hyperspace.  \n\n<b>Type:</b> Module (Takes 1 Module Slot)\n\n<b>Prerequisites:</b>Research Module.", },
     {
         Type = SubSystem,
         ThingToBuild = "Hgn_MS_Module_Hyperspace",
@@ -182,7 +182,7 @@ build =
         RequiredFleetSubSystems = "Research",
         DisplayPriority = 30,
         DisplayedName = "Slipstream Generator",
-        Description = "<b>Description:</b>  Slipstream Generators and Field Projectors. Allows nearby Frigates and Capital ships to hyperspace.  \n\n<b>Type:</b> Module (Takes 1 Module Slot). \n\n<b>Prerequisites:</b> Research Module.", },
+        Description = "<b>Description:</b>  Slipstream Generators and Field Projectors allow nearby Frigates and Capital ships to hyperspace.\n\n<b>Type:</b> Module (Takes 1 Module Slot)\n\n<b>Prerequisites:</b>Research Module.", },
     {
         Type = SubSystem,
         ThingToBuild = "Hgn_C_Module_HyperspaceInhibitor",
@@ -223,14 +223,14 @@ build =
         DisplayPriority = 60,
         DisplayedName = "$7020",
         Description = "$7021", },
-    {
+   {
         Type = SubSystem,
         ThingToBuild = "Hgn_SC_Smashercalibration",
         RequiredResearch = "",
         RequiredFleetSubSystems = "AdvancedResearch",
         DisplayPriority = 60,
         DisplayedName = "ICBM Launcher System",
-        Description = "<b>Description:</b>  Devistating weapon system that can be launched at targets across vast distances, and cause massive damage. the original warhead was used to glass planets.\n\n<b>Type:</b> Module (Takes 1 Module Slot). \n\n<b>Prerequisites:</b> Research Module, Advanced research module.", },
+        Description = "<b>Description:</b>  Devastating weapon system that can be launched at targets across vast distances and cause massive damage. The original version of this warhead was used to glass planets.\n\n<b>Type:</b> Module (Takes 1 Module Slot). \n\n<b>Prerequisites:</b>Advanced Research Module.", },
  {
         Type = SubSystem,
         ThingToBuild = "Hgn_MS_Module_FireControl",
@@ -414,7 +414,7 @@ build =
         RequiredShipSubSystems = "",
         DisplayPriority = 10,
         DisplayedName = "$7030",
-        Description = "<b>Type: Light Fighter</b>\n<b>Classname: Seeker</b>\n<b>Description:</b>\n\nThe Seeker scout craft is a highly maneuverable strikcraft that can seek the location of enemies, or patrol the area. These ships have almost become obsolete due to unmanned probes and active sensors.\n\n<b>Armed with:</b>\n1x Integrated Vulcan Turret\n1x Small Integrated EMP System (Once Upgraded)", },
+        Description = "<b>Type: Light Fighter</b>\n<b>Classname: Seeker</b>\n<b>Description:</b>\n\nThe Seeker scout craft is a highly maneuverable strikcraft that can seek the location of enemies, or patrol the area. These ships have almost become obsolete due to unmanned probes and active sensors.\n\n<b>Armed with:</b>\n1x Integrated Vulcan Turret\n1x Small Integrated EMP System (Once Upgraded)\n<b>Requires:</b>\nNothing", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_Interceptor",
@@ -422,15 +422,15 @@ build =
         RequiredShipSubSystems = "FighterProduction",
         DisplayPriority = 20,
         DisplayedName = "$7032",
-        Description = "<b>Type: Medium Fighter</b>\n<b>Classname: Interceptor</b>\n<b>Description:</b>\n\nThe Interceptor Codename Medium Fighter is the industry standard when it comes to dogfights. THis Fighter is build to take the extreme heat of capship combat, and the high speed turns of dogfights.\n\n<b>Armed with:</b>\n1x Plasma Driver, 1x Guided Plasma Torpedo", },
- -- {
- --       Type = Ship,
- --       ThingToBuild = "hgn_railgunfighter",
- --       RequiredResearch = "",
- --       RequiredShipSubSystems = "FighterProduction",
- --       DisplayPriority = 32,
- --       DisplayedName = "Rail Gun Fighter",
- --       Description = "<b>Type: Medium Fighter</b>\n<b>Classname: Scorpion</b>\n<b>Description:</b>\n\nThe Scorpion Rail-Gun fighter is a medium fighter that carriers a light rail gun. This ship is devastating to frigates, and can be to fighters.\n\n<b>Armed with:</b>\n1x Light RG-01 Gun\n<b>Requires:</b>\nAdvanced Research", },
+        Description = "<b>Type: Medium Fighter</b>\n<b>Classname: Interceptor</b>\n<b>Description:</b>\n\nThe Interceptor Medium Fighter is the industry standard when it comes to dogfights. This -ighter is build to take the extreme heat of capship combat, and the high speed turns of dogfights.\n\n<b>Armed with:</b>\n1x Plasma Driver\n1x Guided Plasma Torpedo Launch Tube\n<b>Requires:</b>\nFighter Production Facility", },
+  {
+        Type = Ship,
+        ThingToBuild = "hgn_railguncorvette",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "CorvetteProduction",
+        DisplayPriority = 53,
+        DisplayedName = "Rail-Gun Corvette",
+        Description = "<b>Type: Standard Corvette</b>\n<b>Classname: Sniper</b>\n<b>Description:</b>\n\nThe Sniper is a powerful Corvette that is armed with a scaled-down railgun to allow for much more damage than other corvettes.\n\n<b>Armed with:</b>\n1x Light Railgun\n<b>Requires:</b>\nCorvette Production Facility", },
   {
         Type = Ship,
         ThingToBuild = "Hgn_AttackBomber",
@@ -438,15 +438,15 @@ build =
         RequiredShipSubSystems = "FighterProduction",
         DisplayPriority = 30,
         DisplayedName = "Attack Bomber",
-        Description = "<b>Type: Heavy Fighter</b>\n<b>Classname: Acolyte</b>\n<b>Description:</b>\n\nThe Acolyte is a massive bomber that uses twin powerplants to fire 4 capital grade plasma bomb launchers. This ship Codename classifies as a heavy fighter and/or Light Corvette.\n\n<b>Armed with:</b>\n4x Capital Plasma Drivers\n<b>Requires:</b>\nAdvanced Research", },
-    {
+        Description = "<b>Type: Medium Fighter</b>\n<b>Classname: Acolyte</b>\n<b>Description:</b>\n\nThe Acolyte bomber got its name after it's day-view battle after a prototype was accidentaly used in the now infamous battle in the Solar System wars in which much UNCG technology was derived. A solution was needed to take care of frigates while using very little resources, and time. This came arise to mounting to plasma tubes on the the side of a experimental strike fighter with an oversized powerplant.\n\n<b>Armed with:</b>\n2x Plasma Bomb Launchers (Fires Anti-Sub-System Bombs Once Upgraded)\n<b>Requires:</b>\nFighter Production Facility", },
+ {
         Type = Ship,
         ThingToBuild = "Hgn_AssaultCorvette",
         RequiredResearch = "",
         RequiredShipSubSystems = "CorvetteProduction",
         DisplayPriority = 51,
         DisplayedName = "$7038",
-        Description = "<b>Type: Standard Corvette</b>\n<b>Classname: Bum-Rush</b>\n<b>Description:</b>\n\nThe Bum-Rush Standard Corvette carries a small number of armor-piercing Kinetic Shells. Reloading is done by using short-wave teleportation systems to transport shells, this is very expensive system to run.\n\n<b>Armed with:</b>\n1x Vulcan Turret\n1x FT-2 Minigun Turret", },
+        Description = "<b>Type: Standard Corvette</b>\n<b>Classname: Bum-Rush</b>\n<b>Description:</b>\n\nThe Bum-Rush Standard Corvette carries a small number of armor-piercing Kinetic Shells. Reloading is done by using short-wave teleportation systems to transport shells, this is very expensive system to run.\n\n<b>Armed with:</b>\n1x Vulcan Turret\n1x FT-2 Minigun Turret\n<b>Requires:</b>\nCorvette Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_PulsarCorvette",
@@ -454,23 +454,15 @@ build =
         RequiredShipSubSystems = "CorvetteProduction",
         DisplayPriority = 52,
         DisplayedName = "Pulsar Corvette",
-        Description = "<b>Type: Standard Corvette</b>\n<b>Classname: Python</b>\n<b>Description:</b>\n\nThe Python is aptly named. The python was a snake on Earth that would coil around its victim and take the life out it. This Corvette can fly around its target and fire a small laser into its side, devastating frigates.\n\n<b>Armed with:</b>\n1x Small Sniper Laser", },
-    {
-        Type = Ship,
-        ThingToBuild = "hgn_railguncorvette",
-        RequiredResearch = "",
-        RequiredShipSubSystems = "CorvetteProduction",
-        DisplayPriority = 53,
-        DisplayedName = "Rail-Gun Corvette",
-        Description = "<b>Type: Standard Corvette</b>\n<b>Classname: Sniper</b>\n<b>Description:</b>\n\nThe Sniper is a powerful corvette that is armed with a scaled-down railgun to allow for much more damage than other corvettes.\n\n<b>Armed with:</b>\n1x Light Railgun", },
-    {
+        Description = "<b>Type: Standard Corvette</b>\n<b>Classname: Python</b>\n<b>Description:</b>\n\nThe Python is aptly named. The python was a snake on Earth that would coil around its victim and take the life out it. This Corvette can fly around its target and fire a small laser into its side, devastating frigates.\n\n<b>Armed with:</b>\n1x Small Sniper Laser\n<b>Requires:</b>\nCorvette Production Facility", },
+	{
         Type = Ship,
         ThingToBuild = "Hgn_DefenseFieldFrigate",
         RequiredResearch = "DefenseFieldFrigateShield",
         RequiredShipSubSystems = "FrigateProduction",
         DisplayPriority = 80,
         DisplayedName = "$7044",
-        Description = "<b>Type: Specialized Frigate</b>\n<b>Classname: Circumference</b>\n<b>Description:</b>\n\nThe Circumference class Defense Field Frigate is at the forefront UNCG technology. This frigate is capable of deploying a Energy Field around itself and other ships inside the sphere.\n\n<b>Armed with:</b>\n1x Weak Vulcan Cannon\n<b>Requires:</b>\nDefense Field Research", },
+        Description = "<b>Type: Specialized Frigate</b>\n<b>Classname: Circumference</b>\n<b>Description:</b>\n\nThe Circumference class Defense Field Frigate is at the forefront UNCG technology. This frigate is capable of deploying a Energy Field around itself and other ships inside the sphere.\n\n<b>Armed with:</b>\n1x Weak Vulcan Cannon\n1x Defense Shield Projector\n<b>Requires:</b>\nDefense Field Research\nFrigate Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_TorpedoFrigate",
@@ -478,7 +470,7 @@ build =
         RequiredShipSubSystems = "FrigateProduction",
         DisplayPriority = 65,
         DisplayedName = "Missile Frigate",
-        Description = "<b>Type: Small Frigate</b>\n<b>Classname: Archer</b>\n<b>Description:</b>\n\nA problem with using physical missiles is that they are in limited supply on the carrier, so before nano construction it was nowhere near possible. However, with research, the UNCG found that microslipstream conduits can be used to transport nanocells between the construction ship and the armed ship, making the missile frigate possible.\n\n<b>Armed with:</b>\n1x Vertical Heavy Missile Launcher\n2x Weak Vulcan Turrets\n1x Nuclear Missile Bay", },
+        Description = "<b>Type: Small Frigate</b>\n<b>Classname: Archer</b>\n<b>Description:</b>\n\nThe Archer class missile frigate uses 2 missile box's mounted on a small frigate chassis. A problem with using physical missiles is that they are in limited supply on the carrier, so before nano construction it was nowhere near possible. However, with research into ancient technology, the UNCG found that microslipstream conduits can be used to transport nanocells between the construction ship and the armed ship, making the missile frigate possible.\n\n<b>Armed with:</b>\n1x Vertical Heavy Missile Launcher\n2x Weak Vulcan Turrets\n<b>Requires:</b>\nFrigate Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_AssaultFrigate",
@@ -486,7 +478,7 @@ build =
         RequiredShipSubSystems = "FrigateProduction",
         DisplayPriority = 60,
         DisplayedName = "Assault Frigate",
-        Description = "<b>Type: Small Frigate</b>\n<b>Classname: Gladiator</b>\n<b>Description:</b>\n\nThe Gladiator is a multipurpose attack frigate that uses two Small Plasma Projectors, and two Flak Cannons.\n\n<b>Armed With:</b>\n2x Small PPC\n2x Small Flak Cannon\n<b>Requires:</b>\n Frigate Production", },
+        Description = "<b>Type: Small Frigate</b>\n<b>Classname: Gladiator</b>\n<b>Description:</b>\n\nThe Gladiator is a multipurpose attack frigate that uses two relatively weak weaponry to a great extent against Fighters and Corvettes.\n\n<b>Armed With:</b>\n2x Small PPC\n2x Small Flak Cannon\n<b>Requires:</b>\nFrigate Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_IonCannonFrigate",
@@ -494,7 +486,7 @@ build =
         RequiredShipSubSystems = "FrigateProduction",
         DisplayPriority = 70,
         DisplayedName = "$7050",
-        Description = "<b>Type: Medium Frigate</b>\n<b>Classname: Firelance</b>\n<b>Description:</b>\n\nThe Firelance Plasma-Projector Frigate is nothing more than a capital grade plasma projector with a frigate chassis wrapped around it. Very useful against capital ships.\n\n<b>Armed With:</b>\n1x Fixed Plasma Projector Cannon\n<b>Requires:</b>\n Frigate Production, Adv. Research.", },
+        Description = "<b>Type: Medium Frigate</b>\n<b>Classname: Firelance</b>\n<b>Description:</b>\n\nThe Firelance Plasma-Projector Frigate is nothing more than a Capital grade plasma projector with a frigate chassis wrapped around it. Very useful against capital ships.\n\n<b>Armed With:</b>\n1x Fixed Plasma Projector Cannon\n<b>Requires:</b>\nFrigate Production Facility\nAdvanced Research Module", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_MarineFrigate",
@@ -502,7 +494,7 @@ build =
         RequiredShipSubSystems = "FrigateProduction",
         DisplayPriority = 75,
         DisplayedName = "$7052",
-        Description = "<b>Type: Specialized Frigate</b>\n<b>Classname: Seal</b>\n<b>Description:</b>\n\nThe Seal Marine Frigate delivers highly-trained marines to board a enemy ship in the heat of battle and attempt to take it over.\n\n<b>Armed With:</b>\n1x Vulcan Turret\n<b>Requires:</b>\n Frigate Production, Adv. Research", },
+        Description = "<b>Type: Specialized Frigate</b>\n<b>Classname: Seal</b>\n<b>Description:</b>\n\nThe Seal Marine Frigate delivers highly-trained marines to board a enemy ship in the heat of battle and attept to take it over.\n\n<b>Armed With:</b>\n1x Vulcan Turret\nMarine Boarding Party\n<b>Requires:</b>\nFrigate Production Facility\nAdvanced Research Module", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_Carrier",
@@ -510,7 +502,7 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 110,
         DisplayedName = "$7054",
-        Description = "<b>Type: Assault Carrier</b>\n<b>Classname: Whitecloud</b>\n<b>Description:</b>\n\nThe Whitecloud is based on an early design for a Transport tanker. When the UNCG needed small carriers to carry out tasks without using a full blown Super-Carrier, they enlisted this design and fitted it to suit as an Armored carrier, able to carry out any operation quickly, efficiently, and take the heat while doing it all.\n\n<b>Armed With:</b>\n2x Heavy 4x DC Flak Turrets\n1x 4x4 Vertical Missile Launcher (Standard, Drone)\n2x FZ-99 Gatling Turrets\n<b>Requires:</b>\nCapital Production", },
+        Description = "<b>Type: Assault Carrier</b>\n<b>Classname: Whitecloud</b>\n<b>Description:</b>\n\nThe Whitecloud is based on an early design for a Transport tanker. When the UNCG needed small carriers to carry out tasks without using a full blown Super-Carrier, they enlisted this design and fitted it to suit as an Armored carrier, able to carry out any operation quickly, efficiently, and take the heat while doing it all.\n\n<b>Armed With:</b>\n2x Heavy 4x-Barrel DC Flak Turrets\n1x 4x4 Vertical Missile Launcher (Standard, Drone)\n2x FZ-99 Gatling Turrets\n<b>Requires:</b>\nCapital Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_Destroyer",
@@ -518,7 +510,7 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 116,
         DisplayedName = "$7056",
-        Description = "<b>Type: Destroyer</b>\n<b>Classname: Resolute</b>\n<b>Description:</b>\n\nThe Resolute is the workhorse of small battles and outer partrol. Originally, the design came from the old Solar System wars, and was refitted when the UNCG needed a Destroyer class vessel.\n\n<b>Armed With:</b>\n1x 2x Barrel Heavy Gatling Gun\n1x FZ-99 Gatling Turret\n2x 3-Coil Cannon\n<b>Requires:</b>\nCapital Production, Destroyer Chassis", },
+        Description = "<b>Type: Destroyer</b>\n<b>Classname: Resolute</b>\n<b>Description:</b>\n\nThe Resolute is the workhorse of small battles and outer partrol. Originally, the design came from the old Solar System wars, and was refitted when the UNCG needed a Destroyer class vessel.\n\n<b>Armed With:</b>\n1x 2x-Barrel Heavy Gatling Gun\n1x FZ-99 Gatling Turret\n2x 3-Coil Cannon\n<b>Requires:</b>\nCapital Production Facility\nDestroyer Chassis Research", },
    {
         Type = Ship,
         ThingToBuild = "hgn_heavydestroyer",
@@ -526,7 +518,7 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 117,
         DisplayedName = "Heavy Destroyer",
-        Description = "<b>Type: Heavy Destroyer</b>\n<b>Classname: Hannibal</b>\n<b>Description:</b>\n\nThe Hannibal is an upgraded version of the original resolute, and was intended to replace it, but it was too costly to do so, and the Hannibal had no Nuclear Arms capabilities.\n\n<b>Armed With:</b>\n1x Torpedo Bay\n1x 3-Coil Cannon\n1x Sixtuplet Heavy Valencium Repeaters \n2x 4x Barrel Heavy DC Flak Turrets\n1x 2x Barrel Heavy Railgun\n1x FZ-99 Gatling Turret\n<b>Requires:</b>\nCapital Production, Destroyer Chassis", },
+        Description = "<b>Type: Heavy Destroyer</b>\n<b>Classname: Hannibal</b>\n<b>Description:</b>\n\nThe Hannibal is an upgraded version of the original resolute, and was intended to replace it, but it was too costly to do so, and so Hannibal has no Nuclear Arms capabilities.\n\n<b>Armed With:</b>\n1x Torpedo Bay\n1x 3-Coil Cannon\n1x 6x-Barrel Heavy Valencium Repeaters \n2x 4x-Barrel Heavy DC Flak Turrets\n1x 2x-Barrel Heavy Railgun\n1x FZ-99 Gatling Turret\n<b>Requires:</b>\nCapital Production Facility\nDestroyer Chassis Research", },
 {
         Type = Ship,
         ThingToBuild = "hgn_Sword_Cruiser",
@@ -534,7 +526,7 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 118,
         DisplayedName = "Assault Cruiser",
-        Description = "<b>Type: Medium Cruiser</b>\n<b>Classname: Excalibur</b>\n<b>Description:</b>\n\nThe Excalibur is a Medium Cruiser designed to fight close range. Uses similar techniques to create the Destroyer.\n\n<b>Armed With:</b>\n1x 2x Barrel Heavy Railgun Turrets\n1x 4x Barrel Heavy DC Flak Turrets\n1x Missile Box\n10x Lateral Plasma Cannon\n<b>Requires:</b>\nCapital Production, Light Cruiser Chassis", },
+        Description = "<b>Type: Medium Cruiser</b>\n<b>Classname: Excalibur</b>\n<b>Description:</b>\n\nThe Excalibur is a Medium Cruiser designed to fight close range. Uses similar techniques to the Destroyers'.\n\n<b>Armed With:</b>\n1x 2x-Barrel Heavy Railgun Turrets\n1x 4x-Barrel Heavy DC Flak Turrets\n1x Missile Box\n10x 2x-Barrel Pulsar SCC Turrets\n<b>Requires:</b>\nCapital Production Facility\nLight Cruiser Chassis Research", },
 {
         Type = Ship,
         ThingToBuild = "hgn_Crossbow_Cruiser",
@@ -542,7 +534,7 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 119,
         DisplayedName = "Ranged Cruiser",
-        Description = "<b>Type: Medium Cruiser</b>\n<b>Classname: Crossbow</b>\n<b>Description:</b>\n\nThe Crossbow is a medium Cruiser built for long range conflicts.\n\n<b>Armed With:</b>\n1x 2x Barrel Particle Projector\n1x 3-Coil Cannon\n2x Heavy Gatling Gun\n1x Sixtuplet Plasma Battery\n1x 2x Barrel Heavy Railguns\n2x Missile Boxes\n<b>Requires:</b>\nCapital Production, Light Cruiser Chassis", },
+        Description = "<b>Type: Medium Cruiser</b>\n<b>Classname: Crossbow</b>\n<b>Description:</b>\n\nThe Crossbow is a Medium Cruiser built for long range conflicts.\n\n<b>Armed With:</b>\n1x 2x-Barrel Particle Projector\n1x 3-Coil Cannon\n2x Heavy Gatling Gun\n1x 6x-Barrel Plasma Battery\n1x 2x-Barrel Heavy Railguns\n2x Missile Boxes\n<b>Requires:</b>\nCapital Production Facility\nLight Cruiser Chassis Research", },
 {
         Type = Ship,
         ThingToBuild = "hgn_heavybattlecruiser",
@@ -550,7 +542,7 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 121,
         DisplayedName = "Heavy Cruiser",
-        Description = "<b>Type: Heavy Cruiser</b>\n<b>Classname: Ironclad</b>\n<b>Description:</b>\n\nThis cruiser is truly powerful in most any situation, it is an invaluable asset.\n\n<b>Armed With:</b>\n2x Heavy Railgun\n2x Heavy Gatling Gun\n2x Sixtuplet Plasma Pulse\n1x Missile Box\n1x PPC Turret\n2x Nuclear Missile Bays\n2x Flak Cannons\n<b>Requires:</b>\nCapital Production, Battlecruiser Chassis", },
+        Description = "<b>Type: Heavy Cruiser</b>\n<b>Classname: Ironclad</b>\n<b>Description:</b>\n\nThis cruiser is truly powerful in most any situation, it is an invaluable asset.\n\n<b>Armed With:</b>\n2x Heavy Railgun\n2x Heavy Gatling Gun\n2x 6x-Barrel Plasma Pulse\n1x Missile Box\n1x PPC Turret\n2x Nuclear Missile Bays\n2x Flak Cannons\n<b>Requires:</b>\nCapital Production Facility\nBattlecruiser Chassis Research", },
 {
         Type = Ship,
         ThingToBuild = "Hgn_Battlecruiser",
@@ -558,7 +550,7 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 120,
         DisplayedName = "$7060",
-        Description = "<b>Type: Heavy Battlecruiser</b>\n<b>Classname: Trafalgar</b>\n<b>Description:</b>\n\nThe Trafalgar is a massive cruiser built to instill terror in its enemies. With its Speed, armor, and weaponry, a lone trafalgar can take out an weakly defended planet.\n\n<b>Armed With:</b>\n2x Heavy Railgun Turrets\n2x FZ-99 Gatling Turrets\n2x 6x Barrel Plasma Batteries\n3x Torpedo Launcher Bays\n3x PPC Turret\n4x Heavy Flak\n4x Barrel DC Turrets\n2x Missile Boxes\n1x 2x Barrel Particle Projector\n<b>Requires:</b>\nCapital Production, Battlecruiser Chassis", },
+        Description = "<b>Type: Heavy Battlecruiser</b>\n<b>Classname: Trafalgar</b>\n<b>Description:</b>\n\nThe Trafalgar is a massive cruiser built to instill terror in its enemies. With its Speed, armor, and weaponry, a lone trafalgar can take out an weakly defended planet.\n\n<b>Armed With:</b>\n2x Heavy Railgun Turrets\n2x FZ-99 Gatling Turrets\n2x 6x-Barrel Plasma Batteries\n3x Torpedo Launcher Bays\n3x PPC Turrets\n4x Heavy Flak Turrets\n4x 4x-Barrel DC Turrets\n2x Missile Boxes\n1x 2x-Barrel Particle Projectors\n<b>Requires:</b>\nCapital Production Facility\nBattlecruiser Chassis Research", },
  {
         Type = Ship,
         ThingToBuild = "Hgn_Battleship",
@@ -566,15 +558,15 @@ build =
         RequiredShipSubSystems = "CapShipProduction",
         DisplayPriority = 122,
         DisplayedName = "Battleship",
-        Description = "<b>Type: Super-Heavy Cruiser</b>\n<b>Classname: Valencia</b>\n<b>Description:</b>\n\nThe Valencia is nothing more than a scaled up Trafalgar Chassis, with more weaponry, larger reactors, and heavier armor. It was designed to smash any and ALL resistance in its path. Its brilliant commanders, UNCG Elite Guards, and its armament allows a cruiser of this magnitude to be able to smash an entire defended world into bits.\n\n<b>Armed With:</b>\n2x Heavy Railgun Turrets\n2x FZ-99 Gatling Turrets\n2x 6x Barrel Plasma Batteries\n2x Missile Boxes\n1x 2x Barrel Particle Projector\n<b>Requires:</b>\nCapital Production, Battlecruiser Chassis", },
+        Description = "<b>Type: Super-Heavy Cruiser</b>\n<b>Classname: Valencia</b>\n<b>Description:</b>\n\nThe Valencia is nothing more than a scaled up Trafalgar Chassis, with more weaponry, larger reactors, and heavier armor. It was designed to smash any and ALL resistance in its path. Its brilliant commanders, UNCG Elite Guards, and its armament allows a cruiser of this magnitude to be able to smash an entire defended world into bits.\n\n<b>Armed With:</b>\n2x Heavy Railgun Turrets\n2x FZ-99 Gatling Turrets\n2x 6x-Barrel Plasma Batteries\n2x Missile Boxes\n1x 2x-Barrel Particle Projector\n<b>Requires:</b>\nCapital Production Facility\nBattlecruiser Chassis Research", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_PulsarPlatform",
         RequiredResearch = "PlatformIonWeapons",
         RequiredShipSubSystems = "PlatformProduction",
         DisplayPriority = 142,
-        DisplayedName = "Laser Sentry",
-        Description = "<b>Type: Mobile Platform</b>\n<b>Classname: None</b>\n<b>Description:</b>\n\nThe Laser Sentry is a good Anti-Fighter/Corvette Platform. Originally designed for the Trafalgar, the Sniper-laser can take out several fighters at long range, and can create an effective defense.\n\n<b>Armed with:</b>\n2x Sniper Laser", },
+        DisplayedName = "Sniper Sentry",
+        Description = "<b>Type: Mobile Platform</b>\n<b>Description:</b>\n\nThe Sniper Sentry is a great anti-Fighter/Corvette defense Platform. Originally designed for the Trafalgar, this platform can shoot down multiple squadrons before the enemy comes within firing distance.\n\n<b>Armed with:</b>\n2x Sniper Lasers\n\n<b>Requires:</b>\nPlatform Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_GunTurret",
@@ -582,7 +574,7 @@ build =
         RequiredShipSubSystems = "PlatformProduction",
         DisplayPriority = 141,
         DisplayedName = "Gatling Sentry",
-        Description = "<b>Type: Mobile Platform</b>\n<b>Classname: None</b>\n<b>Description:</b>\n\nThe Gatling Sentry Keeps Fighters and Corvettes that manage to slip by sniper defense, and maul them down with 4500 Degree hot plasma shells.\n\n<b>Armed with:</b>\n2x FT-01 Gatling Turrets", },
+        Description = "<b>Type: Mobile Platform</b>\n<b>Description:</b>\n\nThe Gatling Sentry shoots any Fighters and Corvettes that get through Sniper-Defense with 4500 Degree shells.\n\n<b>Armed with:</b>\n2x FT-01 Gatling Turrets\n\n<b>Requires:</b>\nPlatform Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_IonTurret",
@@ -590,7 +582,7 @@ build =
         RequiredShipSubSystems = "PlatformProduction",
         DisplayPriority = 143,
         DisplayedName = "Ion Beam Sentry",
-        Description = "<b>Type: Mobile Platform</b>\n<b>Classname: None</b>\n<b>Description:</b>\n\nThe Ion Sentry Supports two PPC-ION cannons that can mow down frigates and destroyers at long range. Great to keep Boarding frigates out of the way.\n\n<b>Armed with:</b>\n2x PPC-ION Turrets", },
+        Description = "<b>Type:Mobile Platform</b>\n<b>Description:</b>\n\nThe Ion Sentry sports two PPC-ION Turrets that can mow down Frigates and Destroyers at long range. Great at keeping Boarding Frigates out of the way.\n\n<b>Armed with:</b>\n2x PPC-ION Turrets\n\n<b>Requires:</b>\nPlatform Production Facility", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_ResourceCollector",
@@ -598,15 +590,15 @@ build =
         RequiredShipSubSystems = "",
         DisplayPriority = 120,
         DisplayedName = "$7066",
-        Description = "<b>Type: Multi-Purpose Utility Ship</b>\n<b>Classname: Digger</b>\n<b>Description:</b>\n\nThe Digger is a multi-purpose utility ship that can extract materials from asteroids and haul them back to a refinery, and can also grab debris and recycle it into resources. The Digger can also repair ships that have taken heavy damage in the field.\n\n<b>Armed with:</b>\nNothing.", },
+        Description = "<b>Type: Resource Collector</b>\n<b>Description:</b>\n\nBasic utility ship. Can gather Resources for conversion into Resource Units.\n\n<b>Armed with:</b>\nRepair Tools (Once Upgraded)<b>Requires:</b>\nNothing", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_ResourceController",
         RequiredResearch = "",
         RequiredShipSubSystems = "",
         DisplayPriority = 130,
-        DisplayedName = "$7068",
-        Description = "<b>Type: Mobile Resource Refinery</b>\n<b>Classname: Pacer</b>\n<b>Description:</b>\n\nThe Pacer serves as a mobile resource collection point that can dock up to 2 resource collectors at a time.\n\n<b>Armed with:</b>\n4x Vulcan Turret\n1x FT-2 Minigun Turret", },
+        DisplayedName = "UNCG Resource Collector",
+        Description = "<b>Type: Mobile Resource Refinery</b>\n<b>Codename: Pacer</b>\n\n<b>Description:</b>\n\nThe Pacer serves as a mobile resource collection point that can dock up to 2 resource collectors at a time.\n\n<b>Armed with:</b>\n4x Vulcan Turret\n1x FT-2 Minigun Turret\n<b>Requires:</b>\nNothing", },
     {
         Type = Ship,
         ThingToBuild = "Hgn_Probe",

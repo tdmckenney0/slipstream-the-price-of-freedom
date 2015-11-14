@@ -29,21 +29,6 @@ research =
 		TargetName = 		"Hgn_Mothership",
 	},
 
-
-		{
-		Name =					"GraviticAttractionMines",
-		RequiredResearch =		"",
-		RequiredSubSystems =	"AdvancedResearch & CorvetteProduction",
-		Cost = 					0,
-		Time = 					0,
-		DisplayedName =			"$7500",
-		DisplayPriority =		2,
-		Description =			"$7501",
-		TargetName = 		"Hgn_MinelayerCorvette",
-		Icon = Icon_Tech,
-		ShortDisplayedName = "$7200",
-	},
-
 	{
 		Name =					"PlatformIonWeapons",
 		Required =		"",
@@ -192,42 +177,6 @@ research =
         		UpgradeName =			"SensorPing",
 		Icon = Icon_Ability,
 		ShortDisplayedName = "$7206",
-        },
-
-
-	{
-		Name =					"ImprovedTorpedo",
-		RequiredResearch =		"",
-		RequiredSubSystems =		"Research | AdvancedResearch & FrigateProduction",
-		Cost = 					0,
-		Time = 					0,
-		DisplayedName =			"$7515",
-		DisplayPriority =		29,
-		Description =			"$7516",
-		UpgradeType =			Ability,
-		TargetType =			Ship,
-		TargetName =			"Hgn_TorpedoFrigate",
-		UpgradeName =			"UseSpecialWeaponsInNormalAttack",
-		Icon = Icon_Ability,
-		ShortDisplayedName = "$7207",
-	},
-
-
-	{
-		Name =					"AttackBomberImprovedBombs",
-		RequiredResearch =		"",
-		RequiredSubSystems =		"Research | AdvancedResearch",
-		Cost = 					1500,
-		Time = 					45,
-		DisplayedName =			"$7517",
-		DisplayPriority =		30,
-		Description =			"$7518",
-		UpgradeType =			Ability,
-		TargetType =			Ship,
-		TargetName =			"Hgn_AttackBomber",
-        UpgradeName =				"UseSpecialWeaponsInNormalAttack",
-		Icon = Icon_Ability,
-		ShortDisplayedName = "$7208",
 	},
 
 

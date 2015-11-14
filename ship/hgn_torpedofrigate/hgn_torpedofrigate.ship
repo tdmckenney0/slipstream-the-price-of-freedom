@@ -156,7 +156,7 @@ StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK","Weapon","Innate","In
 StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK2","Weapon","Innate","Indestructible","hgn_mountedflak","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"T","Hardpoint_MB","Weapon","Innate","Indestructible","hgn_missilebayfrigate","","","","","","","","");
 
-StartShipWeaponConfig(NewShipType, "Hgn_DestroyerTorpedoLauncher", "weapon_Torpedo", "")
+StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "weapon_Torpedo", "")
 
 addShield(NewShipType, "EMP", 310, 20);
 NewShipType["battleScarMaxTriBase"]=75;
