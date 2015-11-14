@@ -1,20 +1,20 @@
 StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","Plasma_Gat","Normal",1200,2200,0,0,0,0,1,1,1,0.1,0,0,1,1,120,120,0.1,"Normal",1,0,0)
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",5,10,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",25,25,"")
 
 setPenetration(NewWeaponType,5,0,
 {Unarmoured=1},
-{LightArmour=0.5},
-{MediumArmour=0.2},
-{HeavyArmour=0.05},
-{SubSystemArmour=0.5},
+{LightArmour=0.7},
+{MediumArmour=0.5},
+{HeavyArmour=0.2},
+{SubSystemArmour=0.1},
 {TurretArmour=0.25},
 {PlanetKillerArmour=0},
 {ResArmour=0.8});
 
 setAccuracy(NewWeaponType,0.3,
-{Fighter = 0.5, damage = 1,},
-{Corvette = 0.6, damage = 1,},
-{Frigate = 0.9, damage = 1,},
+{Fighter = 0.8, damage = 5,},
+{Corvette = 0.9, damage = 1.2,},
+{Frigate = 0.7, damage = 1,},
 {SmallCapitalShip = 0.3, damage = 1,},
 {BigCapitalShip = 0.3, damage = 1,},
 {SubSystem = 0.3, damage = 1,},

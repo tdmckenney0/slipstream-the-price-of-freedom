@@ -256,7 +256,7 @@ addPebble("Pebble_0", {10000, 5809, -10876,}, 0, 0, 0)
   fogSetDensity(.70)
   setGlareIntensity(0)
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("m05")
+  loadBackground("supernova")
   setSensorsManagerCameraDistances(12000, 60000)
   setDefaultMusic("Data:sound/music/battle/battle_keeper")
 end

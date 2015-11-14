@@ -473,7 +473,7 @@ build =
         Description = "<b>Type: Destroyer</b>\n<b>Codename: Resolute</b>\n<b>Description:</b>\n\nThe Resolute is the workhorse of small battles and outer partrol. Originally, the design came from the old Solar System wars, and was refitted when the UNCG needed a Destroyer class vessel.\n\n<b>Armed With:</b>\n1x Railgun\n2x Heavy Gatling Gun\n1x Sixtuplet Plasma Pulse\nNuclear Missiles\n<b>Requires:</b>\nCapital Production, Destroyer Chassis", }, 
    { 
         Type = Ship, 
-        ThingToBuild = "Hgn_DestroyerHeavy", 
+        ThingToBuild = "hgn_heavydestroyer", 
         RequiredResearch = "DestroyerTech", 
         RequiredShipSubSystems = "CapShipProduction", 
         DisplayPriority = 117, 

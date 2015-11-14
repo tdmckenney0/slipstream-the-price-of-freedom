@@ -77,7 +77,7 @@ NewShipType.AutoFormationFamily = "CapShip"
 NewShipType.CollisionFamily = "Big"
 NewShipType.ArmourFamily = "HeavyArmour"
 NewShipType.UnitCapsFamily = "Capital"
-NewShipType.UnitCapsShipType = "Battlecruiser"
+NewShipType.UnitCapsShipType = "Battleship"
 NewShipType.fighterValue = 0
 NewShipType.corvetteValue = 0
 NewShipType.frigateValue = 80
@@ -170,11 +170,11 @@ StartShipWeaponConfig(NewShipType, "Hgn_DestroyerTorpedoLauncher", "Weapon_Nuke"
 addShield(NewShipType, "EMP", 10000, 20)
 --------------------------------------------------------------------
 -------------------------------------Main--Turrets
-StartShipHardPointConfig(NewShipType, "SCC_Turret", "Weapon_TurretTop", "System", "Innate", "Damageable", "Hgn_GatLing_Gun_large", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "SCC_Turret", "Weapon_TurretTop", "System", "Innate", "Damageable", "HGN_SCC_2xPulsar_Turret", "", "", "", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "SCC_Turret1", "Weapon_TurretTop2", "System", "Innate", "Damageable", "hgn_BD_Mpod", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "SCC_Turret2", "Weapon_TurretTop3", "System", "Innate", "Damageable", "HGN_SCC_2xPulsar_Turret", "", "", "", "", "", "", "", "")
+--StartShipHardPointConfig(NewShipType, "SCC_Turret2", "Weapon_TurretTop3", "System", "Innate", "Damageable", "Hgn_GatLing_Gun_large", "", "", "", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "SCC_Turret3", "Hardpoint_TurretBot1", "System", "Innate", "Damageable", "HGN_SCC_2xPulsar_Turret", "", "", "", "", "", "", "", "")
 
@@ -192,9 +192,9 @@ StartShipHardPointConfig(NewShipType, "SCC_Turret9", "Hardpoint_DCT_Bot1", "Syst
 
 StartShipHardPointConfig(NewShipType, "SCC_Turret10", "Hardpoint_DCT_Bot2", "System", "Innate", "Damageable", "Hgn_StrikeBattlecruiserRailBeamTurret", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "SCC_Turret11", "Hardpoint_DCT_Bot3", "System", "Innate", "Damageable", "Hgn_GatLing_Gun_large", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "SCC_Turret11", "Hardpoint_DCT_Bot3", "System", "Innate", "Damageable", "HGN_DC_4x_FLAK_Turret", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "SCC_Turret12", "Hardpoint_DCT_Bot4", "System", "Innate", "Damageable", "Hgn_GatLing_Gun_large", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "SCC_Turret12", "Hardpoint_DCT_Bot4", "System", "Innate", "Damageable", "HGN_DC_4x_FLAK_Turret", "", "", "", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "SCC_Turret13", "Hardpoint_DCT_Bot5", "System", "Innate", "Damageable", "Hgn_GatLing_Gun_large", "", "", "", "", "", "", "", "")
 

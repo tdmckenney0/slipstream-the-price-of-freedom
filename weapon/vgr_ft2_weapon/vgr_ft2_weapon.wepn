@@ -12,7 +12,7 @@ setPenetration(NewWeaponType,5,0,
 {ResArmour=0.8});
 
 setAccuracy(NewWeaponType,0.3,
-{Fighter = 0.3, damage = 1,},
+{Fighter = 0.5, damage = 5,},
 {Corvette = 0.5, damage = 1,},
 {Frigate = 0.8, damage = 1,},
 {SmallCapitalShip = 0.85, damage = 1,},

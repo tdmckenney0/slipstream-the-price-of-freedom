@@ -24,7 +24,7 @@ GameSetupOptions =
         default = 1, 
         visible = 1, 
         choices = 
-            { "$3215", "Small", "$3216", "Normal", "$3217", "Large", }, }, 
+            { "$3215", "Small", "$3216", "Normal", "$3217", "Large", "unlimited", "Unlimited"}, }, 
     { 
         name = "resstart", 
         locName = "$3205", 

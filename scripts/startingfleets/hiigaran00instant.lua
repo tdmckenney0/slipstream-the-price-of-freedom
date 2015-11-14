@@ -58,7 +58,7 @@ PersistantData = {
       number = 2,
  },
   {
-      type = "Hgn_DestroyerHeavy",
+      type = "hgn_heavydestroyer",
       name = "",
       size = 1,
       number = 2,

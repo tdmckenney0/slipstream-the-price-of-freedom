@@ -374,8 +374,16 @@ unitcapsShipType =
         numParam = 33, 
         stringParam = "$2127", }, 
     { 
-        name = "Shipyard", 
+        name = "Dreadnaught", 
         numParam = 34, 
+        stringParam = "$2127", }, 
+    { 
+        name = "Battleship", 
+        numParam = 35, 
+        stringParam = "$2127", }, 
+    { 
+        name = "Shipyard", 
+        numParam = 36, 
         stringParam = "$2128", }, 
     { 
         name = "HyperspacePlatform", 

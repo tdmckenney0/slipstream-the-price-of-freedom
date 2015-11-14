@@ -68,7 +68,7 @@ hgn_Sword_Cruiser = {
     stretchOnDraw = 1,
   },
 }
-hgn_DestroyerHeavy= {
+hgn_heavydestroyer= {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\ships\\hgn_DestroyerHeavy.tga",
     textureUV_TL = {
@@ -2448,3 +2448,4 @@ vgr_Frigate_Pulse_Left = Icon_Subsystem_HeavyCannonTurrets
 vgr_Frigate_Pulse_Right = Icon_Subsystem_HeavyCannonTurrets
 Hgn_MS_Production_Capital = Icon_Subsystem_CapShip
 hgn_monitor_ptrt = Icon_Subsystem_IonTurret
+hgn_scc_3xac_turret = Icon_Subsystem_RailTurret

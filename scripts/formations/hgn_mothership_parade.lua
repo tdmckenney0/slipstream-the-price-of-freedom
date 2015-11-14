@@ -57,7 +57,7 @@ paradeSlot("Sp_Tanker4",		{-1879, -781, 2468},	{0,0,1}, {0,1,0},      400);
 paradeSlot("Sp_Tanker3",		{-742, -381, 2468},	{0,0,1}, {0,1,0},      400);
 paradeSlot("Sp_Tanker5",		{-1303, -381, 2468},	{0,0,1}, {0,1,0},      400);
 paradeSlot("Sp_Tanker6",		{-1879, -381, 2468},	{0,0,1}, {0,1,0},      400);
-paradeSlot("Hgn_DestroyerHeavy",  		    {871, -448, 2406}, 	{0,0,1}, {1,0,0},      500);
+paradeSlot("hgn_heavydestroyer",  		    {871, -448, 2406}, 	{0,0,1}, {1,0,0},      500);
 --paradeSlot("",			    {871, -448, 2406}, 	{0,0,1}, {1,0,0},      500);
 paradeSlot("Hgn_Battlecruiser",		        {0, -750, 2500},	{0,0,1}, {0,1,0},      750);
 paradeSlot("Hgn_Destroyer",		    {-880, 500, 1516}, 	{0,0,1}, {1,0,0},      1000);

@@ -159,7 +159,7 @@ LoadModel(NewShipType,1)
 ------------------------------Main--Turrets
 StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTFront","System","Innate","Indestructible","HGN_SCC_6xAC_Turret","","","","","","","","");
 
---StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTBack","System","Innate","Indestructible","HGN_DC_2x_AC_Turret","","","","","","","","");
+--StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTBack","System","Innate","Indestructible","HGN_DC_4x_FLAK_Turret","","","","","","","","");
 
 StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTTop","System","Innate","Indestructible","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
 

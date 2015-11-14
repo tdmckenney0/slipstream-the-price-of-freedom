@@ -4,7 +4,7 @@ NewShipType.sobDescription = "Hannibal Class\nCapital Lineship"
 NewShipType.maxhealth=320000
 NewShipType.regentime=1500
 NewShipType.minRegenTime=1500
-NewShipType.sideArmourDamage=0.25
+NewShipType.sideArmourDamage=0.7
 NewShipType.rearArmourDamage=1
 NewShipType.isTransferable=0
 NewShipType.useEngagementRanges=1
@@ -162,7 +162,7 @@ StartShipHardPointConfig(NewShipType,"Upper_Center_Turret","Turret_UC","Weapon",
 
 StartShipHardPointConfig(NewShipType,"Upper_Back_Turret","Turret_UB","Weapon","Innate","Damageable","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Bottom_Center_Turret","Turret_BC","Weapon","Innate","Damageable","HGN_SCC_2xPulsar_Turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Bottom_Center_Turret","Turret_BC","Weapon","Innate","Damageable","hgn_scc_3xac_turret","","","","","","","","");
 
 StartShipHardPointConfig(NewShipType,"Left_Turret","Turret_L","Weapon","Innate","Damageable","HGN_DCT_HD_4x_Flak_L","","","","","","","","");
 

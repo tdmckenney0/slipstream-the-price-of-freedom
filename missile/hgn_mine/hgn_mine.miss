@@ -42,7 +42,7 @@ NewShipType.selectionPriority=30
 NewShipType.weaponName="Hgn_MineLayer"
 NewShipType.lifeTime=60
 NewShipType.launchTime=2
-NewShipType.detectionDistance=4000
+NewShipType.detectionDistance=5000
 NewShipType.sobDieTime=0.5
 NewShipType.density=1
 NewShipType.thrusterMaxSpeed=300
@@ -78,7 +78,7 @@ NewShipType.DockFamily="CantDock"
 NewShipType.AvoidanceFamily="DontAvoid"
 NewShipType.DisplayFamily="Munition"
 NewShipType.AutoFormationFamily="Fighter"
-NewShipType.ArmourFamily="MineArmour"
+NewShipType.ArmourFamily="LightArmour"
 LoadHODFile(NewShipType,1);
 NewShipType.trailLinger=0.25
 setEngineBurn(NewShipType,6,2,3,8,1.1,0.1,0.25,16);

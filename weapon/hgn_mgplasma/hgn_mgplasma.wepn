@@ -12,14 +12,14 @@ setPenetration(NewWeaponType,5,0,
 {ResArmour=1});
 
 setAccuracy(NewWeaponType,1.0,
-{Fighter = 0.09, damage = 1,},
-{Corvette = 0.10, damage = 1,},
+{Fighter = 0.5, damage = 5,},
+{Corvette = 0.7, damage = 1,},
 {Frigate = 0.9, damage = 1,},
-{SmallCapitalShip = 0.9, damage = 1.2,},
+{SmallCapitalShip = 0.95, damage = 1.2,},
 {BigCapitalShip = 1, damage = 1.25,},
 {SubSystem = 0.5, damage = 1,},
-{Munition = 0.7, damage = 1,},
-{Resource = 0.7, damage = 1,},
+{Munition = 0.5, damage = 1,},
+{Resource = 0.75, damage = 1,},
 {ResourceLarge = 1, damage = 1,})
 
 setAngles(NewWeaponType,0,-180,180,-5,90)

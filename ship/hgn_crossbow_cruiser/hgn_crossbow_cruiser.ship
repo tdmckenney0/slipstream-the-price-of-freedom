@@ -138,7 +138,7 @@ addAbility(NewShipType,"ShipHold",1,40,0,"rallypoint","",25)
 addAbility(NewShipType,"ParadeCommand",1)
 addAbility(NewShipType,"WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,0)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "Flyround", 
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "Strafe", 
 { 
     Fighter = "Flyround", 
 }, 
@@ -160,19 +160,19 @@ StartShipWeaponConfig(NewShipType, "Hgn_DestroyerTorpedoLauncher", "Weapon_Torpe
 
 
 ------------------------------Main--Turrets
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTFront","System","Innate","Indestructible","HGN_SCC_6xAC_Turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Indestructible","HGN_SCC_6xAC_Turret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTBack","System","Innate","Indestructible","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Indestructible","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTTop","System","Innate","Indestructible","HGN_SCC_2xPulsar_Turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Indestructible","HGN_SCC_2xPulsar_Turret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCTBottom","System","Innate","Indestructible","HGN_SCC_2xPulsar_Turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Indestructible","hgn_scc_3xac_turret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Turret_Bottom","System","Innate","Indestructible","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Indestructible","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCT_Left","System","Innate","Indestructible","Hgn_GatLing_Gun_large","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration6","Hardpoint_DCT_Left","System","Innate","Indestructible","HGN_DC_4x_FLAK_Turret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_DCT_Right","System","Innate","Indestructible","Hgn_GatLing_Gun_large","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration7","Hardpoint_DCT_Right","System","Innate","Indestructible","HGN_DC_4x_FLAK_Turret","","","","","","","","");
 
 
 addShield(NewShipType,"EMP",400,12)

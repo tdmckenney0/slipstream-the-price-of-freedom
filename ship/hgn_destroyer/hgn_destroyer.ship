@@ -155,9 +155,9 @@ StartShipHardPointConfig(NewShipType,"DC_Top_Front_Turret","Hardpoint_DCTFront",
 
 StartShipHardPointConfig(NewShipType,"DC_Top_Back_Turret","Hardpoint_DCTBack","System","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"DC_Top_Center_Turret","Hardpoint_DCTTop","System","Innate","Damageable","HGN_SCC_6xAC_Turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"DC_Top_Center_Turret","Hardpoint_DCTTop","System","Innate","Damageable","hgn_scc_3xac_turret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"DC_Bottom_Center_Turret","Hardpoint_DCTBottom","System","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"DC_Bottom_Center_Turret","Hardpoint_DCTBottom","System","Innate","Damageable","hgn_scc_3xac_turret","","","","","","","","");
 
 
 addShield(NewShipType,"EMP",400,12)

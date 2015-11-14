@@ -149,7 +149,7 @@ addPebble("Pebble_0", {10000, 5809, -10876,}, 0, 0, 0)
   fogSetDensity(0.00)
   setGlareIntensity(0.11)
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("m14")
+  loadBackground("tower_nebula")
   setSensorsManagerCameraDistances(12000, 60000)
   setDefaultMusic("Data:sound/music/battle/battle_04")
 end

@@ -19,7 +19,7 @@ GUID={110,
 	128,
 	214,
 	12};
-GameRulesName="TPOF: Mac Compatibility";
+GameRulesName="TPOF: Safe Mode";
 Description="Standard Homeworld 2 Script with attempts to make the advanced features in TPOF more Mac-friendly.";
 GameSetupOptions={{name="resources",
 locName="$3240",
