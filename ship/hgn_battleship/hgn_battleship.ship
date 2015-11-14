@@ -5,15 +5,15 @@
 --
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Battleship"
-NewShipType.sobDescription = "Freedom Class\nSuper-Heavy Battlecruiser"
+NewShipType.sobDescription = "Valencia Class\nSuper-Heavy Battlecruiser"
 NewShipType.maxhealth = 1250000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 2000
-NewShipType.sideArmourDamage = 0.9
-NewShipType.rearArmourDamage = 0.85
-NewShipType.topArmourDamage = 0.5
-NewShipType.bottomArmourDamage = 0.5
-NewShipType.frontArmourDamage = 0.75
+NewShipType.sideArmourDamage = 0.75
+NewShipType.rearArmourDamage = 0.7
+NewShipType.topArmourDamage = 0.45
+NewShipType.bottomArmourDamage = 0.45
+NewShipType.frontArmourDamage = 0.4
 NewShipType.isTransferable = 0
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 8
@@ -145,10 +145,10 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
 addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 25, 
 { 
-    Fighter = "12", 
+    Fighter = "600", 
 }, 
 { 
-    Corvette = "75", })
+    Corvette = "300", })
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "HyperSpaceCommand", 1, 0, 0, 0, 0, 0)

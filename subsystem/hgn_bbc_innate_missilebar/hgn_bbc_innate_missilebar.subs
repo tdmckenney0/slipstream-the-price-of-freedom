@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "4x4 Vertical Nuclear Missile Launcher"
-NewSubSystemType.sobDescription = "Innate Weapon\nVertical Nuclear Missile Silos."
+NewSubSystemType.displayedName = "4x4 Vertical Missile Launcher"
+NewSubSystemType.sobDescription = "Innate Weapon\nVertical Missile Silos."
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.1
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045
@@ -36,5 +36,5 @@ NewSubSystemType.AttackFamily = "SubSystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType, "hgn_StandardMissile", "Weapon_MBarR", "Fire_MBar")
+StartSubSystemWeaponConfig(NewSubSystemType, "hgn_SmallTorpedo", "Weapon_MBarR", "Fire_MBar")
 StartSubSystemWeaponConfig(NewSubSystemType, "hgn_BD_bigtorpedo", "Weapon_MBarL", "Fire_MBar")

@@ -35,6 +35,12 @@ PersistantData = {
          },
          name = "",
          size = 1,
+  },
+  {
+      type = "hgn_Assaultfrigate",
+      name = "",
+      size = 1,
+      number = 2,
       },
       {
          type = "hgn_destroyer",

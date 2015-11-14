@@ -136,7 +136,7 @@ NewShipType["launchTimeBetweenTwoFormations"]=1;
 NewShipType["launchTimeBeforeStart"]=2;
 NewShipType["launchNrOfShipsInDockFormation"]=1;
 NewShipType["launchFormation"]="delta";
-addAbility(NewShipType, "ShipHold", 1, 40, 10, "rallypoint", "Fighter,Corvette,Utility", 35, {SuperCap="2000"}, {Frigate="800"}, {Fighter="12"}, {Corvette="75"});
+addAbility(NewShipType, "ShipHold", 1, 160, 10, "rallypoint", "Fighter,Corvette,Utility", 600, {SuperCap="10000"}, {Frigate="2400"}, {Fighter="1200"}, {Corvette="600"});
 addAbility(NewShipType, "ParadeCommand", 1);
 addAbility(NewShipType, "WaypointMove");
 addAbility(NewShipType, "HyperSpaceCommand", 0, 0, 0, 0, 0, 0);

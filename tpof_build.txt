@@ -1,21 +1,24 @@
----THIS IS NOT A PUBLIC BUILD!---
+---Public Beta Build---
 Slipstream: The Price of Freedom
-Built on: 9:33 PM 5/17/2008
+Built on: 6:36 PM 6/4/2008
 Built By: SRI-Emperor
 Build System: Microsoft Windows Vista Ultimate x64 [Version 6.0.6000]
 	     AMD Athlon x2 @ 2.6 GHz, 2.5 GB RAM, Nvidia Geforce 8600 GT
 Build Folder: D:\Program Files (x86)\Sierra\Homeworld2-TPOF\Data\Compile
 Build Locale: United States, North America, English
-Build version: v1.01
+Build version: v1.3
 Hw2 Version: v1.1
-SubRealTech Version: v1.01b (Listed Build Tree Below)
+SubRealTech Version: v1.02 (Listed Build Tree Below)
  |- Post Epoch v2.0
  |       |-Homeworld 2 EX v2.0
  |       |-Modernization MOd
+ |       |-Bishopship
  |
- | - Bishopship
  | - Rehash Mod
  | - Axels mod 2.0
+
+--The Sub Real Tech layer is just a fancy term for the thread that ties the sub-mods together. (which is a lot of thread) 
+--eventually the mod will meld together as the build number goes up. Especially with data drops.
 
 Copyright SRI Corp 2008.
 Homeworld 2 Engine Copyright THQ and Relic Entertainment 2003-2008

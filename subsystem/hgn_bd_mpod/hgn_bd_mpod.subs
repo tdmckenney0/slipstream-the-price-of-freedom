@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "10 Tube Missile Pod"
-NewSubSystemType.sobDescription = "Auxiliary Missile System"
+NewSubSystemType.displayedName = "10x Torpedo Launcher"
+NewSubSystemType.sobDescription = "Auxiliary Torpedo System"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.1
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045
@@ -35,6 +35,5 @@ NewSubSystemType.AttackFamily = "SubSystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "MediumArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_BD_bigtorpedo","Weapon_Missile","Fire_Missile")
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_standardMissile","Weapon_Missile","Fire_Missile")
-
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_BD_bigtorpedo","Weapon_Missile","null")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_SmallTorpedo","Weapon_Missile","null")

@@ -1,13 +1,16 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Heavy Destroyer"
 NewShipType.sobDescription = "Hannibal Class\nCapital Lineship"
-NewShipType.maxhealth=320000
+NewShipType.maxhealth=400000
 NewShipType.regentime=1500
 NewShipType.minRegenTime=1500
-NewShipType.sideArmourDamage=0.7
-NewShipType.rearArmourDamage=1
-NewShipType.isTransferable=0
-NewShipType.useEngagementRanges=1
+NewShipType.sideArmourDamage = 0.95
+NewShipType.rearArmourDamage = 0.85
+NewShipType.topArmourDamage = 0.99
+NewShipType.bottomArmourDamage = 0.95
+NewShipType.frontArmourDamage = 0.75
+NewShipType.isTransferable=1
+NewShipType.useEngagementRanges=0
 NewShipType.unitCapsNumber=4
 NewShipType.SquadronSize=1
 NewShipType.passiveFormation="Spear"
@@ -15,8 +18,8 @@ NewShipType.defensiveFormation="x"
 NewShipType.aggressiveFormation="Claw"
 NewShipType.mass=600
 NewShipType.collisionMultiplier=1
-NewShipType.thrusterMaxSpeed = 100
-NewShipType.mainEngineMaxSpeed = 100
+NewShipType.thrusterMaxSpeed = 115
+NewShipType.mainEngineMaxSpeed = 115
 NewShipType.rotationMaxSpeed = 18
 NewShipType.thrusterAccelTime = 7
 NewShipType.thrusterBrakeTime = 2
@@ -137,8 +140,8 @@ NewShipType.launchNrOfShipsInDockFormation=1
 NewShipType.launchFormation="delta"
 addAbility(NewShipType,"ParadeCommand",1);
 addAbility(NewShipType,"WaypointMove");
-addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,0)
-addAbility(NewShipType,"CanAttack",1,1,0,1,0.35,1.5,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","Frontal",{Fighter="Flyround"},{Corvette="Flyround"},{Munition="Justshoot"},{BigCapitalShip="Flyround"});
+addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,0)
+addAbility(NewShipType,"CanAttack",1,1,0,1,0.35,1.5,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","Circlestrafe");
 addAbility(NewShipType,"GuardCommand",1,3000,800);
 addAbility(NewShipType,"HyperspaceViaGateCommand",1,3,1,0.3);
 addAbility(NewShipType,"CanBeCaptured",90,0.5);
@@ -146,23 +149,22 @@ addAbility(NewShipType,"CanBeRepaired");
 addAbility(NewShipType,"RetireAbility",1,1);
 addAbility(NewShipType, "MinelayerAbility", 1, 3.5)
 LoadModel(NewShipType,1);
+
 StartShipWeaponConfig(NewShipType,"Hgn_HDIonCannon","Weapon_IonCannon","Fire_IonCannons")
 
-addShield(NewShipType,"EMP",1000,20);
+addShield(NewShipType,"EMP",5000,20);
 
-StartShipHardPointConfig(NewShipType,"Center_Engine","Hardpoint_C_Engine","System","Innate","Damageable","Hgn_HDes_C_Eng","","","","","","","","");
+--StartShipHardPointConfig(NewShipType,"Center_Engine","Hardpoint_C_Engine","System","Innate","Damageable","Hgn_HDes_C_Eng","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Left_Engine","Hardpoint_L_Engine","System","Innate","Damageable","Hgn_HDes_L_Eng","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Center_Engine","Hardpoint_C_Engine","System","Innate","Damageable","hgn_des_engine","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Right_Engine","Hardpoint_R_Engine","System","Innate","Damageable","Hgn_HDes_R_Eng","","","","","","","","");
-
-StartShipHardPointConfig(NewShipType,"Upper_Front_Turret","Turret_UF","Weapon","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Upper_Front_Turret","Turret_UF","Weapon","Innate","Damageable","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
 
 StartShipHardPointConfig(NewShipType,"Upper_Center_Turret","Turret_UC","Weapon","Innate","Damageable","HGN_SCC_6xAC_Turret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Upper_Back_Turret","Turret_UB","Weapon","Innate","Damageable","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Upper_Back_Turret","Turret_UB","Weapon","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Bottom_Center_Turret","Turret_BC","Weapon","Innate","Damageable","hgn_scc_3xac_turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Bottom_Center_Turret","Turret_BC","Weapon","Innate","Damageable","CoilCannon_Medium","","","","","","","","");
 
 StartShipHardPointConfig(NewShipType,"Left_Turret","Turret_L","Weapon","Innate","Damageable","HGN_DCT_HD_4x_Flak_L","","","","","","","","");
 

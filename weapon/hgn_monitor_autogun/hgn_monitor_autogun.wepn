@@ -1,5 +1,9 @@
   StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","Kinetic_Small","Normal",1800,2200,0,0,0,0,1,1,1,1.5,0,0,1,1,120,120,0.1,"Normal",1,0,0)
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",30,30,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",150,200,"")
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"HGN_DC_FlakBurst")
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"HGN_DC_FlakBurst_ND")
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"HGN_DC_FlakBurst")
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"HGN_DC_FlakBurst_ND")
 
 setPenetration(NewWeaponType,5,0,
 {Unarmoured=1},
@@ -12,9 +16,9 @@ setPenetration(NewWeaponType,5,0,
 {ResArmour=0.8});
 
 setAccuracy(NewWeaponType,0,
-{Fighter = 0.05, damage = 1,},
-{Corvette = 0.2, damage = 1,},
-{Frigate = 0.3, damage = 1,},
+{Fighter = 0.5, damage = 1,},
+{Corvette = 0.65, damage = 1,},
+{Frigate = 0.8, damage = 1,},
 {SmallCapitalShip = 0, damage = 1,},
 {BigCapitalShip = 0, damage = 1,},
 {SubSystem = 0, damage = 1,},
@@ -22,6 +26,6 @@ setAccuracy(NewWeaponType,0,
 {Resource = 0.3, damage = 1,},
 {ResourceLarge = 0.3, damage = 1,})
 
-setAngles(NewWeaponType,0,-180,180,-10,90)
+setAngles(NewWeaponType,0,-180,180,0,90)
 setMiscValues(NewWeaponType,1.5,0.5)
 addAnimTurretSound(NewWeaponType,"Data:Sound/SFX/ETG/SPECIAL/SPECIAL_ABILITIES_TURRET_ON")

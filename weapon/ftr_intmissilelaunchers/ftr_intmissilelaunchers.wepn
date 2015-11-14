@@ -1,9 +1,0 @@
-StartWeaponConfig(NewWeaponType,"Fixed","Missile","Ftr_IntMissilesS","Normal",40,1500,0,0,0,2,1,0,0,15,0,0,0,0,0,0,0.1,"Normal",0,0,0)
-AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"Ftr_IntMissilesBurstS")
-AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"Ftr_IntMissilesBurstS")
-setPenetration(NewWeaponType,5,1,{
-  PlanetKillerArmour = 0,
-})
-setAccuracy(NewWeaponType,1)
-setAngles(NewWeaponType,180,0,0,0,0)
-setMiscValues(NewWeaponType,0,3)

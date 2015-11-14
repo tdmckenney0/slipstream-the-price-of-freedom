@@ -29,7 +29,7 @@ PersistantData = {
          },
          name = "",
          size = 1,
-         number = 4, 
+         number = 2, 
       },
       {
          type = "Vgr_Battlecruiser",

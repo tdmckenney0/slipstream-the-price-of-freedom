@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="SubSystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"Vgr_HeavyFusionMissileLauncher","Weapon_Missile","Weapon_Missile");
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_SmallTorpedo","Weapon_Missile","Weapon_Missile");

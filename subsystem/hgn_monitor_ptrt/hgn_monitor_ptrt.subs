@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "87mm Pulse Cannon "
-NewSubSystemType.sobDescription = "Monitor heavy gun"
+NewSubSystemType.displayedName = "Laser Cannon"
+NewSubSystemType.sobDescription = "LASER Cannon"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045

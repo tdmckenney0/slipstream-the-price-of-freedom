@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "UNCG EMP Corvette"
-NewShipType.sobDescription = "Python Class\nEMP Corvette"
+NewShipType.displayedName = "UNCG Pulsar Corvette"
+NewShipType.sobDescription = "Python Class\nPulsar Corvette"
 NewShipType.maxhealth = 7000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
@@ -158,7 +158,8 @@ addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadModel(NewShipType, 1)
-StartShipWeaponConfig(NewShipType, "hgn_EMPbeam_small", "Weapon_Pulsar", "Fire")
+StartShipWeaponConfig(NewShipType, "hgn_monitor_pulsar", "Weapon_Pulsar", "Fire")
+--StartShipWeaponConfig(NewShipType, "hgn_ioncannonturret", "Weapon_Pulsar", "Fire")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1

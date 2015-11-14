@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "Flak Cannon"
-NewSubSystemType.sobDescription = "Anti Fighter weapon"
+NewSubSystemType.displayedName = "Externel Weapon Mount"
+NewSubSystemType.sobDescription = "2x Flak Cannon"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045
@@ -34,13 +34,4 @@ NewSubSystemType.AttackFamily = "Frigate"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemSensors"
 NewSubSystemType.ArmourFamily = "MediumArmour"
-addAbility(NewShipType,"CanAttack",1,1,0,0,0.35,1.5,"Corvette, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Utility, Fighter","Frontal",{
-  Fighter = "FlyBy_Corvette_vs_Corvette",
-},{
-  Corvette = "FlyBy_Corvette_vs_Corvette",
-},{
-  Munition = "MoveToTargetAndShoot",
-},{
-  SubSystem = "FrontalVsSubSystem",
-})
 StartSubSystemWeaponConfig(NewSubSystemType,"hgn_monitor_autogun","Weapon_Bottom","Weapon_Bottom")

@@ -9,8 +9,8 @@ NewShipType.sobDescription = "Kruszchev Class\nNaval Destroyer"
 NewShipType.maxhealth = 350000
 NewShipType.regentime = 1500
 NewShipType.minRegenTime = 450
-NewShipType.sideArmourDamage = 0.75
-NewShipType.rearArmourDamage = 0.80
+NewShipType.sideArmourDamage = 0.65
+NewShipType.rearArmourDamage = 0.70
 NewShipType.frontArmourDamage = 0.65
 NewShipType.isTransferable = 0
 NewShipType.useEngagementRanges = 1
@@ -163,7 +163,7 @@ addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
 
-StartShipWeaponConfig(NewShipType, "Vgr_HeavyFusionMissileLauncherWeak", "Weapon_Missile", "Fire_Missle")
+StartShipWeaponConfig(NewShipType, "Vgr_HeavyMissile", "Weapon_Missile", "Fire_Missle")
 StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_Defence1", "")
 StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_Defence2", "")
 StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_Defence3", "")

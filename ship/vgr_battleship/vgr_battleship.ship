@@ -128,7 +128,7 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
 addAbility(NewShipType,"CanLaunch")
 addAbility(NewShipType, "MoveCommand", 1, 0);
-addAbility(NewShipType, "ShipHold", 1, 250, 20, "rallypoint", "Fighter,Corvette,Utility", 35, {Fighter="12"}, {Corvette="75"});
+addAbility(NewShipType, "ShipHold", 1, 250, 20, "rallypoint", "Fighter,Corvette,Utility", 35, {Fighter="600"}, {Corvette="300"});
 addAbility(NewShipType, "WaypointMove");
 addAbility(NewShipType, "CanDock", 1, 0)
 addAbility(NewShipType, "ParadeCommand",1)

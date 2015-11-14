@@ -1,13 +1,13 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Ranged Cruiser"
 NewShipType.sobDescription = "Crossbow Class\nLong Range Strike Cruiser "
-NewShipType.maxhealth = 240000
+NewShipType.maxhealth = 450000
 NewShipType.regentime = 850
 NewShipType.minRegenTime = 150
 NewShipType.sideArmourDamage = 1
 NewShipType.rearArmourDamage = 1
 NewShipType.isTransferable = 1
-NewShipType.useEngagementRanges = 0
+NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 3
 NewShipType.paradeData = "dummy_parade"
 NewShipType.SquadronSize = 1
@@ -166,7 +166,7 @@ StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System"
 
 StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Indestructible","HGN_SCC_2xPulsar_Turret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Indestructible","hgn_scc_3xac_turret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Indestructible","CoilCannon_Medium","","","","","","","","");
 
 StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Indestructible","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
 
@@ -174,6 +174,9 @@ StartShipHardPointConfig(NewShipType,"Calibration6","Hardpoint_DCT_Left","System
 
 StartShipHardPointConfig(NewShipType,"Calibration7","Hardpoint_DCT_Right","System","Innate","Indestructible","HGN_DC_4x_FLAK_Turret","","","","","","","","");
 
+StartShipHardPointConfig(NewShipType,"Calibration8","Hardpoint_PDS4","System","Innate","Indestructible","hgn_monitor_ptrt","","","","","","","","");
+
+StartShipHardPointConfig(NewShipType,"Calibration9","Hardpoint_PDS11","System","Innate","Indestructible","hgn_monitor_ptrt","","","","","","","","");
 
 addShield(NewShipType,"EMP",400,12)
 NewShipType.battleScarMaxTriBase = 75

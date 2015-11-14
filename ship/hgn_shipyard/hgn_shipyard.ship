@@ -8,8 +8,8 @@ NewShipType = StartShipConfig()
 NewShipType.displayedName="UNCG Super Carrier"
 NewShipType.sobDescription="Dawn Under Heaven Class\nTask Force Leader"
 NewShipType.maxhealth=1000000
-NewShipType.regentime=1500
-NewShipType.minRegenTime=1500
+NewShipType.regentime=180
+NewShipType.minRegenTime=60
 NewShipType.sideArmourDamage=1.2
 NewShipType.rearArmourDamage=1.2
 NewShipType.isTransferable=1
@@ -140,7 +140,7 @@ NewShipType.launchTimeBetweenTwoFormations=1
 NewShipType.launchTimeBeforeStart=2
 NewShipType.launchNrOfShipsInDockFormation=1
 NewShipType.launchFormation="delta"
-addAbility(NewShipType,"ShipHold",1,40,10,"rallypoint","Fighter,Corvette,Utility",25,{Fighter="12"},{Corvette="75"});
+addAbility(NewShipType,"ShipHold",1,160,10,"rallypoint","Fighter,Corvette,Utility",25,{Fighter="600"},{Corvette="500"});
 addAbility(NewShipType,"ParadeCommand",1);
 addAbility(NewShipType,"WaypointMove");
 addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,0);
@@ -154,10 +154,10 @@ addAbility(NewShipType,"CloakAbility",0,2,2000,4000,3,100,1,1000);
 addAbility(NewShipType,"RetireAbility",1,1);
 addAbility(NewShipType,"HyperspaceInhibitorAbility",0,12000);
 LoadModel(NewShipType,1);
-StartShipWeaponConfig(NewShipType,"hgn_StandardMissile","Weapon_HullDefense1","Weapon_HullDefense1");
-StartShipWeaponConfig(NewShipType,"hgn_StandardMissile","Weapon_HullDefense2","Weapon_HullDefense2");
-StartShipWeaponConfig(NewShipType,"hgn_StandardMissile","Weapon_HullDefense3","Weapon_HullDefense3");
-StartShipWeaponConfig(NewShipType,"hgn_StandardMissile","Weapon_HullDefense4","Weapon_HullDefense4");
+StartShipWeaponConfig(NewShipType,"hgn_SmallTorpedo","Weapon_HullDefense1","Weapon_HullDefense1");
+StartShipWeaponConfig(NewShipType,"hgn_SmallTorpedo","Weapon_HullDefense2","Weapon_HullDefense2");
+StartShipWeaponConfig(NewShipType,"hgn_SmallTorpedo","Weapon_HullDefense3","Weapon_HullDefense3");
+StartShipWeaponConfig(NewShipType,"hgn_SmallTorpedo","Weapon_HullDefense4","Weapon_HullDefense4");
 StartShipWeaponConfig(NewShipType,"Hgn_MSHullDefenseGun","Weapon_HullDefense1","Weapon_HullDefense1");
 StartShipWeaponConfig(NewShipType,"Hgn_MSHullDefenseGun","Weapon_HullDefense2","Weapon_HullDefense2");
 StartShipWeaponConfig(NewShipType,"Hgn_MSHullDefenseGun","Weapon_HullDefense3","Weapon_HullDefense3");
@@ -171,7 +171,7 @@ StartShipHardPointConfig(NewShipType,"Generic 1","HardpointGeneric1","Weapon","G
 StartShipHardPointConfig(NewShipType,"Generic 2","HardpointGeneric2","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_MS_Module_FireControl","Hgn_C_Module_build","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
 StartShipHardPointConfig(NewShipType,"Generic 3","Hardpoint_Subsystem3","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_MS_Module_FireControl","Hgn_C_Module_build","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
 StartShipHardPointConfig(NewShipType,"Generic 4","Hardpoint_Subsystem4","Weapon","Generic","Destroyable","","Hgn_MS_Module_Research","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_MS_Module_FireControl","Hgn_C_Module_build","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
-StartShipHardPointConfig(NewShipType,"Sensors 1","Hardpoint_Sensors","System","Sensors","Destroyable","","Hgn_C_Sensors_DetectHyperspace","Hgn_C_Sensors_AdvancedArray","Hgn_C_Sensors_DetectCloaked","","","","","");
+StartShipHardPointConfig(NewShipType,"Sensors 1","HardpointSensors1","System","Sensors","Destroyable","","Hgn_SY_Sensors_DetectHyperspace","Hgn_SY_Sensors_AdvancedArray","Hgn_SY_Sensors_DetectCloaked","","","","","");
 StartShipHardPointConfig(NewShipType,"Flak1","Hardpoint_FlakCannon","System","Innate","Damageable","Hgn_StrikeBattlecruiserRailBeamTurret","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Torp1","Hardpoint_TorpCannon","System","Innate","Damageable","HGN_SCC_2xPulsar_Turret","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"MG1","Weapon_MiniGun","Weapon","Innate","Damageable","Hgn_GatLing_Gun_large","","","","","","","","");

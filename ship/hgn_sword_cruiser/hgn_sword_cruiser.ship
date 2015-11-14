@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Combat Cruiser"
 NewShipType.sobDescription = "Excalibur Class\nClosed Quarter Combat Cruiser"
-NewShipType.maxhealth = 375000
+NewShipType.maxhealth = 475000
 NewShipType.regentime = 850
 NewShipType.minRegenTime = 150
 NewShipType.sideArmourDamage = 1

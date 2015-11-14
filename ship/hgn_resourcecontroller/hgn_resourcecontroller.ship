@@ -134,7 +134,7 @@ NewShipType.launchTimeBetweenTwoFormations = 1
 NewShipType.launchTimeBeforeStart = 2
 NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
-addAbility(NewShipType,"ShipHold",1,40,0,"rallypoint","",25)
+addAbility(NewShipType,"ShipHold",1,160,0,"rallypoint","",25)
 addAbility(NewShipType,"ParadeCommand",1)
 addAbility(NewShipType,"WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",0,1,300,500,0,3)
@@ -148,7 +148,7 @@ LoadModel(NewShipType,1)
 -------------------------------------------------
 StartShipHardPointConfig(NewShipType,"Generic 1","HardpointTurretTop1","Weapon","Generic","Damageable","hgn_gatling_gun","","","","","","","","")
  
-StartShipHardPointConfig(NewShipType,"Generic 2","HardpointTurretTop2","Weapon","Generic","Damageable","hgn_monitor_autogun1","","","","","","","","")
+--StartShipHardPointConfig(NewShipType,"Generic 2","HardpointTurretTop2","Weapon","Generic","Damageable","hgn_monitor_autogun1b","","","","","","","","")
 
 StartShipHardPointConfig(NewShipType,"Generic 3","HardpointAC","Weapon","Generic","Damageable","hgn_monitor_autogun1b","","","","","","","","")
 

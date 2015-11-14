@@ -1,0 +1,21 @@
+// 100 joints located.
+HIER_Add("RepairPoint0", "Root", 0, 50, 190, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("RepairPoint0Heading", "RepairPoint0", 0, 0, 10, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("RepairPoint0Up", "RepairPoint0", 0, 10, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("RepairPoint0Left", "RepairPoint0", 10, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("RepairPoint1", "Root", -42, 10, -170, 0, 90, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("RepairPoint1Heading", "RepairPoint1", 0, 0, 10, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("RepairPoint1Up", "RepairPoint1", 0, 10, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("RepairPoint1Left", "RepairPoint1", 10, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("RepairPoint2", "Root", 42, 10, -170, 0, -90, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("RepairPoint2Heading", "RepairPoint2", 0, 0, 10, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("RepairPoint2Up", "RepairPoint2", 0, 10, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("RepairPoint2Left", "RepairPoint2", 10, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("CapturePoint0", "Root", 0, 70, 150, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("CapturePoint0Heading", "CapturePoint0", 0, 0, 10, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("CapturePoint0Up", "CapturePoint0", 0, 10, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("CapturePoint0Left", "CapturePoint0", 10, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("CapturePoint1", "Root", 0, 120, -140, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("CapturePoint1Heading", "CapturePoint1", 0, 0, 10, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("CapturePoint1Up", "CapturePoint1", 0, 10, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);
+HIER_Add("CapturePoint1Left", "CapturePoint1", 10, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1);

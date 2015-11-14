@@ -97,7 +97,7 @@ addPebble("Pebble_0", {10000, 5809, -10876,}, 0, 0, 0)
   fogSetDensity(.40)
   setGlareIntensity(.30)
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("black")
+  loadBackground("system")
   setSensorsManagerCameraDistances(12000, 53000)
   setDefaultMusic("Data:sound/music/ambient/amb_12")
 end

@@ -15,7 +15,7 @@ NewShipType.topArmourDamage = 0.9
 NewShipType.bottomArmourDamage = 0.85
 NewShipType.frontArmourDamage = 0.35
 NewShipType.isTransferable = 0
-NewShipType.useEngagementRanges = 1
+NewShipType.useEngagementRanges = 0
 NewShipType.unitCapsNumber = 8
 NewShipType.paradeData = "vgr_carrier_parade"
 NewShipType.SquadronSize = 1
@@ -34,11 +34,11 @@ NewShipType.mainEngineBrakeTime = 40
 NewShipType.rotationAccelTime = 10
 NewShipType.rotationBrakeTime = 10
 NewShipType.thrusterUsage = 1
-NewShipType.accelerationAngle = 50
+NewShipType.accelerationAngle = 10
 NewShipType.mirrorAngle = 0
 NewShipType.secondaryTurnAngle = 0
-NewShipType.maxBankingAmount = 10
-NewShipType.descendPitch = 10
+NewShipType.maxBankingAmount = 45
+NewShipType.descendPitch = 35
 NewShipType.goalReachEpsilon = 25
 NewShipType.slideMoveRange = 350
 NewShipType.controllerType = "Ship"
@@ -145,25 +145,14 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
 addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 25, 
 { 
-    Fighter = "12", 
+    Fighter = "600", 
 }, 
 { 
-    Corvette = "75", })
+    Corvette = "300", })
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "HyperSpaceCommand", 0, 0, 0, 0, 0, 0)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "flyby", 
-{ 
-    Fighter = "MoveToTargetAndShoot", 
-}, 
-{ 
-    Corvette = "MoveToTargetAndShoot", 
-}, 
-{ 
-    Munition = "MoveToTargetAndShoot", 
-}, 
-{ 
-    SubSystem = "FrontalVsSubSystem", })
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "flyround_SwordCruiser_vs_capship")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
 addAbility(NewShipType, "CanBuildShips", 1,"Fighter_Vgr,  SubSystem_Vgr","Fighter, SubSystemModule")
 addAbility(NewShipType, "CanBeCaptured", 160, 0.1)
