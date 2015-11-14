@@ -1,10 +1,6 @@
 !!ARBfp1.0
 OPTION ARB_precision_hint_fastest;
 
-###################################################
-# Modified by CnlPepper to remove lighting stages #
-###################################################
-
 ATTRIB coordShadow = fragment.texcoord[0];    #shadow texture coordinates
 ATTRIB coordShip = fragment.texcoord[1];      #normal texture coordinates
 ATTRIB col0 = fragment.color.primary;	#diffuse interpolated color
@@ -20,12 +16,18 @@ TEMP R;
 
 #sample the textures
 TXP shadowAmount, coordShadow, texture[0], 2D;
+TEX glow, coordShip, texture[1], 2D;
 
 RCP R, coordShadow.w;
 MUL R, coordShadow.z, R;
 SGE shadowAmount, shadowAmount, R;
 MOV shadowAmount.a, col0.a;
 
+## lighting
+# compute specular
+MUL spec, col1, glow.b;
+ADD spec, spec, spec;
+ADD spec, spec, spec;
 ##shadow fade
 #invert
 SUB shadowColour, miscValues.z, shadowAmount;
@@ -38,8 +40,11 @@ SUB shadowColour, miscValues.z, shadowColour;
 #fade to no shadow
 LRP shadowColour, program.local[4].a, shadowColour, miscValues.z;
 
-# output shadow map
-MOV outColour, shadowColour;
+## put lighting in
+MUL prim, col0, shadowColour;
+MUL spec, spec, shadowColour;
+
+ADD outColour, prim, spec;
 MOV outColour.a, col0.a;
 
 END 

@@ -5,8 +5,8 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName="2xPulsar SCC Turret"
-NewSubSystemType.sobDescription="$2029"
+NewSubSystemType.displayedName="Lateral Plasma Cannon"
+NewSubSystemType.sobDescription="Broadside Assault Weapon"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
 NewSubSystemType.tacticalIconMinFadeSize=0.0045

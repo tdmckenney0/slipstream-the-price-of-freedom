@@ -166,6 +166,7 @@ StartShipWeaponConfig(NewShipType,"Hgn_MSHullDefenseGun","Weapon_HullDefense2","
 StartShipWeaponConfig(NewShipType,"Hgn_MSHullDefenseGun","Weapon_HullDefense3","Weapon_HullDefense3");
 StartShipWeaponConfig(NewShipType,"Hgn_MSHullDefenseGun","Weapon_HullDefense4","Weapon_HullDefense4");
 
+
 --Superweapon
 StartShipHardPointConfig(NewShipType,"HulkSmash!","Weapon_SmasherTube","Weapon","Generic","Destroyable","","Hgn_SC_Smashercalibration","","","","","","","");
 

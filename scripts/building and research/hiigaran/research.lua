@@ -1037,6 +1037,80 @@ research =
 	},
 
 	{
+		Name =				"HeavyDestroyerHealthUpgrade1",
+		RequiredResearch =		"DestroyerTech",                             -- <list of prerequisite research items>
+		RequiredSubSystems =		"Research | AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
+		Cost = 					1000,
+		Time = 					60,
+		DisplayedName =			"Heavy Destroyer Hull 1",
+		DisplayPriority =			411,                                                    -- <display priority (used to sort on screen)>,
+		Description =			"$7640",
+		UpgradeType =			Modifier,
+		TargetType =			Ship,
+		TargetName =			"Hgn_HeavyDestroyer",
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.3,
+		ShortDisplayedName = 		"Lvl. 1 H. Destroyer",
+		Icon = 				Icon_Health,
+	},
+
+	{
+		Name =				"HeavyDestroyerHealthUpgrade2",
+		RequiredResearch =		"HeavyDestroyerHealthUpgrade1",                 -- <list of prerequisite research items>
+		RequiredSubSystems =		"AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
+		Cost = 					1500,
+		Time = 					75,
+		DisplayedName =			"Heavy Destroyer Hull 2",
+		DisplayPriority =			411,                                                    -- <display priority (used to sort on screen)>,
+		Description =			"$7642",
+		UpgradeType =			Modifier,
+		TargetType =			Ship,
+		TargetName =			"Hgn_HeavyDestroyer",
+		UpgradeName =			"MAXHEALTH",
+		UpgradeValue =			1.6,
+		Icon = 				Icon_Health,
+		ShortDisplayedName = 		"Lvl. 2 H. Destroyer",
+	},
+
+	{
+		Name =					"HeavyDestroyerMAXSPEEDUpgrade1",
+		RequiredResearch =		"DestroyerTech",                             -- <list of prerequisite research items>
+		RequiredSubSystems =	"Research | AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
+		Cost = 					1000,
+		Time = 					30,
+		DisplayedName =			"Heavy Destroyer Engine 1",
+		DisplayPriority =		412,                                                   -- <display priority (used to sort on screen)>,
+		Description =			"$7644",
+		UpgradeType =			Modifier,
+		TargetType =			Ship,
+		TargetName =			"Hgn_HeavyDestroyer",
+		UpgradeName =			"MAXSPEED",
+		UpgradeValue =			1.2,
+		Icon = Icon_Speed,
+		ShortDisplayedName = "Lvl. 1 H. Destroyer",
+
+	},
+
+	{
+		Name =					"HeavyDestroyerMAXSPEEDUpgrade2",
+		RequiredResearch =		"DestroyerMAXSPEEDUpgrade1",                  -- <list of prerequisite research items>
+		RequiredSubSystems =	"AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>
+		Cost = 					1500,
+		Time = 					40,
+		DisplayedName =			"Heavy Destroyer Engine 1",
+		DisplayPriority =		412,                                                   -- <display priority (used to sort on screen)>,
+		Description =			"$7646",
+		UpgradeType =			Modifier,
+		TargetType =			Ship,
+		TargetName =			"Hgn_HeavyDestroyer",
+		UpgradeName =			"MAXSPEED",
+		UpgradeValue =			1.35,
+		Icon = Icon_Speed,
+		ShortDisplayedName = "Lvl. 2 H. Destroyer",
+
+	},
+
+	{
 		Name =					"CrossbowHealthUpgrade1",
 		RequiredResearch =		"LightCruisers",                             -- <list of prerequisite research items>
 		RequiredSubSystems =	"Research | AdvancedResearch & CapShipProduction",                         -- <list of prerequisite sub systems>

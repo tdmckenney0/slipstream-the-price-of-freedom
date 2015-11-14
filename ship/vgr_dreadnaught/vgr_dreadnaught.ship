@@ -184,6 +184,8 @@ StartShipHardPointConfig(NewShipType,"Ion1","Weapon_DreadTurret","System","Gener
 StartShipHardPointConfig(NewShipType,"Rail1","Hardpoint_TopRail","System","Generic","Damageable","Vgr_Railgun")
 StartShipHardPointConfig(NewShipType,"MissileT","Hardpoint_MpodT","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"MissileT2","Hardpoint_MpodT2","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Weapon Supress 1","Hardpoint_Plasma1","Weapon","Innate","Indestructible","vgr_plasmabatteryx4","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Weapon Supress 2","Hardpoint_Plasma2","Weapon","Innate","Indestructible","vgr_plasmabatteryx4","","","","","","","","")
 
 addShield(NewShipType, "EMP", 10000, 20)
 NewShipType.battleScarMaxTriBase = 175

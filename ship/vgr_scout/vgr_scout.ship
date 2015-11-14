@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Scout"
 NewShipType.sobDescription = "Seeker Class\nScouting Fighter"
-NewShipType.maxhealth = 2500
+NewShipType.maxhealth = 150
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1

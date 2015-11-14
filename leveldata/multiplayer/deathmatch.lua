@@ -51,27 +51,36 @@ GameSetupOptions =
             { "$3226", "random", "$3227", "fixed", }, },
   {
           name = "startwith",
-          locName = "Starting Fleet",
-          tooltip = "Choose A Fleet",
+          locName = "Starting Mode",
+          tooltip = "Choose A Starting Fleet",
           default = 0,
           visible = 1,
           choices =
           {
-              "Default", "one",
-              "Instant Action", "instant",
-              "Carrier Group", "carriers",
+              "Supercarrier", "one",
+              "Carriers", "carriers",
+			  "Instant Action", "instant",
           },
-  },
-{
+   },
+   {
+		name = "wincondition",
+		locName = "Win Condition",
+		tooltip = "select the condition for winning the game",
+		default = 0,
+		visible = 1,
+		choices =
+		{ "HW2 Normal", 0, "Kill Team Production", 1, "Kill All Enemy Ships", 2, "Quit Manually", 3, },
+	},
+    {
 		name = "bgmusic",
 		locName = "Music",
-		tooltip = "SELECT THE BACKGROUND MUSIC",
+		tooltip = "Select the background music",
 		default = 0,
 		visible = 1,
 		choices =
 		{
 			"Map Default", "null",
-			"Music Off", "staging\\Mute.fda",
+			"No Music", "staging\\Mute.fda",
 			"Shuffle", "shuffle",
 			"Main Menu Theme", "staging\\staging_01",
 			"Ambient No.1", "ambient\\amb_01",
@@ -92,7 +101,6 @@ GameSetupOptions =
 			"Battle - Keeper", "battle\\battle_keeper",
 			"Battle - Movers", "battle\\battle_movers",
 			"Battle - Planet Killers", "battle\\battle_planetkillers",
-			"Battle - Resistance", "staging\\The_Hand_That_Feeds",
 			"Battle - Sajuuk", "battle\\battle_sajuuk",
 			"Battle - Arrival", "battle\\battle_arrival",
 		},
@@ -122,75 +130,167 @@ function OnInit()
 		Rule_Add("PlayMusicRule")
 	end
 
+if (GetGameSettingAsNumber("wincondition") == 0) then
+			Rule_AddInterval("CheckPlayerProductionShipsLeftRule", 1)
+		elseif (GetGameSettingAsNumber("wincondition") == 1) then
+			Rule_AddInterval("CheckTeamProductionShipsLeftRule", 1)
+		elseif (GetGameSettingAsNumber("wincondition") == 2) then
+			Rule_AddInterval("CheckTeamAnyShipsLeftRule", 1)
+		end
+
 
     Rule_Add("MainRule")
 
    if (GetGameSettingAsString("startwith") == "one") then
           SetStartFleetSuffix("")
-      elseif (GetGameSettingAsString("startwith") == "instant") then
-          SetStartFleetSuffix("Instant")
       elseif (GetGameSettingAsString("startwith") == "carriers") then
           SetStartFleetSuffix("Carriers")
+	  elseif (GetGameSettingAsString("startwith") == "instant") then
+          SetStartFleetSuffix("instant")
       end
 end
 
+
+AnyPlayerIndex = 0
+
+-------------------------------------------------------------------------------
+-- Kills a player if the player has no production capability
+--
+function CheckPlayerProductionShipsLeftRule()
+	if ((Player_IsAlive(AnyPlayerIndex) == 1) and (Player_HasShipWithBuildQueue(AnyPlayerIndex) == 0)) then
+		Player_Kill(AnyPlayerIndex)
+	end
+	if (AnyPlayerIndex == (Universe_PlayerCount() - 1)) then
+		AnyPlayerIndex = 0
+	else
+		AnyPlayerIndex = AnyPlayerIndex + 1
+	end
+end
+
+-------------------------------------------------------------------------------
+-- Kills a player if no team member has any production capability
+--
+function CheckTeamProductionShipsLeftRule()
+	local bDead = 1
+	for otherPlayerIndex = 0, (Universe_PlayerCount() - 1) do
+		if ((AreAllied(AnyPlayerIndex, otherPlayerIndex) == 1) and (Player_IsAlive(otherPlayerIndex) == 1) and (Player_HasShipWithBuildQueue(otherPlayerIndex) == 1)) then
+			bDead = 0
+			break
+		end
+	end
+	if (bDead == 1) then
+		Player_Kill(AnyPlayerIndex)
+	end
+	if (AnyPlayerIndex == (Universe_PlayerCount() - 1)) then
+		AnyPlayerIndex = 0
+	else
+		AnyPlayerIndex = AnyPlayerIndex + 1
+	end
+end
+
+-------------------------------------------------------------------------------
+-- Kills a player if no team member has any ships
+--
+function CheckTeamAnyShipsLeftRule()
+	local bDead = 1
+	for otherPlayerIndex = 0, (Universe_PlayerCount() - 1) do
+		if ((AreAllied(AnyPlayerIndex, otherPlayerIndex) == 1) and (Player_IsAlive(otherPlayerIndex) == 1) and (Player_NumberOfShips(otherPlayerIndex) > 0)) then
+			bDead = 0
+			break
+		end
+	end
+	if (bDead == 1) then
+		Player_Kill(AnyPlayerIndex)
+	end
+	if (AnyPlayerIndex == (Universe_PlayerCount() - 1)) then
+		AnyPlayerIndex = 0
+	else
+		AnyPlayerIndex = AnyPlayerIndex + 1
+	end
+end
+
+-------------------------------------------------------------------------------
+-- counts the size of a player's fleet
+--
+function Player_NumberOfShips(iPlayer)
+	local iRace = Player_GetRace(iPlayer) + 1
+	local ShipCount = 0
+	dofilepath([[data:scripts/race.lua]])
+	dofilepath([[data:scripts/building and research/]] .. races[iRace][1] .. [[/build.lua]])
+	for i, iCount in build do
+		if (iCount.Type ~= 1) then
+			ShipCount = ShipCount + Player_GetNumberOfSquadronsOfTypeAwakeOrSleeping(iPlayer, iCount.ThingToBuild)
+		end
+	end
+	return ShipCount
+end
+
+-------------------------------------------------------------------------------
+-- returns the team number of the player (may be different than in the game-setup screen)
+--
+function Player_Team(iPlayer)
+	local TeamsTable = {}
+	for playerIndex = 0, (Universe_PlayerCount() - 1) do
+		local IsAllied = 0
+		for i = 1, getn(TeamsTable) do
+			if (AreAllied(playerIndex, TeamsTable[i]) == 1) then
+				IsAllied = 1
+				break
+			end
+		end
+		if (IsAllied == 0) then
+			tinsert(TeamsTable, playerIndex)
+		end
+	end
+	for i = 1, getn(TeamsTable) do
+		if (AreAllied(iPlayer, TeamsTable[i]) == 1) then
+			return i
+		end
+	end
+end
+
+
 function MainRule()
-    local playerIndex = 0
-    local playerCount = Universe_PlayerCount()
-    while  playerIndex<playerCount do
-        if  Player_IsAlive(playerIndex)==1 then
-            if  Player_HasShipWithBuildQueue(playerIndex)==0 then
-
-                Player_Kill(playerIndex)
-            end
-
-        end
-
-        playerIndex = (playerIndex + 1)
-    end
-
-    local numAlive = 0
-    local numEnemies = 0
-    local gameOver = 1
-    playerIndex = 0
-    while  playerIndex<playerCount do
-        if  Player_IsAlive(playerIndex)==1 then
-            local otherPlayerIndex = 0
-            while  otherPlayerIndex<playerCount do
-                if  AreAllied(playerIndex, otherPlayerIndex)==0 then
-                    if  Player_IsAlive(otherPlayerIndex)==1 then
-                        gameOver = 0
-                    else
-                        numEnemies = (numEnemies + 1)
-                    end
-
-                end
-
-                otherPlayerIndex = (otherPlayerIndex + 1)
-            end
-
-            numAlive = (numAlive + 1)
-        end
-
-        playerIndex = (playerIndex + 1)
-    end
-
-    if  numEnemies==0 and numAlive>0 then
-        gameOver = 0
-    end
-
-    if  gameOver==1 then
-        Rule_Add("waitForEnd")
-        Event_Start("endGame")
-        Rule_Remove("MainRule")
-    end
-
+	local numAlive = 0
+	local numEnemies = 0
+	local gameOver = 1
+	-- check to see if ALL of our enemies are dead, then gameOver
+	for playerIndex = 0, (Universe_PlayerCount() - 1) do
+		-- only process 'alive' players
+		if (Player_IsAlive(playerIndex) == 1) then
+			-- compare this player against all others
+			for otherPlayerIndex = 0, (Universe_PlayerCount() - 1) do
+				-- are enemies?
+				if (AreAllied(playerIndex, otherPlayerIndex) == 0) then
+					-- is the enemy alive - if so the game is still on
+					if (Player_IsAlive(otherPlayerIndex) == 1) then
+						gameOver = 0
+					else
+						numEnemies = numEnemies + 1
+					end
+				end
+			end
+			numAlive = numAlive + 1
+		end
+	end
+	-- special case - if there are no enemies then never end
+	if ((numEnemies == 0) and (numAlive > 0)) then
+		gameOver = 0
+	end
+	-- if gameOver flag is still set then the game is OVER
+	if (gameOver == 1) then
+		if (GetGameSettingAsNumber("enablestats") == 1) then
+			WriteStats()
+		end
+		Rule_Add("waitForEnd")
+		Event_Start("endGame")
+		Rule_Remove("MainRule")
+	end
 end
 
 function waitForEnd()
-    if  Event_IsDone("endGame") then
-        setGameOver()
-        Rule_Remove("waitForEnd")
-    end
-
+	if (Event_IsDone("endGame")) then
+		setGameOver()
+		Rule_Remove("waitForEnd")
+	end
 end

@@ -46,8 +46,8 @@ NewShipType.detectionDistance=1000
 NewShipType.proximityDetonationDist=500
 NewShipType.sobDieTime=0.5
 NewShipType.density=1
-NewShipType.thrusterMaxSpeed=512
-NewShipType.mainEngineMaxSpeed=512
+NewShipType.thrusterMaxSpeed=600
+NewShipType.mainEngineMaxSpeed=600
 NewShipType.rotationMaxSpeed=120
 NewShipType.thrusterAccelTime=0.8
 NewShipType.thrusterBrakeTime=0.5
@@ -81,7 +81,7 @@ NewShipType.DisplayFamily="Munition"
 NewShipType.AutoFormationFamily="Fighter"
 NewShipType.ArmourFamily="Unarmoured"
 LoadHODFile(NewShipType,1);
---setEngineTrail(NewShipType,0,15,"trail_ribbon.tga",0.2,0.5,0.025,8);
+setEngineTrail(NewShipType,0,15,"trail_ribbon.tga",0.2,0.5,0.025,8);
 setEngineBurn(NewShipType,15,0.5,1,15,0,0.7,0.1,25);
 loadShipPatchList(NewShipType,"data:sound/sfx/ship/vaygr/NonMilitary/Engines/"
                              ,0,"VMissleEng");

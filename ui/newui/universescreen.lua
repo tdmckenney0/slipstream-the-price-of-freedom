@@ -17,17 +17,16 @@ listPic.name = "frmMap"
 
 function toggPic(k)
 	local tCount = ""
-	for j, iCount in CreditsList do
+	for j, iCount in Universe do
 		local visiBool = 0
 		if (j == k) then
 			visiBool = 1
 		end
-		tCount = tCount..[[UI_SetElementVisible("CreditsScreen", "image]]..j..[[", ]]..visiBool..[[);]]
+		tCount = tCount..[[UI_SetElementVisible("UniverseScreen", "image]]..j..[[", ]]..visiBool..[[);]]
 	end
 	return tCount
 end
-
-for k, iCount in CreditsList do
+for k, iCount in Universe do
 	local visiBool = 0
 	if (k == 1) then
 		visiBool = 1
@@ -36,7 +35,7 @@ for k, iCount in CreditsList do
 	listBox[k] =
 	{
 		type = "ListBoxItem",
-		helpTip = iCount.creditsToolTip,
+		helpTip = iCount.universeToolTip,
 		helpTipTextLabel = "txtLblHELPTEXT",
 		autosize = 1,
 		name = "itemTutorialToClone"..k,
@@ -70,7 +69,7 @@ for k, iCount in CreditsList do
 				Text =
 				{
 					-- name of contributer
-					text = iCount.creditsName,
+					text = iCount.universeName,
 					textStyle = "FEButtonTextStyle",
 					color = {0,0,0,255},
 					hAlign = "Left",
@@ -93,7 +92,7 @@ for k, iCount in CreditsList do
 				Text =
 				{
 					-- details relating to contributer
-					text = iCount.creditsText,		
+					text = iCount.universeText,		
 					textStyle = "FEButtonTextStyle",
 					color = {255,255,255,255},
 					hAlign = "Left",
@@ -111,7 +110,7 @@ for k, iCount in CreditsList do
 		{
 			type = "Graphic",
 			-- file name and path of the image
-			texture = iCount.creditsImage,
+			texture = iCount.universeImage,
 			-- 1200x1600
 			textureUV = {0,0,484,388},
 		},

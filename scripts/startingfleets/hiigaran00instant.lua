@@ -5,82 +5,127 @@ PersistantData = {
       {
          type = "Hgn_SuperCarrier",
          subsystems = {
+		 {
+          index = 0,
+          name = "Hgn_SC_ProductionTrunk",
+        },
+        {
+          index = 0,
+          name = "Hgn_MS_Production_Corvette",
+        },
+        {
+          index = 0,
+          name = "Hgn_MS_Production_Frigate",
+        },
+        {
+          index = 0,
+          name = "hgn_sc_productioncapital",
+        },
+        {
+          index = 0,
+          name = "Hgn_MS_Production_Fighter",
+        },
+        {
+          index = 0,
+          name = "Hgn_SC_AdvResearch",
+        },
+        {
+          index = 0,
+          name = "Hgn_sc_Sensors_AdvancedArray",
+        },
+        {
+          index = 0,
+          name = "Hgn_MS_Module_PlatformControl",
+        },
          },
          shiphold = {
-{
-	   type = "Hgn_ResourceCollector",
-	   size = 1,
-                    },
-	  {
-	   type = "Hgn_ResourceCollector",
-	   size = 1,
-	  },
-	  {
-	   type = "Hgn_ResourceCollector",
-	   size = 1,
-	  },
-	  {
-	   type = "Hgn_ResourceCollector",
-	   size = 1,
-	  },
-	  {
-	   type = "Hgn_ResourceCollector",
-	   size = 1,
-	  },
-	  {
-	   type = "Hgn_ResourceCollector",
-	   size = 1,
-	  },
-         },
-         name = "Command Ship",
+	     },
+         name = "",
          size = 1,
       },
-      {
-         type = "hgn_Sword_Cruiser",
+	  {
+         type = "Hgn_ResourceCollector",
          subsystems = {
          },
          shiphold = {
          },
          name = "",
          size = 1,
-         number = 3,
-    },
-    {
-      type = "Hgn_Carrier",
-      name = "",
-      size = 1,
-      number = 3,
- },
-  {
-      type = "Hgn_Battlecruiser",
-      name = "",
-      size = 1,
-      number = 2,
- },
-  {
-      type = "hgn_heavybattlecruiser",
-      name = "",
-      size = 1,
-      number = 2,
- },
-  {
-      type = "hgn_heavydestroyer",
-      name = "",
-      size = 1,
-      number = 3,
- },
-  {
-      type = "hgn_Battleship",
-      name = "",
-      size = 1,
-      number = 1,
-  },
+         number = 6,
+      },
+	  {
+         type = "Hgn_resourcecontroller",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 1,
 
+      },
+      {
+         type = "Hgn_Carrier",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 1,
+	  },
+	  {
+         type = "Hgn_Battleship",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 1,
+	  },
+	  {
+         type = "Hgn_battlecruiser",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 2,
+
+		},
+		{
+         type = "hgn_assaultfrigate",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 5,
+		},
+		{
+         type = "hgn_attackbomber",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         number = 5,
+		},
+	  {
+         type = "hgn_sword_cruiser",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 2,
+
+	  },
    },
    Research = {
    },
 }
-
-
-
-

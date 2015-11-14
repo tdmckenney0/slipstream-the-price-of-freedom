@@ -1,68 +1,61 @@
 !!ARBfp1.0
 OPTION ARB_precision_hint_fastest;
 
-##################################################################
-# Modified by CnlPepper to implement bright specular reflections #
-##################################################################
+ATTRIB tex = fragment.texcoord[0];      #first set of texture coordinates
+ATTRIB col0 = fragment.color.primary;	#diffuse interpolated color
+ATTRIB col1 = fragment.color.secondary;	#specular interpolated color
+PARAM miscValues  = { 0, 0.5, 1, 2 };
 
-ATTRIB texPos		= fragment.texcoord[0];		# texture coordinate
-ATTRIB iDiff		= fragment.color.primary;	# texDiff interpolated color
-ATTRIB iSpec		= fragment.color.secondary;	# specular interpolated color
-PARAM misc		= { 0, 0.5, 1, 2 };
+OUTPUT outColour = result.color;
 
-OUTPUT outColour	= result.color;
+TEMP diffuse, glow, base, teamBaseColour, teamStripeColour;
+TEMP teamBaseAmount, teamStripeAmount, light, spec;
+TEMP unFoggedColour, fogColour;
 
-TEMP temp;
-TEMP texDiff, texGlow;
-TEMP normal;
-TEMP diffuse, specular;
-TEMP colBase, colStripe, nBase, nStripe, colour, final;
-TEMP fogColour;
+TEX diffuse, tex, texture[0], 2D;       #sample the texture
+TEX glow, tex, texture[1], 2D;        	#sample the texture
 
-### SAMPLE TEXTURES
-
-TEX texDiff, texPos, texture[0], 2D;
-TEX texGlow, texPos, texture[1], 2D;
-
-### CALCULATE GLOW AND DIFFUSE CONTRIBUTIONS (TEXTURE/VERTEX)
-
-MUL temp, texGlow.g, program.local[0];		# scale intensity by external glow colour multiplier
-ADD diffuse, iDiff, temp;
-
-### CALCULATE SPECULAR LIGHTING CONTRIBUTION (VERTEX)
-
-MUL specular, iSpec, texGlow.b;
-
-### GENERATE PRE-SHADING SURFACE COLOUR FROM BASE AND TEAM STRIPE COLOURS
-
+##adjust colour underlying base
 # make darker
-ADD temp, texDiff, misc.y;
-MUL colBase, temp, program.local[1];
-MUL colStripe, temp, program.local[2];
-
+ADD base, diffuse, miscValues.y;
+MUL teamBaseColour, base, program.local[0];
+MUL teamStripeColour, base, program.local[1];
 # make lighter
-SUB temp, texDiff, misc.y;
-ADD colBase, temp, colBase;
-ADD colStripe, temp, colStripe;
+SUB base, diffuse, miscValues.y;
+ADD teamBaseColour, base, teamBaseColour;
+ADD teamStripeColour, base, teamStripeColour;
 
-# compute amount of team colour needed
-SUB nBase, misc.z, texDiff.a;
-SUB nStripe, misc.z, texGlow.a;
+## compute amount of team colour needed
+SUB teamBaseAmount, miscValues.z, diffuse.a;
+SUB teamStripeAmount, miscValues.z, glow.a;
 
-# average the team colour and base texture
-LRP temp.rgb, nBase, colBase, texDiff;
-LRP colour, nStripe, colStripe, temp;
+##avaerge the team colour and base texture
+LRP base.rgb, teamBaseAmount, teamBaseColour, diffuse;
+LRP base.rgb, teamStripeAmount, teamStripeColour, base;
 
-### COMBINE LIGHTING AND SHADING
+## lighting
+# compute specular
+MUL spec, col1, glow.b;
+ADD spec, spec, spec;
+ADD spec, spec, spec;
+ADD spec, spec, spec;
+# compute amount of glow
+MUL light, miscValues.y, glow.g;
+#MUL light, light, glow.g;
+# average glow/level lighting
+LRP light, glow.g, light, col0;
+# add specular
+ADD light, light, spec;
 
-MUL temp, colour, diffuse;
-ADD final, temp, specular;
+## final colour
+MUL unFoggedColour.rgb, base, light;
 
-### APPLY FOG
+## fog
+MOV fogColour, program.local[2];
+MUL fogColour.a, fogColour, col0;
+LRP outColour.rgb, fogColour.a, fogColour, unFoggedColour;
 
-MOV fogColour, program.local[3];
-MUL fogColour.a, fogColour, iDiff;
-LRP outColour, fogColour.a, fogColour, final;
-MOV outColour.a, iDiff;				# repair alpha channel 
+##fade away as needed
+MOV outColour.a, col0;
 
 END 

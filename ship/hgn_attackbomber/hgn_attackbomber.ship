@@ -5,7 +5,7 @@
 --
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Attack Bomber"
-NewShipType.sobDescription = "Gettysburg Class\nAnti-Capital bomber"
+NewShipType.sobDescription = "Acolyte Class\nAnti-Super Capital bomber"
 NewShipType.maxhealth = 500
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
@@ -166,12 +166,12 @@ addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadModel(NewShipType,1)
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
-StartShipWeaponConfig(NewShipType, "rehash_Autogun_Light", "Weapon_L", "Fire")
-StartShipWeaponConfig(NewShipType, "rehash_Autogun_Light", "Weapon_R", "Fire")
-StartShipWeaponConfig(NewShipType, "rehash_Plasma_Bomb_Launcher", "Weapon_L", "Weapon_L")
-StartShipWeaponConfig(NewShipType, "rehash_Plasma_Bomb_Launcher", "Weapon_R", "Weapon_R")
-StartShipWeaponConfig(NewShipType, "hgn_smalltorpedoftr", "Weapon_L", "Weapon_L")
-StartShipWeaponConfig(NewShipType, "hgn_smalltorpedoftr", "Weapon_R", "Weapon_R")
+StartShipWeaponConfig(NewShipType, "hgn_plasmabomb", "Weapon_L", "Weapon_L")
+StartShipWeaponConfig(NewShipType, "hgn_plasmabomb", "Weapon_R", "Weapon_R")
+StartShipWeaponConfig(NewShipType, "hgn_plasmabomb", "Weapon_S1", "Weapon_L")
+StartShipWeaponConfig(NewShipType, "hgn_plasmabomb", "Weapon_S2", "Weapon_R")
+StartShipWeaponConfig(NewShipType, "hgn_smalltorpedoftr", "Weapon_S1", "Fire")
+StartShipWeaponConfig(NewShipType, "hgn_smalltorpedoftr", "Weapon_S2", "Fire")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2

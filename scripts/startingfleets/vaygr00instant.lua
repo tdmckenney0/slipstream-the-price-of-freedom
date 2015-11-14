@@ -5,12 +5,41 @@ PersistantData = {
       {
          type = "Vgr_Shipyard",
          subsystems = {
+		{
+          index = 0,
+          name = "Vgr_MS_Production_Fighter",
+        },
+        {
+          index = 0,
+          name = "Vgr_MS_Production_Corvette",
+        },
+        {
+          index = 0,
+          name = "Vgr_MS_Production_Frigate",
+        },
+        {
+          index = 0,
+          name = "Vgr_SY_Production_CapShip",
+        },
+        {
+          index = 0,
+          name = "Vgr_MS_Module_Research",
+        },
+        {
+          index = 0,
+          name = "Vgr_MS_Module_PlatformControl",
+        },
+        {
+          index = 0,
+          name = "Vgr_MS_Sensors_AdvancedArray",
+        },
          },
          shiphold = {
          },
          name = "",
          size = 1,
       },
+
       {
          type = "Vgr_ResourceCollector",
          subsystems = {
@@ -21,46 +50,18 @@ PersistantData = {
          size = 1,
          number = 6,
       },
+
       {
-         type = "Vgr_Destroyer",
+         type = "Vgr_Carrier",
          subsystems = {
          },
          shiphold = {
          },
          name = "",
          size = 1,
-         number = 2, 
+         number = 1,
       },
-      {
-         type = "Vgr_Battlecruiser",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 2, 
-      },
-      {
-         type = "Vgr_Battleship",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 1, 
-      },
-      {
-         type = "Vgr_Dreadnaught",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 1, 
-      },
+
       {
          type = "vgr_resourcecontroller",
          subsystems = {
@@ -70,52 +71,60 @@ PersistantData = {
          name = "",
          size = 1,
          number = 1,
-   },
-
-      {
-         type = "vgr_Helios",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 3,
-   },
-{
-         type = "vgr_vanaarjet",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 1,
-   },
-{
-         type = "vgr_qwaarjetii",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 1,
-   },
-
-      {
-         type = "vgr_carrier",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 3,
 
       },
+	  {
+         type = "vgr_battleship",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 1,
 
-   },
+      },
+	  {
+         type = "vgr_battlecruiser",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 2,
+	  },
+	  {
+         type = "vgr_assaultfrigate",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 5,
+	   },
+	   		{
+         type = "vgr_bomber",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         number = 5,
+		},
+		{
+         type = "vgr_helios",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 2,
+
+	  },
+	},
    Research = {
    },
 }

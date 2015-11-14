@@ -152,29 +152,29 @@ Hgn_AttackBomberElite = {
     stretchOnDraw = 1,
   },
 }
-Hgn_BattleCruiser = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\icon_ships.mres", 
-        textureUV_TL = 
-            { 0, 64, }, 
-        textureUV_WH = 
-            { 172, 64, }, 
-        stretchOnDraw = 1, 
-}, 
+Hgn_BattleCruiser =
+{
+    LargeIcon =
+    {
+        texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
+        textureUV_TL =
+            { 0, 64, },
+        textureUV_WH =
+            { 172, 64, },
+        stretchOnDraw = 1,
+},
 }
-Hgn_Battleship = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\icon_ships.mres", 
-        textureUV_TL = 
-            { 0, 64, }, 
-        textureUV_WH = 
-            { 172, 64, }, 
-        stretchOnDraw = 1, 
-}, 
+Hgn_Battleship =
+{
+    LargeIcon =
+    {
+        texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
+        textureUV_TL =
+            { 0, 64, },
+        textureUV_WH =
+            { 172, 64, },
+        stretchOnDraw = 1,
+},
 }
 Hgn_Supercarrier = {
   LargeIcon = {
@@ -546,17 +546,17 @@ Hgn_TorpedoFrigateElite = {
     stretchOnDraw = 1,
   },
 }
-Hgn_Carrier = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\icon_ships.mres", 
-        textureUV_TL = 
-            { 0, 960, }, 
-        textureUV_WH = 
-            { 197, 64, }, 
-        stretchOnDraw = 1, 
-    }, 
+Hgn_Carrier =
+{
+    LargeIcon =
+    {
+        texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
+        textureUV_TL =
+            { 0, 960, },
+        textureUV_WH =
+            { 197, 64, },
+        stretchOnDraw = 1,
+    },
 }
 Kpr_AttackDroid = {
   LargeIcon = {
@@ -2400,6 +2400,7 @@ vgr_qwaarjetii = Vgr_BattleCruiser
 vgr_vanaarjet = Vgr_BattleCruiser
 vgr_gravityfrigate = Vgr_AssaultFrigate
 vgr_cloakingFrigate = Vgr_HeavyMissileFrigate
+hgn_railguncorvette = Hgn_PulsarCorvette
 Kpr_Mover_Capture = Kpr_Mover_Capture
 Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
 --SUBSYSTEMS
