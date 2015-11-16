@@ -288,21 +288,6 @@ Credits =
 				hAlign = "Center",
 			},
 },
-{
-		type = "Frame",
-		name = "Fade1",
-		visible = 1,
-		position = {0, 0},
-		size = {800, 600},
-		BackgroundGraphic = {
-			type = "Graphic",
-			size = {800, 600},
-			color =
-            { 255, 255, 255, 255, },
-			textureUV = {0,0,64,48},
-			texture = "data:/art/fx/fade/fade_in.anim",
-		},
-},
 },
 },
 {

@@ -182,7 +182,7 @@ NewMainMenu =
 },
 {
    type = "Frame",
-   name = "SRILogo",
+   name = "XiLogo",
    visible = 1,
    position =  { 384, 565},
    size = {32, 32},
@@ -194,6 +194,7 @@ NewMainMenu =
 	textureUV = {0,0,64,64},
 	texture = "Data:UI\\xi_logo.tga",
    },
+    onMouseClicked = [[UI_ShowScreen("CreditsScreen", eTransition)]],
 },
 {
     type = "TextButton",

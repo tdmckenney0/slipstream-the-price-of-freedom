@@ -1845,7 +1845,7 @@ research =
 	--Factory Upgrades
 	{
 		Name = "ShipyardHealthUpgrade1",
-		RequiredResearch = "",
+		RequiredResearch = "SCENABLED",
 		RequiredSubSystems = "Research | AdvancedResearch & Hyperspace",
 		Cost = 750,
 		Time = 30,
@@ -1879,7 +1879,7 @@ research =
 	},
 	{
 		Name = "ShipyardMAXSPEEDUpgrade1",
-		RequiredResearch = "",
+		RequiredResearch = "SCENABLED",
 		RequiredSubSystems = "Research | AdvancedResearch & Hyperspace",
 		Cost = 1500,
 		Time = 60,
@@ -1896,7 +1896,7 @@ research =
 	},
 	{
 		Name = "ShipyardBUILDSPEEDUpgrade1",
-		RequiredResearch = "",
+		RequiredResearch = "SCENABLED",
 		RequiredSubSystems = "AdvancedResearch & Hyperspace",
 		Cost = 1000,
 		Time = 40,
@@ -1914,7 +1914,7 @@ research =
 	
 	{
 		Name = "ShipyardUsePing",
-		RequiredResearch = "",
+		RequiredResearch = "SCENABLED",
 		RequiredSubSystems = "AdvancedResearch & Hyperspace & AdvancedArray |  CloakSensor | HyperspaceSensor",
 		Cost = 550,
 		Time = 30,
