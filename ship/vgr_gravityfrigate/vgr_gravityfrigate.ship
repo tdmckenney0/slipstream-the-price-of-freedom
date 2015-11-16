@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DOL Gravity Frigate"
+NewShipType.displayedName = "DSCG Gravity Frigate"
 NewShipType.sobDescription = "Trapper Class\nGravity Frigate"
 NewShipType.maxhealth = 50000
 NewShipType.regentime = 1200
@@ -143,7 +143,7 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "HyperSpaceCommand", 0, 0, 0, 0, 0, 0)
+addAbility(NewShipType,"HyperSpaceCommand",0,0,250,250,0,3.141592653);
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1.5, "Fighter, Corvette, Capturer, Frigate, Utility, SmallCapitalShip, BigCapitalShip", "justshoot")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600)
 addAbility(NewShipType, "HyperspaceInhibitorAbility", 1, 6000)

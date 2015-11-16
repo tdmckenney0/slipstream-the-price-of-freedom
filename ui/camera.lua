@@ -1,9 +1,9 @@
 nearClip = 3
 farClip = 9000000050000000.0
-verticalFOV = 45
+verticalFOV = 71 --was 70
 cameraDefaultMaxDistance = 7000
 cameraDistanceMax = 10000
-cameraDistanceMin = 2
+cameraDistanceMin = 5
 cameraMaxDeclination = deg((PI * 0.5 - 0.01))
 cameraMinDeclination = deg(-((PI * 0.5 - 0.01)))
 cameraTrackingAngleSpeedAuto = 0.05
@@ -17,7 +17,7 @@ CAM_CUBIC_EVAL_ANGLE_TWEAK = 2
 cameraFloatEnableTime = 3
 cameraFloatShape = 2
 cameraFloatFrequency = 0.2
-cameraFloatAmplitude = 
+cameraFloatAmplitude =
     { 0.15, 0.15, }
 cameraFloatDistanceFactor = 0.005
 cameraZoomFactor = 2.15

@@ -46,6 +46,7 @@ PersistantData = {
 	     },
          name = "",
          size = 1,
+		 number = 2,
       },
 	  {
          type = "Hgn_ResourceCollector",
@@ -86,7 +87,7 @@ PersistantData = {
          },
          name = "",
          size = 1,
-         number = 2,
+         number = 1,
 	  },
 	  {
          type = "Hgn_battlecruiser",
@@ -110,7 +111,7 @@ PersistantData = {
          number = 5,
 		},
 		{
-         type = "hgn_attackbomber",
+         type = "hgn_drone",
          subsystems = {
          },
          shiphold = {
@@ -129,6 +130,28 @@ PersistantData = {
          number = 2,
 
 	  },
+	  {
+         type = "hgn_Destroyer",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 2,
+
+	  },
+--	  {
+--         type = "uncg_supercarrier",
+ --        subsystems = {
+   --      },
+     --    shiphold = {
+       --  },
+         --name = "",
+         --size = 1,
+         --number = 1,
+
+--	  },
    },
    Research = {
 	[1] = {
@@ -169,6 +192,10 @@ PersistantData = {
     },
 	[10] = {
       name = "SensDisProbe",
+      progress = 1,
+    },
+	[11] = {
+      name = "SCENABLED",
       progress = 1,
     },
    },

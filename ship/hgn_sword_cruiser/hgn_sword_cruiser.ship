@@ -1,10 +1,10 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Combat Cruiser"
 NewShipType.sobDescription = "Excalibur Class\nClosed Quarter Combat Cruiser"
-NewShipType.maxhealth = 600000
+NewShipType.maxhealth = 500000
 NewShipType.regentime = 850
 NewShipType.minRegenTime = 150
-NewShipType.sideArmourDamage = 0.5
+NewShipType.sideArmourDamage = 0.85
 NewShipType.rearArmourDamage = 0.75
 NewShipType.topArmourDamage = 0.8
 NewShipType.bottomArmourDamage = 0.70
@@ -19,8 +19,8 @@ NewShipType.defensiveFormation = "x"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 100
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 100
-NewShipType.mainEngineMaxSpeed = 100
+NewShipType.thrusterMaxSpeed = 140
+NewShipType.mainEngineMaxSpeed = 150
 NewShipType.rotationMaxSpeed = 18
 NewShipType.thrusterAccelTime = 7
 NewShipType.thrusterBrakeTime = 2
@@ -142,16 +142,8 @@ NewShipType.launchFormation = "delta"
 addAbility(NewShipType,"ShipHold",1,40,0,"rallypoint","",25)
 addAbility(NewShipType,"ParadeCommand",1)
 addAbility(NewShipType,"WaypointMove")
-addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,0)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "flyround", 
-{ 
-    Fighter = "JustShoot", 
-}, 
-{ 
-    SubSystem = "BroadSideVsSubSystem", 
-}, 
-{ 
-    Corvette = "JustShoot", })
+addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653);
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "flyby_destroyer")
 
 addAbility(NewShipType, "GuardCommand", 1, 3000, 800)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
@@ -162,40 +154,40 @@ addAbility(NewShipType, "MinelayerAbility", 1, 3.5)
 LoadModel(NewShipType,1)
 
 ------------------------------Main--Turrets
-StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Indestructible","hgn_missileturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Damageable","hgn_missileturret","","","","","","","","");
 
---StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Indestructible","hgn_flakturret","","","","","","","","");
+--StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Damageable","hgn_flakturret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Indestructible","hgn_flakturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Damageable","hgn_flakturret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Indestructible","hgn_railgun","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Damageable","hgn_railgun","","","","","","","","");
 
---StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Indestructible","hgn_missileturret","","","","","","","","");
+--StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Damageable","hgn_missileturret","","","","","","","","");
 ------------------------------Side--Cannons
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP1","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP1","System","Innate","Damageable","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP2","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP2","System","Innate","Damageable","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP3","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP3","System","Innate","Damageable","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP4","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP4","System","Innate","Damageable","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP5","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Left_CP5","System","Innate","Damageable","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP1","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP1","System","Innate","Damageable","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP2","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP2","System","Innate","Damageable","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP3","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP3","System","Innate","Damageable","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP4","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP4","System","Innate","Damageable","hgn_lateralplasma","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP5","System","Innate","Indestructible","hgn_lateralplasma","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration","Hardpoint_Right_CP5","System","Innate","Damageable","hgn_lateralplasma","","","","","","","","");
 -----------------------------------PDS--Hardpoints
 
-StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS3","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"PDS_Back_Right","Hardpoint_PDS3","Weapon","Innate","Damageable","hgn_gatlinggunsmall","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"PDS_Back_Left","Hardpoint_Gat","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"PDS_Back_Left","Hardpoint_Gat","Weapon","Innate","Damageable","hgn_gatlinggunsmall","","","","","","","","");
 
 
 addShield(NewShipType,"EMP",400,12)

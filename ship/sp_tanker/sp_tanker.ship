@@ -6,14 +6,14 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "$1900"
 NewShipType.sobDescription = "$1901"
-NewShipType.maxhealth = 500000
+NewShipType.maxhealth = 650000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 2000
-NewShipType.sideArmourDamage = 0.9
-NewShipType.rearArmourDamage = 0.85
-NewShipType.topArmourDamage = 0.70
-NewShipType.bottomArmourDamage = 0.65
-NewShipType.frontArmourDamage = 0.70
+NewShipType.sideArmourDamage = 0.5
+NewShipType.rearArmourDamage = 0.5
+NewShipType.topArmourDamage = 0.65
+NewShipType.bottomArmourDamage = 0.3
+NewShipType.frontArmourDamage = 0.3
 NewShipType.isTransferable = 1
 NewShipType.useEngagementRanges = 0
 NewShipType.unitCapsNumber = 0
@@ -145,13 +145,25 @@ NewShipType.launchFormation = "delta"
 addAbility(NewShipType, "ShipHold", 1, 150, 0, "rallypoint", "", 150)
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "HyperSpaceCommand", 0, 1, 100, 600, 10, 15)
+addAbility(NewShipType,"HyperSpaceCommand",0,0,250,250,0,3.141592653);
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Fighter, Corvette, Frigate, SmallCapitalShip, BigCapitalShip, Mothership", "JustShoot")
 NewShipType.active = 1
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 LoadModel(NewShipType, 1)
-StartShipWeaponConfig(NewShipType, "Hgn_MSHullDefenseGun", "Weapon_HullDefense1", "Weapon_HullDefense1")
-StartShipWeaponConfig(NewShipType, "Hgn_TransportHullDefenseGun", "Weapon_HullDefense2", "Weapon_HullDefense2")
+
+StartShipWeaponConfig(NewShipType, "Hgn_hulldefensegun", "Weapon_HullDefense1", "Fire_HullDefense1")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense2", "Fire_HullDefense2")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense3", "Fire_HullDefense3")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense4", "Fire_HullDefense4")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense5", "Fire_HullDefense5")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense6", "Fire_HullDefense6")
+
+StartShipHardPointConfig(NewShipType,"Missilebar","Missilebar","Weapon","Innate","Damageable","hgn_BBC_innate_missilebar")
+StartShipHardPointConfig(NewShipType,"Weapon_Gat1","Weapon_Gat1","Weapon","Generic","indestructible","hgn_gatlinggunleft","","","")
+StartShipHardPointConfig(NewShipType,"Weapon_Gat2","Weapon_Gat2","Weapon","Generic","indestructible","hgn_gatlinggunright","","","")
+StartShipHardPointConfig(NewShipType,"HpBL_01","HpBL_01","Weapon","Generic","indestructible","hgn_flakturretleft","hgn_BD_CannonTurret","hgn_BD_QuadCannon","hgn_BD_ionbeamturret")
+StartShipHardPointConfig(NewShipType,"HpBL_02","HpBL_02","Weapon","Generic","indestructible","hgn_flakturretright","hgn_BD_CannonTurret2","hgn_BD_QuadCannon2","hgn_BD_ionbeamturret2")
+
 NewShipType.battleScarMaxTriBase = 500
 NewShipType.battleScarMaxTriInc = 1000
 NewShipType.sobDieTime = 3.6

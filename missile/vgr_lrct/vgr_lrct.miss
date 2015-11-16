@@ -1,3 +1,4 @@
+
 --===========================================================================
 --  Purpose : Lua definition file for Homeworld Ship.
 --            Contains loading information and flight dynamics information (among other things?)
@@ -5,8 +6,8 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewShipType = StartMissileConfig()
-NewShipType.displayedName="Long Range Torpedo"
-NewShipType.sobDescription="Big Bang"
+NewShipType.displayedName="$1579"
+NewShipType.sobDescription="$1580"
 NewShipType.TOScale=1
 NewShipType.TODistanceFade0=7000
 NewShipType.TODistanceDisappear0=5000
@@ -34,33 +35,33 @@ NewShipType.dotRenderLimit=4000
 NewShipType.minLOD=0.2
 NewShipType.minimumZoomFactor=0.55
 NewShipType.selectionPriority=30
-NewShipType.weaponName="vgr_LRCT"
-NewShipType.lifeTime=120
-NewShipType.launchTime=0
-NewShipType.detectionDistance=3000
-NewShipType.clusterDistance=2750
-NewShipType.numberSubMunitions=3
-NewShipType.subMunitionName="vgr_clustertorpedob"
+NewShipType.weaponName="Vgr_ConcussionMissileLauncher"
+NewShipType.lifeTime=15
+NewShipType.launchTime=0.3
+NewShipType.detectionDistance=1000
+NewShipType.clusterDistance=750
+NewShipType.numberSubMunitions=6
+NewShipType.subMunitionName="vgr_smallmissile"
 NewShipType.clusterAngle=65
 NewShipType.sobDieTime=0.5
 NewShipType.density=1
-NewShipType.thrusterMaxSpeed=420
-NewShipType.mainEngineMaxSpeed=420
-NewShipType.rotationMaxSpeed=180
+NewShipType.thrusterMaxSpeed=500
+NewShipType.mainEngineMaxSpeed=500
+NewShipType.rotationMaxSpeed=95
 NewShipType.thrusterAccelTime=2
-NewShipType.thrusterBrakeTime=2
-NewShipType.mainEngineAccelTime=2
-NewShipType.mainEngineBrakeTime=2
+NewShipType.thrusterBrakeTime=1
+NewShipType.mainEngineAccelTime=5
+NewShipType.mainEngineBrakeTime=4.5
 NewShipType.rotationAccelTime=0.6
 NewShipType.rotationBrakeTime=0.6
-NewShipType.thrusterUsage=0.5
+NewShipType.thrusterUsage=0.2
 NewShipType.accelerationAngle=60
 NewShipType.mirrorAngle=30
 NewShipType.maxBankingAmount=85
 NewShipType.descendPitch=0
 NewShipType.goalReachEpsilon=5
 NewShipType.controllerType="Missile"
-NewShipType.slowdownFactor=0.5
+NewShipType.slowdownFactor=1
 NewShipType.tumbleStaticX=0
 NewShipType.tumbleStaticY=0
 NewShipType.tumbleStaticZ=0
@@ -79,7 +80,7 @@ NewShipType.DisplayFamily="Munition"
 NewShipType.AutoFormationFamily="Fighter"
 NewShipType.ArmourFamily="Unarmoured"
 LoadHODFile(NewShipType,1);
-setEngineTrail(NewShipType,0,15,"trail_ribbon.tga",0.2,0.5,0.025,8);
-setEngineBurn(NewShipType,15,0.5,1,15,0,0.7,0.1,25);
+setEngineTrail(NewShipType,0,3,"trail_ribbon.tga",0.2,0.5,0.025,8);
+setEngineBurn(NewShipType,10,0.5,1,10,0,0.7,0.1,13);
 loadShipPatchList(NewShipType,"data:sound/sfx/ship/vaygr/NonMilitary/Engines/"
                              ,0,"VMissleEng");

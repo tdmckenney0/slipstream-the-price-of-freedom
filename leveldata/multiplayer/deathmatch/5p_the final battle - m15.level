@@ -62,10 +62,6 @@ function DetermChunk()
   addPoint("StartPos3", {25000, 0, -19000}, {0, 0, 0})
   addPoint("StartPos4", {-25000, 0, -19000}, {0, 0, 0})
 
---Background mesh
-addSquadron("bg_horizon", "bg_horizon", {0, 0, 0}, -1, {180, 0, 0}, 0, 0);
---end backgroundmesh
-
 addAsteroid("Asteroid_4", {-6000, 1676, 19250}, 90, 8643, 623, 6632, 0)
 addAsteroid("Asteroid_3", {-5237, 2276, 19650}, 90, 6347, 573, 457, 0)
 addAsteroid("Asteroid_4", {-4873, 1594, 20000}, 90, 2367, 573, 4567, 0)

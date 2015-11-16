@@ -31,8 +31,9 @@ NewSubSystemType.isResearch = 0
 NewSubSystemType.visible = 1
 LoadHODFile(NewSubSystemType,1)
 NewSubSystemType.BuildFamily = "SubSystem_Hgn"
-NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.AttackFamily = "UnAttackable"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "MediumArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"vgr_largemissile","Weapon_T","Fire_Missile")
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_heavyfusionmissilelauncherbc","Weapon_T","NUL")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_nuclearmissile","Weapon_Nuke","NUL")

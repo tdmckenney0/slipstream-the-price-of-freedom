@@ -1,7 +1,7 @@
 StartWeaponConfig(NewWeaponType,"Fixed","Missile","Hgn_planetkillerbomb","Normal",120,90000,0,0,0,0,1,0,0,60,0,0,0,0,0,0,0.1,"Normal",1,0,0)
 
 AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Owner",0,0,"hgn_planetsmasherdet")
---AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Owner",0,0,"hgn_planetsmasherdet")
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Owner",0,0,"hgn_planetsmasherdet")
 
 setAngles(NewWeaponType,179,0,0,0,0)
 

@@ -20,16 +20,18 @@ NewMainMenu =
     {
         size =
             { 800, 600, },
-        texture = "Data:UI\\NewUI\\Background\\main1600.tga",
+        texture = "Data:UI\\NewUI\\Background\\menu1600.tga",
         textureUV =
             { 0, 0, 1600, 1200, }, },
 },
 {
     type = "Frame",
     autosize = 1,
-    backgroundColor = "",
+    outerBorderWidth = 1,
+    borderColor = "FEColorHeading1",
+    backgroundColor = "FEColorBackground1",
     position =
-        { 20, 187, },
+        { 262.5, 187, },
     autoarrange = 1,
     autoarrangeWidth = 304,
     autoarrangeSpace = 0,
@@ -44,41 +46,42 @@ NewMainMenu =
 {
     type = "TextLabel",
     size =
-        { 304, 13, },
+        { 275, 13, },
     Text =
     {
         textStyle = "FEHeading3",
-        text = "",
+        text = "Slipstream: The Price of Freedom",
+		hAlign = "Center",
         offset =
-            { 24, 0, }, },
+            { 0, 0, }, },
 },
 {
     type = "Frame",
     size =
         { 304, 2, },
 },
-{
-    type = "TextLabel",
-    name = "m_lblSubTitle",
-    size =
-        { 304, 10, },
-    Text =
-    {
-        textStyle = "FEHeading4",
-        text = "",
-        offset =
-            { 8, 0, }, },
-},
+--{
+--    type = "TextLabel",
+--    name = "m_lblSubTitle",
+--    size =
+--        { 304, 10, },
+--    Text =
+--    {
+--        textStyle = "FEHeading4",
+--        text = "",
+--        offset =
+--            { 8, 0, }, },
+--},
 {
     type = "Frame",
     size =
         { 304, 4, },
 },
-{
-    type = "Frame",
-    size =
-        { 4, 50, },
-},
+--{
+--    type = "Frame",
+--    size =
+--        { 4, 50, },
+--},
 {
     type = "Frame",
     outerBorderWidth = 0,
@@ -90,11 +93,11 @@ NewMainMenu =
 ;
 {
     type = "TextButton",
-    buttonStyle = "FEButtonStyle3",
-    text = "",
+    buttonStyle = "FEButtonStyle1",
+    text = "About Slipstream",
     name = "btnTutorial",
-    enabled = 1,
-    width = 260,
+	enabled = 1,
+    width = 272,
     onMouseClicked = "UI_ShowScreen('UniverseScreen', eTransition);",
 },
 {
@@ -104,11 +107,11 @@ NewMainMenu =
 },
 {
     type = "TextButton",
-    buttonStyle = "FEButtonStyle3",
-    text = "",
+    buttonStyle = "FEButtonStyle1",
+    text = "The Price of Freedom Campaign",
     name = "btnCampaign",
     enabled = 1,
-    width = 260,
+    width = 272,
 },
 {
     type = "Frame",
@@ -117,10 +120,10 @@ NewMainMenu =
 },
 {
     type = "TextButton",
-    buttonStyle = "FEButtonStyle3",
-    text = "",
+    buttonStyle = "FEButtonStyle1",
+    text = "Skirmish Battles",
     name = "btnPlayerVsCPU",
-    width = 260,
+    width = 272,
 },
 {
     type = "Frame",
@@ -129,10 +132,10 @@ NewMainMenu =
 },
 {
     type = "TextButton",
-    buttonStyle = "FEButtonStyle3",
-    text = "",
+    buttonStyle = "FEButtonStyle1",
+    text = "Local & Online Multiplayer",
     name = "btnMultiplayer",
-    width = 260,
+    width = 272,
     onMouseClicked = "UI_ShowScreen('ConnectionType', eTransition);",
 },
 {
@@ -142,10 +145,10 @@ NewMainMenu =
 },
 {
     type = "TextButton",
-    buttonStyle = "FEButtonStyle3",
-    text = "",
+    buttonStyle = "FEButtonStyle1",
+    text = "Player Profile Management",
     name = "btnProfile",
-    width = 260,
+    width = 272,
     onMouseClicked = [[
 					UI_SetNextScreen("UserProfile", "NewMainMenu");
 					UI_SetPreviousScreen("UserProfile", "NewMainMenu");
@@ -159,10 +162,10 @@ NewMainMenu =
 },
 {
     type = "TextButton",
-    buttonStyle = "FEButtonStyle3",
-    text = "",
+    buttonStyle = "FEButtonStyle1",
+    text = "System Settings",
     name = "btnOptions",
-    width = 260,
+    width = 272,
     onMouseClicked = [[UI_ShowScreen("FEGameOptions", eTransition)]],
 },
 {
@@ -170,18 +173,30 @@ NewMainMenu =
     size =
         { 296, 15, },
 },
+--{
+--    type = "TextButton",
+  --  buttonStyle = "FEButtonStyle1",
+    --text = "Credits & Contributors",
+  --  name = "btnCredits",
+  --  width = 272,
+  --  onMouseClicked = [[UI_ShowScreen("CreditsScreen", eTransition)]], },
+--{
+--    type = "Frame",
+--    size =
+--        { 296, 15, },
+--},
 {
     type = "TextButton",
-    buttonStyle = "FEButtonStyle3",
-    text = "",
-    name = "btnCredits",
-    width = 260,
-    onMouseClicked = [[UI_ShowScreen("CreditsScreen", eTransition)]], },
+    buttonStyle = "FEButtonStyle1",
+    text = "Quit to Desktop",
+    name = "btnExit",
+    width = 272,
+    onMouseClicked = "UI_ExitApp();", },
 },
 {
     type = "Frame",
     size =
-        { 300, 4, }, },
+        { 296, 15, }, },
 },
 {
     type = "TextListBoxItem",
@@ -194,24 +209,15 @@ NewMainMenu =
         textStyle = "FEListBoxItemTextStyle", },
 },
 {
-    type = "TextButton",
-    buttonStyle = "FEButtonStyle3",
-    text = "",
-    name = "btnExit",
-    position =
-        { 280, 198, },
-    width = 15,
-    onMouseClicked = "UI_ExitApp();", },
-{
     type = "TextLabel",
     name = "lblVersion",
     position =
-        { 500, 588, },
+        { 501, 588, },
     size = {300, 20},
     Text =
     {
         font = "Buttonfont",
-        text = "Build Version 2.3.0000 - January 11, 2009",
+        text = "Build Version 2.4.5000 - May 4, 2009 ",
         color =
             { 255, 255, 255, 255, },
         hAlign = "Right",
@@ -219,19 +225,16 @@ NewMainMenu =
 },
 {
     type = "TextLabel",
-    name = "title",
-    size =
-        { 235, 13, },
+    name = "lblmusic",
     position =
-        { 23, 196, },
+        { 2, 588, },
+    size = {300, 20},
     Text =
     {
-        text = "Slipstream: The Price of Freedom",
-        textStyle = "FEHeading3",
-        hAlign = "Left",
-        vAlign = "Top",
+        font = "Buttonfont",
+        text = "Music: Nutritious - Ancient Enemies",
         color =
-            { 255, 255, 255, 0, },
-        offset =
-            { 0, 0, }, }, },
+            { 255, 255, 255, 255, },
+        hAlign = "Left",
+        vAlign = "Top", },},
 }

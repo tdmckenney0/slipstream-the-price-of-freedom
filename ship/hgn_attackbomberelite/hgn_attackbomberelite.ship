@@ -168,8 +168,6 @@ StartShipWeaponConfig(NewShipType, "hgn_plasmabomb", "Weapon_L", "Weapon_L")
 StartShipWeaponConfig(NewShipType, "hgn_plasmabomb", "Weapon_R", "Weapon_R")
 StartShipWeaponConfig(NewShipType, "hgn_plasmabomb", "Weapon_S1", "Weapon_L")
 StartShipWeaponConfig(NewShipType, "hgn_plasmabomb", "Weapon_S2", "Weapon_R")
-StartShipWeaponConfig(NewShipType, "hgn_smalltorpedoftr", "Weapon_S1", "Fire")
-StartShipWeaponConfig(NewShipType, "hgn_smalltorpedoftr", "Weapon_S2", "Fire")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2

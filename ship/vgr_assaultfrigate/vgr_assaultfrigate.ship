@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DOL Assault Frigate"
+NewShipType.displayedName = "DSCG Assault Frigate"
 NewShipType.sobDescription = "Taiga Class\nAssualt Frigate"
 NewShipType.maxhealth = 75000
 NewShipType.regentime = 1200
@@ -36,7 +36,7 @@ NewShipType.rotationBrakeTime = 0.3
 NewShipType.thrusterUsage = 0.5
 NewShipType.accelerationAngle = 40
 NewShipType.mirrorAngle = 30
-NewShipType.secondaryTurnAngle = 45
+NewShipType.secondaryTurnAngle = 0
 NewShipType.maxBankingAmount = 20
 NewShipType.descendPitch = 20
 NewShipType.goalReachEpsilon = 30
@@ -145,30 +145,8 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "HyperSpaceCommand", 0, 0, 0, 0, 0, 0)
-
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1.5, "Fighter, Corvette, Capturer, Frigate, Utility, SmallCapitalShip, BigCapitalShip", "Flyround", 
-{ 
-    Fighter = "FrontalVsSubSystem_Corvette", 
-}, 
-{ 
-    Mothership = "FlyRound_Corvette_vs_CapShip", 
-}, 
-{ 
-    SmallCapitalShip = "FlyRound_Corvette_vs_CapShip", 
-}, 
-{ 
-    BigCapitalShip = "FlyRound_Corvette_vs_CapShip", 
-}, 
-{ 
-    SubSystem = "FrontalVsSubSystem_Corvette", 
-}, 
-{ 
-    Corvette = "FrontalVsSubSystem_Corvette", 
-}, 
-{ 
-    Frigate = "FrontalAssault", })
-
+addAbility(NewShipType,"HyperSpaceCommand",0,0,250,250,0,3.141592653);
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1.5, "Fighter, Corvette, Capturer, Frigate, Utility, SmallCapitalShip, BigCapitalShip",  "Flyby")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "CanBeCaptured", 45, 0.1)

@@ -3,7 +3,7 @@ RESEARCHCOLOR = {0,0,0,255}
 LAUNCHCOLOR = {0,0,0,255}
 
 NewTaskbar = {
-	size = {0, 498, 800, 102}, --was 102
+	size = {0, 498, 800, 102}, --was 0, 498, 800, 102
 	stylesheet = "HW2StyleSheet",
 
 	-- Flags
@@ -1177,11 +1177,11 @@ NewTaskbar = {
 		size = {13, 28},
 		DefaultGraphic = {
 			texture = "DATA:UI\\NewUI\\Taskbar\\shipnext.tga",
-			textureUV = { 0, 0, 13, 28 },
+			textureUV = { 0, 0, 16, 32 },
 		},
 		OverGraphic = {
 			texture = "DATA:UI\\NewUI\\Taskbar\\shipnext_OVER.tga",
-			textureUV = { 0, 0, 13, 28 },
+			textureUV = { 0, 0, 16, 32 },
 		},
 		DisabledGraphic = {
 			texture = "DATA:UI\\NewUI\\Taskbar\\shipnext.tga",
@@ -1200,16 +1200,16 @@ NewTaskbar = {
 		size = {13, 28},
 		DefaultGraphic = {
 			texture = "DATA:UI\\NewUI\\Taskbar\\shipprev.tga",
-			textureUV = { 0, 0, 13, 28 },
+			textureUV = { 0, 0, 16, 32 },
 		},
 		OverGraphic = {
 			texture = "DATA:UI\\NewUI\\Taskbar\\shipprev_OVER.tga",
-			textureUV = { 0, 0, 13, 28 },
+			textureUV = { 0, 0, 16, 32 },
 		},
 		DisabledGraphic = {
 			texture = "DATA:UI\\NewUI\\Taskbar\\shipprev.tga",
 			textureUV = { 0, 0, 13, 0 },
-			color = { 255, 255, 255, 15},
+			color = { 255, 255, 255, 0},
 		},
 		name = "btnShipPrev",
 		helpTip = "$2730",

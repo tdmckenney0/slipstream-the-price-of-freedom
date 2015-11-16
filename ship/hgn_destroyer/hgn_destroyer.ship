@@ -18,7 +18,7 @@ NewShipType.defensiveFormation="x"
 NewShipType.aggressiveFormation="Claw"
 NewShipType.mass=600
 NewShipType.collisionMultiplier=1
-NewShipType.thrusterMaxSpeed = 100
+NewShipType.thrusterMaxSpeed = 135
 NewShipType.mainEngineMaxSpeed = 150
 NewShipType.rotationMaxSpeed = 18
 NewShipType.thrusterAccelTime = 7
@@ -29,7 +29,7 @@ NewShipType.rotationAccelTime = 0.75
 NewShipType.rotationBrakeTime = 0.3
 NewShipType.thrusterUsage = 1
 NewShipType.accelerationAngle = 60
-NewShipType.mirrorAngle = 0
+NewShipType.mirrorAngle = 30
 NewShipType.secondaryTurnAngle = 0
 NewShipType.maxBankingAmount = 20
 NewShipType.descendPitch = 20
@@ -61,6 +61,8 @@ NewShipType.targetRandomPointZMin=-0.7
 NewShipType.targetRandomPointZMax=0.8
 NewShipType.dustCloudDamageTime=160
 NewShipType.nebulaDamageTime=300
+NewShipType.mirrorAboveManeuver = "ImmelMann"
+NewShipType.mirrorBelowManeuver = "Split_S"
 NewShipType.MinimalFamilyToFindPathAround="MotherShip"
 NewShipType.BuildFamily="SuperCap_Hgn"
 NewShipType.AttackFamily="SmallCapitalShip"
@@ -140,8 +142,8 @@ NewShipType.launchNrOfShipsInDockFormation=1
 NewShipType.launchFormation="delta"
 addAbility(NewShipType,"ParadeCommand",1);
 addAbility(NewShipType,"WaypointMove");
-addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,0);
-addAbility(NewShipType,"CanAttack",1,1,0,1,0.35,1.5,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","flyby_destroyer",{Fighter="Movetotargetandshoot"},{Corvette="movetotargetandshoot"},{Munition="justshoot"},{SubSystem="MoveToTargetAndShoot"},{SmallCapitalShip="movetotargetandshoot"});
+addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
+addAbility(NewShipType,"CanAttack",1,1,0,1,0.35,1.5,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","flyby_destroyer");
 addAbility(NewShipType,"GuardCommand",1,3000,800);
 addAbility(NewShipType,"CanBeCaptured",90,0.5);
 addAbility(NewShipType,"CanBeRepaired");
@@ -149,7 +151,7 @@ addAbility(NewShipType,"RetireAbility",1,1);
 addAbility(NewShipType, "MinelayerAbility", 1, 3.5)
 LoadModel(NewShipType,1);
 
-StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Nuke", "Weapon_Torpedo");
+StartShipWeaponConfig(NewShipType, "hgn_clusterbomb", "Weapon_TorpedoBay", "Weapon_Torpedo");
 
 ----------------------------------------------------------------------------------
 

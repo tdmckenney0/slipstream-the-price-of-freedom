@@ -99,6 +99,16 @@ PersistantData = {
          number = 2,
 	  },
 	  {
+         type = "vgr_Helios",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 2,
+	  },
+	  {
          type = "vgr_assaultfrigate",
          subsystems = {
          },
@@ -108,17 +118,28 @@ PersistantData = {
          size = 1,
          number = 5,
 	   },
-	   		{
-         type = "vgr_bomber",
+	   {
+         type = "vgr_drone",
          subsystems = {
          },
          shiphold = {
          },
          name = "",
          number = 5,
-		},
-		{
-         type = "vgr_helios",
+	  },
+	  {
+         type = "vgr_dreadnaught",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 1,
+
+	  },
+	  {
+         type = "vgr_destroyer",
          subsystems = {
          },
          shiphold = {
@@ -212,6 +233,10 @@ PersistantData = {
     },
 	[21] = {
       name = "BattleshipHullEngineering",
+      progress = 1,
+    },
+	[22] = {
+      name = "SYENABLED",
       progress = 1,
     },
    },

@@ -24,7 +24,7 @@ NewShipType.defensiveFormation = "Delta"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 1000
 NewShipType.collisionMultiplier = 2
-NewShipType.thrusterMaxSpeed = 180
+NewShipType.thrusterMaxSpeed = 170
 NewShipType.mainEngineMaxSpeed = 180
 NewShipType.rotationMaxSpeed = 8
 NewShipType.thrusterAccelTime = 15
@@ -149,18 +149,20 @@ addAbility(NewShipType,"ShipHold",1,40,10,"rallypoint","Fighter,Corvette,Utility
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,0)
-addAbility(NewShipType, "CanBuildShips",1,"Fighter_Hgn, Corvette_Hgn, Platform_Hgn, Frigate_hgn, SubSystem_Hgn,  Probe_Hgn","Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors")
+addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
+addAbility(NewShipType, "CanBuildShips",1,"Drone_uncg, Corvette_Hgn, Platform_Hgn, Frigate_hgn, SubSystem_Hgn, Shipyard_Hgn, Probe_Hgn","Utility, Fighter, Corvette, Frigate, Capital, Platform, SubSystemModule, SubSystemSensors")
 addAbility(NewShipType, "CanBeCaptured",160,0.5)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Munition, SmallCapitalShip, BigCapitalShip, Fighter, Frigate, Corvette, Capturer, Utility, Mothership", "movetotargetandshoot", { Munition = "JustShoot", },{ SubSystem = "BroadSideVsSubSystem", })
 LoadModel(NewShipType, 1)
 addShield(NewShipType,"EMP",4500,25)
 
-StartShipWeaponConfig(NewShipType, "Hgn_hulldefensegun", "Weapon_HullDefense1", "Fire_HullDefense1")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense1", "Fire_HullDefense1")
 StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense2", "Fire_HullDefense2")
 StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense3", "Fire_HullDefense3")
 StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense4", "Fire_HullDefense4")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense5", "Fire_HullDefense5")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense6", "Fire_HullDefense6")
 
 StartShipHardPointConfig(NewShipType,"SubGeneric01","SubGeneric01","System","Generic","Destroyable","","hgn_BBC_module_research","hgn_BBC_module_platformcontrol","Hgn_BBC_module_cloakgenerator","Hgn_BBC_module_hyperspaceinhibitor","Hgn_BBC_module_firecontrol","Hgn_BBC_module_researchadvanced","Hgn_BBC_module_buildspeed")
 StartShipHardPointConfig(NewShipType,"SubGeneric02","SubGeneric02","System","Generic","Destroyable","","hgn_BBC_module_research","hgn_BBC_module_platformcontrol","Hgn_BBC_module_cloakgenerator","Hgn_BBC_module_hyperspaceinhibitor","Hgn_BBC_module_firecontrol","Hgn_BBC_module_researchadvanced","Hgn_BBC_module_buildspeed")

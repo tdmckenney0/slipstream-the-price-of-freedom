@@ -31,7 +31,7 @@ PersistantData = {
          },
          name = "",
          size = 1,
-         number = 1, 
+         number = 1,
       },
 
       {
@@ -48,6 +48,10 @@ PersistantData = {
 
    },
    Research = {
+   [22] = {
+      name = "SYENABLED",
+      progress = 1,
+    },
    },
 }
 

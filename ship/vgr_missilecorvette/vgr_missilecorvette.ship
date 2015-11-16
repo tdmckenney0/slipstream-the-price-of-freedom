@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DOL Missile Corvette"
+NewShipType.displayedName = "DSCG Missile Corvette"
 NewShipType.sobDescription = "Heimdall Class\nRocket Launching Corvette"
 NewShipType.maxhealth = 2000
 NewShipType.regentime = 0

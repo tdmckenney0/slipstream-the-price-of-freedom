@@ -1,6 +1,6 @@
 --Copyrighted to Enterprise-E, with modifications by Emperor_Khane
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Combat Cruiser"
+NewShipType.displayedName = "DSCG Combat Cruiser"
 NewShipType.sobDescription = "Qwaar-Jet II Class\nCombat Cruiser"
 NewShipType.maxhealth=750000
 NewShipType.regentime=9000
@@ -20,7 +20,7 @@ NewShipType.defensiveFormation="x"
 NewShipType.aggressiveFormation="Claw"
 NewShipType.mass=1000
 NewShipType.collisionMultiplier=1
-NewShipType.thrusterMaxSpeed=100
+NewShipType.thrusterMaxSpeed=95
 NewShipType.mainEngineMaxSpeed=100
 NewShipType.rotationMaxSpeed=6
 NewShipType.thrusterAccelTime = 10
@@ -31,8 +31,8 @@ NewShipType.rotationAccelTime = 8
 NewShipType.rotationBrakeTime = 7
 NewShipType.thrusterUsage = 1
 NewShipType.accelerationAngle = 20
-NewShipType.mirrorAngle = 0
-NewShipType.secondaryTurnAngle = 0
+NewShipType.mirrorAngle = 30
+NewShipType.secondaryTurnAngle = 45
 NewShipType.maxBankingAmount = 10
 NewShipType.descendPitch = 45
 NewShipType.goalReachEpsilon = 25
@@ -63,6 +63,8 @@ NewShipType.targetRandomPointZMin=-0.8
 NewShipType.targetRandomPointZMax=0.8
 NewShipType.dustCloudDamageTime=280
 NewShipType.nebulaDamageTime=800
+NewShipType.mirrorAboveManeuver = "ImmelMann"
+NewShipType.mirrorBelowManeuver = "Split_S"
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "Battlecruiser_Vgr"
 NewShipType.AttackFamily = "BigCapitalShip"
@@ -138,7 +140,7 @@ addAbility(NewShipType,"CanLaunch");
 addAbility(NewShipType,"ShipHold",1,0,5,"rallypoint","Fighter, Corvette",25,{Fighter="12"},{Corvette="75"});
 addAbility(NewShipType,"ParadeCommand",1);
 addAbility(NewShipType,"WaypointMove");
-addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,0);
+addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653);
 addAbility(NewShipType,"CanAttack",1,1,0,0,0.35,1.2,"Capturer, BigCapitalShip, SmallCapitalShip, Frigate, Mothership, Utility, Corvette, Fighter","flyby_destroyer",{SubSystem="movetotargetandshootVsSubSystem"});
 addAbility(NewShipType,"GuardCommand",1,3000,1000);
 addAbility(NewShipType,"MinelayerAbility",1,3.5)

@@ -70,7 +70,7 @@ addSquadron("Meg_SajHulkPanels4", "Meg_SajHulkPanels", {-27568, -3309, 11529}, -
 addNebula("Nebula4_OLD1", "M11_Bentusi_Radiation", {-568, 12309, 2843}, {1, 1, 1, 1,}, 0.0, 7638.0)
 
 --Background mesh
-addSquadron("bg_glassed", "bg_glassed", {0, 0, 0}, -1, {180, 0, 0}, 0, 0);
+--addSquadron("bg_outerrim", "bg_outerrim", {0, 0, 0}, -1, {0, 0, 0}, 0, 0);
 --end backgroundmesh
 
 
@@ -130,7 +130,7 @@ addPebble("Pebble_0", {10000, 5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_0", { 47043, 26709, 28806,}, 0, 0, 0)
 
 
- fogSetActive(1)
+ fogSetActive(0)
   fogSetStart(1)
   fogSetEnd(1)
   fogSetColour(0, 0, 0, 1)
@@ -138,7 +138,7 @@ addPebble("Pebble_0", {10000, 5809, -10876,}, 0, 0, 0)
   fogSetDensity(0.00)
   setGlareIntensity(0.11)
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("Tower_Nebula")
+  loadBackground("Wispy_nebula")
   setSensorsManagerCameraDistances(12000, 60000)
   setDefaultMusic("Data:sound/music/battle/battle_04")
 end

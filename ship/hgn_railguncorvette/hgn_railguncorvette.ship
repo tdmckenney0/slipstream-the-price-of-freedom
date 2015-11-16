@@ -158,7 +158,7 @@ addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadSharedModel(NewShipType, "hgn_pulsarcorvette")
-StartShipWeaponConfig(NewShipType, "hgn_lightrail", "Weapon_Pulsar", "")
+StartShipWeaponConfig(NewShipType, "hgn_rail", "Weapon_Pulsar", "")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1

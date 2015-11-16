@@ -53,7 +53,7 @@ FrontEndScreens =
 		name = "NotForPublicDisplay",
 		filename = "DATA:\\UI\\NewUI\\NotForPublicDisplay.lua",
 		activated = 0,
---		type = "NotForPublicDisplay",
+--		type = "MainMenu",
 	},
 	-- don't know if this one needs a "type" (used by functions within Homeworld2.exe)
 	{

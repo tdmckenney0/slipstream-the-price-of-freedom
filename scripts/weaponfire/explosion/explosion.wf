@@ -1,0 +1,7 @@
+hitfx = "hit_generic"
+bulletfx = "explosion_nuke"
+nopenetratefx = "nopen_generic"
+deathtype = "deathCannon"
+hit_sfx = "EXPLOSION/LARGE/etg_explode_large_sajuuk_supernova"
+hit_clamp = 
+    { 1, 1, }

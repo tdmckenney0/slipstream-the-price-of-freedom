@@ -96,6 +96,20 @@ hgn_superfortress= {
     stretchOnDraw = 1,
   },
 }
+uncg_supercarrier= {
+  LargeIcon = {
+    texture = "DATA:\\Ship\\Icons\\ships\\uncg_supercarrier.tga",
+    textureUV_TL = {
+      0,
+      0,
+    },
+    textureUV_WH = {
+      384,
+      128,
+    },
+    stretchOnDraw = 1,
+  },
+}
 Hgn_AssaultCorvetteElite = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
@@ -530,7 +544,6 @@ Kpr_Destroyer = {
     stretchOnDraw = 1,
   },
 }
-vgr_lightdestroyer = Kpr_Destroyer
 Kpr_Mover = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
@@ -1373,6 +1386,7 @@ Vgr_Probe_ECM = {
     stretchOnDraw = 1,
   },
 }
+Vgr_Drone = Vgr_Probe_ECM
 Vgr_Probe_Prox = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
@@ -2252,6 +2266,8 @@ vgr_cloakingFrigate = Vgr_HeavyMissileFrigate
 hgn_railguncorvette = Hgn_PulsarCorvette
 Kpr_Mover_Capture = Kpr_Mover_Capture
 Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
+Hgn_Drone = Hgn_Probe
+Hgn_Drone_k = Hgn_Probe
 --SUBSYSTEMS
 --UNCG
 Hgn_BBC_Production_Frigate = Icon_Subsystem_Frigate

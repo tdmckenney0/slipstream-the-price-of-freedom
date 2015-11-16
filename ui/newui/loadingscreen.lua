@@ -30,20 +30,29 @@ LoadingScreen =
             { 0, 0, 1600, 1200, }, },
 ;
 {
+    type = "Frame",
+	outerBorderWidth = 1,
+    borderColor = "FEColorHeading1",
+    backgroundColor = "FEColorBackground1",
+    position =
+        { 275, 287.5, },
+    size =
+        { 250, 50, }, },
+{
     type = "ProgressBar",
     progressColor =
-        { 255, 255, 255, 0, },
+        { 255, 255, 255, 255, },
     position =
-        { 44, 300, },
+        { 279.5, 300, },
     size =
-        { 717, 15, },
+        { 240, 7.5, },
     name = "loadingProgress", },
 },
 {
     type = "TextLabel",
     name = "moduleLabel",
     position =
-        { 5, 575, },
+        { 0, 312.5, },
     size =
         { 800, 50, },
     Text =
@@ -51,21 +60,21 @@ LoadingScreen =
         textStyle = "FEHeading3",
         color =
             { 255, 255, 255, 255, },
-        hAlign = "Left",
+        hAlign = "Center",
         vAlign = "Top",},
 },
 {
     type = "TextLabel",
     name = "loadingtext",
     position =
-        { 5, 560, },
-	size = {300, 20},
+        { 0, 275, },
+	size = {800, 50},
     Text =
     {
         textStyle = "FEHeading3",
-		text = "Loading...",
+		text = "Slipstream: The Price of Freedom",
         color =
-            { 255, 255, 255, 255, },
-        hAlign = "Left",
+            { 255, 255, 255, 0, },
+        hAlign = "Center",
         vAlign = "Top", },},
 }

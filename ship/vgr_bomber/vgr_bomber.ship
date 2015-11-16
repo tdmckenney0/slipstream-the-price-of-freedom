@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DOL Plasma Bomber"
+NewShipType.displayedName = "DSCG Plasma Bomber"
 NewShipType.sobDescription = "Berlin class Bomber"
 NewShipType.maxhealth = 1500
 NewShipType.regentime = 0
@@ -169,8 +169,6 @@ addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadModel(NewShipType, 1)
 StartShipWeaponConfig(NewShipType, "hgn_plasmabomb", "Weapon_L", "Weapon_L")
 StartShipWeaponConfig(NewShipType, "hgn_plasmabomb", "Weapon_R", "Weapon_R")
-StartShipWeaponConfig(NewShipType, "vgr_heavyconcussionmissilelauncher", "Weapon_L", "Weapon_L")
-StartShipWeaponConfig(NewShipType, "vgr_heavyconcussionmissilelauncher", "Weapon_R", "Weapon_R")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2

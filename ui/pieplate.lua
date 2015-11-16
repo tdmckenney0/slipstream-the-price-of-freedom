@@ -23,7 +23,7 @@ pieTwkClosestShipOnPlaneColour     = {0,1,0,1}                          -- colou
 pieTwkScaleUpTime                  = 1                                -- how many seconds it takes for the pieplate to scale up
 pieTwkScaleDownTime                = 2                                -- how many seconds it takes for the pieplate to scale down
 pieTwkSeperateDiscs                = false                              -- if this is false the transparent ring and the wireframe ring will be connected
-pieLocaleID          		    = "Slipstream Jump"                          -- the localized ru text of hyperspace cost
+pieLocaleID          		    = "RU"                          -- the localized ru text of hyperspace cost
 
 
 -- order specific values -----------------------------------------------------

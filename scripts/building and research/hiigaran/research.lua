@@ -9,7 +9,7 @@ AllShips = 0
 Family = 1
 Ship = 2
 
-research = 
+research =
 {
 	{
 		Name = "InstaAdvancedFrigateTech",
@@ -1842,5 +1842,16 @@ research =
 		TargetName = "Kpr_AttackDroid",
 		UpgradeName = "WeaponDamage",
 		UpgradeValue = 2,
+	},
+	{
+		Name = "SCENABLED",
+		RequiredResearch = "RESEARCH HACK",
+		RequiredSubSystems = "",
+		Cost = 0,
+		Time = 0,
+		DisplayedName = "Instant Tech!!!!!!!!!!!!!!!!!!!!!!!!!!",
+		DisplayPriority = 1,
+		Description = "",
+		TargetName = "Hgn_Supercarrier",
 	},
 }

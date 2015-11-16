@@ -1,0 +1,54 @@
+Thanks for downloading TPOF v2.4b!
+Remember: This is Beta format, a lot of things are still un-programmed or incomplete. Enjoy!
+
+1. Setup
+2. Troubleshooting
+3. Skybox
+4. Notes
+
+
+
+1) Setup
+
+	Place the tpofv2.4b.big file into your (Homeworld2 install directory)/data/ folder.
+
+	Now, open your shortcut to homeworld 2, or make one. Add after the quotes type: -mod tpofv2.4b.big 
+
+	Example:
+
+	Before:
+
+	"D:\Program Files (x86)\Sierra\Homeworld2\Bin\Release\Homeworld2.exe"
+
+	After:
+
+	"D:\Program Files (x86)\Sierra\Homeworld2\Bin\Release\Homeworld2.exe" -mod tpofv2.4b.big 
+
+	Enjoy!
+
+2) Toubleshooting
+	
+	Mac Users: You will beed to select TPOF: Basic from the menu, you cannot run the advanced options yet. 
+	PC users: You can use Basic to help solve problems. 
+	
+	If you experience crashing problems, try these solutions
+
+	1) make a new profile from within TPOF
+	2) add "-windowed"  to your shortcut (without quotes) (use -h and -w to adjust size EX. if your screen is 1280x1024, do "-h 1280 -w 1024" 
+	    on your shortcut)
+	3) use "-lowtex" on your shortcut if you experience lag "-quickload" if your very desperate. 
+	4) Close all programs in the background.
+	
+3) Skybox's
+
+	Skybox's have been removed. 
+
+4. Notes
+
+	This build removes a lot of experimental code, and some ships that do not serve a purpose. This is to aim TPOF at a more refinement, and prepare it 
+	for the upcoming campaign programming. Also note, that I am looking at TPOF being feature-complete in version 2.8.
+
+
+
+
+Copyright Sub-Real Industries 2008-2009

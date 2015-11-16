@@ -67,7 +67,7 @@ NewShipType.targetRandomPointZMax=0.55
 NewShipType.dustCloudDamageTime=200
 NewShipType.nebulaDamageTime=300
 NewShipType.MinimalFamilyToFindPathAround="MotherShip"
-NewShipType.BuildFamily="Flagship_Hgn"
+NewShipType.BuildFamily="Shipyard_Hgn"
 NewShipType.AttackFamily="Mothership"
 NewShipType.DockFamily="Flagship"
 NewShipType.AvoidanceFamily="Mothership"
@@ -75,7 +75,8 @@ NewShipType.DisplayFamily="Capital"
 NewShipType.AutoFormationFamily="Supercap"
 NewShipType.CollisionFamily="Big"
 NewShipType.ArmourFamily="HeavyArmour"
-NewShipType.UnitCapsFamily="Mothership"
+NewShipType.UnitCapsFamily = "Capital"
+NewShipType.UnitCapsShipType = "Shipyard"
 NewShipType.fighterValue=0
 NewShipType.corvetteValue=0
 NewShipType.frigateValue=30
@@ -85,7 +86,7 @@ NewShipType.antiCorvetteValue=0
 NewShipType.antiFrigateValue=0
 NewShipType.totalValue=10
 NewShipType.buildCost=15000
-NewShipType.buildTime=65
+NewShipType.buildTime=120
 NewShipType.buildPriorityOrder=10
 NewShipType.retaliationRange=4800
 NewShipType.retaliationDistanceFromGoal=160
@@ -144,9 +145,9 @@ addAbility(NewShipType,"ShipHold",1,160,10,"rallypoint","Fighter,Corvette,Utilit
 addAbility(NewShipType,"ParadeCommand",1);
 addAbility(NewShipType,"WaypointMove");
 addAbility(NewShipType,"SensorPing",0,1,10,2.5);
-addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,0);
+addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653);
 addAbility(NewShipType,"CanAttack", 1, 1, 0, 0, 0.35, 1, "Fighter, Corvette, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Utility, Mothership", "JustShoot");
-addAbility(NewShipType,"CanBuildShips",1,"Fighter_Hgn, Corvette_Hgn, Frigate_Hgn, Utility_Hgn, Platform_Hgn, SubSystem_Hgn,Battlecruiser_Hgn, SuperCap_Hgn, Probe_Hgn, SubSystemLarge_Hgn","Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors, Capital");
+addAbility(NewShipType,"CanBuildShips",1,"Drone_uncg, Corvette_Hgn, Frigate_Hgn, Utility_Hgn, Platform_Hgn, SubSystem_Hgn,Battlecruiser_Hgn, SuperCap_Hgn, Probe_Hgn, Shipyard_Hgn, SubSystemLarge_Hgn","Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors, Capital");
 addAbility(NewShipType,"CanBeCaptured",160,0.5);
 addAbility(NewShipType,"CanBeRepaired");
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
@@ -177,10 +178,7 @@ StartShipHardPointConfig(NewShipType,"Generic 3","Hardpoint_Subsystem3","Weapon"
 StartShipHardPointConfig(NewShipType,"Generic 4","Hardpoint_Subsystem4","Weapon","Generic","Destroyable","","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_MS_Module_Research","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
 StartShipHardPointConfig(NewShipType,"Sensors 1","HardpointSensors1","System","Sensors","Destroyable","","Hgn_sc_Sensors_DetectHyperspace","Hgn_sc_Sensors_AdvancedArray","Hgn_sc_Sensors_DetectCloaked","","","","","");
 
-
---Superweapon
-StartShipHardPointConfig(NewShipType,"Herecomesdaboom!","Hardpoint_ICBM","Weapon","Generic","Destroyable","","hgn_sc_icbmbay","","","","","","","");
---
+--weapons
 
 
 StartShipHardPointConfig(NewShipType,"Flak1","Hardpoint_FlakCannon","System","Innate","Damageable","hgn_railgun","","","","","","","","");

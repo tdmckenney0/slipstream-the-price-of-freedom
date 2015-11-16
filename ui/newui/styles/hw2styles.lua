@@ -42,7 +42,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "FEColorOutline",
-			string = "255,255,255,0",
+			string = "0,0,0,255",
 		},
 		{
 			name = "FEColorPopupOutline",
@@ -2617,16 +2617,16 @@ HW2StyleSheet =
 		},
 		textColor =
 		{
-			0,
-			255,
-			66,
+			200,
+			200,
+			200,
 			200,
 		},
 		overTextColor =
 		{
-			0,
 			255,
-			66,
+			255,
+			255,
 			255,
 		},
 		pressedTextColor =
@@ -3504,7 +3504,7 @@ HW2StyleSheet =
 		flashSpeed = 250,
 		DefaultGraphic =
 		{
-			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton_pressed.tga",
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
 			textureUV =
 			{
 				0,

@@ -1,11 +1,11 @@
-StartWeaponConfig(NewWeaponType,"AnimatedTurret","InstantHit","Rail","Normal",0,9000,0,0.4,0,0,1,1,1,1,2,4,1,1,60,60,0.1,"Normal",0,0,300)
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","InstantHit","Rail","Normal",0,9000,0,0.4,0,0,1,1,1,5,0,0,1,1,60,60,0.1,"Normal",0,0,300)
 
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",3000,4000,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",2750,3500,"")
 AddWeaponResult(NewWeaponType,"Hit","Push","Target",25,50,"")
 
 setAngles(NewWeaponType,0,-180,180,2,60)
 
-setMiscValues(NewWeaponType,4,0)
+setMiscValues(NewWeaponType,4,0.1)
 
 setPenetration(NewWeaponType,5,1,
 {Unarmoured=1,},

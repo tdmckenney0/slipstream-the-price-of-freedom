@@ -30,7 +30,7 @@ NewSubSystemType.isResearch = 0
 NewSubSystemType.visible = 1
 LoadHODFile(NewSubSystemType,1)
 NewSubSystemType.BuildFamily = "SubSystem_Hgn"
-NewSubSystemType.AttackFamily = "SubSystem"
+NewSubSystemType.AttackFamily = "UnAttackable"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemSensors"
 NewSubSystemType.ArmourFamily = "MediumArmour"

@@ -1,14 +1,14 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Ranged Cruiser"
 NewShipType.sobDescription = "Crossbow Class\nLong Range Strike Cruiser "
-NewShipType.maxhealth = 600000
+NewShipType.maxhealth = 500000
 NewShipType.regentime = 850
 NewShipType.minRegenTime = 150
-NewShipType.sideArmourDamage = 0.5
-NewShipType.rearArmourDamage = 0.75
-NewShipType.topArmourDamage = 0.8
-NewShipType.bottomArmourDamage = 0.70
-NewShipType.frontArmourDamage = 0.75
+NewShipType.sideArmourDamage = 0.80
+NewShipType.rearArmourDamage = 0.85
+NewShipType.topArmourDamage = 0.80
+NewShipType.bottomArmourDamage = 0.80
+NewShipType.frontArmourDamage = 0.
 NewShipType.isTransferable = 1
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 3
@@ -19,8 +19,8 @@ NewShipType.defensiveFormation = "x"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 100
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 100
-NewShipType.mainEngineMaxSpeed = 100
+NewShipType.thrusterMaxSpeed = 140
+NewShipType.mainEngineMaxSpeed = 150
 NewShipType.rotationMaxSpeed = 18
 NewShipType.thrusterAccelTime = 7
 NewShipType.thrusterBrakeTime = 2
@@ -142,16 +142,8 @@ NewShipType.launchFormation = "delta"
 addAbility(NewShipType,"ShipHold",1,40,0,"rallypoint","",25)
 addAbility(NewShipType,"ParadeCommand",1)
 addAbility(NewShipType,"WaypointMove")
-addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,0)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "flyround", 
-{ 
-    Fighter = "Movetotargetandshoot", 
-}, 
-{ 
-    SubSystem = "BroadSideVsSubSystem", 
-}, 
-{ 
-    Corvette = "Movetotargetandshoot", })
+addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "flyby_destroyer")
 
 addAbility(NewShipType, "GuardCommand", 1, 3000, 800)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
@@ -161,27 +153,27 @@ addAbility(NewShipType, "RetireAbility", 1, 1)
 addAbility(NewShipType, "MinelayerAbility", 1, 3.5)
 LoadModel(NewShipType,1)
 
-StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Torpedo_Tube", "Weapon_Torpedo");
+StartShipWeaponConfig(NewShipType, "hgn_clusterbomb", "Weapon_Torpedo_Tube", "Weapon_Torpedo");
 
 
 ------------------------------Main--Turrets
-StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Indestructible","hgn_plasmabatteryx6","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Damageable","hgn_plasmabatteryx6","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Indestructible","hgn_railgun","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Damageable","hgn_railgun","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Indestructible","hgn_ioncannonx2","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Damageable","hgn_ioncannonx2","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Indestructible","hgn_coilcannonx3","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Damageable","hgn_coilcannonx3","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Indestructible","hgn_railgun","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Damageable","hgn_railgun","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration6","Hardpoint_DCT_Left","System","Innate","Indestructible","hgn_missileturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration6","Hardpoint_DCT_Left","System","Innate","Damageable","hgn_missileturret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration7","Hardpoint_DCT_Right","System","Innate","Indestructible","hgn_missileturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration7","Hardpoint_DCT_Right","System","Innate","Damageable","hgn_missileturret","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration8","Hardpoint_PDS4","System","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration8","Hardpoint_PDS4","System","Innate","Damageable","hgn_gatlinggunsmall","","","","","","","","");
 
-StartShipHardPointConfig(NewShipType,"Calibration9","Hardpoint_PDS11","System","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration9","Hardpoint_PDS11","System","Innate","Damageable","hgn_gatlinggunsmall","","","","","","","","");
 
 addShield(NewShipType,"EMP",400,12)
 NewShipType.battleScarMaxTriBase = 75

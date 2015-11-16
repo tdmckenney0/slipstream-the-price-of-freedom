@@ -1,162 +1,30 @@
-dofilepath("data:Ui/newui/universe.lua")
-
-local listBox = {}
-listBox.type = "ListBox"
-listBox.position = {4,2}
-listBox.size = {481,300}
-listBox.name = "listTutorials"
-listBox.scrollBarSpace = 0
-listBox.hugBottom = 0
-
-local listPic = {}
-listPic.type = "Frame"
-listPic.borderWidth = 1
-listPic.borderColor = "FEColorOutline"
-listPic.size = {248,200}
-listPic.name = "frmMap"
-
-function toggPic(k)
-	local tCount = ""
-	for j, iCount in Universe do
-		local visiBool = 0
-		if (j == k) then
-			visiBool = 1
-		end
-		tCount = tCount..[[UI_SetElementVisible("UniverseScreen", "image]]..j..[[", ]]..visiBool..[[);]]
-	end
-	return tCount
-end
-for k, iCount in Universe do
-	local visiBool = 0
-	if (k == 1) then
-		visiBool = 1
-	end
-
-	listBox[k] =
-	{
-		type = "ListBoxItem",
-		helpTip = iCount.universeToolTip,
-		helpTipTextLabel = "txtLblHELPTEXT",
-		autosize = 1,
-		name = "itemTutorialToClone"..k,
-
-		-- is the button initially in its "pressed" state?
-		pressed = visiBool,
-		pressedColor = {255,255,255,50},
-		pressedBorderColor = "FEColorHeading3",
-		
-		borderWidth = 1,
-
-		-- switch images on and off
-		onMouseClicked = toggPic(k),
-
-		soundOnClicked = "SFX_MissionSelectClick",
-		;
-		
-		{
-			type = "Button",
-			position = {5,5},
-			autosize = 1,
-			
-			;
-			--DEFINITION FOR: (txtLbl) TutName
-			{
-				type = "TextLabel",						
-				position = {4, 0},
-				size = {443,13},
-				name = "txtLblTutName"..k,
-				backgroundColor = {112,157,180,255},
-				Text =
-				{
-					-- name of contributer
-					text = iCount.universeName,
-					textStyle = "FEButtonTextStyle",
-					color = {0,0,0,255},
-					hAlign = "Left",
-					offset = {4, 0},
-				},
-				;
-			},
-
-			--DEFINITION FOR: (txtLbl) TutDesc
-			{
-				type = "TextLabel",
-				position = {4,15},
-				size = {452,35},
-				autosize = 1,
-				wrapping = 1,	
-				minSize = {0, 39},
-				name = "txtLblTutDesc"..k,
-				marginWidth = 4,
-				marginHeight = 2,						
-				Text =
-				{
-					-- details relating to contributer
-					text = iCount.universeText,		
-					textStyle = "FEButtonTextStyle",
-					color = {255,255,255,255},
-					hAlign = "Left",
-					vAlign = "Top",
-				},
-				;
-			},
-		},
-	}
-
-	listPic[k] =
-	{
-		type = "Frame",
-		BackgroundGraphic =
-		{
-			type = "Graphic",
-			-- file name and path of the image
-			texture = iCount.universeImage,
-			-- 1200x1600
-			textureUV = {0,0,484,388},
-		},
-		position = {3,3},
-		size = {242,194},
-		-- the image's unique name
-		name = "image"..k,
-		-- is the image initially visible?
-		visible = visiBool,
-		;
-	}
-end
-
--- most of the "name" and "type" stuff is left over from "MissionSelect.lua" and no longer serves any function
+--Copyright Tanner "Emperor" Mckenney
 UniverseScreen =
 {
-	size = {0, 0, 800, 600},
-	stylesheet = "HW2StyleSheet",
-
-	pixelUVCoords = 1,
-
-	-- %s is the name of the campaign and the name of the mission file
-	thumbnailPath = "Data:UI\\MapThumbnails\\Campaign\\%s\\%s.tga",
-
-	strIncomplete = "$3496",
-	strComplete = "$3495",
-	-- Help text to display for a completed tutorial
-	completeMsg = "$3471",
-	-- Help text to display for an incomplete tutorial
-	incompleteMsg = "$3472",
-
-	-- Blue
-	completeColor = {238,188,5,255},
-	-- Yella
-	incompleteColor = {112,157,180,255},
-	;
-
-	{
-		type = "Frame",
-		position = {0,0},
-		size = {800,600},
-		name = "frmTheRoot",
-		;
-		
-		--DEFINITION FOR: (txtLbl) TITLE (TUTORIAL)
-		{
+    size =
+        { 0, 0, 800, 600, },
+    stylesheet = "HW2StyleSheet",
+    RootElementSettings =
+    {
+        backgroundColor =
+            { 0, 0, 0, 255, }, },
+    pixelUVCoords = 1,
+;
+{
+    type = "Frame",
+    position =
+        { 0, 0, },
+    size =
+        { 800, 600, },
+    BackgroundGraphic =
+    {
+        size =
+            { 800, 600, },
+        texture = "Data:UI\\NewUI\\Background\\menu1600.tga",
+        textureUV =
+            { 0, 0, 1600, 1200, }, },
+},
+{
 			type = "TextLabel",
 			position = {16,-2},
 			size = {700,36},
@@ -164,14 +32,12 @@ UniverseScreen =
 			Text =
 			{
 				-- TUTORIAL
-				text = "UNIVERSE",
+				text = "SLIPSTREAM",
 				textStyle = "FEHeading1",
 			},
 			;
-		},
-
-		--DEFINITION FOR: (txtLbl) SUBTITLE (TUTORIAL)
-		{
+},
+{
 			type = "TextLabel",
 			position = {17,34},
 			size = {700,21},
@@ -180,115 +46,83 @@ UniverseScreen =
 			Text =
 			{
 				-- LEARN TO PLAY
-				text = "BACKSTORY",
+				text = "The Price of Freedom",
 				textStyle = "FEHeading2",
 			},
 			;
-		},
-	
-		--DEFINITION FOR: (frmRoot) TutorialBox
-		{
-			type = "Frame",		
-			position = {28,112},
-			size = {742,338},
-			name = "frmRootTutorialBox",	
-			backgroundColor = "FEColorBackground1",
-			;
-	
-			-- Line on the left side of the list boxes scroll bar
-			{
-				type = "Line",
-				p1 = {719, 30},
-				p2 = {719, 334},
-				lineWidth = 2,
-				above = 1,
-				color = "FEColorOutline",
-			},
-			
-			--DEFINITION FOR: (txtLbl) Tutorial
-			{
-				type = "TextLabel",
-				position = {5,2},
-				size = {500,15},
-				name = "txtLblCampaignName",
-				Text =
-				{
-					text = "SLIPSTREAM UNIVERSE",
-					textStyle = "FEHeading3",
-					vAlign = "Middle",
-				},
-				;
-			},
-	
-			--DEFINITION FOR: (txtLbl) ChooseTut
-			{
-				type = "TextLabel",
-				position = {5,18},
-				size = {300,10},
-				name = "txtLblChooseTut",
-				Text =
-				{
-					-- CHOOSE TUTORIAL//
-					text = "SELECT//",
-					textStyle = "FEHeading4",
-				},
-				;
-			},
+},
+{
+    type = "Frame",
+    autosize = 0,
+    outerBorderWidth = 1,
+    borderColor = "FEColorHeading1",
+    backgroundColor = "FEColorBackground1",
+	position = {28,112},
+	size = {742,338},
+    --position =
+      --  { 262.5, 187, },
+    autoarrange = 1,
+ --   autoarrangeWidth = 304,
+    autoarrangeSpace = 0,
+    --maxSize =
+      --  { 275, 400, },
+;
+{
+    type = "Frame",
+    size =
+        { 304, 2, },
+},
+{
+    type = "TextLabel",
+    size =
+        { 375, 13, },
+    Text =
+    {
+        textStyle = "FEHeading3",
+        text = "Slipstream, ERA II, Current Year: 2681",
+        offset =
+            { 24, 0, }, },
+},
+{
+    type = "Frame",
+    size =
+        { 304, 13, },
+},
+{
+    type = "TextLabel",
+	autosize = 0,
+    size =
+        { 718, 330, },
+	wrapping = 1,
+	marginWidth = 0,
+	marginHeight = 0,
+    Text =
+    {
+        textStyle = "Buttonfont",
+        --text = "The UNCG has been in control of most of humanity since Earth's Destruction in 2130. On the other side of the galaxy was the DSCG, a rival to the UNCG, and has been since the year 2145. The Two factions never had contact since. The Year is now 2300, and Emperor Alexander of the American Empire, has been elected chairman of the UNCG. His Plan is to take over the UNCG and erect the Empire of Humanity. Meanwhile, The DCSG, had found Ancient Tablets referring to massive kingdom made entirely of light. However, more secrets lie buried behind a region where the current UNCG resides. With the DOL and the UNCG Enemies, a war is imminent.",
+		text = "Place holder for the new universe screen..",
+		hAlign = "left",
+		vAlign = "Top",
+		offset =
+            { 24, 0, }, },
+},
+{
+    type = "Frame",
+    size =
+        { 296, 15, }, },
+},
+{
+    type = "TextListBoxItem",
+    buttonStyle = "FEListBoxItemButtonStyle",
+    name = "m_levelListBoxItem",
+    visible = 0,
+    enabled = 0,
+    Text =
+    {
+        textStyle = "FEListBoxItemTextStyle", },
+},
 
-			-- This frame contains the map, the tutorial list frame, the spacer frame, and the bottom help text frame
-			{
-				type = "Frame",
-				outerBorderWidth = 1,
-				borderColor = "FEColorOutline",
-				position = {3, 31},
-				autosize = 1,
---				backgroundColor = "FEColorBackground1",
-				;
-			
-				-- This is the list box that will hold all of the tutorial items
-				--DEFINITION FOR: (frm) tut frame
-				{
-					type = "Frame",
-					borderWidth = 1,
-					borderColor = "FEColorOutline",
-					position = {248,0},
-					size = {488,304},
-					;
-
---=============================================================================
--- List Box Items
-					listBox,
-					
---=============================================================================
-
-				},
-
-				-- map (screenshot) frame
-				--DEFINITION FOR: (frm) Map
-
---=============================================================================
--- List Box Pics
-				listPic,
-
---=============================================================================
-
-				-- bottom-of-map spacer frame
-				--DEFINITION FOR: (frm) MapSub
-				{
-					type = "Frame",
-					borderWidth = 1,
-					borderColor = "FEColorOutline",
-					position = {0,200},
-					size = {248,104},
-					name = "frmMapSub",
-					;
-				},
-			},
-		},
-		
-		------------------------------------------------------------------------------------
-		-- BOTTOM NAVIGATION FRAME
-		------------------------------------------------------------------------------------
+--Bottom Navigation Screen
 		{
 			type = "Frame",
 			backgroundColor = "FEColorBackground1",
@@ -305,7 +139,7 @@ UniverseScreen =
 				size = {772,40},
 				name = "frmbottomframe",
 				;
-				
+
 				-- HELP TEXT
 				{
 					type = "TextLabel",
@@ -313,30 +147,30 @@ UniverseScreen =
 					size = {764,13},
 					name = "txtLblHELPTEXT",
 					Text =
-					{					
+					{
 						textStyle = "FEHelpTipTextStyle",
 					},
 					;
 				},
-				
+
 				-- LINE
 				{
 					type = "Line",
 					above = 0,
 					lineWidth = 2,
-					color = "FEColorOutline",				
+					color = "FEColorOutline",
 					p1 = {2, 19},
 					p2 = {770, 19},
-					
+
 				},
-				
+
 				-- BUTTONS
-				
+
 				--DEFINITION FOR: (txtBtn) BACK
 				{
 					type = "TextButton",
 					buttonStyle = "FEButtonStyle1",
-					position = {4,23},						
+					position = {4,23},
 					name = "txtBtnBACK",
 					helpTip = "$3468",
 					helpTipTextLabel = "txtLblHELPTEXT",
@@ -351,5 +185,4 @@ UniverseScreen =
 				},
 			},
 		},
-	}
 }

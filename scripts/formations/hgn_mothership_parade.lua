@@ -32,7 +32,7 @@ paradeSlot("Hgn_TorpedoFrigate",        {1224, -586, 1305},    	{0,0,1}, {1,0,0}
 
 
 -- left
-paradeSlot("Hgn_Scout",                 {-1290, -400, 1557},     	 {0,0,1}, {-1,0,0},      0);
+paradeSlot("Hgn_Drone",                 {-1290, -400, 1557},     	 {0,0,1}, {-1,0,0},      0);
 paradeSlot("Hgn_Interceptor",           {-946, -350, 1284},       {0,0,1}, {-1,0,0},      0);
 paradeSlot("Hgn_AttackBomber",          {-677, -300, 1025},   {0,0,1}, {-1,0,0},      0);
 paradeSlot("Hgn_AttackBomberElite",          {-677, -100, 1025},   {0,0,1}, {-1,0,0},      0);

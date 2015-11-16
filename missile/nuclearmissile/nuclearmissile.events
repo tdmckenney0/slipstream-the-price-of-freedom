@@ -61,15 +61,15 @@ effects = {
       },
       {
         "fx",
-        "DMG_MASSIVE_MESH_SPHERE_RING",
+        "ca_shell_combo",
       },
       {
         "sound",
-        "EXPLOSION/LARGE/etg_explode_large_sajuuk_supernova",
+        "WEAPON/FRIGATE/FIRE/WEAPON_CLUSTER_MISSLE_LAUNCH",
       },
       {
-        "fx_scale",
-        "0.45",
+        "fx_transform",
+        "None",
       },
     },
   },

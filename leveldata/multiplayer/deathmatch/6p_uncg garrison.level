@@ -228,9 +228,7 @@ addPebble("Pebble_1", {10000, 5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_1", { -13657, 36709, -37806,}, 0, 0, 0)
   addPebble("Pebble_1", { 47043, 26709, 28806,}, 0, 0, 0)
 
-  --Background mesh
-addSquadron("bg_icycompanions", "bg_icycompanions", {0, 0, 0}, -1, {180, 0, 0}, 0, 0);
---end backgroundmesh
+
 
 
 

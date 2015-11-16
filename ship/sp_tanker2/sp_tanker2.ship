@@ -150,8 +150,18 @@ addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Fighter, Corvette, Fr
 NewShipType.active = 1
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 LoadSharedModel(NewShipType, "Sp_Tanker")
-StartShipWeaponConfig(NewShipType, "Hgn_MSHullDefenseGun", "Weapon_HullDefense1", "Weapon_HullDefense1")
-StartShipWeaponConfig(NewShipType, "Hgn_TransportHullDefenseGun", "Weapon_HullDefense2", "Weapon_HullDefense2")
+StartShipWeaponConfig(NewShipType, "Hgn_hulldefensegun", "Weapon_HullDefense1", "Fire_HullDefense1")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense2", "Fire_HullDefense2")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense3", "Fire_HullDefense3")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense4", "Fire_HullDefense4")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense5", "Fire_HullDefense5")
+StartShipWeaponConfig(NewShipType, "hgn_hulldefensegun", "Weapon_HullDefense6", "Fire_HullDefense6")
+
+StartShipHardPointConfig(NewShipType,"Missilebar","Missilebar","Weapon","Innate","Damageable","hgn_BBC_innate_missilebar")
+StartShipHardPointConfig(NewShipType,"Weapon_Gat1","Weapon_Gat1","Weapon","Generic","indestructible","hgn_gatlinggunleft","","","")
+StartShipHardPointConfig(NewShipType,"Weapon_Gat2","Weapon_Gat2","Weapon","Generic","indestructible","hgn_gatlinggunright","","","")
+StartShipHardPointConfig(NewShipType,"HpBL_01","HpBL_01","Weapon","Generic","indestructible","hgn_flakturretleft","hgn_BD_CannonTurret","hgn_BD_QuadCannon","hgn_BD_ionbeamturret")
+StartShipHardPointConfig(NewShipType,"HpBL_02","HpBL_02","Weapon","Generic","indestructible","hgn_flakturretright","hgn_BD_CannonTurret2","hgn_BD_QuadCannon2","hgn_BD_ionbeamturret2")
 NewShipType.battleScarMaxTriBase = 500
 NewShipType.battleScarMaxTriInc = 1000
 NewShipType.sobDieTime = 3.6

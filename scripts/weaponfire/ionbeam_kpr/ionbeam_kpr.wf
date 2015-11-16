@@ -1,14 +1,3 @@
-
--- formats: 
--- hitfx = "name"
--- bulletfx = "name"
--- nopenetratefx = "name"
--- missfx = "name"
--- anticipatefx = "name"
--- deathtype = "name"
--- component = "name"
-
-
 hitfx = "ion_dmg_ring_spray_kpr"
 bulletfx = "beam_generic_kpr"
 nopenetratefx = "ion_dmg_ring_spray"

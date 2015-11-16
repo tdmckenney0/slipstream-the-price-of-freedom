@@ -9,7 +9,7 @@ AllShips = 0
 Family = 1
 Ship = 2
 
-research = 
+research =
 {
 	{
 		Name = "CorvetteTech",
@@ -884,5 +884,20 @@ research =
 		TargetName = "Vgr_Carrier",
 		UpgradeName = "MAXHEALTH",
 		UpgradeValue = 3,
+	},
+	{
+		Name = "SYENABLED",
+		RequiredResearch = "RESEARCH HACK",
+		RequiredSubSystems = "",
+		Cost = 0,
+		Time = 0,
+		DisplayedName = "Enables/Disables the shipyard",
+		DisplayPriority = 1208,
+		Description = "",
+		UpgradeType = Modifier,
+		TargetType = Ship,
+		TargetName = "Vgr_Shipyard",
+		Icon = Icon_Tech,
+		ShortDisplayedName = "SYENABLED",
 	},
 }

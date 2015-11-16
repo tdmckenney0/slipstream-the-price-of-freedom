@@ -9,8 +9,8 @@ NewShipType.sobDescription = "Valencia Class\nSuper-Heavy Battlecruiser"
 NewShipType.maxhealth = 1500000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 2000
-NewShipType.sideArmourDamage = 0.9
-NewShipType.rearArmourDamage = 0.7
+NewShipType.sideArmourDamage = 0.4
+NewShipType.rearArmourDamage = 0.45
 NewShipType.topArmourDamage = 0.45
 NewShipType.bottomArmourDamage = 0.45
 NewShipType.frontArmourDamage = 0.4
@@ -24,19 +24,19 @@ NewShipType.defensiveFormation = "x"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 1000
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 110
+NewShipType.thrusterMaxSpeed = 95
 NewShipType.mainEngineMaxSpeed = 110
 NewShipType.rotationMaxSpeed = 6
 NewShipType.thrusterAccelTime = 6
-NewShipType.thrusterBrakeTime = 2
-NewShipType.mainEngineAccelTime = 6
-NewShipType.mainEngineBrakeTime = 2
-NewShipType.rotationAccelTime = 0.7
-NewShipType.rotationBrakeTime = 0.4
+NewShipType.thrusterBrakeTime = 5
+NewShipType.mainEngineAccelTime = 15
+NewShipType.mainEngineBrakeTime = 14
+NewShipType.rotationAccelTime = 5
+NewShipType.rotationBrakeTime = 3
 NewShipType.thrusterUsage = 1
 NewShipType.accelerationAngle = 40
 NewShipType.mirrorAngle = 30
-NewShipType.secondaryTurnAngle = 45
+NewShipType.secondaryTurnAngle = 0
 NewShipType.maxBankingAmount = 75
 NewShipType.descendPitch = 10
 NewShipType.goalReachEpsilon = 25
@@ -153,12 +153,12 @@ addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 
     Corvette = "300", })
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "HyperSpaceCommand", 1, 0, 0, 0, 0, 0)
+addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "flyby_destroyer", 
 { 
     SubSystem = "movetotargetandshootVsSubSystem", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
-addAbility(NewShipType,"CanBuildShips",1,"Fighter_Hgn, SubSystem_Hgn","Fighter, SubSystemModule")
+addAbility(NewShipType,"CanBuildShips",1,"Drone_uncg, SubSystem_Hgn","Fighter, SubSystemModule")
 addAbility(NewShipType, "CanBeCaptured", 160, 0.5)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
@@ -169,59 +169,55 @@ addAbility(NewShipType, "DefenseFieldShieldAbility", 1, 2000, 0, 0)
 LoadModel(NewShipType, 1)
 
 StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Nuke", "Weapon_Nuke");
-
 StartShipWeaponConfig(NewShipType, "Hgn_GimbleIonCannon", "Weapon_Pulsar", "Weapon_Pulsar")
 StartShipWeaponConfig(NewShipType, "Hgn_GimbleIonCannon", "Weapon_Pulsar2", "Weapon_Pulsar2")
 StartShipWeaponConfig(NewShipType, "Hgn_GimbleIonCannon", "Weapon_Pulsar3", "Weapon_Pulsar3")
 StartShipWeaponConfig(NewShipType, "Hgn_GimbleIonCannon", "Weapon_Pulsar4", "Weapon_Pulsar4")
+StartShipWeaponConfig(NewShipType, "hgn_turretedsuperbeam", "Weapon_MajorCannon", "Weapon_MajorCannon")
 
 addShield(NewShipType, "EMP", 10000, 20)
 
--------------------------------------Main--Turrets
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret", "Weapon_TurretTop", "System", "Innate", "Damageable", "hgn_gatlinggun", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret1", "Weapon_TurretTop2", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret2", "Weapon_TurretTop3", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret3", "Hardpoint_TurretBot1", "System", "Innate", "Damageable", "hgn_railgun", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret4", "Hardpoint_TurretBot2", "System", "Innate", "Damageable", "hgn_railgun", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret5", "Hardpoint_TurretBot3", "System", "Innate", "Damageable", "hgn_flakturretleft", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret6", "Hardpoint_TurretBot4", "System", "Innate", "Damageable", "hgn_flakturretright", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret7", "Hardpoint_DCT_Top1", "System", "Innate", "Damageable", "hgn_ioncannonx2", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret8", "Hardpoint_DCT_Top2", "System", "Innate", "Damageable", "hgn_ioncannonx2", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret9", "Hardpoint_DCT_Bot1", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret10", "Hardpoint_DCT_Bot2", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret11", "Hardpoint_DCT_Bot3", "System", "Innate", "Damageable", "hgn_flakturret", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret12", "Hardpoint_DCT_Bot4", "System", "Innate", "Damageable", "hgn_flakturret", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret13", "Hardpoint_DCT_Bot5", "System", "Innate", "Damageable", "hgn_gatlinggunleft", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret14", "Hardpoint_DCT_Bot6", "System", "Innate", "Damageable", "hgn_gatlinggunright", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret15", "Hardpoint_DCT_Bot7", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "SCC_Turret16", "Hardpoint_DCT_Bot8", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "Weapon IonBeam 1", "Hardpoint_IonBeam1", "Weapon", "Innate", "Damageable", "hgn_plasmabatteryx6", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "Weapon IonBeam 2", "Hardpoint_IonBeam2", "Weapon", "Innate", "Damageable", "hgn_plasmabatteryx6", "", "", "", "", "", "", "", "")
-
--------------------------------------Engineering--Subsystems
-StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Hgn_BattleCruiserEngine", "", "", "", "", "", "", "", "")
+-------------------------------------Engineering Subsystems
 
 StartShipHardPointConfig(NewShipType,"Generic 1","HardpointGeneric1","System","Generic","Destroyable","","Hgn_C_Module_FireControl","Hgn_C_Module_CloakGenerator","Hgn_C_Module_HyperspaceInhibitor","Hgn_C_Module_Hyperspace","hgn_bcfighter","","","")
 StartShipHardPointConfig(NewShipType,"Generic 2","HardpointGeneric2","System","Generic","Destroyable","","Hgn_C_Module_FireControl","Hgn_C_Module_CloakGenerator","Hgn_C_Module_HyperspaceInhibitor","Hgn_C_Module_Hyperspace","hgn_bcfighter","","","")
+StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Hgn_BattleCruiserEngine", "", "", "", "", "", "", "", "")
+
+-------------------------------------Main Turrets
+
+StartShipHardPointConfig(NewShipType, "PPC1", "Weapon_TurretTop", "System", "Innate", "Damageable", "hgn_ioncannonx2", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "PPC2", "Hardpoint_TurretBot1", "System", "Innate", "Damageable", "hgn_ioncannonx2", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "lFLAK", "Hardpoint_TurretBot3", "System", "Innate", "Damageable", "hgn_flakturretleft", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "rFLAK", "Hardpoint_TurretBot4", "System", "Innate", "Damageable", "hgn_flakturretright", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "FLAK1", "Hardpoint_DCT_Top1", "System", "Innate", "Damageable", "hgn_flakturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "FLAK2", "Hardpoint_DCT_Top2", "System", "Innate", "Damageable", "hgn_flakturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "m1", "Hardpoint_DCT_Bot1", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "m2", "Hardpoint_DCT_Bot2", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Gat1", "Hardpoint_DCT_Bot5", "System", "Innate", "Damageable", "hgn_gatlinggunleft", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Gat2", "Hardpoint_DCT_Bot6", "System", "Innate", "Damageable", "hgn_gatlinggunright", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "m3", "Hardpoint_DCT_Bot7", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "m4", "Hardpoint_DCT_Bot8", "System", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "tMissile1", "Hardpoint_TopMissile1", "Weapon", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "tMissile2", "Hardpoint_TopMissile2", "Weapon", "Innate", "Damageable", "hgn_missileturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Valencium1", "Hardpoint_mWeapon", "Weapon", "Innate", "Damageable", "hgn_plasmabatteryx6", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Valencium2", "Hardpoint_mWeapon2", "Weapon", "Innate", "Damageable", "hgn_plasmabatteryx6", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "SuperBeam", "Hardpoint_IonBeam2", "Weapon", "Innate", "indestructible", "hgn_superbeamturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Rail1", "Hardpoint_Rail1", "Weapon", "Innate", "Damageable", "hgn_railgun", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Rail2", "Hardpoint_Rail2", "Weapon", "Innate", "Damageable", "hgn_railgun", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Mount1", "Hardpoint_Mount", "Weapon", "Innate", "indestructible", "hgn_mount_large", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Mount2", "Hardpoint_Mount2", "Weapon", "Innate", "indestructible", "hgn_mount_large", "", "", "", "", "", "", "", "")
+
+--Microweapons
+StartShipHardPointConfig(NewShipType,"sGatling1","Hardpoint_sGatling1","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"sGatling2","Hardpoint_sGatling2","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"sGatling3","Hardpoint_sGatling3","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"sGatling4","Hardpoint_sGatling4","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"sLaser1","Hardpoint_Laser1","Weapon","Innate","Indestructible","hgn_lasersmall","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"sLaser2","Hardpoint_Laser2","Weapon","Innate","Indestructible","hgn_lasersmall","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"bLaser1","Hardpoint_bLaser1","Weapon","Innate","Indestructible","hgn_lasersmall","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"bLaser2","Hardpoint_bLaser2","Weapon","Innate","Indestructible","hgn_lasersmall","","","","","","","","")
+
+
 
 
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)

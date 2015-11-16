@@ -1,6 +1,6 @@
-StartWeaponConfig(NewWeaponType,"AnimatedTurret","InstantHit","Super_BeamSaj","Normal",0,15000,0,8,4,0,20,0,1,60,0,0,0,0,360,360,0.1,"Bypass",1,0,1000000)
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","InstantHit","Super_BeamSaj","Normal",0,15000,0,8,4,0,20,0,1,120,0,0,0,0,360,360,0.1,"Bypass",1,0,1000000)
 
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",250000,250000,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",350000,500000,"")
 AddWeaponResult(NewWeaponType,"Hit","Push","Target",50,50,"")
 
 setAngles(NewWeaponType,5,-120,120,-70,70)
