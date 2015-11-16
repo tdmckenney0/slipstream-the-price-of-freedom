@@ -136,7 +136,7 @@ FEGameOptions =
 		},
 		Text =
 		{
-			text = "$5106",
+			--text = "$5106",
 			textStyle = "FEHeading1",
 		},
 	},
@@ -154,7 +154,7 @@ FEGameOptions =
 		},
 		Text =
 		{
-			text = "$5107",
+			--text = "$5107",
 			textStyle = "FEHeading2",
 		},
 	},
@@ -175,11 +175,9 @@ FEGameOptions =
 		backgroundColor = "FEColorBackground1",
 		BackgroundGraphic =
 			{
-		color =
-            { 255, 255, 255, 255, },
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
-        textureUV =
-            { 0, 0, 600, 600, },
+		color = { 255, 255, 255, 255, },
+		texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
+		textureUV ={ 0, 0, 600, 600, },
 			},
 		;
 		{
@@ -288,8 +286,23 @@ FEGameOptions =
 			},
 		},
 		{
+				type = "Line",
+				above = 0,
+				lineWidth = 1,
+				color = "FEColorHeading3",
+				p1 =
+				{
+					4,
+					31,
+				},
+				p2 =
+				{
+					612,
+					31,
+				},
+			},
+		{
 			type = "Frame",
-			outerBorderWidth = 0,
 			position =
 			{
 				4,
@@ -300,11 +313,10 @@ FEGameOptions =
 				612,
 				264,
 			},
-			borderColor = "FEColorHeading3",
 			;
 			{
 			type = "Frame",
-			outerBorderWidth = 1,
+			outerBorderWidth = 0,
 			size =
 				{ 615, 300, },
 			position =
@@ -1789,7 +1801,7 @@ FEGameOptions =
     {
 		color =
             { 255, 255, 255, 255, },
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
         textureUV =
             { 0, 0, 600, 600, },
 	},

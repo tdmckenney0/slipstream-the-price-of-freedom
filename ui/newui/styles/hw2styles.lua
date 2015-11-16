@@ -42,7 +42,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "FEColorBackground2",
-			string = "0,0,0,64",
+			string = "0,0,0,128",
 		},
 		{
 			name = "FEColorDialog",
@@ -78,7 +78,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "IGColorBackground1",
-			string = "162,162,162,112",
+			string = "175,175,175,200",
 		},
 		{
 			name = "IGColorOutline",
@@ -1084,24 +1084,103 @@ HW2StyleSheet =
 			},
 		},
 	},
+	--Mercury Button
 	FEButtonStyle1 =
 	{
 		type = "Button",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
 		size =
 		{
 			120,
-			13,
+			12,
 		},
-		BackgroundGraphic =
+		--toggleButton = 1,
+		flashSpeed = 250,
+		disabledTextColor = "FEColorDisabled",
+		soundOnEnter = "SFX_ButtonEnter",
+		soundOnClicked = "SFX_ButtonClick",
+		Text =
 		{
-			texture = "DATA:UI\\NewUI\\Styles\\Button1\\Button1Inside.mres",
+			textStyle = "FEButtonTextStyle",
+		},
+		DefaultGraphic =
+		{
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
+			color =
+				{ 175, 175, 175, 255, },
 			textureUV =
 			{
 				0,
 				0,
-				16,
+				64,
 				13,
 			},
+		},
+		OverGraphic =
+		{
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
+			textureUV =
+			{
+				0,
+				0,
+				64,
+				13,
+			},
+		},
+		ClickedGraphic =
+		{
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
+			textureUV =
+			{
+				0,
+				0,
+				64,
+				13,
+			},
+		},
+		PressedGraphic =
+		{
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
+			textureUV =
+			{
+				0,
+				0,
+				64,
+				13,
+			},
+		},
+		FlashGraphic =
+		{
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
+			textureUV =
+			{
+				0,
+				0,
+				64,
+				13,
+			},
+			color =
+			{
+				220,
+				220,
+				255,
+				255,
+			},
+		},
+		flashTextColor =
+		{
+			0,
+			0,
+			0,
+			255,
+		},
+		flashColor =
+		{
+			255,
+			255,
+			255,
+			255,
 		},
 		textColor =
 		{
@@ -1110,259 +1189,167 @@ HW2StyleSheet =
 			0,
 			255,
 		},
-		OverGraphic =
+		pressedTextColor =
 		{
-			texture = "DATA:UI\\NewUI\\Styles\\Button1\\Button1InsideOver.mres",
-			textureUV =
-			{
-				0,
-				0,
-				16,
-				13,
-			},
-		},
-		overtextColor =
-		{
-			64,
-			64,
-			64,
+			0,
+			0,
+			0,
 			255,
 		},
-		PressedGraphic =
-		{
-			texture = "DATA:UI\\NewUI\\Styles\\Button1\\Button1InsidePressed.mres",
-			textureUV =
-			{
-				0,
-				0,
-				16,
-				13,
-			},
-		},
-		pressedtextColor =
+		clickedTextColor =
 		{
 			255,
 			255,
 			255,
 			255,
 		},
-		DisabledGraphic =
+		overTextColor =
 		{
-			texture = "DATA:UI\\NewUI\\Styles\\Button1\\Button1InsideDisabled.mres",
-			textureUV =
-			{
-				0,
-				0,
-				16,
-				13,
-			},
-			color = "FEColorDisabled",
+			0,
+			0,
+			0,
+			255,
 		},
-		disabledTextColor = "FEColorDisabled",
-		soundOnEnter = "SFX_ButtonEnter",
-		soundOnClicked = "SFX_ButtonClick",
-		Text =
+		--outerBorderWidth = 1,
+		borderColor =
 		{
-			textStyle = "FEButtonTextStyle",
+			0,
+			0,
+			0,
+			255,
 		},
-		;
+		overBorderColor =
 		{
-			type = "Button",
-			position =
-			{
-				0,
-				0,
-			},
-			resizeToParent = 1,
-			visible = 1,
-			BackgroundGraphic =
-			{
-				size =
-				{
-					3,
-					13,
-				},
-				texture = "DATA:UI\\NewUI\\Styles\\Button1\\Button1Edge.mres",
-				textureUV =
-				{
-					0,
-					0,
-					3,
-					13,
-				},
-			},
-			OverGraphic =
-			{
-				size =
-				{
-					3,
-					13,
-				},
-				texture = "DATA:UI\\NewUI\\Styles\\Button1\\Button1EdgeOver.mres",
-				textureUV =
-				{
-					0,
-					0,
-					3,
-					13,
-				},
-			},
-			PressedGraphic =
-			{
-				size =
-				{
-					3,
-					13,
-				},
-				texture = "DATA:UI\\NewUI\\Styles\\Button1\\Button1EdgePressed.mres",
-				textureUV =
-				{
-					0,
-					0,
-					3,
-					13,
-				},
-			},
-			DisabledGraphic =
-			{
-				size =
-				{
-					3,
-					13,
-				},
-				texture = "DATA:UI\\NewUI\\Styles\\Button1\\Button1EdgeDisabled.mres",
-				textureUV =
-				{
-					0,
-					0,
-					3,
-					13,
-				},
-				color = "FEColorDisabled",
-			},
-			giveParentMouseInput = 1,
-			;
-			{
-				type = "Button",
-				position =
-				{
-					0,
-					0,
-				},
-				hAlign = "Right",
-				visible = 1,
-				size =
-				{
-					800,
-					13,
-				},
-				BackgroundGraphic =
-				{
-					position =
-					{
-						797,
-						0,
-					},
-					size =
-					{
-						3,
-						13,
-					},
-					texture = "DATA:UI\\NewUI\\Styles\\Button1\\Button1Edge.mres",
-					textureUV =
-					{
-						3,
-						0,
-						0,
-						13,
-					},
-				},
-				OverGraphic =
-				{
-					position =
-					{
-						797,
-						0,
-					},
-					size =
-					{
-						3,
-						13,
-					},
-					texture = "DATA:UI\\NewUI\\Styles\\Button1\\Button1EdgeOver.mres",
-					textureUV =
-					{
-						3,
-						0,
-						0,
-						13,
-					},
-				},
-				PressedGraphic =
-				{
-					position =
-					{
-						797,
-						0,
-					},
-					size =
-					{
-						3,
-						13,
-					},
-					texture = "DATA:UI\\NewUI\\Styles\\Button1\\Button1EdgePressed.mres",
-					textureUV =
-					{
-						3,
-						0,
-						0,
-						13,
-					},
-				},
-				DisabledGraphic =
-				{
-					position =
-					{
-						797,
-						0,
-					},
-					size =
-					{
-						3,
-						13,
-					},
-					texture = "DATA:UI\\NewUI\\Styles\\Button1\\Button1EdgeDisabled.mres",
-					textureUV =
-					{
-						3,
-						0,
-						0,
-						13,
-					},
-					color = "FEColorDisabled",
-				},
-				giveParentMouseInput = 1,
-			},
+			0,
+			0,
+			0,
+			255,
+		},
+		clickedBorderColor =
+		{
+			0,
+			0,
+			0,
+			255,
+		},
+		pressedBorderColor =
+		{
+			0,
+			0,
+			0,
+			255,
+		},
+		disabledColor =
+		{
+			127,
+			127,
+			127,
+			0,
+		},
+		disabledTextColor =
+		{
+			127,
+			127,
+			127,
+			0,
 		},
 	},
 	FEButtonStyle2 =
 	{
 		type = "Button",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
 		size =
 		{
 			120,
-			13,
+			12,
 		},
-		BackgroundGraphic =
+		--toggleButton = 1,
+		flashSpeed = 250,
+		disabledTextColor = "FEColorDisabled",
+		soundOnEnter = "SFX_ButtonEnter",
+		soundOnClicked = "SFX_ButtonClick",
+		Text =
 		{
-			texture = "DATA:UI\\NewUI\\Styles\\button1\\button1Inside.mres",
+			textStyle = "FEButtonTextStyle",
+		},
+		DefaultGraphic =
+		{
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
+			color =
+				{ 175, 175, 175, 255, },
 			textureUV =
 			{
 				0,
 				0,
-				16,
+				64,
 				13,
 			},
+		},
+		OverGraphic =
+		{
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
+			textureUV =
+			{
+				0,
+				0,
+				64,
+				13,
+			},
+		},
+		ClickedGraphic =
+		{
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
+			textureUV =
+			{
+				0,
+				0,
+				64,
+				13,
+			},
+		},
+		PressedGraphic =
+		{
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
+			textureUV =
+			{
+				0,
+				0,
+				64,
+				13,
+			},
+		},
+		FlashGraphic =
+		{
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
+			textureUV =
+			{
+				0,
+				0,
+				64,
+				13,
+			},
+			color =
+			{
+				220,
+				220,
+				255,
+				255,
+			},
+		},
+		flashTextColor =
+		{
+			0,
+			0,
+			0,
+			255,
+		},
+		flashColor =
+		{
+			255,
+			255,
+			255,
+			255,
 		},
 		textColor =
 		{
@@ -1371,252 +1358,72 @@ HW2StyleSheet =
 			0,
 			255,
 		},
-		OverGraphic =
+		pressedTextColor =
 		{
-			texture = "DATA:UI\\NewUI\\Styles\\button1\\button1InsideOver.mres",
-			textureUV =
-			{
-				0,
-				0,
-				16,
-				13,
-			},
+			0,
+			0,
+			0,
+			255,
+		},
+		clickedTextColor =
+		{
+			255,
+			255,
+			255,
+			255,
 		},
 		overTextColor =
 		{
-			255,
-			255,
-			255,
-			255,
-		},
-		PressedGraphic =
-		{
-			texture = "DATA:UI\\NewUI\\Styles\\button1\\button1InsidePressed.mres",
-			textureUV =
-			{
-				0,
-				0,
-				16,
-				13,
-			},
-		},
-		pressedTextColor =
-		{
-			255,
-			255,
-			255,
+			0,
+			0,
+			0,
 			255,
 		},
-		DisabledGraphic =
+		--outerBorderWidth = 1,
+		borderColor =
 		{
-			texture = "DATA:UI\\NewUI\\Styles\\button1\\button1InsideDisabled.mres",
-			textureUV =
-			{
-				0,
-				0,
-				16,
-				13,
-			},
-			color = "FEColorDisabled",
+			0,
+			0,
+			0,
+			255,
 		},
-		disabledTextColor = "FEColorDisabled",
-		soundOnEnter = "SFX_ButtonEnter",
-		soundOnClicked = "SFX_ButtonClick",
-		Text =
+		overBorderColor =
 		{
-			textStyle = "FEButtonTextStyle",
+			0,
+			0,
+			0,
+			255,
 		},
-		;
+		clickedBorderColor =
 		{
-			type = "Button",
-			position =
-			{
-				0,
-				0,
-			},
-			resizeToParent = 1,
-			visible = 1,
-			BackgroundGraphic =
-			{
-				size =
-				{
-					3,
-					13,
-				},
-				texture = "DATA:UI\\NewUI\\Styles\\button1\\button1Edge.mres",
-				textureUV =
-				{
-					0,
-					0,
-					3,
-					13,
-				},
-			},
-			OverGraphic =
-			{
-				size =
-				{
-					3,
-					13,
-				},
-				texture = "DATA:UI\\NewUI\\Styles\\button1\\button1EdgeOver.mres",
-				textureUV =
-				{
-					0,
-					0,
-					3,
-					13,
-				},
-			},
-			PressedGraphic =
-			{
-				size =
-				{
-					3,
-					13,
-				},
-				texture = "DATA:UI\\NewUI\\Styles\\button1\\button1EdgePressed.mres",
-				textureUV =
-				{
-					0,
-					0,
-					3,
-					13,
-				},
-			},
-			DisabledGraphic =
-			{
-				size =
-				{
-					3,
-					13,
-				},
-				texture = "DATA:UI\\NewUI\\Styles\\button1\\button1EdgeDisabled.mres",
-				textureUV =
-				{
-					0,
-					0,
-					3,
-					13,
-				},
-				color = "FEColorDisabled",
-			},
-			giveParentMouseInput = 1,
-			;
-			{
-				type = "Button",
-				position =
-				{
-					0,
-					0,
-				},
-				hAlign = "Right",
-				visible = 1,
-				size =
-				{
-					800,
-					13,
-				},
-				BackgroundGraphic =
-				{
-					position =
-					{
-						797,
-						0,
-					},
-					size =
-					{
-						3,
-						13,
-					},
-					texture = "DATA:UI\\NewUI\\Styles\\button1\\button1Edge.mres",
-					textureUV =
-					{
-						3,
-						0,
-						0,
-						13,
-					},
-				},
-				OverGraphic =
-				{
-					position =
-					{
-						797,
-						0,
-					},
-					size =
-					{
-						3,
-						13,
-					},
-					texture = "DATA:UI\\NewUI\\Styles\\button1\\button1EdgeOver.mres",
-					textureUV =
-					{
-						3,
-						0,
-						0,
-						13,
-					},
-				},
-				PressedGraphic =
-				{
-					position =
-					{
-						797,
-						0,
-					},
-					size =
-					{
-						3,
-						13,
-					},
-					texture = "DATA:UI\\NewUI\\Styles\\button1\\button1EdgePressed.mres",
-					textureUV =
-					{
-						3,
-						0,
-						0,
-						13,
-					},
-				},
-				DisabledGraphic =
-				{
-					position =
-					{
-						797,
-						0,
-					},
-					size =
-					{
-						3,
-						13,
-					},
-					texture = "DATA:UI\\NewUI\\Styles\\button1\\button1EdgeDisabled.mres",
-					textureUV =
-					{
-						3,
-						0,
-						0,
-						13,
-					},
-					color = "FEColorDisabled",
-				},
-				giveParentMouseInput = 1,
-			},
+			0,
+			0,
+			0,
+			255,
+		},
+		pressedBorderColor =
+		{
+			0,
+			0,
+			0,
+			255,
+		},
+		disabledColor =
+		{
+			127,
+			127,
+			127,
+			0,
+		},
+		disabledTextColor =
+		{
+			127,
+			127,
+			127,
+			0,
 		},
 	},
-	FEButtonStyle3 =
-	{
-		type = "Button",
-		size =
-		{
-			145,
-			14,
-		},
-		soundOnEnter = "SFX_ButtonEnter",
-		soundOnClicked = "SFX_ButtonClick",
-	},
+	--EndMercury
 	FEButtonStyle1NoEnterSound =
 	{
 		type = "Button",
@@ -1643,7 +1450,7 @@ HW2StyleSheet =
 			0,
 			0,
 			0,
-			0,
+			45,
 		},
 		borderColor = "FEColorHeading3",
 		textColor = "FEColorOutline",
@@ -1662,7 +1469,13 @@ HW2StyleSheet =
 			0,
 			255,
 		},
-		pressedColor = "FEColorOutline",
+		pressedColor = 
+		{
+			0,
+			0,
+			0,
+			200,
+		},
 		pressedBorderColor = "FEColorHeading3",
 		pressedTextColor =
 		{
@@ -4085,21 +3898,21 @@ HW2StyleSheet =
 		{
 		color =
             { 255, 255, 255, 255, },
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
         textureUV =
             { 0, 0, 600, 600, }, },
 		OverGraphic =
 		{
 		color =
             { 170, 170, 170, 255, },
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
         textureUV =
             { 0, 0, 600, 600, }, },
 		PressedGraphic =
 		{
 		color =
             { 0, 0, 0, 255, },
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
         textureUV =
             { 0, 0, 600, 600, }, },
 		DisabledGraphic =

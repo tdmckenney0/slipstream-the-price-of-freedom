@@ -20,7 +20,7 @@ ResourceMenu =
 
 					UI_SetElementPosition("ResourceMenu","resource",0,zResourceStart)
 
-					if(zResourceStart < 0) then
+					if(zResourceStart < -1) then
 						zResourceStart = zResourceStart + 2
 					end
 				]],
@@ -31,7 +31,7 @@ ResourceMenu =
 		position =
 		{
 			0,
-			0,
+			-1,
 		},
 		size =
 		{
@@ -47,7 +47,7 @@ ResourceMenu =
 			borderColor = "FEColorHeading3",
 			BackgroundGraphic =
 			{
-				texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+				texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
 				textureUV =
             { 0, 0, 600, 600, }, },
 			size = {213, 13},

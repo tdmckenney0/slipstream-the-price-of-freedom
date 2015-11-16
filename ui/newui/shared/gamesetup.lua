@@ -60,7 +60,7 @@ GameSetup =
     position =
         { 16, -2, },
     size =
-        { 600, 36, },
+        { 0, 0, },
     name = "txtLblTITLE",
     Text =
     {
@@ -72,7 +72,7 @@ GameSetup =
     position =
         { 17, 34, },
     size =
-        { 600, 21, },
+        { 0, 0, },
     name = "txtLblSUBTITLE",
     Text =
     {
@@ -134,7 +134,7 @@ GameSetup =
     borderColor = "FEColorHeading3",
 	BackgroundGraphic =
     {
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
         textureUV =
             { 0, 0, 600, 600, }, },
     autosize = 1,
@@ -746,7 +746,7 @@ GameSetup =
     borderColor = "FEColorHeading3",
 	BackgroundGraphic =
     {
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
         textureUV =
             { 0, 0, 600, 600, }, },
     position =
@@ -1160,7 +1160,7 @@ GameSetup =
     {
 		color =
             { 255, 255, 255, 255, },
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
         textureUV =
             { 0, 0, 600, 600, },
 	},

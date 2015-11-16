@@ -54,3 +54,6 @@ GameSetupOptions =
         choices =
             { "$3226", "random", "$3227", "fixed", }, },
     }
+    
+dofilepath("data:engine/version.lua")
+dofilepath("data:engine/lib_music.lua")

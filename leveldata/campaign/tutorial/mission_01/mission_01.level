@@ -1,0 +1,26 @@
+function DetermChunk()
+	addSquadron("MS", "Hgn_shipyard", {0, 0, 0}, 0, {0, 0, 0}, 0, 1)
+	addSphere("MS_EnterVolume", {0, 0, 0}, 1000)
+	createSOBGroup("MSGroup")
+	addToSOBGroup("MS", "MSGroup")
+
+	setWorldBoundsInner({0, 0, 0}, {30000, 30000, 30000})
+end
+
+function NonDetermChunk()
+        fogSetActive(0)
+	setGlareIntensity(0)
+	setLevelShadowColour(0, 0, 0, 1)
+	loadBackground("Double")
+	setSensorsManagerCameraDistances(12000, 60000)
+	setDefaultMusic("Data:sound/music/STAGING/Ambient")
+end
+
+
+-- HeaderInfo: max number of players allowed on this level
+maxPlayers = 1
+
+-- PlayerInfo: info on each possible player in this level
+player = {
+	{ id = 0, name = "", resources = 1000, raceID = 1, startPos = 1, },
+}

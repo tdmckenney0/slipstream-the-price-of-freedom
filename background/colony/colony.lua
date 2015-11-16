@@ -9,5 +9,5 @@ lensflares =
     {
         name = "M01_Flare",
         position =
-            { 37.39, 4.079, 87.2353, },
+            { 0, 87, 0, },
         infinite = 1, }, }

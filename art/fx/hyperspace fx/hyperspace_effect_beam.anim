@@ -1,13 +1,9 @@
--- LuaDC version 0.9.20
--- 11/11/2008 7:33:04 PM
--- LuaDC by Age2uN
--- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
---
 fps = 15
 startFrame = 0
 loopCount = 10
 texture =
-    { "data:/art/fx/hyperspace fx/hyperspace_effect_beam.tga",
+    { 
+	  "data:/art/fx/hyperspace fx/hyperspace_effect_beam.tga",
 	  "data:/art/fx/hyperspace fx/hyperspace_effect_beam2.tga",
 	  "data:/art/fx/hyperspace fx/hyperspace_effect_beam3.tga",
 	  "data:/art/fx/hyperspace fx/hyperspace_effect_beam4.tga",
@@ -17,4 +13,4 @@ texture =
 	  "data:/art/fx/hyperspace fx/hyperspace_effect_beam8.tga",
 	  "data:/art/fx/hyperspace fx/hyperspace_effect_beam9.tga",
 	  "data:/art/fx/hyperspace fx/hyperspace_effect_beam10.tga",
-	}
+    }

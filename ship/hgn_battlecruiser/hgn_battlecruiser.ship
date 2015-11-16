@@ -6,14 +6,14 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Battlecruiser"
 NewShipType.sobDescription = "Trafalgar Class\nBattlecruiser"
-NewShipType.maxhealth = 900000
+NewShipType.maxhealth = 800000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 2000
-NewShipType.sideArmourDamage = 0.4
-NewShipType.rearArmourDamage = 0.45
-NewShipType.topArmourDamage = 0.45
-NewShipType.bottomArmourDamage = 0.45
-NewShipType.frontArmourDamage = 0.4
+NewShipType.sideArmourDamage = 0.5
+NewShipType.rearArmourDamage = 0.5
+NewShipType.topArmourDamage = 0.6
+NewShipType.bottomArmourDamage = 0.6
+NewShipType.frontArmourDamage = 0.5
 NewShipType.isTransferable = 1
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 8
@@ -24,8 +24,8 @@ NewShipType.defensiveFormation = "x"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 1000
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 95
-NewShipType.mainEngineMaxSpeed = 110
+NewShipType.thrusterMaxSpeed = 100
+NewShipType.mainEngineMaxSpeed = 120
 NewShipType.rotationMaxSpeed = 6
 NewShipType.thrusterAccelTime = 6
 NewShipType.thrusterBrakeTime = 5
@@ -86,7 +86,7 @@ NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 5
 NewShipType.antiFrigateValue = 60
 NewShipType.totalValue = 110
-NewShipType.buildCost = 8000
+NewShipType.buildCost = 9000
 NewShipType.buildTime = 280
 NewShipType.buildPriorityOrder = 40
 NewShipType.retaliationRange = 6500
@@ -143,20 +143,13 @@ NewShipType.launchTimeBetweenTwoFormations = 1
 NewShipType.launchTimeBeforeStart = 2
 NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
---addAbility(NewShipType, "ShipHold", 1, 0, 20, "rallypoint", "Fighter, Corvette", 25,
---{
---    Fighter = "600",
---},
---{
---    Corvette = "300", })
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Munition, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "dogfight_capital",
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Munition, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "Flyround_destroyer",
 {
     Mothership = "Flyround_destroyer",})
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
---addAbility(NewShipType, "CanBuildShips",1,"Drone_uncg, SubSystem_Hgn","Fighter, SubSystemModule")
 addAbility(NewShipType, "CanBeCaptured", 160, 0.5)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
@@ -177,9 +170,9 @@ addShield(NewShipType, "EMP", 10000, 20)
 --Turrets
 
 StartShipHardPointConfig(NewShipType, "Valencium1", "Hardpoint_TMweapon", "Weapon", "Innate", "Damageable", "hgn_plasmabatteryx6", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Valencium2", "Hardpoint_TMweaponbot", "Weapon", "Innate", "Damageable", "hgn_plasmabatteryx6", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "PPC1", "Hardpoint_TURFront1", "System", "Innate", "Damageable", "hgn_ioncannonx2", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "PPC2", "Hardpoint_TURFront2", "System", "Innate", "Damageable", "hgn_ioncannonx2", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Valencium2", "Hardpoint_TMweaponbot", "Weapon", "Innate", "Damageable", "hgn_ioncannon", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "PPC1", "Hardpoint_TURFront1", "System", "Innate", "Damageable", "hgn_gatlinggunright", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "PPC2", "Hardpoint_TURFront2", "System", "Innate", "Damageable", "hgn_gatlinggunleft", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "M1", "Hardpoint_MBot1", "System", "Innate", "Damageable", "hgn_missileturretleft", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "M2", "Hardpoint_MBot2", "System", "Innate", "Damageable", "hgn_missileturretright", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "PlasmaBattery", "Hardpoint_PbBot1", "Weapon", "Innate", "Damageable", "hgn_coilcannonx3", "", "", "", "", "", "", "", "")

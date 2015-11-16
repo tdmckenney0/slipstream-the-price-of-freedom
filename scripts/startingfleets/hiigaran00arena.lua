@@ -1,92 +1,71 @@
 PersistantData = {
-   StrikeGroups = {
-   },
-   Squadrons = {
-	  {
+	StrikeGroups = {},
+	Squadrons = {
+       {
          type = "Hgn_ResourceCollector",
-         subsystems = {
-         },
-         shiphold = {
-         },
+         subsystems = {},
+         shiphold = {},
          name = "",
-         size = 1,
          number = 6,
-      },
-	  {
+	},
+	{
          type = "Hgn_resourcecontroller",
-         subsystems = {
-         },
-         shiphold = {
-         },
+         subsystems = {},
+         shiphold = {},
          name = "",
-         size = 1,
          number = 1,
-
-      },
-	  {
+	},
+	{
+         type = "Hgn_Carrier",
+         subsystems = {},
+         shiphold = {},
+         name = "",
+         number = 1,
+	},
+	{
          type = "Hgn_Battleship",
-         subsystems = {
-         },
-         shiphold = {
-         },
+         subsystems = {},
+         shiphold = {},
          name = "",
-         size = 1,
          number = 1,
-	  },
-	  {
+	},
+	{
          type = "Hgn_battlecruiser",
-         subsystems = {
-         },
-         shiphold = {
-         },
+         subsystems = {},
+         shiphold = {},
          name = "",
-         size = 1,
          number = 2,
-
-		},
-		{
+	},
+	{
          type = "hgn_assaultfrigate",
-         subsystems = {
-         },
-         shiphold = {
-         },
+         subsystems = {},
+         shiphold = {},
          name = "",
-         size = 1,
          number = 5,
-		},
-		{
+	},
+	{
          type = "hgn_drone",
-         subsystems = {
-         },
-         shiphold = {
-         },
+         subsystems = {},
+         shiphold = {},
          name = "",
          number = 5,
-		},
-	  {
+	},
+	{
          type = "hgn_crossbow_cruiser",
-         subsystems = {
-         },
-         shiphold = {
-         },
+         subsystems = {},
+         shiphold = {},
          name = "",
          size = 1,
          number = 2,
-
-	  },
-	  {
+	},
+	{
          type = "hgn_Destroyer",
-         subsystems = {
-         },
-         shiphold = {
-         },
+         subsystems = {},
+         shiphold = {},
          name = "",
-         size = 1,
          number = 2,
-
-	  },
-
-   },
+	},
+		},
    Research = {
 	[1] = {
       name = "DestroyerTech",
@@ -128,9 +107,5 @@ PersistantData = {
       name = "SensDisProbe",
       progress = 1,
     },
-	[11] = {
-      name = "SCENABLED",
-      progress = 1,
-    },
-   },
+},
 }

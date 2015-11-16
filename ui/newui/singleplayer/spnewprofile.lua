@@ -19,8 +19,15 @@ NewProfile =
         { 273, 250, },
     size =
         { 254, 100, },
-    backgroundColor =
-        { 0, 0, 0, 255, },
+    outerBorderWidth = 1,
+    borderColor = "FEColorHeading3",
+    backgroundColor = "FEColorBackground1",
+    BackgroundGraphic = 
+    {
+	color = { 255, 255, 255, 255, },
+	textureUV = {0,0,600,600},
+	texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
+    },
 ;
 {
     type = "Frame",

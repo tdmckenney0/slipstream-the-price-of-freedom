@@ -46,7 +46,7 @@ ConnectionType =
     borderColor = "FEColorHeading3",
 	BackgroundGraphic =
     {
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
         textureUV =
             { 0, 0, 600, 600, }, },
     position =

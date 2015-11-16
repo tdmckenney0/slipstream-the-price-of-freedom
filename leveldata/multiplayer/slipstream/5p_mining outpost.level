@@ -6,8 +6,6 @@
 -- Teams: 2 v 3
 -- Creation Time: 9 hours
 -- Change Log
-
-
 levelDesc = "Mining Outpost"
 
 maxPlayers = 5
@@ -53,13 +51,12 @@ player[4] = {
   name = "",
 }
 function DetermChunk()
---Start Points
-  addPoint("StartPos0", {21500, 0, -26000}, {0, 0, 0})
-  addPoint("StartPos1", {-21500, 0, -26000}, {0, 0, 0})
-  addPoint("StartPos2", {0, 0, 36000}, {0, 180, 0})
-  addPoint("StartPos3", {18000, 0, 30000}, {0, 180, 0})
-  addPoint("StartPos4", {-18000, 0, 30000}, {0, 180, 0})
 
+addPoint("StartPos0", {21500, 0, -26000}, {0, 0, 0})
+addPoint("StartPos1", {-21500, 0, -26000}, {0, 0, 0})
+addPoint("StartPos2", {0, 0, 36000}, {0, 180, 0})
+addPoint("StartPos3", {18000, 0, 30000}, {0, 180, 0})
+addPoint("StartPos4", {-18000, 0, 30000}, {0, 180, 0})
 
 addAsteroid("Asteroid_5", {1000, 1676, -29250}, 90, 8583, 623, 6732, 0)
 addAsteroid("Asteroid_4", {2237, 2276, -28650}, 90, 2347, 573, 4567, 0)
@@ -71,18 +68,6 @@ addAsteroid("Asteroid_3", {7548, 1194, -28900}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_3", {8346, 1190, -26900}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_2", {3764, 1094, -27690}, 90, 2347, 573, 4567, 0)
 
-
-addAsteroid("Asteroid_5", {-4000, 1676, -23250}, 90, 853, 23, 673, 0)
-addAsteroid("Asteroid_4", {-8237, 2276, -22650}, 90, 247, 573, 467, 0)
-addAsteroid("Asteroid_4", {-7873, 1594, -24000}, 90, 237, 573, 467, 0)
-addAsteroid("Asteroid_3", {-6594, 1394, -22900}, 90, 37, 573, 467, 0)
-addAsteroid("Asteroid_3", {-5346, 1190, -20900}, 90, 2347, 573, 567, 0)
-addAsteroid("Asteroid_2", {-4586, 3094, -21690}, 90, 2347, 573, 457, 0)
-addAsteroid("Asteroid_3", {-3548, 1194, -22900}, 90, 2347, 573, 457, 0)
-addAsteroid("Asteroid_3", {-5346, 1190, -20900}, 90, 2347, 573, 567, 0)
-addAsteroid("Asteroid_2", {-1764, 1094, -21690}, 90, 2347, 573, 457, 0)
---
---
 addAsteroid("Asteroid_5", {1000, 676, -28250}, 90, 8583, 623, 6732, 0)
 addAsteroid("Asteroid_4", {2237, 1276, -25650}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_4", {3873, 594, -25000}, 90, 2347, 573, 4567, 0)
@@ -93,19 +78,6 @@ addAsteroid("Asteroid_3", {7548, 194, -29900}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_3", {8346, 190, -24900}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_2", {9764, 094, -26690}, 90, 2347, 573, 4567, 0)
 
-
-addAsteroid("Asteroid_5", {-9000, -1676, -24250}, 90, 853, 6283, 6732, 0)
-addAsteroid("Asteroid_4", {-8237, -2276, -20650}, 90, 237, 5743, 4567, 0)
-addAsteroid("Asteroid_4", {-7873, -1594, -23000}, 90, 347, 5793, 4567, 0)
-addAsteroid("Asteroid_3", {-6594, -1394, -27900}, 90, 347, 5753, 4567, 0)
-addAsteroid("Asteroid_3", {-5346, -1190, -25900}, 90, 247, 5773, 4567, 0)
-addAsteroid("Asteroid_2", {-4586, -3094, -23690}, 90, 237, 5743, 4567, 0)
-addAsteroid("Asteroid_3", {-3548, -1194, -26900}, 90, 237, 5753, 4567, 0)
-addAsteroid("Asteroid_3", {-2346, -1190, -28900}, 90, 347, 5473, 4567, 0)
-addAsteroid("Asteroid_2", {-1764, -1094, -24690}, 90, 234, 5673, 4567, 0)
-
---
---
 addAsteroid("Asteroid_5", {1000, 676, -31250}, 85, 8583, 623, 6732, 0)
 addAsteroid("Asteroid_4", {2237, 1276, -32650}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_4", {3873, 594, -33483}, 90, 2347, 573, 4567, 0)
@@ -128,15 +100,6 @@ addAsteroid("Asteroid_3", {-12346, 2190, -34900}, 90, 347, 5473, 4567, 0)
 addAsteroid("Asteroid_2", {-11764, 2094, -34690}, 90, 234, 5673, 4567, 0)
 addAsteroid("Asteroid_5", {-13000, 2676, -34250}, 85, 853, 6283, 6732, 0)
 
-addAsteroid("Asteroid_4", {21237, 3276, -20650}, 90, 237, 5743, 4567, 0)
-addAsteroid("Asteroid_4", {20873, 1594, -23000}, 90, 347, 5357, 4567, 0)
-addAsteroid("Asteroid_3", {19574, 1394, -27900}, 90, 347, 3863, 5467, 0)
-addAsteroid("Asteroid_3", {18346, 1190, -25900}, 90, 247, 5543, 4567, 0)
-addAsteroid("Asteroid_2", {17758, 3094, -23690}, 90, 237, 6743, 4257, 0)
-addAsteroid("Asteroid_3", {16548, 1194, -26900}, 90, 237, 3753, 4577, 0)
-addAsteroid("Asteroid_3", {15346, 1190, -26900}, 90, 347, 2473, 4527, 0)
-addAsteroid("Asteroid_2", {14764, 1094, -24690}, 90, 234, 5673, 4557, 0)
-
 addAsteroid("Asteroid_5", {21237, 3276, -30650}, 85, 237, 5743, 4567, 0)
 addAsteroid("Asteroid_4", {20873, 1594, -33000}, 90, 347, 5357, 4567, 0)
 addAsteroid("Asteroid_3", {19574, 1394, -37900}, 90, 347, 3863, 5467, 0)
@@ -155,15 +118,6 @@ addAsteroid("Asteroid_2", {16548, -1194, -36900}, 90, 237, 3753, 4577, 0)
 addAsteroid("Asteroid_2", {15346, 9190, -26900}, 90, 347, 2473, 4527, 0)
 addAsteroid("Asteroid_2", {14764, -1094, -25690}, 90, 234, 5673, 4557, 0)
 
-addAsteroid("Asteroid_3", {-21237, -3276, -40650}, 90, 237, 5743, 4567, 0)
-addAsteroid("Asteroid_2", {-20873, -5594, -36700}, 90, 347, 5357, 4567, 0)
-addAsteroid("Asteroid_3", {-19574, 4594, -36300}, 90, 347, 3863, 5467, 0)
-addAsteroid("Asteroid_2", {-18346, 1190, -25900}, 90, 247, 5543, 4567, 0)
-addAsteroid("Asteroid_3", {-17758, -3094, -23690}, 90, 237, 6743, 4257, 0)
-addAsteroid("Asteroid_2", {-16548, 1194, -36900}, 90, 237, 3753, 4577, 0)
-addAsteroid("Asteroid_3", {-15346, -9190, -43900}, 90, 347, 2473, 4527, 0)
-addAsteroid("Asteroid_2", {-14764, 1094, -25690}, 90, 234, 5673, 4557, 0)
---
 addAsteroid("Asteroid_2", {21237, -3276, -41650}, 90, 237, 5743, 4567, 0)
 addAsteroid("Asteroid_2", {20873, -5594, -42700}, 90, 347, 5357, 4567, 0)
 addAsteroid("Asteroid_2", {19574, 2454, -39300}, 90, 347, 3863, 5467, 0)
@@ -172,24 +126,6 @@ addAsteroid("Asteroid_2", {17758, -3094, -243690}, 90, 237, 6743, 4257, 0)
 addAsteroid("Asteroid_2", {16548, 1194, -42900}, 90, 237, 3753, 4577, 0)
 addAsteroid("Asteroid_2", {15346, -4590, -42900}, 90, 347, 2473, 4527, 0)
 addAsteroid("Asteroid_2", {14764, 4237, -42690}, 90, 234, 5673, 4557, 0)
-
-addAsteroid("Asteroid_3", {-21237, -3276, -40650}, 90, 237, 5743, 4567, 0)
-addAsteroid("Asteroid_2", {-20873, -2594, -43700}, 90, 347, 5357, 4567, 0)
-addAsteroid("Asteroid_3", {-19574, 4594, -44300}, 90, 347, 3863, 5467, 0)
-addAsteroid("Asteroid_2", {-18346, 1190, -43900}, 90, 247, 5543, 4567, 0)
-addAsteroid("Asteroid_3", {-17758, -3094, -44690}, 90, 237, 6743, 4257, 0)
-addAsteroid("Asteroid_2", {-16548, 1194, -45900}, 90, 237, 3753, 4577, 0)
-addAsteroid("Asteroid_3", {-15346, -3490, -45900}, 90, 347, 2473, 4527, 0)
-addAsteroid("Asteroid_2", {-14764, 1094, -51690}, 90, 234, 5673, 4557, 0)
-
-addAsteroid("Asteroid_2", {-0, -3276, -41650}, 90, 237, 5743, 4567, 0)
-addAsteroid("Asteroid_2", {2083, -5594, -42700}, 90, 347, 5357, 4567, 0)
-addAsteroid("Asteroid_2", {-974, 2454, -39300}, 90, 347, 3863, 5467, 0)
-addAsteroid("Asteroid_2", {1846, 1190, -37900}, 90, 247, 5543, 4567, 0)
-addAsteroid("Asteroid_2", {-178, -3094, -243690}, 90, 237, 6743, 4257, 0)
-addAsteroid("Asteroid_2", {-1548, 1194, -42900}, 90, 237, 3753, 4577, 0)
-addAsteroid("Asteroid_2", {1546, -4590, -42900}, 90, 347, 2473, 4527, 0)
-addAsteroid("Asteroid_2", {-144, 4237, -42690}, 90, 234, 5673, 4557, 0)
 
 addAsteroid("Asteroid_3", {2137, -3276, -40650}, 90, 237, 5743, 4567, 0)
 addAsteroid("Asteroid_2", {-2083, -2594, -43700}, 90, 347, 5357, 4567, 0)
@@ -200,27 +136,22 @@ addAsteroid("Asteroid_2", {-1648, 1194, -45900}, 90, 237, 3753, 4577, 0)
 addAsteroid("Asteroid_3", {1546, -3490, -45900}, 90, 347, 2473, 4527, 0)
 addAsteroid("Asteroid_2", {-1764, 1094, -51690}, 90, 234, 5673, 4557, 0)
 
+addSquadron("Meg_Gehenna_1", "Meg_Gehenna_1", {-7000, 0, -31456}, -1, { 0, .22, .22}, 1, 0);
+addSquadron("Meg_Gehenna_2", "Meg_Gehenna_4", {15000, 0, -39456}, -1, { 0, .22, .22}, 1, 0);
 
-
-addSquadron("Meg_Gehenna_1", "Meg_Gehenna_1", {-7000,
-0, -31456}, -1, { 0, .22, .22}, 1, 0);
-addSquadron("Meg_Gehenna_2", "Meg_Gehenna_4", {15000,
-0, -39456}, -1, { 0, .22, .22}, 1, 0);
 addSalvage("container", {-2754, 5460, 23876}, 600, 0, 0, 100, 100)
-  addSalvage("container", {2545, 3057, 25468}, 600, 15, -50, 100, 100)
-  addSalvage("container", {-2000, 2674, 25598}, 600, 159, -9, -100, 111)
-
-
+addSalvage("container", {2545, 3057, 25468}, 600, 15, -50, 100, 100)
+addSalvage("container", {-2000, 2674, 25598}, 600, 159, -9, -100, 111)
 addSalvage("container", {-21344, 4460, 26876}, 600, 0, 0, 10, 100)
-  addSalvage("container", {-21500, 4476, 24468}, 600, 15, 50, 100, 100)
-  addSalvage("container", {-22387, 3674, 27598}, 600, 159, -966, -100, 111)
-
+addSalvage("container", {-21500, 4476, 24468}, 600, 15, 50, 100, 100)
+addSalvage("container", {-22387, 3674, 27598}, 600, 159, -966, -100, 111)
 addSalvage("container", {21754, 3460, 23876}, 600, 0, 0, 100, 100)
-  addSalvage("container", {21545, 2057, 25468}, 600, 15, -50, 100, 100)
-  addSalvage("container", {22000, 1674, 25598}, 600, 159, -9, -100, 111)
+addSalvage("container", {21545, 2057, 25468}, 600, 15, -50, 100, 100)
+addSalvage("container", {22000, 1674, 25598}, 600, 159, -9, -100, 111)
 
 
-  setWorldBoundsInner({-4.4, 0, 0}, {54000, 54000, 54000})
+setWorldBoundsInner({-4.4, 0, 0}, {54000, 54000, 54000})
+
 end
 
 function NonDetermChunk()

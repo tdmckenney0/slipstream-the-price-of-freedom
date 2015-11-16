@@ -315,9 +315,9 @@ NewResearchMenu =
 {
 	size =
 	{
-		587,
+		586,
 		15,
-		212,
+		215,
 		497,
 	},
 	resolution =
@@ -345,18 +345,18 @@ NewResearchMenu =
 
 				zRsrchStart = 215
 
-				UI_SetElementPosition("NewResearchMenu","research",zRsrchStart,0)
+				UI_SetElementPosition("NewResearchMenu","research",zRsrchStart,1)
 			 ]],
 	onUpdate = [[
 
-				UI_SetElementPosition("NewResearchMenu","research",zRsrchStart,0)
+				UI_SetElementPosition("NewResearchMenu","research",zRsrchStart,1)
 
 
 					if(zRsrchStart == 15) then
-						zRsrchStart = 0
+						zRsrchStart = 1
 					end
 
-					if(zRsrchStart > 0) then
+					if(zRsrchStart > 1) then
 						zRsrchStart = zRsrchStart - 20
 					end
 
@@ -450,13 +450,13 @@ NewResearchMenu =
     type = "Frame",
 	name = "research",
 	position =
-        { 0, 0, },
+        { 0, 1, },
     size =
-        { 212, 497, },
+        { 215, 495, },
 	backgroundColor = "IGColorBackground1",
 	BackgroundGraphic =
 		{
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
         textureUV =
             { 0, 0, 600, 600, }, },
 	outerBorderWidth = 1,
@@ -479,7 +479,7 @@ NewResearchMenu =
 		Text =
 		{
 			textStyle = "IGHeading1",
-			text = "$2850",
+			text = "UPGRADES", --$2850
 			offset =
 			{
 				4,
@@ -549,7 +549,7 @@ NewResearchMenu =
 			type = "RadioButton",
 			buttonStyle = "IGButtonUtility",
 			name = "Utility",
-			helpTip = "$5231",
+			helpTip = "UTILITY UPGRADES",
 			helpTipTextLabel = "lblCurrentFacility",
 			hotKeyID = 94,
 		},
@@ -557,7 +557,7 @@ NewResearchMenu =
 			type = "RadioButton",
 			buttonStyle = "IGButtonCorvette",
 			name = "Corvette",
-			helpTip = "$5232",
+			helpTip = "CORVETTE UPGRADES",
 			helpTipTextLabel = "lblCurrentFacility",
 			hotKeyID = 91,
 		},
@@ -565,7 +565,7 @@ NewResearchMenu =
 			type = "RadioButton",
 			buttonStyle = "IGButtonCapital",
 			name = "Capital",
-			helpTip = "$5233",
+			helpTip = "CAPITAL UPGRADES",
 			helpTipTextLabel = "lblCurrentFacility",
 			hotKeyID = 93,
 		},
@@ -573,7 +573,7 @@ NewResearchMenu =
 			type = "RadioButton",
 			buttonStyle = "IGButtonFighter",
 			name = "Fighter",
-			helpTip = "$5234",
+			helpTip = "FIGHTER UPGRADES",
 			helpTipTextLabel = "lblCurrentFacility",
 			hotKeyID = 90,
 		},
@@ -581,7 +581,7 @@ NewResearchMenu =
 			type = "RadioButton",
 			buttonStyle = "IGButtonFrigate",
 			name = "Frigate",
-			helpTip = "$5235",
+			helpTip = "FRIGATE UPGRADES",
 			helpTipTextLabel = "lblCurrentFacility",
 			hotKeyID = 92,
 		},
@@ -589,7 +589,7 @@ NewResearchMenu =
 			type = "RadioButton",
 			buttonStyle = "IGButtonPlatform",
 			name = "Platform",
-			helpTip = "$5236",
+			helpTip = "PLATFORM UPGRADES",
 			helpTipTextLabel = "lblCurrentFacility",
 			hotKeyID = 96,
 		},
@@ -609,7 +609,7 @@ NewResearchMenu =
 			text = "$5237",
 		},
 		toggleButton = 1,
-		helpTip = "$5229",
+		helpTip = "ALL UPGRADES",
 		helpTipTextLabel = "lblCurrentFacility",
 		hotKeyID = 98,
 		PressedGraphic =

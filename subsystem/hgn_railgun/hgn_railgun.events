@@ -7,22 +7,8 @@ effects = {
       parent = "",
       minimum = 0,
       maximum = 0,
-      markers = {
-        "",
-      },
+      markers = { "",},
     },
-animation4 = {
-      name = "Weapon_TurretTop1",
-      length = 1,
-      loop = 0,
-      parent = "",
-      minimum = 0,
-      maximum = 0,
-      markers = {
-        "",
-      },
-    },
-
     animation2 = {
       name = "Damage",
       length = 1,
@@ -58,20 +44,20 @@ animation4 = {
       },
       {
         "marker",
-        "Weapon_TurretTop_Muzzle",
+        "Weapon_SCT_Muzzle",
       },
       {
         "fx",
-        "lance_charged_particle",
+        "muzzle_flash_combo_small_frigate",
       },
 {
         "sound",
-        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_CANNON_SHELL",
+        "",
       },
 
       {
         "fx_scale",
-        "3",
+        "2",
       },
     },
     event2 = {
@@ -81,82 +67,26 @@ animation4 = {
       },
       {
         "animtime",
-        "0.3",
+        "0",
       },
       {
         "marker",
-        "Weapon_TurretTopSlave_Muzzle",
+        "Weapon_SCTSlave_Muzzle",
       },
       {
         "fx",
-        "lance_charged_particle",
+        "muzzle_flash_combo_small_frigate",
       },
 {
         "sound",
-        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_CANNON_SHELL",
+        "",
       },
 
       {
         "fx_scale",
-        "3",
+        "2",
       },
     },
-event4 = {
-      {
-        "anim",
-        "Weapon_TurretTop1",
-      },
-      {
-        "animtime",
-        "0.3",
-      },
-      {
-        "marker",
-        "Weapon_TurretTopSlave1_Muzzle",
-      },
-      {
-        "fx",
-        "lance_charged_particle",
-      },
-{
-        "sound",
-        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_CANNON_SHELL",
-      },
-
-      {
-        "fx_scale",
-        "3",
-      },
-    },
-event5 = {
-      {
-        "anim",
-        "Weapon_TurretTop1",
-      },
-      {
-        "animtime",
-        "0.3",
-      },
-      {
-        "marker",
-        "Weapon_TurretTop1_Muzzle",
-      },
-      {
-        "fx",
-        "lance_charged_particle",
-      },
-{
-        "sound",
-        "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_CANNON_SHELL",
-      },
-
-      {
-        "fx_scale",
-        "3",
-      },
-    },
-
-
 event3= {
       {
         "anim",

@@ -7,7 +7,16 @@ lensflares =
 {
     lensflare0 =
     {
-        name = "M02_Flare",
+        name = "danflare",
         position =
             { 37, 4, 87, },
-        infinite = 1, }, }
+        infinite = 1, 
+    }, 
+    lensflare1 =
+    {
+        name = "planetkiller_flare_glow",
+        position =
+            { 37, 4, 87, },
+        infinite = 1, 
+    }, 
+}

@@ -151,7 +151,7 @@ addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
 StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK","Weapon","Innate","Indestructible","hgn_mountedflak","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"FT","Hardpoint_FLAK2","Weapon","Innate","Indestructible","hgn_mountedflak","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"T","Hardpoint_MB","Weapon","Innate","Indestructible","hgn_missilebayfrigate","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"T","Hardpoint_MB","Weapon","Innate","Indestructible","hgn_missileturret","","","","","","","","")
 
 StartShipWeaponConfig(NewShipType, "hgn_bigtorpedo", "weapon_Torpedo", "")
 

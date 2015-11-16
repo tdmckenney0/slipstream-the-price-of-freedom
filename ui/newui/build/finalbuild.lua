@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 OUTLINECOLOR =
-    { 128, 128, 128, 255, }
+    { 100, 100, 100, 255, }
 SHIPQUEUECOLOR =
     { 255, 255, 255, 255, }
 SUBQUEUECOLOR =
@@ -25,7 +25,7 @@ dofilepath("data:ui/newui/build/collapsablequeue.lua")
 NewBuildMenu =
 {
     size =
-        { 587, 15, 212, 497, },
+        { 586, 15, 215, 497, },
     resolution =
         { 800, 600, },
     stylesheet = "HW2StyleSheet",
@@ -40,18 +40,18 @@ NewBuildMenu =
 
 				zBuildStart = 215
 
-				UI_SetElementPosition("NewBuildMenu","build",zBuildStart,0)
+				UI_SetElementPosition("NewBuildMenu","build",zBuildStart,1)
 			 ]],
 	onUpdate = [[
 
-				UI_SetElementPosition("NewBuildMenu","build",zBuildStart,0)
+				UI_SetElementPosition("NewBuildMenu","build",zBuildStart,1)
 
 
-					if(zBuildStart == 15) then
-						zBuildStart = 0
+					if(zBuildStart <= 15) then
+						zBuildStart = 1
 					end
 
-					if(zBuildStart > 0) then
+					if(zBuildStart > 1) then
 						zBuildStart = zBuildStart - 20
 					end
 
@@ -84,13 +84,13 @@ NewBuildMenu =
     type = "Frame",
 	name = "build",
 	position =
-        { 0, 0, },
-    size =
-        { 212, 497, },
+        { 0, 1, },
+         size =
+        { 215, 495, },
 	backgroundColor = "IGColorBackground1",
 	BackgroundGraphic =
 		{
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
         textureUV =
             { 0, 0, 600, 600, }, },
 	outerBorderWidth = 1,
@@ -1003,5 +1003,6 @@ NewBuildMenu =
     outerBorderWidth = 1,
     borderColor = OUTLINECOLOR, },
 	},
+
 }
 

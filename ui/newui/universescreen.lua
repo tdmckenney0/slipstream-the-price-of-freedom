@@ -10,10 +10,10 @@ UniverseScreen =
             { 0, 0, 0, 255, }, },
     pixelUVCoords = 1,
 	onShow = [[
-				MapX = -624
-				MapY = -724
-				MapXCur = -624
-				MapYCur = -724
+				MapX = -424
+				MapY = -524
+				MapXCur = -424
+				MapYCur = -524
 
 				UI_SetElementPosition("UniverseScreen","Map1",MapX,MapY)
 				UI_SetElementPosition("UniverseScreen","Map2",MapX,MapY)
@@ -21,19 +21,19 @@ UniverseScreen =
 	onUpdate = [[
 
 				if(MapXCur < MapX) then
-					MapXCur = MapXCur + 10
+					MapXCur = MapXCur + 5
 				end
 
 				if(MapXCur > MapX) then
-					MapXCur = MapXCur - 10
+					MapXCur = MapXCur - 5
 				end
 
 				if(MapYCur > MapY) then
-					MapYCur = MapYCur - 10
+					MapYCur = MapYCur - 5
 				end
 
 				if(MapYCur < MapY) then
-					MapYCur = MapYCur + 10
+					MapYCur = MapYCur + 5
 				end
 
 				UI_SetElementPosition("UniverseScreen","Map1",MapXCur,MapYCur)
@@ -53,7 +53,7 @@ UniverseScreen =
 			color =
             { 255, 255, 255, 255, },
 			textureUV = {0,0,2500,2500},
-			texture = "Data:UI\\NewUI\\Background\\map2048.tga",
+			texture = "Data:UI\\NewUI\\Textures\\galaxymap.tga",
 						},
 },
 {
@@ -68,7 +68,7 @@ UniverseScreen =
 			color =
             { 255, 255, 255, 255, },
 			textureUV = {0,0,2500,2500},
-			texture = "Data:UI\\NewUI\\Background\\Gal2048.tga",
+			texture = "Data:UI\\NewUI\\Textures\\overlaymap.tga",
 		},
 },
 {
@@ -77,33 +77,6 @@ UniverseScreen =
         { 0, 0, },
     size =
         { 800, 600, },
-},
-{
-			type = "TextLabel",
-			position = {16,-2},
-			size = {700,36},
-			name = "txtLblTITLETUT",
-			Text =
-			{
-				-- TUTORIAL
-				text = "SLIPSTREAM UNIVERSE",
-				textStyle = "FEHeading1",
-			},
-			;
-},
-{
-			type = "TextLabel",
-			position = {17,34},
-			size = {700,21},
-			-- SPECIAL SUBTITLE FOR THE TUTORIAL
-			name = "txtLblSUBTITLETUT",
-			Text =
-			{
-				-- LEARN TO PLAY
-				text = "Milky Way - Current Year: 2681",
-				textStyle = "FEHeading2",
-			},
-			;
 },
 
 
@@ -114,7 +87,7 @@ UniverseScreen =
 			borderColor = "FEColorHeading3",
 			BackgroundGraphic =
 			{
-			texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+			texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
 			textureUV =
             { 0, 0, 600, 600, }, },
 			backgroundColor = "FEColorBackground1",
@@ -262,8 +235,8 @@ UniverseScreen =
 						textStyle = "FEButtonTextStyle",
 					},
 					onMouseClicked = [[
-										MapX = -624
-										MapY = -724
+										MapX = -424
+										MapY = -524
 									 ]],
 					;
 				},

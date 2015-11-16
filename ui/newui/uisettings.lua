@@ -1,6 +1,3 @@
--- This file contains all the UIScreens that will be loaded on startup of the app and on startup of the game.
-
--- Currently the UI only supports one style sheet, support for multiple stylesheets may be supported in the future if needed.
 StyleSheets =
 {
 	HW2StyleSheet =
@@ -9,26 +6,25 @@ StyleSheets =
 	},
 }
 
--- These screens will be loaded in order of listing...
 FrontEndScreens =
 {
 	;
 
 	{
 		name = "Background",
-		filename = "DATA:\\UI\\NewUI\\Main\\New\\Background.lua",
+		filename = "DATA:\\UI\\NewUI\\Background.lua",
 		activated = 0,
 	},
-
-	-- This is the LuaScript that has the code for the screen
 	{
-		-- This is the name identifier for the screen.
 		name = "NewMainMenu",
-		filename = "DATA:\\UI\\NewUI\\Main\\New\\NewMainMenu.lua",
-		-- Activate on front end startup (default is zero)
+		filename = "DATA:\\UI\\NewUI\\NewMainMenu.lua",
 		activated = 0,
-		-- Type of menu (default is UIScreen)
 		type = "MainMenu",
+	},
+	{
+		name = "Credits",
+		filename = "DATA:\\UI\\NewUI\\credits.lua",
+		activated = 0,
 	},
 	{
 		name = "UniverseScreen",
@@ -36,33 +32,14 @@ FrontEndScreens =
 		activated = 0,
 	},
 	{
-		name = "CampaignScreen",
-		filename = "DATA:\\UI\\NewUI\\campaignscreen.lua",
-		activated = 0,
-	},
-	{
 		name = "PasswordScreen",
 		filename = "DATA:\\UI\\NewUI\\Shared\\PasswordScreen.lua",
 		activated = 0,
 	},
---	{
-	--	name = "StyleSheetTestScreen",
-	--	filename = "DATA:\\UI\\NewUI\\Styles\\StyleSheetTestScreen.lua",
-	--	activated = 0,
---	},
-	-- "type" is commented out by default. Careful with this one. It doesn't have a "back" button.
---	{
---		name = "NotForPublicDisplay",
-	--	filename = "DATA:\\UI\\NewUI\\NotForPublicDisplay.lua",
-	--	activated = 0,
---		type = "MainMenu",
-	--},
-	-- don't know if this one needs a "type" (used by functions within Homeworld2.exe)
 	{
 		name = "ScarProfilerEditBox",
 		filename = "DATA:\\UI\\NewUI\\ScarProfilerEditBox.lua",
 		activated = 0,
---		type = "ScarProfilerEditBox",
 	},
 	{
 		name = "UserProfile",
@@ -213,6 +190,11 @@ FrontEndScreens =
 		activated = 0,
 		type = "SubtitleScreen",
 	},
+	{
+        name = "PlayMoviesScreen",
+        filename = "DATA:\\UI\\NewUI\\PlayMoviesScreen.lua",
+        activated = 0,
+        type = "PlayMoviesScreen", },
 }
 
 -- in-between-game screens
@@ -414,11 +396,11 @@ GameScreens =
 	--	activated = 0,
 --		type = "PlaybackMenu",
 	--},
-	{
-		name = "Filter",
-		filename = "DATA:\\UI\\NewUI\\filter.lua",
-		activated = 1,
-	},
+	--{
+	--	name = "Filter",
+	--	filename = "DATA:\\UI\\NewUI\\filter.lua",
+	--	activated = 1,
+	--},
 
 
 	-- DIALOGS

@@ -1,14 +1,14 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Destroyer"
 NewShipType.sobDescription = "Alexander Class\nStandard Destroyer"
-NewShipType.maxhealth = 850000
+NewShipType.maxhealth = 700000
 NewShipType.regentime = 1500
 NewShipType.minRegenTime = 450
 NewShipType.sideArmourDamage = 0.45
-NewShipType.rearArmourDamage = 0.50
-NewShipType.topArmourDamage = 0.35
-NewShipType.bottomArmourDamage = 0.40
-NewShipType.frontArmourDamage = 0.2
+NewShipType.rearArmourDamage = 0.45
+NewShipType.topArmourDamage = 0.65
+NewShipType.bottomArmourDamage = 0.65
+NewShipType.frontArmourDamage = 0.6
 NewShipType.isTransferable = 0
 NewShipType.useEngagementRanges = 0
 NewShipType.unitCapsNumber = 4
@@ -18,8 +18,8 @@ NewShipType.defensiveFormation = "x"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 650
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 140
-NewShipType.mainEngineMaxSpeed = 150
+NewShipType.thrusterMaxSpeed = 110
+NewShipType.mainEngineMaxSpeed = 130
 NewShipType.rotationMaxSpeed = 9
 NewShipType.thrusterAccelTime = 6
 NewShipType.thrusterBrakeTime = 2
@@ -80,7 +80,7 @@ NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 30
 NewShipType.totalValue = 50
-NewShipType.buildCost = 9000
+NewShipType.buildCost = 8000
 NewShipType.buildTime = 165
 NewShipType.buildPriorityOrder = 20
 NewShipType.retaliationRange = 6000
@@ -164,7 +164,7 @@ StartShipHardPointConfig(NewShipType, "TurretTop", "Weapon_TurretTop", "System",
 StartShipHardPointConfig(NewShipType, "TurretBottom", "Weapon_TurretBottom", "System", "Innate", "Damageable", "hgn_plasmabatteryx6", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretFront", "Weapon_TurretFront", "System", "Innate", "Damageable", "hgn_coilcannonx3", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretBack", "Weapon_TurretBack", "System", "Innate", "Damageable", "hgn_gatlinggun", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "TurretBottomBack", "Weapon_TurretBottomBack", "System", "Innate", "Damageable", "hgn_ioncannonx3", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "TurretBottomBack", "Weapon_TurretBottomBack", "System", "Innate", "Damageable", "hgn_ioncannon", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretBottomFront", "Weapon_TurretBottomFront", "System", "Innate", "Damageable", "hgn_coilcannonx3", "", "", "", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T2", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")

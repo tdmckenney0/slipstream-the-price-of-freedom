@@ -4,16 +4,16 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DSCG Combat Cruiser"
-NewShipType.sobDescription = "Helios Class\nCombat Cruiser"
-NewShipType.maxhealth = 700000
+NewShipType.displayedName = "DSCG Destroyer"
+NewShipType.sobDescription = "Helios Class\nDestroyer"
+NewShipType.maxhealth = 800000
 NewShipType.regentime = 1500
 NewShipType.minRegenTime = 450
-NewShipType.sideArmourDamage = 0.45
-NewShipType.rearArmourDamage = 0.45
-NewShipType.topArmourDamage = 0.45
-NewShipType.bottomArmourDamage = 0.35
-NewShipType.frontArmourDamage = 0.2
+NewShipType.sideArmourDamage = 0.4
+NewShipType.rearArmourDamage = 0.5
+NewShipType.topArmourDamage = 0.4
+NewShipType.bottomArmourDamage = 0.4
+NewShipType.frontArmourDamage = 0.5
 NewShipType.isTransferable = 0
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 4
@@ -66,8 +66,6 @@ NewShipType.targetRandomPointZMin = -0.8
 NewShipType.targetRandomPointZMax = 0.15
 NewShipType.dustCloudDamageTime = 200
 NewShipType.nebulaDamageTime = 300
---NewShipType.mirrorAboveManeuver = "ImmelMann"
---NewShipType.mirrorBelowManeuver = "Split_S"
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "SuperCap_Vgr"
 NewShipType.AttackFamily = "SmallCapitalShip"
@@ -87,7 +85,7 @@ NewShipType.antiFighterValue = 0
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 30
 NewShipType.totalValue = 50
-NewShipType.buildCost = 2000
+NewShipType.buildCost = 6500
 NewShipType.buildTime = 165
 NewShipType.buildPriorityOrder = 20
 NewShipType.retaliationRange = 6000
@@ -147,7 +145,7 @@ NewShipType.launchFormation = "delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653);
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.5, "munition, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "dread_strafe",
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.5, "munition, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "Circlestrafe",
 {
     Fighter = "movetotargetandshoot",
 },
@@ -158,7 +156,7 @@ addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.5, "munition, Capturer,
     Frigate = "movetotargetandshoot",
 },
 {
-    Mothership = "Flyround_destroyer",})
+    Mothership = "Circlestrafe",})
 addAbility(NewShipType, "GuardCommand", 1, 3000, 800)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "CanBeCaptured", 90, 0.1)
@@ -167,24 +165,25 @@ addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
 
-StartShipWeaponConfig(NewShipType, "vgr_smallmissile", "Weapon_missile1", "Fire_Missle")
-StartShipWeaponConfig(NewShipType, "vgr_smallmissile", "Weapon_missile2", "Fire_Missle")
---StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_Defence1", "")
---StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_Defence2", "")
---StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_Defence3", "")
---StartShipWeaponConfig(NewShipType, "Vgr_HullDefenseGun", "Weapon_Defence4", "")
+StartShipWeaponConfig(NewShipType, "vgr_fixedppc", "Weapon_Fixed1", "")
+StartShipWeaponConfig(NewShipType, "vgr_fixedppc", "Weapon_Fixed2", "")
+StartShipWeaponConfig(NewShipType, "vgr_fixedppc", "Weapon_Fixed3", "")
+StartShipWeaponConfig(NewShipType, "vgr_fixedppc", "Weapon_Fixed4", "")
+StartShipWeaponConfig(NewShipType, "vgr_fixedppc", "Weapon_Fixed5", "")
+StartShipWeaponConfig(NewShipType, "vgr_fixedppc", "Weapon_Fixed6", "")
+
+StartShipWeaponConfig(NewShipType, "vgr_heliosmissile", "Weapon_Missile", "")
 
 addShield(NewShipType, "EMP", 1000, 20)
 
-StartShipHardPointConfig(NewShipType, "Top_Turret1", "Hardpoint_Turret_Top", "System", "Innate", "Indestructible", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Top_Turret2", "Hardpoint_Turret2", "System", "Innate", "Indestructible", "vgr_railgun", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Top_Turret3", "Hardpoint_Turret3", "System", "Innate", "Indestructible", "vgr_plasmabatteryx4", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Top_Turret4", "Hardpoint_Turret4", "System", "Innate", "Indestructible", "vgr_plasmabatteryx4", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Top_Turret5", "Hardpoint_Turret5", "System", "Innate", "Indestructible", "vgr_railgun", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Top_Turret6", "Hardpoint_Turret6", "System", "Innate", "Indestructible", "Vgr_IonBeamTurret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull1_Turret", "Hardpoint_Hull1_Turret", "System", "Innate", "Damageable", "vgr_flakcannon", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull2_Turret", "Hardpoint_Hull2_Turret", "System", "Innate", "Damageable", "vgr_plasmabatteryx4", "", "", "", "", "", "", "", "") 
+StartShipHardPointConfig(NewShipType, "Hull3_Turret", "Hardpoint_Hull3_Turret", "System", "Innate", "Damageable", "vgr_flakcannon", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull4_Turret", "Hardpoint_Hull4_Turret", "System", "Innate", "Damageable", "vgr_flakcannon", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull5_Turret", "Hardpoint_Hull5_Turret", "System", "Innate", "Damageable", "vgr_plasmabatteryx4", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull6_Turret", "Hardpoint_Hull6_Turret", "System", "Innate", "Damageable", "vgr_flakcannon", "", "", "", "", "", "", "", "")
 
---StartShipHardPointConfig(NewShipType, "Plasma1", "Hardpoint_Turret4", "System", "Innate", "Indestructible", "vgr_pmortarfrigateleft", "", "", "", "", "", "", "", "")
---StartShipHardPointConfig(NewShipType, "Plasma2", "Hardpoint_Turret5", "System", "Innate", "Indestructible", "vgr_pmortarfrigateright", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Booster", "Booster", "Weapon", "Innate", "Damageable", "Hgn_booster", "", "", "", "", "", "", "", "")
 
 
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)

@@ -203,15 +203,6 @@ build =
 	},
 	{
 		Type = SubSystem,
-		ThingToBuild = "Hgn_Booster",
-		RequiredResearch = "",
-		RequiredFleetSubSystems = "AdvancedResearch",
-		DisplayPriority = 61,
-		DisplayedName = "Auxiliary Booster",
-		Description = "Auxiliary Booster",
-	},
-	{
-		Type = SubSystem,
 		ThingToBuild = "Hgn_C_Sensors_DetectHyperspace",
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
@@ -264,17 +255,6 @@ build =
 		DisplayedName = "$7024",
 		Description = "$7025",
 	},
-	--Weapons
-	{
-		Type = SubSystem,
-		ThingToBuild = "hgn_gatlinggun",
-		RequiredResearch = "",
-		RequiredShipSubSystems = "",
-		DisplayPriority = 152,
-		DisplayedName = "Gatling Gun",
-		Description = "Anti-Frigate",
-	},
-	--end weapons
 	{
 		Type = Ship,
 		ThingToBuild = "Kpr_Mover",
@@ -391,15 +371,6 @@ build =
 		DisplayPriority = 110,
 		DisplayedName = "$7054",
 		Description = "<b>Type: Assault Carrier</b>\n<b>Classname: Whitecloud</b>\n<b>Description:</b>\n\nThe Whitecloud is based on an early design for a Transport tanker. When the UNCG needed small carriers to carry out tasks without using a full blown Super-Carrier, they enlisted this design and fitted it to suit as an Armored carrier, able to carry out any operation quickly, efficiently, and take the heat while doing it all.\n\n<b>Armed With:</b>\n2x Heavy 4x-Barrel DC Flak Turrets\n1x 4x4 Vertical Missile Launcher (Standard, Drone)\n2x FZ-99 Gatling Turrets\n<b>Requires:</b>\nCapital Production Facility",
-	},
-	{
-		Type = Ship,
-		ThingToBuild = "hgn_lightdestroyer",
-		RequiredResearch = "DestroyerTech",
-		RequiredShipSubSystems = "CapShipProduction",
-		DisplayPriority = 113,
-		DisplayedName = "Escort Destroyer",
-		Description = "<b>Type: Destroyer</b>\n<b>Classname: Resolute</b>\n<b>Description:</b>\n\nThe Resolute is the workhorse of small battles and outer partrol. Originally, the design came from the old Solar System wars, and was refitted when the UNCG needed a Destroyer class vessel.\n\n<b>Armed With:</b>\n1x 2x-Barrel Heavy Gatling Gun\n1x FZ-99 Gatling Turret\n2x 3-Coil Cannon\n<b>Requires:</b>\nCapital Production Facility\nDestroyer Chassis Research",
 	},
 	{
 		Type = Ship,

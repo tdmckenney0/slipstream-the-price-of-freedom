@@ -11,82 +11,48 @@ UserProfile =
     pixelUVCoords = 1,
 ;
 {
-    type = "TextLabel",
-    position =
-        { 16, -2, },
-    size =
-        { 800, 36, },
-    Text =
-    {
-        text = "$3516",
-        textStyle = "FEHeading1", },
-},
-{
-    type = "TextLabel",
-    position =
-        { 17, 34, },
-    size =
-        { 800, 21, },
-    Text =
-    {
-        text = "$3518",
-        textStyle = "FEHeading2", },
-},
-{
     type = "Frame",
-    position =
-        { 273, 200, },
-    size =
-        { 254, 215, },
+    position = { 273, 182, },
+    size = { 254, 235, }, --254, 215
     outerBorderWidth = 1,
     borderColor = "FEColorHeading3",
     backgroundColor = "FEColorBackground1",
-	BackgroundGraphic =
+    BackgroundGraphic =
     {
-		color =
-            { 255, 255, 255, 255, },
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
-        textureUV =
-            { 0, 0, 600, 600, },
-	},
+	color = { 255, 255, 255, 255, },
+        texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
+        textureUV = { 0, 0, 600, 600, },
+    },
 ;
 {
     type = "TextLabel",
-    position =
-        { 10, 2, },
-    size =
-        { 250, 13, },
+    position = { 10, 2, },
+    size = { 250, 13, },
     Text =
     {
         textStyle = "FEHeading3",
-        text = "$3506", },
+        text = "$3516", --3506
+    }, 
 },
 {
     type = "TextLabel",
-    position =
-        { 10, 17, },
-    size =
-        { 250, 10, },
+    position = { 10, 17, },
+    size = { 250, 10, },
     Text =
     {
         textStyle = "FEHeading4",
-        text = "$3507", },
+        text = "$3518", --3507
+    }, 
 },
 {
     type = "Frame",
-    outerBorderWidth = 2,
-    position =
-        { 4, 32, },
-    size =
-        { 246, 179, },
-    borderColor = "FEColorOutline",
+    position = { 4, 32, },
+    size = { 246, 215, }, --246, 179
 ;
 {
     type = "ListBox",
-    position =
-        { 1, 0, },
-    size =
-        { 243, 130, },
+    position = { 1, 0, },
+    size = { 243, 130, },
     name = "m_listProfiles",
     helpTipTextLabel = "m_lblHelpText",
     helpTip = "$3508",
@@ -94,12 +60,10 @@ UserProfile =
 },
 {
     type = "Line",
-    p1 =
-        { 227, 0, },
-    p2 =
-        { 227, 130, },
-    lineWidth = 2,
-    color = "FEColorOutline",
+    p1 = { 227, 0, },
+    p2 = { 227, 130, },
+    lineWidth = 1,
+    color = "FEColorHeading3",
     above = 1,
 },
 {
@@ -111,24 +75,14 @@ UserProfile =
     resizeToListBox = 1,
     Text =
     {
-        textStyle = "FEListBoxItemTextStyle", },
+        textStyle = "FEListBoxItemTextStyle", 
+    },
     allowDoubleClicks = 1,
-},
-{
-    type = "Line",
-    p1 =
-        { 0, (94 + 38), },
-    p2 =
-        { 254, (94 + 38), },
-    lineWidth = 2,
-    color = "FEColorOutline",
-    above = 1,
 },
 {
     type = "TextButton",
     name = "m_btnCreateNew",
-    position =
-        { 2, (96 + 38), },
+    position = { 2, (96 + 38), },
     width = 242,
     buttonStyle = "FEButtonStyle1",
     helpTipTextLabel = "m_lblHelpText",
@@ -136,12 +90,12 @@ UserProfile =
     Text =
     {
         textStyle = "FEButtonTextStyle",
-        text = "$3510", },
+        text = "$3510", 
+    },
 },
 {
     type = "TextButton",
-    position =
-        { 2, (111 + 38), },
+    position = { 2, (111 + 38), },
     width = 242,
     name = "m_btnPlayerSetup",
     helpTipTextLabel = "m_lblHelpText",
@@ -150,12 +104,12 @@ UserProfile =
     Text =
     {
         textStyle = "FEButtonTextStyle",
-        text = "$3512", },
+        text = "$3512", 
+    },
 },
 {
     type = "TextButton",
-    position =
-        { 2, (126 + 38), },
+    position = { 2, (126 + 38), },
     width = 242,
     name = "m_btnDelete",
     buttonStyle = "FEButtonStyle1",
@@ -165,63 +119,69 @@ UserProfile =
     Text =
     {
         textStyle = "FEButtonTextStyle",
-        text = "$3514", }, },
+        text = "$3514", 
+    }, 
+},
+{
+    type = "Line",
+    above = 0,
+    lineWidth = 1,
+    color = "FEColorHeading3",
+    p1 = { 2, (141 + 38), },
+    p2 = { 244, (141 + 38), },
+},
+{
+    type = "TextButton",
+    name = "m_btnAccept",
+    position = { 2, (148 + 38), },
+    visible = 1,
+    width = 242,
+    helpTipTextLabel = "m_lblHelpText",
+    helpTip = "$3517",
+    buttonStyle = "FEButtonStyle2",
+    Text =
+    {
+        textStyle = "FEButtonTextStyle",
+        text = "$2619", 
+    }, 
+},
 },
 },
 {
     type = "Frame",
-    outerBorderWidth = 1,
-    borderColor = "FEColorHeading3",
-    backgroundColor = "FEColorBackground1",
-	BackgroundGraphic =
-    {
-		color =
-            { 255, 255, 255, 255, },
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
-        textureUV =
-            { 0, 0, 600, 600, },
-	},
-    position =
-        { 12, 544, },
-    size =
-        { 776, 44, },
+    position = { 12, 544, },
+    size = { 776, 44, },
     name = "frmRootbottombigfrm",
 ;
 {
     type = "Frame",
     borderWidth = 2,
     borderColor = "FEColorOutline",
-    position =
-        { 2, 2, },
-    size =
-        { 772, 40, },
+    position = { 2, 2, },
+    size = { 772, 40, },
     name = "frmbottomframe",
 ;
 {
     type = "TextLabel",
-    position =
-        { 4, 4, },
-    size =
-        { 764, 13, },
+    position = { 4, 4, },
+    size = { 0, 0, },
     name = "m_lblHelpText",
     Text =
     {
-        textStyle = "FEHelpTipTextStyle", },
+        textStyle = "FEHelpTipTextStyle", 
+    },
 },
 {
     type = "Line",
     above = 0,
     lineWidth = 2,
     color = "FEColorOutline",
-    p1 =
-        { 2, 19, },
-    p2 =
-        { 770, 19, },
+    p1 = { 2, 19, },
+    p2 = { 770, 19, },
 },
 {
     type = "TextButton",
-    position =
-        { 4, 23, },
+    position = { 4, 23, },
     visible = 0,
     buttonStyle = "FEButtonStyle2",
     name = "m_btnCancel",
@@ -230,21 +190,9 @@ UserProfile =
     Text =
     {
         textStyle = "FEButtonTextStyle",
-        text = "$2619", },
+        text = "$2619", 
+    },
 },
-{
-    type = "TextButton",
-    name = "m_btnAccept",
-    position =
-        { 648, 23, },
-    visible = 1,
-    helpTipTextLabel = "m_lblHelpText",
-    helpTip = "$3517",
-    buttonStyle = "FEButtonStyle2",
-    Text =
-    {
-        textStyle = "FEButtonTextStyle",
-        text = "$2619", }, },
 },
 },
 }

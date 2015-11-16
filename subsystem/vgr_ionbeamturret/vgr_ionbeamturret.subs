@@ -5,8 +5,8 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName="2x PPC Turret"
-NewSubSystemType.sobDescription="Partical Projector\n150 kW/sec"
+NewSubSystemType.displayedName="3x PPC Turret"
+NewSubSystemType.sobDescription="Partical Projector\n225 kW/sec"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
 NewSubSystemType.tacticalIconMinFadeSize=0.0045
@@ -14,7 +14,7 @@ NewSubSystemType.tacticalIconMaxFadeSize=0.008
 NewSubSystemType.groupMergeSize=0.001
 NewSubSystemType.mouseOverMinFadeSize=0.045
 NewSubSystemType.mouseOverMaxFadeSize=0.1
-NewSubSystemType.maxhealth=55000
+NewSubSystemType.maxhealth=60000
 NewSubSystemType.regentime=250
 NewSubSystemType.nlips=0
 NewSubSystemType.nlipsRange=0
@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"Vgr_TurretedIonCannon","Weapon_IC","Weapon_Turret");
+StartSubSystemWeaponConfig(NewSubSystemType,"Vgr_TurretedIonCannon","Weapon_IC","");

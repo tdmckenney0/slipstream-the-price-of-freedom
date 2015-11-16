@@ -2,90 +2,70 @@ PersistantData = {
    StrikeGroups = {
    },
    Squadrons = {
-
-      {
+	{
          type = "Vgr_ResourceCollector",
-         subsystems = {
-         },
-         shiphold = {
-         },
+         subsystems = {},
+         shiphold = {},
          name = "",
-         size = 1,
          number = 6,
-      },
-      {
-         type = "vgr_resourcecontroller",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 1,
-
-      },
-	  {
-         type = "vgr_battlecruiser",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 2,
-	  },
-	  {
-         type = "vgr_Helios",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 2,
-	  },
-	  {
-         type = "vgr_assaultfrigate",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 5,
-	   },
-	   {
-         type = "vgr_drone",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         number = 5,
-	  },
-	  {
-         type = "vgr_dreadnaught",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 1,
-
-	  },
-	  {
-         type = "vgr_destroyer",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 2,
-
-	  },
 	},
+	{
+         type = "Vgr_Carrier",
+         subsystems = {},
+         shiphold = {},
+         name = "",
+         number = 1,
+	},
+	{
+         type = "vgr_resourcecontroller",
+         subsystems = {},
+         shiphold = {},
+         name = "",
+         number = 1,
+	},
+	{
+         type = "vgr_battlecruiser",
+         subsystems = {},
+         shiphold = {},
+         name = "",
+         number = 2,
+	},
+	{
+         type = "vgr_Helios",
+         subsystems = {},
+         shiphold = {},
+         name = "",
+         number = 2,
+	},
+	{
+         type = "vgr_assaultfrigate",
+         subsystems = {},
+         shiphold = {},
+         name = "",
+         number = 5,
+	},
+	{
+         type = "vgr_drone",
+         subsystems = {},
+         shiphold = {},
+         name = "",
+         number = 5,
+	},
+	{
+         type = "vgr_dreadnaught",
+         subsystems = {},
+         shiphold = {},
+         name = "",
+         number = 1,
+	},
+	{
+         type = "vgr_destroyer",
+         subsystems = {},
+         shiphold = {},
+         name = "",
+         number = 2,
+	},
+		},
    Research = {
    [1] = {
       name = "CorvetteTech",
@@ -169,10 +149,6 @@ PersistantData = {
     },
 	[21] = {
       name = "BattleshipHullEngineering",
-      progress = 1,
-    },
-	[22] = {
-      name = "SYENABLED",
       progress = 1,
     },
    },

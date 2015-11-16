@@ -28,6 +28,7 @@ NewTaskbar = {
 
 	onShow = [[
 				zTaskbarStart = 150
+				zLStart = 215
 
 				UI_SetElementPosition("NewTaskbar","taskbar",0,zTaskbarStart)
 			 ]],
@@ -36,6 +37,16 @@ NewTaskbar = {
 
 					if(zTaskbarStart > 0) then
 						zTaskbarStart = zTaskbarStart - 2
+					end
+					
+					UI_SetElementPosition("NewLaunchMenu","launch",zLStart,1);
+
+					if(zLStart <= 15) then
+						zLStart = 1
+					end
+
+					if(zLStart > 1) then
+						zLStart = zLStart - 20
 					end
 				]],
 
@@ -73,7 +84,7 @@ NewTaskbar = {
 		backgroundColor = "IGColorBackground1",
 		BackgroundGraphic =
 		{
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
         textureUV =
             { 0, 0, 600, 600, }, },
 		position = {0, 83},
@@ -141,7 +152,7 @@ NewTaskbar = {
 		textColor = { 0, 0, 0, 255},
 		Text = {
 			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2704", -- OBJECTIVES
+			text = "GOALS", -- OBJECTIVES
 		},
 		name = "btnObjectives",
 		onMouseClicked = "UI_ToggleScreen( 'ObjectivesList', 0)",
@@ -333,7 +344,7 @@ NewTaskbar = {
 
 		Text = {
 			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2701", -- RESEARCH
+			text = "UPGRADE", -- $2701  Research
 		},
 		name = "btnResearch",
 		onMouseClicked = "MainUI_UserEvent( eResearchManager)",
@@ -539,7 +550,7 @@ NewTaskbar = {
 			borderColor = "FEColorHeading3",
 			BackgroundGraphic =
 			{
-				texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+				texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
 				textureUV =
             { 0, 0, 600, 600, }, },
 			DisabledGraphic = {
@@ -845,7 +856,7 @@ NewTaskbar = {
 			borderColor = "FEColorHeading3",
 			BackgroundGraphic =
 			{
-				texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+				texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
 				textureUV =
             { 0, 0, 600, 600, }, },
 			DisabledGraphic = {
@@ -1452,7 +1463,7 @@ NewTaskbar = {
 			borderColor = "FEColorHeading3",
 			BackgroundGraphic =
 			{
-				texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+				texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
 				textureUV =
             { 0, 0, 600, 600, }, },
 			DisabledGraphic = {

@@ -1563,7 +1563,7 @@ function NonDetermChunk()
     fogSetDensity(0.15)
     setGlareIntensity(0)
     setLevelShadowColour(0, 0, 0, 1)
-    loadBackground("Icy_companions")
+    loadBackground("Companions")
     setSensorsManagerCameraDistances(10000, 45000)
 setDefaultMusic("Data:sound/music/staging/mute")
 end

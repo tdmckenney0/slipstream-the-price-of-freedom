@@ -1,14 +1,14 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Light Cruiser"
 NewShipType.sobDescription = "Crossbow Class\nLight Strike Cruiser"
-NewShipType.maxhealth = 650000
+NewShipType.maxhealth = 600000
 NewShipType.regentime = 850
 NewShipType.minRegenTime = 150
-NewShipType.sideArmourDamage = 0.70
-NewShipType.rearArmourDamage = 0.65
-NewShipType.topArmourDamage = 0.70
-NewShipType.bottomArmourDamage = 0.55
-NewShipType.frontArmourDamage = 0.80
+NewShipType.sideArmourDamage = 0.55
+NewShipType.rearArmourDamage = 0.45
+NewShipType.topArmourDamage = 0.5
+NewShipType.bottomArmourDamage = 0.5
+NewShipType.frontArmourDamage = 0.45
 NewShipType.isTransferable = 1
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 3
@@ -19,8 +19,8 @@ NewShipType.defensiveFormation = "x"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 100
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 135
-NewShipType.mainEngineMaxSpeed = 175
+NewShipType.thrusterMaxSpeed = 145
+NewShipType.mainEngineMaxSpeed = 180
 NewShipType.rotationMaxSpeed = 15
 NewShipType.thrusterAccelTime = 7
 NewShipType.thrusterBrakeTime = 2
@@ -170,8 +170,8 @@ StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System"
 StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Damageable","hgn_railgun","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Damageable","hgn_gatlinggun","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Damageable","hgn_missileturret","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Calibration6","Hardpoint_DCT_Left","System","Innate","Damageable","hgn_ioncannonx3","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Calibration7","Hardpoint_DCT_Right","System","Innate","Damageable","hgn_ioncannonx3","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration6","Hardpoint_DCT_Left","System","Innate","Damageable","hgn_ioncannon","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration7","Hardpoint_DCT_Right","System","Innate","Damageable","hgn_ioncannon","","","","","","","","");
 
 --Thrusters
 

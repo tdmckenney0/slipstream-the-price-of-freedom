@@ -1,9 +1,14 @@
+-- LuaDC version 0.9.20
+-- 11/11/2008 7:35:13 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
 nearClip = 3
-farClip = 9000000050000000.0
-verticalFOV = 80 --was 70
-cameraDefaultMaxDistance = 7000
-cameraDistanceMax = 10000
-cameraDistanceMin = 5
+farClip = 440000
+verticalFOV = 80
+cameraDefaultMaxDistance = 6000
+cameraDistanceMax = 6000
+cameraDistanceMin = 20
 cameraMaxDeclination = deg((PI * 0.5 - 0.01))
 cameraMinDeclination = deg(-((PI * 0.5 - 0.01)))
 cameraTrackingAngleSpeedAuto = 0.05
@@ -17,7 +22,7 @@ CAM_CUBIC_EVAL_ANGLE_TWEAK = 2
 cameraFloatEnableTime = 3
 cameraFloatShape = 2
 cameraFloatFrequency = 0.2
-cameraFloatAmplitude =
+cameraFloatAmplitude = 
     { 0.15, 0.15, }
 cameraFloatDistanceFactor = 0.005
 cameraZoomFactor = 2.15
@@ -27,12 +32,11 @@ cameraDragRotateScalar = 120
 cameraMouseWheelTrackingTimeSteps = 240
 cameraMouseWheelEvalThreshold = 0.001
 cameraMouseWheelZoomTrack = 0.05
-RENDER_VIEWABLE_DISTANCE_SM_SQR		= (9000000050000000.0*9000000050000000.0)			-- render list distance (the one and only, for now)
-RENDER_VIEWABLE_DISTANCE_SQR		= (9000000050000000.0*9000000050000000.0)			-- render list distance (the one and only, for now)
-RENDER_VIEWABLE_DISTANCE_MIN_SQR	= (0.0)							-- render list min distance used in the in game options screen
-RENDER_VIEWABLE_DISTANCE_MAX_SQR	= (9000000050000000.0*9000000050000000.0)			-- render list max distance used in the in game options screen
-
-MAX_CAMERA_STACKS = 20
+RENDER_VIEWABLE_DISTANCE_SM_SQR = 300500 * 300500
+RENDER_VIEWABLE_DISTANCE_SQR = 300500 * 300500
+RENDER_VIEWABLE_DISTANCE_MIN_SQR = 0
+RENDER_VIEWABLE_DISTANCE_MAX_SQR = 400000 * 400000
+MAX_CAMERA_STACKS = 40
 cameraTwkPanSpeedFactor = 1
 cameraTwkMinPanSpeed = 0
 cameraTwkMaxPanSpeed = 10000000

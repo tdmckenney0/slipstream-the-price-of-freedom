@@ -145,10 +145,7 @@ addAbility(NewShipType,"CanBeRepaired")
 addAbility(NewShipType,"RetireAbility",1,1)
 LoadModel(NewShipType,1)
 
--------------------------------------------------
 StartShipHardPointConfig(NewShipType,"Generic 1","HardpointTurretTop1","Weapon","Generic","Damageable","hgn_gatlinggunsmall","","","","","","","","")
- 
---StartShipHardPointConfig(NewShipType,"Generic 2","HardpointTurretTop2","Weapon","Generic","Damageable","hgn_mountedflak","","","","","","","","")
 
 StartShipHardPointConfig(NewShipType,"Generic 3","HardpointAC","Weapon","Generic","Damageable","hgn_mountedflak","","","","","","","","")
 

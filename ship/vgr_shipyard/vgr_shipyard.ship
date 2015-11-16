@@ -183,8 +183,8 @@ StartShipHardPointConfig(NewShipType, "Resource", "Hardpoint_Resource", "System"
 
 --Weapon Subsystems
 
-StartShipHardPointConfig(NewShipType,"IonBeam1","Hardpoint_Ion1","Weapon","Innate","Damageable","Vgr_IonBeamTurretx3")
-StartShipHardPointConfig(NewShipType,"IonBeam2","Hardpoint_Ion2","Weapon","Innate","Damageable","Vgr_IonBeamTurretx3")
+StartShipHardPointConfig(NewShipType,"IonBeam1","Hardpoint_Ion1","Weapon","Innate","Damageable","Vgr_IonBeamTurret")
+StartShipHardPointConfig(NewShipType,"IonBeam2","Hardpoint_Ion2","Weapon","Innate","Damageable","Vgr_IonBeamTurret")
 StartShipHardPointConfig(NewShipType,"Miss1", "Hardpoint_Rocket1", "Weapon", "Innate", "Damageable", "vgr_missilebay")
 StartShipHardPointConfig(NewShipType,"Miss2", "Hardpoint_Rocket2", "Weapon", "Innate", "Damageable", "vgr_missilebay")
 StartShipHardPointConfig(NewShipType,"Gatling1","Hardpoint_Gat1","Weapon","Innate","Damageable","vgr_flakturret")

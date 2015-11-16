@@ -58,7 +58,8 @@ GameSetupOptions =
           {
               "Default", "1",
               "Carriers Only", "2",
-			  "Instant Action", "3",
+	      "Instant Action", "3",
+	      "Arena", "4",
           },
    },
    {
@@ -78,42 +79,44 @@ GameSetupOptions =
 		visible = 1,
 		choices =
 		{
-			"Slipstream Suite", "staging\\suite",
-			"Slipstream Ambient", "staging\\Ambient",
-			"The Price of Freedom", "staging\\Freedom",
-			"None", "staging\\Mute",
-			"Shuffle, All", "shuffle",
-			"Shuffle, Ambient", "shufflea",
-			"Shuffle, Staging", "shuffles",
-			"Shuffle, Battle", "shuffleb",
-			"Ambient, No.1", "ambient\\amb_01",
-			"Ambient, No.2", "ambient\\amb_02",
-			"Ambient, No.3", "ambient\\amb_03",
-			"Ambient, No.4", "ambient\\amb_04",
-			"Ambient, No.5", "ambient\\amb_05",
-			"Ambient, No.6", "ambient\\amb_06",
-			"Ambient, No.7", "ambient\\amb_07",
-			"Ambient, No.8", "ambient\\amb_08",
-			"Ambient, No.9", "ambient\\amb_12",
-			"Ambient, No.10", "ambient\\amb_13",
-			"Ambient, No.11", "ambient\\amb_14",
-			"Staging, No.1", "staging\\staging_01",
-			"Staging, No.2", "staging\\staging_04",
-			"Staging, No.3", "staging\\staging_05",
-			"Staging, No.4", "staging\\staging_08",
-			"Staging, No.5", "staging\\staging_11",
-			"Battle, No.1", "battle\\battle_01",
-			"Battle, No.2", "battle\\battle_04",
-			"Battle, No.3, Alternate", "battle\\battle_04_alt",
-			"Battle, No.4", "battle\\battle_06",
-			"Battle, Keeper", "battle\\battle_keeper",
-			"Battle, Movers", "battle\\battle_movers",
-			"Battle, Planet Killers", "battle\\battle_planetkillers",
-			"Battle, Sajuuk", "battle\\battle_sajuuk",
-			"Battle, Arrival", "battle\\battle_arrival",
+			"Off", "mute",
+			"Shuffle: All", "shuffle",
+			"Shuffle: Ambient", "ambient",
+			"Shuffle: Staging", "staging",
+			"Shuffle: Battle", "battle",
+			"Ambient: Slipstream ", "staging\\Ambient",
+			"Ambient: No.1", "ambient\\amb_01",
+			"Ambient: No.2", "ambient\\amb_02",
+			"Ambient: No.3", "ambient\\amb_03",
+			"Ambient: No.4", "ambient\\amb_04",
+			"Ambient: No.5", "ambient\\amb_05",
+			"Ambient: No.6", "ambient\\amb_06",
+			"Ambient: No.7", "ambient\\amb_07",
+			"Ambient: No.8", "ambient\\amb_08",
+			"Ambient: No.9", "ambient\\amb_12",
+			"Ambient: No.10", "ambient\\amb_13",
+			"Ambient: No.11", "ambient\\amb_14",
+			"Battle: No.1", "battle\\battle_01",
+			"Battle: No.2", "battle\\battle_04",
+			"Battle: No.3, Alternate", "battle\\battle_04_alt",
+			"Battle: No.4", "battle\\battle_06",
+			"Battle: Arrival", "battle\\battle_arrival",
+			"Battle: Credits", "credits",
+			"Battle: Keeper", "battle\\battle_keeper",
+			"Battle: Movers", "battle\\battle_movers",
+			"Battle: Planet Killers", "battle\\battle_planetkillers",
+			"Battle: Sajuuk", "battle\\battle_sajuuk",
+			"Staging: No.1", "staging\\staging_01",
+			"Staging: No.2", "staging\\staging_04",
+			"Staging: No.3", "staging\\staging_05",
+			"Staging: No.4", "staging\\staging_08",
+			"Staging: No.5", "staging\\staging_11",
+			"Suite: Slipstream", "staging\\suite",
+			"Suite: Freedom", "staging\\Freedom",
 		},
 	},
     }
+    
 dofilepath("data:scripts/scar/restrict.lua")
 dofilepath("data:engine/version.lua")
 dofilepath("data:engine/lib_music.lua")
@@ -129,34 +132,7 @@ Events.endGame =
 function OnInit()
     MPRestrict()
 
-	randommusic = GetGameSettingAsString("randommusic")
-
-	if randommusic == "shuffle" then
-		UI_BindKeyEvent(F1KEY, "Play")
-		dofilepath("data:soundscripts/playlists/allmusic.lua")
-		Rule_Add("RandomMusicRule")
-	elseif randommusic == "shufflea" then
-		UI_BindKeyEvent(F1KEY, "Play")
-		dofilepath("data:soundscripts/playlists/ambientonly.lua")
-		Rule_Add("RandomMusicRule")
-	elseif randommusic == "shuffleb" then
-		UI_BindKeyEvent(F1KEY, "Play")
-		dofilepath("data:soundscripts/playlists/battleonly.lua")
-		Rule_Add("RandomMusicRule")
-	elseif randommusic == "shuffles" then
-		UI_BindKeyEvent(F1KEY, "Play")
-		dofilepath("data:soundscripts/playlists/stagingonly.lua")
-		Rule_Add("RandomMusicRule")
-	elseif randommusic == nil then
-		UI_BindKeyEvent(F1KEY, "Play")
-		dofilepath("data:soundscripts/playlists/allmusic.lua")
-		Subtitle_Message("Mac OS X Users: We're sorry, but Homeworld 2 will not allow the advanced game options on your machine. Default Start fleet & Shuffle music Enabled.", 10)
-		Rule_Add("RandomMusicRule")
-	else
-		Sound_MusicPlay("data:sound\\music\\" .. GetGameSettingAsString("randommusic"))
-	end
-
-	UI_BindKeyEvent(F9KEY, "Secret")
+	Play(GetGameSettingAsString("randommusic"))
 
 	wincondition = GetGameSettingAsNumber("wincondition")
 
@@ -183,9 +159,12 @@ function OnInit()
 		SetStartFleetSuffix("Carriers")
 	elseif startfleet == 3 then
 		SetStartFleetSuffix("Instant")
+	elseif startfleet == 4 then
+		SetStartFleetSuffix("arena")
 	else
 		SetStartFleetSuffix("")
 	end
+	
 
 
 end
@@ -341,3 +320,4 @@ function waitForEnd()
 		Rule_Remove("waitForEnd")
 	end
 end
+

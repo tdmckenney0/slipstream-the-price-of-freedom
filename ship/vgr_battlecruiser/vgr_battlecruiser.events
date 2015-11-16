@@ -10,7 +10,7 @@ effects =
         animation1 =
         {
             name = "Death",
-            length = 6,
+            length = 1,
             loop = 0,
             parent = "",
             minimum = 0,

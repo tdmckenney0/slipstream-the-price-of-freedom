@@ -1,29 +1,71 @@
 playedBin = {}
 
+function Play(Music)
+
+	if Music == nil then
+		Subtitle_Message("Mac OS X Users: We're sorry, but Homeworld 2 will not allow the advanced game options on your machine. Default Start fleet & Shuffle music Enabled.", 10)
+		ShuffleAll()
+				
+	elseif Music == "shuffle" then
+		ShuffleAll()
+		
+	elseif Music == "ambient" then
+		ShuffleAmbient()
+		
+	elseif Music == "battle" then
+		ShuffleBattle()
+		
+	elseif Music == "staging" then
+		ShuffleStaging()
+			
+	elseif Music == "mute" then
+		Sound_MusicPlay("data:sound\\music\\staging\\Mute" )
+		
+	elseif Music == "credits" then
+		Sound_MusicPlay("data:sound\\music\\staging\\Credits" )	
+		
+	else
+		Sound_MusicPlay("data:sound\\music\\" .. Music)
+	end
+	
+end
+
+function ShuffleAll()
+
+	UI_BindKeyEvent(F1KEY, "RandomMusicRule")
+	dofilepath("data:soundscripts/playlists/allmusic.lua")
+	Rule_Add("RandomMusicRule")
+end
+
+function ShuffleAmbient()
+	
+	UI_BindKeyEvent(F1KEY, "RandomMusicRule")
+	dofilepath("data:soundscripts/playlists/ambientonly.lua")
+	Rule_Add("RandomMusicRule")
+	
+end
+
+function ShuffleBattle()
+	
+	UI_BindKeyEvent(F1KEY, "RandomMusicRule")
+	dofilepath("data:soundscripts/playlists/battleonly.lua")
+	Rule_Add("RandomMusicRule")
+	
+end
+
+function ShuffleStaging()
+	
+	UI_BindKeyEvent(F1KEY, "RandomMusicRule")
+	dofilepath("data:soundscripts/playlists/stagingonly.lua")
+	Rule_Add("RandomMusicRule")
+	
+end
+    
 --Keybinded functions.
 function RandomMusicRule()
 	RandomMusic(PlayList)
 end
-
-function Secret()
-	Sound_MusicPlay("data:sound\\music\\staging\\gravity")
-	Subtitle_Message("Now playing Gravity by Embassy - Nice Job discovering the Easter Egg, Enjoy! --SRI-Emperor", 10)
-end
-
-function Play()
-	RandomMusic(PlayList)
-end
-
-function Mute()
-	Sound_MusicPlay("data:sound\\music\\staging\\Mute")
-	Subtitle_Message("Stopping Music", 10)
-end
-
-function Resume()
-	Sound_MusicPlay("data:sound\\music\\staging\\Mute")
-	Subtitle_Message("Stopping Music", 10)
-end
-
+	
 
 function RandomMusic(tPlaylist)
 	-- function created by Mikail, EvilleJedi

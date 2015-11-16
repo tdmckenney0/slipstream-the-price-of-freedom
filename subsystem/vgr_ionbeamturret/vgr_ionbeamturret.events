@@ -147,9 +147,35 @@ effects = {
         "on",
       },
     },
+    event4 = {
+      {
+        "anim",
+        "Weapon_turret",
+      },
+      {
+        "animtime",
+        "1",
+      },
+      {
+        "marker",
+        "Weapon_ICSlave1_Muzzle",
+      },
+      {
+        "fx",
+        "ion_beam_charge_combo",
+      },
+      {
+        "sound",
+        "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
 
   
-    event4 = {
+    event5 = {
       {
         "anim",
         "dmg02",
@@ -175,7 +201,7 @@ effects = {
         "7.5",
       },
     },
-    event5 = {
+    event6 = {
       {
         "anim",
         "dmg03",
@@ -201,7 +227,7 @@ effects = {
         "10",
       },
     },
-    event6 = {
+    event7 = {
       {
         "anim",
         "death",

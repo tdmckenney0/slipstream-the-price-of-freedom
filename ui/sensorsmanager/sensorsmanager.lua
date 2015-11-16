@@ -1,8 +1,3 @@
--- LuaDC version 0.9.20
--- 11/11/2008 7:35:20 PM
--- LuaDC by Age2uN
--- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
---
 smTwkBlinkTime = 0.3
 smTwkZoomTime = 0.5
 smTwkZoomMainView = 0.5
@@ -17,27 +12,19 @@ smTwkWidescreen = 1
 smTwkBlinkTransitionTime = 0.07
 smTwkBlinkOnFraction = 0.8
 smTwkHighlightMaxAlpha = 0.3
-friendlyPixelColour =
-    { 1, 1, 1, 1, }
-alliedPixelColour =
-    { 0, 1, 1, 1, }
-enemyPixelColour =
-    { 1, 0, 0, 1, }
-neutralPixelColour =
-    { 0.9, 0.9, 0.3, 1, }
+friendlyPixelColour = { 1, 1, 1, 1, }
+alliedPixelColour = { 0, 1, 1, 1, }
+enemyPixelColour = { 1, 0, 0, 1, }
+neutralPixelColour = { 0.9, 0.9, 0.3, 1, }
 friendlyPixelSize = 3
 alliedPixelSize = 3
 enemyPixelSize = 3
 missilePixelSize = 3
-missilePixelColour =
-    { 1, 1, 0.199, 1, }
+missilePixelColour = { 1, 1, 0.199, 1, }
 miscPixelSize = 2
-miscPixelColour =
-    { 1, 1, 1, 1, }
-worldPlaneColour =
-    { 1, 1, 1, 0.2, }
-worldLineColour =
-    { 0.75, 0.75, 0.75, 1, }
+miscPixelColour = { 1, 1, 1, 1, }
+worldPlaneColour = { 1, 1, 1, 0.2, }
+worldLineColour = { 0.75, 0.75, 0.75, 1, }
 worldPlaneToWorldBoundSize = 1
 horizonToCameraZoom = 3
 letterboxAspect = 1.5
@@ -101,7 +88,7 @@ worldGraphics =
         {
             colour =
                 { 1, 1, 1, 1, },
-            texture = "data:UI\\SensorsManager\\Meshes\\CompassNumbers.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\CompassNumbers.tga",
             lineWeight = 1,
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\CompassNumbersAbove.hod", }, },
@@ -122,7 +109,7 @@ worldGraphics =
         {
             colour =
                 { 1, 1, 1, 1, },
-            texture = "data:UI\\SensorsManager\\Meshes\\CompassNumbers.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\CompassNumbers.tga",
             lineWeight = 1,
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\CompassNumbersBelow.hod", }, },
@@ -196,7 +183,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\000_.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\000.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -213,7 +200,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\020.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\020.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -230,7 +217,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\040.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\040.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -247,7 +234,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\060.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\060.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -264,7 +251,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\080.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\080.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -281,7 +268,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\100.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\100.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -298,7 +285,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\120.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\120.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -315,7 +302,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\140.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\140.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -332,9 +319,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-			colour =
-                { 1, 1, 1, 0.5, },
-            texture = "data:UI\\SensorsManager\\Meshes\\160.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\160.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -351,7 +336,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\180.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\180.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -368,7 +353,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\200.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\200.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -385,7 +370,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\220.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\220.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -402,7 +387,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\240.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\240.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -419,7 +404,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\260.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\260.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -436,7 +421,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\280.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\280.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -453,7 +438,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\300.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\300.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -470,7 +455,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\320.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\320.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -487,7 +472,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\340.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\340.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -504,7 +489,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\000.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\000.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -521,7 +506,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\020.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\020.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -538,7 +523,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\040.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\040.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -555,7 +540,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\060.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\060.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -572,7 +557,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\080.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\080.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -589,7 +574,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\100.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\100.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -606,7 +591,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\120.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\120.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -623,7 +608,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\140.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\140.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -640,7 +625,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\160.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\160.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -657,7 +642,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\180.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\180.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -674,7 +659,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\200.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\200.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -691,7 +676,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\220.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\220.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -708,7 +693,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\240.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\240.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -725,7 +710,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\260.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\260.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -742,7 +727,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\280.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\280.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -759,7 +744,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\300.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\300.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -776,7 +761,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\320.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\320.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =
@@ -793,7 +778,7 @@ worldGraphics =
         scaleParam = SPI_HorizonLineScale,
         mesh =
         {
-            texture = "data:UI\\SensorsManager\\Meshes\\340.tga",
+            texture = "data:UI\\SensorsManager\\Tpof_Meshes\\340.tga",
             LODs =
                 { 1, "UI\\SensorsManager\\Meshes\\Billboard.hod", }, },
         placement3D =

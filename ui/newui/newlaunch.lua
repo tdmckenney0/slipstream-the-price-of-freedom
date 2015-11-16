@@ -7,48 +7,41 @@ OUTLINECOLOR =
     { 190, 190, 190, 255, }
 NewLaunchMenu =
 {
-    size =
-        { 587, 15, 212, 497, },
+    size = { 586, 15, 215, 497, },
     stylesheet = "HW2StyleSheet",
-    RootElementSettings =
-    {},
+    RootElementSettings = {},
     soundOnShow = "SFX_LaunchMenuONOFF",
     soundOnHide = "SFX_LaunchMenuONOFF",
-    shipHealthColor =
-        { 0, 255, 0, 255, },
+    shipHealthColor = { 0, 255, 0, 255, },
     pixelUVCoords = 1,
-	onShow = [[
-				zLStart = 215
-
-				UI_SetElementPosition("NewLaunchMenu","launch",zLStart,0)
-
-				UI_SubtitleNarrow()
-			 ]],
-    --onHide = "UI_SubtitleWide()",
+    onHide = "UI_SubtitleWide()",
     fstringDockedCount = "$2667",
     drawToShipLineWidth = 2,
     drawToShipLineStubLength = 10,
     drawToShipLineColor = OUTLINECOLOR,
     drawToShipLineElement = "btnPrev",
-	onUpdate = [[
-					UI_SetElementPosition("NewLaunchMenu","launch",0,0);
-			   ]],
+    onShow = [[
+				zLStart = 215
+
+				UI_SetElementPosition("NewLaunchMenu","launch",zLStart,0)
+
+				UI_SubtitleNarrow()
+		   ]],
+    
 ;
 {
-    type = "Frame",
+	type = "Frame",
 	name = "launch",
-	position =
-        { 0, 0, },
-    size =
-        { 212, 497, },
-	backgroundColor = "IGColorBackground1",
-	BackgroundGraphic =
-		{
-        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
-        textureUV =
-            { 0, 0, 600, 600, }, },
+	position = { 215, 1, },
+	size = { 215, 495, },
 	outerBorderWidth = 1,
 	borderColor = "FEColorHeading3",
+	backgroundColor = "IGColorBackground1",
+	BackgroundGraphic =
+	{
+		texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
+		textureUV = { 0, 0, 600, 600, }, 
+	},
 ;
 {
     type = "Line",

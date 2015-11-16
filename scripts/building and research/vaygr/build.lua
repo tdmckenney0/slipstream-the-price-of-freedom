@@ -324,8 +324,8 @@ build =
 		RequiredResearch = "DestroyerGuns",
 		RequiredShipSubSystems = "CapShipProduction",
 		DisplayPriority = 301,
-		DisplayedName = "$7152",
-		Description = "<b>Type: Destroyer</b>\n<b>Codename: Kruszchev</b>\n<b>Description:</b>\n\nThe Kruszchev is the standard Destroyer of the Dominion. It is capable of holding its own against Fighters, Corvettes, Frigates, and can give a cruiser a run for its money.\n\n<b>Armed with:</b>\n1x 4x-Barrel Heavy Plasma Batteries\n1x 2x-Barrel Helican Railguns\n1x 2x-Barrel Gatling Turrets\n1x 2x-Barrel PPC\n1x Missile Turret\nDefense Lasers.\n5x Nuclear Missile Tubes.\n<b>Requires:</b>\nDestroyer Chassis Research\nCapital Production Facility",
+		DisplayedName = "Light Cruiser",
+		Description = "<b>Type: Fast Attack Cruiser</b>\n<b>Codename: Kruszchev</b>\n<b>Description:</b>\n\nThe Kruszchev is the standard Destroyer of the Dominion. It is capable of holding its own against Fighters, Corvettes, Frigates, and can give a cruiser a run for its money.\n\n<b>Armed with:</b>\n1x 4x-Barrel Heavy Plasma Batteries\n1x 2x-Barrel Helican Railguns\n1x 2x-Barrel Gatling Turrets\n1x 2x-Barrel PPC\n1x Missile Turret\nDefense Lasers.\n5x Nuclear Missile Tubes.\n<b>Requires:</b>\nDestroyer Chassis Research\nCapital Production Facility",
 	},
 	{
 		Type = Ship,
@@ -333,7 +333,7 @@ build =
 		RequiredResearch = "AdvDestroyer",
 		RequiredShipSubSystems = "CapShipProduction",
 		DisplayPriority = 302,
-		DisplayedName = "Assault Cruiser",
+		DisplayedName = "$7152",
 		Description = "<b>Type: Heavy Destroyer</b>\n<b>Codename: Helios</b>\n<b>Description:</b>\n\nThe Helios is a marvel of Dominion Technology. It's appearence resembles 6 Kruszchev Hulls Fused Together in a circular formation, but compared to the kruszchev this ship is bigger, tougher, and carries a much more impressive armament. This is indeed a very deadly design.\n\n<b>Armed with:</b>\n2x Railgun Turret\n1x 2x-Barrel PPC\n2x Pulse Cannon\n1x 2x-Barrel Helican Railguns\n1x 4x-Barrel Heavy Plasma Batteries\n<b>Requires:</b>\nAdvanced Hull Research\nCapital Production Facility",
 	},
 	{
@@ -360,7 +360,7 @@ build =
 		RequiredResearch = "AncientHullEngineering",
 		RequiredShipSubSystems = "CapShipProduction",
 		DisplayPriority = 305,
-		DisplayedName = "Dreadnaught",
+		DisplayedName = "Tsaraii Dreadnaught",
 		Description = "<b>Type: Dreadnaught</b>\n<b>Codename: Leviathan</b>\n<b>Description:</b>\n\nNot Much is known about the Leviathan. It is an Ancient warship that is easily recreated, but never understood. Recreating her power subsystems are difficult. So much, that the original Defense weapons are replaced with Dominion lasers and Ion Cannons. The Main Reactor is used to power her Massive Front Particle beam. This Beam can travel 15 KM and burn a hole through and armor.\n\n<b>Armed with:</b>\n1x 2x-Barrel Helican Railguns\n2x Missile Box\n1x Massive Particle Projector\n2x 2x-Barrel Gatling Guns\n2x 4x-Barrel Heavy Plasma Batteries\n10x Fusion Missile Launcher Tubes\n1x 3x-Barrel PPC Turrets\nDefense lasers\n<b>Requires:</b>\nBattlecruiser Chassis Research\nCapital Production Facility",
 	},
 	{

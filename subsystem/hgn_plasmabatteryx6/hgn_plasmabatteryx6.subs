@@ -6,7 +6,7 @@
 --===========================================================================
 NewSubSystemType = StartSubSystemConfig()
 NewSubSystemType.displayedName="Heavy Plasma Battery"
-NewSubSystemType.sobDescription="6x Valencium Heavy Plasma Repeater Cannons"
+NewSubSystemType.sobDescription="2x Valencium Heavy Plasma Repeater Cannons"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
 NewSubSystemType.tacticalIconMinFadeSize=0.0045
@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_plasmabatteryx6","Weapon_DreadTurret","null");
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_plasmabatteryx6","Weapon_SCT","null");
