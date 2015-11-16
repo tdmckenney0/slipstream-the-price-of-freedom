@@ -1,11 +1,3 @@
-dofilepath("data:engine/version.lua")
-print("-Slipstream: The Price of Freedom-")
-print(COPYRIGHT)
-print("Developers Mode: "..ISDEV)
-print("Build Version: "..TPOFVERSION)
-print("Built on: "..TPOFDATE)
-print("Built by: "..BUILDOWNER..", on system: "..BUILDSYSTEM)
-print("Supported OS's: "..SUPPORT)
 HW2StyleSheet =
 {
 	defaultElementStyle = "DefaultStyle",
@@ -38,7 +30,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "FEColorBackground1",
-			string = "157,172,194,200",
+			string = "157,172,194,0", -- "157,172,194,200",
 		},
 		{
 			name = "FEColorBackground2",
@@ -78,7 +70,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "IGColorBackground1",
-			string = "157,172,194,200",
+			string = "157,172,194,0",
 		},
 		{
 			name = "IGColorOutline",
@@ -145,6 +137,13 @@ HW2StyleSheet =
 			string = "255,255,255,200",
 		},
 	},
+	
+	
+	
+	
+	
+	
+	
 	DefaultTextStyle =
 	{
 		type = "Text",

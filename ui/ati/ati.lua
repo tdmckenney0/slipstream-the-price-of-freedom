@@ -30,7 +30,7 @@
 
 --basic colours
 FriendlyColour      = {1,1,1,1}
-AlliedColour        = {0,1,1,1.0}
+AlliedColour        = {0,1,1,1}
 AlliedColourHurt    = {215/255,205/255,0,1}
 AlliedColourDying   = {205/255,205/255,0,1}
 EnemyColour         = {1,0.025,0,1.0}
