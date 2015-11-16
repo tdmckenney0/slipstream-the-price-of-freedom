@@ -6,7 +6,7 @@
 NewShipType=StartShipConfig();
 NewShipType["displayedName"]="Tsaraii Dreadnaught";
 NewShipType["sobDescription"]="Unknown Class\nUnknown Type";
-NewShipType["maxhealth"]=750000;
+NewShipType["maxhealth"]=800000;
 NewShipType["regentime"]=0;
 NewShipType["minRegenTime"]=8000;
 NewShipType.sideArmourDamage = 0.5

@@ -42,11 +42,11 @@ HW2StyleSheet =
 		},
 		{
 			name = "FEColorOutline",
-			string = "255,255,255,10",
+			string = "255,255,255,0",
 		},
 		{
 			name = "FEColorPopupOutline",
-			string = "255,255,255,10",
+			string = "255,255,255,0",
 		},
 		{
 			name = "FEColorScrollButtonDefault",

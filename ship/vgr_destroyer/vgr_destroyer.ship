@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Destroyer"
 NewShipType.sobDescription = "Kruszchev Class\nNaval Destroyer"
-NewShipType.maxhealth = 350000
+NewShipType.maxhealth = 500000
 NewShipType.regentime = 1500
 NewShipType.minRegenTime = 450
 NewShipType.sideArmourDamage = 0.45

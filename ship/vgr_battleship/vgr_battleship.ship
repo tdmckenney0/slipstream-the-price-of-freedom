@@ -6,7 +6,7 @@
 NewShipType=StartShipConfig();
 NewShipType.displayedName = "DOL Battleship"
 NewShipType.sobDescription = "Jupiter Class\nBattleship"
-NewShipType.maxhealth=750000
+NewShipType.maxhealth=1000000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 750
 NewShipType.sideArmourDamage = 0.6

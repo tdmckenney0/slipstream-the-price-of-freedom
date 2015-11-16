@@ -140,15 +140,6 @@ build =
 	},
 	{
 		Type = SubSystem,
-		ThingToBuild = "Hgn_SC_ProductionTrunk",
-		RequiredResearch = "",
-		RequiredShipSubSystems = "",
-		DisplayPriority = 0,
-		DisplayedName = "Technology Module",
-		Description = "<b>Description:</b>The Agincourt Super Carrier uses a Second Generation Researching Method. Mounting a large Research Bay overtop of the hangar bay allows faster technology devlopment.\n\n<b>Type:</b> Module (Takes 1 Module Slot). \n\n<b>Prerequisites:</b> None.",
-	},
-	{
-		Type = SubSystem,
 		ThingToBuild = "Hgn_C_Module_ResearchAdvanced",
 		RequiredResearch = "",
 		RequiredFleetSubSystems = "Research",
@@ -163,15 +154,6 @@ build =
 		RequiredFleetSubSystems = "Research",
 		DisplayPriority = 10,
 		DisplayedName = "$7012",
-		Description = "$7013",
-	},
-	{
-		Type = SubSystem,
-		ThingToBuild = "Hgn_SC_AdvResearch",
-		RequiredResearch = "",
-		RequiredFleetSubSystems = "Research",
-		DisplayPriority = 10,
-		DisplayedName = "Advanced Technology Module",
 		Description = "$7013",
 	},
 	{

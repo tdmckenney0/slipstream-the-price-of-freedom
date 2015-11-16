@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Interceptor"
 NewShipType.sobDescription = "Interceptor Class\nStrike Fighter"
-NewShipType.maxhealth = 550
+NewShipType.maxhealth = 1500
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 0.95

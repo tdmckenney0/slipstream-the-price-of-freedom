@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Ranged Cruiser"
 NewShipType.sobDescription = "Crossbow Class\nLong Range Strike Cruiser "
-NewShipType.maxhealth = 450000
+NewShipType.maxhealth = 700000
 NewShipType.regentime = 850
 NewShipType.minRegenTime = 150
 NewShipType.sideArmourDamage = 0.5
@@ -141,7 +141,7 @@ addAbility(NewShipType,"ShipHold",1,40,0,"rallypoint","",25)
 addAbility(NewShipType,"ParadeCommand",1)
 addAbility(NewShipType,"WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,0)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "flyround_destroyer", 
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "flyround", 
 { 
     Fighter = "Flyround", 
 }, 

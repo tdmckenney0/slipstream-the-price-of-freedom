@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Interceptor"
 NewShipType.sobDescription = "Pamir Class\nStandard Fighter"
-NewShipType.maxhealth = 250
+NewShipType.maxhealth = 1250
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1

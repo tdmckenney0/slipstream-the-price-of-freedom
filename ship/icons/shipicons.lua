@@ -82,6 +82,20 @@ hgn_heavydestroyer= {
     stretchOnDraw = 1,
   },
 }
+hgn_superfortress= {
+  LargeIcon = {
+    texture = "DATA:\\Ship\\Icons\\ships\\hgn_superfortress.tga",
+    textureUV_TL = {
+      0,
+      0,
+    },
+    textureUV_WH = {
+      384,
+      128,
+    },
+    stretchOnDraw = 1,
+  },
+}
 Hgn_AssaultCorvetteElite = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
@@ -290,48 +304,6 @@ Hgn_InterceptorElite = {
     stretchOnDraw = 1,
   },
 }
-Hgn_RailgunFighter = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\Ships\\Hgn_RailgunFighter.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      230,
-      118,
-    },
-    stretchOnDraw = 1,
-  },
-}
-Hgn_Defender = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\Ships\\Hgn_Defender.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      195,
-      93,
-    },
-    stretchOnDraw = 1,
-  },
-}
-Hgn_LBomber = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\Ships\\Hgn_LBomber.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      195,
-      93,
-    },
-    stretchOnDraw = 1,
-  },
-}
 Hgn_IonCannonFrigate = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
@@ -342,20 +314,6 @@ Hgn_IonCannonFrigate = {
     textureUV_WH = {
       128,
       64,
-    },
-    stretchOnDraw = 1,
-  },
-}
-Hgn_lrms = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\Ships\\Hgn_lrms.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      230,
-      100,
     },
     stretchOnDraw = 1,
   },
@@ -399,20 +357,6 @@ Hgn_MinelayerCorvette = {
     textureUV_WH = {
       125,
       64,
-    },
-    stretchOnDraw = 1,
-  },
-}
-Hgn_MultiGunCorvette = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\Ships\\Hgn_MultiGunCorvette.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      238,
-      90,
     },
     stretchOnDraw = 1,
   },
@@ -1131,90 +1075,6 @@ Vgr_Defender = {
     stretchOnDraw = 1,
   },
 }
-Vgr_Standvette = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\Ships\\Vgr_Standvette.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      200,
-      93,
-    },
-    stretchOnDraw = 1,
-  },
-}
-Vgr_MultiLanceCorvette = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\Ships\\Vgr_MultiLanceCorvette.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      200,
-      93,
-    },
-    stretchOnDraw = 1,
-  },
-}
-Vgr_ArtilleryFrigate = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\Ships\\Vgr_ArtilleryFrigate.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      213,
-      93,
-    },
-    stretchOnDraw = 1,
-  },
-}
-Vgr_lrcts = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\Ships\\Vgr_lrcts.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      213,
-      93,
-    },
-    stretchOnDraw = 1,
-  },
-}
-Vgr_empfrigate = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\Ships\\Vgr_empfrigate.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      213,
-      93,
-    },
-    stretchOnDraw = 1,
-  },
-}
-Vgr_ArtilleryBattleCruiser = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\ships\\Vgr_ArtilleryBattlecruiser.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      256,
-      111,
-    },
-    stretchOnDraw = 1,
-  },
-}
 Vgr_Carrier = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
@@ -1271,6 +1131,21 @@ Vgr_Destroyer = {
     stretchOnDraw = 1,
   },
 }
+Vgr_Helios = {
+  LargeIcon = {
+    texture = "DATA:\\Ship\\Icons\\Ships\\vgr_helios.tga",
+    textureUV_TL = {
+      0,
+      0,
+    },
+    textureUV_WH = {
+      384,
+      128,
+    },
+    stretchOnDraw = 1,
+  },
+}
+
 Vgr_Dreadnaught = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
@@ -1922,32 +1797,6 @@ Icon_Subsystem_IonTurret = {
     stretchOnDraw = 1,
   },
 }
-Icon_Subsystem_HeavyGuidedPlasmaBombTubes = {
-  LargeIcon = {
-    texture = "DATA:\\Ship\\Icons\\subs\\Hgn_HeavyGuidedPlasmaBombTubes.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      128,
-      64,
-    },
-    stretchOnDraw = 1,
-  },
-  SmallIcon = {
-    texture = "DATA:\\Ship\\Icons\\Taskbar\\Hgn_HeavyGuidedPlasmaBombTubes.tga",
-    textureUV_TL = {
-      0,
-      0,
-    },
-    textureUV_WH = {
-      64,
-      48,
-    },
-    stretchOnDraw = 1,
-  },
-}
 Icon_Subsystem_HeavyCannonTurrets = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\subs\\Vgr_HeavyCannonTurrets.tga",
@@ -2452,7 +2301,6 @@ vgr_mount = Icon_Subsystem_PlatformControl
 vgr_pmortarfrigate = Icon_Subsystem_HeavyCannonTurrets
 vgr_pmortarfrigateleft = Icon_Subsystem_HeavyCannonTurrets
 vgr_pmortarfrigateright = Icon_Subsystem_HeavyCannonTurrets
-vgr_helios = Vgr_Destroyer
 vgr_weaponplatform_Plasma = Vgr_WeaponPlatform_gun
 vgr_railgun = Icon_Subsystem_IonTurret
 vgr_supercannon = Icon_Subsystem_HeavyCannonTurrets

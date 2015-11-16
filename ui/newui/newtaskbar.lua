@@ -51,7 +51,7 @@ NewTaskbar = {
 		size = { 800, 102},
 		BackgroundGraphic = {
 			texture = "DATA:UI\\NewUI\\Taskbar\\background.mres",
-			textureUV = { 0, 0, 0, 0 },  --was 102
+			textureUV = { 0, 0, 800, 102 },  --was 102
 		},
 		giveParentMouseInput = 1,
 	},
@@ -1515,7 +1515,7 @@ NewTaskbar = {
 					autosize = 1,
 					Text = {
 						textStyle = "Taskbar_MenuButtonTextStyle",
-						color = { 238, 188, 5, 255},
+						color = { 255, 255, 255, 255},
 						hAlign = "Left",
 						vAlign = "Top",
 					},
@@ -1547,7 +1547,7 @@ NewTaskbar = {
 					autosize = 1,
 					Text = {
 						textStyle = "Taskbar_MenuButtonTextStyle",
-						color = { 238, 188, 5, 255},
+						color = { 255, 255, 255, 255},
 						hAlign = "Left",
 						vAlign = "Top",
 					},
@@ -1590,7 +1590,7 @@ NewTaskbar = {
 					size = {49, 13},
 					Text = {
 						textStyle = "Taskbar_MenuButtonTextStyle",
-						color = { 0, 198, 0, 255},
+						color = { 255, 255, 255, 255},
 						hAlign = "Left",
 						vAlign = "Center",
 					},
@@ -1623,7 +1623,7 @@ NewTaskbar = {
 					size = {49, 13},
 					Text = {
 						textStyle = "Taskbar_MenuButtonTextStyle",
-						color = { 222, 37, 19, 255},
+						color = { 255, 255, 255, 255},
 						hAlign = "Left",
 						vAlign = "Center",
 					},
@@ -1656,7 +1656,7 @@ NewTaskbar = {
 					size = {49, 13},
 					Text = {
 						textStyle = "Taskbar_MenuButtonTextStyle",
-						color = { 0, 128, 255, 255},
+						color = { 255, 255, 255, 255},
 						hAlign = "Left",
 						vAlign = "Center",
 					},

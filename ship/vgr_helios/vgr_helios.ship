@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "Combat Cruiser"
 NewShipType.sobDescription = "Helios Class\nCombat Cruiser"
-NewShipType.maxhealth = 550000
+NewShipType.maxhealth = 700000
 NewShipType.regentime = 1500
 NewShipType.minRegenTime = 450
 NewShipType.sideArmourDamage = 0.45

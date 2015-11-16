@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Assault Carrier"
 NewShipType.sobDescription = "White Cloud Class\nHeavy Assault Carrier"
-NewShipType.maxhealth = 400000
+NewShipType.maxhealth = 500000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 300
 NewShipType.sideArmourDamage = 0.95

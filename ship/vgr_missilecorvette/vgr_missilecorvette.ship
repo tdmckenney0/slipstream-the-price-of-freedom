@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Missile Corvette"
 NewShipType.sobDescription = "Heimdall Class\nRocket Launching Corvette"
-NewShipType.maxhealth = 900
+NewShipType.maxhealth = 2000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1

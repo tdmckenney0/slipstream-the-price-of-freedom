@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Battleship"
 NewShipType.sobDescription = "Valencia Class\nSuper-Heavy Battlecruiser"
-NewShipType.maxhealth = 1250000
+NewShipType.maxhealth = 1500000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 2000
 NewShipType.sideArmourDamage = 0.9
@@ -34,10 +34,10 @@ NewShipType.mainEngineBrakeTime = 2
 NewShipType.rotationAccelTime = 0.7
 NewShipType.rotationBrakeTime = 0.4
 NewShipType.thrusterUsage = 1
-NewShipType.accelerationAngle = 30
-NewShipType.mirrorAngle = 0
-NewShipType.secondaryTurnAngle = 0
-NewShipType.maxBankingAmount = 10
+NewShipType.accelerationAngle = 40
+NewShipType.mirrorAngle = 30
+NewShipType.secondaryTurnAngle = 90
+NewShipType.maxBankingAmount = 75
 NewShipType.descendPitch = 10
 NewShipType.goalReachEpsilon = 25
 NewShipType.slideMoveRange = 350
@@ -67,6 +67,8 @@ NewShipType.targetRandomPointZMin = -0.8
 NewShipType.targetRandomPointZMax = 0.8
 NewShipType.dustCloudDamageTime = 280
 NewShipType.nebulaDamageTime = 800
+NewShipType.mirrorAboveManeuver = "ImmelMann"
+NewShipType.mirrorBelowManeuver = "Split_S"
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "Battlecruiser_Hgn"
 NewShipType.AttackFamily = "BigCapitalShip"
@@ -152,7 +154,7 @@ addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType, "HyperSpaceCommand", 1, 0, 0, 0, 0, 0)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "Flyround", 
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "flyby_destroyer", 
 { 
     SubSystem = "movetotargetandshootVsSubSystem", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)

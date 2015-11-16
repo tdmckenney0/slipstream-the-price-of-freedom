@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Battlecruiser"
 NewShipType.sobDescription = "Judgement Class\nBattleship"
-NewShipType.maxhealth = 500000
+NewShipType.maxhealth = 800000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 750
 NewShipType.sideArmourDamage = 0.6

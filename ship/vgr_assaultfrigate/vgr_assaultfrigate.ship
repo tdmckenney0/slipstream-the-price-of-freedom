@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Assault Frigate"
 NewShipType.sobDescription = "Taiga Class\nAssualt Frigate"
-NewShipType.maxhealth = 32000
+NewShipType.maxhealth = 50000
 NewShipType.regentime = 1200
 NewShipType.minRegenTime = 450
 NewShipType["sideArmourDamage"]=0.45;

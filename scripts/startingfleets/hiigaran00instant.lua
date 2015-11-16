@@ -7,7 +7,7 @@ PersistantData = {
          subsystems = {
 		 {
           index = 0,
-          name = "Hgn_SC_ProductionTrunk",
+          name = "Hgn_MS_Module_Research",
         },
         {
           index = 0,
@@ -27,7 +27,7 @@ PersistantData = {
         },
         {
           index = 0,
-          name = "Hgn_SC_AdvResearch",
+          name = "Hgn_MS_Module_ResearchAdvanced",
         },
         {
           index = 0,

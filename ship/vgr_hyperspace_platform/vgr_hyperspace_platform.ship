@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Hypergate"
 NewShipType.sobDescription = "Slipstream Gateway\nArtificial Slipgate"
-NewShipType.maxhealth = 16000
+NewShipType.maxhealth = 25000
 NewShipType.regentime = 1200
 NewShipType.minRegenTime = 450
 NewShipType.sideArmourDamage = 1

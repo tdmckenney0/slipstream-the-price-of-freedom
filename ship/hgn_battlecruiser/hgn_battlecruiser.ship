@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Battlecruiser"
 NewShipType.sobDescription = "Trafalgar Class\nBattlecruiser"
-NewShipType.maxhealth = 500000
+NewShipType.maxhealth = 800000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 2000
 NewShipType.sideArmourDamage = 0.9

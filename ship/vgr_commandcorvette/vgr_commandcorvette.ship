@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Commander"
 NewShipType.sobDescription = "Caspian Class\nCommand Corvette"
-NewShipType.maxhealth = 7000
+NewShipType.maxhealth = 5000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1

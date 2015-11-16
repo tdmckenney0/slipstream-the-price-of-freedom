@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Dreadnaught"
 NewShipType.sobDescription = "Leviathan Class\nRanged Cruiser"
-NewShipType.maxhealth = 750000 
+NewShipType.maxhealth = 800000 
 NewShipType.regentime = 1000
 NewShipType.minRegenTime = 333
 NewShipType.sideArmourDamage = 0.5

@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Pulsar Corvette"
 NewShipType.sobDescription = "Python Class\nPulsar Corvette"
-NewShipType.maxhealth = 1250
+NewShipType.maxhealth = 2250
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 0.95

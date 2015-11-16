@@ -2,7 +2,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "Heavy Cruiser"
 NewShipType.sobDescription = "Vanaar-Jet Class\nHeavy Cruiser"
-NewShipType.maxhealth=450000
+NewShipType.maxhealth=850000
 NewShipType.regentime=9000
 NewShipType.minRegenTime=1450
 NewShipType.sideArmourDamage = 0.6

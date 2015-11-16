@@ -165,26 +165,22 @@ StartShipWeaponConfig(NewShipType,"Hgn_MSHullDefenseGun","Weapon_HullDefense1","
 StartShipWeaponConfig(NewShipType,"Hgn_MSHullDefenseGun","Weapon_HullDefense2","Weapon_HullDefense2");
 StartShipWeaponConfig(NewShipType,"Hgn_MSHullDefenseGun","Weapon_HullDefense3","Weapon_HullDefense3");
 StartShipWeaponConfig(NewShipType,"Hgn_MSHullDefenseGun","Weapon_HullDefense4","Weapon_HullDefense4");
-
-
---Superweapon
-StartShipHardPointConfig(NewShipType,"HulkSmash!","Weapon_SmasherTube","Weapon","Generic","Destroyable","","Hgn_SC_Smashercalibration","","","","","","","");
-
-
+--end wepn
 addShield(NewShipType,"EMP",10000,20);
 --Start Module Layout
-StartShipHardPointConfig(NewShipType,"Production 0","Hardpoint_SCBase","System","Production","Damageable","","Hgn_SC_ProductionTrunk","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Production 1","HardpointProduction1","System","Production","Destroyable","","Hgn_MS_Production_Corvette","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Production 2","HardpointProduction2","System","Production","Destroyable","","Hgn_MS_Production_Frigate","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Production 3","HardpointProduction3","System","Production","Destroyable","","hgn_sc_productioncapital","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Production 4","HardpointProduction4","System","Production","Destroyable","","Hgn_MS_Production_Fighter","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Production Upgrade","Hardpoint_SCBase_Adv","System","Production","Destroyable","","Hgn_SC_AdvResearch","","","","","","","");
 --End Production
-StartShipHardPointConfig(NewShipType,"Generic 1","HardpointGeneric1","Weapon","Generic","Destroyable","","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_C_Module_build","Hgn_C_Module_BuildSpeed");
-StartShipHardPointConfig(NewShipType,"Generic 2","HardpointGeneric2","Weapon","Generic","Destroyable","","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_C_Module_build","Hgn_C_Module_BuildSpeed");
-StartShipHardPointConfig(NewShipType,"Generic 3","Hardpoint_Subsystem3","Weapon","Generic","Destroyable","","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_C_Module_build","Hgn_C_Module_BuildSpeed");
-StartShipHardPointConfig(NewShipType,"Generic 4","Hardpoint_Subsystem4","Weapon","Generic","Destroyable","","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_C_Module_FusionCell","Hgn_C_Module_build","Hgn_C_Module_BuildSpeed");
+StartShipHardPointConfig(NewShipType,"Generic 1","HardpointGeneric1","Weapon","Generic","Destroyable","","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_MS_Module_Research","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
+StartShipHardPointConfig(NewShipType,"Generic 2","HardpointGeneric2","Weapon","Generic","Destroyable","","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_MS_Module_Research","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
+StartShipHardPointConfig(NewShipType,"Generic 3","Hardpoint_Subsystem3","Weapon","Generic","Destroyable","","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_MS_Module_Research","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
+StartShipHardPointConfig(NewShipType,"Generic 4","Hardpoint_Subsystem4","Weapon","Generic","Destroyable","","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_MS_Module_Research","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
 StartShipHardPointConfig(NewShipType,"Sensors 1","HardpointSensors1","System","Sensors","Destroyable","","Hgn_sc_Sensors_DetectHyperspace","Hgn_sc_Sensors_AdvancedArray","Hgn_sc_Sensors_DetectCloaked","","","","","");
+--Superweapon
+StartShipHardPointConfig(NewShipType,"HulkSmash!","Weapon_SmasherTube","Weapon","Generic","Destroyable","","Hgn_SC_Smashercalibration","","","","","","","");
+--
 StartShipHardPointConfig(NewShipType,"Flak1","Hardpoint_FlakCannon","System","Innate","Damageable","hgn_railgun","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Torp1","Hardpoint_TorpCannon","System","Innate","Damageable","hgn_ioncannonx2","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"MG1","Weapon_MiniGun","Weapon","Innate","Damageable","hgn_missileturret","","","","","","","","");

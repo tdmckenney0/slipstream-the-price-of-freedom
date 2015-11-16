@@ -25,7 +25,7 @@ LoadingScreen =
     {
         size =
             { 800, 600, },
-        texture = "DATA:UI/NewUI/Background/menu1600.dds",
+        texture = "DATA:UI/NewUI/Background/menu1600.tga",
         textureUV =
             { 0, 0, 1600, 1200, }, },
 ;

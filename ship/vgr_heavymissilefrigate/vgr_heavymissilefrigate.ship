@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DOL Missile Frigate"
 NewShipType.sobDescription = "Irkutsk Class\nMissile Frigate"
-NewShipType.maxhealth = 32000
+NewShipType.maxhealth = 50000
 NewShipType.regentime = 1200
 NewShipType.minRegenTime = 450
 NewShipType["sideArmourDamage"]=0.5;

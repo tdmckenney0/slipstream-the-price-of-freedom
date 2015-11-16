@@ -1,5 +1,5 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "Externel Weapon Mount"
+NewSubSystemType.displayedName = "Modular Flak Cannon"
 NewSubSystemType.sobDescription = "2x Flak Cannon"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035

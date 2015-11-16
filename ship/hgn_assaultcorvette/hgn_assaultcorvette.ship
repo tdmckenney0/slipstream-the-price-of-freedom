@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Standard Corvette"
 NewShipType.sobDescription = "Bum-Rush Class\nStandard Corvette"
-NewShipType.maxhealth = 1000
+NewShipType.maxhealth = 2000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 0.95

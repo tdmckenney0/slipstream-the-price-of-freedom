@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Railgun Corvette"
 NewShipType.sobDescription = "Sniper Class\nRailgun Corvette"
-NewShipType.maxhealth = 1250
+NewShipType.maxhealth = 2250
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
