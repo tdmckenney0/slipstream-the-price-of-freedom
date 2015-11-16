@@ -971,12 +971,6 @@ function DetermChunk()
 		1,
 		1,
 		1}, 51.484, 2912.968);
-	addNebula("polySurface1", "MP_Bentusi_Radiation", {-126882,
-		2363,
-		466}, {1,
-		1,
-		1,
-		1}, 111.141, 5738.611);
 	setWorldBoundsInner({-4.4,
 		0,
 		0}, {59455.26,
@@ -987,9 +981,6 @@ end
 
 
 function NonDetermChunk()
-	addPebble("Pebble_0", {35492,
-		380,
-		-728}, 0, 0, 0);
 	addPebble("Pebble_0", {-22532,
 		-602,
 		287}, 0, 0, 0);
@@ -2820,7 +2811,6 @@ function NonDetermChunk()
 	addPebble("Pebble_1", {-40659,
 		-190,
 		21909}, 0, 0, 0);
---	addSquadron("Meg_Slipgate", "Meg_Slipgate", {0, 0, 0}, -1, {0, 0, 0}, 0, 0);
 	fogSetActive(1);
 	fogSetStart(800);
 	fogSetEnd(18000);

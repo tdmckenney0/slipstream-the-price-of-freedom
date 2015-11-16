@@ -1,7 +1,7 @@
 Ship = 0
 SubSystem = 1
 
-build = 
+build =
 {
 	{
 		Type = SubSystem,
@@ -180,8 +180,8 @@ build =
 		RequiredResearch = "",
 		RequiredFleetSubSystems = "Research",
 		DisplayPriority = 30,
-		DisplayedName = "Long Range Sniper Cannons",
-		Description = "<b>Description:</b>\n\nThese Long Range Sniper Cannons will make Fighter Squadrons think twice about attacking.\n\n<b>Type: Module (Takes 1 Module Slot)</b>\n\n<b>Perquisites:</b>\nResearch Module",
+		DisplayedName = "ICBM Launcher",
+		Description = "<b>Description:</b>\n\nDevastating weapon system that can be launched at targets across vast distances and cause massive damage. The original version of this warhead was used to glass planets.\n\n<b>Type: Module (Takes 1 Module Slot)</b>\n\n<b>Perquisites:</b>\nResearch Module",
 	},
 	{
 		Type = SubSystem,

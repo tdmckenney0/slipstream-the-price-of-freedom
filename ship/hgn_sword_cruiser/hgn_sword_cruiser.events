@@ -268,7 +268,7 @@ effects =
             { "marker", "Root" },
             { "fx", "DMG_MASSIVE_MESH_SPHERE_RING" },
             { "sound", "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_PLASMA" },
-            { "fx_scale", "0.75" },
+            { "fx_scale", "1" },
             { "fx_sm", "on" },
         },
         event25 =

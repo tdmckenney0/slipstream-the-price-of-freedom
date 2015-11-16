@@ -35,8 +35,8 @@ NewShipType.rotationAccelTime = 10
 NewShipType.rotationBrakeTime = 10
 NewShipType.thrusterUsage = 1
 NewShipType.accelerationAngle = 30
-NewShipType.mirrorAngle = 0
-NewShipType.secondaryTurnAngle = 0
+NewShipType.mirrorAngle = 30
+NewShipType.secondaryTurnAngle = 45
 NewShipType.maxBankingAmount = 62
 NewShipType.descendPitch = 75
 NewShipType.goalReachEpsilon = 25
@@ -67,6 +67,8 @@ NewShipType.targetRandomPointZMin = -1
 NewShipType.targetRandomPointZMax = 0.95
 NewShipType.dustCloudDamageTime = 200
 NewShipType.nebulaDamageTime = 300
+NewShipType.mirrorAboveManeuver = "ImmelMann"
+NewShipType.mirrorBelowManeuver = "Split_S"
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "Battlecruiser_Hgn"
 NewShipType.AttackFamily = "BigCapitalShip"
@@ -151,7 +153,7 @@ addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,0)
 addAbility(NewShipType, "CanBuildShips",1,"Fighter_Hgn, Corvette_Hgn, Platform_Hgn, Frigate_hgn, SubSystem_Hgn,  Probe_Hgn","Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors")
 addAbility(NewShipType, "CanBeCaptured",160,0.5)
 addAbility(NewShipType, "CanBeRepaired")
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Munition, SmallCapitalShip, BigCapitalShip, Fighter, Frigate, Corvette, Capturer, Utility, Mothership", "flyby_destroyer",{ SmallCapitalShip = "movetotargetandshoot", },{ Munition = "JustShoot", },{ Fighter = "MoveToTargetAndShoot", },{ Corvette = "MoveToTargetAndShoot", },{ SubSystem = "BroadSideVsSubSystem", })
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Munition, SmallCapitalShip, BigCapitalShip, Fighter, Frigate, Corvette, Capturer, Utility, Mothership", "movetotargetandshoot", { Munition = "JustShoot", },{ SubSystem = "BroadSideVsSubSystem", })
 LoadModel(NewShipType, 1)
 addShield(NewShipType,"EMP",4500,25)
 

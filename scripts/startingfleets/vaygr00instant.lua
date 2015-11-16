@@ -29,6 +29,10 @@ PersistantData = {
           index = 0,
           name = "Vgr_MS_Module_PlatformControl",
         },
+		{
+          index = 0,
+          name = "vgr_ms_module_hyperspaceinhibitor",
+        },
         {
           index = 0,
           name = "Vgr_MS_Sensors_AdvancedArray",

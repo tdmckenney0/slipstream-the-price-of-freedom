@@ -6,7 +6,7 @@
 --===========================================================================
 NewShipType = StartMissileConfig()
 NewShipType.displayedName="BIG HUGE BOMB"
-NewShipType.sobDescription="THIS ONE IS FOR TEL AND ALL OF PDS\nFROM SRI WITH LOVE FUCKERS"
+NewShipType.sobDescription="Here comes the boom"
 NewShipType.TOIcon="Diamond"
 NewShipType.TOScale=1
 NewShipType.TODistanceFade0=50
@@ -49,8 +49,8 @@ NewShipType.subMunitionName="none"
 NewShipType.clusterAngle=75
 NewShipType.sobDieTime=0.5
 NewShipType.density=1
-NewShipType.thrusterMaxSpeed=1500
-NewShipType.mainEngineMaxSpeed=1500
+NewShipType.thrusterMaxSpeed=3000
+NewShipType.mainEngineMaxSpeed=3000
 NewShipType.rotationMaxSpeed=60
 NewShipType.thrusterAccelTime=5
 NewShipType.thrusterBrakeTime=0

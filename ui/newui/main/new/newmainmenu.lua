@@ -20,23 +20,9 @@ NewMainMenu =
     {
         size =
             { 800, 600, },
-        texture = "Data:UI\\NewUI\\Background\\menu1600.tga",
+        texture = "Data:UI\\NewUI\\Background\\main1600.tga",
         textureUV =
             { 0, 0, 1600, 1200, }, },
-},
-{
-    type = "Frame",
-    backgroundColor = "",
-    position =
-        { 20, 195, }, --20, 190
-	size =
-        { 278, 241, },
-	BackgroundGraphic = {
-			size =
-            { 278, 241, },
-			texture = "DATA:UI\\NewUI\\background\\menuobject1600.tga",
-			textureUV = { 0, 0, 558, 481 },
-		},
 },
 {
     type = "Frame",
@@ -53,7 +39,7 @@ NewMainMenu =
 {
     type = "Frame",
     size =
-        { 304, 2, }, --2
+        { 304, 2, },
 },
 {
     type = "TextLabel",
@@ -169,7 +155,7 @@ NewMainMenu =
 {
     type = "Frame",
     size =
-        { 296, 13, },
+        { 296, 15, },
 },
 {
     type = "TextButton",
@@ -182,7 +168,7 @@ NewMainMenu =
 {
     type = "Frame",
     size =
-        { 296, 13, },
+        { 296, 15, },
 },
 {
     type = "TextButton",
@@ -225,10 +211,27 @@ NewMainMenu =
     Text =
     {
         font = "Buttonfont",
-        text = "Build Version 2.2.1354 - November 30, 2008",
+        text = "Build Version 2.3.0000 - January 11, 2009",
         color =
             { 255, 255, 255, 255, },
         hAlign = "Right",
         vAlign = "Top", },
 },
+{
+    type = "TextLabel",
+    name = "title",
+    size =
+        { 235, 13, },
+    position =
+        { 23, 196, },
+    Text =
+    {
+        text = "Slipstream: The Price of Freedom",
+        textStyle = "FEHeading3",
+        hAlign = "Left",
+        vAlign = "Top",
+        color =
+            { 255, 255, 255, 0, },
+        offset =
+            { 0, 0, }, }, },
 }

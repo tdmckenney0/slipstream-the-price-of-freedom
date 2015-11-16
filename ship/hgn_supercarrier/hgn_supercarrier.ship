@@ -12,32 +12,32 @@ NewShipType.regentime=180
 NewShipType.minRegenTime=60
 NewShipType.sideArmourDamage=1.2
 NewShipType.rearArmourDamage=1.2
-NewShipType.isTransferable=1
-NewShipType.useEngagementRanges=1
-NewShipType.unitCapsNumber=0
+NewShipType.isTransferable=0
+NewShipType.useEngagementRanges=0
+NewShipType.unitCapsNumber=1
 NewShipType.addedUnitCaps=101
 NewShipType.paradeData="hgn_mothership_parade"
 NewShipType.SquadronSize=1
 NewShipType.passiveFormation="Spear"
 NewShipType.defensiveFormation="x"
 NewShipType.aggressiveFormation="Claw"
-NewShipType.mass=1000
+NewShipType.mass=2000
 NewShipType.collisionMultiplier=1
 NewShipType.thrusterMaxSpeed=85
 NewShipType.mainEngineMaxSpeed=85
 NewShipType.rotationMaxSpeed=4
-NewShipType.thrusterAccelTime = 5
+NewShipType.thrusterAccelTime = 8
 NewShipType.thrusterBrakeTime = 2
-NewShipType.mainEngineAccelTime = 5
+NewShipType.mainEngineAccelTime = 8
 NewShipType.mainEngineBrakeTime = 2
-NewShipType.rotationAccelTime = 0.7
-NewShipType.rotationBrakeTime = 0.3
+NewShipType.rotationAccelTime = 1
+NewShipType.rotationBrakeTime = 0.4
 NewShipType.thrusterUsage = 1
 NewShipType.accelerationAngle = 30
 NewShipType.mirrorAngle = 0
 NewShipType.secondaryTurnAngle = 0
-NewShipType.maxBankingAmount = 10
-NewShipType.descendPitch = 10
+NewShipType.maxBankingAmount = 2
+NewShipType.descendPitch = 20
 NewShipType.goalReachEpsilon = 25
 NewShipType.slideMoveRange = 350
 NewShipType.controllerType="Ship"
@@ -67,27 +67,26 @@ NewShipType.targetRandomPointZMax=0.55
 NewShipType.dustCloudDamageTime=200
 NewShipType.nebulaDamageTime=300
 NewShipType.MinimalFamilyToFindPathAround="MotherShip"
-NewShipType.BuildFamily="SuperCap_Hgn"
-NewShipType.AttackFamily="BigCapitalShip"
-NewShipType.DockFamily="SuperCap"
-NewShipType.AvoidanceFamily="SuperCap"
+NewShipType.BuildFamily="Flagship_Hgn"
+NewShipType.AttackFamily="Mothership"
+NewShipType.DockFamily="Flagship"
+NewShipType.AvoidanceFamily="Mothership"
 NewShipType.DisplayFamily="Capital"
-NewShipType.AutoFormationFamily="CapShip"
+NewShipType.AutoFormationFamily="Supercap"
 NewShipType.CollisionFamily="Big"
 NewShipType.ArmourFamily="HeavyArmour"
-NewShipType.UnitCapsFamily="Capital"
-NewShipType.UnitCapsShipType="Carrier"
+NewShipType.UnitCapsFamily="Mothership"
 NewShipType.fighterValue=0
 NewShipType.corvetteValue=0
-NewShipType.frigateValue=10
-NewShipType.neutralValue=5
-NewShipType.antiFighterValue=5
+NewShipType.frigateValue=30
+NewShipType.neutralValue=10
+NewShipType.antiFighterValue=0
 NewShipType.antiCorvetteValue=0
 NewShipType.antiFrigateValue=0
-NewShipType.totalValue=15
-NewShipType.buildCost=2800
+NewShipType.totalValue=10
+NewShipType.buildCost=15000
 NewShipType.buildTime=65
-NewShipType.buildPriorityOrder=30
+NewShipType.buildPriorityOrder=10
 NewShipType.retaliationRange=4800
 NewShipType.retaliationDistanceFromGoal=160
 NewShipType.visualRange = 10000
@@ -145,9 +144,8 @@ addAbility(NewShipType,"ShipHold",1,160,10,"rallypoint","Fighter,Corvette,Utilit
 addAbility(NewShipType,"ParadeCommand",1);
 addAbility(NewShipType,"WaypointMove");
 addAbility(NewShipType,"SensorPing",0,1,10,2.5);
-addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,0);
-addAbility(NewShipType,"CanAttack",1,1,0,0,0.35,1,"Fighter, Corvette, Frigate,  SmallCapitalShip, BigCapitalShip, Utility","Justshoot", {Fighter="movetotargetandshoot"}, {Corvette="Movetotargetandshoot"}, {Frigate="Justshoot"});
-addAbility(NewShipType,"GuardCommand",1,3000,1000);
+addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,0);
+addAbility(NewShipType,"CanAttack", 1, 1, 0, 0, 0.35, 1, "Fighter, Corvette, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Utility, Mothership", "JustShoot");
 addAbility(NewShipType,"CanBuildShips",1,"Fighter_Hgn, Corvette_Hgn, Frigate_Hgn, Utility_Hgn, Platform_Hgn, SubSystem_Hgn,Battlecruiser_Hgn, SuperCap_Hgn, Probe_Hgn, SubSystemLarge_Hgn","Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors, Capital");
 addAbility(NewShipType,"CanBeCaptured",160,0.5);
 addAbility(NewShipType,"CanBeRepaired");
@@ -178,9 +176,13 @@ StartShipHardPointConfig(NewShipType,"Generic 2","HardpointGeneric2","Weapon","G
 StartShipHardPointConfig(NewShipType,"Generic 3","Hardpoint_Subsystem3","Weapon","Generic","Destroyable","","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_MS_Module_Research","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
 StartShipHardPointConfig(NewShipType,"Generic 4","Hardpoint_Subsystem4","Weapon","Generic","Destroyable","","Hgn_MS_Module_Hyperspace","Hgn_MS_Module_PlatformControl","Hgn_MS_Module_CloakGenerator","Hgn_MS_Module_HyperspaceInhibitor","Hgn_MS_Module_Research","Hgn_MS_Module_ResearchAdvanced","Hgn_C_Module_BuildSpeed");
 StartShipHardPointConfig(NewShipType,"Sensors 1","HardpointSensors1","System","Sensors","Destroyable","","Hgn_sc_Sensors_DetectHyperspace","Hgn_sc_Sensors_AdvancedArray","Hgn_sc_Sensors_DetectCloaked","","","","","");
+
+
 --Superweapon
-StartShipHardPointConfig(NewShipType,"HulkSmash!","Weapon_SmasherTube","Weapon","Generic","Destroyable","","Hgn_SC_Smashercalibration","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Herecomesdaboom!","Hardpoint_ICBM","Weapon","Generic","Destroyable","","hgn_sc_icbmbay","","","","","","","");
 --
+
+
 StartShipHardPointConfig(NewShipType,"Flak1","Hardpoint_FlakCannon","System","Innate","Damageable","hgn_railgun","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Torp1","Hardpoint_TorpCannon","System","Innate","Damageable","hgn_ioncannonx2","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"MG1","Weapon_MiniGun","Weapon","Innate","Damageable","hgn_missileturret","","","","","","","","");

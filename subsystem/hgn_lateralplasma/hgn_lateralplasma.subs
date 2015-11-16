@@ -41,5 +41,4 @@ NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
 StartSubSystemWeaponConfig(NewSubSystemType,"hgn_lateralplasma","Weapon_SCT","null");
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_lateralioncannon","Weapon_SCT","null");
---hgn_lateralioncannon
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_bigtorpedo","Weapon_SCT","null");

@@ -33,6 +33,10 @@ PersistantData = {
           index = 0,
           name = "Hgn_sc_Sensors_AdvancedArray",
         },
+		{
+          index = 0,
+          name = "hgn_ms_module_hyperspaceinhibitor",
+        },
         {
           index = 0,
           name = "Hgn_MS_Module_PlatformControl",
@@ -115,7 +119,7 @@ PersistantData = {
          number = 5,
 		},
 	  {
-         type = "hgn_sword_cruiser",
+         type = "hgn_crossbow_cruiser",
          subsystems = {
          },
          shiphold = {

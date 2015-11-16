@@ -77,12 +77,12 @@ function DetermChunk()
     addPoint("StartPos5", {0, 0, -28000}, {0, 0, 0})
 
 addSquadron("Meg_SajHulkPanels2", "Meg_SajHulkPanels", {14346, 3467, 26005}, -1, {-8.864000000000001, 20.864, -69.471}, 0, 0)
-  addSquadron("Meg_SajHulkPanels", "Meg_SajHulkPanels", {15830, 4870, 30005}, -1, {76.592, 2.683, 49.123}, 0, 0)  
+  addSquadron("Meg_SajHulkPanels", "Meg_SajHulkPanels", {15830, 4870, 30005}, -1, {76.592, 2.683, 49.123}, 0, 0)
 addSquadron("Meg_SajHulkTurret", "Meg_SajHulkTurret", {20000, 16273, 7099}, -1, {-58.112, 0, -17.069}, 0, 0)
   addSquadron("Meg_SajHulkTurret1", "Meg_SajHulkTurret", {18349, 18746, 10731}, -1, {-8.590999999999999, 55.229, -80.346}, 0, 0)
   addSquadron("Meg_SajHulkPanels4", "Meg_SajHulkPanels", {16083, 13309, 1529}, -1, {1.648, -40.132, -29.45}, 0, 0)
   addSquadron("Meg_SajHulkPanels5", "Meg_SajHulkPanels", {17367, 16659, 7050}, -1, {120.108, -38.66, -149.942}, 0, 0)
-  addSquadron("meg_sajhulknose", "meg_sajhulknose", {17000, 17346, 9470}, -1, {-6, -50, 150}, 0, 0)   
+  addSquadron("meg_sajhulknose", "meg_sajhulknose", {17000, 17346, 9470}, -1, {-6, -50, 150}, 0, 0)
 
  addSquadron("Meg_SajHulkPanels4", "Meg_SajHulkPanels", {27568, -3309, -11529}, -1, {1.648, -40.132, -29.45}, 0, 0)
   addSquadron("Meg_SajHulkPanels5", "Meg_SajHulkPanels", {27568, 1309, -12546}, -1, {120.108, -38.66, -149.942}, 0, 0)
@@ -98,7 +98,7 @@ addSquadron("Meg_SajHulkTurret", "Meg_SajHulkTurret", {16000, 16273, 25099}, -1,
 
 
 
- 
+
 
 
 
@@ -206,7 +206,7 @@ end
 function NonDetermChunk()
 
 
-addPebble("Pebble_1", {10000, -5809, -10876,}, 0, 0, 0) 
+addPebble("Pebble_1", {10000, -5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_1", {-10000, -19809, 1876,}, 0, 0, 0)
   addPebble("Pebble_1", {21000, 21809, 21876,}, 0, 0, 0)
   addPebble("Pebble_1", {10894, -21809, 50639,}, 0, 0, 0)
@@ -217,7 +217,7 @@ addPebble("Pebble_1", {10000, -5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_1", { 14967, -36709, 19806,}, 0, 0, 0)
   addPebble("Pebble_1", { -43907, 26709, 15806,}, 0, 0, 0)
 
-addPebble("Pebble_1", {10000, 5809, -10876,}, 0, 0, 0) 
+addPebble("Pebble_1", {10000, 5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_1", {-9553, 14809, 7876,}, 0, 0, 0)
   addPebble("Pebble_1", {21000, 8569, 21876,}, 0, 0, 0)
   addPebble("Pebble_1", {-29894, 49021, 50639,}, 0, 0, 0)
@@ -227,6 +227,10 @@ addPebble("Pebble_1", {10000, 5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_1", {39365, 41000, 24955,}, 0, 0, 0)
   addPebble("Pebble_1", { -13657, 36709, -37806,}, 0, 0, 0)
   addPebble("Pebble_1", { 47043, 26709, 28806,}, 0, 0, 0)
+
+  --Background mesh
+addSquadron("bg_icycompanions", "bg_icycompanions", {0, 0, 0}, -1, {180, 0, 0}, 0, 0);
+--end backgroundmesh
 
 
 

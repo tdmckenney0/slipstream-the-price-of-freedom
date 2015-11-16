@@ -62,8 +62,12 @@ function DetermChunk()
   addPoint("StartPos3", {25000, 0, -19000}, {0, 0, 0})
   addPoint("StartPos4", {-25000, 0, -19000}, {0, 0, 0})
 
+--Background mesh
+addSquadron("bg_horizon", "bg_horizon", {0, 0, 0}, -1, {180, 0, 0}, 0, 0);
+--end backgroundmesh
+
 addAsteroid("Asteroid_4", {-6000, 1676, 19250}, 90, 8643, 623, 6632, 0)
-addAsteroid("Asteroid_3", {-5237, 2276, 19650}, 90, 6347, 573, 457, 0) 
+addAsteroid("Asteroid_3", {-5237, 2276, 19650}, 90, 6347, 573, 457, 0)
 addAsteroid("Asteroid_4", {-4873, 1594, 20000}, 90, 2367, 573, 4567, 0)
 addAsteroid("Asteroid_4", {-4594, 2394, 18346}, 90, 1237, 73, 2567, 0)
 addAsteroid("Asteroid_3", {-5346, 1190, 21948}, 90, 2347, 573, 867, 0)
@@ -71,19 +75,19 @@ addAsteroid("Asteroid_2", {-6586, 3094, 17690}, 90, 9347, 73, 4737, 0)
 addAsteroid("Asteroid_3", {-7548, 1634, 18900}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_3", {-8346, 2090, 18900}, 90, 7347, 73, 567, 0)
 addAsteroid("Asteroid_2", {-7164, 1994, 19690}, 90, 2465, 53, 457, 0)
-  
+
 addAsteroid("Asteroid_4", {6000, 1676, 19250}, 90, 8583, 623, 6732, 0)
-addAsteroid("Asteroid_3", {5237, 2276, 19650}, 90, 2347, 573, 4567, 0) 
+addAsteroid("Asteroid_3", {5237, 2276, 19650}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_4", {4873, 1594, 20000}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_3", {4594, 2394, 18346}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_3", {5346, 1190, 21948}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_2", {6586, 3094, 17690}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_3", {7548, 1634, 18900}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_3", {8346, 2090, 18900}, 90, 2347, 573, 4567, 0)
-addAsteroid("Asteroid_2", {7164, 1994, 19690}, 90, 2347, 573, 4567, 0) 
+addAsteroid("Asteroid_2", {7164, 1994, 19690}, 90, 2347, 573, 4567, 0)
 
 addAsteroid("Asteroid_4", {-6000, 1676, -22250}, 90, 8583, 623, 6732, 0)
-addAsteroid("Asteroid_3", {-5237, 2276, -20650}, 90, 2347, 573, 4567, 0) 
+addAsteroid("Asteroid_3", {-5237, 2276, -20650}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_4", {-4873, 1594, -18346}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_4", {-4594, 2394, -18346}, 90, 2347, 573, 4567, 0)
 addAsteroid("Asteroid_3", {-5346, 1190, -21948}, 90, 2347, 573, 4567, 0)
@@ -97,7 +101,7 @@ addAsteroid("Asteroid_2", {-7164, 1994, -19690}, 90, 2347, 573, 4567, 0)
  addPebble("Pebble_0", {-7333, 1654, -21464}, 0, 0, -9.383);
  addPebble("Pebble_0", {-8333, 2354, -22466}, 0, 0, -9.383);
  addPebble("Pebble_0", {-8946, 2354, -23466}, 0, 0, -9.383);
- 
+
 addPebble("Pebble_0", {-5733, -2654, -17964}, 0, 0, -9.383);
  addPebble("Pebble_0", {-6133, -1654, -18464}, 0, 0, -9.383);
  addPebble("Pebble_0", {-7333, 1654, -19464}, 0, 0, -9.383);
@@ -251,7 +255,7 @@ addPebble("Pebble_0", {-5733, -2654, -17964}, 0, 0, -9.383);
  434,
  20085}, 100, 0, 0, 0, 0);
  setWorldBoundsInner({0, 0, 0}, {45000, 45000, 45000});
- 
+
 end
 
 
@@ -1608,7 +1612,7 @@ function NonDetermChunk()
   fogSetDensity(0.01)
   setGlareIntensity(0.77)
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("m15")
+  loadBackground("system")
   setSensorsManagerCameraDistances(12000, 60000)
   setDefaultMusic("Data:sound/music/battle/battle_planetkiller")
 end

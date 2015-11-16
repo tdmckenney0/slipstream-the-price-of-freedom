@@ -17,6 +17,7 @@ squadclass = {}
 -- is mothership
 squadclass[eMotherShip] = {
 	HGN_MOTHERSHIP,
+	HGN_SUPERCARRIER,
 
 	VGR_MOTHERSHIP,
 	VGR_MOTHERSHIP_MAKAAN,

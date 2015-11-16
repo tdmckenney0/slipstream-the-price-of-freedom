@@ -221,12 +221,12 @@ build =
 	},
 	{
 		Type = SubSystem,
-		ThingToBuild = "Hgn_SC_Smashercalibration",
+		ThingToBuild = "hgn_sc_icbmbay",
 		RequiredResearch = "",
 		RequiredFleetSubSystems = "AdvancedResearch",
 		DisplayPriority = 60,
-		DisplayedName = "ICBM Launcher System",
-		Description = "<b>Description:</b>  Devastating weapon system that can be launched at targets across vast distances and cause massive damage. The original version of this warhead was used to glass planets.\n\n<b>Type:</b> Module (Takes 1 Module Slot). \n\n<b>Prerequisites:</b>Advanced Research Module.",
+		DisplayedName = "ICBM Launcher",
+		Description = "<b>Description:</b> Devastating weapon system that can be launched at targets across vast distances and cause massive damage. The original version of this warhead was used to glass planets.\n\n<b>Type:</b> Module (Takes 1 Module Slot). \n\n<b>Prerequisites:</b>Advanced Research Module.",
 	},
 	{
 		Type = SubSystem,

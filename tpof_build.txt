@@ -1,13 +1,13 @@
 Slipstream: The Price of Freedom
-Built on: 11:45 PM 11/30/2008
+Built on: 2:55 PM 1/13/2009
 Built By: Emperor_Khane
-Build System: Microsoft Windows Vista Ultimate x64 [Version 6.0.6000]
+Build System: Microsoft Windows Vista Ultimate x64 [Version 6.0.6001]
 	     AMD Athlon x2 @ 2.6 GHz, 4.00 GB RAM, Nvidia Geforce 8600 GT
-Build Folder: D:\Program Files (x86)\Sierra\Homeworld2\Data\TPOF\TPOF_COMPILE_PC\
+Build Folder: D:\Program Files (x86)\Sierra\Homeworld2\Data\TPOF\TPOF_COMPILE\
 Built For: 32-bit and 64-bit
-OS Support: Windows 2000/XP/VISTA/7, Mac OS X,Linux (WINE), UNIX (WINE)
+OS Support: Windows 2000/XP/VISTA/7, Mac OS X, *nix (WINE)
 Build Locale: United States, North America, English
-Build Version: 2.2.1354
+Build Version: 2.3.0000
 Hw2 Version: 1.1
 Copyright Sub-Real Industries 2008-2009.
 Homeworld 2 Engine Copyright THQ and Relic Entertainment 2003-2008
