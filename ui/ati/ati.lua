@@ -29,11 +29,11 @@
 --
 
 --basic colours
-FriendlyColour      = {0,1,0,1}
-AlliedColour        = {1,1,0,1.0}
+FriendlyColour      = {1,1,1,1}
+AlliedColour        = {0,1,1,1.0}
 AlliedColourHurt    = {215/255,205/255,0,1}
 AlliedColourDying   = {205/255,205/255,0,1}
-EnemyColour         = {1,0,0,1.0}
+EnemyColour         = {1,0.025,0,1.0}
 EnemyColourHurt     = {205/255,0,0,1}
 EnemyColourDying    = {165/255,0,0,1}
 FriendlyColourFar   = {0,1,0,0.5}
@@ -43,6 +43,7 @@ ResourceTOColour    = {1,1,0,1.0}
 Procedural          = {0,0,0,0}
 ResourceColour      = {1.0, 1.0, 0.0, 1.0}
 CaptureColour       = {0,1,1,1.0}
+HurtColour			= {1,1,0,1.0}
 
 --convert pixels to normalized screen coordinates, assuming a 1024x768 screen
 function AREA(width, height)
@@ -443,7 +444,7 @@ friendly =
     clampATIWidth = HEIGHT(900),
     clampATIHeight = HEIGHT(650),
     healthColourOK = FriendlyColour,
-    healthColourHurt = AlliedColour,
+    healthColourHurt = HurtColour,
     healthColourDying = EnemyColour,
     healthColourBGOK = {0.5, 0.5, 0.5, 1},
     healthColourBGHurt = {0.5, 0.5, 0.5, 1},
@@ -2749,7 +2750,7 @@ allied =
 subsystemFriendly =
 {
     healthColourOK = FriendlyColour,
-    healthColourHurt = AlliedColour,
+    healthColourHurt = HurtColour,
     healthColourDying = EnemyColour,
     healthColourBGOK = {0.5, 0.5, 0.5, 1},
     healthColourBGHurt = {0.5, 0.5, 0.5, 1},

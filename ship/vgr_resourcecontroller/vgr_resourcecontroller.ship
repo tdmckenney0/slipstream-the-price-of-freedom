@@ -156,11 +156,11 @@ LoadModel(NewShipType, 1)
 --StartShipWeaponConfig(NewShipType, "Hgn_MSHullDefenseGun", "Weapon_HullDefense7", "")
 addShield(NewShipType, "EMP", 220, 20)
 
-StartShipHardPointConfig(NewShipType, "Turret_Front", "Weapon_Turret_Bottom", "System", "Innate", "Damageable", "vgr_frigategatlingbottom", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Turret_Front", "Weapon_Turret_Bottom", "System", "Innate", "Damageable", "vgr_pmortarfrigatebottom", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Turret_Left", "Weapon_Turret_Left", "System", "Innate", "Damageable", "vgr_frigategatlingleft", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Turret_Left", "Weapon_Turret_Left", "System", "Innate", "Damageable", "vgr_pmortarfrigateleft", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Turret_Right", "Weapon_Turret_Right", "System", "Innate", "Damageable", "vgr_frigategatlingright", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Turret_Right", "Weapon_Turret_Right", "System", "Innate", "Damageable", "vgr_pmortarfrigateright", "", "", "", "", "", "", "", "")
 
 NewShipType.battleScarMaxTriBase = 75
 NewShipType.battleScarMaxTriInc = 100

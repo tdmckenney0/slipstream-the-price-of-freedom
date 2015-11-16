@@ -154,16 +154,7 @@ addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653);
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "dread_strafe",
-{
-    Fighter = "movetotargetandshoot",
-},
-{
-    Corvette = "movetotargetandshoot",
-},
-{
-    Frigate = "movetotargetandshoot",
-},
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "munition, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "dread_strafe",
 {
     Mothership = "Flyround_destroyer",})
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
@@ -180,11 +171,9 @@ StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD2", "Fire_
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD3", "Fire_Missile")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD4", "Fire_Missile")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD5", "Fire_Missile")
-StartShipWeaponConfig(NewShipType, "vgr_iondefense", "Weapon_BCHeavyLaser1", "")
-StartShipWeaponConfig(NewShipType, "vgr_iondefense", "Weapon_BCHeavyLaser2", "")
 StartShipWeaponConfig(NewShipType, "vgr_iondefense", "Weapon_BCHeavyLaser3", "")
 StartShipWeaponConfig(NewShipType, "vgr_iondefense", "Weapon_BCHeavyLaser4", "")
-StartShipWeaponConfig(NewShipType, "vgr_gimbledion", "Weapon_BCUberPulse", "Weapon_BCUberPulse")
+StartShipWeaponConfig(NewShipType, "vgr_bcsuperbeam", "Weapon_BCUberPulse", "")
 
 addShield(NewShipType, "EMP", 10000, 20)
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_BattleCruiserEngine", "", "", "", "", "", "", "", "")
@@ -198,12 +187,19 @@ StartShipHardPointConfig(NewShipType, "RailGun 1", "Hardpoint_Railgun1", "Weapon
 StartShipHardPointConfig(NewShipType, "RailGun 2", "Hardpoint_Railgun2", "Weapon", "Innate", "Damageable", "vgr_railgun", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Missile Pod 1", "Hardpoint_MPod1", "Weapon", "Innate", "Indestructible", "vgr_missilebay", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Missile Pod 2", "Hardpoint_MPod2", "Weapon", "Innate", "Indestructible", "vgr_missilebay", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Driver 1", "Weapon_IonCannon3", "Weapon", "Innate", "Indestructible", "vgr_gatlingx2", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Driver 2", "Weapon_IonCannon4", "Weapon", "Innate", "Indestructible", "vgr_gatlingx2", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType,"MissileT","Hardpoint_MpodT","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"MissileT2","Hardpoint_MpodT2","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
+StartShipHardPointConfig(NewShipType, "Driver 1", "Weapon_IonCannon3", "Weapon", "Innate", "Indestructible", "vgr_flakturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Driver 2", "Weapon_IonCannon4", "Weapon", "Innate", "Indestructible", "vgr_flakturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "MissileT","Hardpoint_MpodT","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
+StartShipHardPointConfig(NewShipType, "MissileT2","Hardpoint_MpodT2","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
+StartShipHardPointConfig(NewShipType, "MissileT3","Hardpoint_MpodT3","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
+StartShipHardPointConfig(NewShipType, "MissileT4","Hardpoint_MpodT4","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
+StartShipHardPointConfig(NewShipType, "MissileT5","Hardpoint_MpodT5","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
+StartShipHardPointConfig(NewShipType, "MissileT6","Hardpoint_MpodT6","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
 StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_FireControl", "vgr_bcfighter", "", "", "")
 StartShipHardPointConfig(NewShipType, "Generic 2", "HardpointGeneric2", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_FireControl", "vgr_bcfighter", "", "", "")
+
+StartShipHardPointConfig(NewShipType, "Boost1", "Hardpoint_Boost1", "Weapon", "Innate", "Damageable", "Hgn_booster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Boost2", "Hardpoint_Boost2", "Weapon", "Innate", "Damageable", "Hgn_booster", "", "", "", "", "", "", "", "")
 
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)

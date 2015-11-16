@@ -27,6 +27,11 @@ YesNoDialog =
     backgroundColor = "FEColorDialog",
 	outerBorderWidth = 1,
     borderColor = "FEColorHeading3",
+	BackgroundGraphic =
+		{
+        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        textureUV =
+            { 0, 0, 600, 600, }, },
     autosize = 1,
     marginHeight = 1,
     position =

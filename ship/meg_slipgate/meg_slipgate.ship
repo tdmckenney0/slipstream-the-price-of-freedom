@@ -1,14 +1,14 @@
 -- LuaDC version 0.9.20
--- 11/11/2008 7:34:31 PM
+-- 11/11/2008 7:34:25 PM
 -- LuaDC by Age2uN
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "$1841"
-NewShipType.sobDescription = "$1841"
-NewShipType.maxhealth = 400000000.0
-NewShipType.regentime = 0
-NewShipType.minRegenTime = 0
+NewShipType.displayedName = "$1810"
+NewShipType.sobDescription = "$1811"
+NewShipType.maxhealth = 200000000.0
+NewShipType.regentime = 100000
+NewShipType.minRegenTime = 75000
 NewShipType.sideArmourDamage = 1
 NewShipType.rearArmourDamage = 1
 NewShipType.isTransferable = 0
@@ -53,7 +53,7 @@ NewShipType.dustCloudDamageTime = 0
 NewShipType.nebulaDamageTime = 0
 NewShipType.MinimalFamilyToFindPathAround = "None"
 NewShipType.BuildFamily = "NotBuildable"
-NewShipType.AttackFamily = "UnAttackable"
+NewShipType.AttackFamily = "BigCapitalShip"
 NewShipType.DockFamily = "CantDock"
 NewShipType.AvoidanceFamily = "SuperPriority"
 NewShipType.DisplayFamily = "Megalith"
@@ -72,11 +72,11 @@ NewShipType.totalValue = 0
 NewShipType.buildCost = 1
 NewShipType.buildTime = 1
 NewShipType.buildPriorityOrder = 300
-NewShipType.retaliationRange = 4000
-NewShipType.retaliationDistanceFromGoal = 800
-NewShipType.visualRange = 6000
-NewShipType.prmSensorRange = 6000
-NewShipType.secSensorRange = 6000
+NewShipType.retaliationRange = 0
+NewShipType.retaliationDistanceFromGoal = 0
+NewShipType.visualRange = 0
+NewShipType.prmSensorRange = 0
+NewShipType.secSensorRange = 0
 NewShipType.detectionStrength = 1
 NewShipType.TOScale = 1
 NewShipType.TODistanceFade0 = 14439.382317879
@@ -87,7 +87,7 @@ NewShipType.TODistanceFade2 = 35108.024691358
 NewShipType.TODistanceDisappear2 = 385802.469135802
 NewShipType.TOGroupScale = 1
 NewShipType.TOGroupMergeSize = 0
-NewShipType.healthBarStyle = 3
+NewShipType.healthBarStyle = 2
 NewShipType.nlips = 0
 NewShipType.nlipsRange = 75000
 NewShipType.nlipsFar = 0
@@ -98,14 +98,19 @@ NewShipType.meshRenderLimit = 5000000
 NewShipType.dotRenderLimit = 10
 NewShipType.visibleInSecondary = 1
 NewShipType.minLOD = 1
-NewShipType.goblinsOff = 7000000000000000000000
-NewShipType.minimumZoomFactor = 0.95
-NewShipType.selectionLimit = 0
-NewShipType.preciseSelectionLimit = 1
+NewShipType.goblinsStartFade = 18000
+NewShipType.goblinsOff = 18000
+NewShipType.minimumZoomFactor = 0.25
+NewShipType.preciseSelectionLimit = 40000
 NewShipType.preciseATILimit = 7176.37507192516
 NewShipType.selectionPriority = 65
 NewShipType.militaryUnit = 0
 NewShipType.ignoreRaceWhenDocking = 1
+addAbility(NewShipType, "CanLaunch")
+NewShipType.launchTimeBetweenTwoFormations = 1
+NewShipType.launchTimeBeforeStart = 2
+NewShipType.launchNrOfShipsInDockFormation = 1
+NewShipType.launchFormation = "delta"
 LoadModel(NewShipType, 1)
 NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1
@@ -113,3 +118,4 @@ NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
 NewShipType.deadSobFadeTime = 1
 NewShipType.trailLinger = 3
+loadShipPatchList(NewShipType, "data:sound/sfx/ship/megaliths/", 1, "RandomEmit/KAROS_HULKS", "Root")

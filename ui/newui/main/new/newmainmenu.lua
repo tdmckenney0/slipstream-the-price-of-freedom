@@ -1,4 +1,5 @@
 --Copyright Tanner "Emperor" Mckenney
+dofilepath("data:engine/version.lua")
 NewMainMenu =
 {
     size =
@@ -9,20 +10,46 @@ NewMainMenu =
         backgroundColor =
             { 0, 0, 0, 0, }, },
     pixelUVCoords = 1,
+	onShow = [[
+
+			 ]],
+	onUpdate = [[
+
+
+			   ]],
 ;
 {
     type = "Frame",
+	name = "menubox_shadow",
+	backgroundColor =
+            { 0, 0, 0, 0, },
+	size =
+        { 276, 213, },
+    position =
+        { 267, 192, }, --270 195
+},
+{
+    type = "Frame",
+	name = "menubox",
     autosize = 1,
     outerBorderWidth = 1,
     borderColor = "FEColorHeading3",
     backgroundColor = "FEColorBackground1",
+	BackgroundGraphic =
+    {
+		color =
+            { 255, 255, 255, 255, },
+        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        textureUV =
+            { 0, 0, 600, 600, },
+	},
     position =
-        { 262.5, 187, },
+        { 262, 187, }, --262, 187
     autoarrange = 1,
     autoarrangeWidth = 304,
     autoarrangeSpace = 0,
     maxSize =
-        { 275, 400, },
+        { 276, 400, },
 ;
 {
     type = "Frame",
@@ -64,7 +91,7 @@ NewMainMenu =
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
     text = "Slipstream Universe Map",
-    name = "btnTutorial",
+    name = "btnUniverse",
 	enabled = 1,
     width = 272,
     onMouseClicked = "UI_ShowScreen('UniverseScreen', eTransition);",
@@ -74,19 +101,20 @@ NewMainMenu =
     size =
         { 296, 15, },
 },
-{
-    type = "TextButton",
-    buttonStyle = "FEButtonStyle1",
-    text = "The Price of Freedom Campaign",
-    name = "btnCampaign",
-    enabled = 1,
-    width = 272,
-},
-{
-    type = "Frame",
-    size =
-        { 296, 15, },
-},
+--{
+  --  type = "TextButton",
+  --  buttonStyle = "FEButtonStyle1",
+  --  text = "Single Player Campaigns",
+  --  name = "btnScenarios",
+  --  enabled = 1,
+  --  width = 272,
+	--onMouseClicked = "UI_ShowScreen('CampaignScreen', eTransition);",
+--},
+--{
+--    type = "Frame",
+--    size =
+  --      { 296, 15, },
+--},
 {
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
@@ -132,7 +160,7 @@ NewMainMenu =
 {
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
-    text = "System Settings",
+    text = "Game Settings",
     name = "btnOptions",
     width = 272,
     onMouseClicked = [[UI_ShowScreen("FEGameOptions", eTransition)]],
@@ -166,6 +194,26 @@ NewMainMenu =
         textStyle = "FEListBoxItemTextStyle", },
 },
 {
+    type = "TextButton",
+    buttonStyle = "FEButtonStyle1",
+    text = "",
+    name = "btnTutorial",
+	position =
+        { 2000, 0, },
+	enabled = 0,
+    width = 0,
+},
+{
+    type = "TextButton",
+    buttonStyle = "FEButtonStyle1",
+    text = "",
+    name = "btnCampaign",
+	position =
+        { 2000, 0, },
+	enabled = 0,
+    width = 0,
+},
+{
     type = "TextLabel",
     name = "lblVersion",
     position =
@@ -173,8 +221,8 @@ NewMainMenu =
     size = {300, 20},
     Text =
     {
-        font = "Buttonfont",
-        text = "Build Version 2.5.5000 - August 10, 2009  ",
+        font = "ChatFont",
+        text = "Build Version ".. TPOFVERSION .." - ".. TPOFDATE .." ",
         color =
             { 255, 255, 255, 255, },
         hAlign = "Right",
@@ -188,8 +236,8 @@ NewMainMenu =
     size = {300, 20},
     Text =
     {
-        font = "Buttonfont",
-        text = "  Music: DJZ4K - The Price of Freedom",
+        font = "ChatFont",
+        text = " Music: Slipstream Suite - SRI-Emperor",
         color =
             {  255, 255, 255, 255, },
         hAlign = "Left",

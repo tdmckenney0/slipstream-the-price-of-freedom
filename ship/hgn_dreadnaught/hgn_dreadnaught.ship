@@ -148,7 +148,7 @@ NewShipType.dockQueueSelectionOccupiedMultiplier =100000
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "BigCapitalShip, SmallCapitalShip, Capturer, Frigate, SubSystem, Mothership, Corvette, Fighter, Utility", "frontalassault", {Fighter="MoveToTargetAndShoot"}, {Corvette="MoveToTargetAndShoot"}, {Frigate="MoveToTargetAndShoot"}, {Munition="MoveToTargetAndShoot"}, {SubSystem="FrontalVsSubSystem"})
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "munition, BigCapitalShip, SmallCapitalShip, Capturer, Frigate, SubSystem, Mothership, Corvette, Fighter, Utility", "frontalassault", {Fighter="MoveToTargetAndShoot"}, {Corvette="MoveToTargetAndShoot"}, {Frigate="MoveToTargetAndShoot"}, {Munition="MoveToTargetAndShoot"}, {SubSystem="FrontalVsSubSystem"})
 addAbility(NewShipType, "GuardCommand", 74, 3000, 1400)
 addAbility(NewShipType, "CanBeCaptured", 160, 0.5)
 addAbility(NewShipType, "CanBeRepaired")

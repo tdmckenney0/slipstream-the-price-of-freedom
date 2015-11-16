@@ -26,7 +26,7 @@ PersistantData = {
       {
          type = "Hgn_shipyard",
          subsystems = {
-         },
+					  },
          shiphold = {
 		 		{
          type = "hgn_drone",
@@ -100,7 +100,7 @@ PersistantData = {
          number = 1,
 	  },
 	  {
-         type = "Hgn_battlecruiser",
+         type = "hgn_battlecruiser",
          subsystems = {
          },
          shiphold = {

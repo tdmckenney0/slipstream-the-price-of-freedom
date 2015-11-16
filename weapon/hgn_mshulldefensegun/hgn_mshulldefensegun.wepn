@@ -2,7 +2,7 @@ StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","Laser","Normal",0,9000,0,
 
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",1250,1500,"")
 
-setAngles(NewWeaponType,90,0,0,0,0)
+setAngles(NewWeaponType,85,0,0,0,0)
 
 setMiscValues(NewWeaponType,0,0)
 

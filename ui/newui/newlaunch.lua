@@ -8,23 +8,47 @@ OUTLINECOLOR =
 NewLaunchMenu =
 {
     size =
-        { 586, 15, 212, 497, },
+        { 587, 15, 212, 497, },
     stylesheet = "HW2StyleSheet",
     RootElementSettings =
-    {
-        backgroundColor = "IGColorBackground1", },
+    {},
     soundOnShow = "SFX_LaunchMenuONOFF",
     soundOnHide = "SFX_LaunchMenuONOFF",
     shipHealthColor =
         { 0, 255, 0, 255, },
     pixelUVCoords = 1,
-    onShow = "UI_SubtitleNarrow()",
-    onHide = "UI_SubtitleWide()",
+	onShow = [[
+				zLStart = 215
+
+				UI_SetElementPosition("NewLaunchMenu","launch",zLStart,0)
+
+				UI_SubtitleNarrow()
+			 ]],
+    --onHide = "UI_SubtitleWide()",
     fstringDockedCount = "$2667",
     drawToShipLineWidth = 2,
     drawToShipLineStubLength = 10,
     drawToShipLineColor = OUTLINECOLOR,
     drawToShipLineElement = "btnPrev",
+	onUpdate = [[
+					UI_SetElementPosition("NewLaunchMenu","launch",0,0);
+			   ]],
+;
+{
+    type = "Frame",
+	name = "launch",
+	position =
+        { 0, 0, },
+    size =
+        { 212, 497, },
+	backgroundColor = "IGColorBackground1",
+	BackgroundGraphic =
+		{
+        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        textureUV =
+            { 0, 0, 600, 600, }, },
+	outerBorderWidth = 1,
+	borderColor = "FEColorHeading3",
 ;
 {
     type = "Line",
@@ -91,6 +115,21 @@ NewLaunchMenu =
     name = "helpTipTextLabel",
     position =
         { 0, 441, },
+    size =
+        { 210, 19, },
+    marginWidth = 6,
+    Text =
+    {
+        textStyle = "IGHeading2",
+        hAlign = "Left",
+        color =
+            { 255, 255, 255, 255, }, },
+},
+{
+    type = "TextLabel",
+    name = "Testing",
+    position =
+        { 1, 441, },
     size =
         { 210, 19, },
     marginWidth = 6,
@@ -364,4 +403,6 @@ NewLaunchMenu =
     helpTip = "$5224",
     helpTipTextLabel = "commandsHelpTip",
     helpTipScreen = "NewTaskbar", },
+},
+
 }

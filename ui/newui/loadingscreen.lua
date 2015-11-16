@@ -15,46 +15,65 @@ LoadingScreen =
             { 0, 0, 0, 255, }, },
 ;
 {
-    type = "Frame",
+    type = "ProgressBar",
+    progressColor =
+        { 0, 0, 103, 200, },
     position =
         { 0, 0, },
     size =
         { 800, 600, },
-    name = "bgImage",
-    BackgroundGraphic =
-    {
-        size =
-            { 800, 600, },
-        texture = "Data:UI\\NewUI\\Background\\menu.anim",
-        textureUV =
-            { 0, 0, 1600, 1200, }, },
-;
+    name = "loadingProgress", },
+{
+		type = "Frame",
+		visible = 1,
+		position = {0, 0},
+		size = {800, 600},
+		BackgroundGraphic = {
+			type = "Graphic",
+			size = {800, 600},
+			color =
+            { 255, 255, 255, 200, },
+			textureUV = {0,0,1600,1200},
+			texture = "Data:UI\\NewUI\\Background\\menu1600.tga",},
+},
+
 {
     type = "Frame",
 	outerBorderWidth = 1,
     borderColor = "FEColorHeading3",
     backgroundColor = "FEColorBackground1",
+	BackgroundGraphic =
+    {
+        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        textureUV =
+            { 0, 0, 600, 600, }, },
     position =
-        { 275, 287.5, },
+        { 275, 550, }, --275, 287.5
     size =
-        { 250, 50, }, },
+        { 250, 35, },
+;
 {
-    type = "ProgressBar",
-    progressColor =
-        { 0, 0, 0, 255, },
+    type = "TextLabel",
+	name = "loadingtext",
     position =
-        { 279.5, 300, },
-    size =
-        { 240, 7.5, },
-    name = "loadingProgress", },
+        { 0, 0, },
+	size = {250, 20},
+    Text =
+    {
+        textStyle = "FEHeading3",
+		text = "Loading: ",
+        color =
+            { 0, 0, 0, 255, },
+        hAlign = "Center",
+        vAlign = "Top", },
 },
 {
     type = "TextLabel",
-    name = "moduleLabel",
+	name = "moduleLabel",
     position =
-        { 0, 312.5, },
+        { 0, 15, },
     size =
-        { 800, 50, },
+        { 250, 20, },
     Text =
     {
         textStyle = "FEHeading3",
@@ -63,18 +82,5 @@ LoadingScreen =
         hAlign = "Center",
         vAlign = "Top",},
 },
-{
-    type = "TextLabel",
-    name = "loadingtext",
-    position =
-        { 0, 275, },
-	size = {800, 50},
-    Text =
-    {
-        textStyle = "FEHeading3",
-		text = "Slipstream: The Price of Freedom",
-        color =
-            { 255, 255, 255, 0, },
-        hAlign = "Center",
-        vAlign = "Top", },},
+},
 }

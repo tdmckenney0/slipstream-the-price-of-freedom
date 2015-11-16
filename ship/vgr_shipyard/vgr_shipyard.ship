@@ -140,7 +140,7 @@ addAbility(NewShipType, "ShipHold", 1, 160, 10, "rallypoint", "Fighter,Corvette,
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Fighter, Corvette, Frigate, SmallCapitalShip, BigCapitalShip, Utility", "JustShoot")
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "munition, Fighter, Corvette, Frigate, SmallCapitalShip, BigCapitalShip, Utility", "JustShoot")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
 addAbility(NewShipType, "CanBuildShips", 1, "Drone_DOL, Fighter_Vgr, Corvette_Vgr, Frigate_Vgr, SuperCap_Vgr, Flagship_Vgr, Utility_Vgr, SubSystem_Vgr, SubSystemLarge_Vgr, Platform_Vgr, Shipyard_Vgr, Battlecruiser_Vgr, Probe_Vgr", "Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors, Capital")
 addAbility(NewShipType, "CanBeCaptured", 300, 0.1)
@@ -162,10 +162,14 @@ StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense10",
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense11", "")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense12", "")
 addShield(NewShipType, "EMP", 10000, 20)
-StartShipHardPointConfig(NewShipType, "Production 1", "HardPoint_Production1", "System", "Production", "Destroyable", "", "Vgr_MS_Production_Fighter", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Production 2", "HardPoint_Production2", "System", "Production", "Destroyable", "", "Vgr_MS_Production_Corvette", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Production 3", "HardPoint_Production3", "System", "Production", "Destroyable", "", "Vgr_MS_Production_Frigate", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Production 4", "HardPoint_Production4", "System", "Production", "Damageable", "", "Vgr_SY_Production_CapShip", "", "", "", "", "", "", "")
+
+
+--Production Subsystems
+
+StartShipHardPointConfig(NewShipType, "Production 1", "HardPoint_Production1", "System", "Production", "Destroyable", "", "Vgr_MS_Production_Fighter")
+StartShipHardPointConfig(NewShipType, "Production 2", "HardPoint_Production2", "System", "Production", "Destroyable", "", "Vgr_MS_Production_Corvette")
+StartShipHardPointConfig(NewShipType, "Production 3", "HardPoint_Production3", "System", "Production", "Destroyable", "", "Vgr_MS_Production_Frigate")
+StartShipHardPointConfig(NewShipType, "Production 4", "HardPoint_Production4", "System", "Production", "Destroyable", "", "Vgr_SY_Production_CapShip")
 StartShipHardPointConfig(NewShipType, "Generic 1", "HardPoint_System1", "System", "Generic", "Destroyable", "", "Vgr_MS_Module_Research", "Vgr_MS_Module_CloakGenerator", "Vgr_MS_Module_PlatformControl", "Vgr_MS_Module_FireControl", "Vgr_MS_Module_HyperspaceInhibitor", "Vgr_MS_Module_Hyperspace", "Vgr_MS_Module_BuildSpeed", "")
 StartShipHardPointConfig(NewShipType, "Generic 2", "HardPoint_System2", "System", "Generic", "Destroyable", "", "Vgr_MS_Module_Research", "Vgr_MS_Module_CloakGenerator", "Vgr_MS_Module_PlatformControl", "Vgr_MS_Module_FireControl", "Vgr_MS_Module_HyperspaceInhibitor", "Vgr_MS_Module_BuildSpeed", "", "")
 StartShipHardPointConfig(NewShipType, "Generic 3", "HardPoint_System3", "System", "Generic", "Destroyable", "", "Vgr_MS_Module_Research", "Vgr_MS_Module_CloakGenerator", "Vgr_MS_Module_PlatformControl", "Vgr_MS_Module_FireControl", "Vgr_MS_Module_HyperspaceInhibitor", "Vgr_MS_Module_Hyperspace", "Vgr_MS_Module_BuildSpeed", "")
@@ -173,17 +177,20 @@ StartShipHardPointConfig(NewShipType, "Generic 4", "HardPoint_System4", "System"
 StartShipHardPointConfig(NewShipType, "Generic 5", "HardPoint_System5", "System", "Generic", "Destroyable", "", "Vgr_MS_Module_Research", "Vgr_MS_Module_CloakGenerator", "Vgr_MS_Module_PlatformControl", "Vgr_MS_Module_FireControl", "Vgr_MS_Module_HyperspaceInhibitor", "Vgr_MS_Module_Hyperspace", "Vgr_MS_Module_BuildSpeed", "")
 StartShipHardPointConfig(NewShipType, "Generic 6", "HardPoint_System6", "System", "Generic", "Destroyable", "", "Vgr_MS_Module_Research", "Vgr_MS_Module_CloakGenerator", "Vgr_MS_Module_PlatformControl", "Vgr_MS_Module_FireControl", "Vgr_MS_Module_HyperspaceInhibitor", "Vgr_MS_Module_Hyperspace", "Vgr_MS_Module_BuildSpeed", "")
 StartShipHardPointConfig(NewShipType, "Sensors1", "HardPoint_Sensors", "System", "Sensors", "Destroyable", "", "Vgr_MS_Sensors_AdvancedArray", "Vgr_MS_Sensors_DetectHyperspace", "Vgr_MS_Sensors_DetectCloaked", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_SY_Innate_Engine", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Resource", "Hardpoint_Resource", "System", "Innate", "Damageable", "Vgr_SY_Innate_Resource", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType,"IonBeam1","Hardpoint_Ion1","Weapon","Innate","Damageable","Vgr_IonBeamTurretx3","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"IonBeam2","Hardpoint_Ion2","Weapon","Innate","Damageable","Vgr_IonBeamTurretx3","","","","","","","","")
-StartShipHardPointConfig(NewShipType, "Heavy Fusion Missile Launcher", "Hardpoint_Rocket1", "Weapon", "Innate", "Damageable", "vgr_missilebay", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Heavy Fusion Missile Launcher 2", "Hardpoint_Rocket2", "Weapon", "Innate", "Damageable", "vgr_missilebay", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType,"Gatling1","Hardpoint_Gat1","Weapon","Innate","Damageable","vgr_gatlingx2","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"Gatling2","Hardpoint_Gat2","Weapon","Innate","Damageable","vgr_gatlingx2","","","","","","","","")
+StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_SY_Innate_Engine")
+StartShipHardPointConfig(NewShipType, "Resource", "Hardpoint_Resource", "System", "Innate", "Damageable", "Vgr_SY_Innate_Resource")
 
-StartShipHardPointConfig(NewShipType,"MissileT","Hardpoint_MpodT","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"MissileT2","Hardpoint_MpodT2","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
+
+--Weapon Subsystems
+
+StartShipHardPointConfig(NewShipType,"IonBeam1","Hardpoint_Ion1","Weapon","Innate","Damageable","Vgr_IonBeamTurretx3")
+StartShipHardPointConfig(NewShipType,"IonBeam2","Hardpoint_Ion2","Weapon","Innate","Damageable","Vgr_IonBeamTurretx3")
+StartShipHardPointConfig(NewShipType,"Miss1", "Hardpoint_Rocket1", "Weapon", "Innate", "Damageable", "vgr_missilebay")
+StartShipHardPointConfig(NewShipType,"Miss2", "Hardpoint_Rocket2", "Weapon", "Innate", "Damageable", "vgr_missilebay")
+StartShipHardPointConfig(NewShipType,"Gatling1","Hardpoint_Gat1","Weapon","Innate","Damageable","vgr_flakturret")
+StartShipHardPointConfig(NewShipType,"Gatling2","Hardpoint_Gat2","Weapon","Innate","Damageable","vgr_flakturret")
+StartShipHardPointConfig(NewShipType,"MissileT","Hardpoint_MpodT","Weapon","Innate","Damageable","Vgr_MissileTurret")
+StartShipHardPointConfig(NewShipType,"MissileT2","Hardpoint_MpodT2","Weapon","Innate","Damageable","Vgr_MissileTurret")
 
 
 --stopline

@@ -167,10 +167,7 @@ NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
 NewShipType.deadSobFadeTime = 1
 NewShipType.trailLinger = 2
-setEngineGlow(NewShipType,1,1,1.02,20,300,50,1.5,{
-  0.27,
-  0.47,
-  0.69,
-  0.25,
-})
+setEngineBurn(NewShipType, 9, 0.2, 0.5, 300, 1.02, 0.1, 0.25, 380)
+setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5,
+    { 1, 0.47, 0, 0.2, })
 loadShipPatchList(NewShipType,"data:sound/sfx/ship/Hiigaran/NonMilitary/",0,"Engines/HResourcerControllerEng","",1,"Ambience/HResourcerControllerAmb","")

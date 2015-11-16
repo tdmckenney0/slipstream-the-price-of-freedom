@@ -114,7 +114,7 @@ OrderData =
     maxDistanceFromGoal = 90, }
 WeaponFire =
 {
-    FriendlyFireRatio = 1, }
+    FriendlyFireRatio = 0.1, } --Was 1, Now 0.1 For the Fans.
 HyperSpace =
 {
     costPerMetre = 0.02,
@@ -221,7 +221,7 @@ MineLayingInfo =
 CollisionInfo =
 {
     kamikazeDamageMultiplier = 7,
-    normalCollisionDamageMultiplier = 0, }
+    normalCollisionDamageMultiplier = 1, }
 FXInfo =
 {
     windStrength =

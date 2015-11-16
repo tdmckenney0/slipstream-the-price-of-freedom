@@ -25,17 +25,37 @@ dofilepath("data:ui/newui/build/collapsablequeue.lua")
 NewBuildMenu =
 {
     size =
-        { 586, 15, 212, 497, },
+        { 587, 15, 212, 497, },
     resolution =
         { 800, 600, },
     stylesheet = "HW2StyleSheet",
     RootElementSettings =
     {
-        backgroundColor = "IGColorBackground1", },
+	},
     soundOnShow = "SFX_BuildMenuONOFF",
     soundOnHide = "SFX_BuildMenuONOFF",
     pixelUVCoords = 1,
-    onShow = "UI_SubtitleNarrow()",
+    onShow = [[
+				UI_SubtitleNarrow()
+
+				zBuildStart = 215
+
+				UI_SetElementPosition("NewBuildMenu","build",zBuildStart,0)
+			 ]],
+	onUpdate = [[
+
+				UI_SetElementPosition("NewBuildMenu","build",zBuildStart,0)
+
+
+					if(zBuildStart == 15) then
+						zBuildStart = 0
+					end
+
+					if(zBuildStart > 0) then
+						zBuildStart = zBuildStart - 20
+					end
+
+			   ]],
     onHide = [[UI_HideScreen("BuildInfo"); UI_SubtitleWide()]],
     textureFolder = "DATA:\\UI\\NewUI\\Build",
     drawToShipLineWidth = 1,
@@ -61,12 +81,28 @@ NewBuildMenu =
     fstringUnitCaps = "$2569",
 ;
 {
+    type = "Frame",
+	name = "build",
+	position =
+        { 0, 0, },
+    size =
+        { 212, 497, },
+	backgroundColor = "IGColorBackground1",
+	BackgroundGraphic =
+		{
+        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        textureUV =
+            { 0, 0, 600, 600, }, },
+	outerBorderWidth = 1,
+	borderColor = "FEColorHeading3",
+;
+{
     type = "TextLabel",
     position =
         { 0, 2, },
     size =
         { 210, 19, },
-    backgroundColor = OUTLINECOLOR,
+    --backgroundColor = OUTLINECOLOR,
     name = "lblTitle",
     Text =
     {
@@ -115,16 +151,6 @@ NewBuildMenu =
     size =
         { 100, 2, },
     name = "buildShipHealth",
-},
-{
-    type = "Line",
-    p1 =
-        { 208, 19, },
-    p2 =
-        { 208, 174, },
-    above = 1,
-    lineWidth = 2,
-    color = OUTLINECOLOR,
 },
 {
     type = "Button",
@@ -892,8 +918,8 @@ NewBuildMenu =
     autosize = 1,
 ;
 {
-    type = "Frame",
-    position =
+   type = "Frame",
+   position =
         { 0, 0, },
     size =
         { 185, 13, },
@@ -901,7 +927,7 @@ NewBuildMenu =
     {
         texture = "data:ui\\newui\\ingameicons\\show_all_borders.mres",
         textureUV =
-            { 0, 0, 185, 13, },
+            { 0, 0, 0, 0, },
         color =
             { 0, 0, 0, 255, }, },
 },
@@ -976,4 +1002,6 @@ NewBuildMenu =
     customData = 4,
     outerBorderWidth = 1,
     borderColor = OUTLINECOLOR, },
+	},
 }
+

@@ -19,6 +19,7 @@ FrontEndScreens =
 		filename = "DATA:\\UI\\NewUI\\Main\\New\\Background.lua",
 		activated = 0,
 	},
+
 	-- This is the LuaScript that has the code for the screen
 	{
 		-- This is the name identifier for the screen.
@@ -35,22 +36,27 @@ FrontEndScreens =
 		activated = 0,
 	},
 	{
+		name = "CampaignScreen",
+		filename = "DATA:\\UI\\NewUI\\campaignscreen.lua",
+		activated = 0,
+	},
+	{
 		name = "PasswordScreen",
 		filename = "DATA:\\UI\\NewUI\\Shared\\PasswordScreen.lua",
 		activated = 0,
 	},
-	{
-		name = "StyleSheetTestScreen",
-		filename = "DATA:\\UI\\NewUI\\Styles\\StyleSheetTestScreen.lua",
-		activated = 0,
-	},
+--	{
+	--	name = "StyleSheetTestScreen",
+	--	filename = "DATA:\\UI\\NewUI\\Styles\\StyleSheetTestScreen.lua",
+	--	activated = 0,
+--	},
 	-- "type" is commented out by default. Careful with this one. It doesn't have a "back" button.
-	{
-		name = "NotForPublicDisplay",
-		filename = "DATA:\\UI\\NewUI\\NotForPublicDisplay.lua",
-		activated = 0,
+--	{
+--		name = "NotForPublicDisplay",
+	--	filename = "DATA:\\UI\\NewUI\\NotForPublicDisplay.lua",
+	--	activated = 0,
 --		type = "MainMenu",
-	},
+	--},
 	-- don't know if this one needs a "type" (used by functions within Homeworld2.exe)
 	{
 		name = "ScarProfilerEditBox",
@@ -402,12 +408,18 @@ GameScreens =
 		activated = 0,
 		type = "GameOverScreen",
 	},
+	--{
+	--	name = "PlaybackMenu",
+	--	filename = "DATA:\\UI\\NewUI\\Playback\\PlaybackMenu.lua",
+	--	activated = 0,
+--		type = "PlaybackMenu",
+	--},
 	{
-		name = "PlaybackMenu",
-		filename = "DATA:\\UI\\NewUI\\Playback\\PlaybackMenu.lua",
-		activated = 0,
-		type = "PlaybackMenu",
+		name = "Filter",
+		filename = "DATA:\\UI\\NewUI\\filter.lua",
+		activated = 1,
 	},
+
 
 	-- DIALOGS
 	{

@@ -10,7 +10,7 @@ effects =
         animation1 =
         {
             name = "Death",
-            length = 1,
+            length = 6,
             loop = 0,
             parent = "",
             minimum = 0,
@@ -375,4 +375,34 @@ effects =
                 { "marker", "Weapon_Missile_Muzzle", },
                 { "fx", "torpedo_steam_spray", },
                 { "sound", "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_CANNON_SHELL", },
-            }, }, }
+            },
+        event36 =
+            {
+                { "anim", "Weapon_BCUberPulse", },
+                { "animtime", "0", },
+                { "marker", "Weapon_BCUberPulse_Muzzle", },
+                { "fx", "ion_beam_charged_particle_mod", },
+                { "sound", "", },
+                { "fx_scale", "1", },
+                { "fx_nlips", "on", },
+            },
+        event37 =
+            {
+                { "anim", "Weapon_BCUberPulse", },
+                { "animtime", "-1", },
+                { "marker", "Weapon_BCUberPulseSlave_Muzzle", },
+                { "fx", "ion_beam_charged_particle_mod", },
+                { "sound", "", },
+                { "fx_scale", "1", },
+                { "fx_nlips", "on", },
+            },
+        event38 =
+            {
+                { "anim", "Weapon_BCUberPulse", },
+                { "animtime", "0", },
+                { "marker", "Weapon_BCUberPulseSlave1_Muzzle", },
+                { "fx", "torpedo_steam_spray", },
+                { "sound", "WEAPON/CARRIER/FIRE/WEAPON_DESTROYER_CANNON_SHELL", },
+            },
+		},
+	}

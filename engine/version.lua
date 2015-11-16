@@ -1,0 +1,10 @@
+--TPOF String Table
+TPOFVERSION = "2.5c (8500)"
+TPOFDATE = "October 24, 2009"
+BUILDOWNER = "SRI-Emperor"
+BUILDSYSTEM = "Obelisk"
+SYSTEMOS =  "Microsoft Windows 7 Professional x64 [Version 6.1.7600]"
+SYSTEMSTATS = "Intel Core i7 @ 2.68 GHz, 6.00 GB RAM, Nvidia Geforce 8600 GT"
+SUPPORT = "Windows 2000/XP/VISTA/7 x86/x64, Mac OS X Tiger/Leopard/Snow Leopard (Intel)"
+ISDEV = "No"
+COPYRIGHT = "Copyright Sub-Real Industries 2007-2009"

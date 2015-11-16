@@ -1,3 +1,11 @@
+dofilepath("data:engine/version.lua")
+print("-Slipstream: The Price of Freedom-")
+print(COPYRIGHT)
+print("Developers Mode: "..ISDEV)
+print("Build Version: "..TPOFVERSION)
+print("Built on: "..TPOFDATE)
+print("Built by: "..BUILDOWNER..", on system: "..BUILDSYSTEM)
+print("Supported OS's: "..SUPPORT)
 HW2StyleSheet =
 {
 	defaultElementStyle = "DefaultStyle",
@@ -30,7 +38,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "FEColorBackground1",
-			string = "200,200,200,127",
+			string = "175,175,175,200",
 		},
 		{
 			name = "FEColorBackground2",
@@ -839,6 +847,19 @@ HW2StyleSheet =
 		soundOnPressed = "SFX_TextInputClicked",
 		soundOnAccept = "SFX_TextInputAccept",
 	},
+	INTROTEXT =
+	{
+		type = "Text",
+		font = "Heading1Font",
+		color = "FEColorHeading1",
+		vAlign = "Top",
+		hAlign = "Center",
+		offset =
+		{
+			0,
+			0,
+		},
+	},
 	FEHeading1 =
 	{
 		type = "Text",
@@ -1616,7 +1637,7 @@ HW2StyleSheet =
 			90,
 			15,
 		},
-		borderWidth = 2,
+		borderWidth = 1,
 		backgroundColor =
 		{
 			0,
@@ -1624,7 +1645,7 @@ HW2StyleSheet =
 			0,
 			0,
 		},
-		borderColor = "FEColorOutline",
+		borderColor = "FEColorHeading3",
 		textColor = "FEColorOutline",
 		overColor =
 		{
@@ -1633,7 +1654,7 @@ HW2StyleSheet =
 			0,
 			127,
 		},
-		overBorderColor = "FEColorOutline",
+		overBorderColor = "FEColorHeading3",
 		overTextColor =
 		{
 			0,
@@ -1642,7 +1663,7 @@ HW2StyleSheet =
 			255,
 		},
 		pressedColor = "FEColorOutline",
-		pressedBorderColor = "FEColorOutline",
+		pressedBorderColor = "FEColorHeading3",
 		pressedTextColor =
 		{
 			255,
@@ -2623,23 +2644,23 @@ HW2StyleSheet =
 		},
 		textColor =
 		{
-			200,
-			200,
-			200,
-			200,
+			0,
+			0,
+			0,
+			255,
 		},
 		overTextColor =
 		{
-			255,
-			255,
-			255,
+			127,
+			127,
+			127,
 			255,
 		},
 		pressedTextColor =
 		{
-			0,
-			0,
-			0,
+			255,
+			255,
+			255,
 			255,
 		},
 		Text =
@@ -3487,6 +3508,23 @@ HW2StyleSheet =
 	{
 		type = "Text",
 		font = "ButtonFont",
+		textStyle = "IGButtonTextStyle",
+		color =
+		{
+			0,
+			0,
+			0,
+			255,
+		},
+		size = 8,
+		style = 1,
+		hAlign = "Center",
+	},
+	Taskbar_PanelButtonTextStyleCarrot =
+	{
+		type = "Text",
+		font = "ChatFont",
+		textStyle = "IGButtonTextStyle",
 		color =
 		{
 			0,
@@ -4034,7 +4072,10 @@ HW2StyleSheet =
 	Taskbar_ShipButtonStyle =
 	{
 		type = "Button",
-		toggleButton = 1,
+		toggleButton = 0,
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		backgroundColor = "IGColorBackground1",
 		size =
 		{
 			83,
@@ -4042,37 +4083,25 @@ HW2StyleSheet =
 		},
 		DefaultGraphic =
 		{
-			texture = "DATA:UI\\NewUI\\Taskbar\\ship_button.mres",
-			textureUV =
-			{
-				1,
-				1,
-				84,
-				31,
-			},
-		},
+		color =
+            { 255, 255, 255, 255, },
+        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        textureUV =
+            { 0, 0, 600, 600, }, },
 		OverGraphic =
 		{
-			texture = "DATA:UI\\NewUI\\Taskbar\\ship_button.mres",
-			textureUV =
-			{
-				1,
-				33,
-				84,
-				63,
-			},
-		},
+		color =
+            { 170, 170, 170, 255, },
+        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        textureUV =
+            { 0, 0, 600, 600, }, },
 		PressedGraphic =
 		{
-			texture = "DATA:UI\\NewUI\\Taskbar\\ship_button.mres",
-			textureUV =
-			{
-				1,
-				65,
-				84,
-				95,
-			},
-		},
+		color =
+            { 0, 0, 0, 255, },
+        texture = "DATA:UI\\NewUI\\background\\gradient.tga",
+        textureUV =
+            { 0, 0, 600, 600, }, },
 		DisabledGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\ship_button.mres",

@@ -1,7 +1,7 @@
 GUID =
     { 110, 91, 157, 190, 18, 23, 250, 78, 144, 20, 41, 246, 181, 128, 214, 12, }
 GameRulesName = "TPOF: Arena"
-Description = "You start with a large fleet of ships with every upgrade, and you must destroy all other enemy ships out there. However, there are no production ships available."
+Description = "You start with a large fleet of ships with every upgrade, and you must destroy all other enemy ships out there. However, there are no production ships available. Mac Users: Advanced Options are not available for you, so defaults will be assigned."
 Directories =
 {
   Levels = "data:LevelData\\Multiplayer\\slipstream\\",
@@ -56,8 +56,9 @@ GameSetupOptions =
 		visible = 1,
 		choices =
 		{
-			"Slipstream Ambient", "staging\\staging_04",
-			"The Price of Freedom", "staging\\staging_01",
+			"Slipstream Suite", "staging\\suite",
+			"Slipstream Ambient", "staging\\Ambient",
+			"The Price of Freedom", "staging\\Freedom",
 			"None", "staging\\Mute.fda",
 			"Shuffle All", "shuffle",
 			"Shuffle Ambient", "shufflea",
@@ -86,6 +87,8 @@ GameSetupOptions =
 	},
     }
 dofilepath("data:scripts/scar/restrict.lua")
+dofilepath("data:engine/version.lua")
+dofilepath("data:engine/lib_music.lua")
 
 Events = {}
 Events.endGame =
@@ -126,58 +129,6 @@ function OnInit()
 
 end
 
-
-
---===============================================================================================
---Runs the random music system..moved from the randommusic.lua so that we can just make playlists.
--- table of previously-played tracks, resets to zero.
-
-playedBin = {}
-
--- the gamerule - Defines the function to play music through the game
-function RandomMusicRule()
-	RandomMusic(PlayList)
-end
-
-function RandomMusic(tPlaylist)
-	-- function created by Mikail, EvilleJedi
-	-- Input:	<tPlaylist>: the playlist (a table) of songs.
-	local passBool = 1
-	local musicPath = "data:sound\\music\\"
-	local listLen = getn(tPlaylist)
-	local binLen = getn(playedBin)
-	local randNum = random(listLen)
-	local track_file = musicPath .. tPlaylist[randNum][1]
-	local track_title = tPlaylist[randNum][2]
-	local track_length = tPlaylist[randNum][3]
-	local track_m = floor(track_length / 60)
-	local track_s = track_length - track_m * 60
-	local track_string = "Now playing (" .. randNum .. "/" .. listLen .. "): " .. track_title .. " (" .. track_m .. "m " .. track_s .. "s)"
-	for k = 1, binLen do
-		-- don't play the same track twice
-		if (playedBin[k] == randNum) then
-			passBool = 0
-			-- if the end of the list has been reached, start over
-			if (k == listLen) then
-				playedBin = {}
-			end
-			break
-		end
-	end
-	if (passBool == 0) then
-		RandomMusic(tPlaylist)
-	else
-		Sound_MusicPlay(track_file)
-		Subtitle_Message(track_string, 10)
-		print(track_string)
-		tinsert(playedBin, randNum)
-		Rule_AddInterval("RandomMusicRule", track_length)
-		Rule_Remove("RandomMusicRule")
-	end
-end
-
-
---==============================================================================
 
 AnyPlayerIndex = 0
 
