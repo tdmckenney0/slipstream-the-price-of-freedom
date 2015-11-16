@@ -7,7 +7,7 @@ Credits =
     pixelUVCoords = 1,
     onShow = [[ creditsRoleGo = 0 ]],
     onUpdate = [[
-				creditsRoleGo = creditsRoleGo - 0.15
+				creditsRoleGo = creditsRoleGo - 0.10
 
 					if(creditsRoleGo < -2000 ) then
 						UI_ShowScreen('NewMainMenu', eTransition);
@@ -33,7 +33,7 @@ Credits =
 	name = "CreditsRole",
 	visible = 1,
 	backgroundColor =
-            { 0, 0, 0, 255, },
+            { 0, 0, 0, 128, },
 	size =
         { 800, 5000, },
     position =
@@ -48,8 +48,7 @@ Credits =
 		BackgroundGraphic = {
 			type = "Graphic",
 			size = {100, 100},
-			color =
-            { 255, 255, 255, 255, },
+			color = { 255, 255, 255, 255, },
 			textureUV = {0,0,800,800},
 			texture = "data:/ui/newui/textures/sri.tga",
 		},
@@ -58,12 +57,12 @@ Credits =
 			type = "TextLabel",
 			position = {150,300},
 			size = {510,200},
-			name = "SRIPRESENTS",
+			name = "PRESENTS",
 			Text =
 			{
 				-- TUTORIAL
-				text = "SUB-REAL INDUSTRIES PRESENTS",
-				font = "Heading3Font",
+				text = "PRESENTS",
+				font = "Heading1Font",
 				color = "FEColorHeading1",
 				vAlign = "Top",
 				hAlign = "Center",
@@ -87,7 +86,7 @@ Credits =
 			size = {510,200},
 			Text =
 			{
-				text = "The Year is 2681.",
+				text = "The Year is 2631.",
 				font = "Heading1Font",
 				color = "FEColorHeading1",
 				vAlign = "Top",
@@ -225,6 +224,71 @@ Credits =
 			},
 },
 {
+			type = "TextLabel",
+			position = {150,1700},
+			size = {510,200},
+			Text =
+			{
+				text = "Now, on the eve of December 23,",
+				font = "Heading1Font",
+				color = "FEColorHeading1",
+				vAlign = "Top",
+				hAlign = "Center",
+			},
+},
+{
+			type = "TextLabel",
+			position = {150,1750},
+			size = {510,200},
+			Text =
+			{
+				text = "Key Battles will decide the fate",
+				font = "Heading1Font",
+				color = "FEColorHeading1",
+				vAlign = "Top",
+				hAlign = "Center",
+			},
+},
+{
+			type = "TextLabel",
+			position = {150,1800},
+			size = {510,200},
+			Text =
+			{
+				text = "of these worlds, and whose",
+				font = "Heading1Font",
+				color = "FEColorHeading1",
+				vAlign = "Top",
+				hAlign = "Center",
+			},
+},
+{
+			type = "TextLabel",
+			position = {150,1850},
+			size = {510,200},
+			Text =
+			{
+				text = "shadow they will fall under.",
+				font = "Heading1Font",
+				color = "FEColorHeading1",
+				vAlign = "Top",
+				hAlign = "Center",
+			},
+},
+{
+			type = "TextLabel",
+			position = {150,1950},
+			size = {510,200},
+			Text =
+			{
+				text = "Good Luck.",
+				font = "Heading1Font",
+				color = "FEColorHeading1",
+				vAlign = "Top",
+				hAlign = "Center",
+			},
+},
+{
 		type = "Frame",
 		name = "Fade1",
 		visible = 1,
@@ -244,7 +308,7 @@ Credits =
 {
    type = "Frame",
    name = "SkipButton",
-   visible = 0,
+   visible = 1,
    position =  { 700, 580},
    size = {75, 12},
    outerBorderWidth = 1,
@@ -264,9 +328,7 @@ Credits =
     name = "btnSkipToMenu",
     enabled = 1,
     width = 75,
-    onMouseClicked = [[
-				UI_SetElementVisible("Credits", "Introduction", 0)	
-			     ]],
+    onMouseClicked = [[UI_ShowScreen("NewMainMenu", eTransition)]],
 },
 },
 }

@@ -75,6 +75,18 @@ NewMainMenu =
     autoarrangeWidth = 200,
 ;
 {
+  type = "TextButton",
+  buttonStyle = "FEButtonStyle1",
+  text = "Introduction",
+  name = "btnIntro",
+  width = 272,
+  onMouseClicked = "UI_ShowScreen('Credits', eTransition);",
+},
+{
+    type = "Frame",
+    size = { 296, 10, },
+},
+{
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
     text = "Galactic Map",
@@ -82,18 +94,6 @@ NewMainMenu =
     enabled = 1,
     width = 272,
     onMouseClicked = "UI_ShowScreen('UniverseScreen', eTransition);",
-},
-{
-    type = "Frame",
-    size = { 296, 10, },
-},
-{
-  type = "TextButton",
-  buttonStyle = "FEButtonStyle1",
-  text = "Single Player Missions",
-  name = "btnTutorial",
-  enabled = 1,
-  width = 272,
 },
 {
     type = "Frame",
@@ -186,20 +186,27 @@ NewMainMenu =
    visible = 1,
    position =  { 384, 565},
    size = {32, 32},
-   onMouseClicked = "UI_ShowScreen('Credits', eTransition);",
    BackgroundGraphic = 
    {
 	type = "Graphic",
 	size = {32, 32},
 	color = { 255, 255, 255, 255, },
 	textureUV = {0,0,64,64},
-	texture = "Data:UI\\logo.tga",
+	texture = "Data:UI\\xi_logo.tga",
    },
 },
 {
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
     name = "btnCampaign",
+    position = { 2000, 0, },
+    enabled = 0,
+    width = 0,
+},
+{
+    type = "TextButton",
+    buttonStyle = "FEButtonStyle1",
+    name = "btnTutorial",
     position = { 2000, 0, },
     enabled = 0,
     width = 0,

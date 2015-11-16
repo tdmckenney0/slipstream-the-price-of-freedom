@@ -10,12 +10,11 @@ UniverseScreen =
             { 0, 0, 0, 255, }, },
     pixelUVCoords = 1,
 	onShow = [[
-				MapX = -424
-				MapY = -524
-				MapXCur = -424
-				MapYCur = -524
+				MapX = -1648
+				MapY = -1748
+				MapXCur = MapX
+				MapYCur = MapY
 
-				UI_SetElementPosition("UniverseScreen","Map1",MapX,MapY)
 				UI_SetElementPosition("UniverseScreen","Map2",MapX,MapY)
 			 ]],
 	onUpdate = [[
@@ -36,7 +35,6 @@ UniverseScreen =
 					MapYCur = MapYCur + 5
 				end
 
-				UI_SetElementPosition("UniverseScreen","Map1",MapXCur,MapYCur)
 				UI_SetElementPosition("UniverseScreen","Map2",MapXCur,MapYCur)
 
 			   ]],
@@ -45,14 +43,13 @@ UniverseScreen =
 		type = "Frame",
 		name = "Map1",
 		visible = 1,
-		position = {0, 0},
-		size = {2048, 2048},
+		position = {-50, -150},
+		size = {900, 900},
 		BackgroundGraphic = {
 			type = "Graphic",
-			size = {2048, 2048},
-			color =
-            { 255, 255, 255, 255, },
-			textureUV = {0,0,2500,2500},
+			size = {900, 900},
+			color = { 255, 255, 255, 255, },
+			textureUV = {0,0,4096,4096},
 			texture = "Data:UI\\NewUI\\Textures\\galaxymap.tga",
 						},
 },
@@ -61,22 +58,14 @@ UniverseScreen =
 		name = "Map2",
 		visible = 0,
 		position = {0, 0},
-		size = {2048, 2048},
+		size = {4096, 4096},
 		BackgroundGraphic = {
 			type = "Graphic",
-			size = {2048, 2048},
-			color =
-            { 255, 255, 255, 255, },
-			textureUV = {0,0,2500,2500},
-			texture = "Data:UI\\NewUI\\Textures\\overlaymap.tga",
-		},
-},
-{
-    type = "Frame",
-    position =
-        { 0, 0, },
-    size =
-        { 800, 600, },
+			size = {4096, 4096},
+			color = { 255, 255, 255, 255, },
+			textureUV = {0,0,4096,4096},
+			texture = "Data:UI\\NewUI\\Textures\\galaxymap.tga",
+						},
 },
 
 
@@ -152,6 +141,7 @@ UniverseScreen =
 					type = "TextButton",
 					buttonStyle = "FEButtonStyle1",
 					position = {652,23},
+					enabled = 0,
 					name = "txtBtnRIGHT",
 					helpTip = "Move the Map Right",
 					helpTipTextLabel = "txtLblHELPTEXT",
@@ -171,6 +161,7 @@ UniverseScreen =
 					buttonStyle = "FEButtonStyle1",
 					position = {530,23},
 					name = "txtBtnLEFT",
+					enabled = 0,
 					helpTip = "Move the Map Left",
 					helpTipTextLabel = "txtLblHELPTEXT",
 					Text =
@@ -189,6 +180,7 @@ UniverseScreen =
 					buttonStyle = "FEButtonStyle1",
 					position = {408,23},
 					name = "txtBtnDOWN",
+					enabled = 0,
 					helpTip = "Move the Map Down",
 					helpTipTextLabel = "txtLblHELPTEXT",
 					Text =
@@ -207,6 +199,7 @@ UniverseScreen =
 					buttonStyle = "FEButtonStyle1",
 					position = {286,23},
 					name = "txtBtnUP",
+					enabled = 0,
 					helpTip = "Move the Map Up",
 					helpTipTextLabel = "txtLblHELPTEXT",
 					Text =
@@ -224,6 +217,7 @@ UniverseScreen =
 					type = "TextButton",
 					buttonStyle = "FEButtonStyle1",
 					size = {242, 13, },
+					enabled = 0,
 					position = {530,8},
 					name = "txtBtnRESET",
 					helpTip = "Reset the Map",
@@ -235,8 +229,8 @@ UniverseScreen =
 						textStyle = "FEButtonTextStyle",
 					},
 					onMouseClicked = [[
-										MapX = -424
-										MapY = -524
+								MapX = -1648
+								MapY = -1748
 									 ]],
 					;
 				},
@@ -251,7 +245,7 @@ UniverseScreen =
 					Text =
 					{
 						-- BACK
-						text = "Toggle Galaxy (Off)",
+						text = "Zoom (+)",
 						textStyle = "FEButtonTextStyle",
 					},
 					onMouseClicked = [[
@@ -259,7 +253,22 @@ UniverseScreen =
 										UI_SetElementVisible("UniverseScreen", "Map1", 0)
 										UI_SetElementVisible("UniverseScreen", "txtBtnTOGBG", 0)
 										UI_SetElementVisible("UniverseScreen", "txtBtnTOGBG2", 1)
-									 ]],
+										
+										MapX = -1648
+										MapY = -1748
+										
+										MapXCur = MapX
+										MapYCur = MapY
+										
+										UI_SetElementPosition("UniverseScreen","Map2", MapX, MapY)
+										
+										UI_SetElementEnabled("UniverseScreen", "txtBtnRIGHT", 1)
+										UI_SetElementEnabled("UniverseScreen", "txtBtnLEFT", 1)
+										UI_SetElementEnabled("UniverseScreen", "txtBtnUP", 1)
+										UI_SetElementEnabled("UniverseScreen", "txtBtnDOWN", 1)
+										UI_SetElementEnabled("UniverseScreen", "txtBtnRESET", 1)
+										
+								 ]],
 					;
 				},
 				{
@@ -274,7 +283,7 @@ UniverseScreen =
 					Text =
 					{
 						-- BACK
-						text = "Toggle Galaxy (On)",
+						text = "Zoom (-)",
 						textStyle = "FEButtonTextStyle",
 					},  --255, 255, 255, 255,
 					onMouseClicked = [[
@@ -282,7 +291,21 @@ UniverseScreen =
 										UI_SetElementVisible("UniverseScreen", "Map1", 1)
 										UI_SetElementVisible("UniverseScreen", "txtBtnTOGBG", 1)
 										UI_SetElementVisible("UniverseScreen", "txtBtnTOGBG2", 0)
-									 ]],
+										
+										MapX = -1648
+										MapY = -1748
+										
+										MapXCur = MapX
+										MapYCur = MapY
+										
+										UI_SetElementPosition("UniverseScreen","Map2", MapX, MapY)
+										
+										UI_SetElementEnabled("UniverseScreen", "txtBtnRIGHT", 0)
+										UI_SetElementEnabled("UniverseScreen", "txtBtnLEFT", 0)
+										UI_SetElementEnabled("UniverseScreen", "txtBtnUP", 0)
+										UI_SetElementEnabled("UniverseScreen", "txtBtnDOWN", 0)
+										UI_SetElementEnabled("UniverseScreen", "txtBtnRESET", 0)
+							           ]],
 					;
 				},
 			},

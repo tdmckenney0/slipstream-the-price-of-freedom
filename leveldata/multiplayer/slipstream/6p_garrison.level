@@ -84,7 +84,7 @@ addSquadron("meg_veildebris_chunks", "meg_veildebris_chunk3", {-27568, -3309, 11
 addSquadron("meg_veildebris_chunks", "meg_veildebris_chunk4", {-27568, 1309, 12546}, -1, {120.108, -38.66, -149.942}, 0, 0)
 addSquadron("meg_veildebris_chunks", "meg_veildebris_chunk5", {-19000, 6273, 29099}, -1, {-58.112, 0, -17.069}, 0, 0)
 
-addSquadron("Garrison", "vgr_prisonstation", {0, 0, 0}, -1, {0, 0, 0}, 0, 0)
+addSquadron("Garrison", "vgr_prisonstation", {0, 0, 0}, 0, {0, 0, 0}, 0, 0)
 
 addSquadron("Guard", "vgr_battlecruiser", {-25333, 2000, 20000}, 3, {0, 0, 0,}, 0, 0);
 addSquadron("Guard", "vgr_battlecruiser", {-25333, 1000, 20000}, 3, {0, 0, 0,}, 0, 0);

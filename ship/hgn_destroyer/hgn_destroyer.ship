@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "UNCG Destroyer"
-NewShipType.sobDescription = "Alexander Class\nStandard Destroyer"
+NewShipType.displayedName = "Excalibur"
+NewShipType.sobDescription = "UNCG Destroyer"
 NewShipType.maxhealth = 700000
 NewShipType.regentime = 1500
 NewShipType.minRegenTime = 450

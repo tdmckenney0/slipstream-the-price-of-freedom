@@ -1,6 +1,6 @@
 NewShipType=StartShipConfig()
-NewShipType.displayedName ="DSCG Carrier"
-NewShipType.sobDescription ="Vostok Class\nCombat Carrier"
+NewShipType.displayedName ="Vostok"
+NewShipType.sobDescription ="DSCG Carrier"
 NewShipType.maxhealth =500000
 NewShipType.regentime =2000
 NewShipType.minRegenTime =1000

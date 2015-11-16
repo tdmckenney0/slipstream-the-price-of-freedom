@@ -99,7 +99,7 @@ build =
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 10,
-		DisplayedName = "$7110",
+		DisplayedName = "Technology Module",
 		Description = "$7111",
 	},
 	{
@@ -108,7 +108,7 @@ build =
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 10,
-		DisplayedName = "$7110",
+		DisplayedName = "Technology Module",
 		Description = "$7111",
 	},
 	{
@@ -168,8 +168,8 @@ build =
 	{
 		Type = SubSystem,
 		ThingToBuild = "Vgr_C_Module_Hyperspace",
-		RequiredResearch = "HyperspaceGateTech",
-		RequiredShipSubSystems = "",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "Research",
 		DisplayPriority = 20,
 		DisplayedName = "$7114",
 		Description = "$7115",
@@ -177,8 +177,8 @@ build =
 	{
 		Type = SubSystem,
 		ThingToBuild = "Vgr_MS_Module_Hyperspace",
-		RequiredResearch = "HyperspaceGateTech",
-		RequiredShipSubSystems = "",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "Research",
 		DisplayPriority = 20,
 		DisplayedName = "$7114",
 		Description = "$7115",
@@ -330,7 +330,7 @@ build =
 	{
 		Type = Ship,
 		ThingToBuild = "Vgr_Helios",
-		RequiredResearch = "AdvDestroyer",
+		RequiredResearch = "DestroyerGuns",
 		RequiredShipSubSystems = "CapShipProduction",
 		DisplayPriority = 302,
 		DisplayedName = "$7152",

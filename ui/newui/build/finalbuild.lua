@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 OUTLINECOLOR =
-    { 100, 100, 100, 255, }
+    { 122, 134, 154, 255, }
 SHIPQUEUECOLOR =
     { 255, 255, 255, 255, }
 SUBQUEUECOLOR =

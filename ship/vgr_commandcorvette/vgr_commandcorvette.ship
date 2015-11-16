@@ -1,11 +1,12 @@
+
 -- LuaDC version 0.9.19
 -- 5/23/2004 7:24:38 PM
 -- LuaDC by Age2uN
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DSCG Commander"
-NewShipType.sobDescription = "Caspian Class\nCommand Corvette"
+NewShipType.displayedName = "Caspian"
+NewShipType.sobDescription = "DSCG Command Corvette"
 NewShipType.maxhealth = 5000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0

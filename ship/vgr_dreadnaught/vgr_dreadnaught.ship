@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Tsaraii Dreadnaught"
-NewShipType.sobDescription = "Unknown"
-NewShipType.maxhealth = 900000
+NewShipType.displayedName = "Leviathan"
+NewShipType.sobDescription = "Tsaraii-DSCG Hybrid Dreadnaught"
+NewShipType.maxhealth = 750000
 NewShipType.regentime = 800
 NewShipType.minRegenTime = 800
 NewShipType.sideArmourDamage = 0.5
@@ -166,7 +166,9 @@ StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense8", 
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense9", "Weapon_HullDefense9")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense10", "Weapon_HullDefense10")
 StartShipWeaponConfig(NewShipType, "vgr_superheavybeam", "Weapon_Triton1", "Weapon_Triton1")
-StartShipWeaponConfig(NewShipType, "tsar_repulsor", "Weapon_Repulsor", "Trigger")
+
+StartShipHardPointConfig(NewShipType, "MissileT","Weapon_DreadTurret","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
+
 
 addShield(NewShipType, "EMP", 10000, 20)
 

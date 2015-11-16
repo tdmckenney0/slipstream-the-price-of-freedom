@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "$2004"
+NewSubSystemType.displayedName = "Technology Module"
 NewSubSystemType.sobDescription = "$2005"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035

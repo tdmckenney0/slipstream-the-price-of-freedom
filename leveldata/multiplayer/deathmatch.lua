@@ -96,7 +96,7 @@ GameSetupOptions =
 			"Ambient: No.9", "ambient\\amb_12",
 			"Ambient: No.10", "ambient\\amb_13",
 			"Ambient: No.11", "ambient\\amb_14",
-			"Battle: No.1", "battle\\battle_01",
+			"Battle: TPOF", "battle\\battle_01",
 			"Battle: No.2", "battle\\battle_04",
 			"Battle: No.3, Alternate", "battle\\battle_04_alt",
 			"Battle: No.4", "battle\\battle_06",

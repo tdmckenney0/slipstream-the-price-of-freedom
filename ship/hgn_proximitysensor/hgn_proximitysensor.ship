@@ -5,7 +5,7 @@
 --
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "$1548"
-NewShipType.sobDescription = "$1549"
+NewShipType.sobDescription = "UNCG Proximity Sensor"
 NewShipType.maxhealth = 250
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0

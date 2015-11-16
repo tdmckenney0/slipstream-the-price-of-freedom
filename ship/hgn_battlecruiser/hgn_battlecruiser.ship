@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "UNCG Battlecruiser"
-NewShipType.sobDescription = "Trafalgar Class\nBattlecruiser"
+NewShipType.displayedName = "Trafalgar"
+NewShipType.sobDescription = "UNCG Battlecruiser"
 NewShipType.maxhealth = 800000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 2000

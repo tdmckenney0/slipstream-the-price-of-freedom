@@ -48,19 +48,7 @@ function RestrictOptions( playerid )
 		Player_RestrictResearchOption(playerid, "AttackDroidWeaponUpgradeSPGAME_MED")
 		Player_RestrictResearchOption(playerid, "AttackDroidWeaponUpgradeSPGAME_HIGH")
 		Player_RestrictResearchOption(playerid, "RadiationDefenseField")
-		Player_RestrictResearchOption(playerid, "MothershipHealthUpgrade1")
-		Player_RestrictResearchOption(playerid, "MothershipHealthUpgrade2")
-		Player_RestrictResearchOption(playerid, "MothershipMAXSPEEDUpgrade1")
-		Player_RestrictResearchOption(playerid, "MothershipMAXSPEEDUpgrade2")
-		Player_RestrictResearchOption(playerid, "MothershipBUILDSPEEDUpgrade1")
 
-		Player_RestrictResearchOption(playerid, "ShipyardHealthUpgrade1")
-		Player_RestrictResearchOption(playerid, "ShipyardHealthUpgrade2")
-		Player_RestrictResearchOption(playerid, "ShipyardMAXSPEEDUpgrade1")
-		Player_RestrictResearchOption(playerid, "ShipyardMAXSPEEDUpgrade2")
-		Player_RestrictResearchOption(playerid, "ShipyardBUILDSPEEDUpgrade1")
-
-	
 
 
 

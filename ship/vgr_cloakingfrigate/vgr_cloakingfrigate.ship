@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DSCG Cloaking Frigate"
-NewShipType.sobDescription = "Rasputin Class\nCloaking Frigate"
+NewShipType.displayedName = "Cloak"
+NewShipType.sobDescription = "DSCG Cloaking Frigate"
 NewShipType.maxhealth = 65000
 NewShipType.regentime = 1200
 NewShipType.minRegenTime = 450

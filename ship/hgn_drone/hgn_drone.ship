@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "UNCG Drone"
-NewShipType.sobDescription = "Drone\nUnManned Fighter"
+NewShipType.displayedName = "Drone"
+NewShipType.sobDescription = "UNCG Drone\nUnManned Fighter"
 NewShipType.maxhealth = 3000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
@@ -24,8 +24,8 @@ NewShipType.defensiveFormation = "Delta"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 10
 NewShipType.collisionMultiplier = 3
-NewShipType.thrusterMaxSpeed = 450
-NewShipType.mainEngineMaxSpeed = 600
+NewShipType.thrusterMaxSpeed = 550
+NewShipType.mainEngineMaxSpeed = 700
 NewShipType.rotationMaxSpeed = 105
 NewShipType.thrusterAccelTime = 2
 NewShipType.thrusterBrakeTime = 1
@@ -163,6 +163,7 @@ addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "munition, Fighter, Co
 {
     ResourceLarge = "Flyby_Interceptor_vs_ResourceLarge", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
+addAbility(NewShipType, "HyperSpaceCommand",0,0,250,250,0,3.141592653)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadModel(NewShipType,1)

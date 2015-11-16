@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DSCG Laser Fighter"
-NewShipType.sobDescription = "Laser Class\nUnmanned Fighter"
+NewShipType.displayedName = "Guangzhou"
+NewShipType.sobDescription = "DSCG Laser Fighter\nUnmanned Fighter"
 NewShipType.maxhealth = 3900
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0

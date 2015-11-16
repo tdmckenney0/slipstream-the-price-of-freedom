@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "UNCG Bomber"
-NewShipType.sobDescription = "Bomber Class\nUnmanned Fighter"
+NewShipType.displayedName = "Tiger"
+NewShipType.sobDescription = "UNCG Bomber\nUnmanned Drone"
 NewShipType.maxhealth = 4000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
@@ -161,11 +161,14 @@ addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "munition, Capturer, F
 {
     Corvette = "Flyby_Bomber_vs_Fighter", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
+addAbility(NewShipType, "HyperSpaceCommand",0,0,250,250,0,3.141592653)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadModel(NewShipType, 1)
 StartShipWeaponConfig(NewShipType, "hgn_bomberplasmadriver", "Weapon_L", "Weapon_L")
 StartShipWeaponConfig(NewShipType, "hgn_bomberplasmadriver", "Weapon_R", "Weapon_R")
+StartShipWeaponConfig(NewShipType, "hgn_bomberempplasmadriver", "Weapon_L", "Weapon_L")
+StartShipWeaponConfig(NewShipType, "hgn_bomberempplasmadriver", "Weapon_R", "Weapon_R")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2

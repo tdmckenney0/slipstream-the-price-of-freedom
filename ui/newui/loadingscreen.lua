@@ -25,7 +25,7 @@ LoadingScreen =
 	size = {800, 600},
 	color = { 250, 250, 255, 255, },
 	textureUV = {0,0,1600,1200},
-	texture = "Data:UI\\NewUI\\textures\\loading.tga",
+	texture = "Data:UI\\NewUI\\textures\\background.tga",
    },
 },
 {
@@ -44,6 +44,8 @@ LoadingScreen =
 {
     type = "ProgressBar",
     progressColor = { 0, 0, 0, 255, },
+    outerBorderWidth = 1,
+    borderColor = "FEColorHeading3",
     position = { 10, 5, },
     size = { 230, 7, },
     name = "loadingProgress", 

@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DSCG Missile Frigate"
-NewShipType.sobDescription = "Irkutsk Class\nMissile Frigate"
+NewShipType.displayedName = "Irkutsk"
+NewShipType.sobDescription = "DSCG Missile Frigate"
 NewShipType.maxhealth = 75000
 NewShipType.regentime = 1200
 NewShipType.minRegenTime = 450

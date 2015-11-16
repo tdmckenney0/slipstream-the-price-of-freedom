@@ -5,7 +5,7 @@
 --
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "Mobile Factory"
-NewShipType.sobDescription = "Factory Class\nManufactures ships and weapons"
+NewShipType.sobDescription = "UNCG Factory\nManufactures ships and weapons"
 NewShipType.maxhealth=1000000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 2000
@@ -158,6 +158,7 @@ addAbility(NewShipType, "CanBuildShips", 1, "Drone_uncg, Fighter_Hgn, Corvette_H
 addAbility(NewShipType, "CanBeCaptured", 300, 0.1)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 0)
+addAbility(NewShipType, "SensorPing", 0, 1, 10, 2.5)
 addAbility(NewShipType, "HyperspaceInhibitorAbility", 0, 12000)
 addAbility(NewShipType, "DefenseFieldAbility", 0, 0, 1500, 500, 500, 1, 0.6, 0, "defensefield_sphere_spray")
 addAbility(NewShipType, "DefenseFieldShieldAbility", 1, 1500, 0, 0)

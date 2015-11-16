@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 OUTLINECOLOR =
-    { 190, 190, 190, 255, }
+    { 222, 234, 254, 255, }
 NewLaunchMenu =
 {
     size = { 586, 15, 215, 497, },

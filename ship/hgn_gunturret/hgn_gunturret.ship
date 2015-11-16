@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "UNCG Sentry Platform"
-NewShipType.sobDescription = "Gatling Gun Version\nAnti-Fighter"
+NewShipType.displayedName = "Gun Sentry"
+NewShipType.sobDescription = "UNCG Platform"
 NewShipType.maxhealth = 25000
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
@@ -137,8 +137,10 @@ addAbility(NewShipType, "GuardCommand", 1, 5000, 500)
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
 NewShipType.disableOnRaceChange = 0
 LoadModel(NewShipType, 1)
-StartShipHardPointConfig(NewShipType,"Weapon2","Weapon_Top","Weapon","Innate","Damageable","hgn_gatlinggunsmall","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"Weapon1","Weapon_Bottom","Weapon","Innate","Damageable","hgn_gatlinggunsmall","","","","","","","","")
+
+StartShipWeaponConfig(NewShipType, "hgn_gatlinggunsmall", "Weapon_Top", "")
+StartShipWeaponConfig(NewShipType, "hgn_gatlinggunsmall", "Weapon_Bottom", "")
+
 addShield(NewShipType, "EMP", 40, 20)
 NewShipType.battleScarMaxTriBase = 20
 NewShipType.battleScarMaxTriInc = 30
