@@ -5,8 +5,8 @@
 --
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DSCG Battlecruiser"
-NewShipType.sobDescription = "Judgement Class\nBattleship"
-NewShipType.maxhealth = 800000
+NewShipType.sobDescription = "Judgement Class\nHeavy Battlecruiser"
+NewShipType.maxhealth = 825000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 750
 NewShipType.sideArmourDamage = 0.6
@@ -154,7 +154,18 @@ addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653);
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "dogfight_capital")
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "dread_strafe",
+{
+    Fighter = "movetotargetandshoot",
+},
+{
+    Corvette = "movetotargetandshoot",
+},
+{
+    Frigate = "movetotargetandshoot",
+},
+{
+    Mothership = "Flyround_destroyer",})
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
 addAbility(NewShipType, "CanBuildShips", 1,"Drone_DOL,  SubSystem_Vgr","Fighter, SubSystemModule")
 addAbility(NewShipType, "CanBeCaptured", 160, 0.1)
@@ -169,11 +180,11 @@ StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD2", "Fire_
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD3", "Fire_Missile")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD4", "Fire_Missile")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD5", "Fire_Missile")
-StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser1", "")
-StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser2", "")
-StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser3", "")
-StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser4", "")
-StartShipWeaponConfig(NewShipType, "Vgr_BCForwardWeapon", "Weapon_BCUberPulse", "Weapon_BCUberPulse")
+StartShipWeaponConfig(NewShipType, "vgr_iondefense", "Weapon_BCHeavyLaser1", "")
+StartShipWeaponConfig(NewShipType, "vgr_iondefense", "Weapon_BCHeavyLaser2", "")
+StartShipWeaponConfig(NewShipType, "vgr_iondefense", "Weapon_BCHeavyLaser3", "")
+StartShipWeaponConfig(NewShipType, "vgr_iondefense", "Weapon_BCHeavyLaser4", "")
+StartShipWeaponConfig(NewShipType, "vgr_gimbledion", "Weapon_BCUberPulse", "Weapon_BCUberPulse")
 
 addShield(NewShipType, "EMP", 10000, 20)
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_BattleCruiserEngine", "", "", "", "", "", "", "", "")
@@ -206,7 +217,7 @@ SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Sml04", 1, 0.01, 10, 60, -300, 25, 3
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Sml05", 1, 0.01, 60, 10, 30, 75, 35, 25, 65, 75, 0, 0, 0, 60, 0, 0, 0, 50)
 NewShipType.battleScarMaxTriBase = 175
 NewShipType.battleScarMaxTriInc = 250
-NewShipType.sobDieTime = 6
+NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1
 NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0

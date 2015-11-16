@@ -158,8 +158,7 @@ addAbility(NewShipType, "HyperSpaceCommand",1,0,250,250,0,3.141592653)
 addAbility(NewShipType, "MinelayerAbility",1,3.5)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Fighter, Corvette, Frigate,  SmallCapitalShip, BigCapitalShip, Utility", "JustShoot")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
---addAbility(NewShipType, "CanBuildShips", 1, "Drone_uncg, Corvette_Hgn, Frigate_Hgn, Utility_Hgn, Platform_Hgn, SubSystem_Hgn,Shipyard_Hgn, Probe_Hgn", "Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors, Capital")
-addAbility(NewShipType,"CanBuildShips",1,"Drone_uncg, Corvette_Hgn, Frigate_Hgn, Utility_Hgn, Platform_Hgn, SubSystem_Hgn,Battlecruiser_Hgn, SuperCap_Hgn, Probe_Hgn, Shipyard_Hgn, SubSystemLarge_Hgn","Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors, Capital");
+addAbility(NewShipType, "CanBuildShips", 1, "Drone_uncg, Fighter_hgn, Corvette_Hgn, Frigate_Hgn, Utility_Hgn, Platform_Hgn, SubSystem_Hgn, Shipyard_hgn, Probe_Hgn", "Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors")
 addAbility(NewShipType, "CanBeCaptured", 160, 0.5)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "CloakAbility", 0, 2, 2000, 4000, 3, 100, 1, 1000)
@@ -174,7 +173,6 @@ addShield(NewShipType, "EMP", 10000, 20)
 StartShipHardPointConfig(NewShipType, "Production 1", "HardpointProduction1", "System", "Production", "Destroyable", "", "Hgn_C_Production_Fighter", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Production 2", "HardpointProduction2", "System", "Production", "Destroyable", "", "Hgn_C_Production_Corvette", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Production 3", "HardpointProduction3", "System", "Production", "Destroyable", "", "Hgn_C_Production_Frigate", "Hgn_C_Production_FrigateAdvanced", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Production 4", "Hardpoint_CapShip", "System", "Production", "Destroyable", "", "hgn_c_production_capship", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System", "Generic", "Destroyable", "", "Hgn_C_Module_Research", "Hgn_C_Module_Hyperspace", "Hgn_C_Module_PlatformControl", "Hgn_C_Module_CloakGenerator", "Hgn_C_Module_HyperspaceInhibitor", "Hgn_C_Module_FireControl", "Hgn_C_Module_ResearchAdvanced", "Hgn_C_Module_BuildSpeed")
 StartShipHardPointConfig(NewShipType, "Generic 2", "HardpointGeneric2", "System", "Generic", "Destroyable", "", "Hgn_C_Module_Research", "Hgn_C_Module_Hyperspace", "Hgn_C_Module_PlatformControl", "Hgn_C_Module_CloakGenerator", "Hgn_C_Module_HyperspaceInhibitor", "Hgn_C_Module_FireControl", "Hgn_C_Module_ResearchAdvanced", "Hgn_C_Module_BuildSpeed")
 StartShipHardPointConfig(NewShipType, "Sensors 1", "HardpointSensors1", "System", "Sensors", "Destroyable", "", "Hgn_C_Sensors_DetectHyperspace", "Hgn_C_Sensors_AdvancedArray", "Hgn_C_Sensors_DetectCloaked", "", "", "", "", "")
@@ -192,8 +190,8 @@ SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Sml04", 1, 0.01, 10, 60, -300, 25, 3
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Sml05", 1, 0.01, 60, 10, 30, 75, 35, 25, 65, 75, 0, 0, 0, 60, 0, 0, 0, 50)
 NewShipType.battleScarMaxTriBase = 150
 NewShipType.battleScarMaxTriInc = 200
-NewShipType.sobDieTime = 4
-NewShipType.sobSpecialDieTime = 4
+NewShipType.sobDieTime = 1
+NewShipType.sobSpecialDieTime = 1
 NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
 NewShipType.deadSobFadeTime = 0

@@ -1,13 +1,13 @@
 Slipstream: The Price of Freedom
-Build Time: 2:05 AM 7/1/2009
+Build Time: 4:15 AM 8/10/2009
 Built By: Emperor
-Build System: Xero-Point
+Build System: Obelisk
 	     Microsoft Windows 7 Ultimate x64 [Version 6.1.7100]
-	     AMD Athlon x2 @ 2.5 GHz, 4.00 GB RAM, Nvidia Geforce 8600 GT
+	     Intel Core i7 @ 2.68 GHz, 6.00 GB RAM, Nvidia Geforce 8600 GT/Nvidia Geforce 6600 GT
 Build Folder: D:\Program Files (x86)\Sierra\Homeworld2\Data\TPOF\TPOF_COMPILE\
 OS Support: Windows 2000/XP/VISTA/7 x86/x64, Mac OS X Tiger/Leopard (Intel)
 Build Locale: United States, North America, English
-Build Version: 2.5
+Build Version: 2.5b
 Hw2 Version: 1.1
 Copyright Sub-Real Industries 2007-2009.
 Homeworld 2 Engine Copyright THQ and Relic Entertainment 2003-2009

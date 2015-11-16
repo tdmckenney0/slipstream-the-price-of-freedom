@@ -144,30 +144,31 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "n_delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership", "FlyBy_Interceptor_vs_Frigate", 
-{ 
-    Fighter = "Flyby_Interceptor_vs_Fighter", 
-}, 
-{ 
-    SubSystem = "TopAttack_Interceptor_vs_Subsystem", 
-}, 
-{ 
-    SmallCapitalShip = "Flyby_Interceptor_vs_CapShip", 
-}, 
-{ 
-    BigCapitalShip = "Flyby_Interceptor_vs_CapShip", 
-}, 
-{ 
-    Mothership = "Flyby_Interceptor_vs_Mothership", 
-}, 
-{ 
+addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership", "FlyBy_Interceptor_vs_Frigate",
+{
+    Fighter = "Flyby_Interceptor_vs_Fighter",
+},
+{
+    SubSystem = "TopAttack_Interceptor_vs_Subsystem",
+},
+{
+    SmallCapitalShip = "Flyby_Interceptor_vs_CapShip",
+},
+{
+    BigCapitalShip = "Flyby_Interceptor_vs_CapShip",
+},
+{
+    Mothership = "Flyby_Interceptor_vs_Mothership",
+},
+{
     ResourceLarge = "Flyby_Interceptor_vs_ResourceLarge", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "RetireAbility", 1, 0)
-LoadModel(NewShipType,1)
+--LoadModel(NewShipType,1)
+LoadSharedModel(NewShipType, "Vgr_scout")
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
-StartShipWeaponConfig(NewShipType, "vgr_dronecannon", "Weapon_frontgun", "Null")
+StartShipWeaponConfig(NewShipType, "vgr_dronecannon", "Weapon_Autogun", "Null")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2

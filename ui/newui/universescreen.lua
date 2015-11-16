@@ -20,7 +20,7 @@ UniverseScreen =
     {
         size =
             { 800, 600, },
-        texture = "Data:UI\\NewUI\\Background\\menu.anim",
+        texture = "Data:UI\\NewUI\\Background\\map1600.tga",
         textureUV =
             { 0, 0, 1600, 1200, }, },
 },
@@ -32,7 +32,7 @@ UniverseScreen =
 			Text =
 			{
 				-- TUTORIAL
-				text = "SLIPSTREAM",
+				text = "SLIPSTREAM UNIVERSE",
 				textStyle = "FEHeading1",
 			},
 			;
@@ -46,80 +46,10 @@ UniverseScreen =
 			Text =
 			{
 				-- LEARN TO PLAY
-				text = "The Price of Freedom",
+				text = "Milky Way - Current Year: 2681",
 				textStyle = "FEHeading2",
 			},
 			;
-},
-{
-    type = "Frame",
-    autosize = 0,
-    outerBorderWidth = 1,
-    borderColor = "FEColorHeading3",
-    backgroundColor = "FEColorBackground1",
-	position = {28,112},
-	size = {742,338},
-    --position =
-      --  { 262.5, 187, },
-    autoarrange = 1,
- --   autoarrangeWidth = 304,
-    autoarrangeSpace = 0,
-    --maxSize =
-      --  { 275, 400, },
-;
-{
-    type = "Frame",
-    size =
-        { 304, 2, },
-},
-{
-    type = "TextLabel",
-    size =
-        { 375, 13, },
-    Text =
-    {
-        textStyle = "FEHeading3",
-        text = "Slipstream, ERA II, Current Year: 2681",
-        offset =
-            { 24, 0, }, },
-},
-{
-    type = "Frame",
-    size =
-        { 304, 13, },
-},
-{
-    type = "TextLabel",
-	autosize = 0,
-    size =
-        { 718, 330, },
-	wrapping = 1,
-	marginWidth = 0,
-	marginHeight = 0,
-    Text =
-    {
-        textStyle = "Buttonfont",
-        --text = "The UNCG has been in control of most of humanity since Earth's Destruction in 2130. On the other side of the galaxy was the DSCG, a rival to the UNCG, and has been since the year 2145. The Two factions never had contact since. The Year is now 2300, and Emperor Alexander of the American Empire, has been elected chairman of the UNCG. His Plan is to take over the UNCG and erect the Empire of Humanity. Meanwhile, The DCSG, had found Ancient Tablets referring to massive kingdom made entirely of light. However, more secrets lie buried behind a region where the current UNCG resides. With the DOL and the UNCG Enemies, a war is imminent.",
-		text = "Place holder for the new universe screen..",
-		hAlign = "left",
-		vAlign = "Top",
-		offset =
-            { 24, 0, }, },
-},
-{
-    type = "Frame",
-    size =
-        { 296, 15, }, },
-},
-{
-    type = "TextListBoxItem",
-    buttonStyle = "FEListBoxItemButtonStyle",
-    name = "m_levelListBoxItem",
-    visible = 0,
-    enabled = 0,
-    Text =
-    {
-        textStyle = "FEListBoxItemTextStyle", },
 },
 
 --Bottom Navigation Screen

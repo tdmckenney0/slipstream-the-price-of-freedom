@@ -1,12 +1,11 @@
--- LuaDC version 0.9.20
--- 1/13/2008 6:28:56 PM
--- LuaDC by Age2uN
--- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
---
 GUID =
     { 110, 91, 157, 190, 18, 23, 250, 78, 144, 20, 41, 246, 181, 128, 214, 12, }
 GameRulesName = "TPOF: Advanced"
 Description = "Advanced Game Options for Slipstream: The Price of Freedom. Works only on Windows 2000/XP/Vista/7."
+Directories =
+{
+  Levels = "data:LevelData\\Multiplayer\\slipstream\\",
+}
 GameSetupOptions =
     {
     {
@@ -24,7 +23,7 @@ GameSetupOptions =
         default = 1,
         visible = 1,
         choices =
-            { "$3215", "Small", "$3216", "Normal", "$3217", "Large", "Unlimited", "unlimited"}, },
+            { "$3215", "Small", "$3216", "Normal", "$3217", "Large"}, },
     {
         name = "resstart",
         locName = "$3205",
@@ -50,16 +49,16 @@ GameSetupOptions =
         choices =
             { "$3226", "random", "$3227", "fixed", }, },
   {
-          name = "startwith",
+          name = "startfleet",
           locName = "Starting Mode",
           tooltip = "Choose A Starting Fleet",
           default = 0,
           visible = 1,
           choices =
           {
-              "Default", "one",
-              "Carriers Only", "carriers",
-			  "Instant Action", "instant",
+              "Default", "1",
+              "Carriers Only", "2",
+			  "Instant Action", "3",
           },
    },
    {
@@ -69,21 +68,22 @@ GameSetupOptions =
 		default = 0,
 		visible = 1,
 		choices =
-		{ "HW2 Normal", 0, "Kill All Enemy Ships", 2, "Quit Manually", 3, },
+		{ "Default", 0, "Destroy Team Production", 1, "Destroy All ships", 2, "Quit Manually", 3, },
 	},
     {
-		name = "bgmusic",
+		name = "randommusic",
 		locName = "Music",
 		tooltip = "Select the background music",
-		default = 4,
+		default = 0,
 		visible = 1,
 		choices =
 		{
-			"Map Default", "null",
-			"No Music", "staging\\Mute.fda",
-			"Shuffle", "shuffle",
-			"Main Menu Theme", "staging\\staging_01",
 			"Slipstream Ambient", "staging\\staging_04",
+			"The Price of Freedom", "staging\\staging_01",
+			"None", "staging\\Mute.fda",
+			"Shuffle All", "shuffle",
+			"Shuffle Ambient", "shufflea",
+			"Shuffle Battle", "shuffleb",
 			"Ambient No.1", "ambient\\amb_01",
 			"Ambient No.2", "ambient\\amb_02",
 			"Ambient No.3", "ambient\\amb_03",
@@ -104,6 +104,7 @@ GameSetupOptions =
 			"Battle - Planet Killers", "battle\\battle_planetkillers",
 			"Battle - Sajuuk", "battle\\battle_sajuuk",
 			"Battle - Arrival", "battle\\battle_arrival",
+			"                ", "staging\\gravity",
 		},
 	},
     }
@@ -117,48 +118,113 @@ Events.endGame =
         },
     }
 
-function PlayMusicRule()
-	Sound_MusicPlay("data:sound\\music\\" .. GetGameSettingAsString("bgmusic"))
-	Rule_Remove("PlayMusicRule")
-end
-
 function OnInit()
     MPRestrict()
 
-	if (GetGameSettingAsString("bgmusic") == "shuffle") then
-		dofilepath("data:soundscripts/randommusic.lua")
-		print("Random Music")
+	randommusic = GetGameSettingAsString("randommusic")
+
+	if randommusic == "shuffle" then
+		dofilepath("data:soundscripts/playlists/allmusic.lua")
+		Rule_Add("RandomMusicRule")
+	elseif randommusic == "shufflea" then
+		dofilepath("data:soundscripts/playlists/ambientonly.lua")
+		Rule_Add("RandomMusicRule")
+	elseif randommusic == "shuffleb" then
+		dofilepath("data:soundscripts/playlists/battleonly.lua")
+		Rule_Add("RandomMusicRule")
+	elseif randommusic == nil then
+		dofilepath("data:soundscripts/playlists/allmusic.lua")
+		Rule_Add("RandomMusicRule")
+	elseif randommusic == "staging\\gravity" then
+		Sound_MusicPlay("data:sound\\music\\staging\\gravity")
+		Subtitle_Message("Now playing Gravity by Embassy - Nice Job discovering the Easter Egg, Enjoy! --SRI-Emperor", 10)
 	else
-		Rule_Add("PlayMusicRule")
-		print("Custom Music")
+		Sound_MusicPlay("data:sound\\music\\" .. GetGameSettingAsString("randommusic"))
 	end
 
-if (GetGameSettingAsNumber("wincondition") == 0) then
-			Rule_AddInterval("CheckPlayerProductionShipsLeftRule", 1)
-		elseif (GetGameSettingAsNumber("wincondition") == 1) then
-			Rule_AddInterval("CheckTeamProductionShipsLeftRule", 1)
-		elseif (GetGameSettingAsNumber("wincondition") == 2) then
-			Rule_AddInterval("CheckTeamAnyShipsLeftRule", 1)
-		end
+
+	wincondition = GetGameSettingAsNumber("wincondition")
+
+	if wincondition == 0 then
+		Rule_AddInterval("CheckPlayerProductionShipsLeftRule", 1)
+	elseif wincondition == 1 then
+		Rule_AddInterval("CheckTeamProductionShipsLeftRule", 1)
+	elseif wincondition == 2 then
+		Rule_AddInterval("CheckTeamAnyShipsLeftRule", 1)
+	elseif wincondition == 3 then
+		Rule_AddInterval("DoNotQuit", 1)
+	else
+		Rule_AddInterval("CheckPlayerProductionShipsLeftRule", 1)
+	end
 
 
     Rule_Add("MainRule")
 
-   if (GetGameSettingAsString("startwith") == "one") then
-          SetStartFleetSuffix("")
-		  print("Normal Start")
-      elseif (GetGameSettingAsString("startwith") == "carriers") then
-          SetStartFleetSuffix("Carriers")
-		  print("Carrier Start")
-	  elseif (GetGameSettingAsString("startwith") == "instant") then
-          SetStartFleetSuffix("instant")
-		  print("Instant Action")
-	  elseif (GetGameSettingAsString("startwith") == "arena") then
-          SetStartFleetSuffix("arena")
-		  print("Armageddon")
-      end
+	startfleet = GetGameSettingAsNumber("startfleet")
+
+	if startfleet == 1 then
+		SetStartFleetSuffix("")
+	elseif startfleet == 2 then
+		SetStartFleetSuffix("Carriers")
+	elseif startfleet == 3 then
+		SetStartFleetSuffix("Instant")
+	else
+		SetStartFleetSuffix("")
+	end
+
+
 end
 
+--===============================================================================================
+--Runs the random music system..moved from the randommusic.lua so that we can just make playlists.
+-- table of previously-played tracks, resets to zero.
+
+playedBin = {}
+
+-- the gamerule - Defines the function to play music through the game
+function RandomMusicRule()
+	RandomMusic(PlayList)
+end
+
+function RandomMusic(tPlaylist)
+	-- function created by Mikail, EvilleJedi
+	-- Input:	<tPlaylist>: the playlist (a table) of songs.
+	local passBool = 1
+	local musicPath = "data:sound\\music\\"
+	local listLen = getn(tPlaylist)
+	local binLen = getn(playedBin)
+	local randNum = random(listLen)
+	local track_file = musicPath .. tPlaylist[randNum][1]
+	local track_title = tPlaylist[randNum][2]
+	local track_length = tPlaylist[randNum][3]
+	local track_m = floor(track_length / 60)
+	local track_s = track_length - track_m * 60
+	local track_string = "Now playing (" .. randNum .. "/" .. listLen .. "): " .. track_title .. " (" .. track_m .. "m " .. track_s .. "s)"
+	for k = 1, binLen do
+		-- don't play the same track twice
+		if (playedBin[k] == randNum) then
+			passBool = 0
+			-- if the end of the list has been reached, start over
+			if (k == listLen) then
+				playedBin = {}
+			end
+			break
+		end
+	end
+	if (passBool == 0) then
+		RandomMusic(tPlaylist)
+	else
+		Sound_MusicPlay(track_file)
+		Subtitle_Message(track_string, 10)
+		print(track_string)
+		tinsert(playedBin, randNum)
+		Rule_AddInterval("RandomMusicRule", track_length)
+		Rule_Remove("RandomMusicRule")
+	end
+end
+
+
+--==============================================================================
 
 AnyPlayerIndex = 0
 
@@ -216,6 +282,13 @@ function CheckTeamAnyShipsLeftRule()
 	else
 		AnyPlayerIndex = AnyPlayerIndex + 1
 	end
+end
+
+
+-------------------------------------------------------------------------------
+-- Stops the game from terminating even when all enemies are gone
+--
+function DoNotQuit()
 end
 
 -------------------------------------------------------------------------------

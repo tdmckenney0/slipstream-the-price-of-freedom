@@ -1,9 +1,9 @@
-StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","Super_Beam","Normal",0,20000,0,8,4,0,20,0,1,45,0,0,0,0,0,0,0.1,"Bypass",1,0,1000000)
+StartWeaponConfig(NewWeaponType,"Gimble","InstantHit","Super_Beam","Normal",0,20000,0,7,4,0,20,0,1,60,0,0,0,0,0,0,0.1,"Bypass",1,0,1000000)
 
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",200000,250000,"")
-AddWeaponResult(NewWeaponType,"Hit","Push","Target",-1000,-1000,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",300000,350000,"")
+AddWeaponResult(NewWeaponType,"Hit","Push","Target",50,50,"")
 
-setAngles(NewWeaponType,15,0,0,0,0)
+setAngles(NewWeaponType,20,0,0,0,0)
 
 setMiscValues(NewWeaponType,0,0)
 

@@ -29,7 +29,7 @@
 --
 
 --basic colours
-FriendlyColour      = {0,1,0,1.0}
+FriendlyColour      = {0,1,0,1}
 AlliedColour        = {1,1,0,1.0}
 AlliedColourHurt    = {215/255,205/255,0,1}
 AlliedColourDying   = {205/255,205/255,0,1}

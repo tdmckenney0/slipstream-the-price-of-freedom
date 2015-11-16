@@ -28,6 +28,62 @@ PersistantData = {
          subsystems = {
          },
          shiphold = {
+		 		{
+         type = "hgn_drone",
+         name = "",
+				},
+				{
+         type = "hgn_drone",
+         name = "",
+				},
+				{
+         type = "hgn_drone",
+         name = "",
+				},
+				{
+         type = "hgn_pulsarcorvette",
+         name = "",
+				},
+				{
+         type = "hgn_assaultcorvette",
+         name = "",
+				},
+				{
+         type = "hgn_minelayercorvette",
+         name = "",
+				},
+				{
+         type = "hgn_minelayercorvette",
+         name = "",
+				},
+				{
+         type = "hgn_attackbomber",
+         name = "",
+				},
+				{
+         type = "hgn_attackbomber",
+         name = "",
+				},
+				{
+         type = "hgn_attackbomber",
+         name = "",
+				},
+				{
+         type = "hgn_Interceptor",
+         name = "",
+				},
+				{
+         type = "hgn_Interceptor",
+         name = "",
+				},
+				{
+         type = "hgn_Interceptor",
+         name = "",
+				},
+				{
+         type = "hgn_Interceptor",
+         name = "",
+				},
          },
          name = "",
          size = 1,
@@ -55,6 +111,17 @@ PersistantData = {
 
 		},
 		{
+         type = "Hgn_carrier",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 1,
+
+		},
+		{
          type = "hgn_assaultfrigate",
          subsystems = {
          },
@@ -65,15 +132,6 @@ PersistantData = {
          number = 5,
 		},
 		{
-         type = "hgn_drone",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         number = 5,
-		},
-	  {
          type = "hgn_crossbow_cruiser",
          subsystems = {
          },

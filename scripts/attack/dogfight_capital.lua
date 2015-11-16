@@ -1,12 +1,17 @@
 AttackStyleName = AttackRun
 Data = {
-  howToBreakFormation = BreakImmediately,
-  maxBreakDistance = 4500,
-  distanceFromTargetToBreak = 	1500,
-  safeDistanceFromTargetToDoActions = 2000,
+  howToBreakFormation = BreakImmediately, --StraightAndScatter,
+  maxBreakDistance = 4000,
+  distanceFromTargetToBreak = 	5000,
+  --safeDistanceFromTargetToDoActions = 2000,
   useTargetUp = 0,
-  --coordSysToUse = Target,
-  minSpeedFraction = 0.75,
+  coordSysToUse = Target,
+  horizontalMin = 0.6,
+  horizontalMax = 0.9,
+  horizontalFlip = 1,
+  verticalMin = 0.3,
+  verticalMax = 0.7,
+  verticalFlip = 1,
   RandomActions = {
     {
       Type = PickNewTarget,
@@ -26,6 +31,16 @@ Data = {
       Weighting = 1,
       FlightManeuverName = "RollCCW_slow",
     },
+	 {
+      Type = FlightManeuver,
+      Weighting = 1,
+      FlightManeuverName = "RollCW",
+    },
+    {
+      Type = FlightManeuver,
+      Weighting = 1,
+      FlightManeuverName = "RollCCW",
+    },
     {
       Type = FlightManeuver,
       Weighting = 1,
@@ -36,16 +51,6 @@ Data = {
       Weighting = 1,
       FlightManeuverName = "HalfRollCCW",
     },
- --   {
- --     Type = FlightManeuver,
- --     Weighting = 1,
- --     FlightManeuverName = "BarrelRoll",
- --   },
- --   {
- --     Type = FlightManeuver,
- --     Weighting = 1,
- --     FlightManeuverName = "ImmelMann",
- --   },
     {
      Type = FlightManeuver,
      Weighting = 1,
@@ -91,11 +96,6 @@ Data = {
       Weighting = 1,
       FlightManeuverName = "NinetyDegLeftTurn",
     },
- --   {
- --     Type = FlightManeuver,
- --     Weighting = 1,
- --     FlightManeuverName = "ImmelMann",
- --   },
     {
       Type = FlightManeuver,
       Weighting = 1,

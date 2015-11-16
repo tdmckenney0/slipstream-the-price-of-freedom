@@ -269,11 +269,11 @@ armourFamily =
         name = "Unarmoured", },
     {
         name = "SuperConducting", },
-   {
+    {
         name = "AntiChemical", },
-   {
+    {
         name = "AntiMassImpact", },
-   {
+    {
         name = "Composite", },
     {
         name = "LightArmour", },
@@ -367,6 +367,10 @@ unitcapsShipType =
         stringParam = "$2124", },
     {
         name = "Destroyer",
+        numParam = 31,
+        stringParam = "$2125", },
+	{
+        name = "Cruiser",
         numParam = 31,
         stringParam = "$2125", },
     {

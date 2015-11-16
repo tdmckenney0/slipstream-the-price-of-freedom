@@ -30,7 +30,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "FEColorBackground1",
-			string = "162,162,162,200",
+			string = "200,200,200,127",
 		},
 		{
 			name = "FEColorBackground2",
@@ -38,7 +38,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "FEColorDialog",
-			string = "162,162,162,200",
+			string = "200,200,200,175",
 		},
 		{
 			name = "FEColorOutline",

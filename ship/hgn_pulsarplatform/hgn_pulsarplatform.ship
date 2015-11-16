@@ -137,8 +137,8 @@ addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
 NewShipType.disableOnRaceChange = 0
 LoadModel(NewShipType, 1)
-StartShipHardPointConfig(NewShipType,"Weapon2","Weapon_Top","Weapon","Innate","Indestructible","hgn_lasersmall","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"Weapon1","Weapon_Bottom","Weapon","Innate","Indestructible","hgn_lasersmall","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Weapon2","Weapon_Top","Weapon","Innate","Damageable","hgn_lasersmall","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"Weapon1","Weapon_Bottom","Weapon","Innate","Damageable","hgn_lasersmall","","","","","","","","")
 addShield(NewShipType, "EMP", 40, 20)
 NewShipType.battleScarMaxTriBase = 20
 NewShipType.battleScarMaxTriInc = 30

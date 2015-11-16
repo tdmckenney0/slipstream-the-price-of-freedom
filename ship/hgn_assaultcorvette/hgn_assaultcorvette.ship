@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "UNCG Standard Corvette"
 NewShipType.sobDescription = "Bum-Rush Class\nStandard Corvette"
-NewShipType.maxhealth = 2000
+NewShipType.maxhealth = 7500
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 0.95
@@ -139,23 +139,23 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "dockline"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip", "FlyRound_Corvette_vs_Frigate", 
-{ 
-    Fighter = "FlyRound_Corvette_vs_Fighter", 
-}, 
-{ 
-    Mothership = "flyround_Corvette_vs_Mothership", 
-}, 
-{ 
-    SmallCapitalShip = "FlyRound_Corvette_vs_CapShip", 
-}, 
-{ 
-    BigCapitalShip = "FlyRound_Corvette_vs_CapShip", 
-}, 
-{ 
-    SubSystem = "FrontalVsSubSystem_Corvette", 
-}, 
-{ 
+addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip", "FlyRound_Corvette_vs_Frigate",
+{
+    Fighter = "FlyRound_Corvette_vs_Fighter",
+},
+{
+    Mothership = "flyround_Corvette_vs_Mothership",
+},
+{
+    SmallCapitalShip = "FlyRound_Corvette_vs_CapShip",
+},
+{
+    BigCapitalShip = "FlyRound_Corvette_vs_CapShip",
+},
+{
+    SubSystem = "FrontalVsSubSystem_Corvette",
+},
+{
     Corvette = "FlyBy_Corvette_vs_Corvette", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)

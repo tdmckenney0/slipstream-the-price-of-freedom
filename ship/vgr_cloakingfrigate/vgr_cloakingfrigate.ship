@@ -9,11 +9,11 @@ NewShipType.sobDescription = "Rasputin Class\nCloaking Frigate"
 NewShipType.maxhealth = 65000
 NewShipType.regentime = 1200
 NewShipType.minRegenTime = 450
-NewShipType["sideArmourDamage"]=0.5;
-NewShipType["rearArmourDamage"]=0.65;
-NewShipType["bottomArmourDamage"]=0.65;
-NewShipType["topArmourDamage"]=0.8;
-NewShipType["frontArmourDamage"]=0.55;
+NewShipType.sideArmourDamage = 0.5
+NewShipType.rearArmourDamage =0.65
+NewShipType.bottomArmourDamage =0.65
+NewShipType.topArmourDamage =0.8
+NewShipType.frontArmourDamage =0.55
 NewShipType.isTransferable = 1
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 2
@@ -90,9 +90,9 @@ NewShipType.buildTime = 55
 NewShipType.buildPriorityOrder = 30
 NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160
-NewShipType["visualRange"]=7500;
-NewShipType["prmSensorRange"]=7500;
-NewShipType["secSensorRange"]=9000;
+NewShipType.visualRange =7500
+NewShipType.prmSensorRange =7500
+NewShipType.secSensorRange =9000
 NewShipType.detectionStrength = 1
 NewShipType.TOIcon = "Diamond"
 NewShipType.TOScale = 1
@@ -144,19 +144,15 @@ NewShipType.launchFormation = "delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
-addAbility(NewShipType,"HyperSpaceCommand",0,0,250,250,0,3.141592653);
+addAbility(NewShipType,"HyperSpaceCommand",0,0,250,250,0,3.141592653)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.5, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Utility, Corvette, Fighter", "Justshoot")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 600)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "CanBeCaptured", 45, 0.1)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
-LoadSharedModel(NewShipType, "vgr_heavymissilefrigate")
-StartShipWeaponConfig(NewShipType, "vgr_heavyfusionmissilelauncherbc", "Weapon_HullDefense", "Fire_Missile1")
-
+LoadModel(NewShipType, 1)
 addAbility(NewShipType, "CloakAbility", 1, 2, 5000, 4000, 3, 100, 1, 1000)
-
-
 addShield(NewShipType, "EMP", 310, 20)
 NewShipType.battleScarMaxTriBase = 75
 NewShipType.battleScarMaxTriInc = 100
@@ -166,6 +162,6 @@ NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
 NewShipType.deadSobFadeTime = 1
 NewShipType.trailLinger = 2
-setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5, 
+setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5,
     { 0.92, 0.21, 0.09, 0.25, })
 loadShipPatchList(NewShipType, "data:sound/sfx/ship/Vaygr/Frigate/", 0, "Engines/VFrigateEng", "", 1, "Ambience/VFrigateAmb", "")

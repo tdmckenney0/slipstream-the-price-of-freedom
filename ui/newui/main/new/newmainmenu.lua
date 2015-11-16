@@ -7,23 +7,9 @@ NewMainMenu =
     RootElementSettings =
     {
         backgroundColor =
-            { 0, 0, 0, 255, }, },
+            { 0, 0, 0, 0, }, },
     pixelUVCoords = 1,
 ;
-{
-    type = "Frame",
-    position =
-        { 0, 0, },
-    size =
-        { 800, 600, },
-    BackgroundGraphic =
-    {
-        size =
-            { 800, 600, },
-		texture = "Data:UI\\NewUI\\Background\\menu.anim",
-        textureUV =
-            { 0, 0, 1600, 1200, }, },
-},
 {
     type = "Frame",
     autosize = 1,
@@ -77,7 +63,7 @@ NewMainMenu =
 {
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
-    text = "About Slipstream",
+    text = "Slipstream Universe Map",
     name = "btnTutorial",
 	enabled = 1,
     width = 272,
@@ -93,7 +79,7 @@ NewMainMenu =
     buttonStyle = "FEButtonStyle1",
     text = "The Price of Freedom Campaign",
     name = "btnCampaign",
-    enabled = 0,
+    enabled = 1,
     width = 272,
 },
 {
@@ -188,7 +174,7 @@ NewMainMenu =
     Text =
     {
         font = "Buttonfont",
-        text = "Build Version 2.5 - July 1, 2009 ",
+        text = "Build Version 2.5.5000 - August 10, 2009  ",
         color =
             { 255, 255, 255, 255, },
         hAlign = "Right",
@@ -203,9 +189,10 @@ NewMainMenu =
     Text =
     {
         font = "Buttonfont",
-        text = "Music: DJZ4K - Slipstream Theme",
+        text = "  Music: DJZ4K - The Price of Freedom",
         color =
             {  255, 255, 255, 255, },
         hAlign = "Left",
         vAlign = "Top", },},
 }
+

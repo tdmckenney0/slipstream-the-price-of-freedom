@@ -20,8 +20,8 @@ NewShipType.defensiveFormation ="broad"
 NewShipType.aggressiveFormation ="delta"
 NewShipType.mass =1000
 NewShipType.collisionMultiplier =1
-NewShipType.thrusterMaxSpeed =75
-NewShipType.mainEngineMaxSpeed =75
+NewShipType.thrusterMaxSpeed = 135
+NewShipType.mainEngineMaxSpeed = 175
 NewShipType.rotationMaxSpeed =8
 NewShipType.thrusterAccelTime =6
 NewShipType.thrusterBrakeTime =2
@@ -144,10 +144,9 @@ addAbility(NewShipType, "ShipHold", 1, 40, 10, "rallypoint", "Fighter,Corvette,U
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Fighter, Corvette, Frigate, SmallCapitalShip, BigCapitalShip, Utility", "JustShoot")
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Fighter, Corvette, Frigate, SmallCapitalShip, BigCapitalShip, Utility", "movetotargetandshoot")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
---addAbility(NewShipType, "CanBuildShips", 1, "Drone_DOL, Corvette_Vgr, Utility_Vgr, Frigate_Vgr, Shipyard_Vgr, SubSystem_Vgr, Platform_Vgr, Probe_Vgr", "Utility, Fighter, Corvette, Frigate, Capital, Platform, SubSystemModule, SubSystemSensors")
-addAbility(NewShipType, "CanBuildShips", 1, "Drone_DOL, Corvette_Vgr, Frigate_Vgr, SuperCap_Vgr, Flagship_Vgr, Utility_Vgr, SubSystem_Vgr, SubSystemLarge_Vgr, Platform_Vgr, Shipyard_Vgr, Battlecruiser_Vgr, Probe_Vgr", "Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors, Capital")
+addAbility(NewShipType, "CanBuildShips", 1, "Drone_DOL, Fighter_Vgr, Corvette_Vgr, Utility_Vgr, Frigate_Vgr, SubSystem_Vgr, Platform_Vgr, Shipyard_Vgr, Probe_Vgr", "Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors")
 addAbility(NewShipType, "CanBeCaptured", 160, 0.1)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "CloakAbility", 0, 2, 2000, 4000, 3, 100, 1, 1000)
@@ -160,7 +159,7 @@ StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_2HullDefense", 
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_3HullDefense", "")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_4HullDefense", "")
 addShield(NewShipType, "EMP", 10000, 20)
-StartShipHardPointConfig(NewShipType, "Production 1", "HardPoint_Production1", "System", "Production", "Destroyable", "", "Vgr_C_Production_Fighter", "Vgr_C_Production_Corvette", "Vgr_C_Production_Frigate", "vgr_c_production_capship", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Production 1", "HardPoint_Production1", "System", "Production", "Destroyable", "", "Vgr_C_Production_Fighter", "Vgr_C_Production_Corvette", "Vgr_C_Production_Frigate", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Generic 1", "HardPoint_System1", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Research", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_PlatformControl", "Vgr_C_Module_FireControl", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_BuildSpeed", "")
 StartShipHardPointConfig(NewShipType, "Generic 2", "HardPoint_System2", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Research", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_PlatformControl", "Vgr_C_Module_FireControl", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_BuildSpeed", "")
 StartShipHardPointConfig(NewShipType, "Rail 1", "Hardpoint_Railgun1", "System", "Generic", "Damageable", "vgr_missileturret", "Vgr_C_Module_Research", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_PlatformControl", "Vgr_C_Module_FireControl", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_BuildSpeed", "")
@@ -182,7 +181,7 @@ SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Sml04", 1, 0.01, 10, 60, -300, 25, 3
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Sml05", 1, 0.01, 60, 10, 30, 75, 35, 25, 65, 75, 0, 0, 0, 60, 0, 0, 0, 50)
 NewShipType.battleScarMaxTriBase =150
 NewShipType.battleScarMaxTriInc =200
-NewShipType.sobDieTime =4
+NewShipType.sobDieTime =1
 NewShipType.sobSpecialDieTime =1
 NewShipType.specialDeathSpeed =40
 NewShipType.chanceOfSpecialDeath =0

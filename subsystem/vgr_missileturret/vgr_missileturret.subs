@@ -22,8 +22,8 @@ NewSubSystemType.nlipsFar=0
 NewSubSystemType.nlipsFarRange=0
 NewSubSystemType.meshRenderLimit=0.004
 NewSubSystemType.minimumZoomFactor=0.68
-NewSubSystemType.selectionLimit=500
-NewSubSystemType.preciseATILimit=500
+NewSubSystemType.selectionLimit=1000
+NewSubSystemType.preciseATILimit=1000
 NewSubSystemType.selectionPriority=37.5
 NewSubSystemType.type="Weapon"
 NewSubSystemType.typeString="BCKineticflakCannon"
@@ -36,8 +36,8 @@ NewSubSystemType.isResearch=0
 NewSubSystemType.visible=1
 LoadHODFile(NewSubSystemType,1);
 NewSubSystemType.BuildFamily="SubSystem_Hgn"
-NewSubSystemType.AttackFamily="UnAttackable"
+NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_volleymissile","Weapon_Missile","Weapon_Missile");
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_volleymissile","Weapon_Missile","Weapon_Missile");

@@ -9,9 +9,4 @@ loopCount = 0
 texture =
     { "data:/ui/newui/background/menu1600.tga",
 	  "data:/ui/newui/background/menu1600.tga",
-	  "data:/ui/newui/background/menu1600.tga",
-	  "data:/ui/newui/background/menu1600.tga",
-	  "data:/ui/newui/background/menu1600.tga",
-	  "data:/ui/newui/background/menu1600.tga",
-	  "data:/ui/newui/background/menu1600.tga",
 	}

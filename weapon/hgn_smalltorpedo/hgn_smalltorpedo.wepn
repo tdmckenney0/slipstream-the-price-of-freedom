@@ -3,6 +3,7 @@ StartWeaponConfig(NewWeaponType,"Fixed","Missile","SmallTorpedo","Normal",120,90
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",2000,2500,"")
 AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"HGN_FlakBurst")
 AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"HGN_FlakBurst")
+AddWeaponResult(NewWeaponType,"Hit","Push","Target",15,20,"")
 
 setAngles(NewWeaponType,179,0,0,0,0)
 
@@ -10,10 +11,6 @@ setMiscValues(NewWeaponType,0,0.2)
 
 setPenetration(NewWeaponType,60,1,
 {Unarmoured=1,},
-{SuperConducting=1,},
-{AntiChemical=1,},
-{AntiMassImpact=1,},
-{Composite=1,},
 {LightArmour=1,},
 {MediumArmour=1,},
 {HeavyArmour=1,},

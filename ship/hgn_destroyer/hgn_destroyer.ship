@@ -18,9 +18,9 @@ NewShipType.defensiveFormation="x"
 NewShipType.aggressiveFormation="Claw"
 NewShipType.mass=600
 NewShipType.collisionMultiplier=1
-NewShipType.thrusterMaxSpeed = 135
+NewShipType.thrusterMaxSpeed = 110
 NewShipType.mainEngineMaxSpeed = 150
-NewShipType.rotationMaxSpeed = 18
+NewShipType.rotationMaxSpeed = 15
 NewShipType.thrusterAccelTime = 7
 NewShipType.thrusterBrakeTime = 2
 NewShipType.mainEngineAccelTime = 8
@@ -61,8 +61,6 @@ NewShipType.targetRandomPointZMin=-0.7
 NewShipType.targetRandomPointZMax=0.8
 NewShipType.dustCloudDamageTime=160
 NewShipType.nebulaDamageTime=300
---NewShipType.mirrorAboveManeuver = "ImmelMann"
---NewShipType.mirrorBelowManeuver = "Split_S"
 NewShipType.MinimalFamilyToFindPathAround="MotherShip"
 NewShipType.BuildFamily="SuperCap_Hgn"
 NewShipType.AttackFamily="SmallCapitalShip"
@@ -143,7 +141,18 @@ NewShipType.launchFormation="delta"
 addAbility(NewShipType,"ParadeCommand",1);
 addAbility(NewShipType,"WaypointMove");
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
-addAbility(NewShipType,"CanAttack",1,1,0,1,0.35,1.5,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","dogfight_capital");
+addAbility(NewShipType,"CanAttack",1,1,0,1,0.35,1.5,"Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter","dogfight_capital",
+{
+    Fighter = "movetotargetandshoot",
+},
+{
+    Corvette = "movetotargetandshoot",
+},
+{
+    Frigate = "movetotargetandshoot",
+},
+{
+    Mothership = "Flyround_destroyer",})
 addAbility(NewShipType,"GuardCommand",1,3000,800);
 addAbility(NewShipType,"CanBeCaptured",90,0.5);
 addAbility(NewShipType,"CanBeRepaired");
@@ -167,7 +176,7 @@ StartShipHardPointConfig(NewShipType,"DC_Bottom_Center_Turret","Hardpoint_DCTBot
 addShield(NewShipType,"EMP",400,12)
 NewShipType.battleScarMaxTriBase = 75
 NewShipType.battleScarMaxTriInc = 100
-NewShipType.sobDieTime = 3.5
+NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1
 NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0

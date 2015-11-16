@@ -13,6 +13,7 @@ StyleSheets =
 FrontEndScreens =
 {
 	;
+
 	{
 		name = "Background",
 		filename = "DATA:\\UI\\NewUI\\Main\\New\\Background.lua",
@@ -27,11 +28,6 @@ FrontEndScreens =
 		activated = 0,
 		-- Type of menu (default is UIScreen)
 		type = "MainMenu",
-	},
-	{
-		name = "CreditsScreen",
-		filename = "DATA:\\UI\\NewUI\\CreditsScreen.lua",
-		activated = 0,
 	},
 	{
 		name = "UniverseScreen",
@@ -210,12 +206,6 @@ FrontEndScreens =
 		filename = "DATA:\\UI\\NewUI\\Subtitle.lua",
 		activated = 0,
 		type = "SubtitleScreen",
-	},
-	{
-		name = "PlayMoviesScreen",
-		filename = "DATA:\\UI\\NewUI\\PlayMoviesScreen.lua",
-		activated = 0,
-		type = "PlayMoviesScreen",
 	},
 }
 

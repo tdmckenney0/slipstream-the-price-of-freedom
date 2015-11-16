@@ -26,7 +26,7 @@ NewSubSystemType.selectionLimit=1000
 NewSubSystemType.preciseATILimit=1000
 NewSubSystemType.selectionPriority=37.5
 NewSubSystemType.type="Weapon"
-NewSubSystemType.typeString="PlanetSmasher"
+NewSubSystemType.typeString="Coilgun"
 NewSubSystemType.collateralDamage=100
 NewSubSystemType.inactiveTimeAfterDamage=80
 NewSubSystemType.activateHealthPercentage=0.1
@@ -36,7 +36,7 @@ NewSubSystemType.isResearch=0
 NewSubSystemType.visible=1
 LoadHODFile(NewSubSystemType,1);
 NewSubSystemType.BuildFamily="SubSystem_Hgn"
-NewSubSystemType.AttackFamily="Unattackable"
+NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"

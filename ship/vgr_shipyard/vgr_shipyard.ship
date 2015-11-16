@@ -4,8 +4,8 @@
 -- On error(s), send source (compiled) file to 4E534B@gmail.com
 
 NewShipType=StartShipConfig()
-NewShipType.displayedName="DSCG Shipyard"
-NewShipType.sobDescription ="Kaiser Class\nShipyard"
+NewShipType.displayedName="DSCG Mobile Factory"
+NewShipType.sobDescription ="Kaiser Class\nSuper Factory"
 NewShipType.maxhealth =1000000
 NewShipType.regentime =2000
 NewShipType.minRegenTime =750
@@ -65,17 +65,17 @@ NewShipType.targetRandomPointZMin =-0.8
 NewShipType.targetRandomPointZMax =0.8
 NewShipType.dustCloudDamageTime =280
 NewShipType.nebulaDamageTime =500
-NewShipType.MinimalFamilyToFindPathAround ="MotherShip"
-NewShipType.BuildFamily ="Shipyard_Vgr"
-NewShipType.AttackFamily ="Mothership"
-NewShipType.DockFamily ="Shipyard"
-NewShipType.AvoidanceFamily ="MotherShip"
-NewShipType.DisplayFamily ="Capital"
-NewShipType.AutoFormationFamily ="SuperCap"
-NewShipType.CollisionFamily ="Big"
-NewShipType.ArmourFamily ="HeavyArmour"
-NewShipType.UnitCapsFamily ="Capital"
-NewShipType.UnitCapsShipType ="Shipyard"
+NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
+NewShipType.BuildFamily = "Shipyard_Vgr"
+NewShipType.AttackFamily = "BigCapitalShip"
+NewShipType.DockFamily = "Shipyard"
+NewShipType.AvoidanceFamily = "MotherShip"
+NewShipType.DisplayFamily = "Platform"
+NewShipType.AutoFormationFamily = "SuperCap"
+NewShipType.CollisionFamily = "Big"
+NewShipType.ArmourFamily = "HeavyArmour"
+NewShipType.UnitCapsFamily = "Capital"
+NewShipType.UnitCapsShipType = "Shipyard"
 NewShipType.fighterValue =0
 NewShipType.corvetteValue =0
 NewShipType.frigateValue =15
@@ -142,7 +142,7 @@ addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Fighter, Corvette, Frigate, SmallCapitalShip, BigCapitalShip, Utility", "JustShoot")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
-addAbility(NewShipType, "CanBuildShips", 1, "Drone_DOL, Corvette_Vgr, Frigate_Vgr, SuperCap_Vgr, Flagship_Vgr, Utility_Vgr, SubSystem_Vgr, SubSystemLarge_Vgr, Platform_Vgr, Shipyard_Vgr, Battlecruiser_Vgr, Probe_Vgr", "Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors, Capital")
+addAbility(NewShipType, "CanBuildShips", 1, "Drone_DOL, Fighter_Vgr, Corvette_Vgr, Frigate_Vgr, SuperCap_Vgr, Flagship_Vgr, Utility_Vgr, SubSystem_Vgr, SubSystemLarge_Vgr, Platform_Vgr, Shipyard_Vgr, Battlecruiser_Vgr, Probe_Vgr", "Utility, Fighter, Corvette, Frigate, Platform, SubSystemModule, SubSystemSensors, Capital")
 addAbility(NewShipType, "CanBeCaptured", 300, 0.1)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "MinelayerAbility",1,3.5)
@@ -199,7 +199,7 @@ SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Sml04", 1, 0.01, 10, 60, -300, 25, 3
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Sml05", 1, 0.01, 60, 10, 30, 75, 35, 25, 65, 75, 0, 0, 0, 60, 0, 0, 0, 50)
 NewShipType.battleScarMaxTriBase =200
 NewShipType.battleScarMaxTriInc =300
-NewShipType.sobDieTime =8
+NewShipType.sobDieTime =1
 NewShipType.sobSpecialDieTime =1
 NewShipType.specialDeathSpeed =40
 NewShipType.chanceOfSpecialDeath =0

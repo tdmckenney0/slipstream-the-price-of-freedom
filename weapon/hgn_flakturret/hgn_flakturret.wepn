@@ -2,6 +2,7 @@ StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","FlakShell","Normal",4
 
 AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"hgn_flakburst")
 AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"hgn_flakburst")
+AddWeaponResult(NewWeaponType,"Hit","Push","Target",20,25,"")
 
 setAngles(NewWeaponType,0,-180,180,-1,80)
 

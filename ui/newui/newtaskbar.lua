@@ -438,18 +438,17 @@ NewTaskbar = {
 
 		{
 			type = "Frame",
+			position = {1, 1},
+			outerBorderWidth = 1,
 			backgroundColor = "IGColorBackground1",
-			position = {0, 0},
-			size = {800, 61},
-			BackgroundGraphic = {
-				texture = "DATA:UI\\NewUI\\Taskbar\\unitstats_border.mres",
-				textureUV = { 0, 0, 608, 0 },
-								},
+			borderColor = "FEColorHeading3",
+			size = {155, 60},
 		},
 
 		{
 			type = "Frame",
 			name = "commandButtonsFrame2",
+			position = {0, 0},
 			autosize = 1,
 			autoarrange = 1,
 			autoarrangeWidth = 155,
@@ -754,18 +753,17 @@ NewTaskbar = {
 
 		{
 			type = "Frame",
+			position = {1, 1},
+			outerBorderWidth = 1,
 			backgroundColor = "IGColorBackground1",
-			position = {0, 0},
-			size = {800, 61},
-			BackgroundGraphic = {
-				texture = "DATA:UI\\NewUI\\Taskbar\\unitstats_border.mres",
-				textureUV = { 0, 0, 608, 0 },
-								},
+			borderColor = "FEColorHeading3",
+			size = {155, 60},
 		},
 
 		{
 			type = "Frame",
 			name = "specialButtonsFrame2",
+			position = {0, 0},
 			autosize = 1,
 			autoarrange = 1,
 			autoarrangeWidth = 155,
@@ -1387,7 +1385,7 @@ NewTaskbar = {
 		{
 			type = "Frame",
 			position = {0, 0},
-			size = {800, 61},
+			size = {800, 62},
 			BackgroundGraphic = {
 				texture = "DATA:UI\\NewUI\\Taskbar\\unitstats_border.mres",
 				textureUV = { 0, 0, 608, 0 },
@@ -1397,12 +1395,11 @@ NewTaskbar = {
 		-- border
 		{
 			type = "Frame",
-			position = {0, 2},
-			size = {608, 61},
-			BackgroundGraphic = {
-				texture = "DATA:UI\\NewUI\\Taskbar\\unitstats_border.mres",
-				textureUV = { 0, 0, 608, 0 },
-			},
+			position = {1, 1},
+			outerBorderWidth = 1,
+			backgroundColor = "IGColorBackground1",
+			borderColor = "FEColorHeading3",
+			size = {650, 60},
 		},
 
 		-- ship icon

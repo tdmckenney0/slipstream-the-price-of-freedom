@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DSCG Dreadnaught"
 NewShipType.sobDescription = "Leviathan Class\nRanged Cruiser"
-NewShipType.maxhealth = 800000
+NewShipType.maxhealth = 1250000
 NewShipType.regentime = 1000
 NewShipType.minRegenTime = 333
 NewShipType.sideArmourDamage = 0.5
@@ -147,7 +147,18 @@ addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653);
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "BigCapitalShip, SmallCapitalShip, Capturer, Frigate, SubSystem, Mothership, Corvette, Fighter, Utility", "dogfight_capital")
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "BigCapitalShip, SmallCapitalShip, Capturer, Frigate, SubSystem, Mothership, Corvette, Fighter, Utility", "dread_strafe",
+{
+    Fighter = "movetotargetandshoot",
+},
+{
+    Corvette = "movetotargetandshoot",
+},
+{
+    Frigate = "movetotargetandshoot",
+},
+{
+    Mothership = "Flyround_destroyer",})
 addAbility(NewShipType, "GuardCommand", 74, 3000, 1400)
 addAbility(NewShipType, "CanBeCaptured", 160, 0.5)
 addAbility(NewShipType, "CanBeRepaired")
@@ -163,7 +174,9 @@ StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense7", 
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense8", "Weapon_HullDefense8")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense9", "Weapon_HullDefense9")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense10", "Weapon_HullDefense10")
---StartShipWeaponConfig(NewShipType, "Vgr_superheavybeam", "Weapon_Triton1", "Weapon_Triton1")
+
+--replusor
+StartShipWeaponConfig(NewShipType, "tsar_repulsor", "Weapon_Repulsor", "Weapon_Repulsor")
 
 StartShipHardPointConfig(NewShipType,"Suprbeam","Hardpoint_phase","Weapon","Innate","Damageable","vgr_dreadcannon","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"Rocket1","Hardpoint_Rocket","System","Generic","Damageable","vgr_missilebay")
@@ -179,11 +192,10 @@ StartShipHardPointConfig(NewShipType,"Flak1","Hardpoint_Flak1","Weapon","Innate"
 StartShipHardPointConfig(NewShipType,"Flak2","Hardpoint_Flak2","Weapon","Innate","Indestructible","vgr_flakcannon","","","","","","","","")
 
 
-
 addShield(NewShipType, "EMP", 10000, 20)
 NewShipType.battleScarMaxTriBase = 175
 NewShipType.battleScarMaxTriInc = 250
-NewShipType.sobDieTime = 4
+NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1
 NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
