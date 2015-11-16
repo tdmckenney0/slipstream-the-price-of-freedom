@@ -203,7 +203,7 @@ NewBuildMenu =
         { 0, 0, },
     size =
         { 150, 12, },
-    dropShadow = 1,
+    dropShadow = 0,
     Text =
     {
         text = "$2815",
@@ -216,7 +216,7 @@ NewBuildMenu =
         { 0, 12, },
     size =
         { 150, 12, },
-    dropShadow = 1,
+    dropShadow = 0,
     Text =
     {
         text = "$2816",
@@ -229,7 +229,7 @@ NewBuildMenu =
         { 0, 24, },
     size =
         { 150, 12, },
-    dropShadow = 1,
+    dropShadow = 0,
     Text =
     {
         text = "$2817",
@@ -243,7 +243,7 @@ NewBuildMenu =
         { 150, 0, },
     size =
         { 52, 12, },
-    dropShadow = 1,
+    dropShadow = 0,
     Text =
     {
         textStyle = "IGHeading2",
@@ -259,7 +259,7 @@ NewBuildMenu =
         { 150, 12, },
     size =
         { 52, 12, },
-    dropShadow = 1,
+    dropShadow = 0,
     Text =
     {
         textStyle = "IGHeading2",
@@ -275,7 +275,7 @@ NewBuildMenu =
         { 150, 24, },
     size =
         { 52, 12, },
-    dropShadow = 1,
+    dropShadow = 0,
     Text =
     {
         textStyle = "IGHeading2",
@@ -758,7 +758,7 @@ NewBuildMenu =
         offset =
             { -1, 0, }, },
     giveParentMouseInput = 1,
-    dropShadow = 1,
+    dropShadow = 0,
 },
 {
     type = "TextLabel",
@@ -776,7 +776,7 @@ NewBuildMenu =
         offset =
             { -2, 0, }, },
     giveParentMouseInput = 1,
-    dropShadow = 1,
+    dropShadow = 0,
 },
 {
     type = "TextLabel",
@@ -796,7 +796,7 @@ NewBuildMenu =
         offset =
             { -2, 0, }, },
     giveParentMouseInput = 1,
-    dropShadow = 1,
+    dropShadow = 0,
 },
 {
     type = "TextLabel",
@@ -816,7 +816,7 @@ NewBuildMenu =
         offset =
             { -2, 0, }, },
     giveParentMouseInput = 1,
-    dropShadow = 1,
+    dropShadow = 0,
 },
 {
     type = "TextLabel",
@@ -835,7 +835,7 @@ NewBuildMenu =
         font = "ListBoxItemFont",
         hAlign = "Right", },
     giveParentMouseInput = 1,
-    dropShadow = 1, },
+    dropShadow = 0, },
 },
 },
 {

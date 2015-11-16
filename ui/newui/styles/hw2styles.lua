@@ -22,31 +22,31 @@ HW2StyleSheet =
 		},
 		{
 			name = "FEColorHeading3",
-			string = "255,255,255,255",
+			string = "0,0,0,255",
 		},
 		{
 			name = "FEColorHeading4",
-			string = "255,255,255,255",
+			string = "0,0,0,255",
 		},
 		{
 			name = "FEColorBackground1",
-			string = "0,0,0,85",
+			string = "162,162,162,112",
 		},
 		{
 			name = "FEColorBackground2",
-			string = "0,0,0,85",
+			string = "0,0,0,64",
 		},
 		{
 			name = "FEColorDialog",
-			string = "0,0,0,255",
+			string = "255,255,255,255",
 		},
 		{
 			name = "FEColorOutline",
-			string = "0,0,0,255",
+			string = "0,0,0,0",
 		},
 		{
 			name = "FEColorPopupOutline",
-			string = "255,255,255,0",
+			string = "0,0,0,255",
 		},
 		{
 			name = "FEColorScrollButtonDefault",
@@ -70,7 +70,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "IGColorBackground1",
-			string = "0,0,0,127",
+			string = "162,162,162,112",
 		},
 		{
 			name = "IGColorOutline",
@@ -86,11 +86,11 @@ HW2StyleSheet =
 		},
 		{
 			name = "IGColorButton",
-			string = "0,0,0,0",
+			string = "255,255,255,255",
 		},
 		{
 			name = "IGColorButtonBorder",
-			string = "255,255,255,255",
+			string = "0,0,0,255",
 		},
 		{
 			name = "IGColorButtonOver",
@@ -122,7 +122,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "IGColorButtonDisabled",
-			string = "0,0,0,0",
+			string = "127,127,127,127",
 		},
 		{
 			name = "IGColorButtonDisabledBorder",
@@ -142,9 +142,9 @@ HW2StyleSheet =
 		type = "Text",
 		color =
 		{
-			255,
-			255,
-			255,
+			0,
+			0,
+			0,
 			255,
 		},
 		hAlign = "Left",
@@ -897,9 +897,9 @@ HW2StyleSheet =
 		font = "ButtonFont",
 		color =
 		{
-			255,
-			255,
-			255,
+			0,
+			0,
+			0,
 			255,
 		},
 		vAlign = "Middle",
@@ -911,9 +911,9 @@ HW2StyleSheet =
 		font = "ButtonFont",
 		color =
 		{
-			255,
-			255,
-			255,
+			0,
+			0,
+			0,
 			255,
 		},
 		vAlign = "Middle",
@@ -925,9 +925,9 @@ HW2StyleSheet =
 		font = "ButtonFont",
 		color =
 		{
-			255,
-			255,
-			255,
+			0,
+			0,
+			0,
 			255,
 		},
 		vAlign = "Middle",
@@ -1078,9 +1078,9 @@ HW2StyleSheet =
 		},
 		textColor =
 		{
-			255,
-			255,
-			255,
+			0,
+			0,
+			0,
 			255,
 		},
 		OverGraphic =
@@ -1096,9 +1096,9 @@ HW2StyleSheet =
 		},
 		overtextColor =
 		{
-			255,
-			255,
-			255,
+			64,
+			64,
+			64,
 			255,
 		},
 		PressedGraphic =
@@ -1339,9 +1339,9 @@ HW2StyleSheet =
 		},
 		textColor =
 		{
-			255,
-			255,
-			255,
+			0,
+			0,
+			0,
 			255,
 		},
 		OverGraphic =
@@ -1692,10 +1692,10 @@ HW2StyleSheet =
 		},
 		backgroundColor =
 		{
-			0,
-			0,
-			0,
 			255,
+			255,
+			255,
+			127,
 		},
 		overBorderColor =
 		{
@@ -1706,10 +1706,10 @@ HW2StyleSheet =
 		},
 		overColor =
 		{
-			0,
-			0,
-			0,
-			255,
+			127,
+			127,
+			127,
+			127,
 		},
 		pressedBorderColor =
 		{
@@ -1929,10 +1929,10 @@ HW2StyleSheet =
 			},
 			backgroundColor =
 			{
-				0,
-				0,
-				0,
-				235,
+				255,
+				255,
+				255,
+				127,
 			},
 			scrollBarSpace = 1,
 			soundOnExit = "",
@@ -3526,7 +3526,7 @@ HW2StyleSheet =
 		},
 		ClickedGraphic =
 		{
-			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton_clicked.tga",
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
 			textureUV =
 			{
 				0,
@@ -3619,7 +3619,7 @@ HW2StyleSheet =
 			0,
 			0,
 			0,
-			0,
+			255,
 		},
 		clickedBorderColor =
 		{
@@ -3630,24 +3630,24 @@ HW2StyleSheet =
 		},
 		pressedBorderColor =
 		{
-			255,
-			255,
-			255,
+			0,
+			0,
+			0,
 			255,
 		},
 		disabledColor =
 		{
-			210,
-			210,
-			210,
-			255,
+			127,
+			127,
+			127,
+			0,
 		},
 		disabledTextColor =
 		{
-			225,
-			225,
-			225,
-			255,
+			127,
+			127,
+			127,
+			0,
 		},
 		soundOnClicked = "SFX_ButtonClick",
 	},

@@ -55,7 +55,7 @@ UniverseScreen =
     type = "Frame",
     autosize = 0,
     outerBorderWidth = 1,
-    borderColor = "FEColorHeading1",
+    borderColor = "FEColorHeading3",
     backgroundColor = "FEColorBackground1",
 	position = {28,112},
 	size = {742,338},
@@ -125,6 +125,8 @@ UniverseScreen =
 --Bottom Navigation Screen
 		{
 			type = "Frame",
+			outerBorderWidth = 1,
+			borderColor = "FEColorHeading3",
 			backgroundColor = "FEColorBackground1",
 			position = {12,544},
 			size = {776,44},

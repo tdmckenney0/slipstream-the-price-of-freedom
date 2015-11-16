@@ -32,7 +32,7 @@ LoadingScreen =
 {
     type = "Frame",
 	outerBorderWidth = 1,
-    borderColor = "FEColorHeading1",
+    borderColor = "FEColorHeading3",
     backgroundColor = "FEColorBackground1",
     position =
         { 275, 287.5, },
@@ -41,7 +41,7 @@ LoadingScreen =
 {
     type = "ProgressBar",
     progressColor =
-        { 255, 255, 255, 255, },
+        { 0, 0, 0, 255, },
     position =
         { 279.5, 300, },
     size =
@@ -59,7 +59,7 @@ LoadingScreen =
     {
         textStyle = "FEHeading3",
         color =
-            { 255, 255, 255, 255, },
+            { 0, 0, 0, 255, },
         hAlign = "Center",
         vAlign = "Top",},
 },

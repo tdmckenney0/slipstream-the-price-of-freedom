@@ -180,18 +180,6 @@ Hgn_AttackBomberElite = {
     stretchOnDraw = 1,
   },
 }
-Hgn_BattleCruiser =
-{
-    LargeIcon =
-    {
-        texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
-        textureUV_TL =
-            { 0, 64, },
-        textureUV_WH =
-            { 172, 64, },
-        stretchOnDraw = 1,
-},
-}
 Hgn_Battleship =
 {
     LargeIcon =
@@ -204,7 +192,7 @@ Hgn_Battleship =
         stretchOnDraw = 1,
 },
 }
-Hgn_Supercarrier = {
+Hgn_carrier = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
     textureUV_TL = {
@@ -504,7 +492,7 @@ Hgn_TorpedoFrigateElite = {
     stretchOnDraw = 1,
   },
 }
-Hgn_Carrier =
+Hgn_Corporatetanker =
 {
     LargeIcon =
     {
@@ -1060,6 +1048,20 @@ Vgr_BattleCruiser = {
     stretchOnDraw = 1,
   },
 }
+vgr_Battleship = {
+  LargeIcon = {
+    texture = "DATA:\\Ship\\Icons\\ships\\vgr_battleship.tga",
+    textureUV_TL = {
+      0,
+      0,
+    },
+    textureUV_WH = {
+      384,
+      128,
+    },
+    stretchOnDraw = 1,
+  },
+}
 Vgr_Bomber = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
@@ -1329,7 +1331,6 @@ Vgr_MotherShip = {
   },
 }
 Vgr_MotherShip_Makaan = Vgr_MotherShip
-Vgr_Battleship = Kpr_Sajuuk
 Vgr_PlanetKillerMissile = {
   LargeIcon = {
     texture = "DATA:\\Ship\\Icons\\icon_ships.mres",
@@ -2258,7 +2259,7 @@ hgn_superbomber = Hgn_AttackBomber
 Hgn_drone_frigate = Hgn_Torpedofrigate
 Hgn_drone_frigate_2 = Hgn_Assaultfrigate
 Hgn_drone_frigate_3 = Hgn_Marinefrigate
-hgn_heavybattlecruiser  = Hgn_Destroyer
+hgn_battlecruiser  = Hgn_Destroyer
 vgr_qwaarjetii = Vgr_BattleCruiser
 vgr_vanaarjet = Vgr_BattleCruiser
 vgr_gravityfrigate = Vgr_AssaultFrigate

@@ -24,4 +24,20 @@ Background = {
 			texture = "Data:UI\\NewUI\\Background\\menu1600.tga",
 		},
 	},
+
+	{
+    type = "TextLabel",
+    name = "lblVersion",
+    position =
+        { 250, 0, },
+    size = {300, 20},
+    Text =
+    {
+        font = "Buttonfont",
+        text = "FOR TESTING PURPOSES ONLY! ",
+        color =
+            { 255, 255, 255, 255, },
+        hAlign = "Center",
+        vAlign = "Top", },
+	},
 }

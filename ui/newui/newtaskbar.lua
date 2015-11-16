@@ -1,4 +1,4 @@
-BUILDCOLOR = {0,0,0,255}
+BUILDCOLOR = {0,0,0,0}
 RESEARCHCOLOR = {0,0,0,255}
 LAUNCHCOLOR = {0,0,0,255}
 
@@ -11,7 +11,7 @@ NewTaskbar = {
 	callUpdateWhenInactive = 1,
 
 	-- custom
-	minimizedPos = { 0, 580},
+	minimizedPos = { 0, 580}, --0, 580
 	fstringShipCount = "$2764",
 
 	healthBarGoodColor = { 0, 255, 0, 255},
@@ -24,7 +24,7 @@ NewTaskbar = {
 	healthBarAlliedBackgroundColor = { 128, 0, 0, 255},
 
 	soundOnShow = "SFX_TaksbarMenuONOFF",
-	soundOnHide = "SFX_TaksbarMenuONOFF",
+	soundOn = "SFX_TaksbarMenuONOFF",
 
 	Regions = {
 		{0,15,221, 87},	-- left
@@ -32,7 +32,6 @@ NewTaskbar = {
 		{581,15,219,87}, -- right
 	},
 	;
-
 
 	-- black background
 	{
@@ -47,6 +46,8 @@ NewTaskbar = {
 	-- background
 	{
 		type = "Frame",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
 		position = {0, 0},
 		size = { 800, 102},
 		BackgroundGraphic = {
@@ -62,9 +63,15 @@ NewTaskbar = {
 	-- Events button
 	{
 		type = "TextButton",
-		position = {229, 85},
-		size = {53, 13},
-		buttonStyle = "Taskbar_MenuButtonStyle",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		position = {315, 83},
+		size = {50, 18.5},
+		buttonStyle = "Taskbar_PanelButtonStyle",
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 		Text = {
 			textStyle = "Taskbar_MenuButtonTextStyle",
 			text = "$2707", -- EVENTS
@@ -79,12 +86,18 @@ NewTaskbar = {
 	-- Events button (wide version)
 	{
 		type = "TextButton",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
 		visible = 0,
-		position = {229, 85},
-		size = {132, 13},
-		buttonStyle = "Taskbar_MenuButtonStyle_Wide",
+		position = {315, 83},
+		size = {50, 18.5},
+		buttonStyle = "Taskbar_PanelButtonStyle",
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 		Text = {
-			textStyle = "Taskbar_MenuButtonTextStyle",
+			textStyle = "Taskbar_PanelButtonTextStyle",
 			text = "$2707", -- EVENTS
 		},
 		name = "btnEvents_wide",
@@ -97,11 +110,17 @@ NewTaskbar = {
 	-- Objectives button
 	{
 		type = "TextButton",
-		position = {284, 85},
-		size = {77, 13},
-		buttonStyle = "Taskbar_MenuButtonStyle",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		position = {255, 83},
+		size = {50, 18.5},
+		buttonStyle = "Taskbar_PanelButtonStyle",
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 		Text = {
-			textStyle = "Taskbar_MenuButtonTextStyle",
+			textStyle = "Taskbar_PanelButtonTextStyle",
 			text = "$2704", -- OBJECTIVES
 		},
 		name = "btnObjectives",
@@ -114,11 +133,17 @@ NewTaskbar = {
 	-- Chat button
 	{
 		type = "TextButton",
-		position = {284, 85},
-		size = {77, 13},
-		buttonStyle = "Taskbar_MenuButtonStyle",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		position = {255, 83},
+		size = {50, 18.5},
+		buttonStyle = "Taskbar_PanelButtonStyle",
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 		Text = {
-			textStyle = "Taskbar_MenuButtonTextStyle",
+			textStyle = "Taskbar_PanelButtonTextStyle",
 			text = "$2716", -- CHAT
 		},
 		name = "btnChat",
@@ -131,10 +156,15 @@ NewTaskbar = {
 	-- Sensors button
 	{
 		type = "TextButton",
-		position = {363, 85},
-		size = {78, 13},
-		buttonStyle = "Taskbar_MenuButtonStyle",
-
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		position = {375, 83}, --363
+		size = {50, 18.5},
+		buttonStyle = "Taskbar_PanelButtonStyle",
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 		Text = {
 			textStyle = "Taskbar_MenuButtonTextStyle",
 			text = "$2703", -- SENSORS
@@ -149,11 +179,17 @@ NewTaskbar = {
 	-- Diplomacy button
 	{
 		type = "TextButton",
-		position = {443, 85},
-		size = {77, 13},
-		buttonStyle = "Taskbar_MenuButtonStyle",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		position = {495, 83},
+		size = {50, 18.5},
+		buttonStyle = "Taskbar_PanelButtonStyle",
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 		Text = {
-			textStyle = "Taskbar_MenuButtonTextStyle",
+			textStyle = "Taskbar_PanelButtonTextStyle",
 			text = "$2713", -- DIPLOMACY
 		},
 		name = "btnDiplomacy",
@@ -166,12 +202,18 @@ NewTaskbar = {
 	-- Speech recall button
 	{
 		type = "TextButton",
-		position = {443, 85},
-		size = {77, 13},
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		position = {495, 83},
+		size = {50, 18.5},
 		visible = 0,
-		buttonStyle = "Taskbar_MenuButtonStyle",
+		buttonStyle = "Taskbar_PanelButtonStyle",
+	    backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 		Text = {
-			textStyle = "Taskbar_MenuButtonTextStyle",
+			textStyle = "Taskbar_PanelButtonTextStyle",
 			text = "$2762", -- RECALL
 		},
 		name = "btnRecall",
@@ -184,12 +226,18 @@ NewTaskbar = {
 	-- Menu button
 	{
 		type = "TextButton",
-		position = {522, 85},
-		size = {53, 13},
-		buttonStyle = "Taskbar_MenuButtonStyle",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		position = {435, 83},
+		size = {50, 18.5},
+		buttonStyle = "Taskbar_PanelButtonStyle",
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 		toggleButton = 0,
 		Text = {
-			textStyle = "Taskbar_MenuButtonTextStyle",
+			textStyle = "Taskbar_PanelButtonTextStyle",
 			text = "$2702", -- MENU
 		},
 		name = "btnMenu",
@@ -202,10 +250,16 @@ NewTaskbar = {
 	-- Menu button (wide version)
 	{
 		type = "TextButton",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
 		visible = 0,
-		position = {443, 85},
-		size = {132, 13},
-		buttonStyle = "Taskbar_MenuButtonStyle_Wide",
+		position = {435, 83},
+		size = {50, 18.5},
+		buttonStyle = "Taskbar_PanelButtonStyle",
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 		toggleButton = 0,
 		Text = {
 			textStyle = "Taskbar_MenuButtonTextStyle",
@@ -221,14 +275,16 @@ NewTaskbar = {
 	-- Build button
 	{
 		type = "TextButton",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
 		toggleButton = 1,
-		position = {585, 85},
-		size = {68, 13},
+		position = {595, 83},
+		size = {50, 18.5},
 		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 255},
-		overColor = { 255, 255, 255, 127},
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 127},
 		pressedColor = { 255, 255, 255, 255},
-		textColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 
 		Text = {
 			textStyle = "Taskbar_PanelButtonTextStyle",
@@ -244,14 +300,16 @@ NewTaskbar = {
 	-- Research button
 	{
 		type = "TextButton",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
 		toggleButton = 1,
-		position = {655, 85},
-		size = {69, 13},
+		position = {655, 83},
+		size = {50, 18.5},
 		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 255},
-		overColor = { 255, 255, 255, 127},
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
 		pressedColor = { 255, 255, 255, 255},
-		textColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 
 		Text = {
 			textStyle = "Taskbar_PanelButtonTextStyle",
@@ -267,15 +325,16 @@ NewTaskbar = {
 	-- Launch button
 	{
 		type = "TextButton",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
 		toggleButton = 1,
-		position = {726, 85},
-		size = {69, 13},
+		position = {715, 83},
+		size = {50, 18.5},
 		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 255},
-		overColor = { 255, 255, 255, 127},
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
 		pressedColor = { 255, 255, 255, 255},
-		textColor = { 255, 255, 255, 255},
-
+		textColor = { 0, 0, 0, 255},
 		Text = {
 			textStyle = "Taskbar_PanelButtonTextStyle",
 			text = "$2706", -- LAUNCH
@@ -285,6 +344,77 @@ NewTaskbar = {
 		helpTip = "$2760",
 		helpTipTextLabel = "commandsHelpTip",
 		hotKeyID = 52,
+	},
+
+	--Return
+	{
+		type = "TextButton",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		toggleButton = 1,
+		position = {775, 83},
+		size = {15, 18.5},
+		buttonStyle = "Taskbar_PanelButtonStyle",
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
+		Text = {
+			textStyle = "Taskbar_PanelButtonTextStyle",
+			text = "<<<", -- LAUNCH
+		},
+		name = "btnShipBack",
+	--	onMouseClicked = "MainUI_UserEventData( eLaunchManager, 1)",
+		helpTip = "$2732",
+		helpTipTextLabel = "commandsHelpTip",
+		hotKeyID = 52,
+	},
+
+	--Hide
+	{
+		type = "TextButton",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		toggleButton = 1,
+		position = {10, 83},
+		size = {15, 18.5},
+		buttonStyle = "Taskbar_PanelButtonStyle",
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 127},
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
+		Text = {
+			textStyle = "Taskbar_PanelButtonTextStyle",
+			text = "V", -- LAUNCH
+		},
+		name = "btnHide1",
+		helpTip = "$2738",
+		helpTipTextLabel = "commandsHelpTip",
+		hotKeyID = 55,
+	},
+
+	--Show button
+   {
+		type = "TextButton",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		toggleButton = 1,
+		position = {784, 0},  --784,0
+		size = {15, 18.5},
+		visible = 0,
+		buttonStyle = "Taskbar_PanelButtonStyle",
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 127},
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
+		Text = {
+			textStyle = "Taskbar_PanelButtonTextStyle",
+			text = "^", -- LAUNCH
+		},
+		name = "btnHide2",
+		helpTip = "$2739",
+		helpTipTextLabel = "commandsHelpTip",
+		hotKeyID = 55,
 	},
 
 
@@ -304,19 +434,32 @@ NewTaskbar = {
 	-- Command buttons
 	{
 		type = "Frame",
-		position = { 1, 19},
-		name = "commandButtons",
+		position = { 0, 19},
+		name = "commandButtonsFrame",
 		autosize = 1,
 		;
 
 		{
 			type = "Frame",
-			name = "commandButtonsFrame",
+			backgroundColor = "IGColorBackground1",
+			position = {0, 0},
+			size = {800, 61},
+			BackgroundGraphic = {
+				texture = "DATA:UI\\NewUI\\Taskbar\\unitstats_border.mres",
+				textureUV = { 0, 0, 608, 0 },
+								},
+		},
+
+		{
+			type = "Frame",
+			name = "commandButtonsFrame2",
 			autosize = 1,
 			autoarrange = 1,
 			autoarrangeWidth = 155,
+			autoarrangeHeight = 61,
 			autoarrangeSpace = 1,
 			;
+
 			{
 				type = "Button",
 				buttonStyle = "Taskbar_CommandButtonStyle",
@@ -571,10 +714,10 @@ NewTaskbar = {
 			},
 		},
 
-		-- special attacks switch
+-- special attacks switch
 		{
 			type = "Button",
-			position = {1, 66},
+			position = {157,50},
 			size = {13, 13},
 			DefaultGraphic = {
 				texture = "DATA:UI\\NewUI\\Taskbar\\special.tga",
@@ -588,23 +731,36 @@ NewTaskbar = {
 			helpTip = "$2729",
 			helpTipTextLabel = "commandsHelpTip",
 			hotKeyID = 150,
-			onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"specialButtons\", 1); UI_SetElementVisible(\"NewTaskbar\", \"commandButtons\", 0);",
+			onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe\", 1); UI_SetElementVisible(\"NewTaskbar\", \"commandButtonsframe\", 0);",
 
 			soundOnClicked = "SFX_ButtonClick",
 		},
+
 	},
 
 	-- Special Command buttons
 	{
 		type = "Frame",
 		position = { 1, 19},
-		name = "specialButtons",
+		name = "specialButtonsFrame",
 		visible = 0,
 		autosize = 1,
 		;
+
 		{
 			type = "Frame",
-			name = "specialButtonsFrame",
+			backgroundColor = "IGColorBackground1",
+			position = {0, 0},
+			size = {800, 61},
+			BackgroundGraphic = {
+				texture = "DATA:UI\\NewUI\\Taskbar\\unitstats_border.mres",
+				textureUV = { 0, 0, 608, 0 },
+								},
+		},
+
+		{
+			type = "Frame",
+			name = "specialButtonsFrame2",
 			autosize = 1,
 			autoarrange = 1,
 			autoarrangeWidth = 155,
@@ -845,7 +1001,7 @@ NewTaskbar = {
 				type = "Button",
 				buttonStyle = "Taskbar_CommandButtonStyle",
 				name = "btnScuttle",
-				onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 1); UI_SetElementVisible(\"NewTaskbar\", \"specialButtons\", 0);",
+				onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 1); UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe2\", 0);",
 				helpTip = "$2773",
 				helpTipTextLabel = "commandsHelpTip",
 				hotKeyID = 5,
@@ -871,7 +1027,7 @@ NewTaskbar = {
 		-- special attacks switch
 		{
 			type = "Button",
-			position = {1, 66},
+			position = {157,50},
 			size = {13, 13},
 			DefaultGraphic = {
 				texture = "DATA:UI\\NewUI\\Taskbar\\special.tga",
@@ -885,7 +1041,7 @@ NewTaskbar = {
 			helpTip = "$2729",
 			helpTipTextLabel = "commandsHelpTip",
 			hotKeyID = 150,
-			onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"specialButtons\", 0); UI_SetElementVisible(\"NewTaskbar\", \"commandButtons\", 1);",
+			onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe\", 0); UI_SetElementVisible(\"NewTaskbar\", \"commandButtonsframe\", 1);",
 
 			soundOnClicked = "SFX_ButtonClick",
 		},
@@ -926,7 +1082,7 @@ NewTaskbar = {
 				type = "Button",
 				buttonStyle = "Taskbar_CommandButtonStyle",
 				name = "btnScuttleConfirm",
-				onMouseClicked = "MainUI_UserEvent( eScuttle); UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 0); UI_SetElementVisible(\"NewTaskbar\", \"specialButtons\", 1);",
+				onMouseClicked = "MainUI_UserEvent( eScuttle); UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 0); UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe2\", 1);",
 				helpTip = "$2759",
 				helpTipTextLabel = "commandsHelpTip",
 				;
@@ -950,7 +1106,7 @@ NewTaskbar = {
 				type = "Button",
 				buttonStyle = "Taskbar_CommandButtonStyle",
 				name = "btnScuttleCancel",
-				onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 0); UI_SetElementVisible(\"NewTaskbar\", \"specialButtons\", 1);",
+				onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 0); UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe2\", 1);",
 				helpTip = "$2613",
 				helpTipTextLabel = "commandsHelpTip",
 				;
@@ -988,20 +1144,23 @@ NewTaskbar = {
 			name = "btnSpecial",
 			helpTip = "$2729",
 			helpTipTextLabel = "commandsHelpTip",
-			onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 0); UI_SetElementVisible(\"NewTaskbar\", \"specialButtons\", 1);",
+			onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtonsframe\", 0); UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe\", 1);",
 			soundOnClicked = "SFX_ButtonClick",
 		},
 	},
+
 	{
 		type = "TextButton",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
 		toggleButton = 1,
-		position = {16, 85},
-		size = { 68, 13},
+		position = {35, 83},
+		size = { 50, 18.5},
 		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 255},
-		overColor = { 255, 255, 255, 127},
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
 		pressedColor = { 255, 255, 255, 255},
-		textColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 		--pressedTextColor = { 0, 224, 255, 255},
 
 		Text = {
@@ -1024,8 +1183,10 @@ NewTaskbar = {
 	-- Strike group button
 	{
 		type = "TextButton",
-		position = {86, 85},
-		size = {67, 13},
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		position = {95, 83},
+		size = {50, 18.5},
 		buttonStyle = "Taskbar_PanelButtonStyle",
 		toggleButton = 1,
 		Text = {
@@ -1039,11 +1200,10 @@ NewTaskbar = {
 
 		soundOnClicked = "",
 		soundOnPressed = "SFX_ButtonClick",
-
-		backgroundColor = { 0, 0, 0, 255},
-		overColor = { 255, 255, 255, 127},
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
 		pressedColor = { 255, 255, 255, 255},
-		textColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 
 		-- Bugfix: this is needed because of wierd states that arise from closing the strike menu while over the button
 		clickedTextColor = { 0, 0, 0, 255},
@@ -1056,8 +1216,10 @@ NewTaskbar = {
 	-- Tactics button
 	{
 		type = "TextButton",
-		position = {155, 85},
-		size = {67, 13},
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3",
+		position = {155, 83},
+		size = {50, 18.5},
 		buttonStyle = "Taskbar_PanelButtonStyle",
 		toggleButton = 1,
 		Text = {
@@ -1072,10 +1234,10 @@ NewTaskbar = {
 		soundOnClicked = "",
 		soundOnPressed = "SFX_ButtonClick",
 
-		backgroundColor = { 0, 0, 0, 255},
-		overColor = { 255, 255, 255, 127},
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255},
 		pressedColor = { 255, 255, 255, 255},
-		textColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
 
 		-- Bugfix: this is needed because of wierd states that arise from closing the strike menu while over the button
 		clickedTextColor = { 0, 0, 0, 255},
@@ -1222,9 +1384,21 @@ NewTaskbar = {
 	{
 		type = "Frame",
 		position = {176, 19},
-		size = {620, 68},
+		size = {800, 68},  --620,68
 		name = "unitStats",
 		;
+
+		--background, believe it or not, for everything.
+
+		{
+			type = "Frame",
+			position = {0, 0},
+			size = {800, 61},
+			BackgroundGraphic = {
+				texture = "DATA:UI\\NewUI\\Taskbar\\unitstats_border.mres",
+				textureUV = { 0, 0, 608, 0 },
+			},
+		},
 
 		-- border
 		{
@@ -1665,61 +1839,7 @@ NewTaskbar = {
 			},
 		},
 	},
-
-	-- Misc buttons
-	{
-		type = "Button",
-		position = {784, 19},
-		size = { 13, 28},
-		DefaultGraphic = {
-			texture = "DATA:UI\\NewUI\\Taskbar\\hide1.tga",
-			textureUV = { 0, 0, 16, 32 },
-		},
-		OverGraphic = {
-			texture = "DATA:UI\\NewUI\\Taskbar\\hide1.tga",
-			textureUV = { 0, 0, 16, 32 },
-		},
-		name = "btnHide1",
-		helpTip = "$2738",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 55,
-	},
-	{
-		type = "Button",
-		position = {784, 55},
-		size = {13, 28},
-		DefaultGraphic = {
-			texture = "DATA:UI\\NewUI\\Taskbar\\Taskbar_Icon_Back.tga",
-			textureUV = { 0, 0, 16, 32 },
-		},
-		OverGraphic = {
-			texture = "DATA:UI\\NewUI\\Taskbar\\Taskbar_Icon_Back.tga",
-			textureUV = { 0, 0, 16, 32 },
-		},
-		name = "btnShipBack",
-		helpTip = "$2732",
-		helpTipTextLabel = "commandsHelpTip",
-		enabled = 0,
-
-		soundOnClicked = "SFX_ButtonClick",
-	},
-	{
-		type = "Button",
-		position = {784, 10},
-		size = { 13, 13},
-		visible = 0,
-		DefaultGraphic = {
-			texture = "DATA:UI\\NewUI\\Taskbar\\hide2.tga",
-			textureUV = { 0, 0, 16, 16 },
-		},
-		OverGraphic = {
-			texture = "DATA:UI\\NewUI\\Taskbar\\hide2_OVER.tga",
-			textureUV = { 0, 0, 16, 16 },
-		},
-		name = "btnHide2",
-		helpTip = "$2739",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 55,
-	},
+-- Misc buttons
+	---Show
 
 }

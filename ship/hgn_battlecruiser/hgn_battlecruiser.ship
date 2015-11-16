@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "UNCG Heavy Cruiser"
-NewShipType.sobDescription = "Alexander Class\nHeavy Battlecruiser"
+NewShipType.displayedName = "UNCG Battlecruiser"
+NewShipType.sobDescription = "Alexander Class\nStandard Battlecruiser"
 NewShipType.maxhealth = 850000
 NewShipType.regentime = 1500
 NewShipType.minRegenTime = 450
@@ -174,7 +174,6 @@ StartShipHardPointConfig(NewShipType,"mGAT1","Weapon_FlakTop","Weapon","Innate",
 StartShipHardPointConfig(NewShipType,"mGAT2","Weapon_FlakTop2","Weapon","Innate","Indestructible","hgn_lasersmall","","","","","","","","")
 
 addShield(NewShipType, "EMP", 1000, 20)
---StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Hgn_Des_Engine", "", "", "", "", "", "", "", "")
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg04", 1, 0.05, 50, 40, -150, 50, 65, 25, 5, 25, 0, 0, 0, 95, 0, 0, 0, 50)
@@ -194,6 +193,6 @@ NewShipType.chanceOfSpecialDeath = 0
 NewShipType.deadSobFadeTime = 0.1
 NewShipType.trailLinger = 3
 setEngineBurn(NewShipType, 9, 0.2, 0.5, 300, 1.02, 0.1, 0.25, 380)
-setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5, 
+setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5,
     { 0.27, 0.47, 0.69, 0.25, })
 loadShipPatchList(NewShipType, "data:sound/sfx/ship/Hiigaran/Carrier/", 0, "Engines/HDestroyerEng", "", 1, "Ambience/HDestroyerAmb", "")

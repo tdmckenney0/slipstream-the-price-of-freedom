@@ -1,4 +1,4 @@
-Thanks for downloading TPOF v2.4b!
+Thanks for downloading TPOF v2.4c!
 Remember: This is Beta format, a lot of things are still un-programmed or incomplete. Enjoy!
 
 1. Setup
@@ -9,10 +9,12 @@ Remember: This is Beta format, a lot of things are still un-programmed or incomp
 
 
 1) Setup
+	
+     For Windows Users:
 
-	Place the tpofv2.4b.big file into your (Homeworld2 install directory)/data/ folder.
+	Place the tpofv2.4c.big file into your (Homeworld2 install directory)/data/ folder.
 
-	Now, open your shortcut to homeworld 2, or make one. Add after the quotes type: -mod tpofv2.4b.big 
+	Now, open your shortcut to homeworld 2, or make one. Add after the quotes type: -mod tpofv2.4c.big 
 
 	Example:
 
@@ -22,9 +24,13 @@ Remember: This is Beta format, a lot of things are still un-programmed or incomp
 
 	After:
 
-	"D:\Program Files (x86)\Sierra\Homeworld2\Bin\Release\Homeworld2.exe" -mod tpofv2.4b.big 
+	"D:\Program Files (x86)\Sierra\Homeworld2\Bin\Release\Homeworld2.exe" -mod tpofv2.4c.big 
 
 	Enjoy!
+
+     For Mac users:
+
+	http://subreal.uuuq.com/articles.php?article_id=9
 
 2) Toubleshooting
 	
@@ -38,17 +44,15 @@ Remember: This is Beta format, a lot of things are still un-programmed or incomp
 	    on your shortcut)
 	3) use "-lowtex" on your shortcut if you experience lag "-quickload" if your very desperate. 
 	4) Close all programs in the background.
-	
-3) Skybox's
+	5) Lower the screen resolution. I experimented and found that TPoF Will crash with intensive effects on high-resolutions. 
+	6) Turning off the details in the settings menu works as well. 
 
-	Skybox's have been removed. 
 
-4. Notes
+3. Notes
 
 	This build removes a lot of experimental code, and some ships that do not serve a purpose. This is to aim TPOF at a more refinement, and prepare it 
-	for the upcoming campaign programming. Also note, that I am looking at TPOF being feature-complete in version 2.8.
+	for the upcoming campaign programming. Also note, that I am looking at TPOF being feature-complete in version 2.6.
 
 
 
-
-Copyright Sub-Real Industries 2008-2009
+Copyright Sub-Real Industries 2009. All Rights Reserved. 

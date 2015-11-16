@@ -1,16 +1,17 @@
 Slipstream: The Price of Freedom
-Built on: 12:51 AM 5/4/2009
+Built on: 2:08 AM 6/1/2009
 Built By: Emperor_Khane
-Build System: Microsoft Windows Vista Ultimate x64 [Version 6.0.6001]
+Build System: Xero-Point
+	     Microsoft Windows 7 Ultimate x64 [Version 6.1.7100]
 	     AMD Athlon x2 @ 2.6 GHz, 4.00 GB RAM, Nvidia Geforce 8600 GT
 Build Folder: D:\Program Files (x86)\Sierra\Homeworld2\Data\TPOF\TPOF_COMPILE\
 Built For: 32-bit and 64-bit
 OS Support: Windows 2000/XP/VISTA/7, Mac OS X, *nix (WINE) [Expermental!]
 Build Locale: United States, North America, English
-Build Version: 2.4.5000
+Build Version: 2.4.8000
 Hw2 Version: 1.1
 Copyright Sub-Real Industries 2007-2009.
-Homeworld 2 Engine Copyright THQ and Relic Entertainment 2003-2008
+Homeworld 2 Engine Copyright THQ and Relic Entertainment 2003-2009
 All Rights Are Reserved.
 
 TPOF Flowchart History (2.4b is about 96% of Our Code, the rest is code left over from mergers, with permission of course)
@@ -30,8 +31,8 @@ Hw2EX v2.0 			Fair Play Mod 			Modernization Mod
                                                                  Post Epoch v2.0                        PDS Mini-mods by SRI-Sajuuk	        TFS codebase + Dynamic Tracking Systems
                                           		        |                                          	       |	      		 		         |
                                           		        |                                          	       |	       		 		         |
-                                          	                          |------------------------>TPOF v0.1a--------------------------------------------------<		Axel Models & Weapons
-			                          |		                        |								|
+                                          	                      |------------------------>TPOF v0.1a--------------------------------------------------<		Axel Models & Weapons
+			                       |		                        |								|
                                    			        |			      |								|
 				        |		                        >---------------------------------------------TPOFv0.4a-------------------------<
  				   Shock force v.4 (Destroyed in Harddrive reset)	  		                  | <-----Development Reset, Storyline rewrote, (this is the reason we dont have a TPOF 0.5, but we have a 0.6b?)
@@ -46,5 +47,5 @@ Hw2EX v2.0 			Fair Play Mod 			Modernization Mod
 												|	
 											           TPOFv2.4 <-- Massive Code Overhaul
 												|
-					We are here ---------------------------------------------------->         TPOFv2.4b <-- Code Drop. Trim. Re-Formats. 
+					We are here ---------------------------------------------------->         TPOFv2.4c <-- Code Drop. Trim. Re-Formats. 
 	

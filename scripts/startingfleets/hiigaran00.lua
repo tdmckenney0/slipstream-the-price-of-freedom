@@ -2,15 +2,25 @@ PersistantData = {
    StrikeGroups = {
    },
    Squadrons = {
-      {
-         type = "Hgn_SuperCarrier",
+   {
+         type = "Hgn_battleship",
          subsystems = {
          },
          shiphold = {
-{
+         },
+         name = "",
+         size = 1,
+         number = 1,
+    },
+	{
+         type = "Hgn_Carrier",
+         subsystems = {
+         },
+         shiphold = {
+			{
 	   type = "Hgn_ResourceCollector",
 	   size = 1,
-                    },
+			},
 	  {
 	   type = "Hgn_ResourceCollector",
 	   size = 1,
@@ -35,16 +45,6 @@ PersistantData = {
          name = "Command Ship",
          size = 1,
       },
-      {
-         type = "Hgn_Carrier",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 1,
-    },
    },
    Research = {
    [1] = {

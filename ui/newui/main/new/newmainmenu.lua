@@ -28,7 +28,7 @@ NewMainMenu =
     type = "Frame",
     autosize = 1,
     outerBorderWidth = 1,
-    borderColor = "FEColorHeading1",
+    borderColor = "FEColorHeading3",
     backgroundColor = "FEColorBackground1",
     position =
         { 262.5, 187, },
@@ -217,7 +217,7 @@ NewMainMenu =
     Text =
     {
         font = "Buttonfont",
-        text = "Build Version 2.4.5000 - May 4, 2009 ",
+        text = "Build Version 2.4.8000 - June 1, 2009 ",
         color =
             { 255, 255, 255, 255, },
         hAlign = "Right",
@@ -232,9 +232,9 @@ NewMainMenu =
     Text =
     {
         font = "Buttonfont",
-        text = "Music: Nutritious - Ancient Enemies",
+        text = "Music: DJZ4K - Slipstream Prototype Theme",
         color =
-            { 255, 255, 255, 255, },
+            {  255, 255, 255, 255, },
         hAlign = "Left",
         vAlign = "Top", },},
 }

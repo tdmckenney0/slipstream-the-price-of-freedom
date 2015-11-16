@@ -104,6 +104,15 @@ build =
 	},
 	{
 		Type = SubSystem,
+		ThingToBuild = "vgr_c_production_capship",
+		RequiredResearch = "",
+		RequiredShipSubSystems = "",
+		DisplayPriority = 0,
+		DisplayedName = "$7106",
+		Description = "$7107",
+	},
+	{
+		Type = SubSystem,
 		ThingToBuild = "Vgr_C_Module_Research",
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",

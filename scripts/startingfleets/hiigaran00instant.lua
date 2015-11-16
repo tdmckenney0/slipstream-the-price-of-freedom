@@ -2,52 +2,6 @@ PersistantData = {
    StrikeGroups = {
    },
    Squadrons = {
-      {
-         type = "Hgn_SuperCarrier",
-         subsystems = {
-		 {
-          index = 0,
-          name = "Hgn_MS_Module_Research",
-        },
-        {
-          index = 0,
-          name = "Hgn_MS_Production_Corvette",
-        },
-        {
-          index = 0,
-          name = "Hgn_MS_Production_Frigate",
-        },
-        {
-          index = 0,
-          name = "hgn_sc_productioncapital",
-        },
-        {
-          index = 0,
-          name = "Hgn_MS_Production_Fighter",
-        },
-        {
-          index = 0,
-          name = "Hgn_MS_Module_ResearchAdvanced",
-        },
-        {
-          index = 0,
-          name = "Hgn_sc_Sensors_AdvancedArray",
-        },
-		{
-          index = 0,
-          name = "hgn_ms_module_hyperspaceinhibitor",
-        },
-        {
-          index = 0,
-          name = "Hgn_MS_Module_PlatformControl",
-        },
-         },
-         shiphold = {
-	     },
-         name = "",
-         size = 1,
-		 number = 2,
-      },
 	  {
          type = "Hgn_ResourceCollector",
          subsystems = {
@@ -141,17 +95,7 @@ PersistantData = {
          number = 2,
 
 	  },
---	  {
---         type = "uncg_supercarrier",
- --        subsystems = {
-   --      },
-     --    shiphold = {
-       --  },
-         --name = "",
-         --size = 1,
-         --number = 1,
 
---	  },
    },
    Research = {
 	[1] = {

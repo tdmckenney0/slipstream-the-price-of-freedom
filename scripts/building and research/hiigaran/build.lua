@@ -95,7 +95,7 @@ build =
 	},
 	{
 		Type = SubSystem,
-		ThingToBuild = "hgn_sc_productioncapital",
+		ThingToBuild = "hgn_C_Production_CapShip",
 		RequiredResearch = "",
 		RequiredShipSubSystems = "",
 		DisplayPriority = 0,
@@ -563,11 +563,11 @@ build =
 	},
 	{
 		Type = Ship,
-		ThingToBuild = "Hgn_Supercarrier",
+		ThingToBuild = "Hgn_Shipyard",
 		RequiredResearch = "SCENABLED",
 		RequiredShipSubSystems = "Hyperspace",
 		DisplayPriority = 118,
-		DisplayedName = "Super Carrier",
+		DisplayedName = "Shipyard",
 		Description = "$7059",
 	},
 	{
