@@ -21,7 +21,7 @@ Background = {
 			type = "Graphic",
 			size = {800, 600},
 			textureUV = {0,0,1600,1200},
-			texture = "Data:UI\\NewUI\\Background\\menu1600.tga",
+			texture = "Data:UI\\NewUI\\Background\\menu.anim",
 		},
 	},
 
@@ -34,7 +34,7 @@ Background = {
     Text =
     {
         font = "Buttonfont",
-        text = "FOR TESTING PURPOSES ONLY! ",
+        text = " ",
         color =
             { 255, 255, 255, 255, },
         hAlign = "Center",

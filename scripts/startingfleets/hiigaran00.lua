@@ -3,7 +3,7 @@ PersistantData = {
    },
    Squadrons = {
    {
-         type = "Hgn_battleship",
+         type = "Hgn_Destroyer",
          subsystems = {
          },
          shiphold = {

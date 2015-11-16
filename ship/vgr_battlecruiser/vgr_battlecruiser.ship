@@ -67,8 +67,8 @@ NewShipType.targetRandomPointZMin = -0.9
 NewShipType.targetRandomPointZMax = 0.85
 NewShipType.dustCloudDamageTime = 280
 NewShipType.nebulaDamageTime = 800
-NewShipType.mirrorAboveManeuver = "ImmelMann"
-NewShipType.mirrorBelowManeuver = "Split_S"
+--NewShipType.mirrorAboveManeuver = "ImmelMann"
+--NewShipType.mirrorBelowManeuver = "Split_S"
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "Battlecruiser_Vgr"
 NewShipType.AttackFamily = "BigCapitalShip"
@@ -145,16 +145,16 @@ NewShipType.launchTimeBetweenTwoFormations = 1
 NewShipType.launchTimeBeforeStart = 2
 NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
-addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 25, 
-{ 
-    Fighter = "600", 
-}, 
-{ 
+addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 25,
+{
+    Fighter = "600",
+},
+{
     Corvette = "300", })
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653);
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "flyby_destroyer")
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "dogfight_capital")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
 addAbility(NewShipType, "CanBuildShips", 1,"Drone_DOL,  SubSystem_Vgr","Fighter, SubSystemModule")
 addAbility(NewShipType, "CanBeCaptured", 160, 0.1)
@@ -173,7 +173,7 @@ StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser1",
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser2", "")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser3", "")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_BCHeavyLaser4", "")
-StartShipWeaponConfig(NewShipType, "vgr_coilcannonbc", "Weapon_BCUberPulse", "Weapon_BCUberPulse")
+StartShipWeaponConfig(NewShipType, "Vgr_BCForwardWeapon", "Weapon_BCUberPulse", "Weapon_BCUberPulse")
 
 addShield(NewShipType, "EMP", 10000, 20)
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_BattleCruiserEngine", "", "", "", "", "", "", "", "")
@@ -212,6 +212,6 @@ NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
 NewShipType.deadSobFadeTime = 0
 NewShipType.trailLinger = 2
-setEngineGlow(NewShipType, 1, 1, 1.02, 20, 500, 200, 1, 
+setEngineGlow(NewShipType, 1, 1, 1.02, 20, 500, 200, 1,
     { 0.92, 0.21, 0.09, 0.25, })
 loadShipPatchList(NewShipType, "data:sound/sfx/ship/Vaygr/Carrier/", 0, "Engines/VDestroyerEng", "", 1, "Ambience/VBattleCrusierAmb", "")

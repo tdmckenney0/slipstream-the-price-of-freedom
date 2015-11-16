@@ -3,7 +3,7 @@
 -- LuaDC by Age2uN
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
-hitfx = "Explosion/Large/ETG_Explode_Large_Plasma"
+hitfx = "dmg_wave_explosion_combo"
 bulletfx = "kinetic_large_bullet"
 nopenetratefx = "dmg_cloud_spray_large"
 deathtype = "deathCannon"

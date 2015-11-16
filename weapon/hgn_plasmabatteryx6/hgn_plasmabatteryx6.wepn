@@ -1,10 +1,10 @@
-StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","vgr_laser","Normal Only",5500,10000,0,0,0,0,1,1,1,20,0,0,0,0,150,150,0.1,"Normal",0,0,0)
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","vgr_laser","Normal Only",5500,10000,0,0,0,0,1,1,1,20,0,0,0,0,150,150,0.1,"Normal",1,0,0)
 
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",1750,2000,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",5000,6000,"")
 
 setAngles(NewWeaponType,10,-160,160,0,60)
 
-setMiscValues(NewWeaponType,4,0.75)
+setMiscValues(NewWeaponType,4,0)
 
 setPenetration(NewWeaponType,5,1,
 {Unarmoured=1,},

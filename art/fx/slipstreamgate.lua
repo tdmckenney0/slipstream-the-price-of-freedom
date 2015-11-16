@@ -158,7 +158,7 @@ value = {
 property_12 = {
 name = "Texture",
 type = "VARTYPE_STRING",
-value = "DATA:ART/FX/HYPERSPACE FX/HYPERSPACE_EFFECT_BEAM.TGA",
+value = "DATA:ART/FX/HYPERSPACE FX/hyperspace_effect_beam.anim",
 },
 property_11 = {
 name = "Blending",

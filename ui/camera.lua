@@ -1,6 +1,6 @@
 nearClip = 3
 farClip = 9000000050000000.0
-verticalFOV = 71 --was 70
+verticalFOV = 80 --was 70
 cameraDefaultMaxDistance = 7000
 cameraDistanceMax = 10000
 cameraDistanceMin = 5

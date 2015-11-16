@@ -62,8 +62,6 @@ NewShipType.targetRandomPointZMin = -0.5
 NewShipType.targetRandomPointZMax = 0.5
 NewShipType.dustCloudDamageTime = 160
 NewShipType.nebulaDamageTime = 65
-NewShipType.mirrorAboveManeuver = "ImmelMann"
-NewShipType.mirrorBelowManeuver = "Split_S"
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "SuperCap_Hgn"
 NewShipType.AttackFamily = "SmallCapitalShip"
@@ -143,8 +141,7 @@ addAbility(NewShipType,"ShipHold",1,40,0,"rallypoint","",25)
 addAbility(NewShipType,"ParadeCommand",1)
 addAbility(NewShipType,"WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "flyby_destroyer")
-
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "dogfight_capital")
 addAbility(NewShipType, "GuardCommand", 1, 3000, 800)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "CanBeCaptured", 90, 0.5)
@@ -157,7 +154,7 @@ StartShipWeaponConfig(NewShipType, "hgn_clusterbomb", "Weapon_Torpedo_Tube", "We
 
 
 ------------------------------Main--Turrets
-StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Damageable","hgn_plasmabatteryx6","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Damageable","hgn_coilcannonx3","","","","","","","","");
 
 StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Damageable","hgn_railgun","","","","","","","","");
 
@@ -178,12 +175,12 @@ StartShipHardPointConfig(NewShipType,"Calibration9","Hardpoint_PDS11","System","
 addShield(NewShipType,"EMP",400,12)
 NewShipType.battleScarMaxTriBase = 75
 NewShipType.battleScarMaxTriInc = 100
-NewShipType.sobDieTime = 1
+NewShipType.sobDieTime = 3.5
 NewShipType.sobSpecialDieTime = 1
 NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
-NewShipType.deadSobFadeTime = 1
-NewShipType.trailLinger = 2
+NewShipType.deadSobFadeTime = 0.1
+NewShipType.trailLinger = 3
 
 setEngineBurn(NewShipType,9,0.2,0.5,300,1.02,0.1,0.25,380);
 setEngineGlow(NewShipType,1,1,1.02,20,300,50,1.5,{0.27, 0.47, .69, 0.25});

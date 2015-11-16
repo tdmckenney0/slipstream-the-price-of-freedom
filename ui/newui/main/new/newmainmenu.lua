@@ -20,7 +20,7 @@ NewMainMenu =
     {
         size =
             { 800, 600, },
-        texture = "Data:UI\\NewUI\\Background\\menu1600.tga",
+		texture = "Data:UI\\NewUI\\Background\\menu.anim",
         textureUV =
             { 0, 0, 1600, 1200, }, },
 },
@@ -60,28 +60,11 @@ NewMainMenu =
     size =
         { 304, 2, },
 },
---{
---    type = "TextLabel",
---    name = "m_lblSubTitle",
---    size =
---        { 304, 10, },
---    Text =
---    {
---        textStyle = "FEHeading4",
---        text = "",
---        offset =
---            { 8, 0, }, },
---},
 {
     type = "Frame",
     size =
         { 304, 4, },
 },
---{
---    type = "Frame",
---    size =
---        { 4, 50, },
---},
 {
     type = "Frame",
     outerBorderWidth = 0,
@@ -110,7 +93,7 @@ NewMainMenu =
     buttonStyle = "FEButtonStyle1",
     text = "The Price of Freedom Campaign",
     name = "btnCampaign",
-    enabled = 1,
+    enabled = 0,
     width = 272,
 },
 {
@@ -173,18 +156,6 @@ NewMainMenu =
     size =
         { 296, 15, },
 },
---{
---    type = "TextButton",
-  --  buttonStyle = "FEButtonStyle1",
-    --text = "Credits & Contributors",
-  --  name = "btnCredits",
-  --  width = 272,
-  --  onMouseClicked = [[UI_ShowScreen("CreditsScreen", eTransition)]], },
---{
---    type = "Frame",
---    size =
---        { 296, 15, },
---},
 {
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
@@ -217,7 +188,7 @@ NewMainMenu =
     Text =
     {
         font = "Buttonfont",
-        text = "Build Version 2.4.8000 - June 1, 2009 ",
+        text = "Build Version 2.5 - July 1, 2009 ",
         color =
             { 255, 255, 255, 255, },
         hAlign = "Right",
@@ -232,7 +203,7 @@ NewMainMenu =
     Text =
     {
         font = "Buttonfont",
-        text = "Music: DJZ4K - Slipstream Prototype Theme",
+        text = "Music: DJZ4K - Slipstream Theme",
         color =
             {  255, 255, 255, 255, },
         hAlign = "Left",

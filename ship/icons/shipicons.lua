@@ -492,7 +492,7 @@ Hgn_TorpedoFrigateElite = {
     stretchOnDraw = 1,
   },
 }
-Hgn_Corporatetanker =
+Hgn_excarrier =
 {
     LargeIcon =
     {

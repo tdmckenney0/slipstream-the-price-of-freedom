@@ -30,7 +30,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "FEColorBackground1",
-			string = "162,162,162,112",
+			string = "162,162,162,200",
 		},
 		{
 			name = "FEColorBackground2",
@@ -38,7 +38,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "FEColorDialog",
-			string = "255,255,255,255",
+			string = "162,162,162,200",
 		},
 		{
 			name = "FEColorOutline",
@@ -46,7 +46,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "FEColorPopupOutline",
-			string = "0,0,0,255",
+			string = "0,0,0,0",
 		},
 		{
 			name = "FEColorScrollButtonDefault",
@@ -1036,24 +1036,30 @@ HW2StyleSheet =
 	FEPopupBackgroundStyle =
 	{
 		type = "InterfaceElement",
-		backgroundColor = "FEColorDialog",
+		backgroundColor =
+		{
+				162,
+				162,
+				162,
+				0,
+		},
 		BackgroundGraphic =
 		{
-			texture = "DATA:UI\\NewUI\\Elements\\popup_background.mres",
+			texture = "DATA:UI\\NewUI\\Clearbg.tga",
 			textureUV =
 			{
 				0,
 				0,
-				16,
-				128,
+				0, --16
+				0, --128
 			},
-			stretchOnDraw = 1,
+			stretchOnDraw = 0,
 			color =
 			{
+				162,
+				162,
+				162,
 				0,
-				48,
-				136,
-				255,
 			},
 		},
 	},

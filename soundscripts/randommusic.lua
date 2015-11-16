@@ -21,7 +21,9 @@ PlayList =
 	{"battle\\battle_movers", "Battle - Movers", 632,},	-- 158
 	{"battle\\battle_planetkillers", "Battle - Planet Killers", 748,},	-- 187
 	{"battle\\battle_sajuuk", "Battle - Sajuuk", 644,},	-- 161
-	{"staging\\staging_01", "The Hand That Feeds - Nine Inch Nails", 211,},	-- 64
+	{"staging\\staging_01", "Slipstream Main Theme - DJZ4K", 211,},	-- 64
+	{"staging\\staging_04", "Slipstream Ambient 1 - DJZ4K", 211,},	-- 64
+
 }
 
 --==============================================================================

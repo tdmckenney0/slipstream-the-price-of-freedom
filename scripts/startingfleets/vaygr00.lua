@@ -24,7 +24,7 @@ PersistantData = {
       },
 
       {
-         type = "Vgr_Battleship",
+         type = "Vgr_Destroyer",
          subsystems = {
          },
          shiphold = {

@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "DSCG Dreadnaught"
 NewShipType.sobDescription = "Leviathan Class\nRanged Cruiser"
-NewShipType.maxhealth = 800000 
+NewShipType.maxhealth = 800000
 NewShipType.regentime = 1000
 NewShipType.minRegenTime = 333
 NewShipType.sideArmourDamage = 0.5
@@ -62,8 +62,8 @@ NewShipType.targetRandomPointZMin = -0.9
 NewShipType.targetRandomPointZMax = 0.85
 NewShipType.dustCloudDamageTime = 0
 NewShipType.nebulaDamageTime = 0
-NewShipType.mirrorAboveManeuver = "ImmelMann"
-NewShipType.mirrorBelowManeuver = "Split_S"
+--NewShipType.mirrorAboveManeuver = "ImmelMann"
+--NewShipType.mirrorBelowManeuver = "Split_S"
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "Shipyard_Vgr"
 NewShipType.AttackFamily = "BigCapitalShip"
@@ -147,7 +147,7 @@ addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653);
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "BigCapitalShip, SmallCapitalShip, Capturer, Frigate, SubSystem, Mothership, Corvette, Fighter, Utility", "Flyby_destroyer")
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "BigCapitalShip, SmallCapitalShip, Capturer, Frigate, SubSystem, Mothership, Corvette, Fighter, Utility", "dogfight_capital")
 addAbility(NewShipType, "GuardCommand", 74, 3000, 1400)
 addAbility(NewShipType, "CanBeCaptured", 160, 0.5)
 addAbility(NewShipType, "CanBeRepaired")
@@ -190,6 +190,6 @@ NewShipType.chanceOfSpecialDeath = 0
 NewShipType.deadSobFadeTime = 0
 NewShipType.trailLinger = 2
 setEngineBurn(NewShipType, 9, 0.2, 0.5, 300, 1.02, 0.1, 0.25, 380)
-setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5, 
+setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5,
     { 1, 0.47, 0, 0.2, })
 loadShipPatchList(NewShipType, "data:sound/sfx/ship/Hiigaran/MegaShip/", 0, "Engines/HDreadnaughtEng", "", 1, "Ambience/HMotherShipAmb", "")

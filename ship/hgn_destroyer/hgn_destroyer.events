@@ -264,7 +264,7 @@ effects =
         event24 =
         {
             { "anim", "death" },
-            { "animtime", "0.85" },
+            { "animtime", "5" },
             { "marker", "Root" },
             { "fx", "DMG_MASSIVE_MESH_SPHERE_RING" },
             { "sound", "EXPLOSION/LARGE/ETG_EXPLODE_LARGE_PLASMA" },

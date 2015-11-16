@@ -24,7 +24,7 @@ PersistantData = {
 
       },
       {
-         type = "Hgn_Carrier",
+         type = "Hgn_shipyard",
          subsystems = {
          },
          shiphold = {

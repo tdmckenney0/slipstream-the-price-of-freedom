@@ -67,8 +67,8 @@ NewShipType.targetRandomPointZMin = -0.8
 NewShipType.targetRandomPointZMax = 0.8
 NewShipType.dustCloudDamageTime = 280
 NewShipType.nebulaDamageTime = 800
-NewShipType.mirrorAboveManeuver = "ImmelMann"
-NewShipType.mirrorBelowManeuver = "Split_S"
+--NewShipType.mirrorAboveManeuver = "ImmelMann"
+--NewShipType.mirrorBelowManeuver = "Split_S"
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
 NewShipType.BuildFamily = "Battlecruiser_Hgn"
 NewShipType.AttackFamily = "BigCapitalShip"
@@ -145,7 +145,7 @@ NewShipType.launchTimeBetweenTwoFormations = 1
 NewShipType.launchTimeBeforeStart = 2
 NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
-addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 25,
+addAbility(NewShipType, "ShipHold", 1, 0, 20, "rallypoint", "Fighter, Corvette", 25,
 {
     Fighter = "600",
 },
@@ -155,7 +155,7 @@ addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter",
-"flyby_destroyer",
+"dogfight_capital",
 {
     SubSystem = "movetotargetandshootVsSubSystem", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
@@ -203,14 +203,16 @@ StartShipHardPointConfig(NewShipType, "tMissile2", "Hardpoint_TopMissile2", "Wea
 StartShipHardPointConfig(NewShipType, "Valencium1", "Hardpoint_mWeapon", "Weapon", "Innate", "Damageable", "hgn_plasmabatteryx6", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Valencium2", "Hardpoint_mWeapon2", "Weapon", "Innate", "Damageable", "hgn_plasmabatteryx6", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "SuperBeam", "Hardpoint_IonBeam2", "Weapon", "Innate", "indestructible", "hgn_superbeamturret", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Rail1", "Hardpoint_Rail1", "Weapon", "Innate", "Damageable", "hgn_railgun", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Rail2", "Hardpoint_Rail2", "Weapon", "Innate", "Damageable", "hgn_railgun", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Rail1", "Hardpoint_Rail1", "Weapon", "Innate", "Damageable", "hgn_mount", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Rail2", "Hardpoint_Rail2", "Weapon", "Innate", "Damageable", "hgn_mount", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Rail3", "Hardpoint_Rail3", "Weapon", "Innate", "Damageable", "hgn_Railgun", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Rail4", "Hardpoint_Rail4", "Weapon", "Innate", "Damageable", "hgn_Railgun", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Mount1", "Hardpoint_Mount", "Weapon", "Innate", "indestructible", "hgn_mount_large", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Mount2", "Hardpoint_Mount2", "Weapon", "Innate", "indestructible", "hgn_mount_large", "", "", "", "", "", "", "", "")
 
 --Microweapons
-StartShipHardPointConfig(NewShipType,"sGatling1","Hardpoint_sGatling1","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"sGatling2","Hardpoint_sGatling2","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","")
+--StartShipHardPointConfig(NewShipType,"sGatling1","Hardpoint_sGatling1","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","")
+--StartShipHardPointConfig(NewShipType,"sGatling2","Hardpoint_sGatling2","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"sGatling3","Hardpoint_sGatling3","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"sGatling4","Hardpoint_sGatling4","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"sLaser1","Hardpoint_Laser1","Weapon","Innate","Indestructible","hgn_lasersmall","","","","","","","","")

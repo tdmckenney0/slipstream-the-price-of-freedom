@@ -20,7 +20,7 @@ UniverseScreen =
     {
         size =
             { 800, 600, },
-        texture = "Data:UI\\NewUI\\Background\\menu1600.tga",
+        texture = "Data:UI\\NewUI\\Background\\menu.anim",
         textureUV =
             { 0, 0, 1600, 1200, }, },
 },
