@@ -12,28 +12,28 @@ FrontEndScreens =
 
 	{
 		name = "Background",
-		filename = "DATA:\\UI\\NewUI\\frontend\\Background.lua",
+		filename = "DATA:\\UI\\NewUI\\Background.lua",
 		activated = 0,
 	},
 	{
 		name = "NewMainMenu",
-		filename = "DATA:\\UI\\NewUI\\frontend\\MainMenu.lua",
+		filename = "DATA:\\UI\\NewUI\\NewMainMenu.lua",
 		activated = 0,
 		type = "MainMenu",
 	},
 	{
-		name = "Manual", 
-		filename = "DATA:\\UI\\NewUI\\frontend\\manual.lua",
+		name = "Credits",
+		filename = "DATA:\\UI\\NewUI\\credits.lua",
 		activated = 0,
 	},
 	{
-		name = "GalaxyMap", 
-		filename = "DATA:\\UI\\NewUI\\frontend\\galaxymap.lua",
+		name = "UniverseScreen",
+		filename = "DATA:\\UI\\NewUI\\universescreen.lua",
 		activated = 0,
 	},
 	{
-		name = "Credits", 
-		filename = "DATA:\\UI\\NewUI\\frontend\\credits.lua",
+		name = "CreditsScreen",
+		filename = "DATA:\\UI\\NewUI\\creditsscreen.lua",
 		activated = 0,
 	},
 	{
@@ -78,7 +78,7 @@ FrontEndScreens =
 	},
 	{
 		name = "LobbyScreen",
-		filename = "DATA:\\UI\\NewUI\\frontend\\GameRoom.lua",
+		filename = "DATA:\\UI\\NewUI\\GameRoom.lua",
 		activated = 0,
 		type = "LobbyScreen",
 	},
@@ -102,7 +102,7 @@ FrontEndScreens =
 	},
 	{
 		name = "LobbyTitleRoom",
-		filename = "DATA:\\UI\\NewUI\\frontend\\ServerLobby.lua",
+		filename = "DATA:\\UI\\NewUI\\ServerLobby.lua",
 		activated = 0,
 		type = "LobbyTitleRoom",
 	},
@@ -114,7 +114,7 @@ FrontEndScreens =
 	},
 	{
 		name = "Stats",
-		filename = "DATA:\\UI\\NewUI\\frontend\\Stats.lua",
+		filename = "DATA:\\UI\\NewUI\\Stats.lua",
 		activated = 0,
 		type = "Statistics",
 	},
@@ -147,7 +147,7 @@ FrontEndScreens =
 	},
 	{
 		name = "FEGameOptions",
-		filename = "DATA:\\UI\\NewUI\\frontend\\FEGameOptions.lua",
+		filename = "DATA:\\UI\\NewUI\\FEGameOptions.lua",
 		activated = 0,
 		type = "FEGameOptions",
 	},
@@ -173,13 +173,13 @@ FrontEndScreens =
 	},
 	{
 		name = "ErrorMessage",
-		filename = "DATA:\\UI\\NewUI\\frontend\\ErrorMessage.lua",
+		filename = "DATA:\\UI\\NewUI\\ErrorMessage.lua",
 		activated = 0,
 		type = "ErrorMessage",
 	},
 	{
 		name = "WaitMessage",
-		filename = "DATA:\\UI\\NewUI\\frontend\\WaitMessage.lua",
+		filename = "DATA:\\UI\\NewUI\\WaitMessage.lua",
 		activated = 0,
 		type = "WaitMessage",
 	},
@@ -203,16 +203,15 @@ FrontEndScreens =
 }
 
 -- in-between-game screens
-
 TransientScreens =
 {
 	;
 	{
 		name = "LoadingScreen",
-		filename = "DATA:UI/NewUI/frontend/LoadingScreen.lua",
+		filename = "DATA:UI/NewUI/LoadingScreen.lua",
 		activated = 0,
 	},
-}  
+}
 
 -- in-game screens
 GameScreens =
@@ -231,13 +230,13 @@ GameScreens =
 	},
 	{
 		name = "ResourceMenu",
-		filename = "DATA:\\UI\\NewUI\\ingame\\Resource.lua",
+		filename = "DATA:\\UI\\NewUI\\Resource.lua",
 		activated = 0,
 	},
 	{
 		name = "UnitCapInfoPopup",
 		type = "UnitCapInfoPopup",
-		filename = "DATA:\\UI\\NewUI\\ingame\\UnitCapInfoPopup.lua",
+		filename = "DATA:\\UI\\NewUI\\UnitCapInfoPopup.lua",
 		activated = 0,
 	},
 	{
@@ -247,26 +246,26 @@ GameScreens =
 	},
 	{
 		name = "ObjectivesList",
-		filename = "DATA:\\UI\\NewUI\\ingame\\ObjectivesList.lua",
+		filename = "DATA:\\UI\\NewUI\\ObjectivesList.lua",
 		activated = 0,
 		type = "ObjectivesList",
 	},
 	-- Build menu must be loaded before the research menu
 	{
 		name = "NewBuildMenu",
-		filename = "DATA:\\UI\\NewUI\\ingame\\Build.lua",
+		filename = "DATA:\\UI\\NewUI\\Build\\FinalBuild.lua",
 		activated = 0,
 		type = "FinalBuildMenu",
 	},
 	{
 		name = "NewLaunchMenu",
-		filename = "DATA:\\UI\\NewUI\\ingame\\Launch.lua",
+		filename = "DATA:\\UI\\NewUI\\NewLaunch.lua",
 		activated = 0,
 		type = "NewLaunchMenu",
 	},
 	{
 		name = "NewResearchMenu",
-		filename = "DATA:\\UI\\NewUI\\ingame\\Research.lua",
+		filename = "DATA:\\UI\\NewUI\\Research\\Research.lua",
 		activated = 0,
 		type = "NewResearchMenu",
 	},
@@ -284,7 +283,7 @@ GameScreens =
 	},
 	{
 		name = "NewTaskbar",
-		filename = "DATA:\\UI\\NewUI\\ingame\\Taskbar.lua",
+		filename = "DATA:\\UI\\NewUI\\NewTaskbar.lua",
 		activated = 0,
 		type = "NewTaskbar",
 	},
@@ -319,23 +318,23 @@ GameScreens =
 	},
 	{
 		name = "InGameMenu",
-		filename = "DATA:\\UI\\NewUI\\ingame\\InGameMenu.lua",
+		filename = "DATA:\\UI\\NewUI\\InGameMenu.lua",
 		activated = 0,
 		type = "GameMenu",
 	},
 	{
 		name = "FleetMenu",
-		filename = "DATA:\\UI\\NewUI\\ingame\\FleetMenu.lua",
+		filename = "DATA:\\UI\\NewUI\\FleetMenu.lua",
 		activated = 0,
 	},
 	{
 		name = "TacticsMenu",
-		filename = "DATA:\\UI\\NewUI\\ingame\\TacticsMenu.lua",
+		filename = "DATA:\\UI\\NewUI\\TacticsMenu.lua",
 		activated = 0,
 	},
 	{
 		name = "StrikeGroupsMenu",
-		filename = "DATA:\\UI\\NewUI\\ingame\\StrikeGroupsMenu.lua",
+		filename = "DATA:\\UI\\NewUI\\StrikeGroupsMenu.lua",
 		activated = 0,
 	},
 	{
@@ -369,11 +368,10 @@ GameScreens =
 	},
 	{
 		name = "SpeechRecall",
-		filename = "DATA:\\UI\\NewUI\\ingame\\SpeechRecall.lua",
+		filename = "DATA:\\UI\\NewUI\\SpeechRecall.lua",
 		activated = 0,
 		type = "SpeechRecall",
 	},
-
 	{
 		name = "PauseScreen",
 		filename = "DATA:\\UI\\NewUI\\Shared\\PauseScreen.lua",
@@ -381,7 +379,7 @@ GameScreens =
 	},
 	{
 		name = "InGameOptions",
-		filename = "DATA:\\UI\\NewUI\\ingame\\InGameOptions.lua",
+		filename = "DATA:\\UI\\NewUI\\InGameOptions.lua",
 		activated = 0,
 		type = "InGameOptions",
 	},
@@ -397,11 +395,23 @@ GameScreens =
 		activated = 0,
 		type = "GameOverScreen",
 	},
+	--{
+	--	name = "PlaybackMenu",
+	--	filename = "DATA:\\UI\\NewUI\\Playback\\PlaybackMenu.lua",
+	--	activated = 0,
+--		type = "PlaybackMenu",
+	--},
+	--{
+	--	name = "Filter",
+	--	filename = "DATA:\\UI\\NewUI\\filter.lua",
+	--	activated = 1,
+	--},
+
 
 	-- DIALOGS
 	{
 		name = "YesNoDialog",
-		filename = "DATA:\\UI\\NewUI\\frontend\\YesNoDialog.lua",
+		filename = "DATA:\\UI\\NewUI\\YesNoDialog.lua",
 		activated = 0,
 		type = "UIDialog",
 	},
