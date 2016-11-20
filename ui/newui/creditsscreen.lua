@@ -46,7 +46,7 @@ CreditsScreen =
 	size = {510,200},
 	Text =
 	{
-		text = "Emperor",
+		text = "Tanner Mckenney",
 		font = "Heading2Font",
 		color = "FEColorHeading1",
 		vAlign = "Top",
@@ -74,7 +74,7 @@ CreditsScreen =
 	size = {510,200},
 	Text =
 	{
-		text = "HisDivineShadow",
+		text = "Erik Mann",
 		font = "Heading2Font",
 		color = "FEColorHeading1",
 		vAlign = "Top",
@@ -102,7 +102,7 @@ CreditsScreen =
 	size = {510,200},
 	Text =
 	{
-		text = "Aquemnun",
+		text = "Matthew Collins",
 		font = "Heading2Font",
 		color = "FEColorHeading1",
 		vAlign = "Top",
