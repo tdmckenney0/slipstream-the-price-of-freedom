@@ -1,5 +1,5 @@
 hitfx = "hit_generic"
-bulletfx = "explosion_nuke"
+bulletfx = "WEAPON/FRIGATE/IMPACT/WEAPON_FRIGATE_TORPEDO_HIT"
 nopenetratefx = "nopen_generic"
 deathtype = "deathCannon"
 hit_sfx = "EXPLOSION/LARGE/etg_explode_large_sajuuk_supernova"

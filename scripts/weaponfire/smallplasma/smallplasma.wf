@@ -1,12 +1,19 @@
 hitfx = "plasma_hit_spray"
-bulletfx = "smallplasma"
+bulletfx = "plasma_bomb_tracer_advanced"
 nopenetratefx = "plasma_hit_spray"
-deathtype = "deathCannon"
+deathtype = "deathPlasma"
 scartype = "Plasma_Bomb/Plasma_Bomb"
 fire_sfx = "customwpn/gatlinggun2"
-hit_sfx = "weapon/fighter/impact/WEAPON_FIGHTER_Pea_shooter_Hit"
+hit_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
+nopenetrate_sfx = "WEAPON/CORVETTE/IMPACT/WEAPON_CORVETTE_PULASAR_CANNON_BEAM_HIT"
 firefx = "muzzle_flash_combo_plasma_kpr"
 hit_clamp = {
   1,
   1,
 }
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 GUID = { 110, 91, 157, 190, 18, 23, 250, 78, 144, 20, 41, 246, 181, 128, 214, 12, }
 GameRulesName = "TPOF: Arena"
 Description = "Slug it Out with no ship production, no harvesting, and a lot of RU's"
-Directories = { Levels = "data:LevelData\\Multiplayer\\slipstream\\", }
+-- Directories = { Levels = "data:LevelData\\Multiplayer\\slipstream\\", }
 
 GameSetupOptions = {
 	
