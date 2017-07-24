@@ -178,10 +178,10 @@ addSquadron("Guard", "vgr_weaponplatform_missile", {6333, 400, -5500}, 2, {0, 0,
  setWorldBoundsInner({0, 0, 0}, {38000, 38000, 38000});
 
 end
+
 function NonDetermChunk()
 
-
-addPebble("Pebble_1", {10000, -5809, -10876,}, 0, 0, 0)
+  addPebble("Pebble_1", {10000, -5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_1", {-10000, -19809, 1876,}, 0, 0, 0)
   addPebble("Pebble_1", {21000, 21809, 21876,}, 0, 0, 0)
   addPebble("Pebble_1", {10894, -21809, 50639,}, 0, 0, 0)
@@ -192,7 +192,7 @@ addPebble("Pebble_1", {10000, -5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_1", { 14967, -36709, 19806,}, 0, 0, 0)
   addPebble("Pebble_1", { -43907, 26709, 15806,}, 0, 0, 0)
 
-addPebble("Pebble_1", {10000, 5809, -10876,}, 0, 0, 0)
+  addPebble("Pebble_1", {10000, 5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_1", {-9553, 14809, 7876,}, 0, 0, 0)
   addPebble("Pebble_1", {21000, 8569, 21876,}, 0, 0, 0)
   addPebble("Pebble_1", {-29894, 49021, 50639,}, 0, 0, 0)
@@ -203,24 +203,8 @@ addPebble("Pebble_1", {10000, 5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_1", { -13657, 36709, -37806,}, 0, 0, 0)
   addPebble("Pebble_1", { 47043, 26709, 28806,}, 0, 0, 0)
 
-
-
-
-
-
-
-
-
-
- fogSetActive(1)
-  fogSetStart(1)
-  fogSetEnd(1)
-  fogSetColour(0, 0, 0, 1)
-  fogSetType("linear")
-  fogSetDensity(0.00)
-  setGlareIntensity(0.11)
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("deepspace")
+  loadBackground("colony")
   setSensorsManagerCameraDistances(12000, 60000)
-  setDefaultMusic("Data:sound/music/staging/mute")
+
 end

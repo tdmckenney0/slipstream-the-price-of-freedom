@@ -107,7 +107,7 @@ end
 function NonDetermChunk()
 
 	setLevelShadowColour(0, 0, 0, 1)
-	loadBackground("sea_of_echoes")
+	loadBackground("supernova")
 	setSensorsManagerCameraDistances(12000, 60000)
 
 end

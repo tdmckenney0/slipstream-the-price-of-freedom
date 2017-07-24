@@ -156,7 +156,7 @@ end
 
 function NonDetermChunk()
 
-addPebble("Pebble_0", {10000, -5809, -10876,}, 0, 0, 0)
+  addPebble("Pebble_0", {10000, -5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_1", {-10000, -19809, 1876,}, 0, 0, 0)
   addPebble("Pebble_0", {21000, 21809, 21876,}, 0, 0, 0)
   addPebble("Pebble_1", {10894, -21809, 50639,}, 0, 0, 0)
@@ -167,7 +167,7 @@ addPebble("Pebble_0", {10000, -5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_0", { 14967, -36709, 19806,}, 0, 0, 0)
   addPebble("Pebble_1", { -43907, 26709, 15806,}, 0, 0, 0)
 
-addPebble("Pebble_0", {10000, 5809, -10876,}, 0, 0, 0)
+  addPebble("Pebble_0", {10000, 5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_1", {-9553, 14809, 7876,}, 0, 0, 0)
   addPebble("Pebble_0", {21000, 8569, 21876,}, 0, 0, 0)
   addPebble("Pebble_1", {-29894, 49021, 50639,}, 0, 0, 0)
@@ -178,13 +178,6 @@ addPebble("Pebble_0", {10000, 5809, -10876,}, 0, 0, 0)
   addPebble("Pebble_0", { -13657, 36709, -37806,}, 0, 0, 0)
   addPebble("Pebble_1", { 47043, 26709, 28806,}, 0, 0, 0)
 
-
-  fogSetActive(1)
-  fogSetStart(1)
-  fogSetEnd(18000)
-  fogSetColour(0.332031, 0.169922, 0.095703, 1)
-  fogSetType("linear")
-  fogSetDensity(.70)
   setGlareIntensity(0)
   setLevelShadowColour(0, 0, 0, 1)
   loadBackground("supernova")
