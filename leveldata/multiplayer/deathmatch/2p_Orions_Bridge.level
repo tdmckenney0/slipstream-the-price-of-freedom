@@ -382,7 +382,7 @@ end
 
 function NonDetermChunk()
 
-	loadBackground("Orions_Bridge")
+	loadBackground("orions_bridge")
 	setSensorsManagerCameraDistances(10000, 50000)
 	
 end

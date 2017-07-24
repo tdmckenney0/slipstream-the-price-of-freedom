@@ -233,7 +233,7 @@ end
 function NonDetermChunk()
  
 	setLevelShadowColour(0, 0, 0, 1)
-	loadBackground("Orbit")
+	loadBackground("orbit")
 	setSensorsManagerCameraDistances(12000, 60000)
   
 end

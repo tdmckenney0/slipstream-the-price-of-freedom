@@ -124,7 +124,7 @@ end
 function NonDetermChunk()
 
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("Black")
+  loadBackground("colony")
   setSensorsManagerCameraDistances(12000, 60000)
   
 end

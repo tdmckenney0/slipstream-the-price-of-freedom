@@ -61,11 +61,11 @@ NewMainMenu =
 		backgroundColor = "FEColorBackground1",
 		position = 
 		{
-			513,
-			164,
+			540, --513
+			175, --164
 		},
 		autoarrange = 1,
-		autoarrangeWidth = 304,
+		autoarrangeWidth = 253,
 		autoarrangeSpace = 0,
 		maxSize = 
 		{
@@ -77,7 +77,7 @@ NewMainMenu =
 			type = "Frame",
 			size = 
 			{
-				304,
+				253,
 				2,
 			},
 		},
@@ -85,13 +85,13 @@ NewMainMenu =
 			type = "TextLabel",
 			size = 
 			{
-				304,
+				253,
 				13,
 			},
 			Text = 
 			{
 				textStyle = "FEHeading3",
-				text = "$2617",
+				text = "The Price of Freedom v4.0",
 				offset = 
 				{
 					8,
@@ -103,7 +103,7 @@ NewMainMenu =
 			type = "Frame",
 			size = 
 			{
-				304,
+				253,
 				2,
 			},
 		},
@@ -112,13 +112,13 @@ NewMainMenu =
 			name = "m_lblSubTitle",
 			size = 
 			{
-				304,
+				253,
 				10,
 			},
 			Text = 
 			{
 				textStyle = "FEHeading4",
-				text = "$2618",
+				text = "MAIN MENU//",
 				offset = 
 				{
 					8,
@@ -130,7 +130,7 @@ NewMainMenu =
 			type = "Frame",
 			size = 
 			{
-				304,
+				253,
 				4,
 			},
 		},
@@ -146,10 +146,12 @@ NewMainMenu =
 			type = "Frame",
 			outerBorderWidth = 2,
 			borderColor = "FEColorOutline",
-			autosize = 1,
+			autosize = 0,
+			width = 245,
+			height = 125,
 			autoarrange = 1,
 			autoarrangeSpace = 2,
-			autoarrangeWidth = 256,
+			autoarrangeWidth = 256, 
 			;
 			{
 				type = "TextButton",
@@ -227,7 +229,7 @@ NewMainMenu =
 			type = "Frame",
 			size = 
 			{
-				300,
+				253,
 				4,
 			},
 		},
@@ -243,38 +245,38 @@ NewMainMenu =
 			textStyle = "FEListBoxItemTextStyle",
 		},
 	},
-	{
-		type = "TextLabel",
-		name = "lblVersion",
-		size = 
-		{
-			400,
-			13,
-		},
-		position = 
-		{
-			(578 - 400),
-			(518 - 56),
-		},
-		Text = 
-		{
-			text = "$1221",
-			font = "ButtonFont",
-			hAlign = "Right",
-			vAlign = "Top",
-			color = 
-			{
-				119,
-				166,
-				191,
-				255,
-			},
-			offset = 
-			{
-				 - 2,
-				0,
-			},
-		},
-	},
+	-- {
+	-- 	type = "TextLabel",
+	-- 	name = "lblVersion",
+	-- 	size = 
+	-- 	{
+	-- 		400,
+	-- 		13,
+	-- 	},
+	-- 	position = 
+	-- 	{
+	-- 		(578 - 400),
+	-- 		(518 - 56),
+	-- 	},
+	-- 	Text = 
+	-- 	{
+	-- 		text = "$1221",
+	-- 		font = "ButtonFont",
+	-- 		hAlign = "Right",
+	-- 		vAlign = "Top",
+	-- 		color = 
+	-- 		{
+	-- 			119,
+	-- 			166,
+	-- 			191,
+	-- 			255,
+	-- 		},
+	-- 		offset = 
+	-- 		{
+	-- 			 - 2,
+	-- 			0,
+	-- 		},
+	-- 	},
+	-- },
 }
 
