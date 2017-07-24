@@ -226,7 +226,6 @@ NewShipType.chanceOfSpecialDeath = 0
 NewShipType.deadSobFadeTime = 0.4
 NewShipType.trailLinger = 3
 setEngineBurn(NewShipType, 9, 0.2, 0.5, 300, 1.02, 0.1, 0.25, 380)
---setEngineTrail(NewShipType, 0, 4, "trail_ribbon.tga", 0.1, 0.2, 0.025, 3)
 setEngineGlow(NewShipType, 1, 1, 1.02, 20, 500, 200, 1,
     { 0.92, 0.21, 0.09, 0.25, })
 loadShipPatchList(NewShipType, "data:sound/sfx/ship/Hiigaran/Carrier/", 0, "Engines/HDestroyerEng", "", 1, "Ambience/HBattleCrusierAmb", "")
