@@ -367,7 +367,8 @@ function DetermChunk()
 	addAsteroid("Asteroid_1", {-13542, 600, 12946}, 200, 0, 0, 0, 0)
 	addAsteroid("Asteroid_1", {60765, 600, 109984}, 200, 0, 0, 0, 0)
 
-	addSquadron("HyperspaceBridge", "anc_hyperspace_bridge", {36475, 12000, 30699}, -1, {0, 45, 0}, 0, 0)
+	-- addSquadron("HyperspaceBridge", "anc_hyperspace_bridge", {36475, 12000, 30699}, -1, {0, 45, 0}, 0, 0)
+	addSquadron("HyperspaceBridge", "anc_hyperspace_bridge", {-75000, 0, 75000}, -1, {0, -45, 0}, 0, 0)
 	
 	addSquadron("meg_sajhulkturret", "meg_sajhulkturret", {-3972, 1500, 3757}, -1, {68, 38, 70}, 0, 0)
 	addSquadron("meg_foundrydebris_chunk2", "meg_foundrydebris_chunk2", {750, -600, 5613}, -1, {56, -45, 0}, 0, 0)
@@ -376,7 +377,7 @@ function DetermChunk()
 	addSquadron("meg_foundrydebris_flake1", "meg_foundrydebris_flake1", {-3285, 6200, 3931}, -1, {78, -1, 0}, 0, 0)
 	addSquadron("meg_foundrydebris_flake1", "meg_foundrydebris_flake1", {305, 200, 1945}, -1, {45, 0, 78}, 0, 0)
 	
-	setWorldBoundsInner({0, 0, 0}, {45000, 45000, 45000})
+	setWorldBoundsInner({0, 0, 0}, {60000, 60000, 60000})
 	
 end
 

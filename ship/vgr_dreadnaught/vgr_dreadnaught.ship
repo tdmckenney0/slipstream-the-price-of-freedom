@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "Leviathan"
-NewShipType.sobDescription = "Tsaraii-DSCG Hybrid Dreadnaught"
+NewShipType.sobDescription = "Vaygr Super-Dreadnaught"
 NewShipType.maxhealth = 750000
 NewShipType.regentime = 800
 NewShipType.minRegenTime = 800
@@ -154,7 +154,7 @@ addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "DefenseFieldAbility", 1, 0, 700, 750, 750, 1, 10, 0, "defensefield_sphere_spray")
 addAbility(NewShipType, "DefenseFieldShieldAbility", 0, 700, 0, 0)
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
-LoadModel(NewShipType, 1)
+LoadSharedModel(NewShipType, "hgn_dreadnaught")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense1", "Weapon_HullDefense1")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense2", "Weapon_HullDefense2")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense3", "Weapon_HullDefense3")
@@ -165,10 +165,18 @@ StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense7", 
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense8", "Weapon_HullDefense8")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense9", "Weapon_HullDefense9")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense10", "Weapon_HullDefense10")
-StartShipWeaponConfig(NewShipType, "vgr_superheavybeam", "Weapon_Triton1", "Weapon_Triton1")
-
-StartShipHardPointConfig(NewShipType, "MissileT","Weapon_DreadTurret","Weapon","Innate","Indestructible","Vgr_MissileTurret","","","","","","","","")
-
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense1", "Weapon_HullDefense1")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense2", "Weapon_HullDefense2")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense3", "Weapon_HullDefense3")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense4", "Weapon_HullDefense4")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense5", "Weapon_HullDefense5")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense6", "Weapon_HullDefense6")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense7", "Weapon_HullDefense7")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense8", "Weapon_HullDefense8")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense9", "Weapon_HullDefense9")
+StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullDefense10", "Weapon_HullDefense10")
+StartShipWeaponConfig(NewShipType, "vgr_superheavybeam", "Weapon_Triton1", "Weapon_Triton1") -- Hgn_DreadnaughtIonCannon
+StartShipWeaponConfig(NewShipType, "vgr_mediumplasmadriver", "Weapon_DreadTurret", "Weapon_DreadTurret")
 
 addShield(NewShipType, "EMP", 10000, 20)
 
