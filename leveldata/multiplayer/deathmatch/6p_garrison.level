@@ -16,7 +16,7 @@
 -- Credits:
 
 
-levelDesc = "Garrison "
+levelDesc = "Garrison"
 
 maxPlayers = 6
 

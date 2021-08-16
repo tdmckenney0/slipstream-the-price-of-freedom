@@ -4,7 +4,6 @@ Description = "Basic Deathmatch Rule for The Price of Freedom"
 -- Directories = { Levels = "data:LevelData\\Multiplayer\\slipstream\\", }
 
 GameSetupOptions = {
- 
     { 
         name = "resources", 
         locName = "$3240", 
