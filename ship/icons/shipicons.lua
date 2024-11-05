@@ -1480,11 +1480,12 @@ Vgr_Drone = Vgr_Scout
 Hgn_Drone = Hgn_Probe
 hgn_pulsarplatform = Hgn_IonTurret
 vgr_weaponplatform_Plasma = Vgr_WeaponPlatform_gun
+hgn_battleship = Hgn_BattleCruiser
+hgn_crossbow_cruiser = Hgn_Destroyer
+vgr_helios = Vgr_Destroyer
 --SUBSYSTEMS
 directionalthruster = Icon_Subsystem_Engine
 --UNCG
-hgn_battleship = Hgn_BattleCruiser
-hgn_crossbow_cruiser = Hgn_Destroyer
 hgn_battleshipminedropper = Icon_Subsystem_TorpedoLauncher
 hgn_booster = Icon_Subsystem_Engine
 hgn_c_module_build = Icon_Subsystem_ResearchAdvanced
@@ -1494,6 +1495,7 @@ hgn_gatlinggun =  Icon_Subsystem_FireControl
 hgn_gatlinggunleft =  Icon_Subsystem_FireControl
 hgn_gatlinggunright =  Icon_Subsystem_FireControl
 hgn_gatlinggunsmall =  Icon_Subsystem_FireControl
+hgn_ioncannon = Icon_Subsystem_IonTurret
 hgn_ioncannonx2 = Icon_Subsystem_IonTurret
 hgn_ioncannonx3 = Icon_Subsystem_IonTurret
 hgn_lasersmall = Icon_Subsystem_IonTurret
