@@ -10,6 +10,9 @@ function RestrictOptions(playerid)
         Player_RestrictBuildOption(playerid, "Kpr_Mover")
         Player_RestrictBuildOption(playerid, "Hgn_Shipyard_SPG")
         Player_RestrictBuildOption(playerid, "Hgn_MinelayerCorvette")
+        Player_RestrictBuildOption(playerid, "Hgn_Scout")
+        Player_RestrictBuildOption(playerid, "Hgn_MarineFrigate")
+        Player_RestrictBuildOption(playerid, "Hgn_DefenseFieldFrigate")
         Player_RestrictResearchOption(playerid, "AssaultCorvetteEliteWeaponUpgrade")
         Player_RestrictResearchOption(playerid, "AttackBomberEliteWeaponUpgrade")
         Player_RestrictResearchOption(playerid, "SensorsDowngrade1")
@@ -61,6 +64,8 @@ function RestrictOptions(playerid)
         Player_RestrictResearchOption(playerid, "VaygrCarrierHealthUpgrade")
         Player_RestrictBuildOption(playerid, "Vgr_MinelayerCorvette")
         Player_RestrictBuildOption(playerid, "vgr_hyperspace_platform")
+        Player_RestrictBuildOption(playerid, "Vgr_scout")
+        Player_RestrictBuildOption(playerid, "vgr_infiltratorfrigate")
     end 
 
 end
