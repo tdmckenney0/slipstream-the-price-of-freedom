@@ -4,10 +4,6 @@ setAngles(NewWeaponType,0,0,0,0,0)
 
 setPenetration(NewWeaponType,5,1,
 {Unarmoured=1,},
-{SuperConducting=1,},
-{AntiChemical=1,},
-{AntiMassImpact=1,},
-{Composite=1,},
 {LightArmour=1,},
 {MediumArmour=1,},
 {HeavyArmour=1,},

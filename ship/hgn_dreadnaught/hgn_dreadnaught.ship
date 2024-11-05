@@ -76,7 +76,6 @@ NewShipType.DisplayFamily ="Flagship"
 NewShipType.AutoFormationFamily ="SuperCap"
 NewShipType.CollisionFamily ="Big"
 NewShipType.ArmourFamily ="HeavyArmour"
-NewShipType.UnitCapsFamily ="Dreadnaught"
 NewShipType.fighterValue =0
 NewShipType.corvetteValue =0
 NewShipType.frigateValue =160

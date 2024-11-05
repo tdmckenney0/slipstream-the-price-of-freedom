@@ -158,7 +158,7 @@ addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "munition, Capturer,
 {
     Mothership = "Flyround_destroyer",})
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
-addAbility(NewShipType, "CanBuildShips", 1,"Drone_DOL,  SubSystem_Vgr","Fighter, SubSystemModule")
+addAbility(NewShipType, "CanBuildShips", 1,"Fighter_Vgr, SubSystem_Vgr","Fighter, SubSystemModule")
 addAbility(NewShipType, "CanBeCaptured", 160, 0.1)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "MinelayerAbility",1,3.5)
