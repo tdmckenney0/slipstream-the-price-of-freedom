@@ -1,6 +1,6 @@
 GUID = { 110, 91, 157, 190, 18, 23, 250, 78, 144, 20, 41, 246, 181, 128, 214, 12, }
-GameRulesName = "TPOF: Adv. Deathmatch"
-Description = "Advanced Game Options for The Price of Freedom"
+GameRulesName = "Slipstream"
+Description = "Game Options for Slipstream: The Price of Freedom"
 Directories = { Levels = "data:LevelData\\Multiplayer\\slipstream\\", }
 
 GameSetupOptions = {
