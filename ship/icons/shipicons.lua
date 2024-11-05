@@ -1483,6 +1483,8 @@ vgr_weaponplatform_Plasma = Vgr_WeaponPlatform_gun
 --SUBSYSTEMS
 directionalthruster = Icon_Subsystem_Engine
 --UNCG
+hgn_battleship = Hgn_BattleCruiser
+hgn_crossbow_cruiser = Hgn_Destroyer
 hgn_battleshipminedropper = Icon_Subsystem_TorpedoLauncher
 hgn_booster = Icon_Subsystem_Engine
 hgn_c_module_build = Icon_Subsystem_ResearchAdvanced
