@@ -13,7 +13,7 @@
 -- Added patches of radiation
 -- Added some randomly placed pebbles
 
-levelDesc = "Sea of Echoes "
+levelDesc = "The Graveyard"
 
 maxPlayers = 2
 
