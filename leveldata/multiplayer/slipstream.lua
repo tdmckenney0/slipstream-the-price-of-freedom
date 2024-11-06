@@ -51,20 +51,6 @@ GameSetupOptions = {
 	},
 	
 	{
-		name = "startfleet",
-		locName = "Starting Mode",
-		tooltip = "Choose A Starting Fleet",
-		default = 0,
-		visible = 1,
-		choices =
-		{
-			"Factory", "1",
-			"Carrier", "2",
-			"Fleet", "3",
-		},
-	},
-	
-	{
 		name = "wincondition",
 		locName = "Win Condition",
 		tooltip = "select the condition for winning the game",
@@ -158,18 +144,8 @@ function OnInit()
 
 
     Rule_Add("MainRule")
-
-	startfleet = GetGameSettingAsNumber("startfleet")
-
-	if startfleet == 1 then
-		SetStartFleetSuffix("")
-	elseif startfleet == 2 then
-		SetStartFleetSuffix("_light")
-	elseif startfleet == 3 then
-		SetStartFleetSuffix("_heavy")
-	else
-		SetStartFleetSuffix("")
-	end
+	
+	SetStartFleetSuffix("")
 	
 end
 
