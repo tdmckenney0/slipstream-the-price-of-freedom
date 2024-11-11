@@ -165,7 +165,7 @@ StartShipWeaponConfig(NewShipType, "hgn_plasmaburstcannon", "Weapon_Torpedo_Tube
 
 --Main Turrets
 
-StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Damageable","hgn_coilcannonx3","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Damageable","hgn_plasmaburstcannon","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Damageable","hgn_gatlinggun","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Damageable","hgn_railgun","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Damageable","hgn_gatlinggun","","","","","","","","");

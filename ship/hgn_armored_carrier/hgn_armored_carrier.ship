@@ -175,7 +175,7 @@ StartShipHardPointConfig(NewShipType, "PPC1", "Hardpoint_TURFront1", "System", "
 StartShipHardPointConfig(NewShipType, "PPC2", "Hardpoint_TURFront2", "System", "Innate", "Damageable", "hgn_gatlinggunleft", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "M1", "Hardpoint_MBot1", "System", "Innate", "Damageable", "hgn_missileturretleft", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "M2", "Hardpoint_MBot2", "System", "Innate", "Damageable", "hgn_missileturretright", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "PlasmaBattery", "Hardpoint_PbBot1", "Weapon", "Innate", "Damageable", "hgn_coilcannonx3", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "PlasmaBattery", "Hardpoint_PbBot1", "Weapon", "Innate", "Damageable", "hgn_plasmaburstcannon", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Rail1", "Hardpoint_MountTop1WPN", "Weapon", "Innate", "Damageable", "hgn_Railgun", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Rail2", "Hardpoint_MountTop2WPN", "Weapon", "Innate", "Damageable", "hgn_Railgun", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Gat1", "Hardpoint_MountTop3WPN", "Weapon", "Innate", "Damageable", "hgn_gatlinggun", "", "", "", "", "", "", "", "")
