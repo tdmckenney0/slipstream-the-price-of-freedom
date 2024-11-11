@@ -159,11 +159,11 @@ StartShipWeaponConfig(NewShipType, "vgr_heavyfusionmissilelauncherbc", "Weapon_M
 
 addShield(NewShipType, "EMP", 310, 20)
 
-StartShipHardPointConfig(NewShipType, "Turret_Front", "Weapon_Bottom", "System", "Innate", "Damageable", "vgr_pmortarfrigatebottom", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Turret_Front", "Weapon_Bottom", "System", "Innate", "Damageable", "vgr_pulsecannonassaultfrigatebottom", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Turret_Left", "Weapon_Left", "System", "Innate", "Damageable", "vgr_pmortarfrigateleft", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Turret_Left", "Weapon_Left", "System", "Innate", "Damageable", "vgr_pulsecannonassaultfrigateleft", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Turret_Right", "Weapon_Right", "System", "Innate", "Damageable", "vgr_pmortarfrigateright", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Turret_Right", "Weapon_Right", "System", "Innate", "Damageable", "vgr_pulsecannonassaultfrigateright", "", "", "", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "Weapon_Module", "Hardpoint_mount", "System", "Innate", "Damageable", "vgr_gunmount", "", "", "", "", "", "", "", "")
 
