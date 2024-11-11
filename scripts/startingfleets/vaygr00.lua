@@ -2,7 +2,27 @@ PersistantData = {
    StrikeGroups = {
    },
    Squadrons = {
+      {
+         type = "vgr_Helios",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 1,
+      },
+      {
+         type = "vgr_carrier",
+         subsystems = {
+         },
+         shiphold = {
+         },
+         name = "",
+         size = 1,
+         number = 1,
 
+      },
       {
          type = "Vgr_ResourceCollector",
          subsystems = {
@@ -13,18 +33,6 @@ PersistantData = {
          size = 1,
          number = 6,
       },
-
-      {
-         type = "vgr_dreadnaught",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 1,
-      },
-
       {
          type = "vgr_resourcecontroller",
          subsystems = {
@@ -47,16 +55,6 @@ PersistantData = {
          number = 2,
       },
       {
-         type = "vgr_Helios",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 2,
-      },
-      {
          type = "vgr_assaultfrigate",
          subsystems = {
          },
@@ -65,17 +63,6 @@ PersistantData = {
          name = "",
          size = 1,
          number = 5,
-      },
-      {
-         type = "vgr_carrier",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         size = 1,
-         number = 1,
-
       },
       {
          type = "vgr_destroyer",
