@@ -29,18 +29,6 @@ PersistantData = {
          },
          shiphold = {
             {
-               type = "hgn_drone",
-               name = "",
-            },
-            {
-               type = "hgn_drone",
-               name = "",
-            },
-            {
-               type = "hgn_drone",
-               name = "",
-            },
-            {
                type = "hgn_pulsarcorvette",
                name = "",
             },

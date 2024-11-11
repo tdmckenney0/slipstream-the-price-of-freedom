@@ -67,15 +67,6 @@ PersistantData = {
          number = 5,
       },
       {
-         type = "vgr_drone",
-         subsystems = {
-         },
-         shiphold = {
-         },
-         name = "",
-         number = 5,
-      },
-      {
          type = "vgr_carrier",
          subsystems = {
          },
