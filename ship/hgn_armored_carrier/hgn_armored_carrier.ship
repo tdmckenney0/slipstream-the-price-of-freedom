@@ -169,7 +169,7 @@ addShield(NewShipType, "EMP", 10000, 20)
 
 --Turrets
 
-StartShipHardPointConfig(NewShipType, "Valencium1", "Hardpoint_TMweapon", "Weapon", "Innate", "Damageable", "hgn_plasmabatteryx6", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Valencium1", "Hardpoint_TMweapon", "Weapon", "Innate", "Damageable", "hgn_battlecruiserionbeamturret", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Valencium2", "Hardpoint_TMweaponbot", "Weapon", "Innate", "Damageable", "hgn_ioncannon", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "PPC1", "Hardpoint_TURFront1", "System", "Innate", "Damageable", "hgn_gatlinggunright", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "PPC2", "Hardpoint_TURFront2", "System", "Innate", "Damageable", "hgn_gatlinggunleft", "", "", "", "", "", "", "", "")

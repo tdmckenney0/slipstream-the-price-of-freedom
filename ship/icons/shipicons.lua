@@ -1504,7 +1504,7 @@ hgn_mount = Icon_Subsystem_PlatformControl
 hgn_mount_large = Icon_Subsystem_PlatformControl
 hgn_mountedflak = Icon_Subsystem_FireControl
 hgn_ms_module_build = Icon_Subsystem_ResearchAdvanced
-hgn_plasmabatteryx6 = Icon_Subsystem_IonTurret
+hgn_battlecruiserionbeamturret = Icon_Subsystem_IonTurret
 hgn_railgun = Icon_Subsystem_IonTurret
 hgn_smallionturret = Icon_Subsystem_IonTurret
 --DSCG

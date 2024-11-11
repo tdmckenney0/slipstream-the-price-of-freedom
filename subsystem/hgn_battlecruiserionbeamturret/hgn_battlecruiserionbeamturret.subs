@@ -5,8 +5,8 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName="Heavy Plasma Battery"
-NewSubSystemType.sobDescription="2x Valencium Heavy Plasma Repeater Cannons"
+NewSubSystemType.displayedName="$2026"
+NewSubSystemType.sobDescription="$2027"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
 NewSubSystemType.tacticalIconMinFadeSize=0.0045
@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_plasmaburstcannon","Weapon_SCT","null");
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_ioncannonturret","Weapon_SCT","weapon_turret");
