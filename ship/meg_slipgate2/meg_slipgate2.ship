@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Ancient Hyperspace Bridge"
-NewShipType.sobDescription = "Ancient Hyperspace Bridge"
+NewShipType.displayedName = "Slipgate"
+NewShipType.sobDescription = "Slipgate"
 NewShipType.maxhealth = 400000000.0
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0

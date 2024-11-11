@@ -4,8 +4,8 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "$1810"
-NewShipType.sobDescription = "$1811"
+NewShipType.displayedName = "Slipgate"
+NewShipType.sobDescription = "Slipgate"
 NewShipType.maxhealth = 200000000.0
 NewShipType.regentime = 100000
 NewShipType.minRegenTime = 75000
