@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_plasmabatteryx6","Weapon_SCT","null");
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_plasmaburstcannon","Weapon_SCT","null");

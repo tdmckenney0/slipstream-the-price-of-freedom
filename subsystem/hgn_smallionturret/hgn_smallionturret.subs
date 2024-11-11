@@ -34,5 +34,5 @@ NewSubSystemType.AttackFamily = "UnAttackable"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemSensors"
 NewSubSystemType.ArmourFamily = "MediumArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"Hgn_rapidpulsar","Weapon_Top","Null")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_pulsar","Weapon_Top","Null")
 

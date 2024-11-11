@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"vgr_Frigate_Pulse_left","Weapon_FT","Weapon_Turret");
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_pulsecannonassaultfrigateleft","Weapon_FT","Weapon_Turret");

@@ -34,4 +34,4 @@ NewSubSystemType.AttackFamily = "Subsystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemSensors"
 NewSubSystemType.ArmourFamily = "MediumArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_gatlinggunsmall","Weapon_Bottom","")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_frigategatlinggun","Weapon_Bottom","")

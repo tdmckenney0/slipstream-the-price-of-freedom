@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_rail","Weapon_DT","null");
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_vulcanplasmaturret","Weapon_DT","null");

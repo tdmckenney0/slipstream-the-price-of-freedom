@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily = "UnAttackable"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_dronecannon","Weapon_TurretTop","Weapon_TurretTop");
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_autocannon","Weapon_TurretTop","Weapon_TurretTop");

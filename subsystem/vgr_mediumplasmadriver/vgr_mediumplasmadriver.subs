@@ -39,4 +39,4 @@ NewSubSystemType.AttackFamily = "SubSystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType, "hgn_mediumplasmadriver", "Weapon_IonCan1", "Weapon_IonCan1")
+StartSubSystemWeaponConfig(NewSubSystemType, "vgr_pulsecannondestroyer", "Weapon_IonCan1", "Weapon_IonCan1")

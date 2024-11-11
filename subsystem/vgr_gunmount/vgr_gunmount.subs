@@ -34,5 +34,5 @@ NewSubSystemType.AttackFamily = "Subsystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemSensors"
 NewSubSystemType.ArmourFamily = "MediumArmour"
-StartSubSystemWeaponConfig(NewSubSystemType, "Vgr_Flakcannon", "Weapon_Gun_R", "Weapon_Gun_R")
-StartSubSystemWeaponConfig(NewSubSystemType, "Vgr_Flakcannon", "Weapon_Gun_L", "Weapon_Gun_L")
+StartSubSystemWeaponConfig(NewSubSystemType, "vgr_pulsecannoninfiltratorfrigate", "Weapon_Gun_R", "Weapon_Gun_R")
+StartSubSystemWeaponConfig(NewSubSystemType, "vgr_pulsecannoninfiltratorfrigate", "Weapon_Gun_L", "Weapon_Gun_L")

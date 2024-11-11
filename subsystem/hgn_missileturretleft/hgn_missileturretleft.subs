@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_volleymissileleft","Weapon_Missile","Weapon_Missile");
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_nuclearmissile","Weapon_Missile","Weapon_Missile");

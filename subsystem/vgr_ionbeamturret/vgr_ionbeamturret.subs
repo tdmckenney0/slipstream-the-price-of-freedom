@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"Vgr_TurretedIonCannon","Weapon_IC","");
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_vulcanpulseturret","Weapon_IC","");
