@@ -112,7 +112,7 @@ GameSetupOptions = {
 }
  
 dofilepath("data:scripts/scar/restrict.lua")
-dofilepath("data:libraries/music.lua")
+dofilepath("data:scripts/music.lua")
 
 Events = {}
 Events.endGame =
