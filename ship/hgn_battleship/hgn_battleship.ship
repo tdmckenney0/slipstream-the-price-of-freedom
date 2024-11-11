@@ -169,14 +169,14 @@ LoadModel(NewShipType, 1)
 --Weapon systems
 
 StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Nuke", "Weapon_Nuke");
-StartShipWeaponConfig(NewShipType, "hgn_clusterbomb", "Weapon_Artillery1", "Weapon_Artillery1");
-StartShipWeaponConfig(NewShipType, "hgn_clusterbomb", "Weapon_Artillery2", "Weapon_Artillery2");
-StartShipWeaponConfig(NewShipType, "hgn_clusterbomb", "Weapon_Artillery3", "Weapon_Artillery3");
-StartShipWeaponConfig(NewShipType, "hgn_clusterbomb", "Weapon_Artillery4", "Weapon_Artillery4");
-StartShipWeaponConfig(NewShipType, "Hgn_GimbleIonCannon", "Weapon_Pulsar", "Weapon_Pulsar")
-StartShipWeaponConfig(NewShipType, "Hgn_GimbleIonCannon", "Weapon_Pulsar2", "Weapon_Pulsar2")
-StartShipWeaponConfig(NewShipType, "Hgn_GimbleIonCannon", "Weapon_Pulsar3", "Weapon_Pulsar3")
-StartShipWeaponConfig(NewShipType, "Hgn_GimbleIonCannon", "Weapon_Pulsar4", "Weapon_Pulsar4")
+StartShipWeaponConfig(NewShipType, "hgn_plasmaburstcannon", "Weapon_Artillery1", "Weapon_Artillery1");
+StartShipWeaponConfig(NewShipType, "hgn_plasmaburstcannon", "Weapon_Artillery2", "Weapon_Artillery2");
+StartShipWeaponConfig(NewShipType, "hgn_plasmaburstcannon", "Weapon_Artillery3", "Weapon_Artillery3");
+StartShipWeaponConfig(NewShipType, "hgn_plasmaburstcannon", "Weapon_Artillery4", "Weapon_Artillery4");
+StartShipWeaponConfig(NewShipType, "hgn_heavybattlecruiserkprbeamside", "Weapon_Pulsar", "Weapon_Pulsar")
+StartShipWeaponConfig(NewShipType, "hgn_heavybattlecruiserkprbeamside", "Weapon_Pulsar2", "Weapon_Pulsar2")
+StartShipWeaponConfig(NewShipType, "hgn_heavybattlecruiserkprbeamside", "Weapon_Pulsar3", "Weapon_Pulsar3")
+StartShipWeaponConfig(NewShipType, "hgn_heavybattlecruiserkprbeamside", "Weapon_Pulsar4", "Weapon_Pulsar4")
 StartShipWeaponConfig(NewShipType, "Hgn_MSHullDefenseGun", "Weapon_HullDefense1", "Weapon_HullDefense1")
 StartShipWeaponConfig(NewShipType, "Hgn_MSHullDefenseGun", "Weapon_HullDefense2", "Weapon_HullDefense2")
 StartShipWeaponConfig(NewShipType, "Hgn_MSHullDefenseGun", "Weapon_HullDefense3", "Weapon_HullDefense3")
@@ -185,8 +185,6 @@ StartShipWeaponConfig(NewShipType, "Hgn_MSHullDefenseGun", "Weapon_HullDefense4"
 addShield(NewShipType, "EMP", 10000, 20)
 
 AddShipAbility(NewShipType, "DefenseField", 1, "ThisShipOnly", 1)
-
-StartShipWeaponConfig(NewShipType, "tsar_repulsor", "Weapon_Repulsor", "Trigger")
 
 --Engineering Subsystems
 

@@ -153,10 +153,10 @@ StartShipHardPointConfig(NewShipType,"Generic 5","HardpointAD","Weapon","Generic
 
 StartShipHardPointConfig(NewShipType,"Generic 6","HardpointAD2","Weapon","Generic","Damageable","hgn_mountedflak","","","","","","","","")
 
-StartShipWeaponConfig(NewShipType, "hgn_rclaser", "Weapon_HullDefense1", "")
-StartShipWeaponConfig(NewShipType, "hgn_rclaser", "Weapon_HullDefense3", "")
-StartShipWeaponConfig(NewShipType, "hgn_rclaser", "Weapon_HullDefense5", "")
-StartShipWeaponConfig(NewShipType, "hgn_rclaser", "Weapon_HullDefense8", "")
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense1", "")
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense3", "")
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense5", "")
+StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense8", "")
 
 addShield(NewShipType,"EMP",400,12)
 NewShipType.battleScarMaxTriBase = 75

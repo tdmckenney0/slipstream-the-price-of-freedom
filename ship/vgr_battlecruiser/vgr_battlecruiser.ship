@@ -171,9 +171,9 @@ StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD2", "Fire_
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD3", "Fire_Missile")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD4", "Fire_Missile")
 StartShipWeaponConfig(NewShipType, "vgr_hulldefensegun", "Weapon_HullD5", "Fire_Missile")
-StartShipWeaponConfig(NewShipType, "vgr_iondefense", "Weapon_BCHeavyLaser3", "")
-StartShipWeaponConfig(NewShipType, "vgr_iondefense", "Weapon_BCHeavyLaser4", "")
-StartShipWeaponConfig(NewShipType, "vgr_bcsuperbeam", "Weapon_BCUberPulse", "")
+StartShipWeaponConfig(NewShipType, "vgr_bclaser", "Weapon_BCHeavyLaser3", "")
+StartShipWeaponConfig(NewShipType, "vgr_bclaser", "Weapon_BCHeavyLaser4", "")
+StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_BCUberPulse", "")
 
 addShield(NewShipType, "EMP", 10000, 20)
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_BattleCruiserEngine", "", "", "", "", "", "", "", "")

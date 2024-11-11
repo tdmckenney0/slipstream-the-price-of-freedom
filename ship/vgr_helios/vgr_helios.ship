@@ -165,14 +165,14 @@ addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
 
-StartShipWeaponConfig(NewShipType, "vgr_fixedppc", "Weapon_Fixed1", "")
-StartShipWeaponConfig(NewShipType, "vgr_fixedppc", "Weapon_Fixed2", "")
-StartShipWeaponConfig(NewShipType, "vgr_fixedppc", "Weapon_Fixed3", "")
-StartShipWeaponConfig(NewShipType, "vgr_fixedppc", "Weapon_Fixed4", "")
-StartShipWeaponConfig(NewShipType, "vgr_fixedppc", "Weapon_Fixed5", "")
-StartShipWeaponConfig(NewShipType, "vgr_fixedppc", "Weapon_Fixed6", "")
+StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed1", "")
+StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed2", "")
+StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed3", "")
+StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed4", "")
+StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed5", "")
+StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed6", "")
 
-StartShipWeaponConfig(NewShipType, "vgr_heliosmissile", "Weapon_Missile", "")
+StartShipWeaponConfig(NewShipType, "vgr_heavyfusionmissilelauncherbc", "Weapon_Missile", "")
 
 addShield(NewShipType, "EMP", 1000, 20)
 

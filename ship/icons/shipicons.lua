@@ -1476,8 +1476,6 @@ Hgn_drone_frigate_3 = Hgn_Marinefrigate
 Kpr_Mover_Capture = Kpr_Mover_Capture
 Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
 -- TPOF
-Vgr_Drone = Vgr_Scout
-Hgn_Drone = Hgn_Probe
 hgn_pulsarplatform = Hgn_IonTurret
 vgr_weaponplatform_Plasma = Vgr_WeaponPlatform_gun
 hgn_battleship = Hgn_BattleCruiser
