@@ -6,4 +6,4 @@ NewSubSystemType.hasIcon=0
 NewSubSystemType.AttackFamily="Frigate"
 NewSubSystemType.ArmourFamily="MediumArmour"
 LoadHODFile(NewSubSystemType,1);
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_plasmaburstcannon","Weapon_SCT","Weapon_SCT"); -- Hgn_KineticBurstCannon
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_frigategatlinggun","Weapon_Pulsar","Weapon_Pulsar"); -- Hgn_KineticBurstCannon

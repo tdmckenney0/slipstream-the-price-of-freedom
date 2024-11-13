@@ -4,6 +4,6 @@ NewSubSystemType.selectionLimit=1
 NewSubSystemType.type="Weapon"
 NewSubSystemType.hasIcon=0
 NewSubSystemType.AttackFamily="Frigate"
-NewSubSystemType.ArmourFamily="MediumArmour"
+NewSubSystemType.ArmourFamily="TurretArmour"
 LoadHODFile(NewSubSystemType,1);
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_plasmaburstcannon","Weapon_SCT","Weapon_SCT"); -- Hgn_KineticBurstCannon
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_vulcanpulseturret","Weapon_DT",""); -- Vgr_VulcanKineticTurretLongRange
