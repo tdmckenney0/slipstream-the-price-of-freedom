@@ -35,7 +35,7 @@ NewSubSystemType.timeToBuild=45
 NewSubSystemType.isResearch=0
 NewSubSystemType.visible=1
 LoadHODFile(NewSubSystemType,1);
-NewSubSystemType.BuildFamily="SubSystem_Hgn"
+NewSubSystemType.BuildFamily="SubSystem_Vgr"
 NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
