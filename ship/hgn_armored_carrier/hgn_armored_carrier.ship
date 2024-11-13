@@ -169,25 +169,16 @@ addShield(NewShipType, "EMP", 10000, 20)
 
 --Turrets
 
-StartShipHardPointConfig(NewShipType, "Valencium1", "Hardpoint_TMweapon", "Weapon", "Innate", "Damageable", "hgn_battlecruiserionbeamturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Valencium1", "Hardpoint_TMweapon", "Weapon", "Innate", "Damageable", "hgn_battlecruiserionbeamturrettop", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Valencium2", "Hardpoint_TMweaponbot", "Weapon", "Innate", "Damageable", "hgn_ioncannon", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "PPC1", "Hardpoint_TURFront1", "System", "Innate", "Damageable", "hgn_gatlinggunright", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "PPC2", "Hardpoint_TURFront2", "System", "Innate", "Damageable", "hgn_gatlinggunleft", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "M1", "Hardpoint_MBot1", "System", "Innate", "Damageable", "hgn_missileturretleft", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "M2", "Hardpoint_MBot2", "System", "Innate", "Damageable", "hgn_missileturretright", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "PlasmaBattery", "Hardpoint_PbBot1", "Weapon", "Innate", "Damageable", "hgn_plasmaburstcannon", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Rail1", "Hardpoint_MountTop1WPN", "Weapon", "Innate", "Damageable", "hgn_Railgun", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Rail2", "Hardpoint_MountTop2WPN", "Weapon", "Innate", "Damageable", "hgn_Railgun", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Gat1", "Hardpoint_MountTop3WPN", "Weapon", "Innate", "Damageable", "hgn_gatlinggun", "", "", "", "", "", "", "", "")
-
---SuperStructures
-
-StartShipHardPointConfig(NewShipType, "Mount1", "Hardpoint_TopMount", "Weapon", "Innate", "indestructible", "hgn_mount_large", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Mount2", "Hardpoint_MountTop1", "Weapon", "Innate", "indestructible", "hgn_mount", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Mount3", "Hardpoint_MountTop2", "Weapon", "Innate", "indestructible", "hgn_mount", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Mount4", "Hardpoint_MountTop3", "Weapon", "Innate", "indestructible", "hgn_mount", "", "", "", "", "", "", "", "")
-
-
+StartShipHardPointConfig(NewShipType, "PPC1", "Hardpoint_TURFront1", "System", "Innate", "Damageable", "hgn_battlecruisergatlinggunturrettop", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "PPC2", "Hardpoint_TURFront2", "System", "Innate", "Damageable", "hgn_battlecruisergatlinggunturrettop", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "M1", "Hardpoint_MBot1", "System", "Innate", "Damageable", "hgn_battlecruiserminelaunchertop", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "M2", "Hardpoint_MBot2", "System", "Innate", "Damageable", "hgn_battlecruiserminelaunchertop", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "PlasmaBattery", "Hardpoint_PbBot1", "Weapon", "Innate", "Damageable", "hgn_battlecruiserplasmaburstturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Rail1", "Hardpoint_MountTop1WPN", "Weapon", "Innate", "Damageable", "hgn_battlecruisergatlinggunturrettop", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Rail2", "Hardpoint_MountTop2WPN", "Weapon", "Innate", "Damageable", "hgn_battlecruisergatlinggunturrettop", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Gat1", "Hardpoint_MountTop3WPN", "Weapon", "Innate", "Damageable", "hgn_battlecruisergatlinggunturrettop", "", "", "", "", "", "", "", "")
 
 --Thrusters
 
@@ -203,9 +194,6 @@ StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TTop3", "System", "
 StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TBot1", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TBot2", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TBot3", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
-
-
-
 
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)

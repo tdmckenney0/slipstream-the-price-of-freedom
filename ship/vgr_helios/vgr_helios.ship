@@ -177,14 +177,14 @@ StartShipWeaponConfig(NewShipType, "vgr_heavyfusionmissilelauncherbc", "Weapon_M
 
 addShield(NewShipType, "EMP", 1000, 20)
 
-StartShipHardPointConfig(NewShipType, "Hull1_Turret", "Hardpoint_Hull1_Turret", "System", "Innate", "Damageable", "vgr_flakcannon", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Hull2_Turret", "Hardpoint_Hull2_Turret", "System", "Innate", "Damageable", "vgr_plasmabatteryx4", "", "", "", "", "", "", "", "") 
-StartShipHardPointConfig(NewShipType, "Hull3_Turret", "Hardpoint_Hull3_Turret", "System", "Innate", "Damageable", "vgr_flakcannon", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Hull4_Turret", "Hardpoint_Hull4_Turret", "System", "Innate", "Damageable", "vgr_flakcannon", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Hull5_Turret", "Hardpoint_Hull5_Turret", "System", "Innate", "Damageable", "vgr_plasmabatteryx4", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Hull6_Turret", "Hardpoint_Hull6_Turret", "System", "Innate", "Damageable", "vgr_flakcannon", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull1_Turret", "Hardpoint_Hull1_Turret", "System", "Innate", "Damageable", "vgr_pulsecannondestroyer", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull2_Turret", "Hardpoint_Hull2_Turret", "System", "Innate", "Damageable", "vgr_pulsecannondestroyer", "", "", "", "", "", "", "", "") 
+StartShipHardPointConfig(NewShipType, "Hull3_Turret", "Hardpoint_Hull3_Turret", "System", "Innate", "Damageable", "vgr_pulsecannondestroyer", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull4_Turret", "Hardpoint_Hull4_Turret", "System", "Innate", "Damageable", "vgr_pulsecannondestroyer", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull5_Turret", "Hardpoint_Hull5_Turret", "System", "Innate", "Damageable", "vgr_pulsecannondestroyer", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull6_Turret", "Hardpoint_Hull6_Turret", "System", "Innate", "Damageable", "vgr_pulsecannondestroyer", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Booster", "Booster", "Weapon", "Innate", "Damageable", "Hgn_booster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Booster", "Booster", "Weapon", "Innate", "Damageable", "vgr_booster", "", "", "", "", "", "", "", "")
 
 
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)

@@ -144,8 +144,6 @@ addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
 StartShipWeaponConfig(NewShipType, "hgn_ioncannon", "Weapon_Top", "Fire")
-StartShipHardPointConfig(NewShipType,"FT1","Hardpoint_FLAK","Weapon","Innate","Indestructible","hgn_mountedflak","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"FT2","Hardpoint_FLAK3","Weapon","Innate","Indestructible","hgn_mountedflak","","","","","","","","")
 addShield(NewShipType, "EMP", 310, 20)
 NewShipType.battleScarMaxTriBase =75
 NewShipType.battleScarMaxTriInc =100

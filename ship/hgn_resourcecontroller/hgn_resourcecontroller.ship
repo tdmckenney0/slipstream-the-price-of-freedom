@@ -145,14 +145,6 @@ addAbility(NewShipType,"CanBeRepaired")
 addAbility(NewShipType,"RetireAbility",1,1)
 LoadModel(NewShipType,1)
 
-StartShipHardPointConfig(NewShipType,"Generic 3","HardpointAC","Weapon","Generic","Damageable","hgn_mountedflak","","","","","","","","")
-
-StartShipHardPointConfig(NewShipType,"Generic 4","HardpointAC2","Weapon","Generic","Damageable","hgn_mountedflak","","","","","","","","")
-
-StartShipHardPointConfig(NewShipType,"Generic 5","HardpointAD","Weapon","Generic","Damageable","hgn_mountedflak","","","","","","","","")
-
-StartShipHardPointConfig(NewShipType,"Generic 6","HardpointAD2","Weapon","Generic","Damageable","hgn_mountedflak","","","","","","","","")
-
 StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense1", "")
 StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense3", "")
 StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense5", "")

@@ -161,15 +161,15 @@ LoadModel(NewShipType,1)
 
 --Weapon Systems
 
-StartShipWeaponConfig(NewShipType, "hgn_plasmaburstcannon", "Weapon_Torpedo_Tube", "Weapon_Torpedo");
+StartShipWeaponConfig(NewShipType, "hgn_battlecruiserplasmaburstturret", "Weapon_Torpedo_Tube", "Weapon_Torpedo");
 
 --Main Turrets
 
-StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Damageable","hgn_plasmaburstcannon","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Damageable","hgn_gatlinggun","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Damageable","hgn_railgun","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Damageable","hgn_gatlinggun","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Damageable","hgn_missileturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Damageable","hgn_battlecruiserplasmaburstturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Damageable","hgn_battlecruisergatlinggunturrettop","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Damageable","hgn_battlecruisergatlinggunturrettop","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Damageable","hgn_battlecruisergatlinggunturrettop","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Damageable","hgn_battlecruiserminelaunchertop","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Calibration6","Hardpoint_DCT_Left","System","Innate","Damageable","hgn_ioncannon","","","","","","","","");
 StartShipHardPointConfig(NewShipType,"Calibration7","Hardpoint_DCT_Right","System","Innate","Damageable","hgn_ioncannon","","","","","","","","");
 
