@@ -374,7 +374,7 @@ function DetermChunk()
 	addSquadron("meg_foundrydebris_flake1", "meg_foundrydebris_flake1", {-3434, 200, 5880}, -1, {78, -23, 0}, 0, 0)
 	addSquadron("meg_foundrydebris_chunk4", "meg_foundrydebris_chunk4", {-1614, -1900, 254}, -1, {78, -45, 0}, 0, 0)
 	addSquadron("meg_foundrydebris_flake1", "meg_foundrydebris_flake1", {-3285, 6200, 3931}, -1, {78, -1, 0}, 0, 0)
-	addSquadron("meg_foundrydebris_flake1", "meg_foundrydebris_flake1", {305, 200, 1945}, -1, {45, 0, 78}, 0, 0)
+	addSquadron("meg_starjumper", "meg_starjumper", {305, 200, 1945}, -1, {45, 0, 78}, 0, 0)
 	
 	setWorldBoundsInner({0, 0, 0}, {45000, 45000, 45000})
 	
