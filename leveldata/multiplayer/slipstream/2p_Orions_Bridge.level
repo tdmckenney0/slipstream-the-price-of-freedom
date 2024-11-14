@@ -369,7 +369,7 @@ function DetermChunk()
 
 	addSquadron("HyperspaceBridge", "meg_slipgate2", {36475, 12000, 30699}, -1, {0, 45, 0}, 0, 0)
 	
-	addSquadron("meg_sajhulkturret", "meg_sajhulkturret", {-3972, 1500, 3757}, -1, {68, 38, 70}, 0, 0)
+	addSquadron("meg_leviathan", "meg_leviathan", {-3972, 1500, 3757}, -1, {68, 38, 70}, 0, 0)
 	addSquadron("meg_foundrydebris_chunk2", "meg_foundrydebris_chunk2", {750, -600, 5613}, -1, {56, -45, 0}, 0, 0)
 	addSquadron("meg_foundrydebris_flake1", "meg_foundrydebris_flake1", {-3434, 200, 5880}, -1, {78, -23, 0}, 0, 0)
 	addSquadron("meg_foundrydebris_chunk4", "meg_foundrydebris_chunk4", {-1614, -1900, 254}, -1, {78, -45, 0}, 0, 0)
