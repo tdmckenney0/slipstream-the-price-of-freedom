@@ -4,11 +4,8 @@ NewShipType.sobDescription = "UNCG Light Strike Cruiser"
 NewShipType.maxhealth = 600000
 NewShipType.regentime = 850
 NewShipType.minRegenTime = 150
-NewShipType.sideArmourDamage = 0.55
-NewShipType.rearArmourDamage = 0.45
-NewShipType.topArmourDamage = 0.5
-NewShipType.bottomArmourDamage = 0.5
-NewShipType.frontArmourDamage = 0.45
+NewShipType.sideArmourDamage = 1
+NewShipType.rearArmourDamage = 1
 NewShipType.isTransferable = 1
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 3
@@ -175,14 +172,14 @@ StartShipHardPointConfig(NewShipType,"Calibration7","Hardpoint_DCT_Right","Syste
 
 --Thrusters
 
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T1", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T2", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T3", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T4", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T5", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T6", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T7", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T8", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T1", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T2", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T3", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T4", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T5", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T6", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T7", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
+-- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T8", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
 
 addShield(NewShipType,"EMP",400,12)
 NewShipType.battleScarMaxTriBase = 75
@@ -191,11 +188,10 @@ NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1
 NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
-NewShipType.deadSobFadeTime = 0.1
-NewShipType.trailLinger = 3
+NewShipType.deadSobFadeTime = 1
+NewShipType.trailLinger = 2
 
-setEngineBurn(NewShipType, 9, 0.2, 0.5, 300, 1.02, 0.1, 0.25, 380)
-setEngineGlow(NewShipType, 1, 1, 1.02, 20, 500, 200, 1,
-    { 0.92, 0.21, 0.09, 0.25, })
-loadShipPatchList(NewShipType, "data:sound/sfx/ship/Hiigaran/MegaShip/", 0, "Engines/HDreadnaughtEng", "", 1, "Ambience/HMotherShipAmb", "")
+setEngineBurn(NewShipType,9,0.2,0.5,300,1.02,0.1,0.25,380);
+setEngineGlow(NewShipType,1,1,1.02,20,300,50,1.5,{0.27, 0.47, .69, 0.25});
 
+loadShipPatchList(NewShipType,"data:sound/sfx/ship/Hiigaran/NonMilitary/",0,"Engines/HResourcerControllerEng","",1,"Ambience/HResourcerControllerAmb","")
