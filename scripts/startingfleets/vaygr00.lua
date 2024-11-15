@@ -108,13 +108,6 @@ PersistantData = {
        name = "",
        number = 5,
      },
-     {
-       type = "vgr_infiltratorfrigate",
-       subsystems = {},
-       shiphold = {},
-       name = "",
-       number = 2,
-     },
      -- Fighters
      {
        type = "vgr_interceptor",
