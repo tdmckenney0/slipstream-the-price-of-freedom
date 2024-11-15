@@ -156,6 +156,7 @@ StartShipWeaponConfig(NewShipType,"Hgn_BombLauncher","Weapon_Autogun","Weapon_Au
 StartShipWeaponConfig(NewShipType,"Hgn_AntiShipBombLauncher","Weapon_Autogun","Weapon_Autogun")
 StartShipWeaponConfig(NewShipType,"Hgn_AntiSubSystemBombLauncher","Weapon_Autogun","Weapon_Autogun")
 StartShipWeaponConfig(NewShipType,"Hgn_Autocannon","Weapon_Autogun","Fire")
+StartShipHardPointConfig(NewShipType, "Booster", "Hardpoint_booster", "System", "Innate", "Damageable", "hgn_lbomber_booster", "", "", "", "", "", "", "", "")
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2
 NewShipType.specialDeathSpeed = 40
