@@ -28,7 +28,7 @@ paradeSlot("Vgr_ResourceCollector", 	{-1768, 350, -1397},	 {0,0,1}, {-1,0,0},   
 paradeSlot("Vgr_ResourceController", {-1507, 267, -1801},	 {0,0,1}, {-1,0,0},      0);
 paradeSlot("Vgr_Scout", 	{-859, -143, 2622},	 {0,0,1}, {-1,0,0},      0);
 paradeSlot("Vgr_HyperSpace_Platform", {-1162, 183, -2233},	{0,0,1}, {-1,0,0},      0);
-paradeSlot("Vgr_Helios",                      {-1700, 600, -650},		{0,0,1}, {-1,0,0},      750);
+paradeSlot("vgr_heavybattlecruiser",                      {-1700, 600, -650},		{0,0,1}, {-1,0,0},      750);
 paradeSlot("Vgr_Dreadnaught",                      {-2150, 1000, -2000},		{0,0,1}, {-1,0,0},     0);
 
 -- right

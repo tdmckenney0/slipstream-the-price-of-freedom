@@ -11,12 +11,13 @@ NewShipType.bottomArmourDamage = 0.65
 NewShipType.frontArmourDamage = 0.6
 NewShipType.isTransferable = 0
 NewShipType.useEngagementRanges = 0
-NewShipType.unitCapsNumber = 4
+NewShipType.unitCapsNumber = 8
+NewShipType.paradeData = "hgn_mothership_parade"
 NewShipType.SquadronSize = 1
 NewShipType.passiveFormation = "Spear"
 NewShipType.defensiveFormation = "x"
 NewShipType.aggressiveFormation = "Claw"
-NewShipType.mass = 650
+NewShipType.mass = 1000
 NewShipType.collisionMultiplier = 1
 NewShipType.thrusterMaxSpeed = 110
 NewShipType.mainEngineMaxSpeed = 130
@@ -62,10 +63,10 @@ NewShipType.targetRandomPointZMax = 0.8
 NewShipType.dustCloudDamageTime = 160
 NewShipType.nebulaDamageTime = 300
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
-NewShipType.BuildFamily = "Supercap_Hgn"
-NewShipType.AttackFamily = "SmallCapitalShip"
+NewShipType.BuildFamily = "Battlecruiser_Hgn"
+NewShipType.AttackFamily = "BigCapitalShip"
 NewShipType.DockFamily = "Shipyard"
-NewShipType.AvoidanceFamily = "Capital"
+NewShipType.AvoidanceFamily = "BattleCruiser"
 NewShipType.DisplayFamily = "Capital"
 NewShipType.AutoFormationFamily = "CapShip"
 NewShipType.CollisionFamily = "Big"
@@ -74,27 +75,27 @@ NewShipType.UnitCapsFamily = "Capital"
 NewShipType.UnitCapsShipType = "Battlecruiser"
 NewShipType.fighterValue = 0
 NewShipType.corvetteValue = 0
-NewShipType.frigateValue = 40
-NewShipType.neutralValue = 10
+NewShipType.frigateValue = 80
+NewShipType.neutralValue = 30
 NewShipType.antiFighterValue = 0
-NewShipType.antiCorvetteValue = 0
-NewShipType.antiFrigateValue = 30
-NewShipType.totalValue = 50
-NewShipType.buildCost = 8000
-NewShipType.buildTime = 165
-NewShipType.buildPriorityOrder = 20
-NewShipType.retaliationRange = 6000
+NewShipType.antiCorvetteValue = 5
+NewShipType.antiFrigateValue = 60
+NewShipType.totalValue = 110
+NewShipType.buildCost = 10000
+NewShipType.buildTime = 280
+NewShipType.buildPriorityOrder = 40
+NewShipType.retaliationRange = 6500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 10000
-NewShipType.prmSensorRange =10000
-NewShipType.secSensorRange = 12500
+NewShipType.prmSensorRange = 10000
+NewShipType.secSensorRange = 15000
 NewShipType.detectionStrength = 1
-NewShipType.TOIcon = "Parallelogram"
+NewShipType.TOIcon = "Star"
 NewShipType.TOScale = 1
-NewShipType.TODistanceFade0 = 11000
-NewShipType.TODistanceDisappear0 = 9000
-NewShipType.TODistanceFade1 = 5500
-NewShipType.TODistanceDisappear1 = 5000
+NewShipType.TODistanceFade0 = 14000
+NewShipType.TODistanceDisappear0 = 12000
+NewShipType.TODistanceFade1 = 8500
+NewShipType.TODistanceDisappear1 = 7000
 NewShipType.TODistanceFade2 = 12000
 NewShipType.TODistanceDisappear2 = 35000
 NewShipType.TOGroupScale = 1
@@ -146,20 +147,22 @@ addAbility(NewShipType,"CanAttack",1,1,0,0,0.35,1.2,"Munition, Capturer, Frigate
     Mothership = "Flyround_destroyer",})
 addAbility(NewShipType, "GuardCommand", 1, 3000, 800)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
+addAbility(NewShipType, "CanBuildShips",1,"SubSystem_Hgn","SubSystemModule")
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
 addAbility(NewShipType, "CanBeCaptured", 90, 0.5)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
+addAbility(NewShipType, "MinelayerAbility", 1, 3.5)
+addAbility(NewShipType, "DefenseFieldAbility", 0, 0, 800, 500, 500, 1, 10, 0, "defensefield_sphere_spray")
+addAbility(NewShipType, "DefenseFieldShieldAbility", 1, 800, 0, 0)
 LoadModel(NewShipType, 1)
 
 --old Weapons
-StartShipWeaponConfig(NewShipType, "hgn_battlecruiserplasmaburstturret", "Weapon_Torpedo", "null")
-StartShipWeaponConfig(NewShipType, "hgn_battlecruiserplasmaburstturret", "Weapon_Torpedo2", "null")
+StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Torpedo", "null")
+StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Torpedo2", "null")
 
 --Replacement Turrets
 
-StartShipHardPointConfig(NewShipType, "TubeL", "Hardpoint_TubeL", "System", "Innate", "Damageable", "hgn_battlecruiserminelaunchertop", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "TubeR", "Hardpoint_TubeR", "System", "Innate", "Damageable", "hgn_battlecruiserminelaunchertop", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretTop", "Weapon_TurretTop", "System", "Innate", "Damageable", "hgn_battlecruiserionbeamturrettop", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretBottom", "Weapon_TurretBottom", "System", "Innate", "Damageable", "hgn_battlecruiserionbeamturrettop", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretFront", "Weapon_TurretFront", "System", "Innate", "Damageable", "hgn_battlecruiserplasmaburstturret", "", "", "", "", "", "", "", "")
@@ -180,12 +183,10 @@ StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T12", "System", "In
 StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T13", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T14", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
 
---Hardpoints T1, T6, T15 and T16 have been removed to reduce CPU load
-
-StartShipHardPointConfig(NewShipType,"mGAT1","Weapon_FlakTop","Weapon","Innate","Indestructible","hgn_frigategatlinggun","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"mGAT2","Weapon_FlakTop2","Weapon","Innate","Indestructible","hgn_frigategatlinggun","","","","","","","","")
-
 addShield(NewShipType, "EMP", 1000, 20)
+
+AddShipAbility(NewShipType, "DefenseField", 1, "ThisShipOnly", 1)
+
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg04", 1, 0.05, 50, 40, -150, 50, 65, 25, 5, 25, 0, 0, 0, 95, 0, 0, 0, 50)

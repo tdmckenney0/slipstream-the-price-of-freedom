@@ -1479,9 +1479,9 @@ Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
 -- TPOF
 hgn_pulsarplatform = Hgn_IonTurret
 vgr_weaponplatform_Plasma = Vgr_WeaponPlatform_gun
-hgn_battleship = Hgn_BattleCruiser
+hgn_heavybattlecruiser = Hgn_Destroyer
 hgn_crossbow_cruiser = Hgn_Destroyer
-vgr_helios = Vgr_Destroyer
+vgr_heavybattlecruiser = Vgr_Destroyer
 --SUBSYSTEMS
 directionalthruster = Icon_Subsystem_Engine
 --UNCG

@@ -4,7 +4,7 @@ PersistantData = {
    Squadrons = {
      -- Flagship
      {
-       type = "vgr_helios",
+       type = "vgr_heavybattlecruiser",
        subsystems = {
        },
        shiphold = {},
