@@ -220,7 +220,7 @@ addPebble("Pebble_1", {10000, 5809, -10876,}, 0, 0, 0)
   fogSetDensity(0.00)
   setGlareIntensity(0.11)
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("interchange")
+  loadBackground("tpof_interchange")
   setSensorsManagerCameraDistances(12000, 60000)
   setDefaultMusic("Data:sound/music/staging/mute")
 end

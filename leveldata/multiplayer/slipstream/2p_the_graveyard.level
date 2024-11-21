@@ -134,7 +134,7 @@ addPebble("Pebble_1", {10000, -5809, -10876,}, 0, 0, 0)
   fogSetDensity(0.30)
   setGlareIntensity(0.44)
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("supernova")
+  loadBackground("tpof_supernova")
   setSensorsManagerCameraDistances(12000, 60000)
   setDefaultMusic("Data:sound/music/staging/mute")
 end
