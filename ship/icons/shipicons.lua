@@ -156,16 +156,16 @@ Hgn_InterceptorElite =
         textureUV_WH = 
             { 150, 64, }, 
         stretchOnDraw = 1, }, }
-Hgn_IonCannonFrigate = 
-{ 
-    LargeIcon = 
-    { 
-        texture = "DATA:\\Ship\\Icons\\icon_ships.mres", 
-        textureUV_TL = 
-            { 0, 320, }, 
-        textureUV_WH = 
-            { 128, 64, }, 
-        stretchOnDraw = 1, }, }
+-- Hgn_IonCannonFrigate = 
+-- { 
+--     LargeIcon = 
+--     { 
+--         texture = "DATA:\\Ship\\Icons\\icon_ships.mres", 
+--         textureUV_TL = 
+--             { 0, 320, }, 
+--         textureUV_WH = 
+--             { 128, 64, }, 
+--         stretchOnDraw = 1, }, }
 Hgn_IonTurret = 
 { 
     LargeIcon = 
@@ -1497,6 +1497,7 @@ hgn_frigatepulsarturret = Icon_Subsystem_IonTurret
 hgn_ms_module_build = Icon_Subsystem_ResearchAdvanced
 hgn_battlecruiserionbeamturrettop = Icon_Subsystem_IonTurret
 hgn_frigateionbeamturret = Icon_Subsystem_IonTurret
+hgn_ioncannonfrigate = Hgn_AssaultFrigate
 --DSCG
 vgr_booster = Icon_Subsystem_Engine
 vgr_missilebay = Icon_Subsystem_TorpedoLauncher
@@ -1505,3 +1506,5 @@ vgr_pulsecannonassaultfrigate = Icon_Subsystem_FireControl
 vgr_pulsecannonassaultfrigateleft = Icon_Subsystem_FireControl
 vgr_pulsecannonassaultfrigateright = Icon_Subsystem_FireControl
 vgr_pulsecannonassaultfrigatebottom = Icon_Subsystem_FireControl
+-- SRI
+sri_commandbase = Vgr_CommStation
