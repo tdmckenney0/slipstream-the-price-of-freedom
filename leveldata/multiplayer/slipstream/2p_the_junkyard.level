@@ -1399,7 +1399,7 @@ function NonDetermChunk()
 
     setLevelShadowColour(0, 0, 0, 1)
 
-    loadBackground("hwc_location_unknown")
+    loadBackground("hwc_koreths_debris_field")
 
     setSensorsManagerCameraDistances(10500,20000)
 
