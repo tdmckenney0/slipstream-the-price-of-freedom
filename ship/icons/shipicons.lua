@@ -1498,6 +1498,7 @@ hgn_ms_module_build = Icon_Subsystem_ResearchAdvanced
 hgn_battlecruiserionbeamturrettop = Icon_Subsystem_IonTurret
 hgn_frigateionbeamturret = Icon_Subsystem_IonTurret
 hgn_ioncannonfrigate = Hgn_AssaultFrigate
+hgn_interceptor_booster = Icon_Subsystem_Engine
 --DSCG
 vgr_booster = Icon_Subsystem_Engine
 vgr_missilebay = Icon_Subsystem_TorpedoLauncher
