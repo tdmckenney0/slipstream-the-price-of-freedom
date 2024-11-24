@@ -136,8 +136,8 @@ addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "munition, Fighter, Co
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
 LoadModel(NewShipType, 1)
-StartShipHardPointConfig(NewShipType, "Driver 1", "Weapon_Gun_R", "Weapon", "Innate", "Indestructible","vgr_pulsecannondestroyer", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Driver 2", "Weapon_Gun_L", "Weapon", "Innate", "Indestructible","vgr_pulsecannondestroyer", "", "", "", "", "", "", "", "")
+StartShipWeaponConfig(NewShipType, "vgr_pulsecannondestroyer", "Weapon_Gun_R", "Weapon_Gun_R")
+StartShipWeaponConfig(NewShipType, "vgr_pulsecannondestroyer", "Weapon_Gun_L", "Weapon_Gun_L")
 addShield(NewShipType, "EMP", 40, 20)
 NewShipType.battleScarMaxTriBase = 20
 NewShipType.battleScarMaxTriInc = 30
