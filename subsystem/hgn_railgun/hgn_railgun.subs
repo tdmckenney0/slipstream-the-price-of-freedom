@@ -34,4 +34,4 @@ NewSubSystemType.AttackFamily = "UnAttackable"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_rail","Weapon_SCT","Weapon_SCT")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_plasmaburstcannon","Weapon_SCT","Weapon_SCT")

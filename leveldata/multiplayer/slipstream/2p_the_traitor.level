@@ -1,0 +1,141 @@
+-- The Traitor
+-- By: Nick
+-- Created: December 1, 2007
+-- Last update:
+-- Version 1.0
+-- Teams: 1 v 1
+-- Creation Time:  2 hours
+-- Change Log
+-- Credits:
+
+
+levelDesc = "The Traitor"
+
+maxPlayers = 2
+
+player = {}
+
+player[0] = {
+  resources = 10000,
+  startPos = 1,
+  raceID = 1,
+  id = 0,
+  name = "",
+}
+
+player[1] = {
+  resources = 10000,
+  startPos = 1,
+  raceID = 2,
+  id = 1,
+  name = "",
+}
+
+function DetermChunk()
+
+addPoint("StartPos0", {-12576, 1000, -21000}, {0, 0, 0})
+addPoint("StartPos1", {-4576, 1000, 31000}, {0, 135, 0})
+
+addSquadron("Ship", "meg_bigred", {0, 2000, 0,}, -1, {20, 36, 36,}, 0, 0);
+
+addAsteroid("Asteroid_4", {-6000, 1676, 19250}, 90, 8643, 623, 6632, 0)
+addAsteroid("Asteroid_3", {-5237, 2276, 19650}, 90, 6347, 573, 457, 0)
+addAsteroid("Asteroid_4", {-4873, 1594, 20000}, 90, 2367, 573, 4567, 0)
+addAsteroid("Asteroid_4", {-4594, 2394, 18346}, 90, 1237, 73, 2567, 0)
+addAsteroid("Asteroid_3", {-5346, 1190, 21948}, 90, 2347, 573, 867, 0)
+addAsteroid("Asteroid_2", {-6586, 3094, 17690}, 90, 9347, 73, 4737, 0)
+addAsteroid("Asteroid_3", {-7548, 1634, 18900}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_3", {-8346, 2090, 18900}, 90, 7347, 73, 567, 0)
+addAsteroid("Asteroid_2", {-7164, 1994, 19690}, 90, 2465, 53, 457, 0)
+
+addAsteroid("Asteroid_4", {6000, 1676, 19250}, 90, 8583, 623, 6732, 0)
+addAsteroid("Asteroid_3", {5237, 2276, 19650}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_4", {4873, 1594, 20000}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_3", {4594, 2394, 18346}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_3", {5346, 1190, 21948}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_2", {6586, 3094, 17690}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_3", {7548, 1634, 18900}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_3", {8346, 2090, 18900}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_2", {7164, 1994, 19690}, 90, 2347, 573, 4567, 0)
+
+addAsteroid("Asteroid_4", {-6000, 1676, -22250}, 90, 8583, 623, 6732, 0)
+addAsteroid("Asteroid_3", {-5237, 2276, -20650}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_4", {-4873, 1594, -18346}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_4", {-4594, 2394, -18346}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_3", {-5346, 1190, -21948}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_2", {-6586, 3094, -17690}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_3", {-7548, 1634, -18900}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_3", {-8346, 2090, -21900}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_2", {-7164, 1994, -19690}, 90, 2347, 573, 4567, 0)
+addAsteroid("Asteroid_3", {10931, 0, 860}, 100, 0, 0, 0, 0);
+addAsteroid("Asteroid_3", {-10294, -119, 1150}, 100, 0, 0, 0, 0);
+addAsteroid("Asteroid_3", {-10689, 405, 1401}, 100, 0, 0, 0, 0);
+addAsteroid("Asteroid_3", {-10974, -454,1629}, 100, 0, 0, 0, 0);
+addAsteroid("Asteroid_3", {9585, 0, 860}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {10222, -119, 1150}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {9826, 405, 2115}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {9541, -454, -433}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {-20383, 0,
+ -12317}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {-19745,
+ -119,
+ -12027}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {-18092,
+ 367,
+ -11514}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {-23867,
+ -239,
+ -13512}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {21156,
+ 0,
+ -11771}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {24495,
+ 9338,
+ -10273}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {24856,
+ 405,
+ -11776}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {23401,
+ -454,
+ -11548}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {-21709,
+ 0,
+ -11070}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {-15558,
+ 99,
+ -11139}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {-22441,
+ 622,
+ -12667}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {-22726,
+ -237,
+ -12438}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {25830,
+ 0,
+ -12794}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {26467,
+ -119,
+ -12055}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {22515,
+ 405,
+ -12234}, 100, 0, 0, 0, 0);
+ addAsteroid("Asteroid_3", {25786,
+ -454,
+ -12666}, 100, 0, 0, 0, 0);
+ setWorldBoundsInner({0, 0, 0}, {35000, 35000, 35000});
+
+end
+function NonDetermChunk()
+
+ fogSetActive(1)
+  fogSetStart(1)
+  fogSetEnd(1)
+  fogSetColour(0, 0, 0, 1)
+  fogSetType("linear")
+  fogSetDensity(0.00)
+  setGlareIntensity(0.11)
+  setLevelShadowColour(0, 0, 0, 1)
+  loadBackground("tpof_system") 
+  setSensorsManagerCameraDistances(12000, 60000)
+  setDefaultMusic("Data:sound/music/staging/mute")
+end

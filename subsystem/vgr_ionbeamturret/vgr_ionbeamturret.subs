@@ -35,9 +35,9 @@ NewSubSystemType.timeToBuild=45
 NewSubSystemType.isResearch=0
 NewSubSystemType.visible=1
 LoadHODFile(NewSubSystemType,1);
-NewSubSystemType.BuildFamily="SubSystem_Hgn"
+NewSubSystemType.BuildFamily="SubSystem_Vgr"
 NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"Vgr_TurretedIonCannon","Weapon_IC","");
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_vulcanpulseturret","Weapon_IC","");

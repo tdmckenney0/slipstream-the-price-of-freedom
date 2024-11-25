@@ -154,10 +154,8 @@ addAbility(NewShipType, "CanBeCaptured", 30, 0.1)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
-StartShipHardPointConfig(NewShipType,"T","Weapon_Top","Weapon","Innate","Indestructible","hgn_gatlinggunsmall","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"B","Weapon_Bottom","Weapon","Innate","Indestructible","hgn_smallionturret","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"FT","Weapon_SuperLaser1","Weapon","Innate","Indestructible","hgn_mountedflak","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"FB","Weapon_SuperLaser2","Weapon","Innate","Indestructible","hgn_mountedflak","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"T","Weapon_Top","Weapon","Innate","Indestructible","hgn_frigatepulsarturret","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"B","Weapon_Bottom","Weapon","Innate","Indestructible","hgn_frigategatlinggun","","","","","","","","")
 addShield(NewShipType, "EMP", 750, 20)
 NewShipType.battleScarMaxTriBase =75
 NewShipType.battleScarMaxTriInc =100

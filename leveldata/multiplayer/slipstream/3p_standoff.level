@@ -442,7 +442,7 @@ function NonDetermChunk()
     fogSetDensity(0.15)
     setGlareIntensity(0)
     setLevelShadowColour(0, 0, 0, 1)
-    loadBackground("double")
+    loadBackground("tpof_double")
 setDefaultMusic("Data:sound/music/staging/mute")
 setSensorsManagerCameraDistances(12000, 40000)
 end

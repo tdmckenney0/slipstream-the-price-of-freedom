@@ -76,15 +76,15 @@ addPoint("StartPos3", {-25333, 0, 20000}, {0, 135, 0})
 addPoint("StartPos4", {25333, 0, 20000}, {0, -135, 0})
 addPoint("StartPos5", {0, 0, -28000}, {0, 0, 0})
 
-addSquadron("meg_progenitorpowermodule", "meg_progenitorpowermodule", {17000, 17346, 9470}, -1, {-6, -50, 150}, 0, 0)
+addSquadron("meg_leviathan", "meg_leviathan", {17000, 17346, 9470}, -1, {-6, -50, 150}, 0, 0)
 
 addSquadron("meg_veildebris_chunks", "meg_veildebris_chunk1", {27568, -3309, -11529}, -1, {1.648, -40.132, -29.45}, 0, 0)
 addSquadron("meg_veildebris_chunks", "meg_veildebris_chunk2", {27568, 1309, -12546}, -1, {120.108, -38.66, -149.942}, 0, 0)
-addSquadron("meg_veildebris_chunks", "meg_veildebris_chunk3", {-27568, -3309, 11529}, -1, {1.648, -40.132, -29.45}, 0, 0)
+addSquadron("meg_starjumper", "meg_starjumper", {-27568, -3309, 11529}, -1, {1.648, -40.132, -29.45}, 0, 0)
 addSquadron("meg_veildebris_chunks", "meg_veildebris_chunk4", {-27568, 1309, 12546}, -1, {120.108, -38.66, -149.942}, 0, 0)
 addSquadron("meg_veildebris_chunks", "meg_veildebris_chunk5", {-19000, 6273, 29099}, -1, {-58.112, 0, -17.069}, 0, 0)
 
-addSquadron("Garrison", "vgr_prisonstation", {0, 0, 0}, 0, {0, 0, 0}, 0, 0)
+addSquadron("Garrison", "sri_commandbase", {0, 0, 0}, 0, {0, 0, 0}, 0, 0)
 
 addSquadron("Guard", "vgr_battlecruiser", {-25333, 2000, 20000}, 3, {0, 0, 0,}, 0, 0);
 addSquadron("Guard", "vgr_battlecruiser", {-25333, 1000, 20000}, 3, {0, 0, 0,}, 0, 0);
@@ -220,7 +220,7 @@ addPebble("Pebble_1", {10000, 5809, -10876,}, 0, 0, 0)
   fogSetDensity(0.00)
   setGlareIntensity(0.11)
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("Deepspace")
+  loadBackground("tpof_interchange")
   setSensorsManagerCameraDistances(12000, 60000)
   setDefaultMusic("Data:sound/music/staging/mute")
 end

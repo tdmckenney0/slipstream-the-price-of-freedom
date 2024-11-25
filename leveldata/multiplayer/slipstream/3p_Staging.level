@@ -117,7 +117,7 @@ end
 function NonDetermChunk()
  
     setLevelShadowColour(0, 0, 0, 0)
-    loadBackground("Black")
+    loadBackground("tpof_companions")
     setSensorsManagerCameraDistances(10000, 45000)
 
 end
