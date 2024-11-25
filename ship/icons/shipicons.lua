@@ -1509,3 +1509,4 @@ vgr_pulsecannonassaultfrigateright = Icon_Subsystem_FireControl
 vgr_pulsecannonassaultfrigatebottom = Icon_Subsystem_FireControl
 -- SRI
 sri_commandbase = Vgr_CommStation
+sri_commandbase_hyperspaceinhibitor = Icon_Subsystem_HyperspaceInhibitor
