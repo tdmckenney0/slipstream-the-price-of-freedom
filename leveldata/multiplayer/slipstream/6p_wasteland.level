@@ -108,5 +108,5 @@ addPebble("Pebble_0", {10000, 5809, -10876,}, 0, 0, 0)
   setLevelShadowColour(0, 0, 0, 1)
   loadBackground("tpof_nebula")
   setSensorsManagerCameraDistances(12000, 60000)
-  setDefaultMusic("Data:sound/music/staging/mute")
+  setDefaultMusic("Data:sound/music/slipstream/ambient")
 end
