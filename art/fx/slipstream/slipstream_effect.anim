@@ -1,0 +1,16 @@
+fps = 12
+startFrame = 0
+loopCount = 10
+texture =
+    { 
+	  "data:/art/fx/slipstream/slipstream_effect10.tga",
+	  "data:/art/fx/slipstream/slipstream_effect9.tga",
+	  "data:/art/fx/slipstream/slipstream_effect8.tga",
+	  "data:/art/fx/slipstream/slipstream_effect7.tga",
+	  "data:/art/fx/slipstream/slipstream_effect6.tga",
+	  "data:/art/fx/slipstream/slipstream_effect5.tga",
+	  "data:/art/fx/slipstream/slipstream_effect4.tga",
+	  "data:/art/fx/slipstream/slipstream_effect3.tga",
+	  "data:/art/fx/slipstream/slipstream_effect2.tga",
+	  "data:/art/fx/slipstream/slipstream_effect.tga",
+    }

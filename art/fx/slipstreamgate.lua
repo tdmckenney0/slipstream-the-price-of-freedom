@@ -158,7 +158,7 @@ value = {
 property_12 = {
 name = "Texture",
 type = "VARTYPE_STRING",
-value = "DATA:ART/FX/HYPERSPACE FX/hyperspace_effect_beam.anim",
+value = "DATA:ART/FX/SLIPSTREAM/slipstream_effect.anim",
 },
 property_11 = {
 name = "Blending",
