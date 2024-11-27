@@ -16,13 +16,10 @@ function Play(Music)
 		
 	elseif Music == "staging" then
 		ShuffleStaging()
-			
-	elseif Music == "mute" then
-		Sound_MusicPlay("data:sound\\music\\staging\\Mute" )
-		
-	elseif Music == "credits" then
-		Sound_MusicPlay("data:sound\\music\\staging\\Credits" )	
-		
+
+	elseif Music == "slipstream" then
+		ShuffleSlipstream()
+
 	else
 		Sound_MusicPlay("data:sound\\music\\" .. Music)
 	end
@@ -56,6 +53,14 @@ function ShuffleStaging()
 	
 	UI_BindKeyEvent(F1KEY, "RandomMusicRule")
 	dofilepath("data:soundscripts/playlists/stagingonly.lua")
+	Rule_Add("RandomMusicRule")
+	
+end
+
+function ShuffleSlipstream()
+	
+	UI_BindKeyEvent(F1KEY, "RandomMusicRule")
+	dofilepath("data:soundscripts/playlists/slipstream.lua")
 	Rule_Add("RandomMusicRule")
 	
 end
