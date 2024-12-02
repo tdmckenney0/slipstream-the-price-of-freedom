@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "$1502"
 NewShipType.sobDescription = "$1503"
-NewShipType.maxhealth = 3500
+NewShipType.maxhealth = 300 -- 30
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -16,13 +16,13 @@ NewShipType.defensiveFormation = "Delta"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 10
 NewShipType.collisionMultiplier = 3
-NewShipType.thrusterMaxSpeed = 600
-NewShipType.mainEngineMaxSpeed = 650
-NewShipType.rotationMaxSpeed = 150
-NewShipType.thrusterAccelTime = 1.5
-NewShipType.thrusterBrakeTime = 0.75
-NewShipType.mainEngineAccelTime = 1.5
-NewShipType.mainEngineBrakeTime = 0.75
+NewShipType.thrusterMaxSpeed = 600 -- 325
+NewShipType.mainEngineMaxSpeed = 650 -- 325
+NewShipType.rotationMaxSpeed = 150 -- 105
+NewShipType.thrusterAccelTime = 1.5 -- 2
+NewShipType.thrusterBrakeTime = 0.75 -- 1
+NewShipType.mainEngineAccelTime = 1.5 -- 2
+NewShipType.mainEngineBrakeTime = 0.75 -- 1
 NewShipType.rotationAccelTime = 0.6
 NewShipType.rotationBrakeTime = 0.3
 NewShipType.thrusterUsage = 0.25
@@ -50,8 +50,8 @@ NewShipType.swayOffsetRandomY = 10
 NewShipType.swayOffsetRandomZ = 10
 NewShipType.swayBobbingFactor = 0.05
 NewShipType.swayRotateFactor = 0.1
-NewShipType.dustCloudDamageTime = 100
-NewShipType.nebulaDamageTime = 20
+NewShipType.dustCloudDamageTime = 160
+NewShipType.nebulaDamageTime = 30
 NewShipType.MinimalFamilyToFindPathAround = "SuperCap"
 NewShipType.mirrorAboveManeuver = "ImmelMann_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, ImmelMann_speedy, ImmelMann_speedy, ImmelMann_speedy"
 NewShipType.mirrorBelowManeuver = "Split_S_speedy, OneEightyDegRightTurn, OneEightyDegLeftTurn, Split_S_speedy, Split_S_speedy, Split_S_speedy"
@@ -77,12 +77,12 @@ NewShipType.antiFighterValue = 8
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 0
 NewShipType.totalValue = 8
-NewShipType.buildCost = 150
+NewShipType.buildCost = 500
 NewShipType.buildTime = 35
 NewShipType.buildPriorityOrder = 20
 NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160
-NewShipType.visualRange = 5000
+NewShipType.visualRange = 1000
 NewShipType.prmSensorRange = 3000
 NewShipType.secSensorRange = 4000
 NewShipType.detectionStrength = 1
@@ -106,7 +106,7 @@ NewShipType.nlipsFarRange = 10000
 NewShipType.SMRepresentation = "HardDot"
 NewShipType.meshRenderLimit = 10400
 NewShipType.dotRenderLimit = 10
-NewShipType.visibleInSecondary = 0
+NewShipType.visibleInSecondary = 1
 NewShipType.minLOD = 0.25
 NewShipType.goblinsStartFade = 200
 NewShipType.goblinsOff = 200
@@ -136,23 +136,23 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "n_delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "munition, Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership", "FlyBy_Interceptor_vs_Frigate",
-{
-    Fighter = "Flyby_Interceptor_vs_Fighter",
-},
-{
-    SubSystem = "TopAttack_Interceptor_vs_Subsystem",
-},
-{
-    SmallCapitalShip = "Flyby_Interceptor_vs_CapShip",
-},
-{
-    BigCapitalShip = "Flyby_Interceptor_vs_CapShip",
-},
-{
-    Mothership = "Flyby_Interceptor_vs_Mothership",
-},
-{
+addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "munition, Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership", "FlyBy_Interceptor_vs_Frigate", 
+{ 
+    Fighter = "Flyby_Interceptor_vs_Fighter", 
+}, 
+{ 
+    SubSystem = "TopAttack_Interceptor_vs_Subsystem", 
+}, 
+{ 
+    SmallCapitalShip = "Flyby_Interceptor_vs_CapShip", 
+}, 
+{ 
+    BigCapitalShip = "Flyby_Interceptor_vs_CapShip", 
+}, 
+{ 
+    Mothership = "Flyby_Interceptor_vs_Mothership", 
+}, 
+{ 
     ResourceLarge = "Flyby_Interceptor_vs_ResourceLarge", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,3)
@@ -166,6 +166,7 @@ StartShipWeaponConfig(NewShipType,"Hgn_AntiShipBombLauncher","Weapon_Autogun","W
 StartShipWeaponConfig(NewShipType,"Hgn_AntiSubSystemBombLauncher","Weapon_Autogun","Weapon_Autogun")
 StartShipWeaponConfig(NewShipType,"Hgn_Autocannon","Weapon_Autogun","Fire")
 StartShipHardPointConfig(NewShipType, "Booster", "Hardpoint_booster", "System", "Innate", "Damageable", "hgn_interceptor_booster", "", "", "", "", "", "", "", "")
+addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2
 NewShipType.specialDeathSpeed = 40

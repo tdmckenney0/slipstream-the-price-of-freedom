@@ -4,16 +4,13 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Tiger"
-NewShipType.sobDescription = "UNCG Bomber\nUnmanned Drone"
-NewShipType.maxhealth = 4000
+NewShipType.displayedName = "$1504"
+NewShipType.sobDescription = "$1505"
+NewShipType.maxhealth = 300 -- 30
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
-NewShipType.sideArmourDamage = 0.95
+NewShipType.sideArmourDamage = 1
 NewShipType.rearArmourDamage = 1
-NewShipType.topArmourDamage = 0.75
-NewShipType.bottomArmourDamage = 0.85
-NewShipType.frontArmourDamage = 0.75
 NewShipType.isTransferable = 1
 NewShipType.useEngagementRanges = 0
 NewShipType.unitCapsNumber = 3
@@ -24,8 +21,8 @@ NewShipType.defensiveFormation = "Delta"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 10
 NewShipType.collisionMultiplier = 3
-NewShipType.thrusterMaxSpeed = 550
-NewShipType.mainEngineMaxSpeed = 600
+NewShipType.thrusterMaxSpeed = 550 --260
+NewShipType.mainEngineMaxSpeed = 600 --260
 NewShipType.rotationMaxSpeed = 105
 NewShipType.thrusterAccelTime = 3
 NewShipType.thrusterBrakeTime = 1
@@ -139,26 +136,26 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "n_delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "munition, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Corvette, Fighter, Utility", "FlyBy_Bomber_vs_Frigate",
-{
-    Fighter = "Flyby_Bomber_vs_Fighter",
-},
-{
-    SubSystem = "TopAttack_Bomber_vs_Subsystem",
-},
-{
-    SmallCapitalShip = "Strafe_Bomber_vs_Capship",
-},
-{
-    BigCapitalShip = "Strafe_Bomber_vs_Capship",
-},
-{
-    Mothership = "Flyby_Bomber_vs_Mothership",
-},
-{
-    ResourceLarge = "Flyby_Bomber_vs_ResourceLarge",
-},
-{
+addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "munition, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Corvette, Fighter, Utility", "FlyBy_Bomber_vs_Frigate", 
+{ 
+    Fighter = "Flyby_Bomber_vs_Fighter", 
+}, 
+{ 
+    SubSystem = "TopAttack_Bomber_vs_Subsystem", 
+}, 
+{ 
+    SmallCapitalShip = "Strafe_Bomber_vs_Capship", 
+}, 
+{ 
+    BigCapitalShip = "Strafe_Bomber_vs_Capship", 
+}, 
+{ 
+    Mothership = "Flyby_Bomber_vs_Mothership", 
+}, 
+{ 
+    ResourceLarge = "Flyby_Bomber_vs_ResourceLarge", 
+}, 
+{ 
     Corvette = "Flyby_Bomber_vs_Fighter", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,3)

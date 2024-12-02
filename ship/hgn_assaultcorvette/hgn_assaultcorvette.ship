@@ -4,16 +4,13 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Viper"
-NewShipType.sobDescription = "UNCG Standard Corvette"
-NewShipType.maxhealth = 7500
+NewShipType.displayedName = "$1506"
+NewShipType.sobDescription = "$1507"
+NewShipType.maxhealth = 4000 -- 400
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
-NewShipType.sideArmourDamage = 0.95
-NewShipType.rearArmourDamage = 0.95
-NewShipType.topArmourDamage = 0.75
-NewShipType.bottomArmourDamage = 0.85
-NewShipType.frontArmourDamage = 0.75
+NewShipType.sideArmourDamage = 1
+NewShipType.rearArmourDamage = 1
 NewShipType.isTransferable = 1
 NewShipType.useEngagementRanges = 0
 NewShipType.unitCapsNumber = 2
@@ -73,14 +70,14 @@ NewShipType.CollisionFamily = "Small"
 NewShipType.ArmourFamily = "LightArmour"
 NewShipType.UnitCapsFamily = "Corvette"
 NewShipType.fighterValue = 0
-NewShipType.corvetteValue = 15
+NewShipType.corvetteValue = 10
 NewShipType.frigateValue = 0
 NewShipType.neutralValue = 0
-NewShipType.antiFighterValue = 15
+NewShipType.antiFighterValue = 10
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 0
-NewShipType.totalValue = 15
-NewShipType.buildCost = 350
+NewShipType.totalValue = 10
+NewShipType.buildCost = 625
 NewShipType.buildTime = 45
 NewShipType.buildPriorityOrder = 10
 NewShipType.retaliationRange = 5500
@@ -139,23 +136,23 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "dockline"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "munition, Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip", "FlyRound_Corvette_vs_Frigate",
-{
-    Fighter = "FlyRound_Corvette_vs_Fighter",
-},
-{
-    Mothership = "flyround_Corvette_vs_Mothership",
-},
-{
-    SmallCapitalShip = "FlyRound_Corvette_vs_CapShip",
-},
-{
-    BigCapitalShip = "FlyRound_Corvette_vs_CapShip",
-},
-{
-    SubSystem = "FrontalVsSubSystem_Corvette",
-},
-{
+addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "munition, Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip", "FlyRound_Corvette_vs_Frigate", 
+{ 
+    Fighter = "FlyRound_Corvette_vs_Fighter", 
+}, 
+{ 
+    Mothership = "flyround_Corvette_vs_Mothership", 
+}, 
+{ 
+    SmallCapitalShip = "FlyRound_Corvette_vs_CapShip", 
+}, 
+{ 
+    BigCapitalShip = "FlyRound_Corvette_vs_CapShip", 
+}, 
+{ 
+    SubSystem = "FrontalVsSubSystem_Corvette", 
+}, 
+{ 
     Corvette = "FlyBy_Corvette_vs_Corvette", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,3)

@@ -1,9 +1,9 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Mobile Refinery"
-NewShipType.sobDescription = "UNCG Utility"
-NewShipType.maxhealth = 50000
+NewShipType.displayedName = "$1534"
+NewShipType.sobDescription = "$1535"
+NewShipType.maxhealth = 18000
 NewShipType.regentime = 850
-NewShipType.minRegenTime = 150
+NewShipType.minRegenTime = 850
 NewShipType.sideArmourDamage = 1
 NewShipType.rearArmourDamage = 1
 NewShipType.isTransferable = 1
@@ -16,8 +16,8 @@ NewShipType.defensiveFormation = "x"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 100
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 215
-NewShipType.mainEngineMaxSpeed = 215
+NewShipType.thrusterMaxSpeed = 225
+NewShipType.mainEngineMaxSpeed = 225
 NewShipType.rotationMaxSpeed = 18
 NewShipType.thrusterAccelTime = 7
 NewShipType.thrusterBrakeTime = 2
@@ -120,8 +120,8 @@ NewShipType.selectionLimit = 150000
 NewShipType.preciseATILimit = 0
 NewShipType.selectionPriority = 75
 NewShipType.militaryUnit = 0
-addAbility(NewShipType,"MoveCommand",1,0)
-addAbility(NewShipType,"CanDock",1,1)
+addAbility(NewShipType, "MoveCommand", 1, 0)
+addAbility(NewShipType, "CanDock", 1, 0)
 NewShipType.dockTimeBetweenTwoFormations = 1
 NewShipType.dockTimeBeforeStart = 2
 NewShipType.dockNrOfShipsInDockFormation = 1
@@ -129,28 +129,27 @@ NewShipType.dockFormation = "delta"
 NewShipType.queueFormation = "dockline"
 NewShipType.dontDockWithOtherRaceShips = 1
 NewShipType.ignoreRaceWhenDocking = 0
-addAbility(NewShipType,"CanLaunch")
+addAbility(NewShipType, "CanLaunch")
 NewShipType.launchTimeBetweenTwoFormations = 1
 NewShipType.launchTimeBeforeStart = 2
 NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
-addAbility(NewShipType,"ShipHold",1,160,0,"rallypoint","",25)
-addAbility(NewShipType,"ParadeCommand",1)
-addAbility(NewShipType,"WaypointMove")
+addAbility(NewShipType, "ShipHold", 1, 40, 0, "rallypoint", "", 35)
+addAbility(NewShipType, "ParadeCommand", 1)
+addAbility(NewShipType, "WaypointMove")
 addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,3)
-addAbility(NewShipType,"CanAttack",1,1,0,0,0.35,1,"SmallCapitalShip, Capturer, Frigate, Fighter, Corvette, BigCapitalShip, Utility","JustShoot")
-addAbility(NewShipType,"GuardCommand",1,3000,800)
-addAbility(NewShipType,"HyperspaceViaGateCommand",1,3,1,0.3)
-addAbility(NewShipType,"CanBeRepaired")
-addAbility(NewShipType,"RetireAbility",1,1)
-LoadModel(NewShipType,1)
-
-StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense1", "")
-StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense3", "")
-StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense5", "")
-StartShipWeaponConfig(NewShipType, "hgn_mshulldefensegun", "Weapon_HullDefense8", "")
-
-addShield(NewShipType,"EMP",400,12)
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "Munition, Fighter, Corvette, Frigate, Utility, SmallCapitalShip, BigCapitalShip, Mothership", "JustShoot")
+addAbility(NewShipType, "GuardCommand", 1, 3000, 800)
+addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
+addAbility(NewShipType, "CanBeRepaired")
+addAbility(NewShipType, "RetireAbility", 1, 1)
+addAbility(NewShipType, "MinelayerAbility",1,3.5)
+LoadModel(NewShipType, 1)
+StartShipWeaponConfig(NewShipType, "Hgn_MSHullDefenseGun", "Weapon_HullDefense1", "Weapon_HullDefense1")
+StartShipWeaponConfig(NewShipType, "Hgn_MSHullDefenseGun", "Weapon_HullDefense3", "Weapon_HullDefense3")
+StartShipWeaponConfig(NewShipType, "Hgn_MSHullDefenseGun", "Weapon_HullDefense5", "Weapon_HullDefense5")
+StartShipWeaponConfig(NewShipType, "Hgn_MSHullDefenseGun", "Weapon_HullDefense8", "Weapon_HullDefense8")
+addShield(NewShipType, "EMP", 220, 20)
 NewShipType.battleScarMaxTriBase = 75
 NewShipType.battleScarMaxTriInc = 100
 NewShipType.sobDieTime = 1
@@ -159,7 +158,6 @@ NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
 NewShipType.deadSobFadeTime = 1
 NewShipType.trailLinger = 2
-setEngineBurn(NewShipType, 9, 0.2, 0.5, 300, 1.02, 0.1, 0.25, 380)
-setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5,
-    { 1, 0.47, 0, 0.2, })
-loadShipPatchList(NewShipType,"data:sound/sfx/ship/Hiigaran/NonMilitary/",0,"Engines/HResourcerControllerEng","",1,"Ambience/HResourcerControllerAmb","")
+setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5, 
+    { 0.27, 0.47, 0.69, 0.25, })
+loadShipPatchList(NewShipType, "data:sound/sfx/ship/Hiigaran/NonMilitary/", 0, "Engines/HResourcerControllerEng", "", 1, "Ambience/HResourcerControllerAmb", "")

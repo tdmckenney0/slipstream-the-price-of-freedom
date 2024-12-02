@@ -3,19 +3,16 @@
 -- Date: 10-14-2007 Time: 00:08:11
 -- On error(s), send source (compiled) file to 4E534B@gmail.com
 
-NewShipType=StartShipConfig()
-NewShipType.displayedName ="Gladiator"
-NewShipType.sobDescription ="UNCG Assault Frigate"
-NewShipType.maxhealth =75000
+NewShipType =StartShipConfig()
+NewShipType.displayedName ="$1518"
+NewShipType.sobDescription ="$1519"
+NewShipType.maxhealth =16000
 NewShipType.regentime =1200
 NewShipType.minRegenTime =1200
-NewShipType.sideArmourDamage =0.5
-NewShipType.rearArmourDamage =0.55
-NewShipType.bottomArmourDamage =0.7
-NewShipType.topArmourDamage =0.65
-NewShipType.frontArmourDamage =0.45
+NewShipType.sideArmourDamage =1.2
+NewShipType.rearArmourDamage =1.2
 NewShipType.isTransferable =1
-NewShipType.useEngagementRanges =0
+NewShipType.useEngagementRanges =0 --1
 NewShipType.unitCapsNumber =2
 NewShipType.SquadronSize =1
 NewShipType.formationSpacing =250
@@ -24,9 +21,9 @@ NewShipType.defensiveFormation ="x"
 NewShipType.aggressiveFormation ="Claw"
 NewShipType.mass =100
 NewShipType.collisionMultiplier =1
-NewShipType.thrusterMaxSpeed =300
-NewShipType.mainEngineMaxSpeed =330
-NewShipType.rotationMaxSpeed =120
+NewShipType.thrusterMaxSpeed =300 --161
+NewShipType.mainEngineMaxSpeed =330 --161
+NewShipType.rotationMaxSpeed =120 --22
 NewShipType.thrusterAccelTime =7
 NewShipType.thrusterBrakeTime =2
 NewShipType.mainEngineAccelTime =8
@@ -34,10 +31,10 @@ NewShipType.mainEngineBrakeTime =2
 NewShipType.rotationAccelTime =0.75
 NewShipType.rotationBrakeTime =0.4
 NewShipType.thrusterUsage =0.5
-NewShipType.accelerationAngle =120
-NewShipType.mirrorAngle =30
-NewShipType.secondaryTurnAngle =45
-NewShipType.maxBankingAmount =50
+NewShipType.accelerationAngle =120 -- 40
+NewShipType.mirrorAngle =30 -- 0
+NewShipType.secondaryTurnAngle =45 -- 0
+NewShipType.maxBankingAmount =50 --20
 NewShipType.descendPitch =20
 NewShipType.goalReachEpsilon =30
 NewShipType.slideMoveRange =100
@@ -90,11 +87,11 @@ NewShipType.totalValue =12
 NewShipType.buildCost =700
 NewShipType.buildTime =50
 NewShipType.buildPriorityOrder =10
-NewShipType.retaliationRange =6000
+NewShipType.retaliationRange =5500
 NewShipType.retaliationDistanceFromGoal =160
-NewShipType.visualRange =7500
-NewShipType.prmSensorRange =7500
-NewShipType.secSensorRange =9000
+NewShipType.visualRange =1000
+NewShipType.prmSensorRange =5000
+NewShipType.secSensorRange =6000
 NewShipType.detectionStrength =1
 NewShipType.TOIcon ="Diamond"
 NewShipType.TOScale =1
@@ -166,9 +163,6 @@ NewShipType.chanceOfSpecialDeath =0
 NewShipType.deadSobFadeTime =0
 NewShipType.trailLinger =4
 setEngineBurn(NewShipType, 6, 1, 1.5, 60, 1.1, 0.1, 0.25, 120)
-setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5, {0.27,
-	0.47,
-	0.69,
-	0.25})
+setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5, 
+    { 0.27, 0.47, 0.69, 0.25, })
 loadShipPatchList(NewShipType, "data:sound/sfx/ship/Hiigaran/Frigate/", 0, "Engines/HFrigateEng", "", 1, "Ambience/HFrigateAmb", "")
-

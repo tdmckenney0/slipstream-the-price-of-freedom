@@ -1,13 +1,12 @@
-
 -- LuaDC version 0.9.19
 -- 5/23/2004 7:24:38 PM
 -- LuaDC by Age2uN
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Caspian"
-NewShipType.sobDescription = "DSCG Command Corvette"
-NewShipType.maxhealth = 5000
+NewShipType.displayedName = "$1616"
+NewShipType.sobDescription = "$1617"
+NewShipType.maxhealth = 6000 -- 600
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -22,8 +21,8 @@ NewShipType.defensiveFormation = "broad"
 NewShipType.aggressiveFormation = "delta"
 NewShipType.mass = 15
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 395
-NewShipType.mainEngineMaxSpeed = 395
+NewShipType.thrusterMaxSpeed = 395 -- 215
+NewShipType.mainEngineMaxSpeed = 395 -- 215
 NewShipType.rotationMaxSpeed = 131
 NewShipType.thrusterAccelTime = 1
 NewShipType.thrusterBrakeTime = 1
