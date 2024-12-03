@@ -62,13 +62,6 @@ PersistantData = {
            name = "",
            number = 4,
        },
-       {
-           type = "hgn_pulsarplatform",
-           subsystems = {},
-           shiphold = {},
-           name = "",
-           number = 4,
-       },
        -- Utility
        {
            type = "Hgn_ResourceCollector",
@@ -136,25 +129,11 @@ PersistantData = {
        },
        -- Fighters
        {
-           type = "hgn_attackbomber",
-           subsystems = {},
-           shiphold = {},
-           name = "",
-           number = 5,
-       },
-       {
            type = "hgn_interceptor",
            subsystems = {},
            shiphold = {},
            name = "",
-           number = 5,
-       },
-       {
-           type = "hgn_scout",
-           subsystems = {},
-           shiphold = {},
-           name = "",
-           number = 5,
+           number = 10,
        },
        -- Corvettes
        {

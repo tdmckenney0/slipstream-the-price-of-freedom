@@ -51,13 +51,6 @@ PersistantData = {
          name = "",
          number = 4,
      },
-     {
-         type = "vgr_weaponplatform_plasma",
-         subsystems = {},
-         shiphold = {},
-         name = "",
-         number = 4,
-     },
      -- Utility
      {
        type = "Vgr_ResourceCollector",
@@ -125,13 +118,6 @@ PersistantData = {
      },
      {
        type = "vgr_lancefighter",
-       subsystems = {},
-       shiphold = {},
-       name = "",
-       number = 5,
-     },
-     {
-       type = "vgr_scout",
        subsystems = {},
        shiphold = {},
        name = "",
