@@ -1496,6 +1496,8 @@ hgn_battlecruiserionbeamturrettop = Icon_Subsystem_IonTurret
 hgn_frigateionbeamturret = Icon_Subsystem_IonTurret
 hgn_ioncannonfrigate = Hgn_AssaultFrigate
 hgn_interceptor_booster = Icon_Subsystem_Engine
+hgn_bc_production_fighter = Icon_Subsystem_Fighter
+hgn_bc_production_corvette = Icon_Subsystem_Corvette
 --Vaygr
 vgr_booster = Icon_Subsystem_Engine
 vgr_missilebay = Icon_Subsystem_TorpedoLauncher
