@@ -17,7 +17,7 @@ PersistantData = {
        subsystems = {
          {
            index = 0,
-           name = "VGR_C_PRODUCTION_CORVETTE",
+           name = "VGR_C_PRODUCTION_FRIGATE",
          },
          {
            index = 0,
@@ -74,11 +74,31 @@ PersistantData = {
            index = 0,
            name = "VGR_C_MODULE_HYPERSPACE",
          },
+         {
+           index = 0,
+           name = "VGR_C_PRODUCTION_FIGHTER"
+         }
        },
        shiphold = {},
        name = "",
-       number = 2,
+       number = 1,
      },
+     {
+      type = "vgr_battlecruiser",
+      subsystems = {
+        {
+          index = 0,
+          name = "VGR_C_PRODUCTION_CORVETTE",
+        },
+        {
+          index = 0,
+          name = "Vgr_C_Module_FireControl"
+        }
+      },
+      shiphold = {},
+      name = "",
+      number = 1,
+    },
      {
        type = "vgr_destroyer",
        subsystems = {},
