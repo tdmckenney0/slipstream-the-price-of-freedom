@@ -45,24 +45,9 @@ GameSetupOptions = {
 		name = "startlocation",
 		locName = "$3225",
 		tooltip = "$3237",
-		default = 1,
-		visible = 1,
-		choices = { "$3226", "random", "$3227", "fixed", }, 
-	},
-	
-	{
-		name = "wincondition",
-		locName = "Win Condition",
-		tooltip = "select the condition for winning the game",
 		default = 0,
-		visible = 1,
-		choices =
-		{ 
-			"Default", 0, 
-			"Destroy Team Production", 1, 
-			"Destroy All ships", 2, 
-			"Quit Manually", 3, 
-		},
+		visible = 0,
+		choices = { "$3227", "fixed", }, 
 	},
 	
 	{
@@ -128,20 +113,7 @@ function OnInit()
 
 	Play(GetGameSettingAsString("randommusic"))
 
-	wincondition = GetGameSettingAsNumber("wincondition")
-
-	if wincondition == 0 then
-		Rule_AddInterval("CheckPlayerProductionShipsLeftRule", 1)
-	elseif wincondition == 1 then
-		Rule_AddInterval("CheckTeamProductionShipsLeftRule", 1)
-	elseif wincondition == 2 then
-		Rule_AddInterval("CheckTeamAnyShipsLeftRule", 1)
-	elseif wincondition == 3 then
-		Rule_AddInterval("DoNotQuit", 1)
-	else
-		Rule_AddInterval("CheckPlayerProductionShipsLeftRule", 1)
-	end
-
+	Rule_AddInterval("CheckTeamAnyShipsLeftRule", 1)
 
     Rule_Add("MainRule")
 	
@@ -151,39 +123,6 @@ end
 
 
 AnyPlayerIndex = 0
-
--- Kills a player if the player has no production capability
-
-function CheckPlayerProductionShipsLeftRule()
-	if ((Player_IsAlive(AnyPlayerIndex) == 1) and (Player_HasShipWithBuildQueue(AnyPlayerIndex) == 0)) then
-		Player_Kill(AnyPlayerIndex)
-	end
-	if (AnyPlayerIndex == (Universe_PlayerCount() - 1)) then
-		AnyPlayerIndex = 0
-	else
-		AnyPlayerIndex = AnyPlayerIndex + 1
-	end
-end
-
--- Kills a player if no team member has any production capability
-
-function CheckTeamProductionShipsLeftRule()
-	local bDead = 1
-	for otherPlayerIndex = 0, (Universe_PlayerCount() - 1) do
-		if ((AreAllied(AnyPlayerIndex, otherPlayerIndex) == 1) and (Player_IsAlive(otherPlayerIndex) == 1) and (Player_HasShipWithBuildQueue(otherPlayerIndex) == 1)) then
-			bDead = 0
-			break
-		end
-	end
-	if (bDead == 1) then
-		Player_Kill(AnyPlayerIndex)
-	end
-	if (AnyPlayerIndex == (Universe_PlayerCount() - 1)) then
-		AnyPlayerIndex = 0
-	else
-		AnyPlayerIndex = AnyPlayerIndex + 1
-	end
-end
 
 -------------------------------------------------------------------------------
 -- Kills a player if no team member has any ships
@@ -206,13 +145,6 @@ function CheckTeamAnyShipsLeftRule()
 	end
 end
 
-
--------------------------------------------------------------------------------
--- Stops the game from terminating even when all enemies are gone
---
-function DoNotQuit()
-end
-
 -------------------------------------------------------------------------------
 -- counts the size of a player's fleet
 --
@@ -228,31 +160,6 @@ function Player_NumberOfShips(iPlayer)
 	end
 	return ShipCount
 end
-
--------------------------------------------------------------------------------
--- returns the team number of the player (may be different than in the game-setup screen)
---
-function Player_Team(iPlayer)
-	local TeamsTable = {}
-	for playerIndex = 0, (Universe_PlayerCount() - 1) do
-		local IsAllied = 0
-		for i = 1, getn(TeamsTable) do
-			if (AreAllied(playerIndex, TeamsTable[i]) == 1) then
-				IsAllied = 1
-				break
-			end
-		end
-		if (IsAllied == 0) then
-			tinsert(TeamsTable, playerIndex)
-		end
-	end
-	for i = 1, getn(TeamsTable) do
-		if (AreAllied(iPlayer, TeamsTable[i]) == 1) then
-			return i
-		end
-	end
-end
-
 
 function MainRule()
 	local numAlive = 0
