@@ -2,7 +2,8 @@
 -- By 4E534B
 -- Date: 12-15-2024 Time: 11:14:45
 -- On error(s), send source (compiled) file to 4E534B@gmail.com
-
+-- 
+-- This file contains some strange custom operator that I don't think is valid lua syntax: ',;'.
 HW2StyleSheet = {
 	defaultElementStyle = "DefaultStyle",
 	defaultTextStyle = "DefaultTextStyle",
