@@ -2,20 +2,13 @@
 
 A mod for Homeworld 2 Classic. Set in the Slipstream universe.
 
-Written by:
-- Tanner Mckenney (TheMadScienceGuy, SRI-Sajuuk)
-
-With help from:
-- Matthew Collins (Rising Ruin, Coldstar, Aquemenon)
-- Erik Mann (HisDivineShadow)
-
-## _Slipstream_
+## The _Slipstream_ Universe
 
 _Slipstream_ is an alternative _Homeworld_ universe where the in-game events of _Homeworld_, _Homeworld: Deserts of Kharak_, and _Homeworld: Cataclysm_/_Emergence_, along with the contents of their manuals, are considered canon, while other entries in the franchise, such as _Homeworld 2_, _Homeworld 3_, _Homeworld Mobile_, and other future entries, are **not** considered canon. 
 
 ### Introduction
 
-Many years after the events of Homeworld: Cataclysm/Emergence, the final remnants of the subversion entity known as The Beast were finally defeated. However, the toll upon the galactic political order was beyond cataclysmic, plunging the galaxy into a long and terrible dark age. With the collapse of the remaining rump states of the Taiidan Empire in the wake of the The Beast, the once heavily patrolled suburbs of the galaxy near the Kashmin Sea and Shamal Clusters have become overrun with Vaygr nomads and other pirate races; in only a few years time, the Vaygr have occupied most of the territory held by the former Taiidan empire. The Vaygr impressed their feudal system onto their conquered territories; those subjugated become vassals, and economically plundered for conquests elsewhere. Those ignored by the Vaygr have turned inward to avoid any attention from pirates or warlords. As for the wise and enigmatic Bentusi, those that didn't flee the galaxy were either consumed by the Beast, or hunted to extinction.
+Many years after the events of _Homeworld: Cataclysm/Emergence_, the final remnants of the subversion entity known as The Beast were finally defeated. However, the toll upon the galactic political order was beyond cataclysmic, plunging the galaxy into a long and terrible dark age. With the collapse of the remaining rump states of the Taiidan Empire in the wake of the The Beast, the once heavily patrolled suburbs of the galaxy near the Kashmin Sea and Shamal Clusters have become overrun with Vaygr nomads and other pirate races; in only a few years time, the Vaygr have occupied most of the territory held by the former Taiidan empire. The Vaygr impressed their feudal system onto their conquered territories; those subjugated become vassals, and economically plundered for conquests elsewhere. Those ignored by the Vaygr have turned inward to avoid any attention from pirates or warlords. As for the wise and enigmatic Bentusi, those that didn't flee the galaxy were either consumed by the Beast, or hunted to extinction.
 
 With the Vaygr too busy infighting over the spoils of war, Hiigara, largely unscathed, consolidates its power. Uneager to expand or explore an increasingly hostile galaxy while still struggling to rebuild their lost civilization, the Daiamid decides to pull back to its core territorial possessions around the Homeworld system. With its navy spread thin from its battles with the Beast infection, the consequences of the situation were laid bare: Off-world super capital ship production was a massive security risk versus the effectiveness carrier groups with super capital escorts demostrated against the Beast infection. It was clear to the Daiamid that mothership class vessels just weren't worth the risk to deploy away from the Homeworld where they could easily be captured or destroyed by the increasingly hostile pirate forces of the galaxy. The Daiamid has instead opted to expand existing planet-side manufacturing on both Hiigara and nearby Hiigaran-controlled planets. 
 
