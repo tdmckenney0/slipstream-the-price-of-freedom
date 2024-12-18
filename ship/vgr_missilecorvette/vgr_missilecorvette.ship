@@ -4,9 +4,9 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DSCG Bomber Corvette"
-NewShipType.sobDescription = "Bomber Class\nBomber Corvette"
-NewShipType.maxhealth = 7250
+NewShipType.displayedName = "$1612"
+NewShipType.sobDescription = "$1613"
+NewShipType.maxhealth = 4000 -- 400
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -21,8 +21,8 @@ NewShipType.defensiveFormation = "ScatterDelta_Long"
 NewShipType.aggressiveFormation = "ScatterNarrow"
 NewShipType.mass = 15
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 425
-NewShipType.mainEngineMaxSpeed = 425
+NewShipType.thrusterMaxSpeed = 425 -- 215
+NewShipType.mainEngineMaxSpeed = 425 -- 215
 NewShipType.rotationMaxSpeed = 131
 NewShipType.thrusterAccelTime = 2
 NewShipType.thrusterBrakeTime = 1
@@ -165,6 +165,7 @@ addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "munition, Capturer, F
     Chimera = "Flyby_VBomber_vs_Chimera", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
+addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,3)
 addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadModel(NewShipType, 1)
 StartShipWeaponConfig(NewShipType, "vgr_bomberplasmadriver", "Weapon_MissileVette", "")

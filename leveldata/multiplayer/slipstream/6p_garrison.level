@@ -125,18 +125,18 @@ addSquadron("Guard", "vgr_bomber", {0, 700, -28000}, 5, {0, 0, 0,}, 0, 0);
 addSquadron("Guard", "vgr_bomber", {0, 800, -28000}, 5, {0, 0, 0,}, 0, 0);
 
 
-addSquadron("Guard", "hgn_attackbomber", {-6333, 0, -6000}, 1, {0, 0, 0,}, 0, 0);
-addSquadron("Guard", "hgn_attackbomber", {-6333, -1000, -6000}, 1, {0, 0, 0,}, 0, 0);
-addSquadron("Guard", "hgn_attackbomber", {-6333, 1000, -6000}, 1, {0, 0, 0,}, 0, 0);
+addSquadron("Guard", "hgn_interceptor", {-6333, 0, -6000}, 1, {0, 0, 0,}, 0, 0);
+addSquadron("Guard", "hgn_interceptor", {-6333, -1000, -6000}, 1, {0, 0, 0,}, 0, 0);
+addSquadron("Guard", "hgn_interceptor", {-6333, 1000, -6000}, 1, {0, 0, 0,}, 0, 0);
 
 
-addSquadron("Guard", "hgn_attackbomber", {0, 0, 6000}, 0, {0, 0, 0,}, 0, 0);
-addSquadron("Guard", "hgn_attackbomber", {0, 1000, 6000}, 0, {0, 0, 0,}, 0, 0);
-addSquadron("Guard", "hgn_attackbomber", {0, -1000, 6000}, 0, {0, 0, 0,}, 0, 0);
+addSquadron("Guard", "hgn_interceptor", {0, 0, 6000}, 0, {0, 0, 0,}, 0, 0);
+addSquadron("Guard", "hgn_interceptor", {0, 1000, 6000}, 0, {0, 0, 0,}, 0, 0);
+addSquadron("Guard", "hgn_interceptor", {0, -1000, 6000}, 0, {0, 0, 0,}, 0, 0);
 
-addSquadron("Guard", "hgn_attackbomber", {6333, 0, -6000}, 2, {0, 0, 0,}, 0, 0);
-addSquadron("Guard", "hgn_attackbomber", {6333, -1000, -6000}, 2, {0, 0, 0,}, 0, 0);
-addSquadron("Guard", "hgn_attackbomber", {6333, 1000, -6000}, 2, {0, 0, 0,}, 0, 0);
+addSquadron("Guard", "hgn_interceptor", {6333, 0, -6000}, 2, {0, 0, 0,}, 0, 0);
+addSquadron("Guard", "hgn_interceptor", {6333, -1000, -6000}, 2, {0, 0, 0,}, 0, 0);
+addSquadron("Guard", "hgn_interceptor", {6333, 1000, -6000}, 2, {0, 0, 0,}, 0, 0);
 
 
 addSquadron("Guard", "hgn_gunturret", {-6333, 0, -5000}, 1, {0, 0, 0,}, 0, 0);
@@ -222,5 +222,5 @@ addPebble("Pebble_1", {10000, 5809, -10876,}, 0, 0, 0)
   setLevelShadowColour(0, 0, 0, 1)
   loadBackground("tpof_interchange")
   setSensorsManagerCameraDistances(12000, 60000)
-  setDefaultMusic("Data:sound/music/staging/mute")
+  setDefaultMusic("Data:sound/music/slipstream/ambient")
 end

@@ -4,9 +4,9 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Guangzhou"
-NewShipType.sobDescription = "DSCG Laser Fighter\nUnmanned Fighter"
-NewShipType.maxhealth = 3900
+NewShipType.displayedName = "$1606"
+NewShipType.sobDescription = "$1607"
+NewShipType.maxhealth = 375 -- 30
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -138,32 +138,33 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "n_delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "Corvette, Capturer, Frigate, Fighter, SmallCapitalShip, BigCapitalShip, Utility", "FlyBy_Bomber_vs_Frigate",
-{
-    Fighter = "Flyby_Bomber_vs_Fighter",
-},
-{
-    SubSystem = "TopAttack_Bomber_vs_Subsystem",
-},
-{
-    SmallCapitalShip = "Strafe_Bomber_vs_Capship",
-},
-{
-    BigCapitalShip = "Strafe_Bomber_vs_Capship",
-},
-{
-    Mothership = "Flyby_Bomber_vs_Mothership",
-},
-{
-    ResourceLarge = "Flyby_Bomber_vs_ResourceLarge",
-},
-{
+addAbility(NewShipType, "CanAttack", 1, 1, 1, 0, 0.35, 1, "Corvette, Capturer, Frigate, Fighter, SmallCapitalShip, BigCapitalShip, Utility", "FlyBy_Bomber_vs_Frigate", 
+{ 
+    Fighter = "Flyby_Bomber_vs_Fighter", 
+}, 
+{ 
+    SubSystem = "TopAttack_Bomber_vs_Subsystem", 
+}, 
+{ 
+    SmallCapitalShip = "Strafe_Bomber_vs_Capship", 
+}, 
+{ 
+    BigCapitalShip = "Strafe_Bomber_vs_Capship", 
+}, 
+{ 
+    Mothership = "Flyby_Bomber_vs_Mothership", 
+}, 
+{ 
+    ResourceLarge = "Flyby_Bomber_vs_ResourceLarge", 
+}, 
+{ 
     Corvette = "Flyby_Bomber_vs_Fighter", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 500)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
+addAbility(NewShipType,"HyperSpaceCommand",0,0,0,0,0,3)
 addAbility(NewShipType, "RetireAbility", 1, 0)
 LoadModel(NewShipType, 1)
-StartShipWeaponConfig(NewShipType, "vgr_lightplasmalance", "Weapon_BigGun", "Weapon_BigGun")
+StartShipWeaponConfig(NewShipType, "Vgr_LightPlasmaLance", "Weapon_BigGun", "Weapon_BigGun")
 addShield(NewShipType, "EMP", 75, 20)
 NewShipType.sobDieTime = 0.1
 NewShipType.sobSpecialDieTime = 2

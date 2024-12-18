@@ -45,24 +45,9 @@ GameSetupOptions = {
 		name = "startlocation",
 		locName = "$3225",
 		tooltip = "$3237",
-		default = 1,
-		visible = 1,
-		choices = { "$3226", "random", "$3227", "fixed", }, 
-	},
-	
-	{
-		name = "wincondition",
-		locName = "Win Condition",
-		tooltip = "select the condition for winning the game",
 		default = 0,
-		visible = 1,
-		choices =
-		{ 
-			"Default", 0, 
-			"Destroy Team Production", 1, 
-			"Destroy All ships", 2, 
-			"Quit Manually", 3, 
-		},
+		visible = 0,
+		choices = { "$3227", "fixed", }, 
 	},
 	
 	{
@@ -73,12 +58,16 @@ GameSetupOptions = {
 		visible = 1,
 		choices =
 		{
-			"Off", "mute",
+			"Shuffle: Slipstream", "slipstream",
 			"Shuffle: All", "shuffle",
 			"Shuffle: Ambient", "ambient",
 			"Shuffle: Staging", "staging",
 			"Shuffle: Battle", "battle",
-			"Ambient: Slipstream ", "staging\\Ambient",
+			"Slipstream: Suite 1", "slipstream\\suite",
+			"Slipstream: Suite 2", "slipstream\\freedom",
+			"Slipstream: Ambience", "slipstream\\ambient",
+			"Slipstream: Battle No.1", "slipstream\\battle_01",
+			"Slipstream: Battle No.2", "slipstream\\battle_02",
 			"Ambient: No.1", "ambient\\amb_01",
 			"Ambient: No.2", "ambient\\amb_02",
 			"Ambient: No.3", "ambient\\amb_03",
@@ -90,12 +79,10 @@ GameSetupOptions = {
 			"Ambient: No.9", "ambient\\amb_12",
 			"Ambient: No.10", "ambient\\amb_13",
 			"Ambient: No.11", "ambient\\amb_14",
-			"Battle: TPOF", "battle\\battle_01",
 			"Battle: No.2", "battle\\battle_04",
 			"Battle: No.3, Alternate", "battle\\battle_04_alt",
 			"Battle: No.4", "battle\\battle_06",
 			"Battle: Arrival", "battle\\battle_arrival",
-			"Battle: Credits", "credits",
 			"Battle: Keeper", "battle\\battle_keeper",
 			"Battle: Movers", "battle\\battle_movers",
 			"Battle: Planet Killers", "battle\\battle_planetkillers",
@@ -105,8 +92,6 @@ GameSetupOptions = {
 			"Staging: No.3", "staging\\staging_05",
 			"Staging: No.4", "staging\\staging_08",
 			"Staging: No.5", "staging\\staging_11",
-			"Suite: Slipstream", "staging\\suite",
-			"Suite: Freedom", "staging\\Freedom",
 		},
 	},
 }
@@ -128,20 +113,7 @@ function OnInit()
 
 	Play(GetGameSettingAsString("randommusic"))
 
-	wincondition = GetGameSettingAsNumber("wincondition")
-
-	if wincondition == 0 then
-		Rule_AddInterval("CheckPlayerProductionShipsLeftRule", 1)
-	elseif wincondition == 1 then
-		Rule_AddInterval("CheckTeamProductionShipsLeftRule", 1)
-	elseif wincondition == 2 then
-		Rule_AddInterval("CheckTeamAnyShipsLeftRule", 1)
-	elseif wincondition == 3 then
-		Rule_AddInterval("DoNotQuit", 1)
-	else
-		Rule_AddInterval("CheckPlayerProductionShipsLeftRule", 1)
-	end
-
+	Rule_AddInterval("CheckTeamAnyShipsLeftRule", 1)
 
     Rule_Add("MainRule")
 	
@@ -151,39 +123,6 @@ end
 
 
 AnyPlayerIndex = 0
-
--- Kills a player if the player has no production capability
-
-function CheckPlayerProductionShipsLeftRule()
-	if ((Player_IsAlive(AnyPlayerIndex) == 1) and (Player_HasShipWithBuildQueue(AnyPlayerIndex) == 0)) then
-		Player_Kill(AnyPlayerIndex)
-	end
-	if (AnyPlayerIndex == (Universe_PlayerCount() - 1)) then
-		AnyPlayerIndex = 0
-	else
-		AnyPlayerIndex = AnyPlayerIndex + 1
-	end
-end
-
--- Kills a player if no team member has any production capability
-
-function CheckTeamProductionShipsLeftRule()
-	local bDead = 1
-	for otherPlayerIndex = 0, (Universe_PlayerCount() - 1) do
-		if ((AreAllied(AnyPlayerIndex, otherPlayerIndex) == 1) and (Player_IsAlive(otherPlayerIndex) == 1) and (Player_HasShipWithBuildQueue(otherPlayerIndex) == 1)) then
-			bDead = 0
-			break
-		end
-	end
-	if (bDead == 1) then
-		Player_Kill(AnyPlayerIndex)
-	end
-	if (AnyPlayerIndex == (Universe_PlayerCount() - 1)) then
-		AnyPlayerIndex = 0
-	else
-		AnyPlayerIndex = AnyPlayerIndex + 1
-	end
-end
 
 -------------------------------------------------------------------------------
 -- Kills a player if no team member has any ships
@@ -206,13 +145,6 @@ function CheckTeamAnyShipsLeftRule()
 	end
 end
 
-
--------------------------------------------------------------------------------
--- Stops the game from terminating even when all enemies are gone
---
-function DoNotQuit()
-end
-
 -------------------------------------------------------------------------------
 -- counts the size of a player's fleet
 --
@@ -228,31 +160,6 @@ function Player_NumberOfShips(iPlayer)
 	end
 	return ShipCount
 end
-
--------------------------------------------------------------------------------
--- returns the team number of the player (may be different than in the game-setup screen)
---
-function Player_Team(iPlayer)
-	local TeamsTable = {}
-	for playerIndex = 0, (Universe_PlayerCount() - 1) do
-		local IsAllied = 0
-		for i = 1, getn(TeamsTable) do
-			if (AreAllied(playerIndex, TeamsTable[i]) == 1) then
-				IsAllied = 1
-				break
-			end
-		end
-		if (IsAllied == 0) then
-			tinsert(TeamsTable, playerIndex)
-		end
-	end
-	for i = 1, getn(TeamsTable) do
-		if (AreAllied(iPlayer, TeamsTable[i]) == 1) then
-			return i
-		end
-	end
-end
-
 
 function MainRule()
 	local numAlive = 0

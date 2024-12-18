@@ -443,6 +443,6 @@ function NonDetermChunk()
     setGlareIntensity(0)
     setLevelShadowColour(0, 0, 0, 1)
     loadBackground("tpof_double")
-setDefaultMusic("Data:sound/music/staging/mute")
+setDefaultMusic("Data:sound/music/slipstream/ambient")
 setSensorsManagerCameraDistances(12000, 40000)
 end

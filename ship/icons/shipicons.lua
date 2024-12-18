@@ -1477,14 +1477,11 @@ Hgn_drone_frigate_3 = Hgn_Marinefrigate
 Kpr_Mover_Capture = Kpr_Mover_Capture
 Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
 -- TPOF
-hgn_pulsarplatform = Hgn_IonTurret
-vgr_weaponplatform_Plasma = Vgr_WeaponPlatform_gun
 hgn_heavybattlecruiser = Hgn_Destroyer
-hgn_crossbow_cruiser = Hgn_Destroyer
 vgr_heavybattlecruiser = Vgr_Destroyer
 --SUBSYSTEMS
 directionalthruster = Icon_Subsystem_Engine
---UNCG
+--Hiigaran
 hgn_battlecruiserminelaunchertop = Icon_Subsystem_TorpedoLauncher
 hgn_c_module_build = Icon_Subsystem_ResearchAdvanced
 hgn_battlecruiserplasmaburstturret = Icon_Subsystem_IonTurret
@@ -1499,7 +1496,9 @@ hgn_battlecruiserionbeamturrettop = Icon_Subsystem_IonTurret
 hgn_frigateionbeamturret = Icon_Subsystem_IonTurret
 hgn_ioncannonfrigate = Hgn_AssaultFrigate
 hgn_interceptor_booster = Icon_Subsystem_Engine
---DSCG
+hgn_bc_production_fighter = Icon_Subsystem_Fighter
+hgn_bc_production_corvette = Icon_Subsystem_Corvette
+--Vaygr
 vgr_booster = Icon_Subsystem_Engine
 vgr_missilebay = Icon_Subsystem_TorpedoLauncher
 vgr_pulsecannondestroyer = Icon_Subsystem_IonTurret

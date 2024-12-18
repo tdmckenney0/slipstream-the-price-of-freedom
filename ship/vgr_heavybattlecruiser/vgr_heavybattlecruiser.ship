@@ -4,9 +4,9 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "DSCG Helios"
-NewShipType.sobDescription = "Heavy Battlecruiser"
-NewShipType.maxhealth = 800000
+NewShipType.displayedName = "$1636"
+NewShipType.sobDescription = "$1633"
+NewShipType.maxhealth = 300000
 NewShipType.regentime = 1500
 NewShipType.minRegenTime = 450
 NewShipType.sideArmourDamage = 0.4
@@ -80,12 +80,12 @@ NewShipType.UnitCapsFamily = "Capital"
 NewShipType.UnitCapsShipType = "Battlecruiser"
 NewShipType.fighterValue = 0
 NewShipType.corvetteValue = 0
-NewShipType.frigateValue = 40
-NewShipType.neutralValue = 10
+NewShipType.frigateValue = 80
+NewShipType.neutralValue = 30
 NewShipType.antiFighterValue = 0
-NewShipType.antiCorvetteValue = 0
-NewShipType.antiFrigateValue = 30
-NewShipType.totalValue = 50
+NewShipType.antiCorvetteValue = 5
+NewShipType.antiFrigateValue = 60
+NewShipType.totalValue = 110
 NewShipType.buildCost = 6500
 NewShipType.buildTime = 165
 NewShipType.buildPriorityOrder = 20
@@ -145,7 +145,7 @@ NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653);
+addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,3)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.5, "munition, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "Circlestrafe",
 {
     Fighter = "movetotargetandshoot",

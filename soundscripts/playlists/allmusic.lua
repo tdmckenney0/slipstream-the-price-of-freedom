@@ -12,7 +12,6 @@ PlayList =
 	{"ambient\\amb_12", "Ambient No.12", 628,},	-- 108
 	{"ambient\\amb_13", "Ambient No.13", 684,},	-- 114
 	{"ambient\\amb_14", "Ambient No.14", 725,},	-- 145
-	{"battle\\battle_01", "Battle No.1", 552,},	-- 276
 	{"battle\\battle_04", "Battle No.4", 678,},	-- 226
 	{"battle\\battle_04_alt", "Battle No.4, Alternate", 720,},	-- 180
 	{"battle\\battle_06", "Battle No.6", 764,},	-- 191
@@ -25,8 +24,9 @@ PlayList =
 	{"staging\\staging_05", "Staging, No.3", 139,},	-- 155
 	{"staging\\staging_08", "Staging, No.4", 144,},	-- 110
 	{"staging\\staging_11", "Staging, No.5", 139,},	-- 129
-	{"staging\\Suite", "Slipstream Suite - SRI-Emperor", 123,},
-	{"staging\\Freedom", "The Price of Freedom - DJZ4K", 175,},	-- 64
-	{"staging\\Ambient", "Slipstream Ambient - DJZ4K", 950,},	-- 64
-
+	{"slipstream\\battle_01", "Slipstream Battle No.1 - SRI-Sajuuk", 552,},	-- 276
+	{"slipstream\\battle_02", "Slipstream Battle No.2 - SRI-Sajuuk", 552,},	-- 276
+	{"slipstream\\Suite", "Slipstream Suite 1 - SRI-Sajuuk", 123,},
+	{"slipstream\\Freedom", "Slipstream Suite 2 (The Price of Freedom) - DJZ4K", 175,},	-- 64
+	{"slipstream\\Ambient", "Slipstream Ambient - DJZ4K", 950,},	-- 64
 }

@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName="Crossbow"
-NewShipType.sobDescription="UNCG Light Strike Cruiser"
-NewShipType.maxhealth=600000
+NewShipType.displayedName="$1530"
+NewShipType.sobDescription="$1531"
+NewShipType.maxhealth=80000
 NewShipType.regentime=850
 NewShipType.minRegenTime=150
 NewShipType.sideArmourDamage=1
@@ -136,7 +136,7 @@ NewShipType.launchNrOfShipsInDockFormation=1
 NewShipType.launchFormation="delta"
 addAbility(NewShipType,"ParadeCommand",1)
 addAbility(NewShipType,"WaypointMove")
-addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3)
+addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,3)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 1, 0.35, 1, "munition, BigCapitalShip,  SmallCapitalShip, Munition, Frigate, Fighter, Corvette, Utility", "circlestrafe",
 {
     Fighter="movetotargetandshoot",

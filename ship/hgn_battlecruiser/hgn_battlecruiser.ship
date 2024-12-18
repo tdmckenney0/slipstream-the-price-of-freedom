@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "$1538"
 NewShipType.sobDescription = "$1539"
-NewShipType.maxhealth = 800000
+NewShipType.maxhealth = 240000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 2000
 NewShipType.sideArmourDamage = 1.2
@@ -21,20 +21,20 @@ NewShipType.defensiveFormation = "x"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 1000
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 95
-NewShipType.mainEngineMaxSpeed = 110
+NewShipType.thrusterMaxSpeed = 100 -- 69
+NewShipType.mainEngineMaxSpeed = 110 -- 69
 NewShipType.rotationMaxSpeed = 6
-NewShipType.thrusterAccelTime = 12
-NewShipType.thrusterBrakeTime = 11
-NewShipType.mainEngineAccelTime = 15
-NewShipType.mainEngineBrakeTime = 14
-NewShipType.rotationAccelTime = 5
-NewShipType.rotationBrakeTime = 3
+NewShipType.thrusterAccelTime = 12 -- 6
+NewShipType.thrusterBrakeTime = 11 -- 2
+NewShipType.mainEngineAccelTime = 15 -- 6
+NewShipType.mainEngineBrakeTime = 14 -- 2
+NewShipType.rotationAccelTime = 5 -- 0.7
+NewShipType.rotationBrakeTime = 3 -- 0.4
 NewShipType.thrusterUsage = 1
-NewShipType.accelerationAngle = 40
-NewShipType.mirrorAngle = 30
+NewShipType.accelerationAngle = 40 -- 30
+NewShipType.mirrorAngle = 30 -- 0
 NewShipType.secondaryTurnAngle = 0
-NewShipType.maxBankingAmount = 75
+NewShipType.maxBankingAmount = 75 -- 10
 NewShipType.descendPitch = 10
 NewShipType.goalReachEpsilon = 25
 NewShipType.slideMoveRange = 350
@@ -88,9 +88,9 @@ NewShipType.buildTime = 280
 NewShipType.buildPriorityOrder = 40
 NewShipType.retaliationRange = 6500
 NewShipType.retaliationDistanceFromGoal = 160
-NewShipType.visualRange = 10000
-NewShipType.prmSensorRange = 10000
-NewShipType.secSensorRange = 15000
+NewShipType.visualRange = 1000
+NewShipType.prmSensorRange = 7000
+NewShipType.secSensorRange = 8000
 NewShipType.detectionStrength = 1
 NewShipType.TOIcon = "Arrow"
 NewShipType.TOScale = 1
@@ -148,12 +148,12 @@ addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 
     Corvette = "75", })
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType,"HyperSpaceCommand",1,0,250,250,0,3.141592653)
+addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,3)
 addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Munition, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "Flyround_destroyer",
 {
     Mothership = "Flyround_destroyer",})
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
-addAbility(NewShipType, "CanBuildShips", 1, "Fighter_Hgn, SubSystem_Hgn", "Fighter, SubSystemModule")
+addAbility(NewShipType, "CanBuildShips", 1, "Fighter_Hgn, Corvette_Hgn, SubSystem_Hgn", "Fighter, Corvette, SubSystemModule")
 addAbility(NewShipType, "CanBeCaptured", 160, 0.5)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "CloakAbility", 0, 2, 2000, 4000, 3, 100, 1, 1000)
@@ -170,11 +170,11 @@ StartShipWeaponConfig(NewShipType, "Hgn_BattleCruiserKineticBurstCannon", "Weapo
 StartShipWeaponConfig(NewShipType, "Hgn_BattleCruiserKineticBurstCannonLeftSide", "Weapon_TurretTop3", "Weapon_TurretTop3")
 StartShipWeaponConfig(NewShipType, "Hgn_BattleCruiserKineticBurstCannonRightSide", "Weapon_TurretTop4", "Weapon_TurretTop4")
 addShield(NewShipType, "EMP", 10000, 20)
-StartShipHardPointConfig(NewShipType,"Weapon Top","Hardpoint_IonBeam1","Weapon","Generic","Destroyable","hgn_battlecruisergatlinggunturrettop","hgn_battlecruisergatlinggunturrettop","hgn_battlecruiserminelaunchertop","Hgn_BattleCruiserIonBeamTurretTop","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Weapon Bottom","Hardpoint_IonBeam2","Weapon","Generic","Destroyable","hgn_battlecruisergatlinggunturrettop","hgn_battlecruisergatlinggunturretbottom","hgn_battlecruiserminelauncherbottom","Hgn_BattleCruiserIonBeamTurretBottom","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Weapon Top","Hardpoint_IonBeam1","Weapon","Generic","Destroyable","Hgn_BattleCruiserIonBeamTurretTop","hgn_battlecruisergatlinggunturrettop","hgn_battlecruisergatlinggunturrettop","hgn_battlecruiserminelaunchertop","Hgn_BattleCruiserIonBeamTurretTop","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Weapon Bottom","Hardpoint_IonBeam2","Weapon","Generic","Destroyable","hgn_battlecruiserminelauncherbottom","hgn_battlecruisergatlinggunturrettop","hgn_battlecruisergatlinggunturretbottom","Hgn_BattleCruiserIonBeamTurretBottom","","","","","","","","");
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Hgn_BattleCruiserEngine", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System", "Generic", "Destroyable", "", "Hgn_C_Module_Hyperspace", "Hgn_C_Module_CloakGenerator", "Hgn_C_Module_HyperspaceInhibitor", "Hgn_C_Module_FireControl", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Generic 2", "HardpointGeneric2", "System", "Generic", "Destroyable", "", "Hgn_C_Module_Hyperspace", "Hgn_C_Module_CloakGenerator", "Hgn_C_Module_HyperspaceInhibitor", "Hgn_C_Module_FireControl", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System", "Generic", "Destroyable", "", "hgn_bc_production_fighter", "hgn_bc_production_corvette", "Hgn_C_Module_Hyperspace", "Hgn_C_Module_CloakGenerator", "Hgn_C_Module_HyperspaceInhibitor", "Hgn_C_Module_FireControl", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Generic 2", "HardpointGeneric2", "System", "Generic", "Destroyable", "", "hgn_bc_production_fighter", "hgn_bc_production_corvette", "Hgn_C_Module_Hyperspace", "Hgn_C_Module_CloakGenerator", "Hgn_C_Module_HyperspaceInhibitor", "Hgn_C_Module_FireControl", "", "", "", "")
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg04", 1, 0.05, 50, 40, -150, 50, 65, 25, 5, 25, 0, 0, 0, 95, 0, 0, 0, 50)
