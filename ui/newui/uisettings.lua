@@ -8,8 +8,6 @@ StyleSheets =
 
 FrontEndScreens =
 {
-	;
-
 	{
 		name = "Background",
 		filename = "DATA:\\UI\\NewUI\\Background.lua",
@@ -181,16 +179,16 @@ FrontEndScreens =
 		type = "SubtitleScreen",
 	},
 	{
-        name = "PlayMoviesScreen",
-        filename = "DATA:\\UI\\NewUI\\PlayMoviesScreen.lua",
-        activated = 0,
-        type = "PlayMoviesScreen", },
+		name = "PlayMoviesScreen",
+		filename = "DATA:\\UI\\NewUI\\PlayMoviesScreen.lua",
+		activated = 0,
+		type = "PlayMoviesScreen",
+	},
 }
 
 -- in-between-game screens
 TransientScreens =
 {
-	;
 	{
 		name = "LoadingScreen",
 		filename = "DATA:UI/NewUI/LoadingScreen.lua",
@@ -201,7 +199,6 @@ TransientScreens =
 -- in-game screens
 GameScreens =
 {
-	;
 	{
 		name = "Pointer",
 		filename = "DATA:\\UI\\NewUI\\Pointer.lua",
@@ -384,7 +381,7 @@ GameScreens =
 	--	name = "PlaybackMenu",
 	--	filename = "DATA:\\UI\\NewUI\\Playback\\PlaybackMenu.lua",
 	--	activated = 0,
---		type = "PlaybackMenu",
+	--		type = "PlaybackMenu",
 	--},
 	--{
 	--	name = "Filter",
