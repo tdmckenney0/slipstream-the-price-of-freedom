@@ -138,6 +138,6 @@ DirectConnection =
     { 
         text = "$2610", 
         textStyle = "FEButtonTextStyle", }, 
-    onMouseClicked = [[UI_ShowScreen("ConnectionType", eTransition)]], }, 
+    onMouseClicked = [[UI_ShowScreen("NewMainMenu", eTransition)]], }, 
 }, 
 }
