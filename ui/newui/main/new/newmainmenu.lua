@@ -92,26 +92,14 @@ NewMainMenu =
 {
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
-    text = "$3535",
-    name = "btnDirectConnection",
+    text = "$2614",
+    name = "btnMultiplayer",
     width = 272,
     onMouseClicked = [[
-        UI_SetNextScreen("DirectConnection", "NewMainMenu");
-        UI_SetPreviousScreen("DirectConnection", "NewMainMenu");
-        UI_ShowScreen("DirectConnection", eTransition);
-    ]],
-},
-{
-    type = "Frame",
-    size = { 296, 10, },
-},
-{
-    type = "TextButton",
-    buttonStyle = "FEButtonStyle1",
-    text = "$3533",
-    name = "btnIPConnect",
-    width = 272,
-    onMouseClicked = [[ UI_ShowScreen("IPConnect", ePopup); ]],
+					UI_SetNextScreen("ConnectionType", "NewMainMenu");
+					UI_SetPreviousScreen("ConnectionType", "NewMainMenu");
+					UI_ShowScreen("ConnectionType", eTransition);
+				]],
 },
 {
     type = "Frame",
