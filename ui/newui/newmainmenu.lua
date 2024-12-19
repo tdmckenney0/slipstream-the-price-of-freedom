@@ -1,4 +1,3 @@
-dofilepath("data:engine/version.lua")
 NewMainMenu =
 {
     size = { 0, 0, 800, 600, },
@@ -8,12 +7,6 @@ NewMainMenu =
 	backgroundColor = { 0, 0, 0, 0, }, 
     },
     pixelUVCoords = 1,
-    onShow = [[
-    
-		   ]],
-     onUpdate = [[
-			
-		     ]],
 ;
 {
    type = "Frame",
@@ -77,10 +70,9 @@ NewMainMenu =
 {
   type = "TextButton",
   buttonStyle = "FEButtonStyle1",
-  text = "Introduction",
-  name = "btnIntro",
+  text = "$2602",
+  name = "btnTutorial",
   width = 272,
-  onMouseClicked = "UI_ShowScreen('Credits', eTransition);",
 },
 {
     type = "Frame",
@@ -89,25 +81,9 @@ NewMainMenu =
 {
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
-    text = "Galactic Map",
-    name = "btnUniverse",
-    enabled = 1,
-    width = 272,
-    onMouseClicked = "UI_ShowScreen('UniverseScreen', eTransition);",
-},
-{
-    type = "Frame",
-    size = { 296, 10, },
-},
-{
-    type = "TextButton",
-    buttonStyle = "FEButtonStyle1",
-    text = "Skirmish Battles",
+    text = "$2604",
     name = "btnPlayerVsCPU",
     width = 272,
-    onMouseClicked = [[
-					MenuBoxTarget = 820
-				]],
 },
 {
     type = "Frame",
@@ -116,10 +92,14 @@ NewMainMenu =
 {
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
-    text = "Local & Online Multiplayer",
-    name = "btnMultiplayer",
+    text = "$3535",
+    name = "btnDirectConnection",
     width = 272,
-    onMouseClicked = "UI_ShowScreen('ConnectionType', eTransition);",
+    onMouseClicked = [[
+        UI_SetNextScreen("DirectConnection", "NewMainMenu");
+        UI_SetPreviousScreen("DirectConnection", "NewMainMenu");
+        UI_ShowScreen("DirectConnection", eTransition);
+    ]],
 },
 {
     type = "Frame",
@@ -128,7 +108,19 @@ NewMainMenu =
 {
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
-    text = "Player Profile Management",
+    text = "$3533",
+    name = "btnIPConnect",
+    width = 272,
+    onMouseClicked = [[ UI_ShowScreen("IPConnect", ePopup); ]],
+},
+{
+    type = "Frame",
+    size = { 296, 10, },
+},
+{
+    type = "TextButton",
+    buttonStyle = "FEButtonStyle1",
+    text = "$2616",
     name = "btnProfile",
     width = 272,
     onMouseClicked = [[
@@ -144,7 +136,7 @@ NewMainMenu =
 {
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
-    text = "Game Settings",
+    text = "$2607",
     name = "btnOptions",
     width = 272,
     onMouseClicked = [[UI_ShowScreen("FEGameOptions", eTransition)]],
@@ -156,7 +148,7 @@ NewMainMenu =
 {
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
-    text = "Quit to Desktop",
+    text = "$2609",
     name = "btnExit",
     width = 272,
     onMouseClicked = "UI_ExitApp();", },
@@ -181,33 +173,9 @@ NewMainMenu =
 },
 },
 {
-   type = "Frame",
-   name = "XiLogo",
-   visible = 1,
-   position =  { 384, 565},
-   size = {32, 32},
-   BackgroundGraphic = 
-   {
-	type = "Graphic",
-	size = {32, 32},
-	color = { 255, 255, 255, 255, },
-	textureUV = {0,0,64,64},
-	texture = "Data:UI\\xi_logo.tga",
-   },
-    onMouseClicked = [[UI_ShowScreen("CreditsScreen", eTransition)]],
-},
-{
     type = "TextButton",
     buttonStyle = "FEButtonStyle1",
     name = "btnCampaign",
-    position = { 2000, 0, },
-    enabled = 0,
-    width = 0,
-},
-{
-    type = "TextButton",
-    buttonStyle = "FEButtonStyle1",
-    name = "btnTutorial",
     position = { 2000, 0, },
     enabled = 0,
     width = 0,
