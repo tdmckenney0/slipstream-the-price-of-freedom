@@ -29,74 +29,76 @@
 --
 
 --basic colours
-FriendlyColour      = {1,1,1,1}
-AlliedColour        = {0,1,1,1.0}
-AlliedColourHurt    = {215/255,205/255,0,1}
-AlliedColourDying   = {205/255,205/255,0,1}
-EnemyColour         = {1,0.025,0,1.0}
-EnemyColourHurt     = {205/255,0,0,1}
-EnemyColourDying    = {165/255,0,0,1}
-FriendlyColourFar   = {0,1,0,0.5}
-AlliedColourFar     = {1,1,0,0.5}
-EnemyColourFar      = {1,0,0,0.5}
-ResourceTOColour    = {1,1,0,1.0}
-Procedural          = {0,0,0,0}
-ResourceColour      = {1.0, 1.0, 0.0, 1.0}
-CaptureColour       = {0,1,1,1.0}
-HurtColour			= {1,1,0,1.0}
+FriendlyColour    = { 1, 1, 1, 1 }
+AlliedColour      = { 0, 1, 1, 1.0 }
+AlliedColourHurt  = { 215 / 255, 205 / 255, 0, 1 }
+AlliedColourDying = { 205 / 255, 205 / 255, 0, 1 }
+EnemyColour       = { 1, 0.025, 0, 1.0 }
+EnemyColourHurt   = { 205 / 255, 0, 0, 1 }
+EnemyColourDying  = { 165 / 255, 0, 0, 1 }
+FriendlyColourFar = { 0, 1, 0, 0.5 }
+AlliedColourFar   = { 1, 1, 0, 0.5 }
+EnemyColourFar    = { 1, 0, 0, 0.5 }
+ResourceTOColour  = { 1, 1, 0, 1.0 }
+Procedural        = { 0, 0, 0, 0 }
+ResourceColour    = { 1.0, 1.0, 0.0, 1.0 }
+CaptureColour     = { 0, 1, 1, 1.0 }
+HurtColour        = { 1, 1, 0, 1.0 }
 
 --convert pixels to normalized screen coordinates, assuming a 1024x768 screen
 function AREA(width, height)
     return (width / 1024) * (height / 768)
 end
+
 function WIDTH(n)
-    return(n / 1024)
+    return (n / 1024)
 end
+
 function HEIGHT(n)
-    return(n / 768)
+    return (n / 768)
 end
 
 --ATI areas for various LODs, assuming a 1024x768 screen
-HUGE = 1000
-LOD0 = AREA(120,200)
-LOD1 = AREA(64,128)
-LOD2 = AREA(32,64)
-LOD3 = AREA(16,32)
-TINY = AREA(1,1)
+HUGE                          = 1000
+LOD0                          = AREA(120, 200)
+LOD1                          = AREA(64, 128)
+LOD2                          = AREA(32, 64)
+LOD3                          = AREA(16, 32)
+TINY                          = AREA(1, 1)
 
 --ATI template parameter indices
-API_GroupNumber             = 0
-API_HealthColour            = 1
-API_CurrentHealth           = 2
-API_CurrentResources        = 3
-API_CommandIcon             = 4
-API_PlayerName              = 5
-API_PlayerColour            = 6
-API_ShipName                = 7
-API_ResourceValue           = 8
-API_TacticsSetting			= 9
-API_Capture                 = 10
-API_HealthContentsMesh      = 11
-API_HealthOutlineMesh       = 12
-API_HealthGlowMesh          = 13
-API_Radius                  = 14
-API_CommandColour           = 15
-API_TOColour                = 16
-API_TOMesh                  = 17
-API_HealthBackgroundColour  = 18
-API_TotalResourceValue      = 19
-API_CommandColourDim        = 20
-API_Gate                = 21
-API_AuxiliaryPower          = 22
-API_AuxiliaryColour         = 23
-API_UnknownResourceValue    = 24
-API_UnknownTotalResourceValue=25
-APN_NumberParams            = 26
+API_GroupNumber               = 0
+API_HealthColour              = 1
+API_CurrentHealth             = 2
+API_CurrentResources          = 3
+API_CommandIcon               = 4
+API_PlayerName                = 5
+API_PlayerColour              = 6
+API_ShipName                  = 7
+API_ResourceValue             = 8
+API_TacticsSetting            = 9
+API_Capture                   = 10
+API_HealthContentsMesh        = 11
+API_HealthOutlineMesh         = 12
+API_HealthGlowMesh            = 13
+API_Radius                    = 14
+API_CommandColour             = 15
+API_TOColour                  = 16
+API_TOMesh                    = 17
+API_HealthBackgroundColour    = 18
+API_TotalResourceValue        = 19
+API_CommandColourDim          = 20
+API_Gate                      = 21
+API_AuxiliaryPower            = 22
+API_AuxiliaryColour           = 23
+API_UnknownResourceValue      = 24
+API_UnknownTotalResourceValue = 25
+APN_NumberParams              = 26
 
 -------------------------------------------------------------------------------
 --ATIResources:
 -------------------------------------------------------------------------------
-resource =
+resource                      =
 {
     tacticalIconColour = ResourceTOColour,
     tacticalIconColourFar = ResourceTOColourFar,
@@ -106,15 +108,15 @@ resource =
     totalRUFormatString = "$6001",
     unknownRUFormatString = "$6003",
     unknownTotalRUFormatString = "$6004",
-    commandColourScalar = {0.5,0.5,0.5,0.5},
+    commandColourScalar = { 0.5, 0.5, 0.5, 0.5 },
     resourceValueString =
     {
         stringParam = API_ResourceValue,
         text =
         {
-            colour = {1,1,0,1}, --{1.0,0.478,0.361,1},--{0.433,0.371,0.301,1}, --{1,1,1,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 1, 0, 1 }, --{1.0,0.478,0.361,1},--{0.433,0.371,0.301,1}, --{1,1,1,1},
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -136,9 +138,9 @@ resource =
             maxHeight = 1,
             minATIArea = TINY,
             maxATIArea = HUGE,
-            placementFlags = {"attachToMouse"},
-            visibility = {"AVF_Resources", "AVF_SquadLeader", "AVF_Visible"},
-            invisibility = {"AVF_Selecting"},
+            placementFlags = { "attachToMouse" },
+            visibility = { "AVF_Resources", "AVF_SquadLeader", "AVF_Visible" },
+            invisibility = { "AVF_Selecting" },
         }
     },
     resourceTotalValueString =
@@ -146,9 +148,9 @@ resource =
         stringParam = API_TotalResourceValue,
         text =
         {
-            colour = {1,1,0,1}, --{1,1,1,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 1, 0, 1 }, --{1,1,1,1},
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -170,9 +172,9 @@ resource =
             maxHeight = 1,
             minATIArea = TINY,
             maxATIArea = HUGE,
-            placementFlags = {"attachToMouse"},
-            visibility = {"AVF_SquadLeader", "AVF_Visible"},
-            invisibility = {"AVF_Selecting"},
+            placementFlags = { "attachToMouse" },
+            visibility = { "AVF_SquadLeader", "AVF_Visible" },
+            invisibility = { "AVF_Selecting" },
         }
     },
     unknownResourceValueString =
@@ -180,9 +182,9 @@ resource =
         stringParam = API_UnknownResourceValue,
         text =
         {
-            colour = {1,1,0,1}, --{1.0,0.478,0.361,1},--{0.433,0.371,0.301,1}, --{1,1,1,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 1, 0, 1 }, --{1.0,0.478,0.361,1},--{0.433,0.371,0.301,1}, --{1,1,1,1},
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -204,9 +206,9 @@ resource =
             maxHeight = 1,
             minATIArea = TINY,
             maxATIArea = HUGE,
-            placementFlags = {"attachToMouse"},
-            visibility = {"AVF_Resources", "AVF_SquadLeader"},
-            invisibility = {"AVF_Visible", "AVF_Selecting"},
+            placementFlags = { "attachToMouse" },
+            visibility = { "AVF_Resources", "AVF_SquadLeader" },
+            invisibility = { "AVF_Visible", "AVF_Selecting" },
         }
     },
     unknownResourceTotalValueString =
@@ -214,9 +216,9 @@ resource =
         stringParam = API_UnknownTotalResourceValue,
         text =
         {
-            colour = {1,1,0,1}, --{1,1,1,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 1, 0, 1 }, --{1,1,1,1},
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -238,18 +240,18 @@ resource =
             maxHeight = 1,
             minATIArea = TINY,
             maxATIArea = HUGE,
-            placementFlags = {"attachToMouse"},
-            visibility = {"AVF_SquadLeader"},
-            invisibility = {"AVF_Visible", "AVF_Selecting"},
+            placementFlags = { "attachToMouse" },
+            visibility = { "AVF_SquadLeader" },
+            invisibility = { "AVF_Visible", "AVF_Selecting" },
         }
     },
     selectingOutline =
     {
         mesh =
         {
-            colour = {0.0, 1.0, 1.0, 1.0},
+            colour = { 0.0, 1.0, 1.0, 1.0 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD0, "UI\\ATI\\Meshes\\SelectingOutline.hod",
@@ -267,11 +269,11 @@ resource =
             minHeight = HEIGHT(2),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selecting"},
+            visibility = { "AVF_Selecting" },
         },
     },
     mouseOver =
-    {                                                                   --intersection of blob and world plane
+    { --intersection of blob and world plane
         colourParam = API_CommandColour,
         scaleParam = API_Radius,
         mesh =
@@ -287,11 +289,11 @@ resource =
         },
         placement3D =
         {
-            visibility = {"AVF_MouseOver", "AVF_SquadLeader", "AVF_Visible" },
+            visibility = { "AVF_MouseOver", "AVF_SquadLeader", "AVF_Visible" },
         }
     },
     mouseOverExtra =
-    {                                                                   --intersection of blob and world plane
+    { --intersection of blob and world plane
         colourParam = API_CommandColourDim,
         scaleParam = API_Radius,
         mesh =
@@ -307,8 +309,8 @@ resource =
         },
         placement3D =
         {
-            visibility = {"AVF_MouseOver"},
-            invisibility = {"AVF_SquadLeader"},
+            visibility = { "AVF_MouseOver" },
+            invisibility = { "AVF_SquadLeader" },
         }
     },
     TO =
@@ -321,18 +323,18 @@ resource =
             factorY = 0,
             plusX = 0,
             plusY = 0,
-            factorWidth = 1, --1
-            factorHeight = 1, --1
-            minWidth = WIDTH(8), -- WIDTH(8),
+            factorWidth = 1,       --1
+            factorHeight = 1,      --1
+            minWidth = WIDTH(8),   -- WIDTH(8),
             minHeight = HEIGHT(8), -- HEIGHT(8),
-            maxWidth = 1, --HUGE
-            maxHeight = 1, --HUGE
+            maxWidth = 1,          --HUGE
+            maxHeight = 1,         --HUGE
             minATIArea = 0,
             maxATIArea = HUGE,
-            visibility = {"AVF_SMBlinkOn", "AVF_TacticalOverlay"},
-            invisibility = {"AVF_TO_DistantTOs"},
-            visibility1 = {"AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs"},
-            placementFlags = {"orthogonal"}, -- orthogonal
+            visibility = { "AVF_SMBlinkOn", "AVF_TacticalOverlay" },
+            invisibility = { "AVF_TO_DistantTOs" },
+            visibility1 = { "AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs" },
+            placementFlags = { "orthogonal" }, -- orthogonal
         },
     },
 }
@@ -340,7 +342,7 @@ resource =
 -------------------------------------------------------------------------------
 --ATIMissile*:
 -------------------------------------------------------------------------------
-missilefriendly =
+missilefriendly               =
 {
     tacticalIconColour = FriendlyColour,
     tacticalIconColourFar = FriendlyColourFar,
@@ -356,22 +358,22 @@ missilefriendly =
             factorY = 0,
             plusX = 0,
             plusY = 0,
-            factorWidth = 1, --1
-            factorHeight = 1, --1
-            minWidth = WIDTH(8), -- WIDTH(8),
+            factorWidth = 1,       --1
+            factorHeight = 1,      --1
+            minWidth = WIDTH(8),   -- WIDTH(8),
             minHeight = HEIGHT(8), -- HEIGHT(8),
-            maxWidth = 1, --HUGE
-            maxHeight = 1, --HUGE
+            maxWidth = 1,          --HUGE
+            maxHeight = 1,         --HUGE
             minATIArea = 0,
             maxATIArea = HUGE,
-            visibility = {"AVF_TacticalOverlay", "AVF_Visible"},
-            invisibility = {"AVF_TO_DistantTOs"},
-            visibility1 = {"AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs", "AVF_SquadLeader"},
-            placementFlags = {"orthogonal"}, -- orthogonal
+            visibility = { "AVF_TacticalOverlay", "AVF_Visible" },
+            invisibility = { "AVF_TO_DistantTOs" },
+            visibility1 = { "AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs", "AVF_SquadLeader" },
+            placementFlags = { "orthogonal" }, -- orthogonal
         },
     },
 }
-missileallied =
+missileallied                 =
 {
     tacticalIconColour = AlliedColour,
     tacticalIconColourFar = AlliedColourFar,
@@ -387,22 +389,22 @@ missileallied =
             factorY = 0,
             plusX = 0,
             plusY = 0,
-            factorWidth = 1, --1
-            factorHeight = 1, --1
-            minWidth = WIDTH(8), -- WIDTH(8),
+            factorWidth = 1,       --1
+            factorHeight = 1,      --1
+            minWidth = WIDTH(8),   -- WIDTH(8),
             minHeight = HEIGHT(8), -- HEIGHT(8),
-            maxWidth = 1, --HUGE
-            maxHeight = 1, --HUGE
+            maxWidth = 1,          --HUGE
+            maxHeight = 1,         --HUGE
             minATIArea = 0,
             maxATIArea = HUGE,
-            visibility = {"AVF_TacticalOverlay", "AVF_Visible"},
-            invisibility = {"AVF_TO_DistantTOs"},
-            visibility1 = {"AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs", "AVF_SquadLeader"},
-            placementFlags = {"orthogonal"}, -- orthogonal
+            visibility = { "AVF_TacticalOverlay", "AVF_Visible" },
+            invisibility = { "AVF_TO_DistantTOs" },
+            visibility1 = { "AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs", "AVF_SquadLeader" },
+            placementFlags = { "orthogonal" }, -- orthogonal
         },
     },
 }
-missileenemy =
+missileenemy                  =
 {
     tacticalIconColour = EnemyColour,
     tacticalIconColourFar = EnemyColourFar,
@@ -418,18 +420,18 @@ missileenemy =
             factorY = 0,
             plusX = 0,
             plusY = 0,
-            factorWidth = 1, --1
-            factorHeight = 1, --1
-            minWidth = WIDTH(8), -- WIDTH(8),
+            factorWidth = 1,       --1
+            factorHeight = 1,      --1
+            minWidth = WIDTH(8),   -- WIDTH(8),
             minHeight = HEIGHT(8), -- HEIGHT(8),
-            maxWidth = 1, --HUGE
-            maxHeight = 1, --HUGE
+            maxWidth = 1,          --HUGE
+            maxHeight = 1,         --HUGE
             minATIArea = 0,
             maxATIArea = HUGE,
-            visibility = {"AVF_TacticalOverlay", "AVF_Visible"},
-            invisibility = {"AVF_TO_DistantTOs"},
-            visibility1 = {"AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs", "AVF_SquadLeader"},
-            placementFlags = {"orthogonal"}, -- orthogonal
+            visibility = { "AVF_TacticalOverlay", "AVF_Visible" },
+            invisibility = { "AVF_TO_DistantTOs" },
+            visibility1 = { "AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs", "AVF_SquadLeader" },
+            placementFlags = { "orthogonal" }, -- orthogonal
         },
     },
 }
@@ -437,7 +439,7 @@ missileenemy =
 -------------------------------------------------------------------------------
 --ATIFriendly:
 -----------------------------------------------------------------------------
-friendly =
+friendly                      =
 {
     tacticalIconColour = FriendlyColour,
     tacticalIconColourFar = FriendlyColourFar,
@@ -446,20 +448,20 @@ friendly =
     healthColourOK = FriendlyColour,
     healthColourHurt = HurtColour,
     healthColourDying = EnemyColour,
-    healthColourBGOK = {0.5, 0.5, 0.5, 1},
-    healthColourBGHurt = {0.5, 0.5, 0.5, 1},
-    healthColourBGDying = {0.5, 0.5, 0.5, 1},
+    healthColourBGOK = { 0.5, 0.5, 0.5, 1 },
+    healthColourBGHurt = { 0.5, 0.5, 0.5, 1 },
+    healthColourBGDying = { 0.5, 0.5, 0.5, 1 },
     gateCostFormatString = "$6002",
-    cloakColour = {1,1,1,1.0},
-    defenseFieldColour = {0.443,0,0.984,1},
-    EMPColour = {58/255,110/255,165/255,1},
+    cloakColour = { 1, 1, 1, 1.0 },
+    defenseFieldColour = { 0.443, 0, 0.984, 1 },
+    EMPColour = { 58 / 255, 110 / 255, 165 / 255, 1 },
     EMPLevelIgnore = 99999999999999999,
     i20 = --healthBarMouseoverStyle0 =
     {
         mesh =
-        {   --1 ship
-            colour = {1,1,1,1},
-            renderFlags = {"scaleX", "scaleY"},
+        { --1 ship
+            colour = { 1, 1, 1, 1 },
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD3, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -468,23 +470,23 @@ friendly =
         placement2D =
         {
             factorX = 0,
-            factorY = 0.5, --0.8
-            plusX = 0, --0.0065
-            plusY = HEIGHT(6), --5.8 -- 6
-            factorWidth = 0.2, --1
+            factorY = 0.5,         --0.8
+            plusX = 0,             --0.0065
+            plusY = HEIGHT(6),     --5.8 -- 6
+            factorWidth = 0.2,     --1
             factorHeight = 0.0375, --0.15
             plusWidth = PixelWidth() * 2,
             plusHeight = PixelHeight() * 2,
-            minWidth = WIDTH(8), --10
+            minWidth = WIDTH(8),   --10
             minHeight = HEIGHT(2), --15 * 0.15,
             maxWidth = WIDTH(200), --80 -- was 150
             maxHeight = HEIGHT(4), --15 55 * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0", "AVF_MouseOver"},
-            invisibility = {"AVF_TacticalOverlay"},
-            placementFlags = {"clampCentre"} -- originally orthogonal
-       }
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0", "AVF_MouseOver" },
+            invisibility = { "AVF_TacticalOverlay" },
+            placementFlags = { "clampCentre" } -- originally orthogonal
+        }
     },
     i21 = --healthBarOutlineStyle0 =
     {
@@ -494,20 +496,20 @@ friendly =
         placement2D =
         {
             factorX = 0,
-            factorY = 0.5, --0.8
-            plusX = 0, --0.0065 0.0035
-            plusY = HEIGHT(6), --6
-            factorWidth = 0.2, -- 0.8 1
+            factorY = 0.5,         --0.8
+            plusX = 0,             --0.0065 0.0035
+            plusY = HEIGHT(6),     --6
+            factorWidth = 0.2,     -- 0.8 1
             factorHeight = 0.0375, --0.15
-            minWidth = WIDTH(8), --10
+            minWidth = WIDTH(8),   --10
             minHeight = HEIGHT(2), --15 * 0.15,
-            maxWidth = WIDTH(200),--80 -- was 150
+            maxWidth = WIDTH(200), --80 -- was 150
             maxHeight = HEIGHT(4), --15 55 * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0"},
-            placementFlags = {"clampCentre"} -- originally orthogonal
-       }
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            placementFlags = { "clampCentre" } -- originally orthogonal
+        }
     },
     i22 = --healthBarStyle0 =
     {
@@ -517,21 +519,21 @@ friendly =
         placement2D =
         {
             factorX = 0,
-            factorY = 0.5, --0.8
-            plusX = 0, --0.0065 0.0035
-            plusY = HEIGHT(6), --6
-            factorWidth = 0.2, -- 0.8 1
+            factorY = 0.5,         --0.8
+            plusX = 0,             --0.0065 0.0035
+            plusY = HEIGHT(6),     --6
+            factorWidth = 0.2,     -- 0.8 1
             factorHeight = 0.0375, --0.15
-            minWidth = WIDTH(8), --10
+            minWidth = WIDTH(8),   --10
             minHeight = HEIGHT(2), --15 * 0.15,
-            maxWidth = WIDTH(200),--80 -- was 150
+            maxWidth = WIDTH(200), --80 -- was 150
             maxHeight = HEIGHT(4), --15 55 * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
             --visibility0 = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0"},
-            visibility0 = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0"},
+            visibility0 = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0" },
             --invisibility1 = {"AVF_CohesiveSquad"},
-            placementFlags = {"clampCentre"} -- originally orthogonal
+            placementFlags = { "clampCentre" } -- originally orthogonal
         }
     },
     groupNumber0 =
@@ -539,8 +541,8 @@ friendly =
         stringParam = API_GroupNumber,
         text =
         {
-            colour = {1,1,1,1},
-            renderFlags = {"justifyLeft"},
+            colour = { 1, 1, 1, 1 },
+            renderFlags = { "justifyLeft" },
             LODs =
             {
                 LOD0, "ATIControlGroupFont",
@@ -556,26 +558,26 @@ friendly =
             plusY = HEIGHT(4),
             factorWidth = 0,
             factorHeight = 0,
-            minWidth = WIDTH(8), -- 8
+            minWidth = WIDTH(8),   -- 8
             minHeight = HEIGHT(8), -- 8
             maxWidth = 1,
             maxHeight = 1,
             minATIArea = 0,
             maxATIArea = HUGE,
-            placementFlags = {"clampCentre"}, --clampCentre
-            visibility = {"AVF_GroupNumber", "AVF_SquadLeader", "AVF_TO_SelectionIcons", "AVF_HealthBarStyle0"},
-            visibility1 = {"AVF_GroupNumber", "AVF_SquadLeader", "AVF_TO_SelectionIcons", "AVF_HealthBarStyle1"},
-            invisibility1 = {"AVF_MainGameView"},                   --also use this one for Style1 in the SM
-            visibility2 = {"AVF_GroupNumber", "AVF_SquadLeader", "AVF_TO_SelectionIcons", "AVF_HealthBarStyle2"},
-            invisibility2 = {"AVF_MainGameView"},                   --also use this one for Style2 in the SM
+            placementFlags = { "clampCentre" }, --clampCentre
+            visibility = { "AVF_GroupNumber", "AVF_SquadLeader", "AVF_TO_SelectionIcons", "AVF_HealthBarStyle0" },
+            visibility1 = { "AVF_GroupNumber", "AVF_SquadLeader", "AVF_TO_SelectionIcons", "AVF_HealthBarStyle1" },
+            invisibility1 = { "AVF_MainGameView" }, --also use this one for Style1 in the SM
+            visibility2 = { "AVF_GroupNumber", "AVF_SquadLeader", "AVF_TO_SelectionIcons", "AVF_HealthBarStyle2" },
+            invisibility2 = { "AVF_MainGameView" }, --also use this one for Style2 in the SM
         },
     },
     i26 = --healthBarMouseoverStyle1 =
     {
         mesh =
-        {   --1 ship
-            colour = {1,1,1,1},
-            renderFlags = {"scaleX", "scaleY"},
+        { --1 ship
+            colour = { 1, 1, 1, 1 },
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD3, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -583,11 +585,11 @@ friendly =
         },
         placement2D =
         {
-            factorX = 0, --0
-            factorY = 0.5, --0.8
+            factorX = 0,        --0
+            factorY = 0.5,      --0.8
             plusX = 0,
-            plusY = HEIGHT(6), --HEIGHT(7.8)--7.8 -- 8
-            factorWidth = 0.8, -- 0
+            plusY = HEIGHT(6),  --HEIGHT(7.8)--7.8 -- 8
+            factorWidth = 0.8,  -- 0
             factorHeight = 0.1, --0.10 -- 0.15
             plusWidth = PixelWidth() * 2,
             plusHeight = PixelHeight() * 2,
@@ -597,9 +599,9 @@ friendly =
             maxHeight = HEIGHT(4), --8 --15 -- 35 -- 55 -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1", "AVF_MouseOver"},
-            invisibility = {"AVF_TacticalOverlay"},
-            placementFlags = {"clampCentre"} --originally orthogonal
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1", "AVF_MouseOver" },
+            invisibility = { "AVF_TacticalOverlay" },
+            placementFlags = { "clampCentre" } --originally orthogonal
         }
     },
     i27 = --healthBarOutlineStyle1 =
@@ -608,20 +610,20 @@ friendly =
         graphicParam = API_HealthOutlineMesh,
         placement2D =
         {
-            factorX = 0, --0
-            factorY = 0.5, --0.8
+            factorX = 0,           --0
+            factorY = 0.5,         --0.8
             plusX = 0,
-            plusY = HEIGHT(6), --HEIGHT(7.8)--7.8 -- 8
-            factorWidth = 0.8, -- 0
-            factorHeight = 0.1, --0.10 -- 0.15
+            plusY = HEIGHT(6),     --HEIGHT(7.8)--7.8 -- 8
+            factorWidth = 0.8,     -- 0
+            factorHeight = 0.1,    --0.10 -- 0.15
             minWidth = WIDTH(15),  --15
             minHeight = HEIGHT(2), --8 --15 --* 0.15,
             maxWidth = WIDTH(135), -- 55 -- was 150
             maxHeight = HEIGHT(4), --8 --15 -- 35 -- 55 -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-            placementFlags = {"clampCentre"} --originally orthogonal
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" } --originally orthogonal
         }
     },
     i28 = --healthBarStyle1 =
@@ -631,20 +633,20 @@ friendly =
         floatParam = API_CurrentHealth,
         placement2D =
         {
-            factorX = 0, --0
-            factorY = 0.5, --0.8
+            factorX = 0,           --0
+            factorY = 0.5,         --0.8
             plusX = 0,
-            plusY = HEIGHT(6), -- HEIGHT(8),
-            factorWidth = 0.8, -- 0
-            factorHeight = 0.1, -- 0.10 --0.15
+            plusY = HEIGHT(6),     -- HEIGHT(8),
+            factorWidth = 0.8,     -- 0
+            factorHeight = 0.1,    -- 0.10 --0.15
             minWidth = WIDTH(15),  --15
             minHeight = HEIGHT(2), --8 --15 --* 0.15,
             maxWidth = WIDTH(135), -- 55 -- was 150
             maxHeight = HEIGHT(4), --8 --15 -- 35 -- 55 -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-            placementFlags = {"clampCentre"} --originally orthogonal
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" } --originally orthogonal
         }
     },
     groupNumber1Far =
@@ -652,8 +654,8 @@ friendly =
         stringParam = API_GroupNumber,
         text =
         {
-            colour = {1,1,1,1},
-            renderFlags = {"justifyRight", "justifyBottom"},
+            colour = { 1, 1, 1, 1 },
+            renderFlags = { "justifyRight", "justifyBottom" },
             LODs =
             {
                 LOD0, "ATIControlGroupFont",
@@ -669,14 +671,14 @@ friendly =
             plusY = HEIGHT(12),
             factorWidth = 0,
             factorHeight = 0,
-            minWidth = WIDTH(8), -- 8
+            minWidth = WIDTH(8),   -- 8
             minHeight = HEIGHT(8), -- 8
             maxWidth = 1,
             maxHeight = 1,
             minATIArea = 0,
             maxATIArea = WIDTH(135) / 0.8 * HEIGHT(135) / 0.8,
-            placementFlags = {"clampCentre"}, --clampCentre
-            visibility = {"AVF_GroupNumber", "AVF_MainGameView", "AVF_SquadLeader", "AVF_TO_SelectionIcons", "AVF_HealthBarStyle1"},
+            placementFlags = { "clampCentre" }, --clampCentre
+            visibility = { "AVF_GroupNumber", "AVF_MainGameView", "AVF_SquadLeader", "AVF_TO_SelectionIcons", "AVF_HealthBarStyle1" },
         },
     },
     groupNumber1Near =
@@ -684,8 +686,8 @@ friendly =
         stringParam = API_GroupNumber,
         text =
         {
-            colour = {1,1,1,1},
-            renderFlags = {"justifyRight", "justifyBottom"},
+            colour = { 1, 1, 1, 1 },
+            renderFlags = { "justifyRight", "justifyBottom" },
             LODs =
             {
                 LOD0, "ATIControlGroupFont",
@@ -701,22 +703,22 @@ friendly =
             plusY = HEIGHT(12),
             factorWidth = 0,
             factorHeight = 0,
-            minWidth = WIDTH(8), -- 8
+            minWidth = WIDTH(8),   -- 8
             minHeight = HEIGHT(8), -- 8
             maxWidth = 1,
             maxHeight = 1,
             minATIArea = WIDTH(135) / 0.8 * HEIGHT(135) / 0.8,
             maxATIArea = HUGE,
-            placementFlags = {"clampCentre"}, --clampCentre
-            visibility = {"AVF_GroupNumber", "AVF_MainGameView", "AVF_SquadLeader", "AVF_TO_SelectionIcons", "AVF_HealthBarStyle1"},
+            placementFlags = { "clampCentre" }, --clampCentre
+            visibility = { "AVF_GroupNumber", "AVF_MainGameView", "AVF_SquadLeader", "AVF_TO_SelectionIcons", "AVF_HealthBarStyle1" },
         },
     },
     i29 = --healthBarMouseoverStyle2 =
     {
         mesh =
-        {   --1 ship
-            colour = {1,1,1,1},
-            renderFlags = {"scaleX", "scaleY"},
+        { --1 ship
+            colour = { 1, 1, 1, 1 },
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD3, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -724,12 +726,12 @@ friendly =
         },
         placement2D =
         {
-            factorX = 0, -- 0.2 -- 0
-            factorY = 0, --0 -- 0.8
-            plusX = 0.0935, -- 0.0835 --0.11 -- 0
+            factorX = 0,        -- 0.2 -- 0
+            factorY = 0,        --0 -- 0.8
+            plusX = 0.0935,     -- 0.0835 --0.11 -- 0
             plusY = HEIGHT(24), --23.8 --7.8
-            factorWidth = 0, --0 --0.8 -- 0
-            factorHeight = 0, --0 --0.10 -- 0.15
+            factorWidth = 0,    --0 --0.8 -- 0
+            factorHeight = 0,   --0 --0.10 -- 0.15
             plusWidth = PixelWidth() * 2,
             plusHeight = PixelHeight() * 2,
             minWidth = WIDTH(120), --120 --100 --155 -- 55
@@ -738,9 +740,9 @@ friendly =
             maxHeight = HEIGHT(4), --8 --15 -- 35 -- 55 -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2", "AVF_MouseOver"},
-            invisibility = {"AVF_TacticalOverlay"},
-            placementFlags = {"clampCentre"} -- originally orthogonal
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2", "AVF_MouseOver" },
+            invisibility = { "AVF_TacticalOverlay" },
+            placementFlags = { "clampCentre" } -- originally orthogonal
         }
     },
     i30 = --healthBarOutlineStyle2 =
@@ -749,20 +751,20 @@ friendly =
         graphicParam = API_HealthOutlineMesh,
         placement2D =
         {
-            factorX = 0, -- 0.2 -- 0
-            factorY = 0, --0 -- 0.8
-            plusX = 0.0935, -- 0.0835 --0.11 -- 0
-            plusY = HEIGHT(24), --23.8 --7.8
-            factorWidth = 0, --0 --0.8 -- 0
-            factorHeight = 0, --0 --0.10 -- 0.15
+            factorX = 0,           -- 0.2 -- 0
+            factorY = 0,           --0 -- 0.8
+            plusX = 0.0935,        -- 0.0835 --0.11 -- 0
+            plusY = HEIGHT(24),    --23.8 --7.8
+            factorWidth = 0,       --0 --0.8 -- 0
+            factorHeight = 0,      --0 --0.10 -- 0.15
             minWidth = WIDTH(120), --120 -- 100 --155 -- 55
             minHeight = HEIGHT(4), --8 -- 15 --* 0.15,
             maxWidth = WIDTH(200), --200 --155 -- 55 -- was 150
             maxHeight = HEIGHT(4), --8 --15 -- 35 -- 55 -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            placementFlags = {"clampCentre"} -- originally orthogonal
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" } -- originally orthogonal
         }
     },
     i31 = --healthBarStyle2 =
@@ -772,29 +774,29 @@ friendly =
         floatParam = API_CurrentHealth,
         placement2D =
         {
-            factorX = 0, -- 0.2 -- 0
-            factorY = 0, --0 -- 0.8
-            plusX = 0.0935, --0.0835 -- 0.11 --0
-            plusY = HEIGHT(24), -- 8
-            factorWidth = 0, --0 -- 0.8 -- 0
-            factorHeight = 0, --0 -- 0.10 -- 0.15
+            factorX = 0,           -- 0.2 -- 0
+            factorY = 0,           --0 -- 0.8
+            plusX = 0.0935,        --0.0835 -- 0.11 --0
+            plusY = HEIGHT(24),    -- 8
+            factorWidth = 0,       --0 -- 0.8 -- 0
+            factorHeight = 0,      --0 -- 0.10 -- 0.15
             minWidth = WIDTH(120), --100 --155 -- 55
             minHeight = HEIGHT(4), --8 -- 15 --* 0.15,
             maxWidth = WIDTH(200), --155 -- 55 -- was 150
             maxHeight = HEIGHT(4), --8 --15 -- 35 -- 55 -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            placementFlags = {"clampCentre"} -- originally orthogonal
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" } -- originally orthogonal
         }
     },
     i32 = --healthBarStyle2pointer = -- originally just "pointer"
     {
         mesh =
         {
-            colour = {0,0.8,0,1.0}, --{1,0.9,0.2,1.0}, {0,0.8,0.2,0.5}, {0,0.8,0,1.0},
+            colour = { 0, 0.8, 0, 1.0 }, --{1,0.9,0.2,1.0}, {0,0.8,0.2,0.5}, {0,0.8,0,1.0},
             lineWeight = 1.0,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 1, "UI\\Pings\\Meshes\\Pointer00.hod",
@@ -802,20 +804,20 @@ friendly =
         },
         placement2D =
         {
-            factorX = 0, --0 (good)
-            factorY = 0, --0 (good)
-            plusX = WIDTH(16), -- 16 (good) -- 16
+            factorX = 0,        --0 (good)
+            factorY = 0,        --0 (good)
+            plusX = WIDTH(16),  -- 16 (good) -- 16
             plusY = HEIGHT(15), -- 15 (good) -- 6
             factorWidth = 1,
-            factorHeight = 1, -- 1
+            factorHeight = 1,   -- 1
             minWidth = WIDTH(32),
             minHeight = HEIGHT(20),
             maxWidth = WIDTH(32),
             maxHeight = HEIGHT(20), --20
-            minATIArea = TINY, -- 0
+            minATIArea = TINY,      -- 0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-    	    placementFlags = {"clampCentre"}, -- originally not present (but good idea though!) -- placementFlags = ("orthogonal"), --
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" }, -- originally not present (but good idea though!) -- placementFlags = ("orthogonal"), --
         },
     },
     groupNumber2 =
@@ -823,8 +825,8 @@ friendly =
         stringParam = API_GroupNumber,
         text =
         {
-            colour = {1,1,1,1},
-            renderFlags = {"justifyRight", "justifyBottom"},
+            colour = { 1, 1, 1, 1 },
+            renderFlags = { "justifyRight", "justifyBottom" },
             LODs =
             {
                 LOD0, "ATIControlGroupFont",
@@ -836,29 +838,29 @@ friendly =
         {
             factorX = 0,
             factorY = 0,
-            plusX = 0.0935 + WIDTH(60) + WIDTH(4),         --plusX of bar and half bar width
-            plusY = HEIGHT(24) + HEIGHT(6),     --little bit above bar
+            plusX = 0.0935 + WIDTH(60) + WIDTH(4), --plusX of bar and half bar width
+            plusY = HEIGHT(24) + HEIGHT(6),        --little bit above bar
             factorWidth = 0,
             factorHeight = 0,
-            minWidth = WIDTH(8), -- 8
+            minWidth = WIDTH(8),   -- 8
             minHeight = HEIGHT(8), -- 8
             maxWidth = 1,
             maxHeight = 1,
             minATIArea = 0,
             maxATIArea = HUGE,
-            placementFlags = {"clampCentre"}, --clampCentre
-            visibility = {"AVF_GroupNumber", "AVF_MainGameView", "AVF_SquadLeader", "AVF_TO_SelectionIcons", "AVF_HealthBarStyle2"},
+            placementFlags = { "clampCentre" }, --clampCentre
+            visibility = { "AVF_GroupNumber", "AVF_MainGameView", "AVF_SquadLeader", "AVF_TO_SelectionIcons", "AVF_HealthBarStyle2" },
         },
     },
 
     shipName =
     {
         stringParam = API_ShipName,
-	    text =
+        text =
         {
-            colour = {1,1,1,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 1, 1, 1 },
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -880,8 +882,8 @@ friendly =
             maxHeight = 1,
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_PlayerName", "AVF_SquadLeader"}, -- visibility = AVF_PlayerName
-            placementFlags = {"attachToMouse"},
+            visibility = { "AVF_PlayerName", "AVF_SquadLeader" }, -- visibility = AVF_PlayerName
+            placementFlags = { "attachToMouse" },
         }
     },
 
@@ -889,9 +891,9 @@ friendly =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD3, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -900,19 +902,19 @@ friendly =
         placement2D =
         {
             factorX = 0,
-            factorY = 0.5, --0 --0.8 -- 0.725 -- -1,
+            factorY = 0.5,         --0 --0.8 -- 0.725 -- -1,
             plusX = 0,
-            plusY = HEIGHT(0), --10 -- -1-- plusY = HEIGHT(-10) * 0.15,
-            factorWidth = 0.8, --0 --0.8
-            factorHeight = 0.1, --0.10
-            minWidth = WIDTH(15), -- 15 --(0.125),
+            plusY = HEIGHT(0),     --10 -- -1-- plusY = HEIGHT(-10) * 0.15,
+            factorWidth = 0.8,     --0 --0.8
+            factorHeight = 0.1,    --0.10
+            minWidth = WIDTH(15),  -- 15 --(0.125),
             minHeight = HEIGHT(2), -- 15 --* 0.15, --(0.125),
-            maxWidth = WIDTH(135),-- 55 -- HUGE,
+            maxWidth = WIDTH(135), -- 55 -- HUGE,
             maxHeight = HEIGHT(4), -- 55 -- * 0.15,-- HUGE,
             minATIArea = LOD0,
             maxATIArea = HUGE,
-            placementFlags = {"clampCentre"},
-	        visibility = {"AVF_Selected", "AVF_Resources", "AVF_MainGameView"},
+            placementFlags = { "clampCentre" },
+            visibility = { "AVF_Selected", "AVF_Resources", "AVF_MainGameView" },
         }
     },
     i39 = --resourceContents =
@@ -922,7 +924,7 @@ friendly =
         {
             colour = ResourceColour,
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD3, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -931,28 +933,28 @@ friendly =
         placement2D =
         {
             factorX = 0,
-            factorY = 0.5, --0 --0.8 -- 0.725 -- -1,
+            factorY = 0.5,         --0 --0.8 -- 0.725 -- -1,
             plusX = 0,
-            plusY = HEIGHT(0), --10 -- -1-- plusY = HEIGHT(-10) * 0.15,
-            factorWidth = 0.8, --0 --0.8
-            factorHeight = 0.1, --0.10
-            minWidth = WIDTH(15), -- 15 --(0.125),
+            plusY = HEIGHT(0),     --10 -- -1-- plusY = HEIGHT(-10) * 0.15,
+            factorWidth = 0.8,     --0 --0.8
+            factorHeight = 0.1,    --0.10
+            minWidth = WIDTH(15),  -- 15 --(0.125),
             minHeight = HEIGHT(2), -- 15 --* 0.15, --(0.125),
-            maxWidth = WIDTH(135),-- 55 -- HUGE,
+            maxWidth = WIDTH(135), -- 55 -- HUGE,
             maxHeight = HEIGHT(4), -- 55 -- * 0.15,-- HUGE,
             minATIArea = LOD0,
             maxATIArea = HUGE,
-            placementFlags = {"clampCentre"},
-	        visibility = {"AVF_Selected", "AVF_Resources", "AVF_MainGameView"},
+            placementFlags = { "clampCentre" },
+            visibility = { "AVF_Selected", "AVF_Resources", "AVF_MainGameView" },
         }
     },
     i40 = --captureOutline2 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -965,16 +967,16 @@ friendly =
             factorY = 0.5, -- -1 -- 0.8-- -0.8
             plusX = 0,
             plusY = 0,
-            factorWidth = 0.8, -- 0.07--0.8
-            factorHeight = 0.1, -- 0.07 --0.10-- 0
-            minWidth = WIDTH(15), --15 --(0.125),
+            factorWidth = 0.8,     -- 0.07--0.8
+            factorHeight = 0.1,    -- 0.07 --0.10-- 0
+            minWidth = WIDTH(15),  --15 --(0.125),
             minHeight = HEIGHT(2), --8 -- 15--(0.125),
             maxWidth = WIDTH(135), -- 55 -- HUGE,
             maxHeight = HEIGHT(4), --4 --35 -- * 0.15,-- HUGE,
-            minATIArea = TINY, --LOD0
+            minATIArea = TINY,     --LOD0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-	        placementFlags = {"clampCentre"},
+            visibility = { "AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" },
         }
     },
     i41 = --captureContents2 =
@@ -984,7 +986,7 @@ friendly =
         {
             colour = CaptureColour,
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -996,16 +998,16 @@ friendly =
             factorY = 0.5, -- -1--0.8 -- -0.8
             plusX = 0,
             plusY = 0,
-            factorWidth = 0.8, --0.07
-            factorHeight = 0.1, --0.07 -- 0
-            minWidth = WIDTH(15), --65 --(0.125),
+            factorWidth = 0.8,     --0.07
+            factorHeight = 0.1,    --0.07 -- 0
+            minWidth = WIDTH(15),  --65 --(0.125),
             minHeight = HEIGHT(2), --2 --(0.125),
             maxWidth = WIDTH(135), --65 -- HUGE,
             maxHeight = HEIGHT(4), --8 --* 0.15,-- HUGE,
-            minATIArea = TINY, --LOD0
+            minATIArea = TINY,     --LOD0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-		placementFlags = {"clampCentre"},
+            visibility = { "AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" },
 
         }
     },
@@ -1014,9 +1016,9 @@ friendly =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -1029,17 +1031,17 @@ friendly =
             factorY = 0, -- -1 -- 0.8-- -0.8
             plusX = 0.0935,
             plusY = HEIGHT(18),
-            factorWidth = 0, -- 0.07--0.8
-            factorHeight = 0, -- 0.07 --0.10-- 0
+            factorWidth = 0,       -- 0.07--0.8
+            factorHeight = 0,      -- 0.07 --0.10-- 0
             minWidth = WIDTH(120), --15 --(0.125),
             minHeight = HEIGHT(4), --8 -- 15--(0.125),
             maxWidth = WIDTH(200), -- 55 -- HUGE,
             maxHeight = HEIGHT(4), --4 --35 -- * 0.15,-- HUGE,
-            minATIArea = TINY, --LOD0
+            minATIArea = TINY,     --LOD0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            placementFlags = {"clampCentre"}, -- originally not present
-    	}
+            visibility = { "AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" }, -- originally not present
+        }
     },
     i43 = --captureContents3 =
     {
@@ -1048,7 +1050,7 @@ friendly =
         {
             colour = CaptureColour,
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -1060,26 +1062,26 @@ friendly =
             factorY = 0, -- -1--0.8 -- -0.8
             plusX = 0.0935,
             plusY = HEIGHT(18),
-            factorWidth = 0, --0.07
-            factorHeight = 0, --0.07 -- 0
+            factorWidth = 0,       --0.07
+            factorHeight = 0,      --0.07 -- 0
             minWidth = WIDTH(120), --65 --(0.125),
             minHeight = HEIGHT(4), --2 --(0.125),
             maxWidth = WIDTH(200), --65 -- HUGE,
             maxHeight = HEIGHT(4), --8 --* 0.15,-- HUGE,
-            minATIArea = TINY, --LOD0
+            minATIArea = TINY,     --LOD0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-	        placementFlags = {"clampCentre"},  -- originally not present
+            visibility = { "AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" }, -- originally not present
         }
     },
 
-    i50 =--auxiliaryPowerOutline0 =
+    i50 = --auxiliaryPowerOutline0 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -1100,10 +1102,10 @@ friendly =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle0" },
-            visibility1 = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle0" },
-            placementFlags = {"clampCentre"}
-	    }
+            visibility = { "AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            visibility1 = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            placementFlags = { "clampCentre" }
+        }
     },
     i51 = --auxiliaryPowerContents0 =
     {
@@ -1112,7 +1114,7 @@ friendly =
         mesh =
         {
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -1132,19 +1134,19 @@ friendly =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle0"},
-            visibility1 = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle0"},
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility = { "AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            visibility1 = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
 
-    i52 =--auxiliaryPowerOutline1 =
+    i52 = --auxiliaryPowerOutline1 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -1165,10 +1167,10 @@ friendly =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle1" },
-            visibility1 = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle1" },
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility = { "AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            visibility1 = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
     i53 = --auxiliaryPowerContents1 =
     {
@@ -1177,7 +1179,7 @@ friendly =
         mesh =
         {
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -1197,19 +1199,19 @@ friendly =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-            visibility1 = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility = { "AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            visibility1 = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
 
     i54 = --auxiliaryPowerOutline2 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -1230,9 +1232,9 @@ friendly =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle2" },
-            visibility = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle2" },
-	        placementFlags = {"clampCentre"} -- originally not present
+            visibility = { "AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            visibility = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" } -- originally not present
         }
     },
     i55 = --auxiliaryPowerContents2 =
@@ -1242,7 +1244,7 @@ friendly =
         mesh =
         {
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -1262,23 +1264,23 @@ friendly =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            visibility = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility = { "AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            visibility = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
 
     commandIcon0 =
     {
         graphicParam = API_CommandIcon,
-	    renderFlags = {"justifyRight"},
+        renderFlags = { "justifyRight" },
         placement2D =
         {
-            factorX = -0.25, -- -0.6 --was 0.9
-            factorY = 0.5, --0.8 --0.5
+            factorX = -0.25,    -- -0.6 --was 0.9
+            factorY = 0.5,      --0.8 --0.5
             plusX = WIDTH(-36), -- WIDTH(-20)
-            plusY = HEIGHT(6), --HEIGHT(24),
-            factorWidth = 0.2, --0.8
+            plusY = HEIGHT(6),  --HEIGHT(24),
+            factorWidth = 0.2,  --0.8
             factorHeight = 0.3, --0.10
             minWidth = 0,
             minHeight = 0,
@@ -1286,22 +1288,22 @@ friendly =
             maxHeight = 1,
             minATIArea = LOD1,
             maxATIArea = HUGE,
-            placementFlags = {"clampCentre", "scaleToGraphic"}, -- orthogonal, {"clampCentre", "scaleToGraphic"},
-            visibility0 = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0", "AVF_SquadLeader", "AVF_TO_SelectionIcons"},
-            visibility1 = {"AVF_MouseOver", "AVF_MainGameView", "AVF_HealthBarStyle0", "AVF_SquadLeader", "AVF_TO_SelectionIcons"},
+            placementFlags = { "clampCentre", "scaleToGraphic" }, -- orthogonal, {"clampCentre", "scaleToGraphic"},
+            visibility0 = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0", "AVF_SquadLeader", "AVF_TO_SelectionIcons" },
+            visibility1 = { "AVF_MouseOver", "AVF_MainGameView", "AVF_HealthBarStyle0", "AVF_SquadLeader", "AVF_TO_SelectionIcons" },
         },
     },
     tacticsIcon0 =
     {
         graphicParam = API_TacticsSetting,
-	    renderFlags = {"justifyLeft"},
+        renderFlags = { "justifyLeft" },
         placement2D =
         {
-            factorX = -0.25, --0.6
-            factorY = 0.5, --0.8 --0.5
+            factorX = -0.25,    --0.6
+            factorY = 0.5,      --0.8 --0.5
             plusX = WIDTH(-14), -- WIDTH(-42), --plusX = WIDTH(20),
-            plusY = HEIGHT(6), -- HEIGHT(24), --plusY = HEIGHT(0),
-            factorWidth = 0.2, --0.07 --0.8
+            plusY = HEIGHT(6),  -- HEIGHT(24), --plusY = HEIGHT(0),
+            factorWidth = 0.2,  --0.07 --0.8
             factorHeight = 0.3, --0.07 --0.10
             minWidth = 0,
             minHeight = 0,
@@ -1309,22 +1311,22 @@ friendly =
             maxHeight = 1,
             minATIArea = LOD1,
             maxATIArea = HUGE,
-            placementFlags = {"clampCentre", "scaleToGraphic"}, -- {"clampCentre", "scaleToGraphic"},
-            visibility0 = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0", "AVF_SquadLeader", "AVF_TO_SelectionIcons"},
-            visibility1 = {"AVF_MouseOver", "AVF_MainGameView", "AVF_HealthBarStyle0", "AVF_SquadLeader", "AVF_TO_SelectionIcons"},
+            placementFlags = { "clampCentre", "scaleToGraphic" }, -- {"clampCentre", "scaleToGraphic"},
+            visibility0 = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0", "AVF_SquadLeader", "AVF_TO_SelectionIcons" },
+            visibility1 = { "AVF_MouseOver", "AVF_MainGameView", "AVF_HealthBarStyle0", "AVF_SquadLeader", "AVF_TO_SelectionIcons" },
         },
     },
     commandIcon1 =
     {
         graphicParam = API_CommandIcon,
-	    renderFlags = {"justifyLeft"},
+        renderFlags = { "justifyLeft" },
         placement2D =
         {
-            factorX = 0, -- -0.6 --was 0.9
-            factorY = 0.5, --0.8 --0.9
-            plusX = WIDTH(-60), -- WIDTH(-20)
-            plusY = HEIGHT(18), --HEIGHT(24),
-            factorWidth = 0.8, --0.07
+            factorX = 0,         -- -0.6 --was 0.9
+            factorY = 0.5,       --0.8 --0.9
+            plusX = WIDTH(-60),  -- WIDTH(-20)
+            plusY = HEIGHT(18),  --HEIGHT(24),
+            factorWidth = 0.8,   --0.07
             factorHeight = 0.10, --0.07
             minWidth = 0,
             minHeight = 0,
@@ -1332,22 +1334,22 @@ friendly =
             maxHeight = 1,
             minATIArea = LOD0,
             maxATIArea = HUGE,
-            placementFlags = {"clampCentre", "scaleToGraphic"}, -- orthogonal
-            visibility0 = {"AVF_MouseOver", "AVF_MainGameView", "AVF_HealthBarStyle1", "AVF_SquadLeader", "AVF_TO_SelectionIcons"},
-            visibility1 = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1", "AVF_SquadLeader", "AVF_TO_SelectionIcons"},
+            placementFlags = { "clampCentre", "scaleToGraphic" }, -- orthogonal
+            visibility0 = { "AVF_MouseOver", "AVF_MainGameView", "AVF_HealthBarStyle1", "AVF_SquadLeader", "AVF_TO_SelectionIcons" },
+            visibility1 = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1", "AVF_SquadLeader", "AVF_TO_SelectionIcons" },
         },
     },
     tacticsIcon1 =
     {
         graphicParam = API_TacticsSetting,
-	    renderFlags = {"justifyRight"},
+        renderFlags = { "justifyRight" },
         placement2D =
         {
-            factorX = 0, --0.6
-            factorY = 0.5, --0.8 --0.9
-            plusX = WIDTH(-38), -- WIDTH(-42), --plusX = WIDTH(20),
-            plusY = HEIGHT(18), -- HEIGHT(24), --plusY = HEIGHT(0),
-            factorWidth = 0.8, --0.07
+            factorX = 0,         --0.6
+            factorY = 0.5,       --0.8 --0.9
+            plusX = WIDTH(-38),  -- WIDTH(-42), --plusX = WIDTH(20),
+            plusY = HEIGHT(18),  -- HEIGHT(24), --plusY = HEIGHT(0),
+            factorWidth = 0.8,   --0.07
             factorHeight = 0.10, --0.07
             minWidth = 0,
             minHeight = 0,
@@ -1355,65 +1357,65 @@ friendly =
             maxHeight = 1,
             minATIArea = LOD0,
             maxATIArea = HUGE,
-            placementFlags = {"clampCentre", "scaleToGraphic"},
-            visibility0 = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1", "AVF_SquadLeader", "AVF_TO_SelectionIcons"},
-            visibility1 = {"AVF_MouseOver", "AVF_MainGameView", "AVF_HealthBarStyle1", "AVF_SquadLeader", "AVF_TO_SelectionIcons"},
+            placementFlags = { "clampCentre", "scaleToGraphic" },
+            visibility0 = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1", "AVF_SquadLeader", "AVF_TO_SelectionIcons" },
+            visibility1 = { "AVF_MouseOver", "AVF_MainGameView", "AVF_HealthBarStyle1", "AVF_SquadLeader", "AVF_TO_SelectionIcons" },
         },
     },
 
     commandIcon2 =
     {
         graphicParam = API_CommandIcon,
-	    renderFlags = {"justifyLeft"},
+        renderFlags = { "justifyLeft" },
         placement2D =
         {
-            factorX = 0, -- -0.6 --was 0.9
-            factorY = 0, --0.8 --0.9
-            plusX = WIDTH(41), -- WIDTH(-20), 0.041,
+            factorX = 0,        -- -0.6 --was 0.9
+            factorY = 0,        --0.8 --0.9
+            plusX = WIDTH(41),  -- WIDTH(-20), 0.041,
             plusY = HEIGHT(36), --HEIGHT(24),
-            factorWidth = 0, --0.07
-            factorHeight = 0, --0.07
+            factorWidth = 0,    --0.07
+            factorHeight = 0,   --0.07
             minWidth = 0,
             minHeight = 0,
             maxWidth = 1,
             maxHeight = 1,
             minATIArea = LOD0,
             maxATIArea = HUGE,
-            placementFlags = {"clampCentre", "scaleToGraphic"}, -- orthogonal
-            visibility0 = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2", "AVF_SquadLeader", "AVF_TO_SelectionIcons"},
-            visibility1 = {"AVF_MouseOver", "AVF_MainGameView", "AVF_HealthBarStyle2", "AVF_SquadLeader", "AVF_TO_SelectionIcons"},
+            placementFlags = { "clampCentre", "scaleToGraphic" }, -- orthogonal
+            visibility0 = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2", "AVF_SquadLeader", "AVF_TO_SelectionIcons" },
+            visibility1 = { "AVF_MouseOver", "AVF_MainGameView", "AVF_HealthBarStyle2", "AVF_SquadLeader", "AVF_TO_SelectionIcons" },
         },
     },
     tacticsIcon2 =
     {
         graphicParam = API_TacticsSetting,
-	    renderFlags = {"justifyRight"},
+        renderFlags = { "justifyRight" },
         placement2D =
         {
-            factorX = 0, --0.6
-            factorY = 0, --0.8 --0.9
-            plusX = WIDTH(63), -- WIDTH(-42), --plusX = WIDTH(20), 0.0575,
+            factorX = 0,        --0.6
+            factorY = 0,        --0.8 --0.9
+            plusX = WIDTH(63),  -- WIDTH(-42), --plusX = WIDTH(20), 0.0575,
             plusY = HEIGHT(36), -- HEIGHT(24), --plusY = HEIGHT(0),
-            factorWidth = 0, --0.07
-            factorHeight = 0, --0.07
+            factorWidth = 0,    --0.07
+            factorHeight = 0,   --0.07
             minWidth = 0,
             minHeight = 0,
             maxWidth = 1,
             maxHeight = 1,
             minATIArea = LOD0,
             maxATIArea = HUGE,
-            placementFlags = {"clampCentre", "scaleToGraphic"},
-            visibility0 = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2", "AVF_SquadLeader", "AVF_TO_SelectionIcons"},
-            visibility1 = {"AVF_MouseOver", "AVF_MainGameView", "AVF_HealthBarStyle2", "AVF_SquadLeader", "AVF_TO_SelectionIcons"},
+            placementFlags = { "clampCentre", "scaleToGraphic" },
+            visibility0 = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2", "AVF_SquadLeader", "AVF_TO_SelectionIcons" },
+            visibility1 = { "AVF_MouseOver", "AVF_MainGameView", "AVF_HealthBarStyle2", "AVF_SquadLeader", "AVF_TO_SelectionIcons" },
         },
     },
     selectingOutline =
     {
         mesh =
         {
-            colour = {0.0, 1.0, 1.0, 1.0},
+            colour = { 0.0, 1.0, 1.0, 1.0 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD0, "UI\\ATI\\Meshes\\SelectingOutline.hod",
@@ -1431,7 +1433,7 @@ friendly =
             minHeight = HEIGHT(2),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selecting"},
+            visibility = { "AVF_Selecting" },
         },
     },
     TO =
@@ -1444,18 +1446,18 @@ friendly =
             factorY = 0,
             plusX = 0,
             plusY = 0,
-            factorWidth = 1, --1
-            factorHeight = 1, --1
-            minWidth = WIDTH(8), -- WIDTH(8),
+            factorWidth = 1,       --1
+            factorHeight = 1,      --1
+            minWidth = WIDTH(8),   -- WIDTH(8),
             minHeight = HEIGHT(8), -- HEIGHT(8),
-            maxWidth = 1, --HUGE
-            maxHeight = 1, --HUGE
+            maxWidth = 1,          --HUGE
+            maxHeight = 1,         --HUGE
             minATIArea = 0,
             maxATIArea = HUGE,
-            visibility = {"AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_SquadLeader"},
-            invisibility = {"AVF_TO_DistantTOs"},
-            visibility1 = {"AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs", "AVF_SquadLeader"},
-            placementFlags = {"orthogonal"}, -- orthogonal
+            visibility = { "AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_SquadLeader" },
+            invisibility = { "AVF_TO_DistantTOs" },
+            visibility1 = { "AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs", "AVF_SquadLeader" },
+            placementFlags = { "orthogonal" }, -- orthogonal
         },
     },
     gateCostString =
@@ -1463,9 +1465,9 @@ friendly =
         stringParam = API_GateCost,
         text =
         {
-            colour = {1,1,1,0},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 1, 1, 0 },
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -1487,8 +1489,8 @@ friendly =
             maxHeight = 1,
             minATIArea = TINY,
             maxATIArea = HUGE,
-            placementFlags = {"attachToMouse"},
-            visibility = {"AVF_MainGameView", "AVF_GateCost", "AVF_MouseOver"},
+            placementFlags = { "attachToMouse" },
+            visibility = { "AVF_MainGameView", "AVF_GateCost", "AVF_MouseOver" },
         }
     },
 }
@@ -1496,7 +1498,7 @@ friendly =
 -----------------------------------------------------------------------------
 --ATIEnemy:
 -----------------------------------------------------------------------------
-enemy =
+enemy                         =
 {
     tacticalIconColour = EnemyColour,
     tacticalIconColourFar = EnemyColourFar,
@@ -1505,32 +1507,32 @@ enemy =
     healthColourOK = EnemyColour,
     healthColourHurt = EnemyColourHurt,
     healthColourDying = EnemyColourDying,
-    healthColourBGOK = {0.5, 0.5, 0.5, 1},
-    healthColourBGHurt = {0.5, 0.5, 0.5, 1},
-    healthColourBGDying = {0.5, 0.5, 0.5, 1},
-    EMPColour = {58/255,110/255,165/255,1},
+    healthColourBGOK = { 0.5, 0.5, 0.5, 1 },
+    healthColourBGHurt = { 0.5, 0.5, 0.5, 1 },
+    healthColourBGDying = { 0.5, 0.5, 0.5, 1 },
+    EMPColour = { 58 / 255, 110 / 255, 165 / 255, 1 },
     EMPLevelIgnore = 99999999999999999,
     i20 = --healthBarOutlineStyle0 =
     {
         colourParam = API_HealthBackgroundColour,
         graphicParam = API_HealthOutlineMesh,
         placement2D =
-	    {
+        {
             factorX = 0,
-            factorY = 0.5, --0.8
-            plusX = 0, --0.0065
-            plusY = HEIGHT(6), --5.8 -- 6
-            factorWidth = 0.2, --1
+            factorY = 0.5,         --0.8
+            plusX = 0,             --0.0065
+            plusY = HEIGHT(6),     --5.8 -- 6
+            factorWidth = 0.2,     --1
             factorHeight = 0.0375, --0.15
-            minWidth = WIDTH(8), --10
+            minWidth = WIDTH(8),   --10
             minHeight = HEIGHT(2), --15 * 0.15,
             maxWidth = WIDTH(200), --80 -- was 150
             maxHeight = HEIGHT(4), --15 55 * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0"},
-            placementFlags = {"clampCentre"} -- originally orthogonal
-       }
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            placementFlags = { "clampCentre" } -- originally orthogonal
+        }
 
     },
     i21 = --healthBarStyle0 =
@@ -1539,23 +1541,23 @@ enemy =
         graphicParam = API_HealthContentsMesh,
         floatParam = API_CurrentHealth,
         placement2D =
-	    {
+        {
             factorX = 0,
-            factorY = 0.5, --0.8
-            plusX = 0, --0.0065 0.0035
-            plusY = HEIGHT(6), --6
-            factorWidth = 0.2, -- 0.8 1
+            factorY = 0.5,         --0.8
+            plusX = 0,             --0.0065 0.0035
+            plusY = HEIGHT(6),     --6
+            factorWidth = 0.2,     -- 0.8 1
             factorHeight = 0.0375, --0.15
-            minWidth = WIDTH(8), --10
+            minWidth = WIDTH(8),   --10
             minHeight = HEIGHT(2), --15 * 0.15,
-            maxWidth = WIDTH(200),--80 -- was 150
+            maxWidth = WIDTH(200), --80 -- was 150
             maxHeight = HEIGHT(4), --15 55 * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
             --visibility0 = {"AVF_Selected", "AVF_MainGameView", "AVF_SquadLeader", "AVF_HealthBarStyle0"},
-            visibility0 = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0"},
+            visibility0 = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0" },
             --invisibility1 = {"AVF_CohesiveSquad"},
-            placementFlags = {"clampCentre"} -- originally orthogonal
+            placementFlags = { "clampCentre" } -- originally orthogonal
         }
     },
 
@@ -1566,19 +1568,19 @@ enemy =
         placement2D =
         {
             factorX = 0,
-            factorY = 0.5, --0.6 --0.8
+            factorY = 0.5,     --0.6 --0.8
             plusX = 0,
             plusY = HEIGHT(6), --15 --8
             factorWidth = 0.8,
             factorHeight = 0.10,
-            minWidth = WIDTH(15), --35
+            minWidth = WIDTH(15),  --35
             minHeight = HEIGHT(2), --4 --* 0.15,
-            maxWidth = WIDTH(135),--35 -- was 150
+            maxWidth = WIDTH(135), --35 -- was 150
             maxHeight = HEIGHT(4), -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-            placementFlags = {"clampCentre"}
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" }
         }
     },
     i25 = --healthBarStyle1 =
@@ -1589,19 +1591,19 @@ enemy =
         placement2D =
         {
             factorX = 0,
-            factorY = 0.5, --0.6 --0.8
+            factorY = 0.5,     --0.6 --0.8
             plusX = 0,
             plusY = HEIGHT(6), --14.8 --8
             factorWidth = 0.8,
             factorHeight = 0.10,
-            minWidth = WIDTH(15), --35
+            minWidth = WIDTH(15),  --35
             minHeight = HEIGHT(2), --4 --* 0.15,
             maxWidth = WIDTH(135), --35 -- was 150
             maxHeight = HEIGHT(4), -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-            placementFlags = {"clampCentre"}
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" }
         }
     },
 
@@ -1612,19 +1614,19 @@ enemy =
         placement2D =
         {
             factorX = 0,
-            factorY = 0, --0.8
-            plusX = 0.0935, --0.0835 --0.11 --0
-            plusY = HEIGHT(24), --7.8
-            factorWidth = 0, -- 0
-            factorHeight = 0, -- 0.15
+            factorY = 0,           --0.8
+            plusX = 0.0935,        --0.0835 --0.11 --0
+            plusY = HEIGHT(24),    --7.8
+            factorWidth = 0,       -- 0
+            factorHeight = 0,      -- 0.15
             minWidth = WIDTH(120), --100 -- 55
             minHeight = HEIGHT(4), --* 0.15,
             maxWidth = WIDTH(200), --100 -- 55 -- was 150
             maxHeight = HEIGHT(4), --35 -- 55 -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            placementFlags = {"clampCentre"} -- originally "othogonal"
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" } -- originally "othogonal"
         }
     },
     i27 = --healthBarStyle2 =
@@ -1635,28 +1637,28 @@ enemy =
         placement2D =
         {
             factorX = 0,
-            factorY = 0, --0.8
-            plusX = 0.0935, --0.035 --0.11 --0
-            plusY = HEIGHT(24), -- 8
-            factorWidth = 0, --0.8 -- 0
-            factorHeight = 0, --0.10 -- 0.15
+            factorY = 0,           --0.8
+            plusX = 0.0935,        --0.035 --0.11 --0
+            plusY = HEIGHT(24),    -- 8
+            factorWidth = 0,       --0.8 -- 0
+            factorHeight = 0,      --0.10 -- 0.15
             minWidth = WIDTH(120), --100 --55
             minHeight = HEIGHT(4), --15--* 0.15,
             maxWidth = WIDTH(200), --100-- 55 -- was 150
             maxHeight = HEIGHT(4), --35 -- 55 -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            placementFlags = {"clampCentre"} --originally "orthogonal"
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" } --originally "orthogonal"
         }
     },
     i28 = --healthBarStyle2pointer = -- originally just "pointer"
     {
         mesh =
         {
-            colour = {0.8,0,0,1.0}, --{0,0.8,0.2,0.5},{1,0.9,0.2,1.0},
+            colour = { 0.8, 0, 0, 1.0 }, --{0,0.8,0.2,0.5},{1,0.9,0.2,1.0},
             lineWeight = 1.0,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 1, "UI\\Pings\\Meshes\\Pointer00.hod",
@@ -1664,20 +1666,20 @@ enemy =
         },
         placement2D =
         {
-            factorX = 0, --0 (good)
-            factorY = 0, --0 (good)
-            plusX = WIDTH(16), -- 16 (good) -- 16
+            factorX = 0,        --0 (good)
+            factorY = 0,        --0 (good)
+            plusX = WIDTH(16),  -- 16 (good) -- 16
             plusY = HEIGHT(15), -- 15 (good) -- 6
             factorWidth = 1,
-            factorHeight = 1, -- 1
+            factorHeight = 1,   -- 1
             minWidth = WIDTH(32),
             minHeight = HEIGHT(20),
             maxWidth = WIDTH(32),
             maxHeight = HEIGHT(20),
             minATIArea = TINY, -- 0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-	        placementFlags = {"clampCentre"}, -- originally not present (but good idea though!) -- placementFlags = ("orthogonal"), --
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" }, -- originally not present (but good idea though!) -- placementFlags = ("orthogonal"), --
         },
     },
     shipName =
@@ -1685,9 +1687,9 @@ enemy =
         stringParam = API_ShipName,
         text =
         {
-            colour = {1,1,1,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 1, 1, 1 },
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -1709,8 +1711,8 @@ enemy =
             maxHeight = 1,
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_PlayerName", "AVF_SquadLeader"},
-            placementFlags = {"attachToMouse"},
+            visibility = { "AVF_PlayerName", "AVF_SquadLeader" },
+            placementFlags = { "attachToMouse" },
         }
     },
     playerName =
@@ -1719,9 +1721,9 @@ enemy =
         -- colourParam = API_PlayerColour, --API_PlayerColour, --{1,1,1,1},
         text =
         {
-            colour = {1,0,0,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 0, 0, 1 },
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -1743,17 +1745,17 @@ enemy =
             maxHeight = 1,
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_PlayerName", "AVF_SquadLeader"},
-            placementFlags = {"attachToMouse"},
+            visibility = { "AVF_PlayerName", "AVF_SquadLeader" },
+            placementFlags = { "attachToMouse" },
         }
     },
     i40 = --captureOutline2 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -1766,16 +1768,16 @@ enemy =
             factorY = 0.5, -- -1 -- 0.8-- -0.8
             plusX = 0,
             plusY = 0,
-            factorWidth = 0.8, -- 0.07--0.8
-            factorHeight = 0.1, -- 0.07 --0.10-- 0
-            minWidth = WIDTH(15), --15 --(0.125),
+            factorWidth = 0.8,     -- 0.07--0.8
+            factorHeight = 0.1,    -- 0.07 --0.10-- 0
+            minWidth = WIDTH(15),  --15 --(0.125),
             minHeight = HEIGHT(2), --8 -- 15--(0.125),
             maxWidth = WIDTH(135), -- 55 -- HUGE,
             maxHeight = HEIGHT(4), --4 --35 -- * 0.15,-- HUGE,
-            minATIArea = TINY, --LOD0
+            minATIArea = TINY,     --LOD0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-	        placementFlags = {"clampCentre"},
+            visibility = { "AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" },
         }
     },
     i41 = --captureContents2 =
@@ -1785,7 +1787,7 @@ enemy =
         {
             colour = CaptureColour,
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -1797,25 +1799,25 @@ enemy =
             factorY = 0.5, -- -1--0.8 -- -0.8
             plusX = 0,
             plusY = 0,
-            factorWidth = 0.8, --0.07
-            factorHeight = 0.1, --0.07 -- 0
-            minWidth = WIDTH(15), --65 --(0.125),
+            factorWidth = 0.8,     --0.07
+            factorHeight = 0.1,    --0.07 -- 0
+            minWidth = WIDTH(15),  --65 --(0.125),
             minHeight = HEIGHT(2), --2 --(0.125),
             maxWidth = WIDTH(135), --65 -- HUGE,
             maxHeight = HEIGHT(4), --8 --* 0.15,-- HUGE,
-            minATIArea = TINY, --LOD0
+            minATIArea = TINY,     --LOD0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-	        placementFlags = {"clampCentre"},
+            visibility = { "AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" },
         }
     },
     i42 = --captureOutline3 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -1825,20 +1827,20 @@ enemy =
         placement2D =
         {
             factorX = 0,
-            factorY = 0, -- -1 -- 0.8-- -0.8
+            factorY = 0,           -- -1 -- 0.8-- -0.8
             plusX = 0.0935,
-            plusY = HEIGHT(18), --50.8 -- -24.8
-            factorWidth = 0, -- 0.07--0.8
-            factorHeight = 0, -- 0.07 --0.10-- 0
+            plusY = HEIGHT(18),    --50.8 -- -24.8
+            factorWidth = 0,       -- 0.07--0.8
+            factorHeight = 0,      -- 0.07 --0.10-- 0
             minWidth = WIDTH(120), --15 --(0.125),
             minHeight = HEIGHT(4), --8 -- 15--(0.125),
             maxWidth = WIDTH(200), -- 55 -- HUGE,
             maxHeight = HEIGHT(4), --4 --35 -- * 0.15,-- HUGE,
-            minATIArea = TINY, --LOD0
+            minATIArea = TINY,     --LOD0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected","AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            placementFlags = {"clampCentre"}, -- originally not present
-	    }
+            visibility = { "AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" }, -- originally not present
+        }
     },
     i43 = --captureContents3 =
     {
@@ -1847,7 +1849,7 @@ enemy =
         {
             colour = CaptureColour,
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -1856,19 +1858,19 @@ enemy =
         placement2D =
         {
             factorX = 0,
-            factorY = 0, -- -1--0.8 -- -0.8
+            factorY = 0,           -- -1--0.8 -- -0.8
             plusX = 0.0935,
-            plusY = HEIGHT(18), --51
-            factorWidth = 0, --0.07
-            factorHeight = 0, --0.07 -- 0
+            plusY = HEIGHT(18),    --51
+            factorWidth = 0,       --0.07
+            factorHeight = 0,      --0.07 -- 0
             minWidth = WIDTH(120), --65 --(0.125),
             minHeight = HEIGHT(4), --2 --(0.125),
             maxWidth = WIDTH(200), --65 -- HUGE,
             maxHeight = HEIGHT(4), --8 --* 0.15,-- HUGE,
-            minATIArea = TINY, --LOD0
+            minATIArea = TINY,     --LOD0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected","AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-	    placementFlags = {"clampCentre"},  -- originally not present
+            visibility = { "AVF_Selected", "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" }, -- originally not present
         }
     },
 
@@ -1876,9 +1878,9 @@ enemy =
     {
         mesh =
         {
-            colour = {0.0, 1.0, 1.0, 1.0},
+            colour = { 0.0, 1.0, 1.0, 1.0 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD0, "UI\\ATI\\Meshes\\SelectingOutline.hod",
@@ -1896,7 +1898,7 @@ enemy =
             minHeight = HEIGHT(2),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selecting"},
+            visibility = { "AVF_Selecting" },
             --invisibility = {"AVF_SquadLeader"},
         },
     },
@@ -1910,28 +1912,28 @@ enemy =
             factorY = 0,
             plusX = 0,
             plusY = 0,
-            factorWidth = 1, --1
-            factorHeight = 1, --1
-            minWidth = WIDTH(8), -- WIDTH(8),
+            factorWidth = 1,       --1
+            factorHeight = 1,      --1
+            minWidth = WIDTH(8),   -- WIDTH(8),
             minHeight = HEIGHT(8), -- HEIGHT(8),
-            maxWidth = 1, --HUGE
-            maxHeight = 1, --HUGE
+            maxWidth = 1,          --HUGE
+            maxHeight = 1,         --HUGE
             minATIArea = 0,
             maxATIArea = HUGE,
-            visibility = {"AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_SquadLeader"},
-            invisibility = {"AVF_TO_DistantTOs"},
-            visibility1 = {"AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs", "AVF_SquadLeader"},
-            placementFlags = {"orthogonal"}, -- orthogonal
-            placementFlags = {"orthogonal"}, -- orthogonal
+            visibility = { "AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_SquadLeader" },
+            invisibility = { "AVF_TO_DistantTOs" },
+            visibility1 = { "AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs", "AVF_SquadLeader" },
+            placementFlags = { "orthogonal" }, -- orthogonal
+            placementFlags = { "orthogonal" }, -- orthogonal
         },
     },
-    i50 =--auxiliaryPowerOutline0 =
+    i50 = --auxiliaryPowerOutline0 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -1952,10 +1954,10 @@ enemy =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle0" },
-            visibility1 = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle0" },
-            placementFlags = {"clampCentre"}
-	    }
+            visibility = { "AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            visibility1 = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            placementFlags = { "clampCentre" }
+        }
     },
     i51 = --auxiliaryPowerContents0 =
     {
@@ -1964,7 +1966,7 @@ enemy =
         mesh =
         {
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -1984,19 +1986,19 @@ enemy =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle0"},
-            visibility1 = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle0"},
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility = { "AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            visibility1 = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
 
     i52 = --auxiliaryPowerOutline1 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -2017,9 +2019,9 @@ enemy =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility1 = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle1" },
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility1 = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
     i53 = --auxiliaryPowerContents1 =
     {
@@ -2028,7 +2030,7 @@ enemy =
         mesh =
         {
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -2048,18 +2050,18 @@ enemy =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility1 = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility1 = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
 
     i54 = --auxiliaryPowerOutline2 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -2080,8 +2082,8 @@ enemy =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle2" },
-	        placementFlags = {"clampCentre"} -- originally not present
+            visibility = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" } -- originally not present
         }
     },
     i55 = --auxiliaryPowerContents2 =
@@ -2091,7 +2093,7 @@ enemy =
         mesh =
         {
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -2111,9 +2113,9 @@ enemy =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
 
 }
@@ -2121,7 +2123,7 @@ enemy =
 -----------------------------------------------------------------------------
 --ATIAllied:
 -----------------------------------------------------------------------------
-allied =
+allied                        =
 {
     tacticalIconColour = AlliedColour,
     tacticalIconColourFar = AlliedColourFar,
@@ -2130,10 +2132,10 @@ allied =
     healthColourOK = AlliedColour,
     healthColourHurt = AlliedColourHurt,
     healthColourDying = AlliedColourDying,
-    healthColourBGOK = {0.5, 0.5, 0.5, 1},
-    healthColourBGHurt = {0.5, 0.5, 0.5, 1},
-    healthColourBGDying = {0.5, 0.5, 0.5, 1},
-    EMPColour = {58/255,110/255,165/255,1},
+    healthColourBGOK = { 0.5, 0.5, 0.5, 1 },
+    healthColourBGHurt = { 0.5, 0.5, 0.5, 1 },
+    healthColourBGDying = { 0.5, 0.5, 0.5, 1 },
+    EMPColour = { 58 / 255, 110 / 255, 165 / 255, 1 },
     EMPLevelIgnore = 99999999999999999,
     i20 = --healthBarOutlineStyle0 =
     {
@@ -2143,20 +2145,20 @@ allied =
         placement2D =
         {
             factorX = 0,
-            factorY = 0.5, --0.8
-            plusX = 0, --0.0065
-            plusY = HEIGHT(6), --5.8 -- 6
-            factorWidth = 0.2, --1
+            factorY = 0.5,         --0.8
+            plusX = 0,             --0.0065
+            plusY = HEIGHT(6),     --5.8 -- 6
+            factorWidth = 0.2,     --1
             factorHeight = 0.0375, --0.15
-            minWidth = WIDTH(8), --10
+            minWidth = WIDTH(8),   --10
             minHeight = HEIGHT(2), --15 * 0.15,
             maxWidth = WIDTH(200), --80 -- was 150
             maxHeight = HEIGHT(4), --15 55 * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0"},
-            placementFlags = {"clampCentre"} -- originally orthogonal
-       }
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            placementFlags = { "clampCentre" } -- originally orthogonal
+        }
     },
     i21 = --healthBarStyle0 =
     {
@@ -2166,21 +2168,21 @@ allied =
         placement2D =
         {
             factorX = 0,
-            factorY = 0.5, --0.8
-            plusX = 0, --0.0065 0.0035
-            plusY = HEIGHT(6), --6
-            factorWidth = 0.2, -- 0.8 1
+            factorY = 0.5,         --0.8
+            plusX = 0,             --0.0065 0.0035
+            plusY = HEIGHT(6),     --6
+            factorWidth = 0.2,     -- 0.8 1
             factorHeight = 0.0375, --0.15
-            minWidth = WIDTH(8), --10
+            minWidth = WIDTH(8),   --10
             minHeight = HEIGHT(2), --15 * 0.15,
-            maxWidth = WIDTH(200),--80 -- was 150
+            maxWidth = WIDTH(200), --80 -- was 150
             maxHeight = HEIGHT(4), --15 55 * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
             --visibility0 = {"AVF_Selected", "AVF_MainGameView", "AVF_SquadLeader", "AVF_HealthBarStyle0"},
-            visibility0 = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0"},
+            visibility0 = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle0" },
             --invisibility1 = {"AVF_CohesiveSquad"},
-            placementFlags = {"clampCentre"} -- originally orthogonal
+            placementFlags = { "clampCentre" } -- originally orthogonal
         }
     },
     i24 = --healthBarOutlineStyle1 =
@@ -2190,19 +2192,19 @@ allied =
         placement2D =
         {
             factorX = 0,
-            factorY = 0.5, --0.8
+            factorY = 0.5,         --0.8
             plusX = 0,
-            plusY = HEIGHT(6), --7.8
-            factorWidth = 0.8, -- 0
-            factorHeight = 0.10, -- 0.15
-            minWidth = WIDTH(15), --35
+            plusY = HEIGHT(6),     --7.8
+            factorWidth = 0.8,     -- 0
+            factorHeight = 0.10,   -- 0.15
+            minWidth = WIDTH(15),  --35
             minHeight = HEIGHT(2), --4 --8 --15 --* 0.15,
             maxWidth = WIDTH(135), --35 -- 55 -- was 150
             maxHeight = HEIGHT(4), --8 -- 55 -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-            placementFlags = {"clampCentre"}
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" }
         }
     },
     i25 = --healthBarStyle1 =
@@ -2213,19 +2215,19 @@ allied =
         placement2D =
         {
             factorX = 0,
-            factorY = 0.5, --0.8
+            factorY = 0.5,         --0.8
             plusX = 0,
-            plusY = HEIGHT(6), --8
-            factorWidth = 0.8, -- 0
-            factorHeight = 0.10, -- 0.15
-            minWidth = WIDTH(15), --35
+            plusY = HEIGHT(6),     --8
+            factorWidth = 0.8,     -- 0
+            factorHeight = 0.10,   -- 0.15
+            minWidth = WIDTH(15),  --35
             minHeight = HEIGHT(2), --4 --8 --15 --* 0.15,
             maxWidth = WIDTH(135), --35 -- 55 -- was 150
             maxHeight = HEIGHT(4), --8 -- 55 -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-            placementFlags = {"clampCentre"}
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" }
         }
     },
     i26 = --healthBarOutlineStyle2 =
@@ -2235,19 +2237,19 @@ allied =
         placement2D =
         {
             factorX = 0,
-            factorY = 0, --0.8
-            plusX = 0.0935, --0.0835 --0
-            plusY = HEIGHT(24), --7.8
-            factorWidth = 0, --0.8 -- 0
-            factorHeight = 0, --0.10 -- 0.15
+            factorY = 0,           --0.8
+            plusX = 0.0935,        --0.0835 --0
+            plusY = HEIGHT(24),    --7.8
+            factorWidth = 0,       --0.8 -- 0
+            factorHeight = 0,      --0.10 -- 0.15
             minWidth = WIDTH(120), --100 --155
             minHeight = HEIGHT(4), --8 --15  --* 0.15,
             maxWidth = WIDTH(200), --100 -- 55 -- was 150
             maxHeight = HEIGHT(4), --35 -- 55 -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            placementFlags = {"clampCentre"}
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" }
         }
     },
     i27 = --healthBarStyle2 =
@@ -2258,19 +2260,19 @@ allied =
         placement2D =
         {
             factorX = 0,
-            factorY = 0, --0.8
-            plusX = 0.0935, --0.0835 --0
-            plusY = HEIGHT(24), --8
-            factorWidth = 0, --0.8 -- 0
-            factorHeight = 0, --0.10 -- 0.15
+            factorY = 0,           --0.8
+            plusX = 0.0935,        --0.0835 --0
+            plusY = HEIGHT(24),    --8
+            factorWidth = 0,       --0.8 -- 0
+            factorHeight = 0,      --0.10 -- 0.15
             minWidth = WIDTH(120), --100 --55
             minHeight = HEIGHT(4), --15 --* 0.15,
             maxWidth = WIDTH(200), --100 -- 55 -- was 150
             maxHeight = HEIGHT(4), --35 -- 55 -- * 0.15, -- was 150
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            placementFlags = {"clampCentre"}
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" }
         }
     },
 
@@ -2278,9 +2280,9 @@ allied =
     {
         mesh =
         {
-            colour = {1,0.9,0.2,1.0}, --{0,0.8,0.2,0.5},{1,0.9,0.2,1.0},
+            colour = { 1, 0.9, 0.2, 1.0 }, --{0,0.8,0.2,0.5},{1,0.9,0.2,1.0},
             lineWeight = 1.0,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 1, "UI\\Pings\\Meshes\\Pointer00.hod",
@@ -2288,20 +2290,20 @@ allied =
         },
         placement2D =
         {
-            factorX = 0, --0 (good)
-            factorY = 0, --0 (good)
-            plusX = WIDTH(16), -- 16 (good) -- 16
+            factorX = 0,        --0 (good)
+            factorY = 0,        --0 (good)
+            plusX = WIDTH(16),  -- 16 (good) -- 16
             plusY = HEIGHT(15), -- 15 (good) -- 6
             factorWidth = 1,
-            factorHeight = 1, -- 1
+            factorHeight = 1,   -- 1
             minWidth = WIDTH(32),
             minHeight = HEIGHT(20),
             maxWidth = WIDTH(32),
             maxHeight = HEIGHT(20),
             minATIArea = TINY, -- 0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-	        placementFlags = {"clampCentre"}, -- originally not present (but good idea though!) -- placementFlags = ("orthogonal"), --
+            visibility = { "AVF_Selected", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" }, -- originally not present (but good idea though!) -- placementFlags = ("orthogonal"), --
         },
     },
 
@@ -2310,9 +2312,9 @@ allied =
         stringParam = API_ShipName,
         text =
         {
-            colour = {1,1,1,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 1, 1, 1 },
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -2334,20 +2336,20 @@ allied =
             maxHeight = 1,
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_PlayerName", "AVF_SquadLeader"},
-            placementFlags = {"attachToMouse"},
+            visibility = { "AVF_PlayerName", "AVF_SquadLeader" },
+            placementFlags = { "attachToMouse" },
         }
     },
 
     playerName =
     {
         stringParam = API_PlayerName,
-     --   colourParam = API_PlayerColour, --API_PlayerColour,
+        --   colourParam = API_PlayerColour, --API_PlayerColour,
         text =
         {
-            colour = {1,1,0,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 1, 0, 1 },
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -2369,17 +2371,17 @@ allied =
             maxHeight = 1,
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_PlayerName", "AVF_SquadLeader"},
-            placementFlags = {"attachToMouse"},
+            visibility = { "AVF_PlayerName", "AVF_SquadLeader" },
+            placementFlags = { "attachToMouse" },
         }
     },
     i40 = --captureOutline2 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -2392,16 +2394,16 @@ allied =
             factorY = 0.5, -- -1 -- 0.8-- -0.8
             plusX = 0,
             plusY = 0,
-            factorWidth = 0.8, -- 0.07--0.8
-            factorHeight = 0.1, -- 0.07 --0.10-- 0
-            minWidth = WIDTH(15), --15 --(0.125),
+            factorWidth = 0.8,     -- 0.07--0.8
+            factorHeight = 0.1,    -- 0.07 --0.10-- 0
+            minWidth = WIDTH(15),  --15 --(0.125),
             minHeight = HEIGHT(2), --8 -- 15--(0.125),
             maxWidth = WIDTH(135), -- 55 -- HUGE,
             maxHeight = HEIGHT(4), --4 --35 -- * 0.15,-- HUGE,
-            minATIArea = TINY, --LOD0
+            minATIArea = TINY,     --LOD0
             maxATIArea = HUGE,
-            visibility = {"AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-	        placementFlags = {"clampCentre"},
+            visibility = { "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" },
         }
     },
     i41 = --captureContents2 =
@@ -2411,7 +2413,7 @@ allied =
         {
             colour = CaptureColour,
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -2423,15 +2425,15 @@ allied =
             factorY = 0.5, -- -1--0.8 -- -0.8
             plusX = 0,
             plusY = 0,
-            factorWidth = 0.8, --0.07
-            factorHeight = 0.1, --0.07 -- 0
-            minWidth = WIDTH(15), --65 --(0.125),
+            factorWidth = 0.8,     --0.07
+            factorHeight = 0.1,    --0.07 -- 0
+            minWidth = WIDTH(15),  --65 --(0.125),
             minHeight = HEIGHT(2), --2 --(0.125),
             maxWidth = WIDTH(135), --65 -- HUGE,
             maxHeight = HEIGHT(4), --8 --* 0.15,-- HUGE,
-            minATIArea = TINY, --LOD0
+            minATIArea = TINY,     --LOD0
             maxATIArea = HUGE,
-            visibility = {"AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle1"},
+            visibility = { "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle1" },
         }
     },
 
@@ -2439,9 +2441,9 @@ allied =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -2451,20 +2453,20 @@ allied =
         placement2D =
         {
             factorX = 0,
-            factorY = 0, -- -1 -- 0.8-- -0.8
+            factorY = 0,           -- -1 -- 0.8-- -0.8
             plusX = 0.0935,
-            plusY = HEIGHT(18), --50.8 -- -24.8
-            factorWidth = 0, -- 0.07--0.8
-            factorHeight = 0, -- 0.07 --0.10-- 0
+            plusY = HEIGHT(18),    --50.8 -- -24.8
+            factorWidth = 0,       -- 0.07--0.8
+            factorHeight = 0,      -- 0.07 --0.10-- 0
             minWidth = WIDTH(120), --15 --(0.125),
             minHeight = HEIGHT(4), --8 -- 15--(0.125),
             maxWidth = WIDTH(200), -- 55 -- HUGE,
             maxHeight = HEIGHT(4), --4 --35 -- * 0.15,-- HUGE,
-            minATIArea = TINY, --LOD0
+            minATIArea = TINY,     --LOD0
             maxATIArea = HUGE,
-            visibility = {"AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility = { "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
     i43 = --captureContents3 =
     {
@@ -2473,7 +2475,7 @@ allied =
         {
             colour = CaptureColour,
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -2482,19 +2484,19 @@ allied =
         placement2D =
         {
             factorX = 0,
-            factorY = 0, -- -1--0.8 -- -0.8
+            factorY = 0,           -- -1--0.8 -- -0.8
             plusX = 0.0935,
-            plusY = HEIGHT(18), --51
-            factorWidth = 0, --0.07
-            factorHeight = 0, --0.07 -- 0
+            plusY = HEIGHT(18),    --51
+            factorWidth = 0,       --0.07
+            factorHeight = 0,      --0.07 -- 0
             minWidth = WIDTH(120), --65 --(0.125),
             minHeight = HEIGHT(4), --2 --(0.125),
             maxWidth = WIDTH(200), --65 -- HUGE,
             maxHeight = HEIGHT(4), --8 --* 0.15,-- HUGE,
-            minATIArea = TINY, --LOD0
+            minATIArea = TINY,     --LOD0
             maxATIArea = HUGE,
-            visibility = {"AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-	        placementFlags = {"clampCentre"}  -- originally not present
+            visibility = { "AVF_Capture", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" } -- originally not present
         }
     },
 
@@ -2502,9 +2504,9 @@ allied =
     {
         mesh =
         {
-            colour = {0.0, 1.0, 1.0, 1.0},
+            colour = { 0.0, 1.0, 1.0, 1.0 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD0, "UI\\ATI\\Meshes\\SelectingOutline.hod",
@@ -2522,7 +2524,7 @@ allied =
             minHeight = HEIGHT(2),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selecting"},
+            visibility = { "AVF_Selecting" },
             --invisibility = {"AVF_SquadLeader"},
         },
     },
@@ -2536,28 +2538,28 @@ allied =
             factorY = 0,
             plusX = 0,
             plusY = 0,
-            factorWidth = 1, --1
-            factorHeight = 1, --1
-            minWidth = WIDTH(8), -- WIDTH(8),
+            factorWidth = 1,       --1
+            factorHeight = 1,      --1
+            minWidth = WIDTH(8),   -- WIDTH(8),
             minHeight = HEIGHT(8), -- HEIGHT(8),
-            maxWidth = 1, --HUGE
-            maxHeight = 1, --HUGE
+            maxWidth = 1,          --HUGE
+            maxHeight = 1,         --HUGE
             minATIArea = 0,
             maxATIArea = HUGE,
-            visibility = {"AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_SquadLeader"},
-            invisibility = {"AVF_TO_DistantTOs"},
-            visibility1 = {"AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs", "AVF_SquadLeader"},
-            placementFlags = {"orthogonal"}, -- orthogonal
-            placementFlags = {"orthogonal"}, -- orthogonal
+            visibility = { "AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_SquadLeader" },
+            invisibility = { "AVF_TO_DistantTOs" },
+            visibility1 = { "AVF_SMBlinkOn", "AVF_TacticalOverlay", "AVF_MouseOver", "AVF_TO_DistantTOs", "AVF_SquadLeader" },
+            placementFlags = { "orthogonal" }, -- orthogonal
+            placementFlags = { "orthogonal" }, -- orthogonal
         },
     },
-    i50 =--auxiliaryPowerOutline0 =
+    i50 = --auxiliaryPowerOutline0 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -2578,10 +2580,10 @@ allied =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle0" },
-            visibility1 = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle0" },
-            placementFlags = {"clampCentre"}
-	    }
+            visibility = { "AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            visibility1 = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            placementFlags = { "clampCentre" }
+        }
     },
     i51 = --auxiliaryPowerContents0 =
     {
@@ -2590,7 +2592,7 @@ allied =
         mesh =
         {
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -2610,19 +2612,19 @@ allied =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle0"},
-            visibility1 = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle0"},
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility = { "AVF_Selected", "AVF_AuxiliaryPower", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            visibility1 = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle0" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
 
     i52 = --auxiliaryPowerOutline1 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -2643,9 +2645,9 @@ allied =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility1 = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle1" },
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility1 = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
     i53 = --auxiliaryPowerContents1 =
     {
@@ -2654,7 +2656,7 @@ allied =
         mesh =
         {
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -2674,18 +2676,18 @@ allied =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility1 = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle1"},
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility1 = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle1" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
 
     i54 = --auxiliaryPowerOutline2 =
     {
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -2706,8 +2708,8 @@ allied =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle2" },
-	        placementFlags = {"clampCentre"} -- originally not present
+            visibility = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" } -- originally not present
         }
     },
     i54 = --auxiliaryPowerContents2 =
@@ -2717,7 +2719,7 @@ allied =
         mesh =
         {
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -2737,9 +2739,9 @@ allied =
             maxHeight = HEIGHT(4),
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle2"},
-            placementFlags = {"clampCentre"} -- originally not present
-	    }
+            visibility = { "AVF_Selected", "AVF_EMPShield", "AVF_MainGameView", "AVF_HealthBarStyle2" },
+            placementFlags = { "clampCentre" } -- originally not present
+        }
     },
 
 }
@@ -2747,22 +2749,22 @@ allied =
 -----------------------------------------------------------------------------
 --ATISubSystemFriendly:
 -----------------------------------------------------------------------------
-subsystemFriendly =
+subsystemFriendly             =
 {
     healthColourOK = FriendlyColour,
     healthColourHurt = HurtColour,
     healthColourDying = EnemyColour,
-    healthColourBGOK = {0.5, 0.5, 0.5, 1},
-    healthColourBGHurt = {0.5, 0.5, 0.5, 1},
-    healthColourBGDying = {0.5, 0.5, 0.5, 1},
+    healthColourBGOK = { 0.5, 0.5, 0.5, 1 },
+    healthColourBGHurt = { 0.5, 0.5, 0.5, 1 },
+    healthColourBGDying = { 0.5, 0.5, 0.5, 1 },
     i00 = --healthOutline =
     {
         colourParam = API_HealthBackgroundColour,
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -2775,7 +2777,7 @@ subsystemFriendly =
             factorY = 0, -- -1
             plusX = WIDTH(46),
             plusY = HEIGHT(38),
-            factorWidth = 0.2, --0.8
+            factorWidth = 0.2,     --0.8
             factorHeight = 0.0375, --0
             minWidth = WIDTH(20),
             minHeight = HEIGHT(3),
@@ -2783,10 +2785,10 @@ subsystemFriendly =
             maxHeight = HEIGHT(3),
             minATIArea = 0, -- TINY
             maxATIArea = HUGE,
-	        visibility = {"AVF_MouseOver", "AVF_MainGameView"},
-            visibility1 = {"AVF_Selected", "AVF_MainGameView"},
-            placementFlags = {"clampCentre", "orthogonal"},
-	    }
+            visibility = { "AVF_MouseOver", "AVF_MainGameView" },
+            visibility1 = { "AVF_Selected", "AVF_MainGameView" },
+            placementFlags = { "clampCentre", "orthogonal" },
+        }
     },
     i01 = --healthContents =
     {
@@ -2796,7 +2798,7 @@ subsystemFriendly =
         {
             colour = FriendlyColour,
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -2808,7 +2810,7 @@ subsystemFriendly =
             factorY = 0, -- -1
             plusX = WIDTH(46),
             plusY = HEIGHT(38),
-            factorWidth = 0.2, --0.8
+            factorWidth = 0.2,     --0.8
             factorHeight = 0.0375, --0
             minWidth = WIDTH(20),
             minHeight = HEIGHT(3),
@@ -2816,10 +2818,10 @@ subsystemFriendly =
             maxHeight = HEIGHT(3),
             minATIArea = 0, -- TINY
             maxATIArea = HUGE,
-	        visibility = {"AVF_MouseOver", "AVF_MainGameView"},
-            visibility1 = {"AVF_Selected", "AVF_MainGameView"},
-            placementFlags = {"clampCentre", "orthogonal"},
-	    }
+            visibility = { "AVF_MouseOver", "AVF_MainGameView" },
+            visibility1 = { "AVF_Selected", "AVF_MainGameView" },
+            placementFlags = { "clampCentre", "orthogonal" },
+        }
     },
 
     circle =
@@ -2827,9 +2829,9 @@ subsystemFriendly =
         -- scaleParam = PPI_PingSize,
         mesh =
         {
-            colour = {0,0.8,0,1.0}, -- {1,0.9,0.2,1.0},
+            colour = { 0, 0.8, 0, 1.0 }, -- {1,0.9,0.2,1.0},
             lineWeight = .5,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 1, "UI\\Pings\\Meshes\\Circle00.hod",
@@ -2841,7 +2843,7 @@ subsystemFriendly =
             factorY = 0,
             plusX = 0,
             plusY = 0,
-            factorWidth = .1, --.1
+            factorWidth = .1,  --.1
             factorHeight = .1, --.1
             minWidth = WIDTH(8),
             minHeight = HEIGHT(8),
@@ -2849,18 +2851,18 @@ subsystemFriendly =
             maxHeight = HEIGHT(75),
             minATIArea = 0, --TINY, 0
             maxATIArea = HUGE,
-            visibility = {"AVF_MouseOver", "AVF_MainGameView"},
-            visibility1 = {"AVF_Selected", "AVF_MainGameView"},
-            placementFlags = {"clampCentre", "orthogonal"},
-	    },
-	},
+            visibility = { "AVF_MouseOver", "AVF_MainGameView" },
+            visibility1 = { "AVF_Selected", "AVF_MainGameView" },
+            placementFlags = { "clampCentre", "orthogonal" },
+        },
+    },
     subsystempointer = -- originally just "pointer"
     {
         mesh =
         {
-            colour = {0,0.8,0,1.0}, --{1,0.9,0.2,1.0},{0,0.8,0.2,0.5},
+            colour = { 0, 0.8, 0, 1.0 }, --{1,0.9,0.2,1.0},{0,0.8,0.2,0.5},
             lineWeight = 1.0,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 1, "UI\\Pings\\Meshes\\Pointer00.hod",
@@ -2868,21 +2870,21 @@ subsystemFriendly =
         },
         placement2D =
         {
-            factorX = 0, --0 (good)
-            factorY = 0, --0 (good)
-            plusX = WIDTH(18), -- 16 (good) -- 16
+            factorX = 0,        --0 (good)
+            factorY = 0,        --0 (good)
+            plusX = WIDTH(18),  -- 16 (good) -- 16
             plusY = HEIGHT(20), -- 15 (good) -- 6
-            factorWidth = 0, --1
-            factorHeight = 0, -- 1
+            factorWidth = 0,    --1
+            factorHeight = 0,   -- 1
             minWidth = WIDTH(32),
             minHeight = HEIGHT(35),
             maxWidth = WIDTH(32),
             maxHeight = HEIGHT(35),
             minATIArea = 0, -- TINY, 0
             maxATIArea = HUGE,
-            visibility = {"AVF_MouseOver", "AVF_MainGameView"},
-            visibility1 = {"AVF_Selected", "AVF_MainGameView"},
-            placementFlags = {"clampCentre"}, -- originally not present (but good idea though!) -- placementFlags = ("orthogonal"), --
+            visibility = { "AVF_MouseOver", "AVF_MainGameView" },
+            visibility1 = { "AVF_Selected", "AVF_MainGameView" },
+            placementFlags = { "clampCentre" }, -- originally not present (but good idea though!) -- placementFlags = ("orthogonal"), --
         },
     },
     shipsubsystemName =
@@ -2890,9 +2892,9 @@ subsystemFriendly =
         stringParam = API_ShipName,
         text =
         {
-            colour = {1,1,1,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 1, 1, 1 },
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -2906,7 +2908,7 @@ subsystemFriendly =
             factorY = -1,
             plusX = 0,
             plusY = HEIGHT(-40),
-            factorWidth = 0, --0
+            factorWidth = 0,  --0
             factorHeight = 0, --0
             minWidth = WIDTH(4),
             minHeight = HEIGHT(4),
@@ -2914,17 +2916,17 @@ subsystemFriendly =
             maxHeight = 1,
             minATIArea = 0, --TINY
             maxATIArea = HUGE,
-            visibility1 = {"AVF_PlayerName", "AVF_MainGameView", "AVF_MouseOver"},
-            placementFlags = {"attachToMouse"},
+            visibility1 = { "AVF_PlayerName", "AVF_MainGameView", "AVF_MouseOver" },
+            placementFlags = { "attachToMouse" },
         }
     },
     selectingOutline =
     {
         mesh =
         {
-            colour = {0.0, 1.0, 1.0, 1.0},
+            colour = { 0.0, 1.0, 1.0, 1.0 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD0, "UI\\ATI\\Meshes\\SelectingOutline.hod",
@@ -2942,7 +2944,7 @@ subsystemFriendly =
             minHeight = HEIGHT(2),
             minATIArea = 0, --TINY
             maxATIArea = HUGE,
-            visibility = {"AVF_Selecting"},
+            visibility = { "AVF_Selecting" },
         },
     },
 }
@@ -2950,22 +2952,22 @@ subsystemFriendly =
 -----------------------------------------------------------------------------
 --ATISubSystemEnemy:
 -----------------------------------------------------------------------------
-subsystemEnemy =
+subsystemEnemy                =
 {
     healthColourOK = EnemyColour,
     healthColourHurt = EnemyColourHurt,
     healthColourDying = EnemyColourDying,
-    healthColourBGOK = {0.5, 0.5, 0.5, 1},
-    healthColourBGHurt = {0.5, 0.5, 0.5, 1},
-    healthColourBGDying = {0.5, 0.5, 0.5, 1},
+    healthColourBGOK = { 0.5, 0.5, 0.5, 1 },
+    healthColourBGHurt = { 0.5, 0.5, 0.5, 1 },
+    healthColourBGDying = { 0.5, 0.5, 0.5, 1 },
     i00 = --healthOutline =
     {
-    	-- colourParam = API_HealthBackgroundColour, -- originally not present
+        -- colourParam = API_HealthBackgroundColour, -- originally not present
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -2977,7 +2979,7 @@ subsystemEnemy =
             factorY = 0, -- -1
             plusX = WIDTH(46),
             plusY = HEIGHT(38),
-            factorWidth = 0.2, --0.8
+            factorWidth = 0.2,     --0.8
             factorHeight = 0.0375, --0
             minWidth = WIDTH(20),
             minHeight = HEIGHT(3),
@@ -2985,20 +2987,20 @@ subsystemEnemy =
             maxHeight = HEIGHT(3),
             minATIArea = 0, -- TINY
             maxATIArea = HUGE,
-	        visibility = {"AVF_MouseOver", "AVF_MainGameView"},
-            visibility1 = {"AVF_Selected", "AVF_MainGameView"},
-            placementFlags = {"clampCentre", "orthogonal"},
+            visibility = { "AVF_MouseOver", "AVF_MainGameView" },
+            visibility1 = { "AVF_Selected", "AVF_MainGameView" },
+            placementFlags = { "clampCentre", "orthogonal" },
         }
     },
     i01 = --healthContents =
     {
-    	-- colourParam = API_HealthColour, -- originally not present
+        -- colourParam = API_HealthColour, -- originally not present
         floatParam = API_CurrentHealth,
         mesh =
         {
             colour = EnemyColour,
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -3010,7 +3012,7 @@ subsystemEnemy =
             factorY = 0, -- -1
             plusX = WIDTH(46),
             plusY = HEIGHT(38),
-            factorWidth = 0.2, --0.8
+            factorWidth = 0.2,     --0.8
             factorHeight = 0.0375, --0
             minWidth = WIDTH(20),
             minHeight = HEIGHT(3),
@@ -3018,9 +3020,9 @@ subsystemEnemy =
             maxHeight = HEIGHT(3),
             minATIArea = 0, -- TINY
             maxATIArea = HUGE,
-	        visibility = {"AVF_MouseOver", "AVF_MainGameView"},
-            visibility1 = {"AVF_Selected", "AVF_MainGameView"},
-            placementFlags = {"clampCentre", "orthogonal"},
+            visibility = { "AVF_MouseOver", "AVF_MainGameView" },
+            visibility1 = { "AVF_Selected", "AVF_MainGameView" },
+            placementFlags = { "clampCentre", "orthogonal" },
         }
     },
 
@@ -3029,9 +3031,9 @@ subsystemEnemy =
         -- scaleParam = PPI_PingSize,
         mesh =
         {
-            colour = {0.8,0,0,1}, -- {1,0.9,0.2,1.0},
+            colour = { 0.8, 0, 0, 1 }, -- {1,0.9,0.2,1.0},
             lineWeight = .5,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 1, "UI\\Pings\\Meshes\\Circle00.hod",
@@ -3043,7 +3045,7 @@ subsystemEnemy =
             factorY = 0,
             plusX = 0,
             plusY = 0,
-            factorWidth = .1, --.1
+            factorWidth = .1,  --.1
             factorHeight = .1, --.1
             minWidth = WIDTH(8),
             minHeight = HEIGHT(8),
@@ -3051,18 +3053,18 @@ subsystemEnemy =
             maxHeight = HEIGHT(75),
             minATIArea = 0, -- TINY, 0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView"},
-            visibility1 = {"AVF_MouseOver", "AVF_MainGameView"},
-            placementFlags = {"clampCentre", "orthogonal"},
+            visibility = { "AVF_Selected", "AVF_MainGameView" },
+            visibility1 = { "AVF_MouseOver", "AVF_MainGameView" },
+            placementFlags = { "clampCentre", "orthogonal" },
         },
-	},
+    },
     subsystempointer = -- originally just "pointer"
     {
         mesh =
         {
-            colour = {0.8,0,0,1.0}, --{1,0.9,0.2,1.0},{0,0.8,0.2,0.5},{1,0.9,0.2,1.0},
+            colour = { 0.8, 0, 0, 1.0 }, --{1,0.9,0.2,1.0},{0,0.8,0.2,0.5},{1,0.9,0.2,1.0},
             lineWeight = 1.0,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 1, "UI\\Pings\\Meshes\\Pointer00.hod",
@@ -3070,21 +3072,21 @@ subsystemEnemy =
         },
         placement2D =
         {
-            factorX = 0, --0 (good)
-            factorY = 0, --0 (good)
-            plusX = WIDTH(18), -- 16 (good) -- 16
+            factorX = 0,        --0 (good)
+            factorY = 0,        --0 (good)
+            plusX = WIDTH(18),  -- 16 (good) -- 16
             plusY = HEIGHT(20), -- 15 (good) -- 6
-            factorWidth = 0, --1
-            factorHeight = 0, -- 1
+            factorWidth = 0,    --1
+            factorHeight = 0,   -- 1
             minWidth = WIDTH(32),
             minHeight = HEIGHT(35),
             maxWidth = WIDTH(32),
             maxHeight = HEIGHT(35),
             minATIArea = 0, -- TINY, 0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView"},
-            visibility1 = {"AVF_MouseOver", "AVF_MainGameView"},
-    	    placementFlags = {"clampCentre"}, -- originally not present (but good idea though!) -- placementFlags = ("orthogonal"), --
+            visibility = { "AVF_Selected", "AVF_MainGameView" },
+            visibility1 = { "AVF_MouseOver", "AVF_MainGameView" },
+            placementFlags = { "clampCentre" }, -- originally not present (but good idea though!) -- placementFlags = ("orthogonal"), --
         },
     },
 
@@ -3093,9 +3095,9 @@ subsystemEnemy =
         stringParam = API_ShipName,
         text =
         {
-            colour = {1,1,1,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 1, 1, 1 },
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -3109,7 +3111,7 @@ subsystemEnemy =
             factorY = -1,
             plusX = 0,
             plusY = HEIGHT(-40),
-            factorWidth = 0, --0
+            factorWidth = 0,  --0
             factorHeight = 0, --0
             minWidth = WIDTH(4),
             minHeight = HEIGHT(4),
@@ -3117,8 +3119,8 @@ subsystemEnemy =
             maxHeight = 1,
             minATIArea = 0, -- TINY
             maxATIArea = HUGE,
-            visibility = {"AVF_PlayerName", "AVF_MouseOver", "AVF_MainGameView"},
-            placementFlags = {"attachToMouse"},
+            visibility = { "AVF_PlayerName", "AVF_MouseOver", "AVF_MainGameView" },
+            placementFlags = { "attachToMouse" },
         }
     },
 
@@ -3128,9 +3130,9 @@ subsystemEnemy =
         -- colourParam = API_PlayerColour,
         text =
         {
-            colour = {1,0,0,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 0, 0, 1 },
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -3152,17 +3154,17 @@ subsystemEnemy =
             maxHeight = 1,
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_PlayerName", "AVF_MouseOver", "AVF_MainGameView"},
-            placementFlags = {"attachToMouse"},
+            visibility = { "AVF_PlayerName", "AVF_MouseOver", "AVF_MainGameView" },
+            placementFlags = { "attachToMouse" },
         }
     },
     selectingOutline =
     {
         mesh =
         {
-            colour = {0.0, 1.0, 1.0, 1.0},
+            colour = { 0.0, 1.0, 1.0, 1.0 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD0, "UI\\ATI\\Meshes\\SelectingOutline.hod",
@@ -3180,7 +3182,7 @@ subsystemEnemy =
             minHeight = HEIGHT(2),
             minATIArea = 0, -- TINY
             maxATIArea = HUGE,
-            visibility = {"AVF_Selecting"},
+            visibility = { "AVF_Selecting" },
         },
     },
 }
@@ -3188,22 +3190,22 @@ subsystemEnemy =
 -----------------------------------------------------------------------------
 --ATISubSystemAllied:
 -----------------------------------------------------------------------------
-subsystemAllied =
+subsystemAllied               =
 {
     healthColourOK = AlliedColour,
     healthColourHurt = AlliedColourHurt,
     healthColourDying = AlliedColourDying,
-    healthColourBGOK = {0.5, 0.5, 0.5, 1},
-    healthColourBGHurt = {0.5, 0.5, 0.5, 1},
-    healthColourBGDying = {0.5, 0.5, 0.5, 1},
+    healthColourBGOK = { 0.5, 0.5, 0.5, 1 },
+    healthColourBGHurt = { 0.5, 0.5, 0.5, 1 },
+    healthColourBGDying = { 0.5, 0.5, 0.5, 1 },
     i00 = --healthOutline =
     {
-    	-- colourParam = API_HealthBackgroundColour, -- originally not present
+        -- colourParam = API_HealthBackgroundColour, -- originally not present
         mesh =
         {
-            colour = {0.5, 0.5, 0.5, 1},
+            colour = { 0.5, 0.5, 0.5, 1 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod",
@@ -3216,7 +3218,7 @@ subsystemAllied =
             factorY = 0, -- -1
             plusX = WIDTH(46),
             plusY = HEIGHT(38),
-            factorWidth = 0.2, --0.8
+            factorWidth = 0.2,     --0.8
             factorHeight = 0.0375, --0
             minWidth = WIDTH(20),
             minHeight = HEIGHT(3),
@@ -3224,20 +3226,20 @@ subsystemAllied =
             maxHeight = HEIGHT(3),
             minATIArea = 0, -- TINY
             maxATIArea = HUGE,
-	        visibility = {"AVF_MouseOver", "AVF_MainGameView"},
-            visibility1 = {"AVF_Selected", "AVF_MainGameView"},
-            placementFlags = {"clampCentre", "orthogonal"},
+            visibility = { "AVF_MouseOver", "AVF_MainGameView" },
+            visibility1 = { "AVF_Selected", "AVF_MainGameView" },
+            placementFlags = { "clampCentre", "orthogonal" },
         }
     },
     i01 = --healthContents =
     {
-    	-- colourParam = API_HealthColour, -- originally not present
+        -- colourParam = API_HealthColour, -- originally not present
         floatParam = API_CurrentHealth,
         mesh =
         {
             colour = AlliedColour,
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY", "clipRight"},
+            renderFlags = { "scaleX", "scaleY", "clipRight" },
             LODs =
             {
                 LOD2, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -3249,7 +3251,7 @@ subsystemAllied =
             factorY = 0, -- -1
             plusX = WIDTH(46),
             plusY = HEIGHT(38),
-            factorWidth = 0.2, --0.8
+            factorWidth = 0.2,     --0.8
             factorHeight = 0.0375, --0
             minWidth = WIDTH(20),
             minHeight = HEIGHT(3),
@@ -3257,9 +3259,9 @@ subsystemAllied =
             maxHeight = HEIGHT(3),
             minATIArea = 0, -- TINY
             maxATIArea = HUGE,
-	        visibility = {"AVF_MouseOver", "AVF_MainGameView"},
-            visibility1 = {"AVF_Selected", "AVF_MainGameView"},
-            placementFlags = {"clampCentre", "orthogonal"},
+            visibility = { "AVF_MouseOver", "AVF_MainGameView" },
+            visibility1 = { "AVF_Selected", "AVF_MainGameView" },
+            placementFlags = { "clampCentre", "orthogonal" },
         }
     },
 
@@ -3270,7 +3272,7 @@ subsystemAllied =
         {
             colour = AlliedColour, --EnemyColour, -- {1,0.9,0.2,1.0},
             lineWeight = .5,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 1, "UI\\Pings\\Meshes\\Circle00.hod",
@@ -3282,7 +3284,7 @@ subsystemAllied =
             factorY = 0,
             plusX = 0,
             plusY = 0,
-            factorWidth = .1, --.1
+            factorWidth = .1,  --.1
             factorHeight = .1, --.1
             minWidth = WIDTH(8),
             minHeight = HEIGHT(8),
@@ -3290,18 +3292,18 @@ subsystemAllied =
             maxHeight = HEIGHT(75),
             minATIArea = 0, --TINY, 0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView"},
-            visibility1 = {"AVF_MouseOver", "AVF_MainGameView"},
-            placementFlags = {"clampCentre", "orthogonal"},
-	    },
-	},
+            visibility = { "AVF_Selected", "AVF_MainGameView" },
+            visibility1 = { "AVF_MouseOver", "AVF_MainGameView" },
+            placementFlags = { "clampCentre", "orthogonal" },
+        },
+    },
     subsystempointer = -- originally just "pointer"
     {
         mesh =
         {
             colour = AlliedColour, --EnemyColour, --{1,0.9,0.2,1.0}, {0,0.8,0.2,0.5},
             lineWeight = 1.0,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 1, "UI\\Pings\\Meshes\\Pointer00.hod",
@@ -3309,21 +3311,21 @@ subsystemAllied =
         },
         placement2D =
         {
-            factorX = 0, --0 (good)
-            factorY = 0, --0 (good)
-            plusX = WIDTH(18), -- 16 (good) -- 16
+            factorX = 0,        --0 (good)
+            factorY = 0,        --0 (good)
+            plusX = WIDTH(18),  -- 16 (good) -- 16
             plusY = HEIGHT(20), -- 15 (good) -- 6
-            factorWidth = 0, --1
-            factorHeight = 0, -- 1
+            factorWidth = 0,    --1
+            factorHeight = 0,   -- 1
             minWidth = WIDTH(32),
             minHeight = HEIGHT(35),
             maxWidth = WIDTH(32),
             maxHeight = HEIGHT(35),
             minATIArea = 0, -- 0
             maxATIArea = HUGE,
-            visibility = {"AVF_Selected", "AVF_MainGameView"},
-            visibility1 = {"AVF_MouseOver", "AVF_MainGameView"},
-    	    placementFlags = {"clampCentre"}, -- originally not present (but good idea though!) -- placementFlags = ("orthogonal"), --
+            visibility = { "AVF_Selected", "AVF_MainGameView" },
+            visibility1 = { "AVF_MouseOver", "AVF_MainGameView" },
+            placementFlags = { "clampCentre" }, -- originally not present (but good idea though!) -- placementFlags = ("orthogonal"), --
         },
     },
 
@@ -3333,9 +3335,9 @@ subsystemAllied =
         stringParam = API_ShipName,
         text =
         {
-            colour = {1,1,1,1},
-            renderFlags = {"justifyHorizCentre"},
-	        dropshadow = 1,
+            colour = { 1, 1, 1, 1 },
+            renderFlags = { "justifyHorizCentre" },
+            dropshadow = 1,
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -3349,7 +3351,7 @@ subsystemAllied =
             factorY = -1,
             plusX = 0,
             plusY = HEIGHT(-40),
-            factorWidth = 0, --0
+            factorWidth = 0,  --0
             factorHeight = 0, --0
             minWidth = WIDTH(4),
             minHeight = HEIGHT(4),
@@ -3357,8 +3359,8 @@ subsystemAllied =
             maxHeight = 1,
             minATIArea = 0, -- TINY
             maxATIArea = HUGE,
-            visibility = {"AVF_MouseOver", "AVF_PlayerName", "AVF_MainGameView"},
-            placementFlags = {"attachToMouse"},
+            visibility = { "AVF_MouseOver", "AVF_PlayerName", "AVF_MainGameView" },
+            placementFlags = { "attachToMouse" },
         }
     },
     playerName =
@@ -3367,9 +3369,9 @@ subsystemAllied =
         -- colourParam = API_PlayerColour,
         text =
         {
-            colour = {1,1,0,1},
-	        dropshadow = 1,
-            renderFlags = {"justifyHorizCentre"},
+            colour = { 1, 1, 0, 1 },
+            dropshadow = 1,
+            renderFlags = { "justifyHorizCentre" },
             LODs =
             {
                 LOD0, "ATISmallFont",
@@ -3391,17 +3393,17 @@ subsystemAllied =
             maxHeight = 1,
             minATIArea = TINY,
             maxATIArea = HUGE,
-            visibility = {"AVF_MouseOver", "AVF_PlayerName", "AVF_MainGameView"},
-            placementFlags = {"attachToMouse"},
+            visibility = { "AVF_MouseOver", "AVF_PlayerName", "AVF_MainGameView" },
+            placementFlags = { "attachToMouse" },
         }
     },
     selectingOutline =
     {
         mesh =
         {
-            colour = {0.0, 1.0, 1.0, 1.0},
+            colour = { 0.0, 1.0, 1.0, 1.0 },
             lineWeight = 1,
-            renderFlags = {"scaleX", "scaleY"},
+            renderFlags = { "scaleX", "scaleY" },
             LODs =
             {
                 LOD0, "UI\\ATI\\Meshes\\SelectingOutline.hod",
@@ -3419,7 +3421,7 @@ subsystemAllied =
             minHeight = HEIGHT(2),
             minATIArea = 0, --TINY
             maxATIArea = HUGE,
-            visibility = {"AVF_Selecting"},
+            visibility = { "AVF_Selecting" },
         },
     },
 }
@@ -3427,10 +3429,10 @@ subsystemAllied =
 -----------------------------------------------------------------------------
 --healthBars: procedural health "blocks"
 -----------------------------------------------------------------------------
-healthBars =
+healthBars                    =
 {
-    {   --1 ship
-        renderFlags = {"scaleX", "scaleY", "clipRight"},
+    { --1 ship
+        renderFlags = { "scaleX", "scaleY", "clipRight" },
         LODs =
         {
             LOD3, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -3441,10 +3443,10 @@ healthBars =
 -----------------------------------------------------------------------------
 --healthBarOutlines: procedural health block outlines
 -----------------------------------------------------------------------------
-healthBarOutlines =
+healthBarOutlines             =
 {
-    {   --1 ship
-        renderFlags = {"scaleX", "scaleY"},
+    { --1 ship
+        renderFlags = { "scaleX", "scaleY" },
         LODs =
         {
             LOD3, "UI\\ATI\\Meshes\\HealthBlocks1.hod"
@@ -3455,7 +3457,7 @@ healthBarOutlines =
 -----------------------------------------------------------------------------
 --ATISphereRangeModifierAllied:
 -----------------------------------------------------------------------------
-sphereRangeModifierAllied =
+sphereRangeModifierAllied     =
 {
     -- 3D meshes are procedurally coloured for sphere range modifiers
     sphere =
@@ -3475,15 +3477,15 @@ sphereRangeModifierAllied =
         },
         placement3D =
         {
-	    visibility1 = {"AVF_TO_SphereModifier"},
-	    visibility2 = {"AVF_Selected"},
-            visibility3 = {"AVF_MouseOver"},
+            visibility1 = { "AVF_TO_SphereModifier" },
+            visibility2 = { "AVF_Selected" },
+            visibility3 = { "AVF_MouseOver" },
         }
     },
 
     spherebillboard =
     {
-     colourParam = API_CommandColour,
+        colourParam = API_CommandColour,
         scaleParam = API_Radius,
         mesh =
         {
@@ -3498,25 +3500,25 @@ sphereRangeModifierAllied =
         },
         placement3D =
         {
-	        placementFlags = {"sprite3Axis"}, -- billboard this ring
-	        visibility1 = {"AVF_TO_SphereModifier"},
-	        visibility2 = {"AVF_Selected"},
-            visibility3 = {"AVF_MouseOver"},
-	    },
+            placementFlags = { "sprite3Axis" }, -- billboard this ring
+            visibility1 = { "AVF_TO_SphereModifier" },
+            visibility2 = { "AVF_Selected" },
+            visibility3 = { "AVF_MouseOver" },
+        },
     },
 }
 
 -----------------------------------------------------------------------------
 --ATIRallyPoint:
 -----------------------------------------------------------------------------
-rallyPointScale = 200
-rallyPointColour = {0,1,0,1.0}
-rallyPoint =
+rallyPointScale               = 200
+rallyPointColour              = { 0, 1, 0, 1.0 }
+rallyPoint                    =
 {
     ring =
     {
-      --  colourParam = API_CommandColour,
-      --  scaleParam = API_Radius,
+        --  colourParam = API_CommandColour,
+        --  scaleParam = API_Radius,
         mesh =
         {
             colour = rallyPointColour,
@@ -3528,7 +3530,7 @@ rallyPoint =
         },
         placement3D =
         {
-            scale = {rallyPointScale * 0.75, rallyPointScale * 0.5, rallyPointScale * 0.75},
+            scale = { rallyPointScale * 0.75, rallyPointScale * 0.5, rallyPointScale * 0.75 },
             visibility = {},
         }
     },
@@ -3545,10 +3547,9 @@ rallyPoint =
         },
         placement3D =
         {
-            scale = {rallyPointScale, rallyPointScale, rallyPointScale},
-            placementFlags = {"spriteYAxis"},
+            scale = { rallyPointScale, rallyPointScale, rallyPointScale },
+            placementFlags = { "spriteYAxis" },
             visibility = {},
         }
     },
 }
-
