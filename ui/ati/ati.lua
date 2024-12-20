@@ -29,16 +29,16 @@
 --
 
 --basic colours
-FriendlyColour    = { 1, 1, 1, 1 }
-AlliedColour      = { 0, 1, 1, 1.0 }
-AlliedColourHurt  = { 215 / 255, 205 / 255, 0, 1 }
-AlliedColourDying = { 205 / 255, 205 / 255, 0, 1 }
-EnemyColour       = { 1, 0.025, 0, 1.0 }
-EnemyColourHurt   = { 205 / 255, 0, 0, 1 }
-EnemyColourDying  = { 165 / 255, 0, 0, 1 }
-FriendlyColourFar = { 0, 1, 0, 0.5 }
-AlliedColourFar   = { 1, 1, 0, 0.5 }
-EnemyColourFar    = { 1, 0, 0, 0.5 }
+FriendlyColour    = { 30 / 255, 252 / 255, 163 / 255, 1 } -- "green-ish"
+AlliedColour      = { 183 / 255, 230 / 255, 30 / 255, 1.0 } -- "yellow-ish"
+AlliedColourHurt  = { 215 / 255, 205 / 255, 0, 1 } -- "yellow-ish"
+AlliedColourDying = { 205 / 255, 205 / 255, 0, 1 } -- "yellow-ish"
+EnemyColour       = { 252 / 255, 30 / 255, 141 / 255, 1.0 } -- "red-ish"
+EnemyColourHurt   = { 205 / 255, 0, 0, 1 } -- "red-ish"
+EnemyColourDying  = { 165 / 255, 0, 0, 1 } -- "red-ish"
+FriendlyColourFar = { 30 / 255, 252 / 255, 163 / 255, 0.5 } -- "green-ish"
+AlliedColourFar   = { 183 / 255, 230 / 255, 30 / 255, 0.5 } -- "yellow-ish"
+EnemyColourFar    = { 252 / 255, 30 / 255, 141 / 255, 0.5 } -- "red-ish"
 ResourceTOColour  = { 1, 1, 0, 1.0 }
 Procedural        = { 0, 0, 0, 0 }
 ResourceColour    = { 1.0, 1.0, 0.0, 1.0 }
