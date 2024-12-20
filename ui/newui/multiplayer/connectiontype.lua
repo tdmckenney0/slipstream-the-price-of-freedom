@@ -4,7 +4,7 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 WIDTH = 300
-HEIGHT = 121
+HEIGHT = 100
 ConnectionType =
 {
     size =
