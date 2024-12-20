@@ -96,38 +96,6 @@ GameSetup =
 },
 {
     type = "Frame",
-    BackgroundGraphic =
-    {
-        type = "Graphic",
-        size =
-            { 128, 32, },
-        texture = "Data:UI\\NewUI\\Network\\gamespy.mres",
-        textureUV =
-            { 0, 0, 128, 32, }, },
-    position =
-        { 656, 9, },
-    size =
-        { 128, 32, },
-    name = "frmgr1gamespytga",
-},
-{
-    type = "Frame",
-    BackgroundGraphic =
-    {
-        type = "Graphic",
-        size =
-            { 128, 35, },
-        texture = "Data:UI\\NewUI\\Network\\relic.mres",
-        textureUV =
-            { 0, 0, 128, 35, }, },
-    position =
-        { 656, 5, },
-    size =
-        { 128, 35, },
-    name = "frmgr1relictgaLAN",
-},
-{
-    type = "Frame",
     name = "frmSkirmish",
 	backgroundColor = "FEColorBackground1",
 	outerBorderWidth = 1,
