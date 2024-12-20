@@ -12,8 +12,8 @@ NewMainMenu =
    type = "Frame",
    name = "menubox",
    visible = 1,
-   position =  { 237, 150},
-   size = {325, 290},
+   position =  { 237, (300 - (270 / 2))},
+   size = {325, 270},
    outerBorderWidth = 1,
    borderColor = "FEColorHeading3",
    backgroundColor = "FEColorBackground1",
@@ -149,12 +149,12 @@ NewMainMenu =
 {
     type = "TextLabel",
     name = "lblVersion",
-    position = { 12, 273, },
+    position = { 12, 250, },
     size = {300, 20},
     Text =
     {
         textStyle = "FEHeading3",
-        text = "December 2024",
+        text = "v4.0",
         color = { 0, 0, 0, 255, },
         hAlign = "Center",
     },
