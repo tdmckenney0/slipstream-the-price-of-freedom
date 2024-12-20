@@ -1,0 +1,7 @@
+-- LuaDC version 0.9.20
+-- 11/4/2024 10:16:55 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+baseRes = 800
+res1600 = "data:ui/newui/ingameicons/ru_1600_tpof.tga"
