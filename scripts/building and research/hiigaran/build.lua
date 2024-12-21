@@ -310,7 +310,7 @@ build =
         RequiredResearch = "",
         RequiredShipSubSystems = "FighterProduction",
         DisplayPriority = 20,
-        DisplayedName = "$7032",
+        DisplayedName = "$7132",
         Description = "$7033",
     },
     {
