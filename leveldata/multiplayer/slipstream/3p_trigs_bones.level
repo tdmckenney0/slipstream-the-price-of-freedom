@@ -359,7 +359,7 @@ function NonDetermChunk()
   fogSetDensity (0.15)
   setGlareIntensity (0)
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground ("hwc_az_23769")
+  loadBackground ("hwc_az_23769_tinted")
   setDefaultMusic("Data:sound/music/ambient/amb_01")
   setSensorsManagerCameraDistances(50000, 90000)
 
