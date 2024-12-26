@@ -2,8 +2,8 @@ StartWeaponConfig(NewWeaponType, "Gimble", "Mine", "Hgn_Mine", "Normal", 1000, 1
 
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",4400,4400,"");
 AddWeaponResult(NewWeaponType,"Hit","Push","Target",150,150,"")
-AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"hgn_nuclearmissileblast")
-AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"hgn_nuclearmissileblast")
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"neu_nuclearblast")
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"neu_nuclearblast")
 
 setAngles(NewWeaponType,179,0,0,0,0)
 
