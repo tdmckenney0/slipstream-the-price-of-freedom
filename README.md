@@ -19,10 +19,7 @@ During the eradication of The Beast, naturally-occurring Slipgates were encounte
 The Daiamid is not exactly content with this arrangement, and frankly, neither are the various Vaygr warlords who simply want to conquer Hiigara and plunder it for themselves. However, the conquest of Hiigaran space would be extremely resource intensive and would require cooperation among the various factions of Vaygr, whom are constantly warring with each other over territory, and whom also see the Hiigarans as subdued and contained for now. It is SRI's obligation to share any discoveries made within Vaygr territory with them, but the Vaygr know that the Hiigarans do most of the advanced research work deep within their own territory, and have a better chance of reverse-engineering the occasional stray Hiigaran vessel. The benefits of this deal, and the Daiamid's reluctance to challenge the Vaygr directly, have left SRI to operate mostly without oversight deep within the more fringe regions of the galaxy where even the Vaygr do not want to venture.
 
 ### The Price of Freedom
-This political conundrum has been referred to as "the price of freedom" within the Daiamid chamber; A cold war locking themselves and the Vaygr in a perpetual staring contest until one of them blinks. 
-
- - Daiamid divided on how to proceed. 
- - 
+This political conundrum has been referred to as "the price of freedom" within the Daiamid chamber; A cold war locking themselves and the Vaygr in a perpetual staring contest until one of them blinks. Until that happens, both factions are under pressure to quickly gather resources and strengthen their forces without the other noticing. This has lead to an extremely tense and lawless borderland between the two factions, where entire fleets go missing in action; of course, destroyed in skirmishes that go completely ignored unless politically convenient. Though, that hasn't stopped the persistent and militarily minded from trying to secure resources and strategic positions in the region without repercussion. This is the true "Price of Freedom": deadlocked political machines fighting an unofficial war with no end in sight... 
 
 ## Gameplay
 
