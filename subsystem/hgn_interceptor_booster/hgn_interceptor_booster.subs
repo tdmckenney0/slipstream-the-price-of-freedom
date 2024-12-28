@@ -34,4 +34,4 @@ NewSubSystemType.AttackFamily = "UnAttackable"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"thruster","Weapon_Nozzle","Weapon_Nozzle")
+StartSubSystemWeaponConfig(NewSubSystemType,"neu_thruster","Weapon_Nozzle","Weapon_Nozzle")
