@@ -37,5 +37,5 @@ NewSubSystemType.ArmourFamily = "HeavyArmour"
 AddSubSystemMultiplier(NewSubSystemType, "Speed", "ThisShipOnly", "Linear", 1.5, 1.5, 0)
 AddSubSystemMultiplier(NewSubSystemType, "MaxSpeed", "ThisShipOnly", "Linear", 1.4, 1.3, 0)
 loadShipPatchList(NewSubSystemType, "data:sound/sfx/ship/Hiigaran/Subsystems/", 1, "HASubsystemFireControlTowerAmb")
-StartSubSystemWeaponConfig(NewSubSystemType,"Booster_rear","Weapon_Booster1","Front_Booster");
-StartSubSystemWeaponConfig(NewSubSystemType,"Booster_front","Weapon_BoosterTrigger1","Front_Booster");
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_booster_rear","Weapon_Booster1","Front_Booster");
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_booster_front","Weapon_BoosterTrigger1","Front_Booster");
