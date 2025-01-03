@@ -157,8 +157,8 @@ addAbility(NewShipType, "DefenseFieldShieldAbility", 1, 800, 0, 0)
 LoadModel(NewShipType, 1)
 
 --old Weapons
-StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Torpedo", "null")
-StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Torpedo2", "null")
+StartShipWeaponConfig(NewShipType, "hgn_minelauncher", "Weapon_Torpedo", "null")
+StartShipWeaponConfig(NewShipType, "hgn_minelauncher", "Weapon_Torpedo2", "null")
 
 --Replacement Turrets
 
@@ -166,7 +166,7 @@ StartShipHardPointConfig(NewShipType, "TurretTop", "Weapon_TurretTop", "System",
 StartShipHardPointConfig(NewShipType, "TurretBottom", "Weapon_TurretBottom", "System", "Innate", "Damageable", "hgn_battlecruiserionbeamturrettop", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretFront", "Weapon_TurretFront", "System", "Innate", "Damageable", "hgn_battlecruiserplasmaburstturret", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretBack", "Weapon_TurretBack", "System", "Innate", "Damageable", "hgn_battlecruisergatlinggunturrettop", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "TurretBottomBack", "Weapon_TurretBottomBack", "System", "Innate", "Damageable", "hgn_ioncannon", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "TurretBottomBack", "Weapon_TurretBottomBack", "System", "Innate", "Damageable", "hgn_battlecruiserminelaunchertop", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretBottomFront", "Weapon_TurretBottomFront", "System", "Innate", "Damageable", "hgn_battlecruiserplasmaburstturret", "", "", "", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T2", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
