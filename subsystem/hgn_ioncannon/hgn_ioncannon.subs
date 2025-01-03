@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_ioncannon","Weapon_Turret","Weapon_Turret");
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_ioncannonturret","Weapon_Turret","Weapon_Turret");
