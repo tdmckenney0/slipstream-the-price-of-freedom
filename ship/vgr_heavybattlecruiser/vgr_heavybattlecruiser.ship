@@ -168,14 +168,14 @@ addAbility(NewShipType, "DefenseFieldAbility", 0, 0, 800, 500, 500, 1, 10, 0, "d
 addAbility(NewShipType, "DefenseFieldShieldAbility", 1, 800, 0, 0)
 LoadModel(NewShipType, 1)
 
-StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed1", "")
-StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed2", "")
-StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed3", "")
-StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed4", "")
-StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed5", "")
-StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed6", "")
+StartShipWeaponConfig(NewShipType, "vgr_hbcforwardweapon", "Weapon_Fixed1", "")
+StartShipWeaponConfig(NewShipType, "vgr_hbcforwardweapon", "Weapon_Fixed2", "")
+StartShipWeaponConfig(NewShipType, "vgr_hbcforwardweapon", "Weapon_Fixed3", "")
+StartShipWeaponConfig(NewShipType, "vgr_hbcforwardweapon", "Weapon_Fixed4", "")
+StartShipWeaponConfig(NewShipType, "vgr_hbcforwardweapon", "Weapon_Fixed5", "")
+StartShipWeaponConfig(NewShipType, "vgr_hbcforwardweapon", "Weapon_Fixed6", "")
 
-StartShipWeaponConfig(NewShipType, "vgr_heavyfusionmissilelauncherbc", "Weapon_Missile", "")
+StartShipWeaponConfig(NewShipType, "vgr_heavyfusionmissilelauncherhbc", "Weapon_Missile", "")
 
 addShield(NewShipType, "EMP", 1000, 20)
 
@@ -189,7 +189,6 @@ StartShipHardPointConfig(NewShipType, "Hull5_Turret", "Hardpoint_Hull5_Turret", 
 StartShipHardPointConfig(NewShipType, "Hull6_Turret", "Hardpoint_Hull6_Turret", "System", "Innate", "Damageable", "vgr_pulsecannondestroyer", "", "", "", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "Booster", "Booster", "Weapon", "Innate", "Damageable", "vgr_booster", "", "", "", "", "", "", "", "")
-
 
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)
