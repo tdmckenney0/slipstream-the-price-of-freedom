@@ -157,7 +157,7 @@ LoadModel(NewShipType,1);
 
 --Weapon Systems
 
-StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Torpedo_Tube", "Weapon_Torpedo");
+StartShipWeaponConfig(NewShipType, "hgn_minelauncher", "Weapon_Torpedo_Tube", "Weapon_Torpedo");
 
 --Main Turrets
 
