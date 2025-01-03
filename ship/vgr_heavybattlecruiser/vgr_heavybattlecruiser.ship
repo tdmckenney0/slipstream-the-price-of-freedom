@@ -164,6 +164,8 @@ addAbility(NewShipType, "CanBeCaptured", 90, 0.1)
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
+addAbility(NewShipType, "DefenseFieldAbility", 0, 0, 800, 500, 500, 1, 10, 0, "defensefield_sphere_spray")
+addAbility(NewShipType, "DefenseFieldShieldAbility", 1, 800, 0, 0)
 LoadModel(NewShipType, 1)
 
 StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed1", "")
@@ -176,6 +178,8 @@ StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_Fixed6", "")
 StartShipWeaponConfig(NewShipType, "vgr_heavyfusionmissilelauncherbc", "Weapon_Missile", "")
 
 addShield(NewShipType, "EMP", 1000, 20)
+
+AddShipAbility(NewShipType, "DefenseField", 1, "ThisShipOnly", 1)
 
 StartShipHardPointConfig(NewShipType, "Hull1_Turret", "Hardpoint_Hull1_Turret", "System", "Innate", "Damageable", "vgr_pulsecannondestroyer", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Hull2_Turret", "Hardpoint_Hull2_Turret", "System", "Innate", "Damageable", "vgr_pulsecannondestroyer", "", "", "", "", "", "", "", "") 
