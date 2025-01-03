@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "Laser Cannon"
-NewSubSystemType.sobDescription = "LASER Cannon"
+NewSubSystemType.displayedName = "$2024"
+NewSubSystemType.sobDescription = "$2025"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045
