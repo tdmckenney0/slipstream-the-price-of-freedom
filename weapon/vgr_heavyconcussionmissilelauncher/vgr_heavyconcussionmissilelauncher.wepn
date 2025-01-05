@@ -3,7 +3,7 @@
 -- LuaDC by Age2uN
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
-StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Vgr_SmallMissile", "Normal", 40, 2000, 0, 0, 0, 2, 1, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0.1, "Normal", 0, 0, 0)
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","Vgr_SmallMissile","Normal",40,3000,0,0,0,2,1,0,0,2,0,0,1,1,0,0,0.1,"Normal",0,0,0)
 AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 250, 500, "")
 setPenetration(NewWeaponType, 5, 1, 
 { 
