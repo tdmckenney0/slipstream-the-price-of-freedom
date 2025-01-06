@@ -6,6 +6,30 @@ PersistantData = {
     {
       type = "vgr_heavybattlecruiser",
       subsystems = {
+        {
+          index = 0,
+          name = "vgr_pulsecannondestroyer",
+        },
+        {
+          index = 0,
+          name = "vgr_pulsecannondestroyer",
+        },
+        {
+          index = 0,
+          name = "vgr_pulsecannondestroyer",
+        },
+        {
+          index = 0,
+          name = "vgr_pulsecannondestroyer",
+        },
+        {
+          index = 0,
+          name = "vgr_pulsecannondestroyer",
+        },
+        {
+          index = 0,
+          name = "vgr_pulsecannondestroyer",
+        },
       },
       shiphold = {},
       name = "",
