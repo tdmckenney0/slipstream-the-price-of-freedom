@@ -4,7 +4,32 @@ PersistantData = {
         -- Flagship
         {
             type = "hgn_heavybattlecruiser",
-            subsystems = {},
+            subsystems = {
+                {
+                    index = 0,
+                    name = "hgn_battlecruiserionbeamturrettop",
+                },
+                {
+                    index = 0,
+                    name = "hgn_battlecruiserionbeamturrettop",
+                },
+                {
+                    index = 0,
+                    name = "hgn_battlecruiserplasmaburstturret",
+                },
+                {
+                    index = 0,
+                    name = "hgn_bc_gatlinggunturret_1",
+                },
+                {
+                    index = 0,
+                    name = "hgn_battlecruiserminelaunchertop",
+                },
+                {
+                    index = 0,
+                    name = "hgn_battlecruiserplasmaburstturret",
+                },
+            },
             shiphold = {},
             name = "",
             number = 1,

@@ -162,12 +162,12 @@ StartShipWeaponConfig(NewShipType, "hgn_minelauncher", "Weapon_Torpedo2", "null"
 
 --Replacement Turrets
 
-StartShipHardPointConfig(NewShipType, "TurretTop", "Weapon_TurretTop", "System", "Innate", "Damageable", "hgn_battlecruiserionbeamturrettop", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "TurretBottom", "Weapon_TurretBottom", "System", "Innate", "Damageable", "hgn_battlecruiserionbeamturrettop", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "TurretFront", "Weapon_TurretFront", "System", "Innate", "Damageable", "hgn_battlecruiserplasmaburstturret", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "TurretBack", "Weapon_TurretBack", "System", "Innate", "Damageable", "hgn_bc_gatlinggunturret_1", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "TurretBottomBack", "Weapon_TurretBottomBack", "System", "Innate", "Damageable", "hgn_battlecruiserminelaunchertop", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "TurretBottomFront", "Weapon_TurretBottomFront", "System", "Innate", "Damageable", "hgn_battlecruiserplasmaburstturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "TurretTop", "Weapon_TurretTop", "Weapon", "Generic", "Damageable", "", "hgn_battlecruiserionbeamturrettop", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "TurretBottom", "Weapon_TurretBottom", "Weapon", "Generic", "Damageable", "", "hgn_battlecruiserionbeamturrettop", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "TurretFront", "Weapon_TurretFront", "Weapon", "Generic", "Damageable", "", "hgn_battlecruiserplasmaburstturret", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "TurretBack", "Weapon_TurretBack", "Weapon", "Generic", "Damageable", "", "hgn_bc_gatlinggunturret_1", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "TurretBottomBack", "Weapon_TurretBottomBack", "Weapon", "Generic", "Damageable", "", "hgn_battlecruiserminelaunchertop", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "TurretBottomFront", "Weapon_TurretBottomFront", "Weapon", "Generic", "Damageable", "", "hgn_battlecruiserplasmaburstturret", "", "", "", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T2", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T3", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
