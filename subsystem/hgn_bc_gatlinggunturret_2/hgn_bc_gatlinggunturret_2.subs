@@ -20,7 +20,7 @@ NewSubSystemType.selectionLimit=5000
 NewSubSystemType.preciseATILimit=5000
 NewSubSystemType.selectionPriority=37.5
 NewSubSystemType.type="System"
-NewSubSystemType.typeString="BCGatlingGunTurretBottom"
+NewSubSystemType.typeString="BCGatlingGunTurret2"
 NewSubSystemType.collateralDamage=100
 NewSubSystemType.inactiveTimeAfterDamage=90
 NewSubSystemType.activateHealthPercentage=0.1
@@ -34,4 +34,4 @@ NewSubSystemType.AttackFamily="SubSystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_battlecruisergatlinggunturret","Weapon_Turret","Weapon_GatlingGun");
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_bc_gatlinggunturret","Weapon_Turret","Weapon_GatlingGun");
