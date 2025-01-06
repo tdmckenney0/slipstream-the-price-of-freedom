@@ -215,5 +215,13 @@ PersistantData = {
             name = "SensDisProbe",
             progress = 1,
         },
+        [11] = {
+            name = "AttackBomberImprovedBombs",
+            progress = 1,
+        },
+        [12] = {
+            name = "ImprovedTorpedo",
+            progress = 1,
+        }
     },
 }

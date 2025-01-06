@@ -244,5 +244,9 @@ PersistantData = {
       name = "BattleshipHullEngineering",
       progress = 1,
     },
+    [22] = {
+      name = "BomberImprovedBombs",
+      progress = 1,
+    },
   },
 }
