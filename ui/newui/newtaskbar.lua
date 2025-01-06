@@ -344,7 +344,7 @@ NewTaskbar = {
 
 		Text = {
 			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "UPGRADE", -- $2701  Research
+			text = "$2701",
 		},
 		name = "btnResearch",
 		onMouseClicked = "MainUI_UserEvent( eResearchManager)",
