@@ -58,6 +58,13 @@ function RestrictOptions(playerid)
         Player_RestrictResearchOption(playerid, "ShipyardMAXSPEEDUpgrade1")
         Player_RestrictResearchOption(playerid, "ShipyardBUILDSPEEDUpgrade1")
         Player_RestrictResearchOption(playerid, "HyperspaceCostUpgrade1")
+        Player_RestrictResearchOption(playerid, "ScoutPingAbility")
+        Player_RestrictResearchOption(playerid, "DefenseFieldFrigateShield")
+        Player_RestrictResearchOption(playerid, "ScoutEMPAbility")
+        Player_RestrictResearchOption(playerid, "ECMProbe")
+        Player_RestrictResearchOption(playerid, "SensDisProbe")
+        Player_RestrictResearchOption(playerid, "AttackBomberImprovedBombs")
+        Player_RestrictResearchOption(playerid, "ImprovedTorpedo")
     end 
 
     if  playerRace==Race_Vaygr then
