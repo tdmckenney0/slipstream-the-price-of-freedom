@@ -1480,7 +1480,7 @@ Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
 hgn_heavybattlecruiser = Hgn_Destroyer
 vgr_heavybattlecruiser = Vgr_Destroyer
 --SUBSYSTEMS
-directionalthruster = Icon_Subsystem_Engine
+neu_directionalthruster = Icon_Subsystem_Engine
 --Hiigaran
 hgn_battlecruiserminelaunchertop = Icon_Subsystem_TorpedoLauncher
 hgn_c_module_build = Icon_Subsystem_ResearchAdvanced

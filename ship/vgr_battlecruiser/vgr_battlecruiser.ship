@@ -183,16 +183,16 @@ StartShipHardPointConfig(NewShipType, "Boost2", "Hardpoint_Boost2", "Weapon", "I
 
 --Thrusters
 
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TFront1", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TFront2", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TLeft1", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TLeft2", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TRight1", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TRight2", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TTop1", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TTop2", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TBot1", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TBot2", "System", "Innate", "Indestructible", "DirectionalThruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TFront1", "System", "Innate", "Indestructible", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TFront2", "System", "Innate", "Indestructible", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TLeft1", "System", "Innate", "Indestructible", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TLeft2", "System", "Innate", "Indestructible", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TRight1", "System", "Innate", "Indestructible", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TRight2", "System", "Innate", "Indestructible", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TTop1", "System", "Innate", "Indestructible", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TTop2", "System", "Innate", "Indestructible", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TBot1", "System", "Innate", "Indestructible", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_TBot2", "System", "Innate", "Indestructible", "neu_directionalthruster", "", "", "", "", "", "", "", "")
 
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)
