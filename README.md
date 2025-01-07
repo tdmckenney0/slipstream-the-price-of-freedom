@@ -21,6 +21,20 @@ The Daiamid is not exactly content with this arrangement, and frankly, neither a
 ### The Price of Freedom
 This political conundrum has been referred to as "the price of freedom" within the Daiamid chamber; A cold war locking themselves and the Vaygr in a perpetual staring contest until one of them blinks. Until that happens, both factions are under pressure to quickly gather resources and strengthen their forces without the other noticing. This has lead to an extremely tense and lawless borderland between the two factions, where entire fleets go missing in action; of course, destroyed in skirmishes that go completely ignored unless politically convenient. Though, that hasn't stopped the persistent and militarily minded from trying to secure resources and strategic positions in the region without repercussion. This is the true "Price of Freedom": deadlocked political machines fighting an unofficial war with no end in sight... 
 
-## Gameplay
+## Features
+
+### Multiplayer
+
+When Gearbox re-released Homeworld 2 Classic, they disabled the multiplayer option in the main menu. TPOF restores this option, and allows the player to choose between **Direction Connection** and **Local Area Network (LAN)**; Steam multiplayer does not work with Homeworld 2 classic.
+
+#### Local Area Network (LAN)
+
+LAN multiplayer has been tested with TPOF on both Windows 7 and Windows 11, and is firmly in the "seems to work fine" category, however your mileage may vary. This mode can be also used over the internet via a virtual private network (VPN) tunnel. LAN multiplayer is the preferred connection method to play TPOF. 
+
+#### Direct Connection
+
+Direct Connection multiplayer has not been tested with TPOF. 
+
+### Gameplay
 
 Though using the same game engine and assets, _Slipstream: The Price of Freedom_ is very different from Homeworld 2. Emphasis on fleet building and long-term strategy has been heavily reduced in favor of fast-paced tactical gameplay with a focus on combat. 
