@@ -25,7 +25,7 @@ This political conundrum has been referred to as "the price of freedom" within t
 
 ### Multiplayer
 
-When Gearbox re-released Homeworld 2 Classic, they disabled the multiplayer option in the main menu. TPOF restores this option, and allows the player to choose between **Direction Connection** and **Local Area Network (LAN)**; Steam multiplayer does not work with Homeworld 2 classic.
+When Gearbox re-released Homeworld 2 Classic, they disabled the multiplayer option in the main menu. TPOF restores this option, and allows the player to choose between **Direct Connection** and **Local Area Network (LAN)**; Steam multiplayer is not officially implemented with Homeworld 2 classic, so it has been disabled.
 
 #### Local Area Network (LAN)
 
@@ -33,7 +33,7 @@ LAN multiplayer has been tested with TPOF on both Windows 7 and Windows 11, and 
 
 #### Direct Connection
 
-Direct Connection multiplayer has not been tested with TPOF. For this method to work on modern networks, the following **UDP** ports need to be forwarded from the network router or gateway to the machine TPOF is running on: `6073`,`6500`,`13139`, and port range `2302:2400`. 
+Direct Connection multiplayer has not been tested with TPOF. For this method to work on modern networks, the following **UDP** ports need to be forwarded from the local network router or gateway to the machine TPOF is going to be running on: `6073`,`6500`,`13139`, and port range `2302` to `2400`. 
 
 ### Gameplay
 
