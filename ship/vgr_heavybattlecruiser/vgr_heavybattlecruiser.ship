@@ -188,7 +188,7 @@ StartShipHardPointConfig(NewShipType, "Hull4_Turret", "Hardpoint_Hull4_Turret", 
 StartShipHardPointConfig(NewShipType, "Hull5_Turret", "Hardpoint_Hull5_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Hull6_Turret", "Hardpoint_Hull6_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "", "", "", "", "", "", "", "")
 
-StartShipHardPointConfig(NewShipType, "Booster", "Booster", "Weapon", "Innate", "Damageable", "vgr_booster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Booster", "Booster", "Weapon", "Innate", "Damageable", "vgr_bc_booster", "", "", "", "", "", "", "", "")
 
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)

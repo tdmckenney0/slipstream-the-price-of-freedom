@@ -178,8 +178,8 @@ StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System"
 StartShipHardPointConfig(NewShipType, "Generic 2", "HardpointGeneric2", "System", "Generic", "Destroyable", "", "Vgr_C_Production_Fighter", "Vgr_C_Production_Corvette", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_FireControl", "", "", "", "")
 --boosters
 
-StartShipHardPointConfig(NewShipType, "Boost1", "Hardpoint_Boost1", "Weapon", "Innate", "Damageable", "vgr_booster", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Boost2", "Hardpoint_Boost2", "Weapon", "Innate", "Damageable", "vgr_booster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Boost1", "Hardpoint_Boost1", "Weapon", "Innate", "Damageable", "vgr_bc_booster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Boost2", "Hardpoint_Boost2", "Weapon", "Innate", "Damageable", "vgr_bc_booster", "", "", "", "", "", "", "", "")
 
 --Thrusters
 
