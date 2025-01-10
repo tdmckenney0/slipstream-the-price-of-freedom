@@ -111,7 +111,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_battlecruisergatlinggunturrettop",
+                    name = "hgn_bc_gatlinggunturret_1",
                 },
                 {
                     index = 0,
@@ -135,7 +135,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_battlecruisergatlinggunturrettop",
+                    name = "hgn_bc_gatlinggunturret_1",
                 },
                 {
                     index = 0,
