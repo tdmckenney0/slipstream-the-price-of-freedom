@@ -34,4 +34,4 @@ NewSubSystemType.AttackFamily="SubSystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_bc_minelauncher","Weapon_IonCan1","Weapon_Minelayer");
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_bc_minelauncher","Weapon_SCT","Weapon_Minelayer");
