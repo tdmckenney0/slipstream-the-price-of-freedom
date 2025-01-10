@@ -1504,10 +1504,6 @@ hgn_bc_production_corvette = Icon_Subsystem_Corvette
 vgr_bc_booster = Icon_Subsystem_Engine
 vgr_c_missilebay = Icon_Subsystem_TorpedoLauncher
 vgr_dd_pulsecannonturret_1 = Icon_Subsystem_IonTurret
-vgr_pulsecannonassaultfrigate = Icon_Subsystem_FireControl
-vgr_pulsecannonassaultfrigateleft = Icon_Subsystem_FireControl
-vgr_pulsecannonassaultfrigateright = Icon_Subsystem_FireControl
-vgr_pulsecannonassaultfrigatebottom = Icon_Subsystem_FireControl
 -- SRI
 sri_commandbase = Vgr_CommStation
 sri_commandbase_hyperspaceinhibitor = Icon_Subsystem_HyperspaceInhibitor
