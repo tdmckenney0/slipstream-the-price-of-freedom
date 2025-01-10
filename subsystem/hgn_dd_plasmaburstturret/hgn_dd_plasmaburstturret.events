@@ -1,6 +1,16 @@
 effects = {
   animations = {
-
+    animation1 = {
+      name = "Weapon_Turret",
+      length = 0.7,
+      loop = 0,
+      parent = "",
+      minimum = 0,
+      maximum = 0,
+      markers = {
+        "",
+      },
+    },
     animation2 = {
       name = "Death",
       length = 1,
@@ -85,7 +95,34 @@ effects = {
         "7",
       },
     },
+    event2 = {
+      {
+        "anim",
+        "Weapon_Turret",
+      },
+      {
+        "animtime",
+        "0",
+      },
+      {
+        "marker",
+        "Weapon_Turret_Muzzle",
+      },
+      {
+        "fx",
+        "muzzle_flash_combo_plasma_kpr_repeat",
+      },
+      {
+        "sound",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
+      },
+      {
+        "fx_nlips",
+        "on",
+      },
+    },
 
+  
     event4 = {
       {
         "anim",
