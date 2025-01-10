@@ -23,7 +23,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_battlecruiserminelaunchertop",
+                    name = "hgn_bc_minelauncher_1",
                 },
                 {
                     index = 0,
@@ -115,7 +115,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_battlecruiserminelauncherbottom",
+                    name = "hgn_bc_minelauncher_2",
                 }
             },
             shiphold = {},
@@ -139,7 +139,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_battlecruiserminelauncherbottom",
+                    name = "hgn_bc_minelauncher_2",
                 }
             },
             shiphold = {},

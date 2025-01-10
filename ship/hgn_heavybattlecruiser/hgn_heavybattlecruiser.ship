@@ -166,7 +166,7 @@ StartShipHardPointConfig(NewShipType, "TurretTop", "Weapon_TurretTop", "Weapon",
 StartShipHardPointConfig(NewShipType, "TurretBottom", "Weapon_TurretBottom", "Weapon", "Generic", "Destroyable", "", "hgn_bc_gatlinggunturret_1", "hgn_bc_gatlinggunturret_2", "hgn_bc_ionbeamturret_2", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretFront", "Weapon_TurretFront", "Weapon", "Generic", "Destroyable", "", "hgn_bc_gatlinggunturret_1", "hgn_bc_gatlinggunturret_2", "hgn_bc_plasmaburstturret_1", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretBack", "Weapon_TurretBack", "Weapon", "Generic", "Destroyable", "", "hgn_bc_gatlinggunturret_1", "hgn_bc_gatlinggunturret_2", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "TurretBottomBack", "Weapon_TurretBottomBack", "Weapon", "Generic", "Destroyable", "", "hgn_bc_gatlinggunturret_1", "hgn_bc_gatlinggunturret_2", "hgn_battlecruiserminelaunchertop", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "TurretBottomBack", "Weapon_TurretBottomBack", "Weapon", "Generic", "Destroyable", "", "hgn_bc_gatlinggunturret_1", "hgn_bc_gatlinggunturret_2", "hgn_bc_minelauncher_1", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "TurretBottomFront", "Weapon_TurretBottomFront", "Weapon", "Generic", "Destroyable", "", "hgn_bc_gatlinggunturret_1", "hgn_bc_gatlinggunturret_2", "hgn_bc_plasmaburstturret_1", "", "", "", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T2", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
