@@ -7,11 +7,11 @@ PersistantData = {
             subsystems = {
                 {
                     index = 0,
-                    name = "hgn_battlecruiserionbeamturrettop",
+                    name = "hgn_bc_ionbeamturret_2",
                 },
                 {
                     index = 0,
-                    name = "hgn_battlecruiserionbeamturrettop",
+                    name = "hgn_bc_ionbeamturret_1",
                 },
                 {
                     index = 0,

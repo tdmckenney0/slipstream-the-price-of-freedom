@@ -21,7 +21,7 @@ NewSubSystemType.selectionLimit=5000
 NewSubSystemType.preciseATILimit=5000
 NewSubSystemType.selectionPriority=37.5
 NewSubSystemType.type="Weapon"
-NewSubSystemType.typeString="BCIonBeamTurretTop"
+NewSubSystemType.typeString="BCIonBeamTurret1"
 NewSubSystemType.collateralDamage=100
 NewSubSystemType.inactiveTimeAfterDamage=90
 NewSubSystemType.activateHealthPercentage=0.1
@@ -36,3 +36,4 @@ NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
 StartSubSystemWeaponConfig(NewSubSystemType,"Hgn_BattleCruiserTurretedIonCannon","Weapon_IC","Weapon_IonCan1");
+
