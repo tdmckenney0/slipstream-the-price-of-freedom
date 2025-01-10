@@ -1485,6 +1485,7 @@ hgn_bc_minelauncher_1 = Icon_Subsystem_TorpedoLauncher
 hgn_bc_minelauncher_2 = Icon_Subsystem_TorpedoLauncher
 hgn_c_module_build = Icon_Subsystem_ResearchAdvanced
 hgn_bc_plasmaburstturret_1 = Icon_Subsystem_IonTurret
+hgn_bc_plasmaburstturret_2 = Icon_Subsystem_IonTurret
 hgn_droneturret = Icon_Subsystem_FireControl
 hgn_bc_gatlinggunturret_1 =  Icon_Subsystem_FireControl
 hgn_bc_gatlinggunturret_2 =  Icon_Subsystem_FireControl

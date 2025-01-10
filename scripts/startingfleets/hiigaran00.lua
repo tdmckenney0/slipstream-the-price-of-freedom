@@ -27,7 +27,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_bc_plasmaburstturret_1",
+                    name = "hgn_bc_plasmaburstturret_2",
                 },
             },
             shiphold = {},
