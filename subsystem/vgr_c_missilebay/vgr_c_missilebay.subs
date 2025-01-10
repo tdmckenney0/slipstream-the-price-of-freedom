@@ -1,5 +1,5 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "10x Fusion Missile Launcher"
+NewSubSystemType.displayedName = "Missile Bay"
 NewSubSystemType.sobDescription = "Auxiliary Missile System"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.1
@@ -20,7 +20,7 @@ NewSubSystemType.selectionLimit = 1000
 NewSubSystemType.preciseATILimit = 1000
 NewSubSystemType.selectionPriority = 37.5
 NewSubSystemType.type = "Weapon"
-NewSubSystemType.typeString = "AuxMsl"
+NewSubSystemType.typeString = "MissileBay"
 NewSubSystemType.collateralDamage = 100
 NewSubSystemType.inactiveTimeAfterDamage = 0
 NewSubSystemType.activateHealthPercentage = 0.1

@@ -8,27 +8,27 @@ PersistantData = {
       subsystems = {
         {
           index = 0,
-          name = "vgr_pulsecannondestroyer",
+          name = "vgr_dd_pulsecannonturret_1",
         },
         {
           index = 0,
-          name = "vgr_pulsecannondestroyer",
+          name = "vgr_dd_pulsecannonturret_1",
         },
         {
           index = 0,
-          name = "vgr_pulsecannondestroyer",
+          name = "vgr_dd_pulsecannonturret_1",
         },
         {
           index = 0,
-          name = "vgr_pulsecannondestroyer",
+          name = "vgr_dd_pulsecannonturret_1",
         },
         {
           index = 0,
-          name = "vgr_pulsecannondestroyer",
+          name = "vgr_dd_pulsecannonturret_1",
         },
         {
           index = 0,
-          name = "vgr_pulsecannondestroyer",
+          name = "vgr_dd_pulsecannonturret_1",
         },
       },
       shiphold = {},

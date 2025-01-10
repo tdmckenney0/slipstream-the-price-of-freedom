@@ -5,8 +5,8 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName="Pulse Cannon"
-NewSubSystemType.sobDescription="Pulse Cannon"
+NewSubSystemType.displayedName="Sniper Turret"
+NewSubSystemType.sobDescription="Hybrid Coil/Rail Gun Turret"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
 NewSubSystemType.tacticalIconMinFadeSize=0.0045
@@ -26,7 +26,7 @@ NewSubSystemType.selectionLimit=1000
 NewSubSystemType.preciseATILimit=1000
 NewSubSystemType.selectionPriority=37.5
 NewSubSystemType.type="Weapon"
-NewSubSystemType.typeString="BCKineticflakCannon"
+NewSubSystemType.typeString="DDSniperTurret1"
 NewSubSystemType.collateralDamage=100
 NewSubSystemType.inactiveTimeAfterDamage=80
 NewSubSystemType.activateHealthPercentage=0.1

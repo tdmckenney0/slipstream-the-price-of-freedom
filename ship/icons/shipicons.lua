@@ -1502,8 +1502,8 @@ hgn_bc_production_fighter = Icon_Subsystem_Fighter
 hgn_bc_production_corvette = Icon_Subsystem_Corvette
 --Vaygr
 vgr_booster = Icon_Subsystem_Engine
-vgr_missilebay = Icon_Subsystem_TorpedoLauncher
-vgr_pulsecannondestroyer = Icon_Subsystem_IonTurret
+vgr_c_missilebay = Icon_Subsystem_TorpedoLauncher
+vgr_dd_pulsecannonturret_1 = Icon_Subsystem_IonTurret
 vgr_pulsecannonassaultfrigate = Icon_Subsystem_FireControl
 vgr_pulsecannonassaultfrigateleft = Icon_Subsystem_FireControl
 vgr_pulsecannonassaultfrigateright = Icon_Subsystem_FireControl

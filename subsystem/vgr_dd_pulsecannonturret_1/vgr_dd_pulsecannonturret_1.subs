@@ -26,7 +26,7 @@ NewSubSystemType.selectionLimit=1000
 NewSubSystemType.preciseATILimit=1000
 NewSubSystemType.selectionPriority=37.5
 NewSubSystemType.type="Weapon"
-NewSubSystemType.typeString="BCKineticflakCannon"
+NewSubSystemType.typeString="DDPulseCannonTurret1"
 NewSubSystemType.collateralDamage=100
 NewSubSystemType.inactiveTimeAfterDamage=80
 NewSubSystemType.activateHealthPercentage=0.1
@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"vgr_pulsecannondestroyer","Weapon_DT","null");
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_dd_pulsecannonturret","Weapon_DT","null");
