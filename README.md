@@ -38,3 +38,11 @@ Direct Connection multiplayer has not been tested with TPOF. For this method to 
 ### Gameplay
 
 Though using the same game engine and assets, _Slipstream: The Price of Freedom_ is very different from Homeworld 2. Emphasis on fleet building and long-term strategy has been heavily reduced in favor of fast-paced tactical gameplay with a focus on combat. 
+
+#### Strikecraft
+
+Strikecraft (Fighters, Corvettes) are faster, more evasive, and break formation often when attacking. Strikecraft are also now capable of being deployed via hyperspace when near a larger ship equipped with a Hyperspace Module subsystem. 
+
+#### Platforms
+
+Platforms can now be moved multiple times, delivered via hyperspace using a module, and also issued guard orders. However, they are slow, weakly armored, and do not engage enemies outside of range. A useful strategy is to have platforms accompany strikecraft when being deployed via hyperspace; Platforms will provide covering fire long enough for strikecraft to get up to speed and scatter.
