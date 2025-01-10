@@ -15,7 +15,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_battlecruiserplasmaburstturret",
+                    name = "hgn_bc_plasmaburstturret_1",
                 },
                 {
                     index = 0,
@@ -27,7 +27,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_battlecruiserplasmaburstturret",
+                    name = "hgn_bc_plasmaburstturret_1",
                 },
             },
             shiphold = {},

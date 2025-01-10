@@ -36,4 +36,4 @@ NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
 LoadHODFile(NewSubSystemType,1);
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_battlecruiserplasmaburstturret","Weapon_SCT","Weapon_SCT"); -- Hgn_BattleCruiserKineticBurstCannon
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_bc_plasmaburstturret","Weapon_SCT","Weapon_SCT"); -- Hgn_BattleCruiserKineticBurstCannon

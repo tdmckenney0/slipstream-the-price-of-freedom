@@ -1483,7 +1483,7 @@ neu_directionalthruster = Icon_Subsystem_Engine
 --Hiigaran
 hgn_battlecruiserminelaunchertop = Icon_Subsystem_TorpedoLauncher
 hgn_c_module_build = Icon_Subsystem_ResearchAdvanced
-hgn_battlecruiserplasmaburstturret = Icon_Subsystem_IonTurret
+hgn_bc_plasmaburstturret_1 = Icon_Subsystem_IonTurret
 hgn_droneturret = Icon_Subsystem_FireControl
 hgn_bc_gatlinggunturret_1 =  Icon_Subsystem_FireControl
 hgn_bc_gatlinggunturret_2 =  Icon_Subsystem_FireControl
