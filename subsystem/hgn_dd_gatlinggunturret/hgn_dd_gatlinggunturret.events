@@ -106,76 +106,24 @@ effects = {
       },
       {
         "marker",
-        "Weapon_SCT_Muzzle",
+        "Weapon_Turret_Muzzle",
       },
       {
         "fx",
-        "ion_beam_charge_combo",
+        "muzzle_flash_combo_plasma_kpr_repeat",
       },
       {
         "sound",
-        "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",
+        "weapon/fighter/fire/WEAPON_FIGHTER_KINETIC_AUTOGUN_SHELL",
       },
       {
         "fx_nlips",
         "on",
       },
     },
-    event3 = {
-      {
-        "anim",
-        "Weapon_turret",
-      },
-      {
-        "animtime",
-        "1",
-      },
-      {
-        "marker",
-        "Weapon_SCTSlave_Muzzle",
-      },
-      {
-        "fx",
-        "ion_beam_charge_combo",
-      },
-      {
-        "sound",
-        "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",
-      },
-      {
-        "fx_nlips",
-        "on",
-      },
-    },
+
+  
     event4 = {
-      {
-        "anim",
-        "Weapon_turret",
-      },
-      {
-        "animtime",
-        "1",
-      },
-      {
-        "marker",
-        "Weapon_SCTSlave1_Muzzle",
-      },
-      {
-        "fx",
-        "ion_beam_charge_combo",
-      },
-      {
-        "sound",
-        "WEAPON/FRIGATE/FIRE/WEAPON_FRIGATE_ION_CANNON_BEAM",
-      },
-      {
-        "fx_nlips",
-        "on",
-      },
-    },
-
-
-    event5 = {
       {
         "anim",
         "dmg02",
@@ -201,7 +149,7 @@ effects = {
         "7.5",
       },
     },
-    event6 = {
+    event5 = {
       {
         "anim",
         "dmg03",
@@ -227,7 +175,7 @@ effects = {
         "10",
       },
     },
-    event7 = {
+    event6 = {
       {
         "anim",
         "death",
