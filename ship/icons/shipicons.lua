@@ -1505,6 +1505,7 @@ vgr_bc_booster = Icon_Subsystem_Engine
 vgr_c_missilebay = Icon_Subsystem_TorpedoLauncher
 vgr_dd_pulsecannonturret_1 = Icon_Subsystem_IonTurret
 vgr_dd_scattershotturret_1 = Icon_Subsystem_IonTurret
+vgr_dd_missileboxturret_1 = Icon_Subsystem_TorpedoLauncher
 -- SRI
 sri_commandbase = Vgr_CommStation
 sri_cb_hyperspaceinhibitor = Icon_Subsystem_HyperspaceInhibitor

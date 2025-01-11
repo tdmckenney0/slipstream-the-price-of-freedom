@@ -161,7 +161,7 @@ StartShipWeaponConfig(NewShipType, "vgr_bcforwardweapon", "Weapon_VD_Blast", "")
 
 addShield(NewShipType, "EMP", 1000, 20)
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_Des_Engine", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret_Top", "System", "Innate", "Damageable", "vgr_dd_pulsecannonturret_1", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret_Top", "System", "Innate", "Damageable", "vgr_dd_missileboxturret_1", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Bottom_Turret", "Hardpoint_Turret_Bot", "System", "Innate", "Damageable", "vgr_dd_pulsecannonturret_1", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Side_turret1", "Hardpoint_Turret_side1", "System", "Innate", "Damageable", "vgr_dd_scattershotturret_1", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Side_turret2", "Weapon_Turret_side2", "System", "Innate", "Damageable", "vgr_dd_scattershotturret_1", "", "", "", "", "", "", "", "")
