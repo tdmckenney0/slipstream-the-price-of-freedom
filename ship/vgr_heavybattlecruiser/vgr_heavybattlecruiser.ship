@@ -17,7 +17,7 @@ NewShipType.frontArmourDamage = 0.5
 NewShipType.isTransferable = 0
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 4
-NewShipType.paradeData = "vgr_carrier_parade"
+NewShipType.paradeData = "vgr_mothership_parade"
 NewShipType.SquadronSize = 1
 NewShipType.passiveFormation = "dockline"
 NewShipType.defensiveFormation = "broad"
@@ -161,6 +161,7 @@ addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.5, "munition, Capturer,
 addAbility(NewShipType, "GuardCommand", 1, 3000, 800)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "CanBeCaptured", 90, 0.1)
+addAbility(NewShipType, "CanBuildShips",1,"SubSystem_Vgr","SubSystemModule")
 addAbility(NewShipType,"MinelayerAbility",1,3.5)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
@@ -181,12 +182,12 @@ addShield(NewShipType, "EMP", 1000, 20)
 
 AddShipAbility(NewShipType, "DefenseField", 1, "ThisShipOnly", 1)
 
-StartShipHardPointConfig(NewShipType, "Hull1_Turret", "Hardpoint_Hull1_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_scattershotturret_1", "vgr_dd_rapidlaserturret_1", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Hull2_Turret", "Hardpoint_Hull2_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_scattershotturret_1", "vgr_dd_rapidlaserturret_1", "", "", "", "", "", "") 
-StartShipHardPointConfig(NewShipType, "Hull3_Turret", "Hardpoint_Hull3_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_scattershotturret_1", "vgr_dd_rapidlaserturret_1", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Hull4_Turret", "Hardpoint_Hull4_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_scattershotturret_1", "vgr_dd_rapidlaserturret_1", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Hull5_Turret", "Hardpoint_Hull5_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_scattershotturret_1", "vgr_dd_rapidlaserturret_1", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Hull6_Turret", "Hardpoint_Hull6_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_scattershotturret_1", "vgr_dd_rapidlaserturret_1", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull1_Turret", "Hardpoint_Hull1_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_scattershotturret_1", "vgr_dd_rapidlaserturret_1", "vgr_dd_missileboxturret_1", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull2_Turret", "Hardpoint_Hull2_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_scattershotturret_1", "vgr_dd_rapidlaserturret_1", "vgr_dd_missileboxturret_1", "", "", "", "", "") 
+StartShipHardPointConfig(NewShipType, "Hull3_Turret", "Hardpoint_Hull3_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_scattershotturret_1", "vgr_dd_rapidlaserturret_1", "vgr_dd_missileboxturret_1", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull4_Turret", "Hardpoint_Hull4_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_scattershotturret_1", "vgr_dd_rapidlaserturret_1", "vgr_dd_missileboxturret_1", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull5_Turret", "Hardpoint_Hull5_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_scattershotturret_1", "vgr_dd_rapidlaserturret_1", "vgr_dd_missileboxturret_1", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Hull6_Turret", "Hardpoint_Hull6_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_scattershotturret_1", "vgr_dd_rapidlaserturret_1", "vgr_dd_missileboxturret_1", "", "", "", "", "")
 
 StartShipHardPointConfig(NewShipType, "Booster", "Booster", "Weapon", "Innate", "Damageable", "vgr_bc_booster", "", "", "", "", "", "", "", "")
 
