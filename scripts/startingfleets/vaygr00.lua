@@ -16,7 +16,7 @@ PersistantData = {
         },
         {
           index = 0,
-          name = "vgr_dd_scattershotturret_1",
+          name = "vgr_dd_rapidlaserturret_1",
         },
         {
           index = 0,
@@ -28,7 +28,7 @@ PersistantData = {
         },
         {
           index = 0,
-          name = "vgr_dd_pulsecannonturret_1",
+          name = "vgr_dd_rapidlaserturret_1",
         },
       },
       shiphold = {},
