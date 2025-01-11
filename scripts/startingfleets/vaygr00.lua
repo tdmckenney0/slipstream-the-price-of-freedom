@@ -125,7 +125,16 @@ PersistantData = {
     },
     {
       type = "vgr_destroyer",
-      subsystems = {},
+      subsystems = {
+        {
+          index = 0,
+          name = "vgr_dd_rapidlaserturret_1",
+        },
+        {
+          index = 0,
+          name = "vgr_dd_missileboxturret_1"
+        }
+      },
       shiphold = {},
       name = "",
       number = 3,
