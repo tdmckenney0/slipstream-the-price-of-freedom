@@ -34,4 +34,4 @@ NewSubSystemType.AttackFamily = "SubSystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemSensors"
 NewSubSystemType.ArmourFamily = "MediumArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"hgn_ioncannonturret","Weapon_Top","Null")
+StartSubSystemWeaponConfig(NewSubSystemType,"hgn_ff_ionbeamturret","Weapon_Top","Null")
