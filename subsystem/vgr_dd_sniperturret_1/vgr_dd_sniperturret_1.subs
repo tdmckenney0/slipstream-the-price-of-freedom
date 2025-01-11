@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"vgr_vulcanpulseturret","Weapon_DT",""); -- Vgr_VulcanKineticTurretLongRange
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_dd_sniperturret","Weapon_DT",""); -- Vgr_VulcanKineticTurretLongRange

@@ -8,7 +8,7 @@ PersistantData = {
       subsystems = {
         {
           index = 0,
-          name = "vgr_dd_pulsecannonturret_1",
+          name = "vgr_dd_sniperturret_1",
         },
         {
           index = 0,
@@ -16,7 +16,7 @@ PersistantData = {
         },
         {
           index = 0,
-          name = "vgr_dd_pulsecannonturret_1",
+          name = "vgr_dd_sniperturret_1",
         },
         {
           index = 0,
@@ -24,7 +24,7 @@ PersistantData = {
         },
         {
           index = 0,
-          name = "vgr_dd_pulsecannonturret_1",
+          name = "vgr_dd_sniperturret_1",
         },
         {
           index = 0,
