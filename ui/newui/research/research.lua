@@ -479,7 +479,7 @@ NewResearchMenu =
 		Text =
 		{
 			textStyle = "IGHeading1",
-			text = "UPGRADES", --$2850
+			text = "$2850",
 			offset =
 			{
 				4,

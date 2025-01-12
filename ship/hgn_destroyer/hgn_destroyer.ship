@@ -157,28 +157,28 @@ LoadModel(NewShipType,1);
 
 --Weapon Systems
 
-StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "Weapon_Torpedo_Tube", "Weapon_Torpedo");
+StartShipWeaponConfig(NewShipType, "hgn_minelauncher", "Weapon_Torpedo_Tube", "Weapon_Torpedo");
 
 --Main Turrets
 
-StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Damageable","hgn_plasmaburstcannondestroyer","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Damageable","hgn_plasmaburstcannondestroyer","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Damageable","hgn_plasmaburstcannondestroyer","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Damageable","hgn_plasmaburstcannondestroyer","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Damageable","hgn_plasmaburstcannondestroyer","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Calibration6","Hardpoint_DCT_Left","System","Innate","Damageable","hgn_frigateionbeamturret","","","","","","","","");
-StartShipHardPointConfig(NewShipType,"Calibration7","Hardpoint_DCT_Right","System","Innate","Damageable","hgn_frigateionbeamturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration1","Hardpoint_DCTFront","System","Innate","Damageable","hgn_dd_gatlinggunturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration2","Hardpoint_DCTBack","System","Innate","Damageable","hgn_dd_gatlinggunturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration3","Hardpoint_DCTTop","System","Innate","Damageable","hgn_dd_plasmaburstturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration4","Hardpoint_DCTBottom","System","Innate","Damageable","hgn_dd_plasmaburstturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration5","Hardpoint_Turret_Bottom","System","Innate","Damageable","hgn_dd_gatlinggunturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration6","Hardpoint_DCT_Left","System","Innate","Damageable","hgn_dd_gatlinggunturret","","","","","","","","");
+StartShipHardPointConfig(NewShipType,"Calibration7","Hardpoint_DCT_Right","System","Innate","Damageable","hgn_dd_gatlinggunturret","","","","","","","","");
 
 --Thrusters
 
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T1", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T2", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T3", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T4", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T5", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T6", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T7", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T8", "System", "Innate", "Damageable", "DirectionalThruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T1", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T2", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T3", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T4", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T5", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T6", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T7", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T8", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
 
 addShield(NewShipType,"EMP",400,12)
 NewShipType.battleScarMaxTriBase = 75

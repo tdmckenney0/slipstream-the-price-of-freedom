@@ -1,0 +1,25 @@
+-- LuaDC version 0.9.20
+-- 11/4/2024 10:17:01 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","Vgr_SmallMissile","Normal",40,3000,0,0,0,2,1,0,0,2,0,0,1,1,0,0,0.1,"Normal",0,0,0)
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 250, 500, "")
+setPenetration(NewWeaponType, 5, 1, 
+{ 
+    PlanetKillerArmour = 0, 
+}, 
+{ 
+    lightarmour = 0.38, 
+}, 
+{ 
+    resarmour = 0.6, 
+}, 
+{ 
+    PlanetKillerArmour = 0, 
+}, 
+{ 
+    unarmoured = 0.25, })
+setAccuracy(NewWeaponType, 1)
+setAngles(NewWeaponType, 180, 0, 0, 0, 0)
+setMiscValues(NewWeaponType, 0, 3)

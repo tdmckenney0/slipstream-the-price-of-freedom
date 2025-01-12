@@ -4,7 +4,32 @@ PersistantData = {
         -- Flagship
         {
             type = "hgn_heavybattlecruiser",
-            subsystems = {},
+            subsystems = {
+                {
+                    index = 0,
+                    name = "hgn_bc_ionbeamturret_2",
+                },
+                {
+                    index = 0,
+                    name = "hgn_bc_ionbeamturret_1",
+                },
+                {
+                    index = 0,
+                    name = "hgn_bc_plasmaburstturret_1",
+                },
+                {
+                    index = 0,
+                    name = "hgn_bc_gatlinggunturret_1",
+                },
+                {
+                    index = 0,
+                    name = "hgn_bc_minelauncher_1",
+                },
+                {
+                    index = 0,
+                    name = "hgn_bc_plasmaburstturret_2",
+                },
+            },
             shiphold = {},
             name = "",
             number = 1,
@@ -86,11 +111,11 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_battlecruisergatlinggunturrettop",
+                    name = "hgn_bc_plasmaburstturret_1",
                 },
                 {
                     index = 0,
-                    name = "hgn_battlecruiserminelauncherbottom",
+                    name = "hgn_bc_minelauncher_2",
                 }
             },
             shiphold = {},
@@ -110,11 +135,11 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_battlecruisergatlinggunturrettop",
+                    name = "hgn_bc_plasmaburstturret_1",
                 },
                 {
                     index = 0,
-                    name = "hgn_battlecruiserminelauncherbottom",
+                    name = "hgn_bc_minelauncher_2",
                 }
             },
             shiphold = {},
@@ -175,44 +200,20 @@ PersistantData = {
         },
     },
     Research = {
-        [1] = {
+        {
             name = "DestroyerTech",
             progress = 1,
         },
-        [2] = {
-            name = "LightCruisers",
-            progress = 1,
-        },
-        [3] = {
+        {
             name = "BattlecruiserIonWeapons",
             progress = 1,
         },
-        [4] = {
+        {
             name = "PlatformIonWeapons",
             progress = 1,
         },
-        [5] = {
+        {
             name = "RepairAbility",
-            progress = 1,
-        },
-        [6] = {
-            name = "ScoutPingAbility",
-            progress = 1,
-        },
-        [7] = {
-            name = "DefenseFieldFrigateShield",
-            progress = 1,
-        },
-        [8] = {
-            name = "ScoutEMPAbility",
-            progress = 1,
-        },
-        [9] = {
-            name = "ECMProbe",
-            progress = 1,
-        },
-        [10] = {
-            name = "SensDisProbe",
             progress = 1,
         },
     },

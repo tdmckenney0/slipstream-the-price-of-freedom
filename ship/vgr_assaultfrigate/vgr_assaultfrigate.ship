@@ -153,16 +153,11 @@ addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
 
 StartShipWeaponConfig(NewShipType, "Vgr_ConcussionMissileLauncher", "Weapon_Missile", "Fire_Missile")
+StartShipWeaponConfig(NewShipType, "vgr_pulsecannonassaultfrigatebottom", "Weapon_Bottom", "Weapon_Bottom")
+StartShipWeaponConfig(NewShipType, "vgr_pulsecannonassaultfrigateleft", "Weapon_Left", "Weapon_Left")
+StartShipWeaponConfig(NewShipType, "vgr_pulsecannonassaultfrigateright", "Weapon_Right", "Weapon_Right")
 
 addShield(NewShipType, "EMP", 310, 20)
-
-StartShipHardPointConfig(NewShipType, "Turret_Front", "Weapon_Bottom", "System", "Innate", "Damageable", "vgr_pulsecannonassaultfrigatebottom", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "Turret_Left", "Weapon_Left", "System", "Innate", "Damageable", "vgr_pulsecannonassaultfrigateleft", "", "", "", "", "", "", "", "")
-
-StartShipHardPointConfig(NewShipType, "Turret_Right", "Weapon_Right", "System", "Innate", "Damageable", "vgr_pulsecannonassaultfrigateright", "", "", "", "", "", "", "", "")
-
--- StartShipHardPointConfig(NewShipType, "Weapon_Module", "Hardpoint_mount", "System", "Innate", "Damageable", "vgr_gunmount", "", "", "", "", "", "", "", "")
 
 NewShipType.battleScarMaxTriBase = 75
 NewShipType.battleScarMaxTriInc = 100

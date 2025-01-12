@@ -21,6 +21,28 @@ The Daiamid is not exactly content with this arrangement, and frankly, neither a
 ### The Price of Freedom
 This political conundrum has been referred to as "the price of freedom" within the Daiamid chamber; A cold war locking themselves and the Vaygr in a perpetual staring contest until one of them blinks. Until that happens, both factions are under pressure to quickly gather resources and strengthen their forces without the other noticing. This has lead to an extremely tense and lawless borderland between the two factions, where entire fleets go missing in action; of course, destroyed in skirmishes that go completely ignored unless politically convenient. Though, that hasn't stopped the persistent and militarily minded from trying to secure resources and strategic positions in the region without repercussion. This is the true "Price of Freedom": deadlocked political machines fighting an unofficial war with no end in sight... 
 
-## Gameplay
+## Features
+
+### Multiplayer
+
+When Gearbox re-released Homeworld 2 Classic, they disabled the multiplayer option in the main menu. TPOF restores this option, and allows the player to choose between **Direct Connection** and **Local Area Network (LAN)**; Steam multiplayer is not officially implemented with Homeworld 2 classic, so it has been disabled.
+
+#### Local Area Network (LAN)
+
+LAN multiplayer has been tested with TPOF on both Windows 7 and Windows 11, and is firmly in the "seems to work fine" category, however your mileage may vary. This mode can be also used over the internet via a virtual private network (VPN) tunnel. LAN multiplayer is the preferred connection method to play TPOF. 
+
+#### Direct Connection
+
+Direct Connection multiplayer has not been tested with TPOF. For this method to work on modern networks, the following **UDP** ports need to be forwarded from the local network router or gateway to the machine TPOF is going to be running on: `6073`,`6500`,`13139`, and port range `2302` to `2400`. 
+
+### Gameplay
 
 Though using the same game engine and assets, _Slipstream: The Price of Freedom_ is very different from Homeworld 2. Emphasis on fleet building and long-term strategy has been heavily reduced in favor of fast-paced tactical gameplay with a focus on combat. 
+
+#### Strikecraft
+
+Strikecraft (Fighters, Corvettes) are faster, more evasive, and break formation often when attacking. Strikecraft are also now capable of being deployed via hyperspace when near a larger ship equipped with a Hyperspace Module subsystem. 
+
+#### Platforms
+
+Platforms can now be moved multiple times, delivered via hyperspace using a module, and also issued guard orders. However, they are slow, weakly armored, and do not engage enemies outside of range. A useful strategy is to have platforms accompany strikecraft when being deployed via hyperspace; Platforms will provide covering fire long enough for strikecraft to get up to speed and scatter.

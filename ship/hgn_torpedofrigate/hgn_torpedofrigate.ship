@@ -148,7 +148,7 @@ addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
 
-StartShipWeaponConfig(NewShipType, "hgn_nuclearmissile", "weapon_Torpedo", "")
+StartShipWeaponConfig(NewShipType, "hgn_minelauncher", "weapon_Torpedo", "weapon_Torpedo")
 
 addShield(NewShipType, "EMP", 310, 20)
 NewShipType.battleScarMaxTriBase =75

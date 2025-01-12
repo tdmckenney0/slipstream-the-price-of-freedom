@@ -150,8 +150,8 @@ addAbility(NewShipType, "CanBeCaptured", 30, 0.1)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadSharedModel(NewShipType, "hgn_assaultfrigate")
-StartShipHardPointConfig(NewShipType,"T","Weapon_Top","Weapon","Innate","Indestructible","hgn_frigateionbeamturret","","","","","","","","")
-StartShipHardPointConfig(NewShipType,"B","Weapon_Bottom","Weapon","Innate","Indestructible","hgn_frigateionbeamturret","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"T","Weapon_Top","Weapon","Innate","Indestructible","hgn_ff_ionbeamturret","","","","","","","","")
+StartShipHardPointConfig(NewShipType,"B","Weapon_Bottom","Weapon","Innate","Indestructible","hgn_ff_ionbeamturret","","","","","","","","")
 addShield(NewShipType, "EMP", 750, 20)
 NewShipType.battleScarMaxTriBase =75
 NewShipType.battleScarMaxTriInc =100

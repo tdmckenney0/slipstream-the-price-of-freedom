@@ -6,6 +6,30 @@ PersistantData = {
     {
       type = "vgr_heavybattlecruiser",
       subsystems = {
+        {
+          index = 0,
+          name = "vgr_dd_scattershotturret_1",
+        },
+        {
+          index = 0,
+          name = "vgr_dd_pulsecannonturret_1",
+        },
+        {
+          index = 0,
+          name = "vgr_dd_rapidlaserturret_1",
+        },
+        {
+          index = 0,
+          name = "vgr_dd_pulsecannonturret_1",
+        },
+        {
+          index = 0,
+          name = "vgr_dd_scattershotturret_1",
+        },
+        {
+          index = 0,
+          name = "vgr_dd_rapidlaserturret_1",
+        },
       },
       shiphold = {},
       name = "",
@@ -101,7 +125,16 @@ PersistantData = {
     },
     {
       type = "vgr_destroyer",
-      subsystems = {},
+      subsystems = {
+        {
+          index = 0,
+          name = "vgr_dd_rapidlaserturret_1",
+        },
+        {
+          index = 0,
+          name = "vgr_dd_missileboxturret_1"
+        }
+      },
       shiphold = {},
       name = "",
       number = 3,
@@ -160,88 +193,48 @@ PersistantData = {
     },
   },
   Research = {
-    [1] = {
+    {
       name = "CorvetteTech",
       progress = 1,
     },
-    [2] = {
+    {
       name = "FrigateTech",
       progress = 1,
     },
-    [3] = {
-      name = "ProbeSensorDisruption",
-      progress = 1,
-    },
-    [4] = {
-      name = "ProbeProxSensor",
-      progress = 1,
-    },
-    [5] = {
+    {
       name = "LanceBeams",
       progress = 1,
     },
-    [6] = {
+    {
       name = "PlasmaBombs",
       progress = 1,
     },
-    [7] = {
+    {
       name = "CorvetteLaser",
       progress = 1,
     },
-    [8] = {
-      name = "CorvetteCommand",
-      progress = 1,
-    },
-    [9] = {
+    {
       name = "PlatformHeavyMissiles",
       progress = 1,
     },
-    [10] = {
+    {
       name = "FrigateAssault",
       progress = 1,
     },
-    [11] = {
-      name = "FrigateInfiltrationTech",
-      progress = 1,
-    },
-    [12] = {
-      name = "FrigateGravity",
-      progress = 1,
-    },
-    [13] = {
-      name = "FrigateCloak",
-      progress = 1,
-    },
-    [14] = {
+    {
       name = "BattlecruiserIonWeapons",
       progress = 1,
     },
-    [15] = {
+    {
       name = "DestroyerGuns",
       progress = 1,
     },
-    [16] = {
-      name = "AdvDestroyer",
-      progress = 1,
-    },
-    [17] = {
-      name = "AncientHullEngineering",
-      progress = 1,
-    },
-    [18] = {
+    {
       name = "HyperspaceGateTech",
       progress = 1,
     },
-    [19] = {
+    {
       name = "RepairAbility",
-      progress = 1,
-    },
-    [20] = {
-      name = "ScoutEMPAbility",
-      progress = 1,
-    },
-    [21] = {
-      name = "BattleshipHullEngineering",
       progress = 1,
     },
   },
