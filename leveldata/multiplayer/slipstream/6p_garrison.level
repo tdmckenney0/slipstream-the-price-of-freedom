@@ -78,11 +78,11 @@ addPoint("StartPos5", {0, 0, -28000}, {0, 0, 0})
 
 addSquadron("meg_leviathan", "meg_leviathan", {17000, 17346, 9470}, -1, {-6, -50, 150}, 0, 0)
 
-addSquadron("meg_veildebris_chunks", "meg_veildebris_chunk1", {27568, -3309, -11529}, -1, {1.648, -40.132, -29.45}, 0, 0)
-addSquadron("meg_veildebris_chunks", "meg_veildebris_chunk2", {27568, 1309, -12546}, -1, {120.108, -38.66, -149.942}, 0, 0)
+addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", {27568, -3309, -11529}, -1, {1.648, -40.132, -29.45}, 0, 0)
+addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", {27568, 1309, -12546}, -1, {120.108, -38.66, -149.942}, 0, 0)
 addSquadron("meg_starjumper", "meg_starjumper", {-27568, -3309, 11529}, -1, {1.648, -40.132, -29.45}, 0, 0)
-addSquadron("meg_veildebris_chunks", "meg_veildebris_chunk4", {-27568, 1309, 12546}, -1, {120.108, -38.66, -149.942}, 0, 0)
-addSquadron("meg_veildebris_chunks", "meg_veildebris_chunk5", {-19000, 6273, 29099}, -1, {-58.112, 0, -17.069}, 0, 0)
+addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", {-27568, 1309, 12546}, -1, {120.108, -38.66, -149.942}, 0, 0)
+addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", {-19000, 6273, 29099}, -1, {-58.112, 0, -17.069}, 0, 0)
 
 addSquadron("Garrison", "sri_commandbase", {0, 0, 0}, 0, {0, 0, 0}, 0, 0)
 
