@@ -132,6 +132,7 @@ addAbility(NewShipType, "ShipHold", 1, 150, 100, "rallypoint", "Fighter,Corvette
 addAbility(NewShipType, "CanBuildShips", 1, "Fighter_Hgn", "Fighter")
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "HyperspaceInhibitorAbility", 0, 50000)
+addAbility(NewShipType, "MinelayerAbility", 1, 3.5)
 LoadModel(NewShipType, 1)
 addShield(NewShipType, "EMP", 10000, 20)
 StartShipHardPointConfig(NewShipType, "Production 1", "HardPoint_Production1", "System", "Production", "Destroyable", "sri_cb_hyperspaceinhibitor", "", "", "", "", "", "", "", "")
