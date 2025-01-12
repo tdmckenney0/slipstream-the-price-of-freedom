@@ -157,8 +157,8 @@ addAbility(NewShipType, "DefenseFieldShieldAbility", 1, 800, 0, 0)
 LoadModel(NewShipType, 1)
 
 --old Weapons
-StartShipWeaponConfig(NewShipType, "hgn_minelauncher", "Weapon_Torpedo", "null")
-StartShipWeaponConfig(NewShipType, "hgn_minelauncher", "Weapon_Torpedo2", "null")
+StartShipWeaponConfig(NewShipType, "hgn_nuclearminelauncher", "Weapon_Torpedo", "null")
+StartShipWeaponConfig(NewShipType, "hgn_nuclearminelauncher", "Weapon_Torpedo2", "null")
 
 --Replacement Turrets
 
