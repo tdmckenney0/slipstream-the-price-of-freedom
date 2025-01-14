@@ -39,6 +39,10 @@ Direct Connection multiplayer has not been tested with TPOF. For this method to 
 
 Though using the same game engine and assets, _Slipstream: The Price of Freedom_ is very different from Homeworld 2. Emphasis on fleet building and long-term strategy has been heavily reduced in favor of fast-paced tactical gameplay with a focus on combat.
 
+#### Music
+
+Based on your selection at the game setup screen, pressing the F1 key will allow you to skip through your chosen soundtrack. 
+
 #### Hyperspace (Slipstream)
 
 Hiigaran and Vaygr capital ships are now equipped with Slipstream drives that make hyperspace fast and free. Strikecraft and Platforms can now be delivered to the battlefield via ships equipped with a Hyperspace Module.
