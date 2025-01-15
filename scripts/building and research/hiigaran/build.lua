@@ -373,7 +373,7 @@ build =
         RequiredResearch = "InstaAdvancedFrigateTech",
         RequiredShipSubSystems = "FrigateProduction",
         DisplayPriority = 65,
-        DisplayedName = "$7048",
+        DisplayedName = "$7080",
         Description = "$7049",
     },
     {
