@@ -1607,6 +1607,6 @@ function NonDetermChunk()
   fogSetDensity(0.01)
   setGlareIntensity(0.77)
   setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("tpof_orbit")
+  loadBackground("hw1_supernova")
   setSensorsManagerCameraDistances(12000, 60000)
 end
