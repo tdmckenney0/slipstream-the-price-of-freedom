@@ -1566,6 +1566,6 @@ function NonDetermChunk()
     fogSetDensity(0.15)
     setGlareIntensity(0)
     setLevelShadowColour(0, 0, 0, 1)
-    loadBackground("hwc_gulf_sector")
+    loadBackground("tpof_companions")
     setSensorsManagerCameraDistances(10000, 45000)
 end
