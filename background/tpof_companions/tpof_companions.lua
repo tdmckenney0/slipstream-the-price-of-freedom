@@ -7,7 +7,16 @@ lensflares =
 {
     lensflare0 =
     {
-        name = "M01_Flare",
+        name = "planetkiller_flare_glow",
         position =
-            { 120, 4.079, 87.2353, },
-        infinite = 1, }, }
+        { 120, 4.079, 87.2353, },
+        infinite = 1,
+    },
+    lensflare1 =
+    {
+        name = "josh2flare",
+        position =
+        { 120, 4.079, 87.2353, },
+        infinite = 1, 
+    },
+}
