@@ -54,3 +54,11 @@ Strikecraft (Fighters, Corvettes) are faster, more evasive, and break formation 
 #### Platforms
 
 Platforms can now be moved multiple times, delivered via hyperspace using a module, and also issued guard orders. However, they are slow, weakly armored, and do not engage enemies outside of range. A useful strategy is to have platforms accompany strikecraft when being deployed via hyperspace; Platforms will provide covering fire long enough for strikecraft to get up to speed and scatter.
+
+#### Subsystems
+
+Subsystems have been added and existing ones modified.
+
+##### Advanced Sensors Array
+
+Now grants sensors ping ability to ships with advanced sensors equipped.
