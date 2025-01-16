@@ -88,3 +88,58 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 > ...
 
 **The Graveyard** is a 2v2 symmetric map.
+
+### The Traitor
+
+> ...
+
+**The Traitor** is a 2v2 asymmetric map.
+
+### Assault
+
+> ...
+
+**Assault** is a 1v2 asymmetric map based on _Thaddis Sabbah_ from the Homeworld 2 campaign. Hyperspace is disabled.
+
+### Standoff
+
+> ...
+
+**Standoff** is a 3-player FFA asymmetric map.
+
+### Trig's Bones
+
+> ...
+
+**Trig's Bones** is a 3-player FFA map ported from _Homeworld: Cataclysm_ that features a lot of verticality.
+
+### The Battlefield
+
+> ...
+
+**The Battlefield** is a 2v2 symmetrical map.
+
+### Mining Outpost
+
+> ...
+
+**Mining Outpost** is a 2v3 asymmetrical map.
+
+### The Final Battle
+
+> ...
+
+**The Final Battle** is a 2v3 asymmetrical map.
+
+### The Badlands
+
+> ...
+
+**The Badlands** is a symmetrical 6-player map designed for 3v3 or FFA. It features minimal resources, all of which are located in the center of the map. 
+
+### Garrison
+
+> ...
+
+**Garrison** is a symmetrical 3v3 map with hyperspace disabled. 
+
