@@ -383,7 +383,7 @@ end
 
 function NonDetermChunk()
 
-	loadBackground("tpof_orions_bridge")
+	loadBackground("tpof_as_sirat")
 	setSensorsManagerCameraDistances(10000, 50000)
 	
 end
