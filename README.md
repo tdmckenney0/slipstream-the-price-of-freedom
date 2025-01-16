@@ -62,3 +62,29 @@ Subsystems have been added and existing ones modified.
 ##### Advanced Sensors Array
 
 Now grants sensors ping ability to ships with advanced sensors equipped.
+
+## Levels
+
+### As-Sirat
+
+> Two ancient Bentusi slipgates drift silently through a dense nebula.
+
+**As-Sirat** is a symmetrical 1v1 map with plenty of resources and nowhere to hide.
+
+### Research Outpost
+
+> SRI has gathered many valuable artifacts to study...
+
+**Research Outpost** is a 1v1 asymmetric map with hyperspace disabled. 
+
+### Split
+
+> ...
+
+**Split** is a 1v1 symmetric map with hyperspace disabled.
+
+### The Graveyard
+
+> ...
+
+**The Graveyard** is a 2v2 symmetric map.
