@@ -109,7 +109,7 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### Trig's Bones
 
-> ...
+> The legendsmiths have long told the tale of Trig Soban, an accomplished Soban mercenary, who in the year 497 traveled to the northern lands to fight for a new employer. Upon arriving at the lord's town Trig found it under siege. Broken and defeated his employer told Trig that he was free to go, the battle obviously lost. But a Soban warrior is bound by honor to fight until the terms of a contract are fulfilled. The legendsmiths say that the lord's dismissal still hung in the air as Trig drew his sword, turned, and marched out of the town, where he proceeded to single-handedly cut a bloody swath to the middle of the enemy encampment. They say he managed to kill their general before he was cut down himself. They say the Soban never recovered the body of their brother. They say that in a rage, the enemy lord had Trig's body scattered across the continent. When we took to the stars the legends traveled with us and to this day, this strange area of space is referred to as Trig's Bones, a memorial to the legendary fighter.
 
 **Trig's Bones** is a 3-player FFA map ported from _Homeworld: Cataclysm_ that features a lot of verticality.
 
