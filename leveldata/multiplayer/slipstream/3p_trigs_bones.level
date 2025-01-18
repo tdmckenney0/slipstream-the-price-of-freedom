@@ -380,12 +380,6 @@ end
 function NonDetermChunk()
 
   setWorldBoundsInner({0, 0, 0}, {80000, 32500, 80000})
-  fogSetActive (1)
-  fogSetStart (10)
-  fogSetEnd (20000)
-  fogSetColour(0.427734, 0.228516, 0.136719, 1)
-  fogSetType ("linear")
-  fogSetDensity (0.15)
   setGlareIntensity (0)
   setLevelShadowColour(0, 0, 0, 1)
   loadBackground ("hwc_az_23769_tinted")
