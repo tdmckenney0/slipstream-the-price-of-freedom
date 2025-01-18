@@ -89,12 +89,6 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 **The Graveyard** is a 2v2 symmetric map.
 
-### The Traitor
-
-> ...
-
-**The Traitor** is a 2v2 asymmetric map.
-
 ### Assault
 
 > ...
