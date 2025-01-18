@@ -137,6 +137,7 @@ function DetermChunk()
 
   addSquadron("Meg_Gehenna_1", "Meg_Gehenna_1", { -7000, 0, -31456 }, -1, { 0, .22, .22 }, 1, 0);
   addSquadron("Meg_Gehenna_2", "Meg_Gehenna_4", { 15000, 0, -39456 }, -1, { 0, .22, .22 }, 1, 0);
+  addSquadron("meg_asteroid_inhibitor", "meg_asteroid_inhibitor", { 0, 0, -39456 }, -1, { .22, 0, .22 }, 1, 0);
 
   addSalvage("container", { -2754, 5460, 23876 }, 600, 0, 0, 100, 100)
   addSalvage("container", { 2545, 3057, 25468 }, 600, 15, -50, 100, 100)

@@ -117,7 +117,7 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 > ...
 
-**Mining Outpost** is a 2v3 asymmetrical map.
+**Mining Outpost** is a 2v3 asymmetrical map with hyperspace disabled.
 
 ### The Final Battle
 
