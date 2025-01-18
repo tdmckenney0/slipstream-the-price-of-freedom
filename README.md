@@ -77,12 +77,6 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 **Research Outpost** is a 1v1 asymmetric map with hyperspace disabled. 
 
-### Split
-
-> ...
-
-**Split** is a 1v1 symmetric map with hyperspace disabled.
-
 ### The Graveyard
 
 > ...
