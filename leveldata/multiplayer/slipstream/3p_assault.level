@@ -1558,12 +1558,6 @@ function NonDetermChunk()
     addPebble("Pebble_0",
         { -49743, 4595, 32039, }, 0, 0, 0)
 
-    fogSetActive(1)
-    fogSetStart(10)
-    fogSetEnd(20000)
-    fogSetColour(0.427734, 0.228516, 0.136719, 1)
-    fogSetType("linear")
-    fogSetDensity(0.15)
     setGlareIntensity(0)
     setLevelShadowColour(0, 0, 0, 1)
     loadBackground("tpof_companions")
