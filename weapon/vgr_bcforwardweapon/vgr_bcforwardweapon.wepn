@@ -1,4 +1,4 @@
-StartWeaponConfig(NewWeaponType, "Gimble", "InstantHit", "vgrbeam", "Normal", 0, 15000, 0, 5, 1, 0, 20, 0, 1, 5, 0, 0, 0, 0, 35, 20, 0.1, "Normal", 0, 0, 0)
+StartWeaponConfig(NewWeaponType, "Gimble", "InstantHit", "Vgr_IonBeam", "Normal", 0, 15000, 0, 5, 1, 0, 20, 0, 1, 5, 0, 0, 0, 0, 35, 20, 0.1, "Normal", 0, 0, 0)
 
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",2250,2250,"");
 AddWeaponResult(NewWeaponType,"Hit","Push","Target",-25,-25,"");
