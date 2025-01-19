@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "Secondary Directional Thruster"
-NewSubSystemType.sobDescription = "System: Linear Propulsor\nVector-Thrusted Maneuvering Drive\nThrust/Acceleration: 3.5 m/s"
+NewSubSystemType.displayedName = "$2030"
+NewSubSystemType.sobDescription = "$2031"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045
@@ -20,7 +20,7 @@ NewSubSystemType.selectionLimit = 0
 NewSubSystemType.preciseATILimit = 0
 NewSubSystemType.selectionPriority = 0
 NewSubSystemType.type = "Weapon"
-NewSubSystemType.typeString = "MEP"
+NewSubSystemType.typeString = "DirectionalThruster"
 NewSubSystemType.collateralDamage = 0
 NewSubSystemType.inactiveTimeAfterDamage = 150
 NewSubSystemType.activateHealthPercentage = 0.7
