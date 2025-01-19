@@ -811,7 +811,6 @@ function DetermChunk()
     addSquadron("MinelayerCorvette_Group630", "meg_progenitorpowertrigger", {608.58,-1086.785,-1793.75}, -1, {0,-87.8,63.2}, 1, 0)
     addSquadron("MultiGunCorvette_Group3", "meg_starjumper", {4831.925,2435.685,-9361.345}, -1, {0,67.5,46.0}, 1, 0)
     addSquadron("MultiGunCorvette_Group677", "meg_starjumper", {7595.875,-5991.265,-21163.8}, -1, {0,-4.40000000000001,-64.9}, 1, 0)
-    addSquadron("MultiGunCorvette_Group693", "meg_starjumper", {7595.875,-5991.265,-21163.8}, -1, {0,-4.40000000000001,-64.9}, 1, 0)
     addSquadron("JunkyardHQ0", "sri_commandbase", {17725.155,1744.15,-21949.585}, -1, {0,-225,0}, 0, 0)
     addSquadron("Slipgate", "meg_slipgate2", {-35726.37, -1112.825, 36950.705}, -1, {-10,-225, 10}, 0, 0)
 
