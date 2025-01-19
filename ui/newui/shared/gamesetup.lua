@@ -567,7 +567,7 @@ GameSetup =
                             type = "Graphic",
                             texture = "Data:LevelData\\Multiplayer\\DefaultMapThumbnail.tga",
                             textureUV =
-                            { 0, 0, 360, 266, },
+                            { 0, 0, 512, 378, },
                         },
                         position =
                         { 4, 19, },
