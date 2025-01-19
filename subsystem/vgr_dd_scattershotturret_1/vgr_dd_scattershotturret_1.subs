@@ -5,8 +5,8 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName="Scattershot Turret"
-NewSubSystemType.sobDescription="Scattershot Turret"
+NewSubSystemType.displayedName="$2046"
+NewSubSystemType.sobDescription="$2047"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
 NewSubSystemType.tacticalIconMinFadeSize=0.0045

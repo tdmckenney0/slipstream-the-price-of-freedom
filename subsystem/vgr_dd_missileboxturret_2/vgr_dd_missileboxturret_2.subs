@@ -5,8 +5,8 @@
 --  Copyright Relic Entertainment, Inc.  All rights reserved.
 --===========================================================================
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName="Missile Turret"
-NewSubSystemType.sobDescription="$2029"
+NewSubSystemType.displayedName="$2048"
+NewSubSystemType.sobDescription="$2049"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
 NewSubSystemType.tacticalIconMinFadeSize=0.0045
