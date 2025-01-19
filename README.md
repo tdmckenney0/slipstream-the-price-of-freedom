@@ -107,6 +107,12 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 **The Battlefield** is a 2v2 symmetrical map.
 
+### The Unbound
+
+> ...
+
+**The Unbound** is a 4-player CQB FFA map based on Homeworld 2's Mission 11.
+
 ### Mining Outpost
 
 > ...
