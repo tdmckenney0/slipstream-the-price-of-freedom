@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName="Mine Launcher"
-NewSubSystemType.sobDescription="Mine Launcher"
+NewSubSystemType.displayedName="$7142"
+NewSubSystemType.sobDescription="$1511"
 NewSubSystemType.tacticalIcon="hexagon"
 NewSubSystemType.tacticalIconMinSize=0.0035
 NewSubSystemType.tacticalIconMinFadeSize=0.0045
