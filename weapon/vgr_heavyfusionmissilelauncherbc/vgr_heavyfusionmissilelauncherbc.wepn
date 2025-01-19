@@ -1,7 +1,7 @@
-StartWeaponConfig(NewWeaponType,"Fixed","Missile","vgr_heavymissile","Normal",120,9000,0,0,0,0,1,1,1,45,0,0,1,1,360,360,0.1,"Normal",1,0,0)
+StartWeaponConfig(NewWeaponType,"Fixed","Missile","vgr_heavymissile","Normal",120,10000,0,0,0,0,1,1,1,10,0,0,1,1,360,360,0.1,"Normal",1,0,0)
 
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 7500, 10000, "")
-AddWeaponResult(NewWeaponType,"Hit","Push","Target",50,100,"")
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",7500,7500,"")
+AddWeaponResult(NewWeaponType,"Hit","Push","Target",150,150,"")
 
 setAngles(NewWeaponType,179,0,0,0,0)
 
