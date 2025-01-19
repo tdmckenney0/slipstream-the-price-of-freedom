@@ -37,7 +37,15 @@ Direct Connection multiplayer has not been tested with TPOF. For this method to 
 
 ### Gameplay
 
-Though using the same game engine and assets, _Slipstream: The Price of Freedom_ is very different from Homeworld 2. Emphasis on fleet building and long-term strategy has been heavily reduced in favor of fast-paced tactical gameplay with a focus on combat. 
+Though using the same game engine and assets, _Slipstream: The Price of Freedom_ is very different from Homeworld 2. Emphasis on fleet building and long-term strategy has been heavily reduced in favor of fast-paced tactical gameplay with a focus on combat.
+
+#### Music
+
+Based on your selection at the game setup screen, pressing the F1 key will allow you to skip through your chosen soundtrack. 
+
+#### Hyperspace (Slipstream)
+
+Hiigaran and Vaygr capital ships are now equipped with Slipstream drives that make hyperspace fast and free. Strikecraft and Platforms can now be delivered to the battlefield via ships equipped with a Hyperspace Module.
 
 #### Strikecraft
 
@@ -46,3 +54,86 @@ Strikecraft (Fighters, Corvettes) are faster, more evasive, and break formation 
 #### Platforms
 
 Platforms can now be moved multiple times, delivered via hyperspace using a module, and also issued guard orders. However, they are slow, weakly armored, and do not engage enemies outside of range. A useful strategy is to have platforms accompany strikecraft when being deployed via hyperspace; Platforms will provide covering fire long enough for strikecraft to get up to speed and scatter.
+
+#### Subsystems
+
+Subsystems have been added and existing ones modified.
+
+##### Advanced Sensors Array
+
+Now grants sensors ping ability to ships with advanced sensors equipped.
+
+## Levels
+
+### As-Sirat
+
+> Two ancient Bentusi slipgates drift silently through a dense nebula.
+
+**As-Sirat** is a symmetrical 1v1 map with plenty of resources and nowhere to hide.
+
+### Research Outpost
+
+> SRI has gathered many valuable artifacts to study...
+
+**Research Outpost** is a 1v1 asymmetric map with hyperspace disabled. 
+
+### The Graveyard
+
+> ...
+
+**The Graveyard** is a 2v2 symmetric map.
+
+### Assault
+
+> ...
+
+**Assault** is a 1v2 asymmetric map based on _Thaddis Sabbah_ from the Homeworld 2 campaign. Hyperspace is disabled.
+
+### Standoff
+
+> ...
+
+**Standoff** is a 3-player FFA asymmetric map.
+
+### Trig's Bones
+
+> The legendsmiths have long told the tale of Trig Soban, an accomplished Soban mercenary, who in the year 497 traveled to the northern lands to fight for a new employer. Upon arriving at the lord's town Trig found it under siege. Broken and defeated his employer told Trig that he was free to go, the battle obviously lost. But a Soban warrior is bound by honor to fight until the terms of a contract are fulfilled. The legendsmiths say that the lord's dismissal still hung in the air as Trig drew his sword, turned, and marched out of the town, where he proceeded to single-handedly cut a bloody swath to the middle of the enemy encampment. They say he managed to kill their general before he was cut down himself. They say the Soban never recovered the body of their brother. They say that in a rage, the enemy lord had Trig's body scattered across the continent. When we took to the stars the legends traveled with us and to this day, this strange area of space is referred to as Trig's Bones, a memorial to the legendary fighter.
+
+**Trig's Bones** is a 3-player FFA map ported from _Homeworld: Cataclysm_ that features a lot of verticality.
+
+### The Battlefield
+
+> ...
+
+**The Battlefield** is a 2v2 symmetrical map.
+
+### The Unbound
+
+> ...
+
+**The Unbound** is a 4-player CQB FFA map based on Homeworld 2's Mission 11.
+
+### Mining Outpost
+
+> ...
+
+**Mining Outpost** is a 2v3 asymmetrical map with hyperspace disabled.
+
+### The Final Battle
+
+> ...
+
+**The Final Battle** is a 2v3 asymmetrical map.
+
+### The Badlands
+
+> ...
+
+**The Badlands** is a symmetrical 6-player map designed for 3v3 or FFA. It features minimal resources, all of which are located in the center of the map. 
+
+### Garrison
+
+> ...
+
+**Garrison** is a symmetrical 3v3 map with hyperspace disabled. 
+

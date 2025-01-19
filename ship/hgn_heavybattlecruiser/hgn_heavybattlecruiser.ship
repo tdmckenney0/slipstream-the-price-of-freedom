@@ -157,8 +157,8 @@ addAbility(NewShipType, "DefenseFieldShieldAbility", 1, 800, 0, 0)
 LoadModel(NewShipType, 1)
 
 --old Weapons
-StartShipWeaponConfig(NewShipType, "hgn_minelauncher", "Weapon_Torpedo", "null")
-StartShipWeaponConfig(NewShipType, "hgn_minelauncher", "Weapon_Torpedo2", "null")
+StartShipWeaponConfig(NewShipType, "hgn_nuclearminelauncher", "Weapon_Torpedo", "null")
+StartShipWeaponConfig(NewShipType, "hgn_nuclearminelauncher", "Weapon_Torpedo2", "null")
 
 --Replacement Turrets
 
@@ -206,5 +206,5 @@ NewShipType.deadSobFadeTime = 0.1
 NewShipType.trailLinger = 3
 setEngineBurn(NewShipType, 9, 0.2, 0.5, 300, 1.02, 0.1, 0.25, 380)
 setEngineGlow(NewShipType, 1, 1, 1.02, 20, 500, 200, 1,
-    { 0.92, 0.21, 0.09, 0.25, })
+    { 0.27, 0.47, 0.69, 0.25, })
 loadShipPatchList(NewShipType, "data:sound/sfx/ship/Hiigaran/MegaShip/", 0, "Engines/HDreadnaughtEng", "", 1, "Ambience/HMotherShipAmb", "")

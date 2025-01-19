@@ -25,10 +25,15 @@ player[2] =
     startPos = 0, }
 
 function DetermChunk()
+  -- Positions are multiplied by `0.6154` and are X,Z,Y,Rotation in Homeworld 1
+  -- Ships     ,-37710.0,-30347.3,8884.2,0.0,RACE_SECT,sMothership,1,NULL_FORMATION|?|?,0,?
+  addPoint("StartPos0", {-37710.0 * 0.6154, 8884.2 * 0.6154, -30347.3 * 0.6154}, {0, 0, 0})
 
-  addPoint("StartPos0", {-37710.0, -30347.3, 8884.2}, {0, 0, 0})
-	addPoint("StartPos1", {-23806.4, 47554.0, -5931.0}, {0, 35, 0})
-	addPoint("StartPos2", {36901.8, 311.6, 5458.0,}, {0, 0, 0})
+  -- Ships     ,-23806.4,47554.0,-5931.0,0.0,RACE_SECT,sMothership,1,NULL_FORMATION|?|?,0,?
+	addPoint("StartPos1", {-23806.4 * 0.6154, -5931.0 * 0.6154, 47554.0 * 0.6154}, {0, 0, 0})
+
+  -- Ships     ,36901.8,311.6,5458.0,0.0,RACE_SECT,sMothership,1,NULL_FORMATION|?|?,0,?
+	addPoint("StartPos2", {36901.8 * 0.6154, 5458.0 * 0.6154, 311.6 * 0.6154,}, {0, 0, 0})
 
   addAsteroid("Asteroid_4", {-79.44814,-1089.01184,-1208.83022},5, 0, 0, 0, 0)
   addAsteroid("Asteroid_3", {182.21994,-2739.39156,-3069.3075},5, 0, 0, 0, 0)
@@ -345,18 +350,36 @@ function DetermChunk()
   addAsteroid("Asteroid_1", {-17407.14286,1168.45998,-16397.57916},3, 0, 0, 0, 0)
   addAsteroid("Asteroid_5", {-15541.12698,-698.84824,-14865.35624},10, 0, 0, 0, 0)
   addAsteroid("Asteroid_4", {-9584.73192,-7161.28672,-10247.45618},10, 0, 0, 0, 0)
+  
+  -- Ships     ,-43512.4,-40995.5,14382.6,0.0,RACE_DERELICT,dCrystal0,1,NULL_FORMATION|?|?,0,?
+  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", {-43512.4 * 0.6154, 14382.6 * 0.6154,-40995.5 * 0.6154}, -1, {1.648, -40.132, -29.45}, 0, 0)
+
+  -- Ships     ,-14103.4,35337.7,10520.0,42.0,RACE_DERELICT,dCrystal0,1,NULL_FORMATION|?|?,0,?
+  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", {-14103.4  * 0.6154, 10520.0  * 0.6154, 35337.7  * 0.6154}, -1, {1.648, -40.132, -29.45}, 0, 0)
+
+  -- Ships     ,51.0,340.5,-1132.8,42.0,RACE_DERELICT,dCrystal1,1,NULL_FORMATION|?|?,0,?
+  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", {51.0 * 0.6154,-1132.8 * 0.6154,340.5 * 0.6154}, -1, {1.648, -40.132, -29.45}, 0, 0)
+
+  -- Ships     ,39920.4,-29110.4,3746.2,0.0,RACE_DERELICT,dCrystal0,1,NULL_FORMATION|?|?,0,?
+  addSquadron("meg_leviathan", "meg_leviathan", {39920.4 * 0.6154,3746.2 * 0.6154,-29110.4 * 0.6154}, -1, {1.648, -40.132, -29.45}, 0, 0)
+
+  -- Ships     ,-681.0,4915.0,6186.0,42.0,RACE_DERELICT,dCrystal0,1,NULL_FORMATION|?|?,0,?
+  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", {-681.0 * 0.6154,6186.0 * 0.6154,4915.0 * 0.6154}, -1, {1.648, -40.132, -29.45}, 0, 0)
+
+  -- Ships     ,51.0,-4234.0,-4243.0,42.0,RACE_DERELICT,dCrystal0,1,NULL_FORMATION|?|?,0,?
+  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", {51.0 * 0.6154,-4243.0 * 0.6154,-4234.0 * 0.6154}, -1, {1.648, -40.132, -29.45}, 0, 0)
+
+  -- Ships     ,3161.0,5646.0,-3511.0,42.0,RACE_DERELICT,dCrystal0,1,NULL_FORMATION|?|?,0,?
+  addSquadron("meg_starjumper", "meg_starjumper", {3161.0 * 0.6154,-3511.0 * 0.6154,5646.0 * 0.6154}, -1, {1.648, -40.132, -29.45}, 0, 0)
+
+  -- Ships     ,-43512.4,-40995.5,14382.6,0.0,RACE_DERELICT,dCrystal0,1,NULL_FORMATION|?|?,0,?
+  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", {-43512.4 * 0.6154,14382.6 * 0.6154,-40995.5 * 0.6154}, -1, {1.648, -40.132, -29.45}, 0, 0)
 
 end
 
 function NonDetermChunk()
 
   setWorldBoundsInner({0, 0, 0}, {80000, 32500, 80000})
-  fogSetActive (1)
-  fogSetStart (10)
-  fogSetEnd (20000)
-  fogSetColour(0.427734, 0.228516, 0.136719, 1)
-  fogSetType ("linear")
-  fogSetDensity (0.15)
   setGlareIntensity (0)
   setLevelShadowColour(0, 0, 0, 1)
   loadBackground ("hwc_az_23769_tinted")

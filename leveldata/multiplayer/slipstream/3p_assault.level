@@ -35,7 +35,7 @@ player[2] =
     startPos = 0,
 }
 function DetermChunk()
-    addPoint("StartPos0", { 12, 0, 37072 }, { 0, 0, 0 })
+    addPoint("StartPos0", { 12, 0, 37072 }, { 0, 180, 0 })
     addPoint("StartPos1", { -8284, 0, -27596 }, { 0, 35, 0 })
     addPoint("StartPos2", { 2837, 0, -3008 }, { 0, 0, 0 })
 
@@ -1558,14 +1558,8 @@ function NonDetermChunk()
     addPebble("Pebble_0",
         { -49743, 4595, 32039, }, 0, 0, 0)
 
-    fogSetActive(1)
-    fogSetStart(10)
-    fogSetEnd(20000)
-    fogSetColour(0.427734, 0.228516, 0.136719, 1)
-    fogSetType("linear")
-    fogSetDensity(0.15)
     setGlareIntensity(0)
     setLevelShadowColour(0, 0, 0, 1)
-    loadBackground("hwc_gulf_sector")
+    loadBackground("tpof_companions")
     setSensorsManagerCameraDistances(10000, 45000)
 end
