@@ -21,6 +21,10 @@ The Daiamid is not exactly content with this arrangement, and frankly, neither a
 ### The Price of Freedom
 This political conundrum has been referred to as "the price of freedom" within the Daiamid chamber; A cold war locking themselves and the Vaygr in a perpetual staring contest until one of them blinks. Until that happens, both factions are under pressure to quickly gather resources and strengthen their forces without the other noticing. This has lead to an extremely tense and lawless borderland between the two factions, where entire fleets go missing in action; of course, destroyed in skirmishes that go completely ignored unless politically convenient. Though, that hasn't stopped the persistent and militarily minded from trying to secure resources and strategic positions in the region without repercussion. This is the true "Price of Freedom": deadlocked political machines fighting an unofficial war with no end in sight... 
 
+## Requirements
+
+Homeworld 2 v2.1 or greater is required to play _Slipstream: The Price of Freedom_. This version can be found in the Homeworld Remastered Collection; unfortunately, the original retail CD release is no longer supported as of v4.0. Minimum hardware required: 4gb of RAM, a dual-core CPU, and a modern GPU.  
+
 ## Features
 
 ### Multiplayer
