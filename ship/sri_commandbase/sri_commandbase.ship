@@ -1,7 +1,7 @@
 --Copyright Tanner "Sajuuk" Mckenney 2007
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "SRI Command Base"
-NewShipType.sobDescription = "SRI Command Base"
+NewShipType.displayedName = "$1668"
+NewShipType.sobDescription = "$1668"
 NewShipType.maxhealth = 100000
 NewShipType.regentime = 2000
 NewShipType.minRegenTime = 1800
