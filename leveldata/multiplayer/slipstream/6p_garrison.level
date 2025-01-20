@@ -67,6 +67,7 @@ player[5] = {
   id = 1,
   name = "",
 }
+
 function DetermChunk()
   addPoint("StartPos0", { 0, 0, 5000 }, { 0, 0, 0 })
   addPoint("StartPos1", { -5333, 0, -5000 }, { 0, -135, 0 })
@@ -76,105 +77,94 @@ function DetermChunk()
   addPoint("StartPos5", { 0, 0, -28000 }, { 0, 0, 0 })
 
   addSquadron("meg_leviathan", "meg_leviathan", { 17000, 17346, 9470 }, -1, { -6, -50, 150 }, 0, 0)
-
-  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { 27568, -3309, -11529 }, -1, { 1.648, -40.132, -29.45 }, 0,
-    0)
-  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { 27568, 1309, -12546 }, -1, { 120.108, -38.66, -149.942 }, 0,
-    0)
+  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { 27568, -3309, -11529 }, -1, { 1.648, -40.132, -29.45 }, 0, 0)
+  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { 27568, 1309, -12546 }, -1, { 120.108, -38.66, -149.942 }, 0, 0)
   addSquadron("meg_starjumper", "meg_starjumper", { -27568, -3309, 11529 }, -1, { 1.648, -40.132, -29.45 }, 0, 0)
-  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { -27568, 1309, 12546 }, -1, { 120.108, -38.66, -149.942 }, 0,
-    0)
+  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { -27568, 1309, 12546 }, -1, { 120.108, -38.66, -149.942 }, 0, 0)
   addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { -19000, 6273, 29099 }, -1, { -58.112, 0, -17.069 }, 0, 0)
 
   addSquadron("Garrison", "sri_commandbase", { 0, 0, 0 }, -1, { 0, 0, 0 }, 0, 0)
 
-  addSquadron("Guard", "vgr_battlecruiser", { -25333, 1000, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_battlecruiser", { 25333, 0, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_battlecruiser", { 0, 1000, -36000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_battlecruiser", { 0, 2000, 6000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_battlecruiser", { -6333, 2000, -6000 }, 1, { 0, -135, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_battlecruiser", { 6333, 2000, -6000 }, 2, { 0, 135, 0, }, 0, 0);
+  addSquadron("Guard", "sri_dreadnaught", { -25333, 1000, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "sri_dreadnaught", { 25333, 0, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "sri_dreadnaught", { 0, 1000, -36000 }, 5, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "sri_dreadnaught", { 0, 2000, 6000 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "sri_dreadnaught", { -6333, 2000, -6000 }, 1, { 0, -135, 0, }, 0, 0);
+  addSquadron("Guard", "sri_dreadnaught", { 6333, 2000, -6000 }, 2, { 0, 135, 0, }, 0, 0);
 
-  addSquadron("Guard", "vgr_bomber", { -25333, 0, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { -25333, 100, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { -25333, 200, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { -25333, 300, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { -25333, 400, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { -25333, 500, 20000 }, 3, { 0, 0, 0, }, 0, 0)
-  addSquadron("Guard", "vgr_bomber", { -25333, 600, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { -25333, 700, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { -25333, 800, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -25333, 0, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -25333, 100, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -25333, 200, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -25333, 300, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -25333, 400, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -25333, 500, 20000 }, 3, { 0, 0, 0, }, 0, 0)
+  addSquadron("Guard", "kpr_attackdroid", { -25333, 600, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -25333, 700, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -25333, 800, 20000 }, 3, { 0, 0, 0, }, 0, 0);
 
-  addSquadron("Guard", "vgr_bomber", { 25333, 0, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 25333, 100, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 25333, 200, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 25333, 300, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 25333, 400, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 25333, 500, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 25333, 600, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 25333, 700, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 25333, 800, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 25333, 0, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 25333, 100, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 25333, 200, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 25333, 300, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 25333, 400, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 25333, 500, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 25333, 600, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 25333, 700, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 25333, 800, 20000 }, 4, { 0, 0, 0, }, 0, 0);
 
-  addSquadron("Guard", "vgr_bomber", { 0, 0, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 0, 100, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 0, 200, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 0, 300, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 0, 400, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 0, 500, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 0, 600, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 0, 700, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_bomber", { 0, 800, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 0, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 100, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 200, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 300, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 400, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 500, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 600, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 700, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 800, -28000 }, 5, { 0, 0, 0, }, 0, 0);
 
+  addSquadron("Guard", "kpr_attackdroid", { -6333, 0, -6000 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -6333, -1000, -6000 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -6333, 1000, -6000 }, 1, { 0, 0, 0, }, 0, 0);
 
-  addSquadron("Guard", "hgn_interceptor", { -6333, 0, -6000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_interceptor", { -6333, -1000, -6000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_interceptor", { -6333, 1000, -6000 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 0, 6000 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 1000, 6000 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, -1000, 6000 }, 0, { 0, 0, 0, }, 0, 0);
 
+  addSquadron("Guard", "kpr_attackdroid", { 6333, 0, -6000 }, 2, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 6333, -1000, -6000 }, 2, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 6333, 1000, -6000 }, 2, { 0, 0, 0, }, 0, 0);
 
-  addSquadron("Guard", "hgn_interceptor", { 0, 0, 6000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_interceptor", { 0, 1000, 6000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_interceptor", { 0, -1000, 6000 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -6333, 0, -5000 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -6333, 100, -5000 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -6333, 200, -5000 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -6333, 300, -5000 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -6333, 400, -5000 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 6333, 0, -5000 }, 2, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 6333, 100, -5000 }, 2, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 6333, 200, -5000 }, 2, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 6333, 300, -5000 }, 2, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 6333, 400, -5000 }, 2, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 0, 5000 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 100, 5000 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 200, 5000 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 300, 5000 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 400, 5000 }, 0, { 0, 0, 0, }, 0, 0);
 
-  addSquadron("Guard", "hgn_interceptor", { 6333, 0, -6000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_interceptor", { 6333, -1000, -6000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_interceptor", { 6333, 1000, -6000 }, 2, { 0, 0, 0, }, 0, 0);
-
-
-  addSquadron("Guard", "hgn_gunturret", { -6333, 0, -5000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { -6333, 100, -5000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { -6333, 200, -5000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { -6333, 300, -5000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { -6333, 400, -5000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { 6333, 0, -5000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { 6333, 100, -5000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { 6333, 200, -5000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { 6333, 300, -5000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { 6333, 400, -5000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { 0, 0, 5000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { 0, 100, 5000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { 0, 200, 5000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { 0, 300, 5000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "hgn_gunturret", { 0, 400, 5000 }, 0, { 0, 0, 0, }, 0, 0);
-
-
-  addSquadron("Guard", "vgr_weaponplatform_missile", { 0, 0, 5500 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { 0, 100, 5500 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { 0, 200, 5500 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { 0, 300, 5500 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { 0, 400, 5500 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { -6333, 100, -5500 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { -6333, 0, -5500 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { -6333, 200, -5500 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { -6333, 300, -5500 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { -6333, 400, -5500 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { 6333, 100, -5500 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { 6333, 0, -5500 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { 6333, 200, -5500 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { 6333, 300, -5500 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "vgr_weaponplatform_missile", { 6333, 400, -5500 }, 2, { 0, 0, 0, }, 0, 0);
-
-
-
+  addSquadron("Guard", "kpr_attackdroid", { 0, 0, 5500 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 100, 5500 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 200, 5500 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 300, 5500 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 0, 400, 5500 }, 0, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -6333, 100, -5500 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -6333, 0, -5500 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -6333, 200, -5500 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -6333, 300, -5500 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { -6333, 400, -5500 }, 1, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 6333, 100, -5500 }, 2, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 6333, 0, -5500 }, 2, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 6333, 200, -5500 }, 2, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 6333, 300, -5500 }, 2, { 0, 0, 0, }, 0, 0);
+  addSquadron("Guard", "kpr_attackdroid", { 6333, 400, -5500 }, 2, { 0, 0, 0, }, 0, 0);
 
   setWorldBoundsInner({ 0, 0, 0 }, { 38000, 38000, 38000 });
 end

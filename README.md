@@ -21,6 +21,10 @@ The Daiamid is not exactly content with this arrangement, and frankly, neither a
 ### The Price of Freedom
 This political conundrum has been referred to as "the price of freedom" within the Daiamid chamber; A cold war locking themselves and the Vaygr in a perpetual staring contest until one of them blinks. Until that happens, both factions are under pressure to quickly gather resources and strengthen their forces without the other noticing. This has lead to an extremely tense and lawless borderland between the two factions, where entire fleets go missing in action; of course, destroyed in skirmishes that go completely ignored unless politically convenient. Though, that hasn't stopped the persistent and militarily minded from trying to secure resources and strategic positions in the region without repercussion. This is the true "Price of Freedom": deadlocked political machines fighting an unofficial war with no end in sight... 
 
+## Requirements
+
+Homeworld 2 v2.1 or greater is required to play _Slipstream: The Price of Freedom_. This version can be found in the Homeworld Remastered Collection; unfortunately, the original retail CD release is no longer supported as of v4.0. Minimum hardware required: 4gb of RAM, a dual-core CPU, and a modern GPU.  
+
 ## Features
 
 ### Multiplayer
@@ -67,19 +71,19 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### As-Sirat
 
-> Two ancient Bentusi slipgates drift silently through a dense nebula.
+> The Bentusi once guided travelers between these two Slipgates for those lost in the nebula do not return...
 
 **As-Sirat** is a symmetrical 1v1 map with plenty of resources and nowhere to hide.
 
 ### Research Outpost
 
-> SRI has gathered many valuable artifacts to study...
+> SRI has salvaged many ancient artifacts and brought them to this outpost for further study...
 
 **Research Outpost** is a 1v1 asymmetric map with hyperspace disabled. 
 
 ### The Graveyard
 
-> ...
+> Many battles have been fought in this system; to what end, not a soul alive understands...
 
 **The Graveyard** is a 2v2 symmetric map.
 
@@ -91,7 +95,7 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### Standoff
 
-> ...
+> 
 
 **Standoff** is a 3-player FFA asymmetric map.
 
@@ -103,7 +107,7 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### The Battlefield
 
-> ...
+> It's the place to meet.
 
 **The Battlefield** is a 2v2 symmetrical map.
 
@@ -127,13 +131,13 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### The Badlands
 
-> ...
+> It's _really_ dark out here...
 
 **The Badlands** is a symmetrical 6-player map designed for 3v3 or FFA. It features minimal resources, all of which are located in the center of the map. 
 
 ### Garrison
 
-> ...
+> Stand your ground.
 
-**Garrison** is a symmetrical 3v3 map with hyperspace disabled. 
+**Garrison** is a symmetrical 3v3 map with hyperspace disabled. Special ships include the Bentusi-derived Dreadnaught and Drones. 
 

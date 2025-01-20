@@ -1,6 +1,9 @@
 StartWeaponConfig(NewWeaponType,"AnimatedTurret","Missile","Vgr_SmallMissile","Normal",120,5000,0,0,0,0,1,1,1,1,5,10,1,0,75,75,0.1,"Normal",1,0,0)
 
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",90,90,"")
+AddWeaponResult(NewWeaponType,"Hit","Push","Target",150,150,"")
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"vgr_pulsecannonburst")
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"vgr_pulsecannonburst")
 
 setAngles(NewWeaponType,5,-180,180,0,10)
 
