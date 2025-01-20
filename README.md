@@ -23,7 +23,36 @@ This political conundrum has been referred to as "the price of freedom" within t
 
 ## Requirements
 
-Homeworld 2 v2.1 or greater is required to play _Slipstream: The Price of Freedom_. This version can be found in the Homeworld Remastered Collection; unfortunately, the original retail CD release is no longer supported as of v4.0. Minimum hardware required: 4gb of RAM, a dual-core CPU, and a modern GPU.  
+Homeworld 2 v2.1 or greater is required to play _Slipstream: The Price of Freedom_. This version can be found in the Homeworld Remastered Collection; unfortunately, the original retail CD release is no longer supported as of v4.0. Minimum hardware required: 4gb of RAM, a dual-core CPU, and a modern GPU.
+
+## Getting Started
+
+### Steam
+
+If you're using the Steam version of Homeworld Remastered, it is recommended to install TPOF from the Steam workshop. Once installed: 
+
+1. Launch Homeworld Remastered 
+2. Select "Mods" in the launcher 
+3. Select "HW2 Classic"
+4. Highlight "Slipstream: The Price of Freedom"
+5. Press "Select"
+6. Add Your command line arguments
+7. Press "Launch"
+
+### Non-Steam (GoG, etc)
+
+1. Download the `.big` file from Moddb or Github.
+2. Locate the your Homeworld Remastered installation directory.
+3. Place the `.big` file in the `Homeworld2Classic\Data` directory.
+4. Enter the `Homeworld2Classic\Bin\Release` directory.
+5. Create a new shortcut to `Homeworld2.exe` named `Slipstream: The Price of Freedom`
+6. Open the properties of this new shortcut.
+7. In the Shortcut tab, locate the "Target" box.
+8. After the `Homeworld2.exe"`, append ` -mod <name of .big file>`; e.g. `"C:\Games\Homeworld Remastered\Homeworld2Classic\Bin\Release\Homeworld2.exe" -mod TPOFv4.0.big`
+9. Add any additional command line parameters.
+10. Click the "OK" button.
+11. Move the shortcut to the desktop, or wherever you'd like to place it.
+12. Double click the shortcut to launch the mod.
 
 ## Features
 
