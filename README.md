@@ -74,7 +74,11 @@ Though using the same game engine and assets, _Slipstream: The Price of Freedom_
 
 #### Music
 
-Based on your selection at the game setup screen, pressing the F1 key will allow you to skip through your chosen soundtrack. 
+Based on your selection at the game setup screen, pressing the F1 key will allow you to skip through your chosen soundtrack.
+
+##### Soundtrack
+
+TPOF includes an original soundtrack by myself and DJZ4K; choose "Shuffle Slipstream" at Game Setup to hear the full soundtrack! Tracks are also included in other playlists alongside the existing Homeworld 2 soundtrack.
 
 #### Hyperspace (Slipstream)
 
