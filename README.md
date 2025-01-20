@@ -162,19 +162,19 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### The Final Battle
 
-> ...
+> It is said that Sajuuk blesses those about to enter battle against overwhelming odds.
 
 **The Final Battle** is a 2v3 asymmetrical map, and a remix of Homeworld 2's mission 15.
 
 ### The Badlands
 
-> It's _really_ dark out here...
+> Let us never forget those who journeyed into the howling dark and did not return.
 
 **The Badlands** is a symmetrical 6-player map designed for 3v3 or FFA. It features minimal resources, all of which are located in the center of the map. 
 
 ### Garrison
 
-> Stand your ground.
+> This heavily defended SRI outpost is the last standing deep within Vaygr territory. 
 
 **Garrison** is a symmetrical 3v3 map with hyperspace disabled. Special ships include the Bentusi-derived Dreadnaught and Drones. 
 
