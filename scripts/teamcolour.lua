@@ -24,6 +24,6 @@ teamcolours =
             { 0, 1, 0.5, }, 
             { 0.1, 0.2, 0.6, }, "DATA:Badges/sri_corp.tga", }, 
         { 
-            { 0.5, 0.5, 0.5, }, 
-            { 0.7, 0.7, 0.6, }, "DATA:Badges/sri_corp.tga", }, 
+            { 0, 0, 0, }, 
+            { 0.1, 0.1, 0.72, }, "DATA:Badges/sri_corp.tga", }, 
     }
