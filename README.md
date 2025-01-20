@@ -113,7 +113,7 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### The Unbound
 
-> ...
+> Overwhelmed by the Beast, this is the final resting place of the Bentusi.
 
 **The Unbound** is a 4-player CQB FFA map based on Homeworld 2's Mission 11.
 
