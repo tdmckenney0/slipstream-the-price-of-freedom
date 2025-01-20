@@ -100,6 +100,10 @@ Subsystems have been added and existing ones modified.
 
 Now grants sensors ping ability to ships with advanced sensors equipped.
 
+##### Weapons
+
+Some Super-Capital ships can build and change weapon turrets, allowing the player to configure a ship for a specific engagement style. 
+
 ## Levels
 
 ### As-Sirat
@@ -110,25 +114,25 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### Research Outpost
 
-> SRI has salvaged many ancient artifacts and brought them to this outpost for further study...
+> SRI has salvaged many ancient artifacts and brought them to this outpost for further study.
 
 **Research Outpost** is a 1v1 asymmetric map with hyperspace disabled. 
 
 ### The Graveyard
 
-> Many battles have been fought in this system; to what end, not a soul alive understands...
+> Historians are not quite sure why so many empires met their end in this system. 
 
 **The Graveyard** is a 2v2 symmetric map.
 
 ### Assault
 
-> ...
+> Formerly Hiigaran colonies, these moons now serve as a staging and resupply outpost for the Vaygr.
 
 **Assault** is a 1v2 asymmetric map based on _Thaddis Sabbah_ from the Homeworld 2 campaign. Hyperspace is disabled.
 
 ### Standoff
 
-> 
+> This system isn't expansive enough for three fleets of warships.
 
 **Standoff** is a 3-player FFA asymmetric map.
 
@@ -140,7 +144,7 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### The Battlefield
 
-> It's the place to meet.
+> They say it's an honorable place to meet, though don't expect a fair fight.
 
 **The Battlefield** is a 2v2 symmetrical map.
 
@@ -152,7 +156,7 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### Mining Outpost
 
-> ...
+> This mining operation is key to Vaygr strategy in the region.
 
 **Mining Outpost** is a 2v3 asymmetrical map with hyperspace disabled.
 
@@ -160,7 +164,7 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 > ...
 
-**The Final Battle** is a 2v3 asymmetrical map.
+**The Final Battle** is a 2v3 asymmetrical map, and a remix of Homeworld 2's mission 15.
 
 ### The Badlands
 
