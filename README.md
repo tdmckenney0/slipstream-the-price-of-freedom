@@ -71,19 +71,19 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### As-Sirat
 
-> Two ancient Bentusi slipgates drift silently through a dense nebula.
+> The Bentusi once guided travelers between these two Slipgates for those lost in the nebula do not return...
 
 **As-Sirat** is a symmetrical 1v1 map with plenty of resources and nowhere to hide.
 
 ### Research Outpost
 
-> SRI has gathered many valuable artifacts to study...
+> SRI has salvaged many ancient artifacts and brought them to this outpost for further study...
 
 **Research Outpost** is a 1v1 asymmetric map with hyperspace disabled. 
 
 ### The Graveyard
 
-> ...
+> Many battles have been fought in this system; to what end, not a soul alive understands...
 
 **The Graveyard** is a 2v2 symmetric map.
 
@@ -95,7 +95,7 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### Standoff
 
-> ...
+> 
 
 **Standoff** is a 3-player FFA asymmetric map.
 
@@ -107,7 +107,7 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### The Battlefield
 
-> ...
+> It's the place to meet.
 
 **The Battlefield** is a 2v2 symmetrical map.
 
@@ -131,13 +131,13 @@ Now grants sensors ping ability to ships with advanced sensors equipped.
 
 ### The Badlands
 
-> ...
+> It's _really_ dark out here...
 
 **The Badlands** is a symmetrical 6-player map designed for 3v3 or FFA. It features minimal resources, all of which are located in the center of the map. 
 
 ### Garrison
 
-> ...
+> Stand your ground.
 
-**Garrison** is a symmetrical 3v3 map with hyperspace disabled. 
+**Garrison** is a symmetrical 3v3 map with hyperspace disabled. Special ships include the Bentusi-derived Dreadnaught and Drones. 
 
