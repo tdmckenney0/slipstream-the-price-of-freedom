@@ -66,7 +66,7 @@ LAN multiplayer has been tested with TPOF on both Windows 7 and Windows 11, and 
 
 #### Direct Connection
 
-Direct Connection multiplayer has not been tested with TPOF. For this method to work on modern networks, the following **UDP** ports need to be forwarded from the local network router or gateway to the machine TPOF is going to be running on: `6073`,`6500`,`13139`, and port range `2302` to `2400`. 
+Direct Connection multiplayer can be used to directly connect to another network across the internet. For this method to work on modern networks, the following **UDP** ports need to be forwarded from the host's local network router or gateway to the machine TPOF is going to be running on: `6073`,`6500`,`13139`, and port range `2302` to `2400`. When joining a game, enter the host network's public IP address into the connection box, and click join. This method has also been tested on Windows 11, and "seems to work fine".
 
 ### Gameplay
 
