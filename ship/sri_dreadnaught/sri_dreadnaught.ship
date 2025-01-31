@@ -167,7 +167,7 @@ addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "Munition, BigCapita
 addAbility(NewShipType, "GuardCommand", 74, 3000, 1400)
 addAbility(NewShipType, "CanBeCaptured", 160, 0.5)
 addAbility(NewShipType, "CanBeRepaired")
-LoadSharedModel(NewShipType, "hgn_dreadnaught")
+LoadModel(NewShipType, 1)
 StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense1", "Weapon_HullDefense1")
 StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense2", "Weapon_HullDefense2")
 StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense3", "Weapon_HullDefense3")
