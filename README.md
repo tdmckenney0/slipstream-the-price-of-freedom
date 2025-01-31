@@ -174,7 +174,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### Garrison
 
-> This heavily defended SRI outpost is the last standing deep within Vaygr territory. 
+> This heavily defended Vaygr outpost is the last standing within the sector.
 
 **Garrison** is a symmetrical 3v3 map with hyperspace disabled. Special ships include the Bentusi-derived Dreadnaught and Drones. 
 
