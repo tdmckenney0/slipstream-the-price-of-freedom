@@ -27,6 +27,8 @@ Homeworld 2 v2.1 or greater is required to play _Slipstream: The Price of Freedo
 
 ## Getting Started
 
+The _Homeworld: Remastered Collection_ is available for purchase on [Steam](https://store.steampowered.com/app/244160/Homeworld_Remastered_Collection/) and [GoG](https://www.gog.com/en/game/homeworld_remastered_collection). Follow the instructions below for your chosen platform.
+
 ### Steam
 
 If you're using the Steam version of Homeworld Remastered, it is recommended to install TPOF from the Steam workshop. Once installed: 
