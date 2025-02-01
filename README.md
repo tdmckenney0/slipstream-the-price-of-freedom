@@ -54,6 +54,34 @@ If you're using the Steam version of Homeworld Remastered, it is recommended to 
 11. Move the shortcut to the desktop, or wherever you'd like to place it.
 12. Double click the shortcut to launch the mod.
 
+## Performance
+
+Homeworld 2 Classic was designed to run on machines from 2003, and has graphical defaults that makes sense for that time period. Thankfully, there are more than a handful of tricks to make Homeworld 2 Classic look and perform better on modern machines. 
+
+### Command Line Switches
+
+Below is a list of command line switches you can use to improve Homeworld 2 Classic and _The Price of Freedom_'s performance.
+
+#### `-fullscreen`/`-windowed`
+
+Use `-fullscreen` to have the game run in full screen mode. Use `-windowed` to run in window mode. 
+
+#### `-w` and `-h`
+
+Specifies the resolution width and height. For a 1920x1080 (1080p) resolution, use `-w 1920 -h 1080`.
+
+#### `-hardwarecursor`
+
+Provides a more accurate control of the mouse cursor. 
+
+#### `-nomovies`
+
+Disables playback of videos.
+
+#### `-nopbuffer`
+
+Disables pixel buffer. Also disables all shadows. The Homeworld Remastered launcher passes this option in by default, however it can be omitted, though this is unsupported.
+
 ## Features
 
 ### Multiplayer
