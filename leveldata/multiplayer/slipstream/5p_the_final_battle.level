@@ -62,6 +62,8 @@ function DetermChunk()
   addPoint("StartPos3", { 25000, 0, -19000 }, { 0, 0, 0 })
   addPoint("StartPos4", { -25000, 0, -19000 }, { 0, 0, 0 })
 
+  addSquadron("Slipgate", "meg_slipgate2", {-1244, 5112.825, -56950.705}, -1, {-10,-195, 100}, 0, 0)
+
   -- SRI-Sajuuk!
   addSquadron("SRISajuuk", "sri_sajuuk", {0, -198, 25299}, 0, {0, 180, 0}, 0, 0)
 
