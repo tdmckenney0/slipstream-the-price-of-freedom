@@ -13,7 +13,7 @@
 Title: Slipstream: The Price of Freedom
 
 // tags must be individual words separated by spaces.
-Tags: homeworld slipstream requiem freedom arena fast multiplayer skirmish
+Tags: homeworld slipstream price freedom arena fast multiplayer skirmish tactical
 
 // gametype is the type of game this MOD is designed for and can be any of: "HW1Classic", "HW2Classic", or "HomeworldRM" (without the double quotes) separated by spaces
 GameType: HW2Classic
