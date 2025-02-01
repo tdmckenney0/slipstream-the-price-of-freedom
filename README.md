@@ -128,6 +128,14 @@ Strikecraft (Fighters, Corvettes) are faster, more evasive, and break formation 
 
 Platforms can now be moved multiple times, delivered via hyperspace using a module, and also issued guard orders. However, they are slow, weakly armored, and do not engage enemies outside of range. A useful strategy is to have platforms accompany strikecraft when being deployed via hyperspace; Platforms will provide covering fire long enough for strikecraft to get up to speed and scatter.
 
+#### Capital Ships
+
+Capital ships now only require a Hyperspace module to build as opposed to the capital ship facility needed on motherships and shipyards from the original game.
+
+##### Battlecruisers
+
+Battlecruisers have become the workhorse of the capital ships. Both Hiigaran and Vaygr cruisers are faster, more maneuverable, and can now build both fighters and corvettes with the appropriate subsystems. 
+
 #### Subsystems
 
 Subsystems have been added and existing ones modified.
