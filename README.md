@@ -136,11 +136,15 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### As-Sirat
 
+![As-Sirat](./leveldata/multiplayer/slipstream/2p_as_sirat.jpg)
+
 > The Bentusi once guided travelers between these two Slipgates for those lost in the nebula do not return...
 
 **As-Sirat** is a symmetrical 1v1 map with plenty of resources and nowhere to hide.
 
 ### Research Outpost
+
+![Research Outpost](./leveldata/multiplayer/slipstream/2p_research_outpost.jpg)
 
 > SRI has salvaged many ancient artifacts and brought them to this outpost for further study.
 
@@ -148,11 +152,15 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### The Graveyard
 
+![The Graveyard](./leveldata/multiplayer/slipstream/2p_the_graveyard.jpg)
+
 > Historians are not quite sure why so many empires met their end in this system. 
 
 **The Graveyard** is a 2v2 symmetric map.
 
 ### Assault
+
+![Assault](./leveldata/multiplayer/slipstream/3p_assault.jpg)
 
 > Formerly Hiigaran colonies, these moons now serve as a staging and resupply outpost for the Vaygr.
 
@@ -160,11 +168,15 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### Standoff
 
+![Standoff](./leveldata/multiplayer/slipstream/3p_standoff.jpg)
+
 > This system isn't expansive enough for three fleets of warships.
 
 **Standoff** is a 3-player FFA asymmetric map.
 
 ### Trig's Bones
+
+![Trig's Bones](./leveldata/multiplayer/slipstream/3p_trigs_bones.jpg)
 
 > The legendsmiths have long told the tale of Trig Soban, an accomplished Soban mercenary, who in the year 497 traveled to the northern lands to fight for a new employer. Upon arriving at the lord's town Trig found it under siege. Broken and defeated his employer told Trig that he was free to go, the battle obviously lost. But a Soban warrior is bound by honor to fight until the terms of a contract are fulfilled. The legendsmiths say that the lord's dismissal still hung in the air as Trig drew his sword, turned, and marched out of the town, where he proceeded to single-handedly cut a bloody swath to the middle of the enemy encampment. They say he managed to kill their general before he was cut down himself. They say the Soban never recovered the body of their brother. They say that in a rage, the enemy lord had Trig's body scattered across the continent. When we took to the stars the legends traveled with us and to this day, this strange area of space is referred to as Trig's Bones, a memorial to the legendary fighter.
 
@@ -172,11 +184,15 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### The Battlefield
 
+![The Battlefield](./leveldata/multiplayer/slipstream/4p_the_battlefield.jpg)
+
 > They say it's an honorable place to meet, though don't expect a fair fight.
 
 **The Battlefield** is a 2v2 symmetrical map.
 
 ### The Unbound
+
+![The Unbound](./leveldata/multiplayer/slipstream/4p_the_unbound.jpg)
 
 > Overwhelmed by the Beast, this is the final resting place of the Bentusi.
 
@@ -184,11 +200,15 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### Mining Outpost
 
+![Mining Outpost](./leveldata/multiplayer/slipstream/5p_mining_outpost.jpg)
+
 > This mining operation is key to Vaygr strategy in the region.
 
 **Mining Outpost** is a 2v3 asymmetrical map with hyperspace disabled.
 
 ### The Final Battle
+
+![The Final Battle](./leveldata/multiplayer/slipstream/5p_the_final_battle.jpg)
 
 > It is said that Sajuuk blesses those about to enter battle against overwhelming odds.
 
@@ -196,11 +216,15 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### The Badlands
 
+![The Badlands](./leveldata/multiplayer/slipstream/6p_badlands.jpg)
+
 > Let us never forget those who journeyed into the howling dark and did not return.
 
 **The Badlands** is a symmetrical 6-player map designed for 3v3 or FFA. It features minimal resources, all of which are located in the center of the map. 
 
 ### Garrison
+
+![Garrison](./leveldata/multiplayer/slipstream/6p_garrison.jpg)
 
 > This heavily defended Vaygr outpost is the last standing within the sector.
 
