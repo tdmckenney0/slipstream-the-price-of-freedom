@@ -1,6 +1,6 @@
 ![Slipstream: The Price of Freedom](./slipstream-tpof-logo.png)
 
-_Slipstream: The Price of Freedom_ is a mod for Homeworld 2 Classic, set in the Slipstream universe, an alternative timeline to _Homeworld_. It transform's Homeworld 2's gameplay into a fast-paced tactical arena with a dark sci-fi theme inspired by _Homeworld: Cataclysm_, _Halo_, and _Earth 2150_.
+_Slipstream: The Price of Freedom_ is a mod for Homeworld 2 Classic, set in the Slipstream universe, an alternative timeline to _Homeworld_. It transform's Homeworld 2's gameplay into a fast-paced tactical arena with a dark sci-fi theme inspired by _Homeworld: Cataclysm_, _Halo_, and _Earth 2150_. _The Price of Freedom_ is designed around a mixture of cooperative and competitive multiplayer, with levels including set pieces and objectives-by-design. It is more difficult and chaotic compared to standard _Homeworld 2_, requiring less focus on climbing the tech tree, and more on ship loadouts and configuration. 
 
 ## The _Slipstream_ Universe
 
