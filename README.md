@@ -210,7 +210,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ![The Final Battle](./leveldata/multiplayer/slipstream/5p_the_final_battle.jpg)
 
-> It is said that Sajuuk blesses those about to enter battle against overwhelming odds.
+> SRI has been secretly constructing a new flagship from salvaged Bentusi technology.
 
 **The Final Battle** is a 2v3 asymmetrical map, and a remix of Homeworld 2's mission 15. Special ships include the SRI flagship, _SRI-Sajuuk_.
 
