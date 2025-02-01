@@ -134,7 +134,11 @@ Capital ships now only require a Hyperspace module to build as opposed to the ca
 
 ##### Battlecruisers
 
-Battlecruisers have become the workhorse of the capital ships. Both Hiigaran and Vaygr cruisers are faster, more maneuverable, and can now build both fighters and corvettes with the appropriate subsystems.
+Battlecruisers have become the workhorse of the capital ships. Both Hiigaran and Vaygr cruisers are faster, more maneuverable, and can now build both fighters and corvettes with the appropriate subsystems. Only the Hiigaran battlecruiser can change its two primary weapon turrets, however, the Vaygr cruiser makes up with more armor and more damage.
+
+#### Destroyers
+
+Destroyers differ greatly between the two factions. The Vaygr destroyer is more of a light cruiser that can change its two primary weapon turrets when needed. The Hiigaran destroyer is fast and maneuverable with tons of coverage, but a fixed configuration.  
 
 ##### Dreadnaughts
 
