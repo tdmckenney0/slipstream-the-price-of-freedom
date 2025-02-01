@@ -242,11 +242,13 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ![1440p_battlecruiser_attacks_no_ui.jpg](./screenshots/1440p_battlecruiser_attacks_no_ui.jpg)
 ![1440p_battlecruiser_ui_on_the_unbound.jpg](./screenshots/1440p_battlecruiser_ui_on_the_unbound.jpg)
+![1440p_dreadnaught_build_options.jpg](./screenshots/1440p_dreadnaught_build_options.jpg)
 ![1440p_destroyer_dodges_green_beam](./screenshots/1440p_destroyer_dodges_green_beam.jpg)
 ![1440p_destroyer_does_a_flip](./screenshots/1440p_destroyer_does_a_flip.jpg)
 ![1440p_destroyer_fires_everything](./screenshots/1440p_destroyer_fires_everything.jpg)
 ![1440p_destroyer_space_cowboy](./screenshots/1440p_destroyer_space_cowboy.jpg)
 ![1440p_research_outpost_hgn_start_with_ui](./screenshots/1440p_research_outpost_hgn_start_with_ui.jpg)
+![1440p_mining_outpost_bentusi_trade_derelict](./screenshots/1440p_mining_outpost_bentusi_trade_derelict.jpg)
 ![1440p_research_outpost_hyperspace_module](./screenshots/1440p_research_outpost_hyperspace_module.jpg)
 ![1440p_dreadnaught_chillin](./screenshots/1440p_dreadnaught_chillin.jpg)
 ![1440p_sri_sajuuk_attacks_1](./screenshots/1440p_sri_sajuuk_attacks_1.jpg)
