@@ -143,6 +143,8 @@ addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1, "BigCapitalShip, Small
     Corvette = "MoveToTargetAndShoot", })
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "CanBeRepaired")
+AddShipMultiplier(NewShipType, "WeaponAccuracy", "OwnShipsWithinRadiusExcludingThisShip", "Linear", 1.15, 1.15, 15000)
+AddShipMultiplier(NewShipType, "WeaponDamage", "OwnShipsWithinRadiusExcludingThisShip", "Linear", 1.15, 1.15, 15000)
 LoadModel(NewShipType, 1)
 StartShipWeaponConfig(NewShipType, "Kpr_SajuukNaniteCannon", "Weapon_TopR1", "Weapon_TopR1")
 StartShipWeaponConfig(NewShipType, "Kpr_SajuukKineticDriver", "Weapon_TopR2", "Weapon_TopR2")
