@@ -230,3 +230,19 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 **Garrison** is a symmetrical 3v3 map with hyperspace disabled. Special ships include the Bentusi-derived Dreadnaught and Drones. 
 
+## Screenshots
+
+![1440p_battlecruiser_attacks_no_ui.jpg](./screenshots/1440p_battlecruiser_attacks_no_ui.jpg)
+![1440p_battlecruiser_ui_on_the_unbound.jpg](./screenshots/1440p_battlecruiser_ui_on_the_unbound.jpg)
+![1440p_destroyer_dodges_green_beam](./screenshots/1440p_destroyer_dodges_green_beam.jpg)
+![1440p_destroyer_does_a_flip](./screenshots/1440p_destroyer_does_a_flip.jpg)
+![1440p_destroyer_fires_everything](./screenshots/1440p_destroyer_fires_everything.jpg)
+![1440p_destroyer_space_cowboy](./screenshots/1440p_destroyer_space_cowboy.jpg)
+![1440p_research_outpost_hgn_start_with_ui](./screenshots/1440p_research_outpost_hgn_start_with_ui.jpg)
+![1440p_research_outpost_hyperspace_module](./screenshots/1440p_research_outpost_hyperspace_module.jpg)
+![1440p_sri_sajuuk_attacks_1](./screenshots/1440p_sri_sajuuk_attacks_1.jpg)
+![1440p_sri_sajuuk_attacks_2](./screenshots/1440p_sri_sajuuk_attacks_2.jpg)
+![1440p_sri_sajuuk_at_shipyard](./screenshots/1440p_sri_sajuuk_at_shipyard.jpg)
+![1440p_the_unbound_after_battle](./screenshots/1440p_the_unbound_after_battle.jpg)
+![1440p_trigs_bones_start_with_ui](./screenshots/1440p_trigs_bones_start_with_ui.jpg)
+![1440p_vgr_battlecruiser_reposition](./screenshots/1440p_vgr_battlecruiser_reposition.jpg)
