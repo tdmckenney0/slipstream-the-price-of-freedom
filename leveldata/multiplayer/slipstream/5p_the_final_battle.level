@@ -71,7 +71,7 @@ function DetermChunk()
   addSquadron("Meg_Tanis2", "Meg_Tanis", { 0, 2000, 26000, }, -1, { -90, 180, 0, }, 0, 0)
 
   addSquadron("Meg_TanisStructure_Medium", "Meg_TanisStructure_Medium", { 1520, -196, 26299, }, -1, { 0, -90, 0, }, 0, 0)
-  addSquadron("Meg_TanisStructure_Medium", "Meg_TanisStructure_Medium", { 1520, -200, 24299, }, -1, { 0, -90, 0, }, 0, 0)
+  addSquadron("Meg_TanisStructure_Medium2", "Meg_TanisStructure_Medium2", { 1520, -200, 24299, }, -1, { 0, 90, 0, }, 0, 0)
   addSquadron("meg_chimera", "meg_chimera", { -1402, -198, 25299, }, -1, { 0, 0, 0, }, 0, 0)
 
   addSquadron("meg_foundrydebris_chunk1", "meg_foundrydebris_chunk1", { 690, 1121, 13700, }, -1, { -135.855, 37.416, 147.953, }, 0, 0)
