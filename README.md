@@ -134,7 +134,11 @@ Capital ships now only require a Hyperspace module to build as opposed to the ca
 
 ##### Battlecruisers
 
-Battlecruisers have become the workhorse of the capital ships. Both Hiigaran and Vaygr cruisers are faster, more maneuverable, and can now build both fighters and corvettes with the appropriate subsystems. 
+Battlecruisers have become the workhorse of the capital ships. Both Hiigaran and Vaygr cruisers are faster, more maneuverable, and can now build both fighters and corvettes with the appropriate subsystems.
+
+##### Dreadnaughts
+
+Dreadnaughts are the slow-moving heavy-hitters crucial to breaking through enemy lines. They carry six battlecruiser turrets that can be changed at any time, however, the only defense against strikecraft they have is their defense field ability. Dreadnaughts appear as star-shaped tactical overlays at a distance. Dreadnaughts cannot be rebuilt once destroyed, so ensure they are never left unescorted.  
 
 #### Subsystems
 
