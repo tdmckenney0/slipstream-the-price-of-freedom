@@ -212,7 +212,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 > It is said that Sajuuk blesses those about to enter battle against overwhelming odds.
 
-**The Final Battle** is a 2v3 asymmetrical map, and a remix of Homeworld 2's mission 15.
+**The Final Battle** is a 2v3 asymmetrical map, and a remix of Homeworld 2's mission 15. Special ships include the SRI flagship, _SRI-Sajuuk_.
 
 ### The Badlands
 
