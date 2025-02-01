@@ -29,7 +29,7 @@ BigFilename: TPOF.big
 // This should be 0 by default before you create your Workshop item and the Workshop Tool will
 // set it to the Workshop Item number.  DO NOT modify this number once you have created a Workshop
 // item.  It will be used to update the workshop item when you make changes to your MOD later on.  
-WorkshopID: 0
+WorkshopID: 3419082956
 
 // description that will appear on the Steam Workshop for this item
 Description:
