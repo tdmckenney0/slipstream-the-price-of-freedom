@@ -47,13 +47,13 @@ function DetermChunk()
   addPoint("StartPos2", { 12000, 5000, -12300 }, { 0, 180, 0, })
   addPoint("StartPos3", { -4160, 496, -12317 }, { 0, 180, 0, })
 
-  addSquadron("Meg_Bentus_Ruin_4", "Meg_Bentus_Ruin_9",
+  addSquadron("Meg_Bentus_Ruins_Core_1", "Meg_Bentus_Ruins_Core_1",
     { 1969, 38, -9862, }, -1,
     { 26.752, 80.108, 7.287, }, 0, 0)
-  addSquadron("Meg_Bentus_Ruin_5", "Meg_Bentus_Ruin_9",
+  addSquadron("Meg_Bentus_Ruins_Core_2", "Meg_Bentus_Ruins_Core_2",
     { 13026, -4723, 2007, }, -1,
     { 26.752, 80.108, 7.287, }, 0, 0)
-  addSquadron("Meg_Bentus_Ruin_6", "Meg_Bentus_Ruin_9",
+  addSquadron("Meg_Bentus_Ruins_Core_3", "Meg_Bentus_Ruins_Core_3",
     { -14999, 5980, -7709, }, -1,
     { 26.752, 80.108, 7.287, }, 0, 0)
   addSquadron("Meg_Bentus_Ruin_1", "Meg_Bentus_Ruin_1",

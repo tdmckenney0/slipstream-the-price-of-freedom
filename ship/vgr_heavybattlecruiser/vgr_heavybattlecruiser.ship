@@ -182,6 +182,9 @@ addShield(NewShipType, "EMP", 1000, 20)
 
 AddShipAbility(NewShipType, "DefenseField", 1, "ThisShipOnly", 1)
 
+AddShipMultiplier(NewShipType, "WeaponAccuracy", "OwnShipsWithinRadiusExcludingThisShip", "Linear", 1.15, 1.15, 8000)
+AddShipMultiplier(NewShipType, "WeaponDamage", "OwnShipsWithinRadiusExcludingThisShip", "Linear", 1.15, 1.15, 8000)
+
 StartShipHardPointConfig(NewShipType, "Hull1_Turret", "Hardpoint_Hull1_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_pulsecannonturret_2", "vgr_dd_scattershotturret_1", "vgr_dd_scattershotturret_2", "vgr_dd_rapidlaserturret_1", "vgr_dd_rapidlaserturret_2", "vgr_dd_missileboxturret_1", "vgr_dd_missileboxturret_2")
 StartShipHardPointConfig(NewShipType, "Hull2_Turret", "Hardpoint_Hull2_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_pulsecannonturret_2", "vgr_dd_scattershotturret_1", "vgr_dd_scattershotturret_2", "vgr_dd_rapidlaserturret_1", "vgr_dd_rapidlaserturret_2", "vgr_dd_missileboxturret_1", "vgr_dd_missileboxturret_2")
 StartShipHardPointConfig(NewShipType, "Hull3_Turret", "Hardpoint_Hull3_Turret", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_pulsecannonturret_2", "vgr_dd_scattershotturret_1", "vgr_dd_scattershotturret_2", "vgr_dd_rapidlaserturret_1", "vgr_dd_rapidlaserturret_2", "vgr_dd_missileboxturret_1", "vgr_dd_missileboxturret_2")

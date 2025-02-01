@@ -66,14 +66,14 @@ PersistantData = {
       subsystems = {},
       shiphold = {},
       name = "",
-      number = 4,
+      number = 5,
     },
     {
       type = "vgr_weaponplatform_missile",
       subsystems = {},
       shiphold = {},
       name = "",
-      number = 4,
+      number = 5,
     },
     -- Utility
     {
@@ -137,7 +137,7 @@ PersistantData = {
       },
       shiphold = {},
       name = "",
-      number = 3,
+      number = 2,
     },
     -- Frigates
     {
@@ -145,14 +145,14 @@ PersistantData = {
       subsystems = {},
       shiphold = {},
       name = "",
-      number = 5,
+      number = 4,
     },
     {
       type = "vgr_heavymissilefrigate",
       subsystems = {},
       shiphold = {},
       name = "",
-      number = 5,
+      number = 4,
     },
     -- Fighters
     {

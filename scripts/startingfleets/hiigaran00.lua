@@ -73,14 +73,14 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
-            number = 4,
+            number = 5,
         },
         {
             type = "Hgn_GunTurret",
             subsystems = {},
             shiphold = {},
             name = "",
-            number = 4,
+            number = 5,
         },
         -- Utility
         {
@@ -151,7 +151,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
-            number = 3,
+            number = 2,
         },
         -- Frigates
         {
@@ -159,21 +159,21 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
-            number = 5,
+            number = 4,
         },
         {
             type = "hgn_torpedofrigate",
             subsystems = {},
             shiphold = {},
             name = "",
-            number = 5,
+            number = 4,
         },
         {
             type = "hgn_ioncannonfrigate",
             subsystems = {},
             shiphold = {},
             name = "",
-            number = 5,
+            number = 4,
         },
         -- Fighters
         {
@@ -181,7 +181,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
-            number = 10,
+            number = 5,
         },
         -- Corvettes
         {

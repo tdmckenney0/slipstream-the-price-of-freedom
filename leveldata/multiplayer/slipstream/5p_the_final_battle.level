@@ -62,6 +62,23 @@ function DetermChunk()
   addPoint("StartPos3", { 25000, 0, -19000 }, { 0, 0, 0 })
   addPoint("StartPos4", { -25000, 0, -19000 }, { 0, 0, 0 })
 
+  addSquadron("Slipgate", "meg_slipgate2", {-1244, 5112.825, -56950.705}, -1, {-10,-195, 100}, 0, 0)
+
+  -- SRI-Sajuuk!
+  addSquadron("SRISajuuk", "sri_sajuuk", {0, -198, 25299}, 0, {0, 180, 0}, 0, 0)
+
+  -- Shipyard
+  addSquadron("Meg_Tanis2", "Meg_Tanis", { 0, 2000, 26000, }, -1, { -90, 180, 0, }, 0, 0)
+
+  addSquadron("Meg_TanisStructure_Medium", "Meg_TanisStructure_Medium", { 1520, -196, 26299, }, -1, { 0, -90, 0, }, 0, 0)
+  addSquadron("Meg_TanisStructure_Medium2", "Meg_TanisStructure_Medium2", { 1520, -200, 24299, }, -1, { 0, 90, 0, }, 0, 0)
+  addSquadron("meg_chimera", "meg_chimera", { -1402, -198, 25299, }, -1, { 0, 0, 0, }, 0, 0)
+
+  addSquadron("meg_foundrydebris_chunk1", "meg_foundrydebris_chunk1", { 690, 1121, 13700, }, -1, { -135.855, 37.416, 147.953, }, 0, 0)
+  addSquadron("meg_foundrydebris_chunk2", "meg_foundrydebris_chunk2", { -13934, 1004, 13700, }, -1, { 0, 140.737, 58.386, }, 0, 0)
+  addSquadron("meg_foundrydebris_chunk3", "meg_foundrydebris_chunk3", { -6698, 1118, 12726, }, -1, { 29.346, -45.381, 0, }, 0, 0)
+  addSquadron("meg_foundrydebris_chunk4", "meg_foundrydebris_chunk4", { -7505, 459, 14383, }, -1, { -13.685, -50.939, 55.716, }, 0, 0)
+
   addAsteroid("Asteroid_4", { -6000, 1676, 19250 }, 90, 8643, 623, 6632, 0)
   addAsteroid("Asteroid_3", { -5237, 2276, 19650 }, 90, 6347, 573, 457, 0)
   addAsteroid("Asteroid_4", { -4873, 1594, 20000 }, 90, 2367, 573, 4567, 0)
@@ -176,28 +193,28 @@ function DetermChunk()
   addAsteroid("Asteroid_3", { 25786,
     -454,
     -12666 }, 100, 0, 0, 0, 0);
-  addSalvage("Container", { -6091,
+  addSalvage("Slv_Chunk_Lrg02", { -6091,
     763,
     12650 }, 100, 0, 0, 0, 0);
-  addSalvage("Container", { -10731,
+  addSalvage("Slv_Chunk_Lrg05", { -10731,
     869,
     12898 }, 100, 0, 0, 0, 0);
-  addSalvage("Container", { -14237,
+  addSalvage("Slv_Chunk_Lrg02", { -14237,
     428,
     12496 }, 100, 0, 0, 0, 0);
-  addSalvage("Container", { -17212,
+  addSalvage("Slv_Chunk_Lrg05", { -17212,
     0,
     13713 }, 100, 0, 0, 0, 0);
-  addSalvage("Container", { -23480,
+  addSalvage("Slv_Chunk_Lrg03", { -23480,
     0,
     13252 }, 100, 0, 0, 0, 0);
-  addSalvage("Container", { -2462,
+  addSalvage("Slv_Chunk_Lrg03", { -2462,
     763,
     12794 }, 100, 0, 0, 0, 0);
-  addSalvage("Container", { 3676,
+  addSalvage("Slv_Chunk_Lrg05", { 3676,
     880,
     13397 }, 100, 0, 0, 0, 0);
-  addSalvage("Container", { 8615,
+  addSalvage("Slv_Chunk_Lrg05", { 8615,
     0,
     13397 }, 100, 0, 0, 0, 0);
   addSalvage("Slv_Chunk_Lrg01", { -8626,

@@ -1461,7 +1461,7 @@ VGR_HYPERSPACEINHIBITOR = Icon_Subsystem_HyperspaceInhibitor
 MEG_ASTEROID_NOSUBS = Meg_Asteroid
 MEG_ASTEROIDMP = Meg_Asteroid
 VGR_COMMSTATION_SUBSTATION = Icon_Subsystem_CommStation_bottom
-VGR_COMMSTATION_SUBSTATION_M10 = Icon_Subsystem_CommStation_bottom
+VGR_COMMSTATION_SUBSTATION_M12 = Icon_Subsystem_CommStation_bottom
 KPR_DESTROYERM10 = Kpr_Destroyer
 Meg_Gehenna_1 = Meg_Gehenna
 Meg_Gehenna_2 = Meg_Gehenna
@@ -1475,6 +1475,7 @@ Hgn_drone_frigate_2 = Hgn_Assaultfrigate
 Hgn_drone_frigate_3 = Hgn_Marinefrigate
 Kpr_Mover_Capture = Kpr_Mover_Capture
 Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
+Vgr_PrisonStation = Vgr_CommStation
 -- TPOF
 hgn_heavybattlecruiser = Hgn_Destroyer
 vgr_heavybattlecruiser = Vgr_Destroyer
@@ -1516,5 +1517,6 @@ vgr_dd_missileboxturret_2 = Icon_Subsystem_TorpedoLauncher
 -- SRI
 sri_commandbase = Vgr_CommStation
 sri_dreadnaught = Hgn_Dreadnaught
+sri_sajuuk = Kpr_Sajuuk
 -- Megaliths
 meg_asteroid_inhibitor = Meg_Asteroid
