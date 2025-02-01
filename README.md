@@ -1,6 +1,6 @@
-# Slipstream: The Price of Freedom
+![Slipstream: The Price of Freedom](./slipstream-tpof-logo.png)
 
-A mod for Homeworld 2 Classic. Set in the Slipstream universe.
+_Slipstream: The Price of Freedom_ is a mod for Homeworld 2 Classic, set in the Slipstream universe.
 
 ## The _Slipstream_ Universe
 
