@@ -56,7 +56,7 @@ If you're using the Steam version of Homeworld Remastered, it is recommended to 
 
 ## Performance
 
-Homeworld 2 Classic was designed to run on machines from 2003, and has graphical defaults that makes sense for that time period. Thankfully, there are more than a handful of tricks to make Homeworld 2 Classic look and perform better on modern machines. 
+Homeworld 2 Classic was designed to run on machines from 2003, and has graphical defaults that makes sense for that time period. Thankfully, there are more than a handful of tricks to make Homeworld 2 Classic look and perform better on modern machines.
 
 ### Command Line Switches
 
@@ -81,6 +81,14 @@ Disables playback of videos.
 #### `-nopbuffer`
 
 Disables pixel buffer. Also disables all shadows. The Homeworld Remastered launcher passes this option in by default, however it can be omitted, though this is unsupported.
+
+### Optimized Launch Configurations
+
+_The Price of Freedom_ has been tested with the following launch configurations which dramatically improve the graphical quality:
+
+ - 1080p (Full HD) Windowed: `Homeworld2.exe -windowed -mod TPOF.big -w 1920 -h 1080 -hardwarecursor -nomovies`
+ - 1440p (2K QHD) Fullscreen: `Homeworld2.exe -fullscreen -mod TPOF.big -w 2560 -h 1440 -hardwarecursor -nomovies`
+ - 2160p (4K UHD): `Homeworld2.exe -fullscreen -mod TPOF.big -w 3840 -h 2160 -hardwarecursor -nomovies`
 
 ## Features
 
