@@ -1517,5 +1517,6 @@ vgr_dd_missileboxturret_2 = Icon_Subsystem_TorpedoLauncher
 -- SRI
 sri_commandbase = Vgr_CommStation
 sri_dreadnaught = Hgn_Dreadnaught
+sri_sajuuk = Kpr_Sajuuk
 -- Megaliths
 meg_asteroid_inhibitor = Meg_Asteroid
