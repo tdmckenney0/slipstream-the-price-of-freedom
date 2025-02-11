@@ -154,7 +154,7 @@ NewMainMenu =
     Text =
     {
         textStyle = "FEHeading3",
-        text = "v4.0",
+        text = "v4.1",
         color = { 0, 0, 0, 255, },
         hAlign = "Center",
     },
