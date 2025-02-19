@@ -8,16 +8,16 @@ OUTLINECOLOR =
 
 RESEARCHQUEUECOLOR =
 {
-	64,
-	129,
-	249,
+	255,
+	255,
+	255,
 	255,
 }
 
 RESEARCHGROUPCOLOR =
 {
-	80,
-	175,
+	255,
+	255,
 	255,
 	255,
 }
@@ -25,8 +25,8 @@ RESEARCHGROUPCOLOR =
 UGT_ABILITY_DFT =
 {
 	255,
-	213,
-	0,
+	255,
+	255,
 	255,
 }
 
@@ -48,9 +48,9 @@ UGT_ABILITY_PRS =
 
 UGT_TECH_DFT =
 {
-	239,
-	115,
-	0,
+	255,
+	255,
+	255,
 	255,
 }
 
@@ -72,8 +72,8 @@ UGT_TECH_PRS =
 
 UGT_UPGRADE_DFT =
 {
-	0,
-	175,
+	255,
+	255,
 	255,
 	255,
 }
@@ -264,9 +264,9 @@ function GetResearchButton(_name, _defaultColor, _overColor, _pressedColor)
 					textStyle = "IGButtonTextStyle",
 					color =
 					{
-						255,
-						255,
-						255,
+						0,
+						0,
+						0,
 						255,
 					},
 					hAlign = "Left",
