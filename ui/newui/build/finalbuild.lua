@@ -777,7 +777,7 @@ NewBuildMenu =
     Text =
     {
         color =
-            { 56, 162, 250, 255, },
+            { 0, 0, 0, 255, },
         font = "ListBoxItemFont",
         hAlign = "Right",
         vAlign = "Center",
