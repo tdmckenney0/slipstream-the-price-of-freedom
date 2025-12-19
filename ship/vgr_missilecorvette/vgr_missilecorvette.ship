@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "$1612"
 NewShipType.sobDescription = "$1613"
-NewShipType.maxhealth = 4000 -- 400
+NewShipType.maxhealth = 3500 -- Balanced: 4 ships × 3500 = 14000 squad HP
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
