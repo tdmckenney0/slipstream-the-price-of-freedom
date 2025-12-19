@@ -21,8 +21,8 @@ NewShipType.defensiveFormation ="x"
 NewShipType.aggressiveFormation ="Claw"
 NewShipType.mass =100
 NewShipType.collisionMultiplier =1
-NewShipType.thrusterMaxSpeed =300 --161
-NewShipType.mainEngineMaxSpeed =330 --161
+NewShipType.thrusterMaxSpeed =280 -- Balanced: HGN slower but tougher
+NewShipType.mainEngineMaxSpeed =300 -- Balanced: match philosophy
 NewShipType.rotationMaxSpeed =120 --22
 NewShipType.thrusterAccelTime =7
 NewShipType.thrusterBrakeTime =2
@@ -84,8 +84,8 @@ NewShipType.antiFighterValue =12
 NewShipType.antiCorvetteValue =0
 NewShipType.antiFrigateValue =0
 NewShipType.totalValue =12
-NewShipType.buildCost =700
-NewShipType.buildTime =50
+NewShipType.buildCost =800 -- Premium Hiigaran pricing
+NewShipType.buildTime =55 -- Slightly longer build time
 NewShipType.buildPriorityOrder =10
 NewShipType.retaliationRange =5500
 NewShipType.retaliationDistanceFromGoal =160
@@ -153,7 +153,7 @@ addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadModel(NewShipType, 1)
 StartShipHardPointConfig(NewShipType,"T","Weapon_Top","Weapon","Innate","Indestructible","hgn_ff_pulsarturret","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"B","Weapon_Bottom","Weapon","Innate","Indestructible","hgn_ff_gatlinggunturret","","","","","","","","")
-addShield(NewShipType, "EMP", 750, 20)
+addShield(NewShipType, "EMP", 500, 20) -- Balanced EMP shield
 NewShipType.battleScarMaxTriBase =75
 NewShipType.battleScarMaxTriInc =100
 NewShipType.sobDieTime =1

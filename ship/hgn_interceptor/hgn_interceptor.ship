@@ -1,7 +1,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "$1602"
 NewShipType.sobDescription = "$1605"
-NewShipType.maxhealth = 500 -- 30
+NewShipType.maxhealth = 400 -- Balanced: 5 ships × 400 = 2000 squad HP
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
 NewShipType.sideArmourDamage = 1
@@ -77,8 +77,8 @@ NewShipType.antiFighterValue = 8
 NewShipType.antiCorvetteValue = 0
 NewShipType.antiFrigateValue = 8
 NewShipType.totalValue = 16
-NewShipType.buildCost = 1000
-NewShipType.buildTime = 60
+NewShipType.buildCost = 800 -- Premium Hiigaran pricing
+NewShipType.buildTime = 50 -- Balanced build time
 NewShipType.buildPriorityOrder = 20
 NewShipType.retaliationRange = 5500
 NewShipType.retaliationDistanceFromGoal = 160

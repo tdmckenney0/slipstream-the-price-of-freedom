@@ -6,7 +6,7 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "$1618"
 NewShipType.sobDescription = "$1619"
-NewShipType.maxhealth = 16000
+NewShipType.maxhealth = 14000 -- Balanced: less tanky but faster
 NewShipType.regentime = 1200
 NewShipType.minRegenTime = 450
 NewShipType.sideArmourDamage = 1.2
@@ -157,7 +157,7 @@ StartShipWeaponConfig(NewShipType, "vgr_pulsecannonassaultfrigatebottom", "Weapo
 StartShipWeaponConfig(NewShipType, "vgr_pulsecannonassaultfrigateleft", "Weapon_Left", "Weapon_Left")
 StartShipWeaponConfig(NewShipType, "vgr_pulsecannonassaultfrigateright", "Weapon_Right", "Weapon_Right")
 
-addShield(NewShipType, "EMP", 310, 20)
+addShield(NewShipType, "EMP", 400, 20) -- Balanced EMP shield
 
 NewShipType.battleScarMaxTriBase = 75
 NewShipType.battleScarMaxTriInc = 100
