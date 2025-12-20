@@ -1,0 +1,28 @@
+effects = 
+{
+    animations =
+    {
+        animation1 =
+        {
+            name = "SlipstreamEffect",
+            length = 1,
+            loop = 1,
+            parent = "",
+            minimum = 0,
+            maximum = 0,
+            markers =
+            { "", },
+        },
+    },
+    events =
+    {
+        event1 =
+        {
+            { "anim",     "SlipstreamEffect", },
+            { "animtime", "0", },
+            { "marker",   "root", },
+            { "fx",       "slipstream_standing_gate", },
+            { "fx_scale", "1", },
+        },
+    },
+}
