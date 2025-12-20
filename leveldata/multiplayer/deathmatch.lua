@@ -113,12 +113,13 @@ function OnInit()
 
 	Play(GetGameSettingAsString("randommusic"))
 
+	Rule_Add("findSlipgatesAndStartEvent")
+
 	Rule_AddInterval("CheckTeamAnyShipsLeftRule", 1)
 
     Rule_Add("MainRule")
 	
 	SetStartFleetSuffix("")
-	
 end
 
 
@@ -206,3 +207,13 @@ function waitForEnd()
 	end
 end
 
+function findSlipgatesAndStartEvent()
+	SobGroup_Create("Slipgates")
+	Player_FillShipsByType("Slipgates", -1, "meg_slipgate2")
+
+	if (SobGroup_Count("Slipgates") > 0) then
+		FX_StartEvent("Slipgates", "SlipstreamEffect")
+	end
+
+	Rule_Remove("findSlipgatesAndStartEvent")
+end
