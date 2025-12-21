@@ -97,7 +97,7 @@ function DetermChunk()
   addNebula("Nebula", "M11_Bentusi_Radiation", { -17480, 0, 26745, }, { 0.910, 0.519, 365, 1, }, 0, 10000)
   addNebula("Nebula", "M11_Bentusi_Radiation", { -20880, 500, 20936, }, { 0.910, 0.519, 365, 1, }, 0, 3000)
 
-  addSquadron("meg_slipgate", "meg_slipgate", { 0, 0, 350000 }, -1, { -126, -240, 0 }, 0, 0)
+  addSquadron("meg_slipgate", "meg_slipgate", { 0, 0, 100000 }, -1, { -126, -240, 0 }, 0, 0)
 
   setWorldBoundsInner({ -4.4, 0, 0 }, { 42000, 42000, 42000 })
 end

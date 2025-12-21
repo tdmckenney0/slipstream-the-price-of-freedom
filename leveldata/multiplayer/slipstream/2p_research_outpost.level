@@ -812,7 +812,7 @@ function DetermChunk()
     addSquadron("MultiGunCorvette_Group3", "meg_starjumper", {4831.925,2435.685,-9361.345}, -1, {0,67.5,46.0}, 1, 0)
     addSquadron("MultiGunCorvette_Group677", "meg_starjumper", {7595.875,-5991.265,-21163.8}, -1, {0,-4.40000000000001,-64.9}, 1, 0)
     addSquadron("JunkyardHQ0", "sri_commandbase", {17725.155,1744.15,-21949.585}, -1, {0,-225,0}, 0, 0)
-    addSquadron("Slipgate", "meg_slipgate2", {-35726.37, -1112.825, 36950.705}, -1, {-10,-225, 10}, 0, 0)
+    addSquadron("Slipgate", "meg_slipgate", {-35726.37, -1112.825, 36950.705}, -1, {-10,-225, 10}, 0, 0)
 
     addSquadron("UselessHyperspaceModules", "meg_bentus_ruins_core_1", {13536.81, 3081.295, -8362.27}, -1, {22,-25,143}, 0, 0)
     addSquadron("UselessHyperspaceModules", "meg_bentus_ruins_core_2", {8910.93, -6332.095, -11869.585}, -1, {52,0,-223}, 0, 0)

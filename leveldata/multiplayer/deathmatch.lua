@@ -209,7 +209,7 @@ end
 
 function findSlipgatesAndStartEvent()
 	SobGroup_Create("Slipgates")
-	Player_FillShipsByType("Slipgates", -1, "meg_slipgate2")
+	Player_FillShipsByType("Slipgates", -1, "meg_slipgate")
 
 	if (SobGroup_Count("Slipgates") > 0) then
 		FX_StartEvent("Slipgates", "SlipstreamEffect")
