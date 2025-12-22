@@ -35,28 +35,8 @@ NewBuildMenu =
     soundOnShow = "SFX_BuildMenuONOFF",
     soundOnHide = "SFX_BuildMenuONOFF",
     pixelUVCoords = 1,
-    onShow = [[
-				UI_SubtitleNarrow()
-
-				zBuildStart = 215
-
-				UI_SetElementPosition("NewBuildMenu","build",zBuildStart,1)
-			 ]],
-	onUpdate = [[
-
-				UI_SetElementPosition("NewBuildMenu","build",zBuildStart,1)
-
-
-					if(zBuildStart <= 15) then
-						zBuildStart = 1
-					end
-
-					if(zBuildStart > 1) then
-						zBuildStart = zBuildStart - 20
-					end
-
-			   ]],
-    onHide = [[UI_HideScreen("BuildInfo"); UI_SubtitleWide()]],
+    onShow = "UI_SubtitleNarrow()", 
+    onHide = [[UI_HideScreen("BuildInfo"); UI_SubtitleWide()]], 
     textureFolder = "DATA:\\UI\\NewUI\\Build",
     drawToShipLineWidth = 1,
     drawToShipLineStubLength = 10,

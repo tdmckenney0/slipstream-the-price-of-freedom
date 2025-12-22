@@ -26,30 +26,6 @@ NewTaskbar = {
 	soundOnShow = "SFX_TaksbarMenuONOFF",
 	soundOn = "SFX_TaksbarMenuONOFF",
 
-	onShow = [[
-				zTaskbarStart = 150
-				zLStart = 215
-
-				UI_SetElementPosition("NewTaskbar","taskbar",0,zTaskbarStart)
-			 ]],
-	onUpdate = [[
-					UI_SetElementPosition("NewTaskbar","taskbar",0,zTaskbarStart)
-
-					if(zTaskbarStart > 0) then
-						zTaskbarStart = zTaskbarStart - 2
-					end
-					
-					UI_SetElementPosition("NewLaunchMenu","launch",zLStart,1);
-
-					if(zLStart <= 15) then
-						zLStart = 1
-					end
-
-					if(zLStart > 1) then
-						zLStart = zLStart - 20
-					end
-				]],
-
 	Regions = {
 		{0,15,221, 87},	-- left
 		{220,0,363,102},	-- middle

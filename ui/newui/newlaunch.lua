@@ -14,25 +14,18 @@ NewLaunchMenu =
     soundOnHide = "SFX_LaunchMenuONOFF",
     shipHealthColor = { 0, 255, 0, 255, },
     pixelUVCoords = 1,
-    onHide = "UI_SubtitleWide()",
+    onShow = "UI_SubtitleNarrow()", 
+    onHide = "UI_SubtitleWide()", 
     fstringDockedCount = "$2667",
     drawToShipLineWidth = 2,
     drawToShipLineStubLength = 10,
     drawToShipLineColor = OUTLINECOLOR,
-    drawToShipLineElement = "btnPrev",
-    onShow = [[
-				zLStart = 215
-
-				UI_SetElementPosition("NewLaunchMenu","launch",zLStart,0)
-
-				UI_SubtitleNarrow()
-		   ]],
-    
+    drawToShipLineElement = "btnPrev",  
 ;
 {
 	type = "Frame",
 	name = "launch",
-	position = { 215, 1, },
+	position = { 0, 1, },
 	size = { 215, 495, },
 	outerBorderWidth = 1,
 	borderColor = "FEColorHeading3",
