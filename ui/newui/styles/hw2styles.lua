@@ -116,7 +116,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "IGColorButtonFlash",
-			string = "48,108,136,255",
+			string = "100,100,100,255",
 		},
 		{
 			name = "IGColorButtonFlashBorder",
@@ -132,11 +132,11 @@ HW2StyleSheet =
 		},
 		{
 			name = "IGColorButtonDisabledBorder",
-			string = "48,108,136,255",
+			string = "100,100,100,255",
 		},
 		{
 			name = "IGColorButtonDisabledText",
-			string = "48,108,136,255",
+			string = "100,100,100,255",
 		},
 		{
 			name = "IGColorFacilityDisabled",
@@ -317,9 +317,9 @@ HW2StyleSheet =
 			type = "Frame",
 			backgroundColor =
 			{
-				53,
-				163,
-				250,
+				120,
+				120,
+				120,
 				50,
 			},
 		},
@@ -1160,9 +1160,9 @@ HW2StyleSheet =
 			},
 			color =
 			{
-				220,
-				220,
-				255,
+				230,
+				230,
+				230,
 				255,
 			},
 		},
@@ -1329,9 +1329,9 @@ HW2StyleSheet =
 			},
 			color =
 			{
-				220,
-				220,
-				255,
+				230,
+				230,
+				230,
 				255,
 			},
 		},
@@ -1619,16 +1619,16 @@ HW2StyleSheet =
 		},
 		backgroundColor =
 		{
-			33,
-			54,
-			77,
+			55,
+			55,
+			55,
 			255,
 		},
 		borderColor =
 		{
-			56,
-			162,
-			250,
+			160,
+			160,
+			160,
 			255,
 		},
 		borderWidth = 2,
@@ -1655,9 +1655,9 @@ HW2StyleSheet =
 		},
 		flashColor =
 		{
-			254,
-			116,
-			7,
+			200,
+			200,
+			200,
 			255,
 		},
 		soundOnButtonPressed = "SFX_CheckBoxUnchecked",
@@ -1679,9 +1679,9 @@ HW2StyleSheet =
 			},
 			color =
 			{
-				56,
-				162,
-				250,
+				160,
+				160,
+				160,
 				255,
 			},
 		},
@@ -1900,16 +1900,16 @@ HW2StyleSheet =
 		borderWidth = 1,
 		backgroundColor =
 		{
-			62,
-			86,
-			98,
+			80,
+			80,
+			80,
 			255,
 		},
 		borderColor =
 		{
-			112,
-			157,
-			180,
+			150,
+			150,
+			150,
 			255,
 		},
 		borderWidth = 1,
@@ -2079,9 +2079,9 @@ HW2StyleSheet =
 		borderWidth = 1,
 		backgroundColor =
 		{
-			0,
-			175,
-			255,
+			140,
+			140,
+			140,
 			127,
 		},
 		size =
@@ -2138,9 +2138,9 @@ HW2StyleSheet =
 			},
 			color =
 			{
-				56,
-				162,
-				250,
+				160,
+				160,
+				160,
 			},
 		},
 		OverGraphic =
@@ -3413,9 +3413,9 @@ HW2StyleSheet =
 			},
 			color =
 			{
-				220,
-				220,
-				255,
+				230,
+				230,
+				230,
 				255,
 			},
 		},
@@ -3571,16 +3571,16 @@ HW2StyleSheet =
 		flashSpeed = 250,
 		textColor =
 		{
-			0,
-			175,
-			255,
+			180,
+			180,
+			180,
 			255,
 		},
 		overTextColor =
 		{
-			128,
-			215,
-			255,
+			200,
+			200,
+			200,
 			255,
 		},
 		clickedTextColor =
@@ -3592,9 +3592,9 @@ HW2StyleSheet =
 		},
 		pressedTextColor =
 		{
-			128,
-			215,
-			255,
+			200,
+			200,
+			200,
 			255,
 		},
 		outerBorderWidth = 1,
@@ -3692,16 +3692,16 @@ HW2StyleSheet =
 		},
 		backgroundColor =
 		{
-			238,
-			188,
-			5,
+			180,
+			180,
+			180,
 			255,
 		},
 		overColor =
 		{
-			187,
-			146,
-			4,
+			140,
+			140,
+			140,
 			255,
 		},
 		flashColor =
@@ -3734,9 +3734,9 @@ HW2StyleSheet =
 			},
 			color =
 			{
-				0,
-				160,
-				255,
+				140,
+				140,
+				140,
 				128,
 			},
 		},
@@ -3817,9 +3817,9 @@ HW2StyleSheet =
 			},
 			color =
 			{
-				0,
-				160,
-				255,
+				140,
+				140,
+				140,
 				128,
 			},
 		},
@@ -3950,9 +3950,9 @@ HW2StyleSheet =
 				},
 				progressColor =
 				{
-					51,
-					255,
-					0,
+					200,
+					200,
+					200,
 					255,
 				},
 				position =
@@ -4162,9 +4162,9 @@ HW2StyleSheet =
 		font = "ButtonFont",
 		color =
 		{
-			0,
-			175,
-			255,
+			180,
+			180,
+			180,
 			255,
 		},
 		size = 8,
@@ -4256,9 +4256,9 @@ HW2StyleSheet =
 			},
 			backgroundColor =
 			{
-				94,
-				151,
-				48,
+				100,
+				100,
+				100,
 				255,
 			},
 			outerBorderWidth = 1,
@@ -4426,16 +4426,16 @@ HW2StyleSheet =
 		borderColor = "IGColorOutline",
 		overColor =
 		{
-			48,
-			108,
-			136,
+			100,
+			100,
+			100,
 			128,
 		},
 		pressedColor =
 		{
-			48,
-			108,
-			136,
+			100,
+			100,
+			100,
 			255,
 		},
 		disabledColor =
