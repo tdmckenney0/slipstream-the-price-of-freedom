@@ -4090,8 +4090,8 @@ HW2StyleSheet =
 		color =
 		{
 			0,
-			175,
-			255,
+			0,
+			0,
 			255,
 		},
 		size = 8,
@@ -4106,44 +4106,53 @@ HW2StyleSheet =
 		borderColor =
 		{
 			0,
-			175,
-			255,
+			0,
+			0,
 			255,
 		},
 		overColor =
 		{
-			48,
-			108,
-			136,
+			0,
+			0,
+			0,
+			127,
+		},
+		verBorderColor = "FEColorHeading3",
+		overTextColor =
+		{
+			0,
+			0,
+			0,
 			255,
 		},
-		overBorderColor =
+		pressedColor = 
+		{
+			0,
+			0,
+			0,
+			200,
+		},
+		pressedBorderColor = "FEColorHeading3",
+		pressedTextColor =
 		{
 			255,
 			255,
 			255,
-			255,
-		},
-		pressedColor =
-		{
-			48,
-			108,
-			136,
 			255,
 		},
 		disabledBorderColor =
 		{
 			0,
-			175,
-			255,
-			255,
+			0,
+			0,
+			127,
 		},
 		disabledTextColor =
 		{
-			0,
-			175,
+			152,
+			152,
+			152,
 			255,
-			128,
 		},
 		soundOnClicked = "SFX_RightClickMenuClick",
 	},
