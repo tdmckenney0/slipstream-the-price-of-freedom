@@ -190,7 +190,7 @@ NewTaskbar = {
 	CreateTaskbarButton("btnLaunch", "$2706", {715, 83}, {50, 18.5}, "MainUI_UserEventData( eLaunchManager, 1)", 52, "$2760", {toggleButton=1}), -- LAUNCH
 
 	--Return
-	CreateTaskbarButton("btnShipBack", "<<<", {775, 83}, {15, 18.5}, nil, 52, "$2732", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", disabledTextColor={0,0,0,0}, DisabledGraphic={texture="DATA:UI\\NewUI\\Taskbar\\command_icons.mres", textureUV={0,0,0,0}}}), -- LAUNCH
+	CreateTaskbarButton("btnShipBack", "<<<", {775, 83}, {15, 18.5}, nil, 52, "$2732", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", disabledTextColor={0,0,0,0}}), -- LAUNCH
 
 	--Show button (Disabled)
 	CreateTaskbarButton("btnHide2", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
@@ -203,7 +203,7 @@ NewTaskbar = {
 	{
 		type = "TextLabel",
 		name = "commandsHelpTip",
-		position = {4, 1},
+		position = {4, 70},
 		size = { 214, 13},
 		Text = {
 			textStyle = "Taskbar_MenuButtonTextStyle",
@@ -346,10 +346,6 @@ NewTaskbar = {
 			type = "Frame",
 			position = {0, 0},
 			size = {800, 62},
-			BackgroundGraphic = {
-				texture = "DATA:UI\\NewUI\\Taskbar\\unitstats_border.mres",
-				textureUV = { 0, 0, 608, 0 },
-			},
 		},
 
 		-- border
@@ -364,10 +360,6 @@ NewTaskbar = {
 				texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
 				textureUV =
             { 0, 0, 600, 600, }, },
-			DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 1, 1, 31, 0 },
-					},
 			size = {650, 60},
 		},
 
@@ -475,27 +467,8 @@ NewTaskbar = {
 				name = "subsystem_production",
 				visible = 0,
 				size = { 32, 24},
-				DefaultGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 0, 0, 32, 24 },
-				},
-				OverGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 0, 24, 32, 48 },
-				},
-				PressedGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 0, 48, 32, 72 },
-				},
-				DisabledGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 0, 0, 32, 24 },
-					color = { 255, 255, 255, 200},
-				},
+				borderWidth = 1,
+				borderColor = "TPOFBlack",
 				helpTip = "$2811",
 				soundOnClicked = "SFX_ButtonClick",
 			},
@@ -504,27 +477,8 @@ NewTaskbar = {
 				name = "subsystem_sensor",
 				visible = 0,
 				size = { 32, 24},
-				DefaultGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 32, 0, 64, 24 },
-				},
-				OverGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 32, 24, 64, 48 },
-				},
-				PressedGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 32, 48, 64, 72 },
-				},
-				DisabledGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 32, 0, 64, 24 },
-					color = { 255, 255, 255, 200},
-				},
+				borderWidth = 1,
+				borderColor = "TPOFBlack",
 				helpTip = "$2813",
 				soundOnClicked = "SFX_ButtonClick",
 			},
@@ -533,27 +487,8 @@ NewTaskbar = {
 				name = "subsystem_generic",
 				visible = 0,
 				size = { 32, 24},
-				DefaultGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 64, 0, 96, 24 },
-				},
-				OverGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 64, 24, 96, 48 },
-				},
-				PressedGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 64, 48, 96, 72 },
-				},
-				DisabledGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 64, 0, 96, 24 },
-					color = { 255, 255, 255, 200},
-				},
+				borderWidth = 1,
+				borderColor = "TPOFBlack",
 				helpTip = "$2812",
 				soundOnClicked = "SFX_ButtonClick",
 			},
@@ -562,27 +497,8 @@ NewTaskbar = {
 				name = "subsystem_innate",
 				visible = 0,
 				size = { 32, 24},
-				DefaultGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 96, 0, 128, 24 },
-				},
-				OverGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 96, 24, 128, 48 },
-				},
-				PressedGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 96, 48, 128, 72 },
-				},
-				DisabledGraphic = {
-					size = {32, 24},
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_button.mres",
-					textureUV = { 96, 0, 128, 24 },
-					color = { 255, 255, 255, 200},
-				},
+				borderWidth = 1,
+				borderColor = "TPOFBlack",
 				helpTip = "$2814",
 				soundOnClicked = "SFX_ButtonClick",
 			},
@@ -702,10 +618,6 @@ NewTaskbar = {
 				type = "Frame",
 				name = "maxspeedframe",
 				size = {67, 15},
-				BackgroundGraphic = {
-					texture = "DATA:UI\\NewUI\\Taskbar\\stats_box.mres",
-					textureUV = { 0, 0, 67, 15 },
-				},
 				helpTip = "$2711",
 				helpTipTextLabel = "commandsHelpTip",
 				;
@@ -735,10 +647,6 @@ NewTaskbar = {
 				type = "Frame",
 				name = "attackdamageframe",
 				size = {67, 15},
-				BackgroundGraphic = {
-					texture = "DATA:UI\\NewUI\\Taskbar\\stats_box.mres",
-					textureUV = { 0, 0, 67, 15 },
-				},
 				helpTip = "$2710",
 				helpTipTextLabel = "commandsHelpTip",
 				;
@@ -768,10 +676,6 @@ NewTaskbar = {
 				type = "Frame",
 				name = "shieldsframe",
 				size = {67, 15},
-				BackgroundGraphic = {
-					texture = "DATA:UI\\NewUI\\Taskbar\\stats_box.mres",
-					textureUV = { 0, 0, 67, 15 },
-				},
 				helpTip = "$2770",
 				helpTipTextLabel = "commandsHelpTip",
 				;
