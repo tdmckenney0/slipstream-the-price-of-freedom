@@ -33,6 +33,11 @@ StrikeGroupsMenu =
     size =
         { 138, (65 + 14), },
     backgroundColor = "IGColorBackground1",
+    BackgroundGraphic =
+    {
+    texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
+    textureUV =
+        { 0, 0, 600, 600, }, },
 ;
 {
     type = "TextLabel",
@@ -40,17 +45,13 @@ StrikeGroupsMenu =
         { -2, 0, },
     size =
         { 144, 18, },
-    borderColor =
-        { 170, 227, 255, 255, },
-    borderWidth = 2,
     Text =
     {
         textStyle = "IGHeading2",
         hAlign = "Left",
         offset =
             { 8, 0, },
-        color =
-            { 255, 255, 255, 255, },
+        color = "TPOFBlack",
         text = "$2734", },
 },
 {
