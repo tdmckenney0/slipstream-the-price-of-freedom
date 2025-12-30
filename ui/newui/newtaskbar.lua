@@ -340,14 +340,6 @@ NewTaskbar = {
 		name = "unitStats",
 		;
 
-		--background, believe it or not, for everything.
-
-		{
-			type = "Frame",
-			position = {0, 0},
-			size = {800, 62},
-		},
-
 		-- border
 		{
 			type = "Frame",
