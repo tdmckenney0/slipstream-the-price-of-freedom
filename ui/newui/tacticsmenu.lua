@@ -32,6 +32,8 @@ TacticsMenu =
         { 79, 514, },
     size =
         { 138, 65, },
+    outerBorderWidth = 1,
+    borderColor = "TPOFBlack",
     backgroundColor = "IGColorBackground1",
     BackgroundGraphic =
     {
@@ -47,7 +49,7 @@ TacticsMenu =
         { 142, 18, },
     Text =
     {
-        textStyle = "IGHeading2",
+        textStyle = "IGHeading1",
         hAlign = "Left",
         offset =
             { 8, 0, },

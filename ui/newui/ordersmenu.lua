@@ -54,6 +54,8 @@ OrdersMenu =
         { 79, 600 - (2 + 21 + 19 + (7 + (14 * 19))), },
     size =
         { 138, 21 + (7 + (14 * 19)), },
+    outerBorderWidth = 1,
+    borderColor = "TPOFBlack",
     backgroundColor = "IGColorBackground1",
     BackgroundGraphic =
     {
@@ -69,7 +71,7 @@ OrdersMenu =
         { 144, 18, },
     Text =
     {
-        textStyle = "IGHeading2",
+        textStyle = "IGHeading1",
         hAlign = "Left",
         offset =
             { 8, 0, },
