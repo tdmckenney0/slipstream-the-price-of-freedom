@@ -29,7 +29,7 @@ StrikeGroupsMenu =
     type = "Frame",
     name = "menu",
     position =
-        { 79, 500, },
+        { 4, 500, },
     size =
         { 138, (65 + 14), },
     backgroundColor = "IGColorBackground1",

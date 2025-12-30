@@ -23,6 +23,12 @@ function CreateTaskbarButton(name, text, position, size, onClick, hotKeyID, help
 		helpTip = helpTip,
 		helpTipTextLabel = "commandsHelpTip",
 		hotKeyID = hotKeyID,
+		-- Bugfix: this is needed because of wierd states that arise from closing the strike menu while over the button
+		clickedTextColor = { 0, 0, 0, 255},
+		ClickedGraphic = {
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
+			textureUV = { 0, 0, 64, 13 },
+		},
 	}
 	
 	if extra then
@@ -44,46 +50,29 @@ function CreateTaskbarButton(name, text, position, size, onClick, hotKeyID, help
 		if extra.DisabledGraphic then
 			btn.DisabledGraphic = extra.DisabledGraphic
 		end
+		if extra.onMousePressed then
+			btn.onMousePressed = extra.onMousePressed
+		end
+		if extra.soundOnClicked then
+			btn.soundOnClicked = extra.soundOnClicked
+		end
+		if extra.soundOnPressed then
+			btn.soundOnPressed = extra.soundOnPressed
+		end
 	end
 	
 	return btn
 end
 
-function CreateTaskbarCommandButton(name, onClick, helpTip, hotKeyID, textureUV, disabledTextureUV, extra)
-	local btn = {
+function NewTaskbarCreateDummyButton(pName)
+	return {
 		type = "Button",
-		buttonStyle = "Taskbar_CommandButtonStyle",
-		name = name,
-		onMouseClicked = onClick,
-		helpTip = helpTip,
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = hotKeyID,
-		;
-		{
-			type = "Frame",
-			size = { 30, 30},
-			BackgroundGraphic = {
-				texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-				textureUV = textureUV,
-			},
-			DisabledGraphic = {
-				texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-				textureUV = disabledTextureUV or { 33, 1, 63, 0 },
-				color = { 90, 155, 211, 0},
-				blackAndWhite = 1,
-			},
-			giveParentMouseInput = 1,
-		},
+		name = pName,
+		position = {0, 0},
+		size = {0, 0},
+		giveParentMouseInput = 1,
+		visible = 0,
 	}
-
-	if extra then
-		if extra.enabled ~= nil then
-			btn.enabled = extra.enabled
-		end
-		-- Add other properties if needed
-	end
-	
-	return btn
 end
 
 NewTaskbar = {
@@ -151,6 +140,19 @@ NewTaskbar = {
 		size = { 800, 20},
 		giveParentMouseInput = 1,
 	},
+
+	-- Fleet button
+	CreateTaskbarButton("btnFleet", "$2705", {10, 83}, {40, 18.5}, "UI_ToggleScreen( 'FleetMenu', 0)", nil, "$2740", {toggleButton=1}), -- FLEET
+
+	-- Strike group button
+	CreateTaskbarButton("btnStrike", "$2714", {60, 83}, {40, 18.5}, nil, nil, "$2741", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'StrikeGroupsMenu', 0)", soundOnClicked="", soundOnPressed="SFX_ButtonClick"}), -- STRIKE GRP
+
+	-- Tactics button
+	CreateTaskbarButton("btnTactics", "$2715", {110, 83}, {40, 18.5}, nil, nil, "$2742", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'TacticsMenu', 0)", soundOnClicked="", soundOnPressed="SFX_ButtonClick"}), -- TACTICS
+
+	-- Orders button
+	CreateTaskbarButton("btnOrders", "[ORDERS]", {160, 83}, {40, 18.5}, "UI_ToggleScreen( 'OrdersMenu', 0)", 150, "$2729", {toggleButton=1}), -- ORDERS
+
 	-- Events button
 	CreateTaskbarButton("btnEvents", "$2707", {315, 83}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {textStyle="Taskbar_MenuButtonTextStyle"}), -- EVENTS
 
@@ -190,12 +192,6 @@ NewTaskbar = {
 	--Return
 	CreateTaskbarButton("btnShipBack", "<<<", {775, 83}, {15, 18.5}, nil, 52, "$2732", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", disabledTextColor={0,0,0,0}, DisabledGraphic={texture="DATA:UI\\NewUI\\Taskbar\\command_icons.mres", textureUV={0,0,0,0}}}), -- LAUNCH
 
-	--Special Switches
-
-	CreateTaskbarButton("btnswitch1", ">>>", {10, 83}, {15, 18.5}, "UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe\", 1); UI_SetElementVisible(\"NewTaskbar\", \"commandButtonsframe\", 0); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch1\", 0); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 1);", 150, "$2729", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", overColor={ 127, 127, 127, 127}}), -- LAUNCH
-
-	CreateTaskbarButton("btnswitch2", ">>>", {10, 83}, {15, 18.5}, "UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe\", 0); UI_SetElementVisible(\"NewTaskbar\", \"commandButtonsframe\", 1); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 0); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch1\", 1);", 150, "$2729", {visible=0, toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", overColor={ 127, 127, 127, 127}}), -- LAUNCH
-
 	--Show button (Disabled)
 	CreateTaskbarButton("btnHide2", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
 
@@ -213,314 +209,6 @@ NewTaskbar = {
 			textStyle = "Taskbar_MenuButtonTextStyle",
 			color = { 255, 255, 255, 255},
 			hAlign = "Left",
-		},
-	},
-
-	-- Command buttons
-
-	{
-		type = "Frame",
-		position = { 0, 19},
-		name = "commandButtonsFrame",
-		autosize = 1,
-		;
-
-		{
-			type = "Frame",
-			position = {1, 1},
-			outerBorderWidth = 0,
-			borderColor = "FEColorHeading3",
-			DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 0, 0, 0, 0 },
-					},
-			size = {155, 60},
-		},
-
-		{
-			type = "Frame",
-			position = {1, 1},
-			outerBorderWidth = 1,
-			backgroundColor = "IGColorBackground1",
-			borderColor = "FEColorHeading3",
-			BackgroundGraphic =
-			{
-				texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
-				textureUV =
-            { 0, 0, 600, 600, }, },
-			DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 0, 0, 0, 0 },
-					},
-			size = {154, 60},
-		},
-
-
-		{
-			type = "Frame",
-			name = "commandButtonsFrame2",
-			position = {0, 0},
-			autosize = 1,
-			autoarrange = 1,
-			autoarrangeWidth = 155,
-			autoarrangeHeight = 61,
-			autoarrangeSpace = 1,
-			;
-
-			CreateTaskbarCommandButton("btnMove", "MainUI_UserEvent( eMove)", "$2717", 10, { 1, 1, 31, 31 }, { 1, 1, 31, 0 }),
-			CreateTaskbarCommandButton("btnAttack", "MainUI_UserEventData( eControlModifier, 0)", "$2718", 115, { 33, 1, 63, 31 }),
-			CreateTaskbarCommandButton("btnAttackMove", "MainUI_UserEvent( eMoveAttack )", "$2724", 25, { 129, 97, 159, 127}),
-			CreateTaskbarCommandButton("btnGuard", "MainUI_UserEvent( eGuard)", "$2719", 14, { 65, 1, 95, 31 }),
-			CreateTaskbarCommandButton("btnDock", "MainUI_UserEvent( eDock)", "$2720", 15, { 97, 1, 127, 31 }),
-			-- Bottom Row
-			CreateTaskbarCommandButton("btnCancelOrders", "MainUI_UserEvent( eCancelOrders)", "$2722", 17, { 33, 97, 63, 127 }),
-			CreateTaskbarCommandButton("btnWaypoint", "MainUI_UserEvent( eTempWaypoint)", "$2727", 56, { 97, 33, 127, 63 }),
-			CreateTaskbarCommandButton("btnResource", "MainUI_UserEventData( eHarvest, 0); MainUI_UserEventData( eHarvest, 1);", "$2723", 12, { 1, 33, 31, 63 }),
-			CreateTaskbarCommandButton("btnHyperspace", "MainUI_UserEvent( eHyperspace)", "$2725", 11, { 33, 33, 63, 63 }),
-			CreateTaskbarCommandButton("btnRetire", "MainUI_UserEvent( eRetire)", "$2728", 23, { 129, 33, 159, 63 }),
-		},
-	},
-
-	-- Special Command buttons
-	{
-		type = "Frame",
-		position = { 1, 19},
-		name = "specialButtonsFrame",
-		visible = 0,
-		autosize = 1,
-		;
-
-		{
-			type = "Frame",
-			position = {1, 1},
-			outerBorderWidth = 0,
-			borderColor = "FEColorHeading3",
-			DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 0, 0, 0, 0 },
-					},
-			size = {155, 60},
-		},
-
-		{
-			type = "Frame",
-			position = {1, 1},
-			outerBorderWidth = 1,
-			backgroundColor = "IGColorBackground1",
-			borderColor = "FEColorHeading3",
-			BackgroundGraphic =
-			{
-				texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
-				textureUV =
-            { 0, 0, 600, 600, }, },
-			DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 0, 0, 0, 0 },
-					},
-			size = {154, 60},
-		},
-
-		{
-			type = "Frame",
-			name = "specialButtonsFrame2",
-			position = {0, 0},
-			autosize = 1,
-			autoarrange = 1,
-			autoarrangeWidth = 155,
-			autoarrangeSpace = 1,
-			;
-
-			CreateTaskbarCommandButton("btnPing", "MainUI_UserEvent( eSensorPing)", "$2769", 147, { 129, 65, 159, 95 }),
-			CreateTaskbarCommandButton("btnEMP", "MainUI_UserEventData2( eSpecialAttack, 0, 2)", "$2768", 146, { 97, 65, 127, 95 }),
-			CreateTaskbarCommandButton("btnDefenseField", "MainUI_UserEvent( eDefenseField)", "$2765", 143, { 1, 65, 31, 95 }),
-			CreateTaskbarCommandButton("btnCloak", "MainUI_UserEvent( eCloak)", "$2766", 144, { 33, 65, 63, 95 }),
-			CreateTaskbarCommandButton("btnScuttleConfirm", "MainUI_UserEvent( eScuttle); UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 0); UI_SetElementVisible(\"NewTaskbar\", \"specialButtons\", 1); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 0);", "$2759", nil, { 225, 97, 255, 127 }, nil, {enabled=0}),
-			-- bottom row
-			CreateTaskbarCommandButton("btnRepair", "MainUI_UserEvent( eRepair)", "$2726", 20, { 65, 33, 95, 63 }),
-			CreateTaskbarCommandButton("btnMines", "MainUI_UserEvent( eDropMinesInstant)", "$2772", 24, { 65, 97, 95, 127 }),
-			CreateTaskbarCommandButton("btnRally", "MainUI_UserEvent( eRallyPoint)", "$2721", 138, { 129, 1, 159, 31 }),
-			CreateTaskbarCommandButton("btnRallyObject", "MainUI_UserEventData( eRallyObject, 0 )", "$2767", 22, { 1, 97, 31, 127 }),
-			CreateTaskbarCommandButton("btnScuttle", "UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 1); UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe2\", 0); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 0);", "$2773", 5, { 97, 97, 127, 127 }),
-		},
-	},
-
-	-- Scuttle confirm
-	{
-		type = "Frame",
-		position = { 1, 19},
-		name = "scuttleButtons",
-		visible = 0,
-		autosize = 1,
-		;
-
-		{
-			type = "TextLabel",
-			position = {40, 7},
-			size = {80, 30},
-			wrapping = 1,
-			Text = {
-				font = "ButtonFont",
-				text = "$2712", -- CONFIRM SCUTTLE?
-				hAlign = "Right",
-				vAlign = "Top",
-				color = { 255, 255, 255, 255},
-			},
-		},
-
-		{
-			type = "Frame",
-			position = { 124, 0},
-			autosize = 1,
-			autoarrange = 1,
-			autoarrangeSpace = 1,
-			;
-
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnScuttleConfirm",
-				onMouseClicked = "MainUI_UserEvent( eScuttle); UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 0); UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe2\", 1); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 1);",
-				helpTip = "$2759",
-				helpTipTextLabel = "commandsHelpTip",
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 225, 97, 255, 127 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnScuttleCancel",
-				onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 0); UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe2\", 1); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 1);",
-				helpTip = "$2613",
-				helpTipTextLabel = "commandsHelpTip",
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 161, 1, 191, 31 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-		},
-	},
-
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		toggleButton = 1,
-		position = {35, 83},
-		size = { 50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		--pressedTextColor = { 0, 224, 255, 255},
-
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2705", -- FLEET
-		},
-		name = "btnFleet",
-		onMouseClicked = "UI_ToggleScreen( 'FleetMenu', 0)",
-		helpTip = "$2740",
-		helpTipTextLabel = "commandsHelpTip",
-
-		-- Bugfix: this is needed because of wierd states that arise from closing the strike menu while over the button
-		clickedTextColor = { 0, 0, 0, 255},
-		ClickedGraphic = {
-			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV = { 0, 0, 64, 13 },
-		},
-	},
-
-	-- Strike group button
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		position = {95, 83},
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		toggleButton = 1,
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2714", -- STRIKE GRP
-		},
-		name = "btnStrike",
-		onMousePressed = "UI_ToggleScreen( 'StrikeGroupsMenu', 0)",
-		helpTip = "$2741",
-		helpTipTextLabel = "commandsHelpTip",
-
-		soundOnClicked = "",
-		soundOnPressed = "SFX_ButtonClick",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-
-		-- Bugfix: this is needed because of wierd states that arise from closing the strike menu while over the button
-		clickedTextColor = { 0, 0, 0, 255},
-		ClickedGraphic = {
-			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV = { 0, 0, 64, 13 },
-		},
-	},
-
-	-- Tactics button
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		position = {155, 83},
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		toggleButton = 1,
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2715", -- TACTICS
-		},
-		name = "btnTactics",
-		onMousePressed = "UI_ToggleScreen( 'TacticsMenu', 0)",
-		helpTip = "$2742",
-		helpTipTextLabel = "commandsHelpTip",
-
-		soundOnClicked = "",
-		soundOnPressed = "SFX_ButtonClick",
-
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-
-		-- Bugfix: this is needed because of wierd states that arise from closing the strike menu while over the button
-		clickedTextColor = { 0, 0, 0, 255},
-		ClickedGraphic = {
-			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV = { 0, 0, 64, 13 },
 		},
 	},
 
@@ -1111,6 +799,27 @@ NewTaskbar = {
 			},
 		},
 	},
-
+	-- Command Dummy Buttons
+	NewTaskbarCreateDummyButton("btnMove"),
+	NewTaskbarCreateDummyButton("btnAttack"),
+	NewTaskbarCreateDummyButton("btnAttackMove"),
+	NewTaskbarCreateDummyButton("btnGuard"),
+	NewTaskbarCreateDummyButton("btnDock"),
+	NewTaskbarCreateDummyButton("btnCancelOrders"),
+	NewTaskbarCreateDummyButton("btnWaypoint"),
+	NewTaskbarCreateDummyButton("btnResource"),
+	NewTaskbarCreateDummyButton("btnHyperspace"),
+	NewTaskbarCreateDummyButton("btnRetire"),
+	-- Special Command Dummy Buttons
+	NewTaskbarCreateDummyButton("btnPing"),
+	NewTaskbarCreateDummyButton("btnEMP"),
+	NewTaskbarCreateDummyButton("btnDefenseField"),
+	NewTaskbarCreateDummyButton("btnCloak"),
+	NewTaskbarCreateDummyButton("btnScuttleConfirm"),
+	NewTaskbarCreateDummyButton("btnRepair"),
+	NewTaskbarCreateDummyButton("btnMines"),
+	NewTaskbarCreateDummyButton("btnRally"),
+	NewTaskbarCreateDummyButton("btnRallyObject"),
+	NewTaskbarCreateDummyButton("btnScuttle"),
    },
 }

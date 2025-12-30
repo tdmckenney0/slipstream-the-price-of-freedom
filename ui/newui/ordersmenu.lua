@@ -51,7 +51,7 @@ OrdersMenu =
     type = "Frame",
     name = "menu",
     position =
-        { 4, 600 - (2 + 21 + 19 + (7 + (14 * 19))), },
+        { 79, 600 - (2 + 21 + 19 + (7 + (14 * 19))), },
     size =
         { 138, 21 + (7 + (14 * 19)), },
     backgroundColor = "IGColorBackground1",
