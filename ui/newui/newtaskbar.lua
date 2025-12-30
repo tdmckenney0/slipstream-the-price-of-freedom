@@ -2,6 +2,90 @@ BUILDCOLOR = {0,0,0,0}
 RESEARCHCOLOR = {0,0,0,255}
 LAUNCHCOLOR = {0,0,0,255}
 
+function CreateTaskbarButton(name, text, position, size, onClick, hotKeyID, helpTip, extra)
+	local btn = {
+		type = "TextButton",
+		outerBorderWidth = 1,
+		borderColor = "FEColorHeading3", -- Common border color
+		position = position,
+		size = size,
+		buttonStyle = "Taskbar_PanelButtonStyle",
+		backgroundColor = { 0, 0, 0, 0},
+		overColor = { 127, 127, 127, 255}, -- Default over color
+		pressedColor = { 255, 255, 255, 255},
+		textColor = { 0, 0, 0, 255},
+		Text = {
+			textStyle = "Taskbar_PanelButtonTextStyle", -- Default text style
+			text = text,
+		},
+		name = name,
+		onMouseClicked = onClick,
+		helpTip = helpTip,
+		helpTipTextLabel = "commandsHelpTip",
+		hotKeyID = hotKeyID,
+	}
+	
+	if extra then
+		if extra.textStyle then
+			btn.Text.textStyle = extra.textStyle
+		end
+		if extra.visible then
+			btn.visible = extra.visible
+		end
+		if extra.toggleButton then
+			btn.toggleButton = extra.toggleButton
+		end
+		if extra.overColor then
+			btn.overColor = extra.overColor
+		end
+		if extra.disabledTextColor then
+			btn.disabledTextColor = extra.disabledTextColor
+		end
+		if extra.DisabledGraphic then
+			btn.DisabledGraphic = extra.DisabledGraphic
+		end
+	end
+	
+	return btn
+end
+
+function CreateTaskbarCommandButton(name, onClick, helpTip, hotKeyID, textureUV, disabledTextureUV, extra)
+	local btn = {
+		type = "Button",
+		buttonStyle = "Taskbar_CommandButtonStyle",
+		name = name,
+		onMouseClicked = onClick,
+		helpTip = helpTip,
+		helpTipTextLabel = "commandsHelpTip",
+		hotKeyID = hotKeyID,
+		;
+		{
+			type = "Frame",
+			size = { 30, 30},
+			BackgroundGraphic = {
+				texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
+				textureUV = textureUV,
+			},
+			DisabledGraphic = {
+				texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
+				textureUV = disabledTextureUV or { 33, 1, 63, 0 },
+				color = { 90, 155, 211, 0},
+				blackAndWhite = 1,
+			},
+			giveParentMouseInput = 1,
+		},
+	}
+
+	if extra then
+		if extra.enabled ~= nil then
+			btn.enabled = extra.enabled
+		end
+		-- Add other properties if needed
+	end
+	
+	return btn
+end
+
 NewTaskbar = {
 	size = {0, 498, 800, 110}, --was 0, 498, 800, 102
 	stylesheet = "HW2StyleSheet",
@@ -68,420 +152,55 @@ NewTaskbar = {
 		giveParentMouseInput = 1,
 	},
 	-- Events button
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		position = {315, 83},
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		Text = {
-			textStyle = "Taskbar_MenuButtonTextStyle",
-			text = "$2707", -- EVENTS
-		},
-		name = "btnEvents",
-		onMouseClicked = "UI_ToggleScreen( 'EventsScreen', 0)",
-		helpTip = "$2743",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 140,
-	},
+	CreateTaskbarButton("btnEvents", "$2707", {315, 83}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {textStyle="Taskbar_MenuButtonTextStyle"}), -- EVENTS
 
 	-- Events button (wide version)
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		visible = 0,
-		position = {315, 83},
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2707", -- EVENTS
-		},
-		name = "btnEvents_wide",
-		onMouseClicked = "UI_ToggleScreen( 'EventsScreen', 0)",
-		helpTip = "$2743",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 140,
-	},
+	CreateTaskbarButton("btnEvents_wide", "$2707", {315, 83}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {visible=0}), -- EVENTS
 
 	-- Objectives button
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		position = {255, 83},
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "GOALS", -- OBJECTIVES
-		},
-		name = "btnObjectives",
-		onMouseClicked = "UI_ToggleScreen( 'ObjectivesList', 0)",
-		helpTip = "$2744",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 137,
-	},
+	CreateTaskbarButton("btnObjectives", "GOALS", {255, 83}, {50, 18.5}, "UI_ToggleScreen( 'ObjectivesList', 0)", 137, "$2744"), -- OBJECTIVES
 
 	-- Chat button
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		position = {255, 83},
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2716", -- CHAT
-		},
-		name = "btnChat",
-		onMouseClicked = "UI_ToggleScreen( 'ChatScreen', 0)",
-		helpTip = "$2747",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 131,
-	},
+	CreateTaskbarButton("btnChat", "$2716", {255, 83}, {50, 18.5}, "UI_ToggleScreen( 'ChatScreen', 0)", 131, "$2747"), -- CHAT
 
 	-- Sensors button
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		position = {375, 83}, --363
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		Text = {
-			textStyle = "Taskbar_MenuButtonTextStyle",
-			text = "$2703", -- SENSORS
-		},
-		name = "btnSensors",
-		onMouseClicked = "MainUI_UserEvent( eSensorsManager)",
-		helpTip = "$2745",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 54,
-	},
+	CreateTaskbarButton("btnSensors", "$2703", {375, 83}, {50, 18.5}, "MainUI_UserEvent( eSensorsManager)", 54, "$2745", {textStyle="Taskbar_MenuButtonTextStyle"}), -- SENSORS
 
 	-- Diplomacy button
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		position = {495, 83},
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2713", -- DIPLOMACY
-		},
-		name = "btnDiplomacy",
-		onMouseClicked = "UI_ToggleScreen( 'DiplomacyScreen', 0)",
-		helpTip = "$2746",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 141,
-	},
+	CreateTaskbarButton("btnDiplomacy", "$2713", {495, 83}, {50, 18.5}, "UI_ToggleScreen( 'DiplomacyScreen', 0)", 141, "$2746"), -- DIPLOMACY
 
 	-- Speech recall button
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		position = {495, 83},
-		size = {50, 18.5},
-		visible = 0,
-		buttonStyle = "Taskbar_PanelButtonStyle",
-	    backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2762", -- RECALL
-		},
-		name = "btnRecall",
-		onMouseClicked = "UI_ToggleScreen( 'SpeechRecall', 0)",
-		helpTip = "$2763",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 142,
-	},
+	CreateTaskbarButton("btnRecall", "$2762", {495, 83}, {50, 18.5}, "UI_ToggleScreen( 'SpeechRecall', 0)", 142, "$2763", {visible=0}), -- RECALL
 
 	-- Menu button
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		position = {435, 83},
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		toggleButton = 0,
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2702", -- MENU
-		},
-		name = "btnMenu",
-		onMouseClicked = "MainUI_UserEvent( eMenu )",
-		helpTip = "$2774",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 4,
-	},
+	CreateTaskbarButton("btnMenu", "$2702", {435, 83}, {50, 18.5}, "MainUI_UserEvent( eMenu )", 4, "$2774", {toggleButton=0}), -- MENU
 
 	-- Menu button (wide version)
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		visible = 0,
-		position = {435, 83},
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		toggleButton = 0,
-		Text = {
-			textStyle = "Taskbar_MenuButtonTextStyle",
-			text = "$2702", -- MENU
-		},
-		name = "btnMenu_wide",
-		onMouseClicked = "MainUI_UserEvent( eMenu )",
-		helpTip = "$2774",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 4,
-	},
+	CreateTaskbarButton("btnMenu_wide", "$2702", {435, 83}, {50, 18.5}, "MainUI_UserEvent( eMenu )", 4, "$2774", {visible=0, toggleButton=0, textStyle="Taskbar_MenuButtonTextStyle"}), -- MENU
 
 	-- Build button
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		toggleButton = 1,
-		position = {595, 83},
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 127},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2700", -- BUILD
-		},
-		name = "btnBuild",
-		onMouseClicked = "MainUI_UserEventData( eBuildManager, 1)", -- 1 means toggle
-		helpTip = "$2748",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 50,
-	},
+	CreateTaskbarButton("btnBuild", "$2700", {595, 83}, {50, 18.5}, "MainUI_UserEventData( eBuildManager, 1)", 50, "$2748", {toggleButton=1, overColor={ 127, 127, 127, 127}}), -- BUILD
 
 	-- Research button
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		toggleButton = 1,
-		position = {655, 83},
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2701",
-		},
-		name = "btnResearch",
-		onMouseClicked = "MainUI_UserEvent( eResearchManager)",
-		helpTip = "$2749",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 49,
-	},
+	CreateTaskbarButton("btnResearch", "$2701", {655, 83}, {50, 18.5}, "MainUI_UserEvent( eResearchManager)", 49, "$2749", {toggleButton=1}),
 
 	-- Launch button
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		toggleButton = 1,
-		position = {715, 83},
-		size = {50, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "$2706", -- LAUNCH
-		},
-		name = "btnLaunch",
-		onMouseClicked = "MainUI_UserEventData( eLaunchManager, 1)",
-		helpTip = "$2760",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 52,
-	},
+	CreateTaskbarButton("btnLaunch", "$2706", {715, 83}, {50, 18.5}, "MainUI_UserEventData( eLaunchManager, 1)", 52, "$2760", {toggleButton=1}), -- LAUNCH
 
 	--Return
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		toggleButton = 0,
-		position = {775, 83},
-		size = {15, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		disabledTextColor =
-		{
-			0,
-			0,
-			0,
-			0,
-		},
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyleCarrot",
-			text = "<<<", -- LAUNCH
-		},
-		name = "btnShipBack",
-		DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 0, 0, 0, 0 },
-					},
-		helpTip = "$2732",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 52,
-	},
+	CreateTaskbarButton("btnShipBack", "<<<", {775, 83}, {15, 18.5}, nil, 52, "$2732", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", disabledTextColor={0,0,0,0}, DisabledGraphic={texture="DATA:UI\\NewUI\\Taskbar\\command_icons.mres", textureUV={0,0,0,0}}}), -- LAUNCH
 
 	--Special Switches
 
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		toggleButton = 0,
-		position = {10, 83},
-		size = {15, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 127},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyleCarrot",
-			text = ">>>", -- LAUNCH
-		},
-		name = "btnswitch1",
-		helpTip = "$2729",
-		onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe\", 1); UI_SetElementVisible(\"NewTaskbar\", \"commandButtonsframe\", 0); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch1\", 0); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 1);",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 150,
-	},
+	CreateTaskbarButton("btnswitch1", ">>>", {10, 83}, {15, 18.5}, "UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe\", 1); UI_SetElementVisible(\"NewTaskbar\", \"commandButtonsframe\", 0); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch1\", 0); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 1);", 150, "$2729", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", overColor={ 127, 127, 127, 127}}), -- LAUNCH
 
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		toggleButton = 0,
-		visible = 0,
-		position = {10, 83},
-		size = {15, 18.5},
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 127},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyleCarrot",
-			text = ">>>", -- LAUNCH
-		},
-		name = "btnswitch2",
-		helpTip = "$2729",
-		onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe\", 0); UI_SetElementVisible(\"NewTaskbar\", \"commandButtonsframe\", 1); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 0); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch1\", 1);",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 150,
-	},
+	CreateTaskbarButton("btnswitch2", ">>>", {10, 83}, {15, 18.5}, "UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe\", 0); UI_SetElementVisible(\"NewTaskbar\", \"commandButtonsframe\", 1); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 0); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch1\", 1);", 150, "$2729", {visible=0, toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", overColor={ 127, 127, 127, 127}}), -- LAUNCH
 
 	--Show button (Disabled)
-   {
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		toggleButton = 1,
-		position = {784, -55},  --784,0
-		size = {15, 18.5},
-		visible = 0,
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 127},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "^", -- LAUNCH
-		},
-		name = "btnHide2",
-		helpTip = "$2739",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 55,
-	},
+	CreateTaskbarButton("btnHide2", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
+
 	--Hide Button (Disabled)
-	{
-		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		toggleButton = 1,
-		position = {784, -55},  --784,0
-		size = {15, 18.5},
-		visible = 0,
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 127},
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "^", -- LAUNCH
-		},
-		name = "btnHide1",
-		helpTip = "$2739",
-		helpTipTextLabel = "commandsHelpTip",
-		hotKeyID = 55,
-	},
+	CreateTaskbarButton("btnHide1", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
 
 
 	-- Commands help tip label
@@ -548,258 +267,17 @@ NewTaskbar = {
 			autoarrangeSpace = 1,
 			;
 
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnMove",
-				onMouseClicked = "MainUI_UserEvent( eMove)",
-				helpTip = "$2717",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 10,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 1, 1, 31, 31 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 1, 1, 31, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnAttack",
-				onMouseClicked = "MainUI_UserEventData( eControlModifier, 0)",
-				helpTip = "$2718",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 115,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 31 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnAttackMove",
-				onMouseClicked = "MainUI_UserEvent( eMoveAttack )",
-				helpTip = "$2724",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 25,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 129, 97, 159, 127},
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0},
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnGuard",
-				onMouseClicked = "MainUI_UserEvent( eGuard)",
-				helpTip = "$2719",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 14,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 65, 1, 95, 31 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnDock",
-				onMouseClicked = "MainUI_UserEvent( eDock)",
-				helpTip = "$2720",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 15,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 97, 1, 127, 31 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnCancelOrders",
-				onMouseClicked = "MainUI_UserEvent( eCancelOrders)",
-				helpTip = "$2722",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 17,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 97, 63, 127 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnWaypoint",
-				onMouseClicked = "MainUI_UserEvent( eTempWaypoint)",
-				helpTip = "$2727",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 56,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 97, 33, 127, 63 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnResource",
-				onMouseClicked = "MainUI_UserEventData( eHarvest, 0); MainUI_UserEventData( eHarvest, 1);",
-				helpTip = "$2723",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 12,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 1, 33, 31, 63 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnHyperspace",
-				onMouseClicked = "MainUI_UserEvent( eHyperspace)",
-				helpTip = "$2725",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 11,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 33, 63, 63 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnRetire",
-				onMouseClicked = "MainUI_UserEvent( eRetire)",
-				helpTip = "$2728",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 23,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 129, 33, 159, 63 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
+			CreateTaskbarCommandButton("btnMove", "MainUI_UserEvent( eMove)", "$2717", 10, { 1, 1, 31, 31 }, { 1, 1, 31, 0 }),
+			CreateTaskbarCommandButton("btnAttack", "MainUI_UserEventData( eControlModifier, 0)", "$2718", 115, { 33, 1, 63, 31 }),
+			CreateTaskbarCommandButton("btnAttackMove", "MainUI_UserEvent( eMoveAttack )", "$2724", 25, { 129, 97, 159, 127}),
+			CreateTaskbarCommandButton("btnGuard", "MainUI_UserEvent( eGuard)", "$2719", 14, { 65, 1, 95, 31 }),
+			CreateTaskbarCommandButton("btnDock", "MainUI_UserEvent( eDock)", "$2720", 15, { 97, 1, 127, 31 }),
+			-- Bottom Row
+			CreateTaskbarCommandButton("btnCancelOrders", "MainUI_UserEvent( eCancelOrders)", "$2722", 17, { 33, 97, 63, 127 }),
+			CreateTaskbarCommandButton("btnWaypoint", "MainUI_UserEvent( eTempWaypoint)", "$2727", 56, { 97, 33, 127, 63 }),
+			CreateTaskbarCommandButton("btnResource", "MainUI_UserEventData( eHarvest, 0); MainUI_UserEventData( eHarvest, 1);", "$2723", 12, { 1, 33, 31, 63 }),
+			CreateTaskbarCommandButton("btnHyperspace", "MainUI_UserEvent( eHyperspace)", "$2725", 11, { 33, 33, 63, 63 }),
+			CreateTaskbarCommandButton("btnRetire", "MainUI_UserEvent( eRetire)", "$2728", 23, { 129, 33, 159, 63 }),
 		},
 	},
 
@@ -852,261 +330,17 @@ NewTaskbar = {
 			autoarrangeSpace = 1,
 			;
 
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnPing",
-				onMouseClicked = "MainUI_UserEvent( eSensorPing)",
-				helpTip = "$2769",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 147,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 129, 65, 159, 95 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnEMP",
-				onMouseClicked = "MainUI_UserEventData2( eSpecialAttack, 0, 2)",
-				helpTip = "$2768",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 146,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 97, 65, 127, 95 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnDefenseField",
-				onMouseClicked = "MainUI_UserEvent( eDefenseField)",
-				helpTip = "$2765",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 143,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 1, 65, 31, 95 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnCloak",
-				onMouseClicked = "MainUI_UserEvent( eCloak)",
-				helpTip = "$2766",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 144,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 65, 63, 95 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnScuttleConfirm",
-				onMouseClicked = "MainUI_UserEvent( eScuttle); UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 0); UI_SetElementVisible(\"NewTaskbar\", \"specialButtons\", 1); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 0);",
-				helpTip = "$2759",
-				helpTipTextLabel = "commandsHelpTip",
-				--hotKeyID = 146,
-				enabled = 0,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 225, 97, 255, 127 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-
+			CreateTaskbarCommandButton("btnPing", "MainUI_UserEvent( eSensorPing)", "$2769", 147, { 129, 65, 159, 95 }),
+			CreateTaskbarCommandButton("btnEMP", "MainUI_UserEventData2( eSpecialAttack, 0, 2)", "$2768", 146, { 97, 65, 127, 95 }),
+			CreateTaskbarCommandButton("btnDefenseField", "MainUI_UserEvent( eDefenseField)", "$2765", 143, { 1, 65, 31, 95 }),
+			CreateTaskbarCommandButton("btnCloak", "MainUI_UserEvent( eCloak)", "$2766", 144, { 33, 65, 63, 95 }),
+			CreateTaskbarCommandButton("btnScuttleConfirm", "MainUI_UserEvent( eScuttle); UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 0); UI_SetElementVisible(\"NewTaskbar\", \"specialButtons\", 1); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 0);", "$2759", nil, { 225, 97, 255, 127 }, nil, {enabled=0}),
 			-- bottom row
-
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnRepair",
-				onMouseClicked = "MainUI_UserEvent( eRepair)",
-				helpTip = "$2726",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 20,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 65, 33, 95, 63 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnMines",
-				onMouseClicked = "MainUI_UserEvent( eDropMinesInstant)",
-				helpTip = "$2772",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 24,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 65, 97, 95, 127 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnRally",
-				onMouseClicked = "MainUI_UserEvent( eRallyPoint)",
-				helpTip = "$2721",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 138,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 129, 1, 159, 31 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnRallyObject",
-				onMouseClicked = "MainUI_UserEventData( eRallyObject, 0 )",
-				helpTip = "$2767",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 22,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 1, 97, 31, 127 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
-			{
-				type = "Button",
-				buttonStyle = "Taskbar_CommandButtonStyle",
-				name = "btnScuttle",
-				onMouseClicked = "UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 1); UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe2\", 0); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 0);",
-				helpTip = "$2773",
-				helpTipTextLabel = "commandsHelpTip",
-				hotKeyID = 5,
-				;
-				{
-					type = "Frame",
-					size = { 30, 30},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 97, 97, 127, 127 },
-					},
-					DisabledGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-						textureUV = { 33, 1, 63, 0 },
-						color = { 90, 155, 211, 0},
-						blackAndWhite = 1,
-					},
-					giveParentMouseInput = 1,
-				},
-			},
+			CreateTaskbarCommandButton("btnRepair", "MainUI_UserEvent( eRepair)", "$2726", 20, { 65, 33, 95, 63 }),
+			CreateTaskbarCommandButton("btnMines", "MainUI_UserEvent( eDropMinesInstant)", "$2772", 24, { 65, 97, 95, 127 }),
+			CreateTaskbarCommandButton("btnRally", "MainUI_UserEvent( eRallyPoint)", "$2721", 138, { 129, 1, 159, 31 }),
+			CreateTaskbarCommandButton("btnRallyObject", "MainUI_UserEventData( eRallyObject, 0 )", "$2767", 22, { 1, 97, 31, 127 }),
+			CreateTaskbarCommandButton("btnScuttle", "UI_SetElementVisible(\"NewTaskbar\", \"scuttleButtons\", 1); UI_SetElementVisible(\"NewTaskbar\", \"specialButtonsframe2\", 0); UI_SetElementVisible(\"NewTaskbar\", \"btnswitch2\", 0);", "$2773", 5, { 97, 97, 127, 127 }),
 		},
 	},
 
