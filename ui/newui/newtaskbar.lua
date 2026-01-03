@@ -329,17 +329,17 @@ NewTaskbar = {
 
 		{
 			type = "Frame",
-			position = { 215, 0},
-			size = { 210, NEW_TASKBAR_HEIGHT },
+			position = { NEW_TASKBAR_WIDTH - 6 * 15, 0},
+			size = { 6 * 15, NEW_TASKBAR_HEIGHT },
 			;
 			-- subsystems
 			{
 				type = "Frame",
 				name = "subsystems",
 				position = { 0, 0},
-				size = { 210, NEW_TASKBAR_HEIGHT },
+				size = { 6 * 15, NEW_TASKBAR_HEIGHT },
 				autoarrange = 1,
-				autoarrangeWidth = 210,
+				autoarrangeWidth = 6 * 15,
 				;
 				{
 					type = "Button",

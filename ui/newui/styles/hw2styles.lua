@@ -2075,14 +2075,14 @@ HW2StyleSheet =
 		pressedTextColor = "TPOFWhite",
 		disabledBorderColor = "TPOFBlackHalfTransparent",
 		disabledTextColor = "TPOFGrayLight",
-		size = { 32, 15, },
+		size = { 15, 15, },
 		helpTipTextLabel = "commandsHelpTip",
 		soundOnClicked = "SFX_ButtonClick",
 		;
 		{
 			type = "Frame",
 			name = "icon",
-			size = { 32, 15, },
+			size = { 15, 15, },
 			giveParentMouseInput = 1,
 		},
 	},
