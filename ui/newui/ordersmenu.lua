@@ -25,6 +25,16 @@ function OrdersMenuCreateItem(pName, pOnMouseClicked, pText, pOrderInList, pHotK
     }
 end
 
+function OrdersMenuCreateDivider(pName, pOrderInList)
+    return {
+        type = "Line",
+        p1 = { 2, 7 + (pOrderInList * 14), },
+        p2 = { 133, 7 + (pOrderInList * 14), },
+        lineWidth = 1,
+        color = "TPOFBlack",
+    }
+end
+
 OrdersMenu =
 {
     size =
@@ -51,9 +61,9 @@ OrdersMenu =
     type = "Frame",
     name = "menu",
     position =
-        { 79, 600 - (2 + 21 + 19 + (7 + (14 * 19))), },
+        { 79, 600 - (2 + 21 + 20 + (7 + (14 * 20))), },
     size =
-        { 138, 21 + (7 + (14 * 19)), },
+        { 138, 21 + (7 + (14 * 20)), },
     outerBorderWidth = 1,
     borderColor = "TPOFBlack",
     backgroundColor = "IGColorBackground1",
@@ -84,21 +94,22 @@ OrdersMenuCreateItem("btnAttack", "MainUI_UserEventData( eControlModifier, 0)", 
 OrdersMenuCreateItem("btnAttackMove", "MainUI_UserEvent( eMoveAttack )", "$2724", 3, 25),
 OrdersMenuCreateItem("btnGuard", "MainUI_UserEvent( eGuard)", "$2719", 4, 14),
 OrdersMenuCreateItem("btnDock", "MainUI_UserEvent( eDock)", "$2720", 5, 15),
-OrdersMenuCreateItem("btnCancelOrders", "MainUI_UserEvent( eCancelOrders)", "$2722", 6, 17),
-OrdersMenuCreateItem("btnWaypoint", "MainUI_UserEvent( eTempWaypoint)", "$2727", 7, 56),
-OrdersMenuCreateItem("btnResource", "MainUI_UserEventData( eHarvest, 0); MainUI_UserEventData( eHarvest, 1);", "$2723", 8, 12),
-OrdersMenuCreateItem("btnHyperspace", "MainUI_UserEvent( eHyperspace)", "$2725", 9, 11),
-OrdersMenuCreateItem("btnRetire", "MainUI_UserEvent( eRetire)", "$2728", 10, 23),
+OrdersMenuCreateItem("btnWaypoint", "MainUI_UserEvent( eTempWaypoint)", "$2727", 6, 56),
+OrdersMenuCreateItem("btnResource", "MainUI_UserEventData( eHarvest, 0); MainUI_UserEventData( eHarvest, 1);", "$2723", 7, 12),
+OrdersMenuCreateItem("btnHyperspace", "MainUI_UserEvent( eHyperspace)", "$2725", 8, 11),
+OrdersMenuCreateItem("btnRetire", "MainUI_UserEvent( eRetire)", "$2728", 9, 23),
 -- Special Commands (May need separate menu)
-OrdersMenuCreateItem("btnPing", "MainUI_UserEvent( eSensorPing)", "$2769", 11, 147),
-OrdersMenuCreateItem("btnEMP", "MainUI_UserEventData2( eSpecialAttack, 0, 2)", "$2768", 12, 146),
-OrdersMenuCreateItem("btnDefenseField", "MainUI_UserEvent( eDefenseField)", "$2765", 13, 143),
-OrdersMenuCreateItem("btnCloak", "MainUI_UserEvent( eCloak)", "$2766", 14, 144),
-OrdersMenuCreateItem("btnRepair", "MainUI_UserEvent( eRepair)", "$2726", 15, 20),
-OrdersMenuCreateItem("btnMines", "MainUI_UserEvent( eDropMinesInstant)", "$2772", 16, 24),
-OrdersMenuCreateItem("btnRally", "MainUI_UserEvent( eRallyPoint)", "$2721", 17, 138),
-OrdersMenuCreateItem("btnRallyObject", "MainUI_UserEventData( eRallyObject, 0 )", "$2767", 18, 22),
-OrdersMenuCreateItem("btnScuttle", "MainUI_UserEvent( eScuttle)", "$2773", 19, 5),
+OrdersMenuCreateItem("btnPing", "MainUI_UserEvent( eSensorPing)", "$2769", 10, 147),
+OrdersMenuCreateItem("btnEMP", "MainUI_UserEventData2( eSpecialAttack, 0, 2)", "$2768", 11, 146),
+OrdersMenuCreateItem("btnDefenseField", "MainUI_UserEvent( eDefenseField)", "$2765", 12, 143),
+OrdersMenuCreateItem("btnCloak", "MainUI_UserEvent( eCloak)", "$2766", 13, 144),
+OrdersMenuCreateItem("btnRepair", "MainUI_UserEvent( eRepair)", "$2726", 14, 20),
+OrdersMenuCreateItem("btnMines", "MainUI_UserEvent( eDropMinesInstant)", "$2772", 15, 24),
+OrdersMenuCreateItem("btnRally", "MainUI_UserEvent( eRallyPoint)", "$2721", 16, 138),
+OrdersMenuCreateItem("btnRallyObject", "MainUI_UserEventData( eRallyObject, 0 )", "$2767", 17, 22),
+OrdersMenuCreateItem("btnScuttle", "MainUI_UserEvent( eScuttle)", "$2773", 18, 5),
+OrdersMenuCreateDivider("divider", 19),
+OrdersMenuCreateItem("btnCancelOrders", "MainUI_UserEvent( eCancelOrders)", "$2722", 20, 17),
 },
 {
     type = "Frame",
