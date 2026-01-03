@@ -1968,7 +1968,7 @@ HW2StyleSheet =
 		outerBorderWidth = 1,
 		borderColor = "FEColorHeading3",
 		backgroundColor = "IGColorBackground1",
-		size = { 83, 30, },
+		size = { 104, 15, },
 		DefaultGraphic =
 		{
 		color =

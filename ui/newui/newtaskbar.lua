@@ -76,7 +76,7 @@ function NewTaskbarCreateDummyButton(pName)
 end
 
 NewTaskbar = {
-	size = {0, 498, 800, 110}, --was 0, 498, 800, 102
+	size = {0, 545, 800, 62}, --was 0, 498, 800, 102
 	stylesheet = "HW2StyleSheet",
 
 	-- Flags
@@ -98,106 +98,106 @@ NewTaskbar = {
 
 	soundOnShow = "SFX_TaksbarMenuONOFF",
 	soundOn = "SFX_TaksbarMenuONOFF",
-
-	Regions = {
-		{0,15,221, 87},	-- left
-		{220,0,363,102},	-- middle
-		{581,15,219,87}, -- right
-	},
+	backgroundColor = "TPOFGrayHalfTransparent",
 	;
+
+	{
+		type = "Frame",
+		name = "menubar",
+		position = {0, 36},
+		size = { 800, 21},
+		giveParentMouseInput = 1,
+	;
+
+		--Background
+		{
+			type = "Frame",
+			outerBorderWidth = 1,
+			borderColor = "FEColorHeading3",
+			backgroundColor = "IGColorBackground1",
+			BackgroundGraphic =
+			{
+			texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
+			textureUV =
+				{ 0, 0, 600, 600, }, },
+			position = {0, 1},
+			size = { 800, 20},
+			giveParentMouseInput = 1,
+		},
+
+		-- Fleet button
+		CreateTaskbarButton("btnFleet", "$2705", {10, 1}, {40, 18.5}, "UI_ToggleScreen( 'FleetMenu', 0)", nil, "$2740", {toggleButton=1}), -- FLEET
+
+		-- Strike group button
+		CreateTaskbarButton("btnStrike", "$2714", {60, 1}, {40, 18.5}, nil, nil, "$2741", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'StrikeGroupsMenu', 0)", soundOnClicked="", soundOnPressed="SFX_ButtonClick"}), -- STRIKE GRP
+
+		-- Tactics button
+		CreateTaskbarButton("btnTactics", "$2715", {110, 1}, {40, 18.5}, nil, nil, "$2742", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'TacticsMenu', 0)", soundOnClicked="", soundOnPressed="SFX_ButtonClick"}), -- TACTICS
+
+		-- Orders button
+		CreateTaskbarButton("btnOrders", "[ORDERS]", {160, 1}, {40, 18.5}, "UI_ToggleScreen( 'OrdersMenu', 0)", 150, "$2729", {toggleButton=1}), -- ORDERS
+
+		-- Events button
+		CreateTaskbarButton("btnEvents", "$2707", {315, 1}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {textStyle="Taskbar_MenuButtonTextStyle"}), -- EVENTS
+
+		-- Events button (wide version)
+		CreateTaskbarButton("btnEvents_wide", "$2707", {315, 1}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {visible=0}), -- EVENTS
+
+		-- Objectives button
+		CreateTaskbarButton("btnObjectives", "GOALS", {255, 1}, {50, 18.5}, "UI_ToggleScreen( 'ObjectivesList', 0)", 137, "$2744"), -- OBJECTIVES
+
+		-- Chat button
+		CreateTaskbarButton("btnChat", "$2716", {255, 1}, {50, 18.5}, "UI_ToggleScreen( 'ChatScreen', 0)", 131, "$2747"), -- CHAT
+
+		-- Sensors button
+		CreateTaskbarButton("btnSensors", "$2703", {375, 1}, {50, 18.5}, "MainUI_UserEvent( eSensorsManager)", 54, "$2745", {textStyle="Taskbar_MenuButtonTextStyle"}), -- SENSORS
+
+		-- Diplomacy button
+		CreateTaskbarButton("btnDiplomacy", "$2713", {495, 1}, {50, 18.5}, "UI_ToggleScreen( 'DiplomacyScreen', 0)", 141, "$2746"), -- DIPLOMACY
+
+		-- Speech recall button
+		CreateTaskbarButton("btnRecall", "$2762", {495, 1}, {50, 18.5}, "UI_ToggleScreen( 'SpeechRecall', 0)", 142, "$2763", {visible=0}), -- RECALL
+
+		-- Menu button
+		CreateTaskbarButton("btnMenu", "$2702", {435, 1}, {50, 18.5}, "MainUI_UserEvent( eMenu )", 4, "$2774", {toggleButton=0}), -- MENU
+
+		-- Menu button (wide version)
+		CreateTaskbarButton("btnMenu_wide", "$2702", {435, 1}, {50, 18.5}, "MainUI_UserEvent( eMenu )", 4, "$2774", {visible=0, toggleButton=0, textStyle="Taskbar_MenuButtonTextStyle"}), -- MENU
+
+		-- Build button
+		CreateTaskbarButton("btnBuild", "$2700", {595, 1}, {50, 18.5}, "MainUI_UserEventData( eBuildManager, 1)", 50, "$2748", {toggleButton=1, overColor={ 127, 127, 127, 127}}), -- BUILD
+
+		-- Research button
+		CreateTaskbarButton("btnResearch", "$2701", {655, 1}, {50, 18.5}, "MainUI_UserEvent( eResearchManager)", 49, "$2749", {toggleButton=1}),
+
+		-- Launch button
+		CreateTaskbarButton("btnLaunch", "$2706", {715, 1}, {50, 18.5}, "MainUI_UserEventData( eLaunchManager, 1)", 52, "$2760", {toggleButton=1}), -- LAUNCH
+
+		--Return
+		CreateTaskbarButton("btnShipBack", "<<<", {775, 1}, {15, 18.5}, nil, 52, "$2732", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", disabledTextColor={0,0,0,0}}), -- LAUNCH
+
+		--Show button (Disabled)
+		CreateTaskbarButton("btnHide2", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
+
+		--Hide Button (Disabled)
+		CreateTaskbarButton("btnHide1", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
+
+	},
 
 	{
 		type = "Frame",
 		name = "taskbar",
-		position = {0, 0},
-		size = { 800, 110},
-		giveParentMouseInput = 1,
-	;
-
-
-	-- black background
-	{
-		type = "Frame",
-		name = "blackBg",
-		position = {0, 16},
-		size = { 0, 0}, --800,86
-		backgroundColor = { 0, 0, 0, 0 },
-		giveParentMouseInput = 1,
-	},
-
-	--Background
-	{
-		type = "Frame",
+		position = { 25, 1 },
+		size = {750, 30},
 		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
 		backgroundColor = "IGColorBackground1",
+		borderColor = "FEColorHeading3",
 		BackgroundGraphic =
 		{
-        texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
-        textureUV =
-            { 0, 0, 600, 600, }, },
-		position = {0, 83},
-		size = { 800, 20},
-		giveParentMouseInput = 1,
-	},
-
-	-- Fleet button
-	CreateTaskbarButton("btnFleet", "$2705", {10, 83}, {40, 18.5}, "UI_ToggleScreen( 'FleetMenu', 0)", nil, "$2740", {toggleButton=1}), -- FLEET
-
-	-- Strike group button
-	CreateTaskbarButton("btnStrike", "$2714", {60, 83}, {40, 18.5}, nil, nil, "$2741", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'StrikeGroupsMenu', 0)", soundOnClicked="", soundOnPressed="SFX_ButtonClick"}), -- STRIKE GRP
-
-	-- Tactics button
-	CreateTaskbarButton("btnTactics", "$2715", {110, 83}, {40, 18.5}, nil, nil, "$2742", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'TacticsMenu', 0)", soundOnClicked="", soundOnPressed="SFX_ButtonClick"}), -- TACTICS
-
-	-- Orders button
-	CreateTaskbarButton("btnOrders", "[ORDERS]", {160, 83}, {40, 18.5}, "UI_ToggleScreen( 'OrdersMenu', 0)", 150, "$2729", {toggleButton=1}), -- ORDERS
-
-	-- Events button
-	CreateTaskbarButton("btnEvents", "$2707", {315, 83}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {textStyle="Taskbar_MenuButtonTextStyle"}), -- EVENTS
-
-	-- Events button (wide version)
-	CreateTaskbarButton("btnEvents_wide", "$2707", {315, 83}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {visible=0}), -- EVENTS
-
-	-- Objectives button
-	CreateTaskbarButton("btnObjectives", "GOALS", {255, 83}, {50, 18.5}, "UI_ToggleScreen( 'ObjectivesList', 0)", 137, "$2744"), -- OBJECTIVES
-
-	-- Chat button
-	CreateTaskbarButton("btnChat", "$2716", {255, 83}, {50, 18.5}, "UI_ToggleScreen( 'ChatScreen', 0)", 131, "$2747"), -- CHAT
-
-	-- Sensors button
-	CreateTaskbarButton("btnSensors", "$2703", {375, 83}, {50, 18.5}, "MainUI_UserEvent( eSensorsManager)", 54, "$2745", {textStyle="Taskbar_MenuButtonTextStyle"}), -- SENSORS
-
-	-- Diplomacy button
-	CreateTaskbarButton("btnDiplomacy", "$2713", {495, 83}, {50, 18.5}, "UI_ToggleScreen( 'DiplomacyScreen', 0)", 141, "$2746"), -- DIPLOMACY
-
-	-- Speech recall button
-	CreateTaskbarButton("btnRecall", "$2762", {495, 83}, {50, 18.5}, "UI_ToggleScreen( 'SpeechRecall', 0)", 142, "$2763", {visible=0}), -- RECALL
-
-	-- Menu button
-	CreateTaskbarButton("btnMenu", "$2702", {435, 83}, {50, 18.5}, "MainUI_UserEvent( eMenu )", 4, "$2774", {toggleButton=0}), -- MENU
-
-	-- Menu button (wide version)
-	CreateTaskbarButton("btnMenu_wide", "$2702", {435, 83}, {50, 18.5}, "MainUI_UserEvent( eMenu )", 4, "$2774", {visible=0, toggleButton=0, textStyle="Taskbar_MenuButtonTextStyle"}), -- MENU
-
-	-- Build button
-	CreateTaskbarButton("btnBuild", "$2700", {595, 83}, {50, 18.5}, "MainUI_UserEventData( eBuildManager, 1)", 50, "$2748", {toggleButton=1, overColor={ 127, 127, 127, 127}}), -- BUILD
-
-	-- Research button
-	CreateTaskbarButton("btnResearch", "$2701", {655, 83}, {50, 18.5}, "MainUI_UserEvent( eResearchManager)", 49, "$2749", {toggleButton=1}),
-
-	-- Launch button
-	CreateTaskbarButton("btnLaunch", "$2706", {715, 83}, {50, 18.5}, "MainUI_UserEventData( eLaunchManager, 1)", 52, "$2760", {toggleButton=1}), -- LAUNCH
-
-	--Return
-	CreateTaskbarButton("btnShipBack", "<<<", {775, 83}, {15, 18.5}, nil, 52, "$2732", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", disabledTextColor={0,0,0,0}}), -- LAUNCH
-
-	--Show button (Disabled)
-	CreateTaskbarButton("btnHide2", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
-
-	--Hide Button (Disabled)
-	CreateTaskbarButton("btnHide1", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
-
+			texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
+			textureUV =
+		{ 0, 0, 600, 600, }, },
+		;
 
 	-- Commands help tip label
 	{
@@ -215,11 +215,12 @@ NewTaskbar = {
 	-- Ship buttons
 	{
 		type = "Frame",
-		position = {179, 19},
-		size = { 590, 64},
+		position = {11, 0},
+		size = { 730, 30},
 		autoarrange = 1,
-		autoarrangeWidth = 590,
-		autoarrangeSpace = 1,
+		autoarrangeWidth = 730,
+		autoarrangeSpace = 0,
+		backgroundColor = "TPOFTPOFGray100HalfTransparent"
 		;
 
 		-- first row
@@ -301,8 +302,8 @@ NewTaskbar = {
 	{
 		type = "Button",
 		buttonStyle = "Taskbar_ShipButtonStyle",
-		position = {768, 51},
-		size = {13, 30},
+		position = {740, 0},
+		size = {10, 30},
 		name = "btnShipNext",
 		Text =
 			{
@@ -319,12 +320,12 @@ NewTaskbar = {
 	{
 		type = "Button",
 		buttonStyle = "Taskbar_ShipButtonStyle",
-		position = {768, 20},
-		size = {13, 30},
+		position = {0, 0},
+		size = {10, 30},
 		name = "btnShipPrev",
 		Text = {
 			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "", -- LAUNCH
+			text = "<<<", -- LAUNCH
 		},
 		helpTip = "$2730",
 		helpTipTextLabel = "commandsHelpTip",
@@ -335,53 +336,37 @@ NewTaskbar = {
 	-- Ship details
 	{
 		type = "Frame",
-		position = {176, 19},
-		size = {800, 68},  --620,68
+		position = {0, 0},
+		size = {750, 30},
 		name = "unitStats",
 		;
-
-		-- border
-		{
-			type = "Frame",
-			position = {1, 1},
-			outerBorderWidth = 1,
-			backgroundColor = "IGColorBackground1",
-			borderColor = "FEColorHeading3",
-			BackgroundGraphic =
-			{
-				texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
-				textureUV =
-            { 0, 0, 600, 600, }, },
-			size = {650, 60},
-		},
 
 		-- ship icon
 		{
 			type = "Button",
-			position = {211, 0},
-			size = {200, 64},
+			position = {325, 0},
+			size = {100, 30},
 			name = "unitIcon",
 			backgroundGraphicHAlign = "Center",
 			backgroundGraphicVAlign = "Center",
 		},
+		-- ship health
+		{
+			type = "ProgressBar",
+			backgroundColor = { 0, 128, 0, 255},
+			progressColor = { 0, 255, 0, 255},
+			borderColor = { 0, 0, 0, 255},
+			outerBorderWidth = 1,
+			position = { 325, 25 },
+			size = { 100, 2},
+			name = "unitProgress",
+		},
 
 		{
 			type = "Frame",
-			position = { 215, 3},
+			position = { 215, 0},
 			size = { 391, 59},
 			;
-
-			{
-				type = "ProgressBar",
-				backgroundColor = { 0, 128, 0, 255},
-				progressColor = { 0, 255, 0, 255},
-				borderColor = { 0, 0, 0, 255},
-				outerBorderWidth = 1,
-				position = { 50, 50},
-				size = { 100, 2},
-				name = "unitProgress",
-			},
-
 			-- subsystems
 			{
 				type = "Frame",
@@ -599,10 +584,10 @@ NewTaskbar = {
 		},
 
 		-- stat indicators
-			{
-				type = "Frame",
+		{
+			type = "Frame",
 			position = { 3, 45},
-				autosize = 1,
+			autosize = 1,
 			autoarrange = 1,
 			autoarrangeWidth = 300,
 			;
@@ -694,6 +679,17 @@ NewTaskbar = {
 				},
 			},
 		},
+	},
+
+	-- Required elements.
+	-- black background
+	{
+		type = "Frame",
+		name = "blackBg",
+		position = {0, 16},
+		size = { 0, 0}, --800,86
+		backgroundColor = { 0, 0, 0, 0 },
+		giveParentMouseInput = 1,
 	},
 	-- Command Dummy Buttons
 	NewTaskbarCreateDummyButton("btnMove"),
