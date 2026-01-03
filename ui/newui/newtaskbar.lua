@@ -2,6 +2,9 @@ BUILDCOLOR = {0,0,0,0}
 RESEARCHCOLOR = {0,0,0,255}
 LAUNCHCOLOR = {0,0,0,255}
 
+NEW_TASKBAR_WIDTH = 500
+NEW_TASKBAR_HEIGHT = 30
+
 function CreateTaskbarButton(name, text, position, size, onClick, hotKeyID, helpTip, extra)
 	local btn = {
 		type = "TextButton",
@@ -75,6 +78,53 @@ function NewTaskbarCreateDummyButton(pName)
 	}
 end
 
+function NewTaskbarCreateShipButton(pName, pWidth, pHeight)
+	return {
+		type = "Button",
+		buttonStyle = "Taskbar_ShipButtonStyle",
+		name = pName,
+		size = { pWidth, pHeight },
+	}
+end
+
+function NewTaskbarCreateShipButtonsFrame(pName, pPositionX, pPositionY, pFrameWidth, pFrameHeight, pPadding)
+	-- Frame is always centered in its parent.
+	local frameWidthWithPadding = pFrameWidth - (pPadding * 2); -- Centered frame
+
+	-- We're fixed to a grid of 7 columns and 2 rows due to hacks in the engine targeting these elements.
+	local shipButtonWidth = frameWidthWithPadding / 7;
+	local shipButtonHeight = pFrameHeight / 2;
+
+	return {
+		type = "Frame",
+		name = pName,
+		position = {pPositionX, pPositionY},
+		size = { frameWidthWithPadding, pFrameHeight},
+		autoarrange = 1,
+		autoarrangeWidth = frameWidthWithPadding,
+		autoarrangeSpace = 0,
+		;
+
+		-- first row
+		NewTaskbarCreateShipButton("btnShip01", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip02", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip03", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip04", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip05", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip06", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip07", shipButtonWidth, shipButtonHeight),
+
+		-- second row
+		NewTaskbarCreateShipButton("btnShip08", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip09", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip10", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip11", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip12", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip13", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip14", shipButtonWidth, shipButtonHeight),
+	}
+end
+
 NewTaskbar = {
 	size = {0, 545, 800, 62}, --was 0, 498, 800, 102
 	stylesheet = "HW2StyleSheet",
@@ -84,7 +134,7 @@ NewTaskbar = {
 	callUpdateWhenInactive = 1,
 
 	-- custom
-	minimizedPos = { 0, 582}, --0, 582
+	minimizedPos = { 0, 567 }, --0, 582
 	fstringShipCount = "$2764",
 
 	healthBarGoodColor = { 0, 255, 0, 255},
@@ -184,11 +234,24 @@ NewTaskbar = {
 
 	},
 
+	-- Commands help tip label
+	{
+		type = "TextLabel",
+		name = "commandsHelpTip",
+		position = {4, NEW_TASKBAR_HEIGHT - 8 },
+		size = { 214, 13},
+		Text = {
+			textStyle = "Taskbar_MenuButtonTextStyle",
+			color = { 255, 255, 255, 255},
+			hAlign = "Left",
+		},
+	},
+
 	{
 		type = "Frame",
 		name = "taskbar",
-		position = { 25, 1 },
-		size = {750, 30},
+		position = { 400 - NEW_TASKBAR_WIDTH / 2, 1 },
+		size = {NEW_TASKBAR_WIDTH, NEW_TASKBAR_HEIGHT},
 		outerBorderWidth = 1,
 		backgroundColor = "IGColorBackground1",
 		borderColor = "FEColorHeading3",
@@ -199,120 +262,23 @@ NewTaskbar = {
 		{ 0, 0, 600, 600, }, },
 		;
 
-	-- Commands help tip label
-	{
-		type = "TextLabel",
-		name = "commandsHelpTip",
-		position = {4, 70},
-		size = { 214, 13},
-		Text = {
-			textStyle = "Taskbar_MenuButtonTextStyle",
-			color = { 255, 255, 255, 255},
-			hAlign = "Left",
-		},
-	},
-
 	-- Ship buttons
-	{
-		type = "Frame",
-		position = {11, 0},
-		size = { 730, 30},
-		autoarrange = 1,
-		autoarrangeWidth = 730,
-		autoarrangeSpace = 0,
-		backgroundColor = "TPOFTPOFGray100HalfTransparent"
-		;
-
-		-- first row
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip13",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip11",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip09",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip07",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip05",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip03",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip01",
-		},
-
-		-- second row
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip14",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip12",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip10",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip08",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip06",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip04",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			name = "btnShip02",
-		},
-	},
+	NewTaskbarCreateShipButtonsFrame("shipButtonsFrame", 11, 0, NEW_TASKBAR_WIDTH, NEW_TASKBAR_HEIGHT, 10),
 
 	-- next/prev ship buttons
 	{
 		type = "Button",
 		buttonStyle = "Taskbar_ShipButtonStyle",
-		position = {740, 0},
+		position = {NEW_TASKBAR_WIDTH - 10, 0},
 		size = {10, 30},
 		name = "btnShipNext",
-		Text =
-			{
+		Text = {
 			font = "ChatFont",
-			text = ">>>",
-			color =
-            {  255, 255, 255, 255, },
+			text = "",
+			color = "TPOFBlack",
 			hAlign = "Left",
-			vAlign = "Top", },
+			vAlign = "Top", 
+		},
 		helpTip = "$2731",
 		helpTipTextLabel = "commandsHelpTip",
 		soundOnClicked = "SFX_ButtonClick",
@@ -325,11 +291,10 @@ NewTaskbar = {
 		name = "btnShipPrev",
 		Text = {
 			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "<<<", -- LAUNCH
+			text = "",
 		},
 		helpTip = "$2730",
 		helpTipTextLabel = "commandsHelpTip",
-
 		soundOnClicked = "SFX_ButtonClick",
 	},
 
@@ -337,14 +302,14 @@ NewTaskbar = {
 	{
 		type = "Frame",
 		position = {0, 0},
-		size = {750, 30},
+		size = {NEW_TASKBAR_WIDTH, 30},
 		name = "unitStats",
 		;
 
 		-- ship icon
 		{
 			type = "Button",
-			position = {325, 0},
+			position = {(NEW_TASKBAR_WIDTH / 2) - 50, 0},
 			size = {100, 30},
 			name = "unitIcon",
 			backgroundGraphicHAlign = "Center",
@@ -357,7 +322,7 @@ NewTaskbar = {
 			progressColor = { 0, 255, 0, 255},
 			borderColor = { 0, 0, 0, 255},
 			outerBorderWidth = 1,
-			position = { 325, 25 },
+			position = { (NEW_TASKBAR_WIDTH / 2) - 50, 25 },
 			size = { 100, 2},
 			name = "unitProgress",
 		},
@@ -365,14 +330,14 @@ NewTaskbar = {
 		{
 			type = "Frame",
 			position = { 215, 0},
-			size = { 391, 59},
+			size = { 210, NEW_TASKBAR_HEIGHT },
 			;
 			-- subsystems
 			{
 				type = "Frame",
 				name = "subsystems",
-				position = { 193, 5},
-				size = { 210, 48},
+				position = { 0, 0},
+				size = { 210, NEW_TASKBAR_HEIGHT },
 				autoarrange = 1,
 				autoarrangeWidth = 210,
 				;
