@@ -5,7 +5,7 @@ LAUNCHCOLOR = {0,0,0,255}
 NEW_TASKBAR_WIDTH = 500
 NEW_TASKBAR_HEIGHT = 30
 
-function CreateTaskbarButton(name, text, position, size, onClick, hotKeyID, helpTip, extra)
+function NewTaskbarCreatePrimaryButton(name, text, position, size, onClick, hotKeyID, helpTip, extra)
 	local btn = {
 		type = "TextButton",
 		outerBorderWidth = 1,
@@ -176,61 +176,61 @@ NewTaskbar = {
 		},
 
 		-- Fleet button
-		CreateTaskbarButton("btnFleet", "$2705", {10, 1}, {40, 18.5}, "UI_ToggleScreen( 'FleetMenu', 0)", nil, "$2740", {toggleButton=1}), -- FLEET
+		NewTaskbarCreatePrimaryButton("btnFleet", "$2705", {10, 1}, {40, 18.5}, "UI_ToggleScreen( 'FleetMenu', 0)", nil, "$2740", {toggleButton=1}), -- FLEET
 
 		-- Strike group button
-		CreateTaskbarButton("btnStrike", "$2714", {60, 1}, {40, 18.5}, nil, nil, "$2741", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'StrikeGroupsMenu', 0)", soundOnClicked="", soundOnPressed="SFX_ButtonClick"}), -- STRIKE GRP
+		NewTaskbarCreatePrimaryButton("btnStrike", "$2714", {60, 1}, {40, 18.5}, nil, nil, "$2741", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'StrikeGroupsMenu', 0)", soundOnClicked="", soundOnPressed="SFX_ButtonClick"}), -- STRIKE GRP
 
 		-- Tactics button
-		CreateTaskbarButton("btnTactics", "$2715", {110, 1}, {40, 18.5}, nil, nil, "$2742", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'TacticsMenu', 0)", soundOnClicked="", soundOnPressed="SFX_ButtonClick"}), -- TACTICS
+		NewTaskbarCreatePrimaryButton("btnTactics", "$2715", {110, 1}, {40, 18.5}, nil, nil, "$2742", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'TacticsMenu', 0)", soundOnClicked="", soundOnPressed="SFX_ButtonClick"}), -- TACTICS
 
 		-- Orders button
-		CreateTaskbarButton("btnOrders", "[ORDERS]", {160, 1}, {40, 18.5}, "UI_ToggleScreen( 'OrdersMenu', 0)", 150, "$2729", {toggleButton=1}), -- ORDERS
+		NewTaskbarCreatePrimaryButton("btnOrders", "[ORDERS]", {160, 1}, {40, 18.5}, "UI_ToggleScreen( 'OrdersMenu', 0)", 150, "$2729", {toggleButton=1}), -- ORDERS
 
 		-- Events button
-		CreateTaskbarButton("btnEvents", "$2707", {315, 1}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {textStyle="Taskbar_MenuButtonTextStyle"}), -- EVENTS
+		NewTaskbarCreatePrimaryButton("btnEvents", "$2707", {315, 1}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {textStyle="Taskbar_MenuButtonTextStyle"}), -- EVENTS
 
 		-- Events button (wide version)
-		CreateTaskbarButton("btnEvents_wide", "$2707", {315, 1}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {visible=0}), -- EVENTS
+		NewTaskbarCreatePrimaryButton("btnEvents_wide", "$2707", {315, 1}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {visible=0}), -- EVENTS
 
 		-- Objectives button
-		CreateTaskbarButton("btnObjectives", "GOALS", {255, 1}, {50, 18.5}, "UI_ToggleScreen( 'ObjectivesList', 0)", 137, "$2744"), -- OBJECTIVES
+		NewTaskbarCreatePrimaryButton("btnObjectives", "GOALS", {255, 1}, {50, 18.5}, "UI_ToggleScreen( 'ObjectivesList', 0)", 137, "$2744"), -- OBJECTIVES
 
 		-- Chat button
-		CreateTaskbarButton("btnChat", "$2716", {255, 1}, {50, 18.5}, "UI_ToggleScreen( 'ChatScreen', 0)", 131, "$2747"), -- CHAT
+		NewTaskbarCreatePrimaryButton("btnChat", "$2716", {255, 1}, {50, 18.5}, "UI_ToggleScreen( 'ChatScreen', 0)", 131, "$2747"), -- CHAT
 
 		-- Sensors button
-		CreateTaskbarButton("btnSensors", "$2703", {375, 1}, {50, 18.5}, "MainUI_UserEvent( eSensorsManager)", 54, "$2745", {textStyle="Taskbar_MenuButtonTextStyle"}), -- SENSORS
+		NewTaskbarCreatePrimaryButton("btnSensors", "$2703", {375, 1}, {50, 18.5}, "MainUI_UserEvent( eSensorsManager)", 54, "$2745", {textStyle="Taskbar_MenuButtonTextStyle"}), -- SENSORS
 
 		-- Diplomacy button
-		CreateTaskbarButton("btnDiplomacy", "$2713", {495, 1}, {50, 18.5}, "UI_ToggleScreen( 'DiplomacyScreen', 0)", 141, "$2746"), -- DIPLOMACY
+		NewTaskbarCreatePrimaryButton("btnDiplomacy", "$2713", {495, 1}, {50, 18.5}, "UI_ToggleScreen( 'DiplomacyScreen', 0)", 141, "$2746"), -- DIPLOMACY
 
 		-- Speech recall button
-		CreateTaskbarButton("btnRecall", "$2762", {495, 1}, {50, 18.5}, "UI_ToggleScreen( 'SpeechRecall', 0)", 142, "$2763", {visible=0}), -- RECALL
+		NewTaskbarCreatePrimaryButton("btnRecall", "$2762", {495, 1}, {50, 18.5}, "UI_ToggleScreen( 'SpeechRecall', 0)", 142, "$2763", {visible=0}), -- RECALL
 
 		-- Menu button
-		CreateTaskbarButton("btnMenu", "$2702", {435, 1}, {50, 18.5}, "MainUI_UserEvent( eMenu )", 4, "$2774", {toggleButton=0}), -- MENU
+		NewTaskbarCreatePrimaryButton("btnMenu", "$2702", {435, 1}, {50, 18.5}, "MainUI_UserEvent( eMenu )", 4, "$2774", {toggleButton=0}), -- MENU
 
 		-- Menu button (wide version)
-		CreateTaskbarButton("btnMenu_wide", "$2702", {435, 1}, {50, 18.5}, "MainUI_UserEvent( eMenu )", 4, "$2774", {visible=0, toggleButton=0, textStyle="Taskbar_MenuButtonTextStyle"}), -- MENU
+		NewTaskbarCreatePrimaryButton("btnMenu_wide", "$2702", {435, 1}, {50, 18.5}, "MainUI_UserEvent( eMenu )", 4, "$2774", {visible=0, toggleButton=0, textStyle="Taskbar_MenuButtonTextStyle"}), -- MENU
 
 		-- Build button
-		CreateTaskbarButton("btnBuild", "$2700", {595, 1}, {50, 18.5}, "MainUI_UserEventData( eBuildManager, 1)", 50, "$2748", {toggleButton=1, overColor={ 127, 127, 127, 127}}), -- BUILD
+		NewTaskbarCreatePrimaryButton("btnBuild", "$2700", {595, 1}, {50, 18.5}, "MainUI_UserEventData( eBuildManager, 1)", 50, "$2748", {toggleButton=1, overColor={ 127, 127, 127, 127}}), -- BUILD
 
 		-- Research button
-		CreateTaskbarButton("btnResearch", "$2701", {655, 1}, {50, 18.5}, "MainUI_UserEvent( eResearchManager)", 49, "$2749", {toggleButton=1}),
+		NewTaskbarCreatePrimaryButton("btnResearch", "$2701", {655, 1}, {50, 18.5}, "MainUI_UserEvent( eResearchManager)", 49, "$2749", {toggleButton=1}),
 
 		-- Launch button
-		CreateTaskbarButton("btnLaunch", "$2706", {715, 1}, {50, 18.5}, "MainUI_UserEventData( eLaunchManager, 1)", 52, "$2760", {toggleButton=1}), -- LAUNCH
+		NewTaskbarCreatePrimaryButton("btnLaunch", "$2706", {715, 1}, {50, 18.5}, "MainUI_UserEventData( eLaunchManager, 1)", 52, "$2760", {toggleButton=1}), -- LAUNCH
 
 		--Return
-		CreateTaskbarButton("btnShipBack", "<<<", {775, 1}, {15, 18.5}, nil, 52, "$2732", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", disabledTextColor={0,0,0,0}}), -- LAUNCH
+		NewTaskbarCreatePrimaryButton("btnShipBack", "<<<", {775, 1}, {15, 18.5}, nil, 52, "$2732", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", disabledTextColor={0,0,0,0}}), -- LAUNCH
 
 		--Show button (Disabled)
-		CreateTaskbarButton("btnHide2", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
+		NewTaskbarCreatePrimaryButton("btnHide2", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
 
 		--Hide Button (Disabled)
-		CreateTaskbarButton("btnHide1", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
+		NewTaskbarCreatePrimaryButton("btnHide1", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
 
 	},
 
