@@ -2078,13 +2078,6 @@ HW2StyleSheet =
 		size = { 15, 15, },
 		helpTipTextLabel = "commandsHelpTip",
 		soundOnClicked = "SFX_ButtonClick",
-		;
-		{
-			type = "Frame",
-			name = "icon",
-			size = { 15, 15, },
-			giveParentMouseInput = 1,
-		},
 	},
 	RightClickMenu_ButtonTextStyle =
 	{

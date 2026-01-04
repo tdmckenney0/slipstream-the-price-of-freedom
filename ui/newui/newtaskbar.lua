@@ -125,6 +125,51 @@ function NewTaskbarCreateShipButtonsFrame(pName, pPositionX, pPositionY, pFrameW
 	}
 end
 
+function NewTaskbarCreateShipSubsystemButton(pName, pPositionX, pPositionY, pWidth, pHeight)
+	return {
+		type = "Button",
+		name = pName,
+		buttonStyle = "Taskbar_SubsystemButtonStyle",
+		size = { pWidth, pHeight },
+		position = { pPositionX, pPositionY },
+		;
+		{
+			type = "Frame",
+			name = "icon",
+			size = { pWidth, pHeight, },
+			giveParentMouseInput = 1,
+		},
+	}
+end
+
+function NewTaskbarCreateShipSubsystemsButtonsFrame(pName, pPositionX, pPositionY, pFrameWidth, pFrameHeight)
+	-- We're fixed to displaying 12 subsystem buttons due to hacks in the engine targeting these elements.
+	local subsystemButtonWidth = pFrameWidth / 6;
+	local subsystemButtonHeight = pFrameHeight / 2;
+
+	return {
+		type = "Frame",
+		name = pName,
+		position = { pPositionX, pPositionY },
+		size = { pFrameWidth, pFrameHeight },
+		;
+		-- Top Row
+		NewTaskbarCreateShipSubsystemButton("subsystem1", 0, 0, subsystemButtonWidth, subsystemButtonHeight),
+		NewTaskbarCreateShipSubsystemButton("subsystem2", subsystemButtonWidth, 0, subsystemButtonWidth, subsystemButtonHeight),
+		NewTaskbarCreateShipSubsystemButton("subsystem3", subsystemButtonWidth * 2, 0, subsystemButtonWidth, subsystemButtonHeight),
+		NewTaskbarCreateShipSubsystemButton("subsystem4", subsystemButtonWidth * 3, 0, subsystemButtonWidth, subsystemButtonHeight),
+		NewTaskbarCreateShipSubsystemButton("subsystem5", subsystemButtonWidth * 4, 0, subsystemButtonWidth, subsystemButtonHeight),
+		NewTaskbarCreateShipSubsystemButton("subsystem6", subsystemButtonWidth * 5, 0, subsystemButtonWidth, subsystemButtonHeight),
+		-- Bottom Row
+		NewTaskbarCreateShipSubsystemButton("subsystem7", 0, subsystemButtonHeight, subsystemButtonWidth, subsystemButtonHeight),
+		NewTaskbarCreateShipSubsystemButton("subsystem8", subsystemButtonWidth, subsystemButtonHeight, subsystemButtonWidth, subsystemButtonHeight),
+		NewTaskbarCreateShipSubsystemButton("subsystem9", subsystemButtonWidth * 2, subsystemButtonHeight, subsystemButtonWidth, subsystemButtonHeight),
+		NewTaskbarCreateShipSubsystemButton("subsystem10", subsystemButtonWidth * 3, subsystemButtonHeight, subsystemButtonWidth, subsystemButtonHeight),
+		NewTaskbarCreateShipSubsystemButton("subsystem11", subsystemButtonWidth * 4, subsystemButtonHeight, subsystemButtonWidth, subsystemButtonHeight),
+		NewTaskbarCreateShipSubsystemButton("subsystem12", subsystemButtonWidth * 5, subsystemButtonHeight, subsystemButtonWidth, subsystemButtonHeight),
+	}
+end
+
 NewTaskbar = {
 	size = {0, 545, 800, 62}, --was 0, 498, 800, 102
 	stylesheet = "HW2StyleSheet",
@@ -329,79 +374,11 @@ NewTaskbar = {
 
 		{
 			type = "Frame",
-			position = { NEW_TASKBAR_WIDTH - 6 * 15, 0},
-			size = { 6 * 15, NEW_TASKBAR_HEIGHT },
+			position = { NEW_TASKBAR_WIDTH - 6 * 20, 0},
+			size = { 6 * 20, NEW_TASKBAR_HEIGHT },
 			;
 			-- subsystems
-			{
-				type = "Frame",
-				name = "subsystems",
-				position = { 0, 0},
-				size = { 6 * 15, NEW_TASKBAR_HEIGHT },
-				autoarrange = 1,
-				autoarrangeWidth = 6 * 15,
-				;
-				{
-					type = "Button",
-					name = "subsystem1",
-					buttonStyle = "Taskbar_SubsystemButtonStyle",
-				},
-				{
-					type = "Button",
-					name = "subsystem2",
-					buttonStyle = "Taskbar_SubsystemButtonStyle",
-				},
-				{
-					type = "Button",
-					name = "subsystem3",
-					buttonStyle = "Taskbar_SubsystemButtonStyle",
-				},
-				{
-					type = "Button",
-					name = "subsystem4",
-					buttonStyle = "Taskbar_SubsystemButtonStyle",
-				},
-				{
-					type = "Button",
-					name = "subsystem5",
-					buttonStyle = "Taskbar_SubsystemButtonStyle",
-				},
-				{
-					type = "Button",
-					name = "subsystem6",
-					buttonStyle = "Taskbar_SubsystemButtonStyle",
-				},
-				{
-					type = "Button",
-					name = "subsystem7",
-					buttonStyle = "Taskbar_SubsystemButtonStyle",
-				},
-				{
-					type = "Button",
-					name = "subsystem8",
-					buttonStyle = "Taskbar_SubsystemButtonStyle",
-				},
-				{
-					type = "Button",
-					name = "subsystem9",
-					buttonStyle = "Taskbar_SubsystemButtonStyle",
-				},
-				{
-					type = "Button",
-					name = "subsystem10",
-					buttonStyle = "Taskbar_SubsystemButtonStyle",
-				},
-				{
-					type = "Button",
-					name = "subsystem11",
-					buttonStyle = "Taskbar_SubsystemButtonStyle",
-				},
-				{
-					type = "Button",
-					name = "subsystem12",
-					buttonStyle = "Taskbar_SubsystemButtonStyle",
-				},
-			},
+			NewTaskbarCreateShipSubsystemsButtonsFrame("subsystems", 0, 0, 6 * 20, NEW_TASKBAR_HEIGHT),
 
 			-- subsystem buttons to copy graphics from when filling above subsystem list
 			{
