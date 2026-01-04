@@ -78,12 +78,13 @@ function NewTaskbarCreateDummyButton(pName)
 	}
 end
 
-function NewTaskbarCreateShipButton(pName, pWidth, pHeight)
+function NewTaskbarCreateShipButton(pName, pPositionX, pPositionY, pWidth, pHeight)
 	return {
 		type = "Button",
 		buttonStyle = "Taskbar_ShipButtonStyle",
 		name = pName,
 		size = { pWidth, pHeight },
+		position = { pPositionX, pPositionY },
 	}
 end
 
@@ -91,37 +92,34 @@ function NewTaskbarCreateShipButtonsFrame(pName, pPositionX, pPositionY, pFrameW
 	-- Frame is always centered in its parent.
 	local frameWidthWithPadding = pFrameWidth - (pPadding * 2); -- Centered frame
 
-	-- We're fixed to a grid of 7 columns and 2 rows due to hacks in the engine targeting these elements.
-	local shipButtonWidth = frameWidthWithPadding / 7;
-	local shipButtonHeight = pFrameHeight / 2;
+	-- We're fixed to showing 14 ship buttons at a time due to hacks in the engine targeting these elements.
+	local shipButtonWidth = frameWidthWithPadding / 14;
+	local shipButtonHeight = pFrameHeight;
 
 	return {
 		type = "Frame",
 		name = pName,
 		position = {pPositionX, pPositionY},
 		size = { frameWidthWithPadding, pFrameHeight},
-		autoarrange = 1,
-		autoarrangeWidth = frameWidthWithPadding,
-		autoarrangeSpace = 0,
 		;
 
 		-- first row
-		NewTaskbarCreateShipButton("btnShip01", shipButtonWidth, shipButtonHeight),
-		NewTaskbarCreateShipButton("btnShip02", shipButtonWidth, shipButtonHeight),
-		NewTaskbarCreateShipButton("btnShip03", shipButtonWidth, shipButtonHeight),
-		NewTaskbarCreateShipButton("btnShip04", shipButtonWidth, shipButtonHeight),
-		NewTaskbarCreateShipButton("btnShip05", shipButtonWidth, shipButtonHeight),
-		NewTaskbarCreateShipButton("btnShip06", shipButtonWidth, shipButtonHeight),
-		NewTaskbarCreateShipButton("btnShip07", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip01", 0, 0, shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip02", shipButtonWidth, 0, shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip03", shipButtonWidth * 2, 0, shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip04", shipButtonWidth * 3, 0, shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip05", shipButtonWidth * 4, 0, shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip06", shipButtonWidth * 5, 0, shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip07", shipButtonWidth * 6, 0, shipButtonWidth, shipButtonHeight),
 
 		-- second row
-		NewTaskbarCreateShipButton("btnShip08", shipButtonWidth, shipButtonHeight),
-		NewTaskbarCreateShipButton("btnShip09", shipButtonWidth, shipButtonHeight),
-		NewTaskbarCreateShipButton("btnShip10", shipButtonWidth, shipButtonHeight),
-		NewTaskbarCreateShipButton("btnShip11", shipButtonWidth, shipButtonHeight),
-		NewTaskbarCreateShipButton("btnShip12", shipButtonWidth, shipButtonHeight),
-		NewTaskbarCreateShipButton("btnShip13", shipButtonWidth, shipButtonHeight),
-		NewTaskbarCreateShipButton("btnShip14", shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip08", shipButtonWidth * 7, 0, shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip09", shipButtonWidth * 8, 0, shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip10", shipButtonWidth * 9, 0, shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip11", shipButtonWidth * 10, 0, shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip12", shipButtonWidth * 11, 0, shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip13", shipButtonWidth * 12, 0, shipButtonWidth, shipButtonHeight),
+		NewTaskbarCreateShipButton("btnShip14", shipButtonWidth * 13, 0, shipButtonWidth, shipButtonHeight),
 	}
 end
 

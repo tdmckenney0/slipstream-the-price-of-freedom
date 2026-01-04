@@ -1965,36 +1965,9 @@ HW2StyleSheet =
 	{
 		type = "Button",
 		toggleButton = 0,
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		backgroundColor = "IGColorBackground1",
+		borderWidth = 1,
+		overBorderColor = "TPOFBlack",
 		size = { 104, 15, },
-		DefaultGraphic =
-		{
-		color =
-            "TPOFWhite",
-        texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
-        textureUV =
-            { 0, 0, 600, 600, }, },
-		OverGraphic =
-		{
-		color =
-            "TPOFGray170",
-        texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
-        textureUV =
-            { 0, 0, 600, 600, }, },
-		PressedGraphic =
-		{
-		color =
-            "TPOFBlack",
-        texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
-        textureUV =
-            { 0, 0, 600, 600, }, },
-		DisabledGraphic =
-		{
-			texture = "DATA:UI\\NewUI\\Taskbar\\ship_button.mres",
-			textureUV = { 0, 0, 0, 0, },
-		},
 		helpTipTextLabel = "commandsHelpTip",
 		soundOnClicked = "SFX_ButtonClick",
 		;
