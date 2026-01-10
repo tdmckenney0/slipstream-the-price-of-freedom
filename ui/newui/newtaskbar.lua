@@ -256,6 +256,121 @@ function NewTaskbarCreateShipStatsIndicatorFrame(pName, pPositionX, pPositionY, 
 	};
 end
 
+function NewTaskbarCreateShipDetailsFrame(pName, pPositionX, pPositionY, pSizeX, pSizeY)
+	return {
+		type = "Frame",
+		position = {pPositionX, pPositionY},
+		size = {pSizeX, pSizeY},
+		name = pName,
+		;
+
+		-- ship icon
+		{
+			type = "Button",
+			position = {(pSizeX / 2) - 50, 0},
+			size = {100, 30},
+			name = "unitIcon",
+			backgroundGraphicHAlign = "Center",
+			backgroundGraphicVAlign = "Center",
+		},
+		-- ship health
+		{
+			type = "ProgressBar",
+			backgroundColor = { 0, 128, 0, 255},
+			progressColor = { 0, 255, 0, 255},
+			borderColor = { 0, 0, 0, 255},
+			outerBorderWidth = 1,
+			position = { (pSizeX / 2) - 50, 25 },
+			size = { 100, 2},
+			name = "unitProgress",
+		},
+
+		{
+			type = "Frame",
+			position = { pSizeX - 6 * 20, 0},
+			size = { 6 * 20, pSizeY },
+			;
+			-- subsystems
+			NewTaskbarCreateShipSubsystemsButtonsFrame("subsystems", 0, 0, 6 * 20, pSizeY),
+
+			-- subsystem buttons to copy graphics from when filling above subsystem list
+			{
+				type = "Button",
+				name = "subsystem_production",
+				visible = 0,
+				size = { 32, 24},
+				borderWidth = 1,
+				borderColor = "TPOFBlack",
+				helpTip = "$2811",
+				soundOnClicked = "SFX_ButtonClick",
+			},
+			{
+				type = "Button",
+				name = "subsystem_sensor",
+				visible = 0,
+				size = { 32, 24},
+				borderWidth = 1,
+				borderColor = "TPOFBlack",
+				helpTip = "$2813",
+				soundOnClicked = "SFX_ButtonClick",
+			},
+			{
+				type = "Button",
+				name = "subsystem_generic",
+				visible = 0,
+				size = { 32, 24},
+				borderWidth = 1,
+				borderColor = "TPOFBlack",
+				helpTip = "$2812",
+				soundOnClicked = "SFX_ButtonClick",
+			},
+			{
+				type = "Button",
+				name = "subsystem_innate",
+				visible = 0,
+				size = { 32, 24},
+				borderWidth = 1,
+				borderColor = "TPOFBlack",
+				helpTip = "$2814",
+				soundOnClicked = "SFX_ButtonClick",
+			},
+
+			{
+				type = "Frame",
+				name = "subsystemselected",
+				position = { 93, 7},
+				size = { 159, 45},
+				BackgroundGraphic = {
+					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_pointer_tpof.tga",
+					textureUV = { 0, 0, 159, 45 },
+				},
+				;
+
+				{
+					type = "Frame",
+					position = {104, 9},
+					size = {64, 32},
+					name = "subsystemIcon",
+				},
+				{
+					type = "ProgressBar",
+					backgroundColor = { 0, 128, 0, 255},
+					progressColor = { 0, 255, 0, 255},
+					position = { 111, 6},
+					size = { 40, 2},
+					name = "subsystemProgress",
+				},
+			},
+		},
+
+		-- stats labels
+		NewTaskbarCreateShipStatsLabelFrame("unitstatslabelframe", 3, 3, 200, pSizeY / 2),
+
+		-- stat indicators
+		NewTaskbarCreateShipStatsIndicatorFrame("unitstatsindicatorsframe", 3, (pSizeY / 2), nil, nil),
+	};
+end
+
 NewTaskbar = {
 	size = {0, 545, 800, 62}, --was 0, 498, 800, 102
 	stylesheet = "HW2StyleSheet",
@@ -430,118 +545,7 @@ NewTaskbar = {
 	},
 
 	-- Ship details
-	{
-		type = "Frame",
-		position = {0, 0},
-		size = {NEW_TASKBAR_WIDTH, 30},
-		name = "unitStats",
-		;
-
-		-- ship icon
-		{
-			type = "Button",
-			position = {(NEW_TASKBAR_WIDTH / 2) - 50, 0},
-			size = {100, 30},
-			name = "unitIcon",
-			backgroundGraphicHAlign = "Center",
-			backgroundGraphicVAlign = "Center",
-		},
-		-- ship health
-		{
-			type = "ProgressBar",
-			backgroundColor = { 0, 128, 0, 255},
-			progressColor = { 0, 255, 0, 255},
-			borderColor = { 0, 0, 0, 255},
-			outerBorderWidth = 1,
-			position = { (NEW_TASKBAR_WIDTH / 2) - 50, 25 },
-			size = { 100, 2},
-			name = "unitProgress",
-		},
-
-		{
-			type = "Frame",
-			position = { NEW_TASKBAR_WIDTH - 6 * 20, 0},
-			size = { 6 * 20, NEW_TASKBAR_HEIGHT },
-			;
-			-- subsystems
-			NewTaskbarCreateShipSubsystemsButtonsFrame("subsystems", 0, 0, 6 * 20, NEW_TASKBAR_HEIGHT),
-
-			-- subsystem buttons to copy graphics from when filling above subsystem list
-			{
-				type = "Button",
-				name = "subsystem_production",
-				visible = 0,
-				size = { 32, 24},
-				borderWidth = 1,
-				borderColor = "TPOFBlack",
-				helpTip = "$2811",
-				soundOnClicked = "SFX_ButtonClick",
-			},
-			{
-				type = "Button",
-				name = "subsystem_sensor",
-				visible = 0,
-				size = { 32, 24},
-				borderWidth = 1,
-				borderColor = "TPOFBlack",
-				helpTip = "$2813",
-				soundOnClicked = "SFX_ButtonClick",
-			},
-			{
-				type = "Button",
-				name = "subsystem_generic",
-				visible = 0,
-				size = { 32, 24},
-				borderWidth = 1,
-				borderColor = "TPOFBlack",
-				helpTip = "$2812",
-				soundOnClicked = "SFX_ButtonClick",
-			},
-			{
-				type = "Button",
-				name = "subsystem_innate",
-				visible = 0,
-				size = { 32, 24},
-				borderWidth = 1,
-				borderColor = "TPOFBlack",
-				helpTip = "$2814",
-				soundOnClicked = "SFX_ButtonClick",
-			},
-
-			{
-				type = "Frame",
-				name = "subsystemselected",
-				position = { 93, 7},
-				size = { 159, 45},
-				BackgroundGraphic = {
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_pointer_tpof.tga",
-					textureUV = { 0, 0, 159, 45 },
-				},
-				;
-
-				{
-					type = "Frame",
-					position = {104, 9},
-					size = {64, 32},
-					name = "subsystemIcon",
-				},
-				{
-					type = "ProgressBar",
-					backgroundColor = { 0, 128, 0, 255},
-					progressColor = { 0, 255, 0, 255},
-					position = { 111, 6},
-					size = { 40, 2},
-					name = "subsystemProgress",
-				},
-			},
-		},
-
-		-- stats labels
-		NewTaskbarCreateShipStatsLabelFrame("unitstatslabelframe", 3, 3, 200, NEW_TASKBAR_HEIGHT / 2),
-
-		-- stat indicators
-		NewTaskbarCreateShipStatsIndicatorFrame("unitstatsindicatorsframe", 3, (NEW_TASKBAR_HEIGHT / 2), nil, nil),
-	},
+	NewTaskbarCreateShipDetailsFrame("unitStats", 0, 0, NEW_TASKBAR_WIDTH, NEW_TASKBAR_HEIGHT),
 
 	-- Required elements.
 	-- black background
