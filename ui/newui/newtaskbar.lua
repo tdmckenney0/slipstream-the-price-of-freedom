@@ -371,39 +371,14 @@ function NewTaskbarCreateShipDetailsFrame(pName, pPositionX, pPositionY, pSizeX,
 	};
 end
 
-NewTaskbar = {
-	size = {0, 545, 800, 62}, --was 0, 498, 800, 102
-	stylesheet = "HW2StyleSheet",
-
-	-- Flags
-	pixelUVCoords = 1, -- Enter pixel coords for texture coords
-	callUpdateWhenInactive = 1,
-
-	-- custom
-	minimizedPos = { 0, 567 }, --0, 582
-	fstringShipCount = "$2764",
-
-	healthBarGoodColor = { 0, 255, 0, 255},
-	healthBarPoorColor = { 255, 255, 0, 255},
-	healthBarFatalColor = { 255, 0, 0, 255},
-	healthBarBackgroundColor = { 128, 128, 128, 255},
-	healthBarEnemyColor = { 255, 0, 0, 255},
-	healthBarEnemyBackgroundColor = { 128, 0, 0, 255},
-	healthBarAlliedBackgroundColor = {255,255,0,255},
-	healthBarAlliedBackgroundColor = { 128, 0, 0, 255},
-
-	soundOnShow = "SFX_TaksbarMenuONOFF",
-	soundOn = "SFX_TaksbarMenuONOFF",
-	backgroundColor = "TPOFGrayHalfTransparent",
-	;
-
-	{
+function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
+	return {
 		type = "Frame",
 		name = "menubar",
-		position = {0, 36},
-		size = { 800, 21},
+		position = {pPositionX, pPositionY},
+		size = { pSizeX, pSizeY},
 		giveParentMouseInput = 1,
-	;
+		;
 
 		--Background
 		{
@@ -417,7 +392,7 @@ NewTaskbar = {
 			textureUV =
 				{ 0, 0, 600, 600, }, },
 			position = {0, 1},
-			size = { 800, 20},
+			size = { pSizeX, pSizeY - 1},
 			giveParentMouseInput = 1,
 		},
 
@@ -477,8 +452,36 @@ NewTaskbar = {
 
 		--Hide Button (Disabled)
 		NewTaskbarCreatePrimaryButton("btnHide1", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
+	};
+end
 
-	},
+NewTaskbar = {
+	size = {0, 545, 800, 62}, --was 0, 498, 800, 102
+	stylesheet = "HW2StyleSheet",
+
+	-- Flags
+	pixelUVCoords = 1, -- Enter pixel coords for texture coords
+	callUpdateWhenInactive = 1,
+
+	-- custom
+	minimizedPos = { 0, 567 }, --0, 582
+	fstringShipCount = "$2764",
+
+	healthBarGoodColor = { 0, 255, 0, 255},
+	healthBarPoorColor = { 255, 255, 0, 255},
+	healthBarFatalColor = { 255, 0, 0, 255},
+	healthBarBackgroundColor = { 128, 128, 128, 255},
+	healthBarEnemyColor = { 255, 0, 0, 255},
+	healthBarEnemyBackgroundColor = { 128, 0, 0, 255},
+	healthBarAlliedBackgroundColor = {255,255,0,255},
+	healthBarAlliedBackgroundColor = { 128, 0, 0, 255},
+
+	soundOnShow = "SFX_TaksbarMenuONOFF",
+	soundOn = "SFX_TaksbarMenuONOFF",
+	backgroundColor = "TPOFGrayHalfTransparent",
+	;
+
+	NewTaskbarCreateMenuBar("menubar", 0, 36, 800, 21),
 
 	-- Commands help tip label
 	{
