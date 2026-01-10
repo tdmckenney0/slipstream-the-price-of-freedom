@@ -203,6 +203,45 @@ function NewTaskbarCreateShipStatsLabelFrame(pName, pPositionX, pPositionY, pSiz
 	};
 end
 
+function NewTaskbarCreateShipStatsIndicator(pName, pHelpTip, pPositionX, pPositionY, pSizeX, pSizeY)
+
+	local iconTextureUVMap = {
+		["unitmaxspeed"] = { 0, 0, 9, 9 },
+		["unitattackdamage"] = { 11, 0, 20, 9 },
+		["unitshields"] = { 22, 0, 31, 9 },
+	};
+
+	return {
+		type = "Frame",
+		name = pName .. "frame",
+		size = { pSizeX, pSizeY },
+		helpTip = pHelpTip,
+		helpTipTextLabel = "commandsHelpTip",
+		;
+		{
+			type = "Frame",
+			position = {5, 3},
+			size = {9, 9},
+			BackgroundGraphic = {
+				texture = "DATA:UI\\NewUI\\Taskbar\\stats_icons.mres",
+				textureUV = iconTextureUVMap[pName] or iconTextureUVMap["unitmaxspeed"],
+			},
+		},
+		{
+			type = "TextLabel",
+			position = {19, 1},
+			size = {49, 13},
+			Text = {
+				textStyle = "Taskbar_MenuButtonTextStyle",
+				color = { 0, 0, 0, 255},
+				hAlign = "Left",
+				vAlign = "Center",
+			},
+			name = pName,
+		},
+	};
+end
+
 NewTaskbar = {
 	size = {0, 545, 800, 62}, --was 0, 498, 800, 102
 	stylesheet = "HW2StyleSheet",
@@ -494,93 +533,9 @@ NewTaskbar = {
 			autoarrange = 1,
 			autoarrangeWidth = 300,
 			;
-			{
-				type = "Frame",
-				name = "maxspeedframe",
-				size = {67, 15},
-				helpTip = "$2711",
-				helpTipTextLabel = "commandsHelpTip",
-				;
-				{
-					type = "Frame",
-					position = {5, 3},
-					size = {9, 9},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\stats_icons.mres",
-						textureUV = { 0, 0, 9, 9 },
-					},
-				},
-				{
-					type = "TextLabel",
-					position = {19, 1},
-					size = {49, 13},
-					Text = {
-						textStyle = "Taskbar_MenuButtonTextStyle",
-						color = { 0, 0, 0, 255},
-						hAlign = "Left",
-						vAlign = "Center",
-					},
-					name = "unitmaxspeed",
-				},
-			},
-			{
-				type = "Frame",
-				name = "attackdamageframe",
-				size = {67, 15},
-				helpTip = "$2710",
-				helpTipTextLabel = "commandsHelpTip",
-				;
-				{
-					type = "Frame",
-					position = {5, 3},
-					size = {9, 9},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\stats_icons.mres",
-						textureUV = { 11, 0, 20, 9 },
-					},
-				},
-				{
-					type = "TextLabel",
-					position = {19, 1},
-					size = {49, 13},
-					Text = {
-						textStyle = "Taskbar_MenuButtonTextStyle",
-						color = { 0, 0, 0, 255},
-						hAlign = "Left",
-						vAlign = "Center",
-					},
-					name = "unitattackdamage",
-				},
-			},
-			{
-				type = "Frame",
-				name = "shieldsframe",
-				size = {67, 15},
-				helpTip = "$2770",
-				helpTipTextLabel = "commandsHelpTip",
-				;
-				{
-					type = "Frame",
-					position = {5, 3},
-					size = {9, 9},
-					BackgroundGraphic = {
-						texture = "DATA:UI\\NewUI\\Taskbar\\stats_icons.mres",
-						textureUV = { 22, 0, 31, 9 },
-					},
-				},
-				{
-					type = "TextLabel",
-					position = {19, 1},
-					size = {49, 13},
-					Text = {
-						textStyle = "Taskbar_MenuButtonTextStyle",
-						color = { 0, 0, 0, 255},
-						hAlign = "Left",
-						vAlign = "Center",
-					},
-					name = "unitshields",
-				},
-			},
+			NewTaskbarCreateShipStatsIndicator("unitmaxspeed", "$2711", nil, nil, 67, 15),
+			NewTaskbarCreateShipStatsIndicator("unitattackdamage", "$2710", nil, nil, 67, 15),
+			NewTaskbarCreateShipStatsIndicator("unitshields", "$2770", nil, nil, 67, 15),
 		},
 	},
 
