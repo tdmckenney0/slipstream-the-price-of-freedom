@@ -242,6 +242,20 @@ function NewTaskbarCreateShipStatsIndicator(pName, pHelpTip, pPositionX, pPositi
 	};
 end
 
+function NewTaskbarCreateShipStatsIndicatorFrame(pName, pPositionX, pPositionY, pSizeX, pSizeY)
+	return {
+		type = "Frame",
+		position = { pPositionX, pPositionY },
+		autosize = 1,
+		autoarrange = 1,
+		autoarrangeWidth = 300,
+		;
+		NewTaskbarCreateShipStatsIndicator("unitmaxspeed", "$2711", nil, nil, 67, 15),
+		NewTaskbarCreateShipStatsIndicator("unitattackdamage", "$2710", nil, nil, 67, 15),
+		NewTaskbarCreateShipStatsIndicator("unitshields", "$2770", nil, nil, 67, 15),
+	};
+end
+
 NewTaskbar = {
 	size = {0, 545, 800, 62}, --was 0, 498, 800, 102
 	stylesheet = "HW2StyleSheet",
@@ -526,17 +540,7 @@ NewTaskbar = {
 		NewTaskbarCreateShipStatsLabelFrame("unitstatslabelframe", 3, 3, 200, NEW_TASKBAR_HEIGHT / 2),
 
 		-- stat indicators
-		{
-			type = "Frame",
-			position = { 3, 45},
-			autosize = 1,
-			autoarrange = 1,
-			autoarrangeWidth = 300,
-			;
-			NewTaskbarCreateShipStatsIndicator("unitmaxspeed", "$2711", nil, nil, 67, 15),
-			NewTaskbarCreateShipStatsIndicator("unitattackdamage", "$2710", nil, nil, 67, 15),
-			NewTaskbarCreateShipStatsIndicator("unitshields", "$2770", nil, nil, 67, 15),
-		},
+		NewTaskbarCreateShipStatsIndicatorFrame("unitstatsindicatorsframe", 3, (NEW_TASKBAR_HEIGHT / 2), nil, nil),
 	},
 
 	-- Required elements.
