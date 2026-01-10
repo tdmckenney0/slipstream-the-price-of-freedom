@@ -455,6 +455,96 @@ function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 	};
 end
 
+function NewTaskbarCreateSelectionBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
+	return {
+		type = "Frame",
+		name = pName,
+		position = { pPositionX, pPositionY },
+		size = { pSizeX, pSizeY },
+		outerBorderWidth = 1,
+		backgroundColor = "IGColorBackground1",
+		borderColor = "FEColorHeading3",
+		BackgroundGraphic =
+		{
+			texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
+			textureUV =
+		{ 0, 0, 600, 600, }, },
+		;
+
+		-- Ship buttons
+		NewTaskbarCreateShipButtonsFrame("shipButtonsFrame", 11, 0, pSizeX, pSizeY, 10),
+
+		-- next/prev ship buttons
+		{
+			type = "Button",
+			buttonStyle = "Taskbar_ShipButtonStyle",
+			position = {pSizeX - 10, 0},
+			size = {10, 30},
+			name = "btnShipNext",
+			Text = {
+				font = "ChatFont",
+				text = "",
+				color = "TPOFBlack",
+				hAlign = "Left",
+				vAlign = "Top", 
+			},
+			helpTip = "$2730",
+			helpTipTextLabel = "commandsHelpTip",
+			soundOnClicked = "SFX_ButtonClick",
+		},
+		{
+			type = "Button",
+			buttonStyle = "Taskbar_ShipButtonStyle",
+			position = {0, 0},
+			size = {10, 30},
+			name = "btnShipPrev",
+			Text = {
+				textStyle = "Taskbar_PanelButtonTextStyle",
+				text = "",
+			},
+			helpTip = "$2731",
+			helpTipTextLabel = "commandsHelpTip",
+			soundOnClicked = "SFX_ButtonClick",
+		},
+
+		-- Ship details
+		NewTaskbarCreateShipDetailsFrame("unitStats", 0, 0, pSizeX, pSizeY),
+
+		-- Required elements.
+		-- black background
+		{
+			type = "Frame",
+			name = "blackBg",
+			position = {0, 16},
+			size = { 0, 0}, --800,86
+			backgroundColor = { 0, 0, 0, 0 },
+			giveParentMouseInput = 1,
+		},
+		-- Command Dummy Buttons
+		NewTaskbarCreateDummyButton("btnMove"),
+		NewTaskbarCreateDummyButton("btnAttack"),
+		NewTaskbarCreateDummyButton("btnAttackMove"),
+		NewTaskbarCreateDummyButton("btnGuard"),
+		NewTaskbarCreateDummyButton("btnDock"),
+		NewTaskbarCreateDummyButton("btnCancelOrders"),
+		NewTaskbarCreateDummyButton("btnWaypoint"),
+		NewTaskbarCreateDummyButton("btnResource"),
+		NewTaskbarCreateDummyButton("btnHyperspace"),
+		NewTaskbarCreateDummyButton("btnRetire"),
+		-- Special Command Dummy Buttons
+		NewTaskbarCreateDummyButton("btnPing"),
+		NewTaskbarCreateDummyButton("btnEMP"),
+		NewTaskbarCreateDummyButton("btnDefenseField"),
+		NewTaskbarCreateDummyButton("btnCloak"),
+		NewTaskbarCreateDummyButton("btnScuttleConfirm"),
+		NewTaskbarCreateDummyButton("btnRepair"),
+		NewTaskbarCreateDummyButton("btnMines"),
+		NewTaskbarCreateDummyButton("btnRally"),
+		NewTaskbarCreateDummyButton("btnRallyObject"),
+		NewTaskbarCreateDummyButton("btnScuttle"),
+   };
+end
+
 NewTaskbar = {
 	size = {0, 545, 800, 62}, --was 0, 498, 800, 102
 	stylesheet = "HW2StyleSheet",
@@ -467,11 +557,11 @@ NewTaskbar = {
 	minimizedPos = { 0, 567 }, --0, 582
 	fstringShipCount = "$2764",
 
-	healthBarGoodColor = { 0, 255, 0, 255},
-	healthBarPoorColor = { 255, 255, 0, 255},
-	healthBarFatalColor = { 255, 0, 0, 255},
+	healthBarGoodColor = { 30, 252, 163, 255 }, -- "green-ish"
+	healthBarPoorColor = { 215, 205, 0, 255 }, -- "yellow-ish"
+	healthBarFatalColor = { 165, 0, 0, 255 }, -- "red-ish"
 	healthBarBackgroundColor = { 128, 128, 128, 255},
-	healthBarEnemyColor = { 255, 0, 0, 255},
+	healthBarEnemyColor = { 252, 30, 141, 255 }, -- "red-ish"
 	healthBarEnemyBackgroundColor = { 128, 0, 0, 255},
 	healthBarAlliedBackgroundColor = {255,255,0,255},
 	healthBarAlliedBackgroundColor = { 128, 0, 0, 255},
@@ -496,91 +586,5 @@ NewTaskbar = {
 		},
 	},
 
-	{
-		type = "Frame",
-		name = "taskbar",
-		position = { 400 - NEW_TASKBAR_WIDTH / 2, 1 },
-		size = {NEW_TASKBAR_WIDTH, NEW_TASKBAR_HEIGHT},
-		outerBorderWidth = 1,
-		backgroundColor = "IGColorBackground1",
-		borderColor = "FEColorHeading3",
-		BackgroundGraphic =
-		{
-			texture = "Data:UI\\NewUI\\Textures\\Gradient.tga",
-			textureUV =
-		{ 0, 0, 600, 600, }, },
-		;
-
-	-- Ship buttons
-	NewTaskbarCreateShipButtonsFrame("shipButtonsFrame", 11, 0, NEW_TASKBAR_WIDTH, NEW_TASKBAR_HEIGHT, 10),
-
-	-- next/prev ship buttons
-	{
-		type = "Button",
-		buttonStyle = "Taskbar_ShipButtonStyle",
-		position = {NEW_TASKBAR_WIDTH - 10, 0},
-		size = {10, 30},
-		name = "btnShipNext",
-		Text = {
-			font = "ChatFont",
-			text = "",
-			color = "TPOFBlack",
-			hAlign = "Left",
-			vAlign = "Top", 
-		},
-		helpTip = "$2730",
-		helpTipTextLabel = "commandsHelpTip",
-		soundOnClicked = "SFX_ButtonClick",
-	},
-	{
-		type = "Button",
-		buttonStyle = "Taskbar_ShipButtonStyle",
-		position = {0, 0},
-		size = {10, 30},
-		name = "btnShipPrev",
-		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle",
-			text = "",
-		},
-		helpTip = "$2731",
-		helpTipTextLabel = "commandsHelpTip",
-		soundOnClicked = "SFX_ButtonClick",
-	},
-
-	-- Ship details
-	NewTaskbarCreateShipDetailsFrame("unitStats", 0, 0, NEW_TASKBAR_WIDTH, NEW_TASKBAR_HEIGHT),
-
-	-- Required elements.
-	-- black background
-	{
-		type = "Frame",
-		name = "blackBg",
-		position = {0, 16},
-		size = { 0, 0}, --800,86
-		backgroundColor = { 0, 0, 0, 0 },
-		giveParentMouseInput = 1,
-	},
-	-- Command Dummy Buttons
-	NewTaskbarCreateDummyButton("btnMove"),
-	NewTaskbarCreateDummyButton("btnAttack"),
-	NewTaskbarCreateDummyButton("btnAttackMove"),
-	NewTaskbarCreateDummyButton("btnGuard"),
-	NewTaskbarCreateDummyButton("btnDock"),
-	NewTaskbarCreateDummyButton("btnCancelOrders"),
-	NewTaskbarCreateDummyButton("btnWaypoint"),
-	NewTaskbarCreateDummyButton("btnResource"),
-	NewTaskbarCreateDummyButton("btnHyperspace"),
-	NewTaskbarCreateDummyButton("btnRetire"),
-	-- Special Command Dummy Buttons
-	NewTaskbarCreateDummyButton("btnPing"),
-	NewTaskbarCreateDummyButton("btnEMP"),
-	NewTaskbarCreateDummyButton("btnDefenseField"),
-	NewTaskbarCreateDummyButton("btnCloak"),
-	NewTaskbarCreateDummyButton("btnScuttleConfirm"),
-	NewTaskbarCreateDummyButton("btnRepair"),
-	NewTaskbarCreateDummyButton("btnMines"),
-	NewTaskbarCreateDummyButton("btnRally"),
-	NewTaskbarCreateDummyButton("btnRallyObject"),
-	NewTaskbarCreateDummyButton("btnScuttle"),
-   },
+	NewTaskbarCreateSelectionBar("taskbar", 400 - NEW_TASKBAR_WIDTH / 2, 1, NEW_TASKBAR_WIDTH, NEW_TASKBAR_HEIGHT),
 }
