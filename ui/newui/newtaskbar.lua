@@ -168,6 +168,41 @@ function NewTaskbarCreateShipSubsystemsButtonsFrame(pName, pPositionX, pPosition
 	}
 end
 
+function NewTaskbarCreateShipStatsLabel(pName, pText, pPositionX, pPositionY, pSizeX, pSizeY)
+	return {
+		type = "TextLabel",
+		position = {pPositionX, pPositionY},
+		size = {pSizeX, pSizeY},
+		wrapping = 1,
+		autosize = 1,
+		Text = {
+			text = pText,
+			textStyle = "Taskbar_MenuButtonTextStyle",
+			color = { 0, 0, 0, 255},
+			hAlign = "Left",
+			vAlign = "Top",
+		},
+		name = pName,
+	};
+end
+
+function NewTaskbarCreateShipStatsLabelFrame(pName, pPositionX, pPositionY, pSizeX, pSizeY)
+	local labelWidth = pSizeX / 10;
+	local statWidth = labelWidth * 4;
+
+	return {
+		type = "Frame",
+		position = { pPositionX, pPositionY },
+		size = { pSizeX, pSizeY },
+		name = pName,
+		;
+		NewTaskbarCreateShipStatsLabel("unitnamelabel", "$2708", 0, 0, labelWidth, pSizeY),
+		NewTaskbarCreateShipStatsLabel("unitname", nil, labelWidth, 0, statWidth, pSizeY),
+		NewTaskbarCreateShipStatsLabel("unitrolelabel", "$2709", labelWidth + statWidth, 0, labelWidth, pSizeY),
+		NewTaskbarCreateShipStatsLabel("unitrole", nil, labelWidth + statWidth + labelWidth, 0, statWidth, pSizeY),
+	};
+end
+
 NewTaskbar = {
 	size = {0, 545, 800, 62}, --was 0, 498, 800, 102
 	stylesheet = "HW2StyleSheet",
@@ -449,79 +484,7 @@ NewTaskbar = {
 		},
 
 		-- stats labels
-		{
-			type = "Frame",
-			position = { 3, 3},
-			size = { 220, 59},
-			autoarrange = 1,
-			marginHeight = 4,
-			;
-
-			{
-				type = "Frame",
-				autosize = 1,
-				;
-				{
-					type = "TextLabel",
-					position = {5, 0},
-					size = {45, 13},
-					wrapping = 1,
-					Text = {
-						textStyle = "Taskbar_MenuButtonTextStyle",
-						text = "$2708", -- UNIT:
-						hAlign = "Left",
-						vAlign = "Top",
-						color = { 0, 0, 0, 255},
-					},
-				},
-				{
-					type = "TextLabel",
-					position = {50, 0},
-					size = {161, 13},
-					wrapping = 1,
-					autosize = 1,
-					Text = {
-						textStyle = "Taskbar_MenuButtonTextStyle",
-						color = { 0, 0, 0, 255},
-						hAlign = "Left",
-						vAlign = "Top",
-					},
-					name = "unitname",
-				},
-			},
-			{
-				type = "Frame",
-				autosize = 1,
-				;
-				{
-					type = "TextLabel",
-					position = {5, 0},
-					size = {45, 13},
-					wrapping = 1,
-					Text = {
-						textStyle = "Taskbar_MenuButtonTextStyle",
-						text = "$2709", -- ROLE:
-						hAlign = "Left",
-						vAlign = "Top",
-						color = { 0, 0, 0, 255},
-					},
-				},
-				{
-					type = "TextLabel",
-					position = {50, 0},
-					size = {161, 13},
-					wrapping = 1,
-					autosize = 1,
-					Text = {
-						textStyle = "Taskbar_MenuButtonTextStyle",
-						color = { 0, 0, 0, 255},
-						hAlign = "Left",
-						vAlign = "Top",
-					},
-					name = "unitrole",
-				},
-			},
-		},
+		NewTaskbarCreateShipStatsLabelFrame("unitstatslabelframe", 3, 3, 200, NEW_TASKBAR_HEIGHT / 2),
 
 		-- stat indicators
 		{
