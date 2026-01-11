@@ -1,3 +1,23 @@
+--- Creates a primary taskbar button with text and various styling options.
+-- This is the main factory function for creating interactive buttons in the taskbar menu.
+-- @param name string The unique identifier name for the button element
+-- @param text string The localized text or string ID to display on the button
+-- @param position table {x, y} position coordinates relative to parent
+-- @param size table {width, height} dimensions of the button
+-- @param onClick string|nil Lua code to execute when the button is clicked
+-- @param hotKeyID number|nil The hotkey binding ID for keyboard shortcuts
+-- @param helpTip string The localized tooltip string ID shown on hover
+-- @param extra table|nil Optional table with additional properties:
+--   - textStyle: Override the default text style
+--   - visible: Set visibility (0 or 1)
+--   - toggleButton: Enable toggle behavior (0 or 1)
+--   - overColor: Custom hover color {r, g, b, a}
+--   - disabledTextColor: Text color when disabled
+--   - DisabledGraphic: Graphic to show when disabled
+--   - onMousePressed: Lua code for mouse press event
+--   - soundOnClicked: Sound effect on click
+--   - soundOnPressed: Sound effect on press
+-- @return table A TextButton UI element definition
 function NewTaskbarCreatePrimaryButton(name, text, position, size, onClick, hotKeyID, helpTip, extra)
 	local btn = {
 		type = "TextButton",
@@ -60,6 +80,11 @@ function NewTaskbarCreatePrimaryButton(name, text, position, size, onClick, hotK
 	return btn
 end
 
+--- Creates an invisible dummy button used as a placeholder or for engine hooks.
+-- These buttons are hidden (size 0,0, visible 0) but their names are used by
+-- the game engine to bind command functionality.
+-- @param pName string The unique name identifier for the dummy button
+-- @return table A Button UI element definition with zero size and visibility
 function NewTaskbarCreateDummyButton(pName)
 	return {
 		type = "Button",
@@ -71,6 +96,14 @@ function NewTaskbarCreateDummyButton(pName)
 	}
 end
 
+--- Creates a single ship selection button for the taskbar ship roster.
+-- Used within the ship buttons frame to represent individual selectable ships.
+-- @param pName string The unique name identifier (e.g., "btnShip01")
+-- @param pPositionX number X position within parent frame
+-- @param pPositionY number Y position within parent frame
+-- @param pWidth number Width of the button
+-- @param pHeight number Height of the button
+-- @return table A Button UI element with Taskbar_ShipButtonStyle
 function NewTaskbarCreateShipButton(pName, pPositionX, pPositionY, pWidth, pHeight)
 	return {
 		type = "Button",
@@ -81,6 +114,16 @@ function NewTaskbarCreateShipButton(pName, pPositionX, pPositionY, pWidth, pHeig
 	}
 end
 
+--- Creates a frame containing 14 ship selection buttons arranged in a row.
+-- The engine expects exactly 14 ship buttons (btnShip01 through btnShip14) due to
+-- hardcoded references. Button widths are calculated to fill the available space.
+-- @param pName string The name for the containing frame
+-- @param pPositionX number X position of the frame
+-- @param pPositionY number Y position of the frame
+-- @param pFrameWidth number Total width of the frame (padding will be subtracted)
+-- @param pFrameHeight number Height of the frame (also used as button height)
+-- @param pPadding number Horizontal padding on each side of the frame
+-- @return table A Frame UI element containing 14 ship buttons
 function NewTaskbarCreateShipButtonsFrame(pName, pPositionX, pPositionY, pFrameWidth, pFrameHeight, pPadding)
 	-- Frame is always centered in its parent.
 	local frameWidthWithPadding = pFrameWidth - (pPadding * 2); -- Centered frame
@@ -116,6 +159,14 @@ function NewTaskbarCreateShipButtonsFrame(pName, pPositionX, pPositionY, pFrameW
 	}
 end
 
+--- Creates a button representing a ship subsystem (production, sensors, etc.).
+-- Each button contains a child frame named "icon" for displaying the subsystem icon.
+-- @param pName string The subsystem button name (e.g., "subsystem1")
+-- @param pPositionX number X position within parent frame
+-- @param pPositionY number Y position within parent frame
+-- @param pWidth number Width of the button
+-- @param pHeight number Height of the button
+-- @return table A Button UI element with Taskbar_SubsystemButtonStyle and icon frame
 function NewTaskbarCreateShipSubsystemButton(pName, pPositionX, pPositionY, pWidth, pHeight)
 	return {
 		type = "Button",
@@ -133,6 +184,15 @@ function NewTaskbarCreateShipSubsystemButton(pName, pPositionX, pPositionY, pWid
 	}
 end
 
+--- Creates a frame containing 12 subsystem buttons arranged in a 6x2 grid.
+-- The engine expects exactly 12 subsystem buttons (subsystem1 through subsystem12)
+-- due to hardcoded references. Buttons are arranged in two rows of six.
+-- @param pName string The name for the containing frame (typically "subsystems")
+-- @param pPositionX number X position of the frame
+-- @param pPositionY number Y position of the frame
+-- @param pFrameWidth number Total width of the frame
+-- @param pFrameHeight number Total height of the frame (divided into 2 rows)
+-- @return table A Frame UI element containing 12 subsystem buttons
 function NewTaskbarCreateShipSubsystemsButtonsFrame(pName, pPositionX, pPositionY, pFrameWidth, pFrameHeight)
 	-- We're fixed to displaying 12 subsystem buttons due to hacks in the engine targeting these elements.
 	local subsystemButtonWidth = pFrameWidth / 6;
@@ -161,6 +221,15 @@ function NewTaskbarCreateShipSubsystemsButtonsFrame(pName, pPositionX, pPosition
 	}
 end
 
+--- Creates a text label for displaying ship statistics or labels.
+-- Uses Taskbar_MenuButtonTextStyle with black text, left-aligned.
+-- @param pName string The unique name for the label (e.g., "unitname", "unitrole")
+-- @param pText string|nil The localized text or string ID to display (nil for dynamic content)
+-- @param pPositionX number X position within parent frame
+-- @param pPositionY number Y position within parent frame
+-- @param pSizeX number Width of the label
+-- @param pSizeY number Height of the label
+-- @return table A TextLabel UI element definition
 function NewTaskbarCreateShipStatsLabel(pName, pText, pPositionX, pPositionY, pSizeX, pSizeY)
 	return {
 		type = "TextLabel",
@@ -179,6 +248,14 @@ function NewTaskbarCreateShipStatsLabel(pName, pText, pPositionX, pPositionY, pS
 	};
 end
 
+--- Creates a frame containing labels for unit name and role display.
+-- Layout: [Name Label][Name Value][Role Label][Role Value]
+-- @param pName string The name for the containing frame
+-- @param pPositionX number X position of the frame
+-- @param pPositionY number Y position of the frame
+-- @param pSizeX number Total width of the frame
+-- @param pSizeY number Height of the frame
+-- @return table A Frame containing unitnamelabel, unitname, unitrolelabel, unitrole labels
 function NewTaskbarCreateShipStatsLabelFrame(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 	local labelWidth = pSizeX / 10;
 	local statWidth = labelWidth * 4;
@@ -196,6 +273,16 @@ function NewTaskbarCreateShipStatsLabelFrame(pName, pPositionX, pPositionY, pSiz
 	};
 end
 
+--- Creates a stat indicator with an icon and value label.
+-- Displays ship statistics like speed, attack damage, or shields with
+-- an appropriate icon from stats_icons.mres texture.
+-- @param pName string The stat name ("unitmaxspeed", "unitattackdamage", or "unitshields")
+-- @param pHelpTip string The localized tooltip string ID
+-- @param pPositionX number|nil X position (typically nil, uses autoarrange)
+-- @param pPositionY number|nil Y position (typically nil, uses autoarrange)
+-- @param pSizeX number Width of the indicator frame
+-- @param pSizeY number Height of the indicator frame
+-- @return table A Frame containing an icon and TextLabel for the stat value
 function NewTaskbarCreateShipStatsIndicator(pName, pHelpTip, pPositionX, pPositionY, pSizeX, pSizeY)
 
 	local iconTextureUVMap = {
@@ -235,6 +322,14 @@ function NewTaskbarCreateShipStatsIndicator(pName, pHelpTip, pPositionX, pPositi
 	};
 end
 
+--- Creates an auto-arranging frame containing speed, damage, and shield indicators.
+-- Uses autoarrange to lay out the three stat indicators horizontally.
+-- @param pName string The name for the containing frame
+-- @param pPositionX number X position of the frame
+-- @param pPositionY number Y position of the frame
+-- @param pSizeX number|nil Width (typically nil, uses autosize)
+-- @param pSizeY number|nil Height (typically nil, uses autosize)
+-- @return table A Frame containing unitmaxspeed, unitattackdamage, and unitshields indicators
 function NewTaskbarCreateShipStatsIndicatorFrame(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 	return {
 		type = "Frame",
@@ -249,6 +344,20 @@ function NewTaskbarCreateShipStatsIndicatorFrame(pName, pPositionX, pPositionY, 
 	};
 end
 
+--- Creates the detailed ship information panel showing icon, health, subsystems, and stats.
+-- This is a complex frame containing:
+-- - Unit icon display (centered)
+-- - Health progress bar
+-- - Subsystems frame with 12 subsystem buttons
+-- - Hidden subsystem template buttons (production, sensor, generic, innate)
+-- - Selected subsystem popup with icon and health
+-- - Unit stats labels (name, role) and indicators (speed, damage, shields)
+-- @param pName string The name for the details frame (typically "unitStats")
+-- @param pPositionX number X position of the frame
+-- @param pPositionY number Y position of the frame
+-- @param pSizeX number Width of the frame
+-- @param pSizeY number Height of the frame
+-- @return table A Frame containing all ship detail UI elements
 function NewTaskbarCreateShipDetailsFrame(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 	return {
 		type = "Frame",
@@ -364,6 +473,16 @@ function NewTaskbarCreateShipDetailsFrame(pName, pPositionX, pPositionY, pSizeX,
 	};
 end
 
+--- Creates the main menu bar containing all primary taskbar buttons.
+-- This is the horizontal bar with buttons for Fleet, Strike, Tactics, Orders,
+-- Events, Objectives, Chat, Sensors, Diplomacy, Recall, Menu, Build, Research,
+-- Launch, and navigation controls.
+-- @param pName string The name for the menu bar frame (currently unused, hardcoded to "menubar")
+-- @param pPositionX number X position of the menu bar
+-- @param pPositionY number Y position of the menu bar
+-- @param pSizeX number Width of the menu bar
+-- @param pSizeY number Height of the menu bar
+-- @return table A Frame containing all menu bar buttons and background
 function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 	return {
 		type = "Frame",
@@ -448,6 +567,19 @@ function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 	};
 end
 
+--- Creates the selection bar showing currently selected ships and commands.
+-- This is the main selection interface containing:
+-- - Ship buttons frame (14 ship buttons for multi-selection)
+-- - Previous/Next navigation buttons
+-- - Ship details frame (icon, health, subsystems, stats)
+-- - Command dummy buttons (Move, Attack, Guard, Dock, etc.) for engine bindings
+-- - Special command dummy buttons (Ping, EMP, Cloak, Scuttle, etc.)
+-- @param pName string The name for the selection bar frame (typically "taskbar")
+-- @param pPositionX number X position of the selection bar
+-- @param pPositionY number Y position of the selection bar
+-- @param pSizeX number Width of the selection bar
+-- @param pSizeY number Height of the selection bar
+-- @return table A Frame containing all selection bar UI elements
 function NewTaskbarCreateSelectionBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 	return {
 		type = "Frame",
