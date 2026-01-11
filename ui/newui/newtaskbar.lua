@@ -1,10 +1,3 @@
-BUILDCOLOR = {0,0,0,0}
-RESEARCHCOLOR = {0,0,0,255}
-LAUNCHCOLOR = {0,0,0,255}
-
-NEW_TASKBAR_WIDTH = 500
-NEW_TASKBAR_HEIGHT = 30
-
 function NewTaskbarCreatePrimaryButton(name, text, position, size, onClick, hotKeyID, helpTip, extra)
 	local btn = {
 		type = "TextButton",
@@ -544,6 +537,9 @@ function NewTaskbarCreateSelectionBar(pName, pPositionX, pPositionY, pSizeX, pSi
 		NewTaskbarCreateDummyButton("btnScuttle"),
    };
 end
+
+NEW_TASKBAR_WIDTH = 500
+NEW_TASKBAR_HEIGHT = 30
 
 NewTaskbar = {
 	size = {0, 545, 800, 62}, --was 0, 498, 800, 102
