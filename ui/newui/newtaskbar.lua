@@ -538,8 +538,8 @@ function NewTaskbarCreateSelectionBar(pName, pPositionX, pPositionY, pSizeX, pSi
    };
 end
 
-NEW_TASKBAR_WIDTH = 500
-NEW_TASKBAR_HEIGHT = 30
+SELECTION_BAR_WIDTH = 600
+SELECTION_BAR_HEIGHT = 30
 
 NewTaskbar = {
 	size = {0, 545, 800, 62}, --was 0, 498, 800, 102
@@ -566,14 +566,14 @@ NewTaskbar = {
 	soundOn = "SFX_TaksbarMenuONOFF",
 	backgroundColor = "TPOFGrayHalfTransparent",
 	;
-
+	-- Menu bar
 	NewTaskbarCreateMenuBar("menubar", 0, 36, 800, 21),
 
 	-- Commands help tip label
 	{
 		type = "TextLabel",
 		name = "commandsHelpTip",
-		position = {4, NEW_TASKBAR_HEIGHT - 8 },
+		position = {4, SELECTION_BAR_HEIGHT - 8 },
 		size = { 214, 13},
 		Text = {
 			textStyle = "Taskbar_MenuButtonTextStyle",
@@ -582,5 +582,6 @@ NewTaskbar = {
 		},
 	},
 
-	NewTaskbarCreateSelectionBar("taskbar", 400 - NEW_TASKBAR_WIDTH / 2, 1, NEW_TASKBAR_WIDTH, NEW_TASKBAR_HEIGHT),
+	-- Selection bar
+	NewTaskbarCreateSelectionBar("taskbar", 400 - SELECTION_BAR_WIDTH / 2, 1, SELECTION_BAR_WIDTH, SELECTION_BAR_HEIGHT),
 }
