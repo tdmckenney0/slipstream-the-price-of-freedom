@@ -92,6 +92,25 @@ function NewTaskbarCreateDummyButton(pName)
 	}
 end
 
+
+function NewTaskbarCreateBumperButton(pName, pHelpTip, pPositionX, pPositionY, pWidth, pHeight, pIsVisible)
+	return {
+		type = "Button",
+		buttonStyle = "Taskbar_ShipButtonStyle",
+		borderColor = "TPOFBlack",
+		outerBorderWidth = 1,
+		position = {pPositionX, pPositionY},
+		size = {pWidth, pHeight},
+		name = pName,
+		helpTip = pHelpTip,
+		helpTipTextLabel = "commandsHelpTip",
+		visible = pIsVisible,
+		soundOnEnter = "SFX_ButtonEnter",
+		soundOnClicked = "SFX_ButtonClick",
+		overColor = { 127, 127, 127, 255}, -- Default over color
+	};
+end
+
 --- Creates a single ship selection button for the taskbar ship roster.
 -- Used within the ship buttons frame to represent individual selectable ships.
 -- @param pName string The unique name identifier (e.g., "btnShip01")
@@ -580,6 +599,10 @@ end
 -- @param pSizeY number Height of the selection bar
 -- @return table A Frame containing all selection bar UI elements
 function NewTaskbarCreateSelectionBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
+
+	local pageBumperButtonWidth = 10;
+	local pageBumperButtonHeight = 30;
+
 	return {
 		type = "Frame",
 		name = pName,
@@ -596,43 +619,14 @@ function NewTaskbarCreateSelectionBar(pName, pPositionX, pPositionY, pSizeX, pSi
 		;
 
 		-- Ship buttons
-		NewTaskbarCreateShipButtonsFrame("shipButtonsFrame", 11, 0, pSizeX, pSizeY, 10),
-
-		-- next/prev ship buttons
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			position = {pSizeX - 10, 0},
-			size = {10, 30},
-			name = "btnShipNext",
-			Text = {
-				font = "ChatFont",
-				text = "",
-				color = "TPOFBlack",
-				hAlign = "Left",
-				vAlign = "Top", 
-			},
-			helpTip = "$2730",
-			helpTipTextLabel = "commandsHelpTip",
-			soundOnClicked = "SFX_ButtonClick",
-		},
-		{
-			type = "Button",
-			buttonStyle = "Taskbar_ShipButtonStyle",
-			position = {0, 0},
-			size = {10, 30},
-			name = "btnShipPrev",
-			Text = {
-				textStyle = "Taskbar_PanelButtonTextStyle",
-				text = "",
-			},
-			helpTip = "$2731",
-			helpTipTextLabel = "commandsHelpTip",
-			soundOnClicked = "SFX_ButtonClick",
-		},
+		NewTaskbarCreateShipButtonsFrame("shipButtonsFrame", pageBumperButtonWidth, 0, pSizeX, pSizeY, pageBumperButtonWidth),
 
 		-- Ship details
-		NewTaskbarCreateShipDetailsFrame("unitStats", 0, 0, pSizeX, pSizeY),
+		NewTaskbarCreateShipDetailsFrame("unitStats", pageBumperButtonWidth, 0, pSizeX - (pageBumperButtonWidth * 2), pSizeY),
+
+		-- next/prev ship buttons
+		NewTaskbarCreateBumperButton("btnShipPrev", "$2730", 0, 0, pageBumperButtonWidth, pageBumperButtonHeight, 0),
+		NewTaskbarCreateBumperButton("btnShipNext", "$2731", pSizeX - pageBumperButtonWidth, 0, pageBumperButtonWidth, pageBumperButtonHeight, 0),
 
 		-- Required elements.
 		-- black background
