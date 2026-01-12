@@ -36,6 +36,8 @@ function NewTaskbarCreatePrimaryButton(name, text, position, size, onClick, hotK
 		},
 		name = name,
 		onMouseClicked = onClick,
+		soundOnEnter = "SFX_ButtonEnter",
+		soundOnClicked = "SFX_ButtonClick",
 		helpTip = helpTip,
 		helpTipTextLabel = "commandsHelpTip",
 		hotKeyID = hotKeyID,
@@ -68,12 +70,6 @@ function NewTaskbarCreatePrimaryButton(name, text, position, size, onClick, hotK
 		end
 		if extra.onMousePressed then
 			btn.onMousePressed = extra.onMousePressed
-		end
-		if extra.soundOnClicked then
-			btn.soundOnClicked = extra.soundOnClicked
-		end
-		if extra.soundOnPressed then
-			btn.soundOnPressed = extra.soundOnPressed
 		end
 	end
 	
@@ -477,16 +473,19 @@ end
 -- This is the horizontal bar with buttons for Fleet, Strike, Tactics, Orders,
 -- Events, Objectives, Chat, Sensors, Diplomacy, Recall, Menu, Build, Research,
 -- Launch, and navigation controls.
--- @param pName string The name for the menu bar frame (currently unused, hardcoded to "menubar")
+-- @param pName string The name for the menu bar frame
 -- @param pPositionX number X position of the menu bar
 -- @param pPositionY number Y position of the menu bar
 -- @param pSizeX number Width of the menu bar
 -- @param pSizeY number Height of the menu bar
 -- @return table A Frame containing all menu bar buttons and background
 function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
+	local buttonHeight = pSizeY - 2; -- 1px border all around.
+	local buttonWidth = pSizeX / 20;
+
 	return {
 		type = "Frame",
-		name = "menubar",
+		name = pName,
 		position = {pPositionX, pPositionY},
 		size = { pSizeX, pSizeY},
 		giveParentMouseInput = 1,
@@ -509,61 +508,61 @@ function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 		},
 
 		-- Fleet button
-		NewTaskbarCreatePrimaryButton("btnFleet", "$2705", {10, 1}, {40, 18.5}, "UI_ToggleScreen( 'FleetMenu', 0)", nil, "$2740", {toggleButton=1}), -- FLEET
+		NewTaskbarCreatePrimaryButton("btnFleet", "$2705", {10, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'FleetMenu', 0)", nil, "$2740", {toggleButton=1}), -- FLEET
 
 		-- Strike group button
-		NewTaskbarCreatePrimaryButton("btnStrike", "$2714", {60, 1}, {40, 18.5}, nil, nil, "$2741", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'StrikeGroupsMenu', 0)", soundOnClicked="", soundOnPressed="SFX_ButtonClick"}), -- STRIKE GRP
+		NewTaskbarCreatePrimaryButton("btnStrike", "$2714", {60, 1}, {buttonWidth, buttonHeight}, nil, nil, "$2741", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'StrikeGroupsMenu', 0)"}), -- STRIKE GRP
 
 		-- Tactics button
-		NewTaskbarCreatePrimaryButton("btnTactics", "$2715", {110, 1}, {40, 18.5}, nil, nil, "$2742", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'TacticsMenu', 0)", soundOnClicked="", soundOnPressed="SFX_ButtonClick"}), -- TACTICS
+		NewTaskbarCreatePrimaryButton("btnTactics", "$2715", {110, 1}, {buttonWidth, buttonHeight}, nil, nil, "$2742", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'TacticsMenu', 0)"}), -- TACTICS
 
 		-- Orders button
-		NewTaskbarCreatePrimaryButton("btnOrders", "[ORDERS]", {160, 1}, {40, 18.5}, "UI_ToggleScreen( 'OrdersMenu', 0)", 150, "$2729", {toggleButton=1}), -- ORDERS
+		NewTaskbarCreatePrimaryButton("btnOrders", "[ORDERS]", {160, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'OrdersMenu', 0)", 150, "$2729", {toggleButton=1}), -- ORDERS
 
 		-- Events button
-		NewTaskbarCreatePrimaryButton("btnEvents", "$2707", {315, 1}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {textStyle="Taskbar_MenuButtonTextStyle"}), -- EVENTS
+		NewTaskbarCreatePrimaryButton("btnEvents", "$2707", {315, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743"), -- EVENTS
 
 		-- Events button (wide version)
-		NewTaskbarCreatePrimaryButton("btnEvents_wide", "$2707", {315, 1}, {50, 18.5}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {visible=0}), -- EVENTS
+		NewTaskbarCreatePrimaryButton("btnEvents_wide", "$2707", {315, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {visible=0}), -- EVENTS
 
 		-- Objectives button
-		NewTaskbarCreatePrimaryButton("btnObjectives", "GOALS", {255, 1}, {50, 18.5}, "UI_ToggleScreen( 'ObjectivesList', 0)", 137, "$2744"), -- OBJECTIVES
+		NewTaskbarCreatePrimaryButton("btnObjectives", "GOALS", {255, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'ObjectivesList', 0)", 137, "$2744"), -- OBJECTIVES
 
 		-- Chat button
-		NewTaskbarCreatePrimaryButton("btnChat", "$2716", {255, 1}, {50, 18.5}, "UI_ToggleScreen( 'ChatScreen', 0)", 131, "$2747"), -- CHAT
+		NewTaskbarCreatePrimaryButton("btnChat", "$2716", {255, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'ChatScreen', 0)", 131, "$2747"), -- CHAT
 
 		-- Sensors button
-		NewTaskbarCreatePrimaryButton("btnSensors", "$2703", {375, 1}, {50, 18.5}, "MainUI_UserEvent( eSensorsManager)", 54, "$2745", {textStyle="Taskbar_MenuButtonTextStyle"}), -- SENSORS
+		NewTaskbarCreatePrimaryButton("btnSensors", "$2703", {375, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eSensorsManager)", 54, "$2745"), -- SENSORS
 
 		-- Diplomacy button
-		NewTaskbarCreatePrimaryButton("btnDiplomacy", "$2713", {495, 1}, {50, 18.5}, "UI_ToggleScreen( 'DiplomacyScreen', 0)", 141, "$2746"), -- DIPLOMACY
+		NewTaskbarCreatePrimaryButton("btnDiplomacy", "$2713", {495, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'DiplomacyScreen', 0)", 141, "$2746"), -- DIPLOMACY
 
 		-- Speech recall button
-		NewTaskbarCreatePrimaryButton("btnRecall", "$2762", {495, 1}, {50, 18.5}, "UI_ToggleScreen( 'SpeechRecall', 0)", 142, "$2763", {visible=0}), -- RECALL
+		NewTaskbarCreatePrimaryButton("btnRecall", "$2762", {495, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'SpeechRecall', 0)", 142, "$2763", {visible=0}), -- RECALL
 
 		-- Menu button
-		NewTaskbarCreatePrimaryButton("btnMenu", "$2702", {435, 1}, {50, 18.5}, "MainUI_UserEvent( eMenu )", 4, "$2774", {toggleButton=0}), -- MENU
+		NewTaskbarCreatePrimaryButton("btnMenu", "$2702", {435, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eMenu )", 4, "$2774", {toggleButton=0}), -- MENU
 
 		-- Menu button (wide version)
-		NewTaskbarCreatePrimaryButton("btnMenu_wide", "$2702", {435, 1}, {50, 18.5}, "MainUI_UserEvent( eMenu )", 4, "$2774", {visible=0, toggleButton=0, textStyle="Taskbar_MenuButtonTextStyle"}), -- MENU
+		NewTaskbarCreatePrimaryButton("btnMenu_wide", "$2702", {435, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eMenu )", 4, "$2774", {visible=0, toggleButton=0}), -- MENU
 
 		-- Build button
-		NewTaskbarCreatePrimaryButton("btnBuild", "$2700", {595, 1}, {50, 18.5}, "MainUI_UserEventData( eBuildManager, 1)", 50, "$2748", {toggleButton=1, overColor={ 127, 127, 127, 127}}), -- BUILD
+		NewTaskbarCreatePrimaryButton("btnBuild", "$2700", {595, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEventData( eBuildManager, 1)", 50, "$2748", {toggleButton=1}), -- BUILD
 
 		-- Research button
-		NewTaskbarCreatePrimaryButton("btnResearch", "$2701", {655, 1}, {50, 18.5}, "MainUI_UserEvent( eResearchManager)", 49, "$2749", {toggleButton=1}),
+		NewTaskbarCreatePrimaryButton("btnResearch", "$2701", {655, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eResearchManager)", 49, "$2749", {toggleButton=1}),
 
 		-- Launch button
-		NewTaskbarCreatePrimaryButton("btnLaunch", "$2706", {715, 1}, {50, 18.5}, "MainUI_UserEventData( eLaunchManager, 1)", 52, "$2760", {toggleButton=1}), -- LAUNCH
+		NewTaskbarCreatePrimaryButton("btnLaunch", "$2706", {715, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEventData( eLaunchManager, 1)", 52, "$2760", {toggleButton=1}), -- LAUNCH
 
 		--Return
-		NewTaskbarCreatePrimaryButton("btnShipBack", "<<<", {775, 1}, {15, 18.5}, nil, 52, "$2732", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", disabledTextColor={0,0,0,0}}), -- LAUNCH
+		NewTaskbarCreatePrimaryButton("btnShipBack", "<<<", {775, 1}, {15, buttonHeight}, nil, 52, "$2732", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", disabledTextColor={0,0,0,0}}), -- LAUNCH
 
 		--Show button (Disabled)
-		NewTaskbarCreatePrimaryButton("btnHide2", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
+		NewTaskbarCreatePrimaryButton("btnHide2", "^", {784, -55}, {15, buttonHeight}, nil, 55, "$2739", {visible=0, toggleButton=1}), -- LAUNCH
 
 		--Hide Button (Disabled)
-		NewTaskbarCreatePrimaryButton("btnHide1", "^", {784, -55}, {15, 18.5}, nil, 55, "$2739", {visible=0, toggleButton=1, overColor={ 127, 127, 127, 127}}), -- LAUNCH
+		NewTaskbarCreatePrimaryButton("btnHide1", "^", {784, -55}, {15, buttonHeight}, nil, 55, "$2739", {visible=0, toggleButton=1}), -- LAUNCH
 	};
 end
 
