@@ -21,17 +21,11 @@
 function NewTaskbarCreatePrimaryButton(name, text, position, size, onClick, hotKeyID, helpTip, extra)
 	local btn = {
 		type = "TextButton",
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3", -- Common border color
+		buttonStyle = "Taskbar_PanelButtonStyle",
 		position = position,
 		size = size,
-		buttonStyle = "Taskbar_PanelButtonStyle",
-		backgroundColor = { 0, 0, 0, 0},
-		overColor = { 127, 127, 127, 255}, -- Default over color
-		pressedColor = { 255, 255, 255, 255},
-		textColor = { 0, 0, 0, 255},
 		Text = {
-			textStyle = "Taskbar_PanelButtonTextStyle", -- Default text style
+			textStyle = "Taskbar_PanelButtonTextStyle",
 			text = text,
 		},
 		name = name,
@@ -42,7 +36,7 @@ function NewTaskbarCreatePrimaryButton(name, text, position, size, onClick, hotK
 		helpTipTextLabel = "commandsHelpTip",
 		hotKeyID = hotKeyID,
 		-- Bugfix: this is needed because of wierd states that arise from closing the strike menu while over the button
-		clickedTextColor = { 0, 0, 0, 255},
+		clickedTextColor = "TPOFWhite",
 		ClickedGraphic = {
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
 			textureUV = { 0, 0, 64, 13 },
@@ -96,9 +90,7 @@ end
 function NewTaskbarCreateBumperButton(pName, pHelpTip, pPositionX, pPositionY, pWidth, pHeight, pIsVisible)
 	return {
 		type = "Button",
-		buttonStyle = "Taskbar_ShipButtonStyle",
-		borderColor = "TPOFBlack",
-		outerBorderWidth = 1,
+		buttonStyle = "Taskbar_PanelButtonStyle",
 		position = {pPositionX, pPositionY},
 		size = {pWidth, pHeight},
 		name = pName,
@@ -107,7 +99,12 @@ function NewTaskbarCreateBumperButton(pName, pHelpTip, pPositionX, pPositionY, p
 		visible = pIsVisible,
 		soundOnEnter = "SFX_ButtonEnter",
 		soundOnClicked = "SFX_ButtonClick",
-		overColor = { 127, 127, 127, 255}, -- Default over color
+		-- Bugfix: this is needed because of wierd states that arise from closing the strike menu while over the button
+		clickedTextColor = "TPOFWhite",
+		ClickedGraphic = {
+			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
+			textureUV = { 0, 0, 64, 13 },
+		},
 	};
 end
 
