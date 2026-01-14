@@ -620,39 +620,6 @@ function NewTaskbarCreateSelectionBar(pName, pPositionX, pPositionY, pSizeX, pSi
 		-- next/prev ship buttons
 		NewTaskbarCreateBumperButton("btnShipPrev", "$2730", 0, bumperButtonHeight, bumperButtonWidth, bumperButtonHeight, 0),
 		NewTaskbarCreateBumperButton("btnShipNext", "$2731", pSizeX - bumperButtonWidth, bumperButtonHeight, bumperButtonWidth, bumperButtonHeight, 0),
-
-		-- Required elements.
-		-- black background
-		{
-			type = "Frame",
-			name = "blackBg",
-			position = {0, 16},
-			size = { 0, 0}, --800,86
-			backgroundColor = { 0, 0, 0, 0 },
-			giveParentMouseInput = 1,
-		},
-		-- Command Dummy Buttons
-		NewTaskbarCreateDummyButton("btnMove"),
-		NewTaskbarCreateDummyButton("btnAttack"),
-		NewTaskbarCreateDummyButton("btnAttackMove"),
-		NewTaskbarCreateDummyButton("btnGuard"),
-		NewTaskbarCreateDummyButton("btnDock"),
-		NewTaskbarCreateDummyButton("btnCancelOrders"),
-		NewTaskbarCreateDummyButton("btnWaypoint"),
-		NewTaskbarCreateDummyButton("btnResource"),
-		NewTaskbarCreateDummyButton("btnHyperspace"),
-		NewTaskbarCreateDummyButton("btnRetire"),
-		-- Special Command Dummy Buttons
-		NewTaskbarCreateDummyButton("btnPing"),
-		NewTaskbarCreateDummyButton("btnEMP"),
-		NewTaskbarCreateDummyButton("btnDefenseField"),
-		NewTaskbarCreateDummyButton("btnCloak"),
-		NewTaskbarCreateDummyButton("btnScuttleConfirm"),
-		NewTaskbarCreateDummyButton("btnRepair"),
-		NewTaskbarCreateDummyButton("btnMines"),
-		NewTaskbarCreateDummyButton("btnRally"),
-		NewTaskbarCreateDummyButton("btnRallyObject"),
-		NewTaskbarCreateDummyButton("btnScuttle"),
    };
 end
 
@@ -684,6 +651,39 @@ NewTaskbar = {
 	soundOn = "SFX_TaksbarMenuONOFF",
 	backgroundColor = "TPOFGrayHalfTransparent",
 	;
+	-- Required elements.
+	-- black background
+	{
+		type = "Frame",
+		name = "blackBg",
+		position = {0, 16},
+		size = { 0, 0}, --800,86
+		backgroundColor = { 0, 0, 0, 0 },
+		giveParentMouseInput = 1,
+	},
+	-- Command Dummy Buttons
+	NewTaskbarCreateDummyButton("btnMove"),
+	NewTaskbarCreateDummyButton("btnAttack"),
+	NewTaskbarCreateDummyButton("btnAttackMove"),
+	NewTaskbarCreateDummyButton("btnGuard"),
+	NewTaskbarCreateDummyButton("btnDock"),
+	NewTaskbarCreateDummyButton("btnCancelOrders"),
+	NewTaskbarCreateDummyButton("btnWaypoint"),
+	NewTaskbarCreateDummyButton("btnResource"),
+	NewTaskbarCreateDummyButton("btnHyperspace"),
+	NewTaskbarCreateDummyButton("btnRetire"),
+	-- Special Command Dummy Buttons
+	NewTaskbarCreateDummyButton("btnPing"),
+	NewTaskbarCreateDummyButton("btnEMP"),
+	NewTaskbarCreateDummyButton("btnDefenseField"),
+	NewTaskbarCreateDummyButton("btnCloak"),
+	NewTaskbarCreateDummyButton("btnScuttleConfirm"),
+	NewTaskbarCreateDummyButton("btnRepair"),
+	NewTaskbarCreateDummyButton("btnMines"),
+	NewTaskbarCreateDummyButton("btnRally"),
+	NewTaskbarCreateDummyButton("btnRallyObject"),
+	NewTaskbarCreateDummyButton("btnScuttle"),
+
 	-- Menu bar
 	NewTaskbarCreateMenuBar("menubar", 0, 36, 800, 21),
 
