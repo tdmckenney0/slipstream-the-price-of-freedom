@@ -570,15 +570,6 @@ function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 
 		-- Launch button
 		NewTaskbarCreatePrimaryButton("btnLaunch", "$2706", {715, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEventData( eLaunchManager, 1)", 52, "$2760", {toggleButton=1}), -- LAUNCH
-
-		--Return
-		NewTaskbarCreatePrimaryButton("btnShipBack", "<<<", {775, 1}, {15, buttonHeight}, nil, 52, "$2732", {toggleButton=0, textStyle="Taskbar_PanelButtonTextStyleCarrot", disabledTextColor={0,0,0,0}}), -- LAUNCH
-
-		--Show button (Disabled)
-		NewTaskbarCreatePrimaryButton("btnHide2", "^", {784, -55}, {15, buttonHeight}, nil, 55, "$2739", {visible=0, toggleButton=1}), -- LAUNCH
-
-		--Hide Button (Disabled)
-		NewTaskbarCreatePrimaryButton("btnHide1", "^", {784, -55}, {15, buttonHeight}, nil, 55, "$2739", {visible=0, toggleButton=1}), -- LAUNCH
 	};
 end
 
@@ -597,8 +588,8 @@ end
 -- @return table A Frame containing all selection bar UI elements
 function NewTaskbarCreateSelectionBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 
-	local pageBumperButtonWidth = 10;
-	local pageBumperButtonHeight = 30;
+	local bumperButtonWidth = pSizeY / 2;
+	local bumperButtonHeight = pSizeY / 2;
 
 	return {
 		type = "Frame",
@@ -616,14 +607,19 @@ function NewTaskbarCreateSelectionBar(pName, pPositionX, pPositionY, pSizeX, pSi
 		;
 
 		-- Ship buttons
-		NewTaskbarCreateShipButtonsFrame("shipButtonsFrame", pageBumperButtonWidth, 0, pSizeX, pSizeY, pageBumperButtonWidth),
+		NewTaskbarCreateShipButtonsFrame("shipButtonsFrame", bumperButtonWidth, 0, pSizeX, pSizeY, bumperButtonWidth),
 
 		-- Ship details
-		NewTaskbarCreateShipDetailsFrame("unitStats", pageBumperButtonWidth, 0, pSizeX - (pageBumperButtonWidth * 2), pSizeY),
+		NewTaskbarCreateShipDetailsFrame("unitStats", bumperButtonWidth, 0, pSizeX - (bumperButtonWidth * 2), pSizeY),
+
+		-- back button, hide buttons
+		NewTaskbarCreateBumperButton("btnHide1", "$2738", pSizeX - bumperButtonWidth, 0, bumperButtonWidth, bumperButtonHeight, 1), -- Visible until the engine binding is used
+		NewTaskbarCreateBumperButton("btnHide2", "$2739", pSizeX - bumperButtonWidth, 0, bumperButtonWidth, bumperButtonHeight, 0), -- Invisible until the engine binding is used
+		NewTaskbarCreateBumperButton("btnShipBack", "$2732", 0, 0, bumperButtonWidth, bumperButtonHeight, 1),
 
 		-- next/prev ship buttons
-		NewTaskbarCreateBumperButton("btnShipPrev", "$2730", 0, 0, pageBumperButtonWidth, pageBumperButtonHeight, 0),
-		NewTaskbarCreateBumperButton("btnShipNext", "$2731", pSizeX - pageBumperButtonWidth, 0, pageBumperButtonWidth, pageBumperButtonHeight, 0),
+		NewTaskbarCreateBumperButton("btnShipPrev", "$2730", 0, bumperButtonHeight, bumperButtonWidth, bumperButtonHeight, 0),
+		NewTaskbarCreateBumperButton("btnShipNext", "$2731", pSizeX - bumperButtonWidth, bumperButtonHeight, bumperButtonWidth, bumperButtonHeight, 0),
 
 		-- Required elements.
 		-- black background
