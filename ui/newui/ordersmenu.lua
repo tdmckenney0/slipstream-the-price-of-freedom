@@ -100,7 +100,7 @@ OrdersMenuCreateItem("btnHyperspace", "MainUI_UserEvent( eHyperspace)", "$5309",
 OrdersMenuCreateItem("btnRetire", "MainUI_UserEvent( eRetire)", "$3157", 9, 23),
 -- Special Commands (May need separate menu)
 OrdersMenuCreateItem("btnPing", "MainUI_UserEvent( eSensorPing)", "$3177", 10, 147),
-OrdersMenuCreateItem("btnEMP", "MainUI_UserEventData2( eSpecialAttack, 0, 2)", "$2768", 11, 146),
+OrdersMenuCreateItem("btnEMP", "MainUI_UserEventData2( eSpecialAttack, 0, 2)", "$5305", 11, 146),
 OrdersMenuCreateItem("btnDefenseField", "MainUI_UserEvent( eDefenseField)", "$3173", 12, 143),
 OrdersMenuCreateItem("btnCloak", "MainUI_UserEvent( eCloak)", "$3174", 13, 144),
 OrdersMenuCreateItem("btnRepair", "MainUI_UserEvent( eRepair)", "$3189", 14, 20),
