@@ -533,7 +533,7 @@ function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 		NewTaskbarCreatePrimaryButton("btnTactics", "$2715", {110, 1}, {buttonWidth, buttonHeight}, nil, nil, "$2742", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'TacticsMenu', 0)"}), -- TACTICS
 
 		-- Orders button
-		NewTaskbarCreatePrimaryButton("btnOrders", "[ORDERS]", {160, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'OrdersMenu', 0)", 150, "$2729", {toggleButton=1}), -- ORDERS
+		NewTaskbarCreatePrimaryButton("btnOrders", "$3150", {160, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'OrdersMenu', 0)", 150, "$2729", {toggleButton=1}), -- ORDERS
 
 		-- Events button
 		NewTaskbarCreatePrimaryButton("btnEvents", "$2707", {315, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743"), -- EVENTS

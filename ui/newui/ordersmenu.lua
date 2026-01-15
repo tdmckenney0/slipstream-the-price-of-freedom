@@ -86,7 +86,7 @@ OrdersMenu =
         offset =
             { 8, 0, },
         color = "TPOFBlack",
-        text = "ORDERS", 
+        text = "$3150", 
     },
 },
 OrdersMenuCreateItem("btnMove", "MainUI_UserEvent( eMove)", "$3151", 1, 10),
