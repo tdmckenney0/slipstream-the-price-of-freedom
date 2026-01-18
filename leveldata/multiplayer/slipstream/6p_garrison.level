@@ -76,6 +76,12 @@ function DetermChunk()
   addPoint("StartPos4", { 25333, 0, 20000 }, { 0, -135, 0 })
   addPoint("StartPos5", { 0, 0, -28000 }, { 0, 0, 0 })
 
+  local slipgateSpaceing = 2.75
+
+  addSquadron("slipgate1", "meg_slipgate", { -25333 * slipgateSpaceing, 0 * slipgateSpaceing, 20000 * slipgateSpaceing }, -1, { 56, 135, 23 }, 0, 0)
+  addSquadron("slipgate2", "meg_slipgate", { 25333 * slipgateSpaceing, 0 * slipgateSpaceing, 20000 * slipgateSpaceing }, -1, { -45, -135, -2 }, 0, 0)
+  addSquadron("slipgate3", "meg_slipgate", { 0 * slipgateSpaceing, 0 * slipgateSpaceing, -28000 * slipgateSpaceing }, -1, { 6, 14, 2 }, 0, 0)
+
   addSquadron("meg_leviathan", "meg_leviathan", { 17000, 17346, 9470 }, -1, { -6, -50, 150 }, 0, 0)
   addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { 27568, -3309, -11529 }, -1, { 1.648, -40.132, -29.45 }, 0, 0)
   addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { 27568, 1309, -12546 }, -1, { 120.108, -38.66, -149.942 }, 0, 0)

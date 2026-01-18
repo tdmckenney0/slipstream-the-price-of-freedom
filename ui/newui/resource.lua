@@ -10,20 +10,7 @@ ResourceMenu =
 	stylesheet = "HW2StyleSheet",
 	clickThrough = 1,
 	pixelUVCoords = 1,
-	onShow = [[
-				zResourceStart = -25
-
-				UI_SetElementPosition("ResourceMenu","resource",0,zResourceStart)
-			 ]],
-	onUpdate = [[
-					UI_SetTextLabelText("ResourceMenu", "lblResourceUnits", ""..Player_GetRU( Universe_CurrentPlayer() ));
-
-					UI_SetElementPosition("ResourceMenu","resource",0,zResourceStart)
-
-					if(zResourceStart < -1) then
-						zResourceStart = zResourceStart + 2
-					end
-				]],
+	onUpdate = [[UI_SetTextLabelText("ResourceMenu", "lblResourceUnits", ""..Player_GetRU( Universe_CurrentPlayer() ));]],
 	;
 	{
 		type = "Frame",

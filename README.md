@@ -208,6 +208,14 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 **Trig's Bones** is a 3-player FFA map ported from _Homeworld: Cataclysm_ that features a lot of verticality.
 
+### High Dive
+
+![High Dive](./leveldata/multiplayer/slipstream/4p_high_dive.jpg)
+
+> This planetoid broke up as it began its fall into the black hole below.
+
+**High Dive** is a 4-player FFA map ported from _Homeworld: Cataclysm_ and originally known as "Kristalzupacken". 
+
 ### The Battlefield
 
 ![The Battlefield](./leveldata/multiplayer/slipstream/4p_the_battlefield.jpg)

@@ -367,8 +367,8 @@ function DetermChunk()
 	addAsteroid("Asteroid_1", {-13542, 600, 12946}, 200, 0, 0, 0, 0)
 	addAsteroid("Asteroid_1", {60765, 600, 109984}, 200, 0, 0, 0, 0)
 
-	addSquadron("HyperspaceBridge", "meg_slipgate2", {63084, 600, -65459}, -1, {33, 120, 12}, 0, 0)
-	addSquadron("HyperspaceBridge", "meg_slipgate2", {-63084, -600, 65459}, -1, {-33, 2, -120}, 0, 0)
+	addSquadron("HyperspaceBridge", "meg_slipgate", {63084, 600, -65459}, -1, {33, 120, 12}, 0, 0)
+	addSquadron("HyperspaceBridge", "meg_slipgate", {-63084, -600, 65459}, -1, {-33, 2, -120}, 0, 0)
 	
 	addSquadron("meg_leviathan", "meg_leviathan", {-3972, 1500, 3757}, -1, {68, 38, 70}, 0, 0)
 	addSquadron("Meg_SajHulkTurret", "Meg_SajHulkTurret", {750, -600, 5613}, -1, {56, -45, 0}, 0, 0)

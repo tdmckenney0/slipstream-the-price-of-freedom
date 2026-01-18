@@ -8,16 +8,16 @@ OUTLINECOLOR =
 
 RESEARCHQUEUECOLOR =
 {
-	64,
-	129,
-	249,
+	255,
+	255,
+	255,
 	255,
 }
 
 RESEARCHGROUPCOLOR =
 {
-	80,
-	175,
+	255,
+	255,
 	255,
 	255,
 }
@@ -25,8 +25,8 @@ RESEARCHGROUPCOLOR =
 UGT_ABILITY_DFT =
 {
 	255,
-	213,
-	0,
+	255,
+	255,
 	255,
 }
 
@@ -48,9 +48,9 @@ UGT_ABILITY_PRS =
 
 UGT_TECH_DFT =
 {
-	239,
-	115,
-	0,
+	255,
+	255,
+	255,
 	255,
 }
 
@@ -72,8 +72,8 @@ UGT_TECH_PRS =
 
 UGT_UPGRADE_DFT =
 {
-	0,
-	175,
+	255,
+	255,
 	255,
 	255,
 }
@@ -264,9 +264,9 @@ function GetResearchButton(_name, _defaultColor, _overColor, _pressedColor)
 					textStyle = "IGButtonTextStyle",
 					color =
 					{
-						255,
-						255,
-						255,
+						0,
+						0,
+						0,
 						255,
 					},
 					hAlign = "Left",
@@ -335,32 +335,8 @@ NewResearchMenu =
 	fStringCost = "%d",
 	abilitiesText = "$2861",
 	techText = "$2862",
-	onHide = [[UI_HideScreen("ResearchInfo"); UI_SubtitleWide()]],
-	--onShow = "UI_HideScreen('NewBuildMenu'); UI_HideScreen('NewLaunchMenu'); UI_ShowScreen('ResourceMenu', ePopup); UI_SubtitleNarrow()",
-	onShow = [[
-				UI_HideScreen('NewBuildMenu')
-				UI_HideScreen('NewLaunchMenu')
-				UI_ShowScreen('ResourceMenu', ePopup)
-				UI_SubtitleNarrow()
-
-				zRsrchStart = 215
-
-				UI_SetElementPosition("NewResearchMenu","research",zRsrchStart,1)
-			 ]],
-	onUpdate = [[
-
-				UI_SetElementPosition("NewResearchMenu","research",zRsrchStart,1)
-
-
-					if(zRsrchStart == 15) then
-						zRsrchStart = 1
-					end
-
-					if(zRsrchStart > 1) then
-						zRsrchStart = zRsrchStart - 20
-					end
-
-			   ]],
+	onHide = [[UI_HideScreen("ResearchInfo"); UI_SubtitleWide()]], 
+    onShow = "UI_HideScreen('NewBuildMenu'); UI_HideScreen('NewLaunchMenu'); UI_ShowScreen('ResourceMenu', ePopup); UI_SubtitleNarrow()",
 	queuesFramePos = 494,
 	queueTitle = "$2570",
 	menuColor = OUTLINECOLOR,

@@ -428,7 +428,7 @@ function DetermChunk()
         { 49926, 3766, 10632, },
         { 0.844, 0.3947, 0.8024, 1, }, 224.919, 9327.292)
 
-    addSquadron("meg_slipgate", "meg_slipgate", { -100000, 200000, 150000 }, -1, { 23, 40, 0 }, 0, 0)
+    addSquadron("meg_slipgate", "meg_slipgate", { -50000, 50000, 50000 }, -1, { 23, 40, 0 }, 0, 0)
 
     setWorldBoundsInner({ 0, 0, 0, },
         { 35826.2, 22931.17, 65492.58, })
