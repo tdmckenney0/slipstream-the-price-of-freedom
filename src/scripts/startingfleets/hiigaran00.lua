@@ -107,7 +107,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_bc_production_fighter",
+                    name = "Hgn_C_Module_FireControl",
                 },
                 {
                     index = 0,
@@ -131,7 +131,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_bc_production_corvette",
+                    name = "Hgn_C_Module_HyperspaceInhibitor",
                 },
                 {
                     index = 0,

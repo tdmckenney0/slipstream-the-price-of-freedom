@@ -41,7 +41,7 @@ PersistantData = {
       subsystems = {
         {
           index = 0,
-          name = "VGR_C_PRODUCTION_FRIGATE",
+          name = "VGR_C_MODULE_CLOAKGENERATOR",
         },
         {
           index = 0,
@@ -100,7 +100,7 @@ PersistantData = {
         },
         {
           index = 0,
-          name = "VGR_C_PRODUCTION_FIGHTER"
+          name = "VGR_C_MODULE_FIRECONTROL"
         }
       },
       shiphold = {},
@@ -112,7 +112,7 @@ PersistantData = {
       subsystems = {
         {
           index = 0,
-          name = "VGR_C_PRODUCTION_CORVETTE",
+          name = "VGR_C_Module_HyperspaceInhibitor",
         },
         {
           index = 0,
