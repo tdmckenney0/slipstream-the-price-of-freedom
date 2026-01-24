@@ -1965,54 +1965,6 @@ HW2StyleSheet =
 		soundOnEnter = "SFX_TaskbarControlGroupsEnter",
 		soundOnClicked = "SFX_ButtonClick",
 	},
-	Taskbar_ShipButtonStyle =
-	{
-		type = "Button",
-		toggleButton = 0,
-		borderWidth = 1,
-		overBorderColor = "TPOFBlack",
-		size = { 104, 15, },
-		helpTipTextLabel = "commandsHelpTip",
-		soundOnClicked = "SFX_ButtonClick",
-		;
-		{
-			type = "Frame",
-			name = "shipIcon",
-			size = { 81, 30, },
-			giveParentMouseInput = 1,
-			backgroundGraphicHAlign = "Center",
-			backgroundGraphicVAlign = "Center",
-			;
-			{
-				type = "ProgressBar",
-				backgroundColor = "TPOFBlack",
-				progressColor = "TPOFGray200",
-				position = { 10, 27, },
-				size = { 65, 2, },
-				name = "shipHealth",
-				giveParentMouseInput = 1,
-			},
-			{
-				type = "TextLabel",
-				hAlign = "Right",
-				position =
-				{
-					 - 4,
-					14,
-				},
-				size = { 30, 13, },
-				name = "shipCount",
-				Text =
-				{
-					textStyle = "FEHeading4",
-					color = "TPOFWhite",
-					hAlign = "Right",
-					vAlign = "Bottom",
-				},
-				giveParentMouseInput = 1,
-			},
-		},
-	},
 	Taskbar_CommandButtonStyle =
 	{
 		type = "Button",

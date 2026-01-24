@@ -115,7 +115,7 @@ end
 -- @param pPositionY number Y position within parent frame
 -- @param pWidth number Width of the button
 -- @param pHeight number Height of the button
--- @return table A Button UI element with Taskbar_ShipButtonStyle
+-- @return table A Button UI element
 function NewTaskbarCreateShipButton(pName, pPositionX, pPositionY, pWidth, pHeight)
 	local healthBarPadding = 5;
 
