@@ -657,6 +657,30 @@ function NewTaskbarCreateSelectionBar(pName, pPositionX, pPositionY, pSizeX, pSi
 		NewTaskbarCreateBumperButton("btnHide2", "$2739", pSizeX - bumperButtonWidth, 0, bumperButtonWidth, bumperButtonHeight, 0), -- Invisible until the engine binding is used
 		NewTaskbarCreateBumperButton("btnShipBack", "$2732", 0, 0, bumperButtonWidth, bumperButtonHeight, 1),
 
+		-- next/prev ship dummy buttons to show when the selection bar is shown.
+		{
+			type = "Button",
+			outerBorderWidth = 1,
+			disabledBorderColor = "TPOFBlack",
+			position = {0, bumperButtonHeight},
+			size = {bumperButtonWidth, bumperButtonHeight},
+			name = "btnShipPrevDummy",
+			helpTip = "2730",
+			helpTipTextLabel = "commandsHelpTip",
+			enabled = 0,
+		},
+		{
+			type = "Button",
+			outerBorderWidth = 1,
+			disabledBorderColor = "TPOFBlack",
+			position = {pSizeX - bumperButtonWidth, bumperButtonHeight},
+			size = {bumperButtonWidth, bumperButtonHeight},
+			name = "btnShipNextDummy",
+			helpTip = "2731",
+			helpTipTextLabel = "commandsHelpTip",
+			enabled = 0,
+		},
+
 		-- next/prev ship buttons
 		NewTaskbarCreateBumperButton("btnShipPrev", "$2730", 0, bumperButtonHeight, bumperButtonWidth, bumperButtonHeight, 0),
 		NewTaskbarCreateBumperButton("btnShipNext", "$2731", pSizeX - bumperButtonWidth, bumperButtonHeight, bumperButtonWidth, bumperButtonHeight, 0),
