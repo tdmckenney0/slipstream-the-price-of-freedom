@@ -117,12 +117,52 @@ end
 -- @param pHeight number Height of the button
 -- @return table A Button UI element with Taskbar_ShipButtonStyle
 function NewTaskbarCreateShipButton(pName, pPositionX, pPositionY, pWidth, pHeight)
+	local healthBarPadding = 5;
+
 	return {
 		type = "Button",
-		buttonStyle = "Taskbar_ShipButtonStyle",
+		toggleButton = 0,
+		borderWidth = 1,
+		overBorderColor = "TPOFBlack",
+		helpTipTextLabel = "commandsHelpTip",
+		soundOnClicked = "SFX_ButtonClick",
 		name = pName,
 		size = { pWidth, pHeight },
 		position = { pPositionX, pPositionY },
+		;
+		{
+			type = "Frame",
+			name = "shipIcon",
+			size = { pWidth, pHeight, },
+			giveParentMouseInput = 1,
+			backgroundGraphicHAlign = "Center",
+			backgroundGraphicVAlign = "Center",
+			;
+			{
+				type = "ProgressBar",
+				backgroundColor = "TPOFBlack",
+				progressColor = "TPOFGray200",
+				position = { healthBarPadding, pHeight - 5, },
+				size = { pWidth - healthBarPadding * 2, 2, },
+				name = "shipHealth",
+				giveParentMouseInput = 1,
+			},
+			{
+				type = "TextLabel",
+				hAlign = "Left",
+				position = { pWidth - 10, pHeight - 20, },
+				size = { 10, 15, },
+				name = "shipCount",
+				Text =
+				{
+					textStyle = "FEHeading4",
+					color = "TPOFWhite",
+					hAlign = "Left",
+					vAlign = "Bottom",
+				},
+				giveParentMouseInput = 1,
+			},
+		},
 	}
 end
 
