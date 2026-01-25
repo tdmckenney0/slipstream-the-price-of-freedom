@@ -538,6 +538,7 @@ end
 function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 	local buttonHeight = pSizeY - 2; -- 1px border all around.
 	local buttonWidth = pSizeX / 20;
+	local buttonSpacing = 10;
 
 	return {
 		type = "Frame",
@@ -603,13 +604,13 @@ function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 		NewTaskbarCreatePrimaryButton("btnMenu_wide", "$2702", {435, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eMenu )", 4, "$2774", {visible=0, toggleButton=0}), -- MENU
 
 		-- Build button
-		NewTaskbarCreatePrimaryButton("btnBuild", "$2700", {595, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEventData( eBuildManager, 1)", 50, "$2748", {toggleButton=1}), -- BUILD
+		NewTaskbarCreatePrimaryButton("btnBuild", "$2700", {pSizeX - (buttonWidth * 3) - (buttonSpacing * 3), 1}, {buttonWidth, buttonHeight}, "MainUI_UserEventData( eBuildManager, 1)", 50, "$2748", {toggleButton=1}), -- BUILD
 
 		-- Research button
-		NewTaskbarCreatePrimaryButton("btnResearch", "$2701", {655, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eResearchManager)", 49, "$2749", {toggleButton=1}),
+		NewTaskbarCreatePrimaryButton("btnResearch", "$2701", {pSizeX - (buttonWidth * 2) - (buttonSpacing * 2), 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eResearchManager)", 49, "$2749", {toggleButton=1}),
 
 		-- Launch button
-		NewTaskbarCreatePrimaryButton("btnLaunch", "$2706", {715, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEventData( eLaunchManager, 1)", 52, "$2760", {toggleButton=1}), -- LAUNCH
+		NewTaskbarCreatePrimaryButton("btnLaunch", "$2706", {pSizeX - buttonWidth - buttonSpacing, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEventData( eLaunchManager, 1)", 52, "$2760", {toggleButton=1}), -- LAUNCH
 	};
 end
 
