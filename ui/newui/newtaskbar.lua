@@ -564,6 +564,7 @@ function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 			giveParentMouseInput = 1,
 		},
 
+		-- Left Side
 		-- Fleet button
 		NewTaskbarCreatePrimaryButton("btnFleet", "$2705", {buttonSpacing, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'FleetMenu', 0)", nil, "$2740", {toggleButton=1}), -- FLEET
 
@@ -576,20 +577,27 @@ function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 		-- Orders button
 		NewTaskbarCreatePrimaryButton("btnOrders", "$3150", {(buttonSpacing * 4) + buttonWidth * 3, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'OrdersMenu', 0)", 150, "$2729", {toggleButton=1}), -- ORDERS
 
-		-- Events button
-		NewTaskbarCreatePrimaryButton("btnEvents", "$2707", {315, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743"), -- EVENTS
-
-		-- Events button (wide version)
-		NewTaskbarCreatePrimaryButton("btnEvents_wide", "$2707", {315, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {visible=0}), -- EVENTS
-
+		-- Center
 		-- Objectives button
 		NewTaskbarCreatePrimaryButton("btnObjectives", "GOALS", {255, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'ObjectivesList', 0)", 137, "$2744"), -- OBJECTIVES
 
 		-- Chat button
 		NewTaskbarCreatePrimaryButton("btnChat", "$2716", {255, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'ChatScreen', 0)", 131, "$2747"), -- CHAT
 
+		-- Events button
+		NewTaskbarCreatePrimaryButton("btnEvents", "$2707", {(pSizeX / 2) - (buttonWidth / 2) - buttonSpacing - buttonWidth, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743"), -- EVENTS
+
+		-- Events button (wide version)
+		NewTaskbarCreatePrimaryButton("btnEvents_wide", "$2707", {(pSizeX / 2) - (buttonWidth / 2) - buttonSpacing - buttonWidth, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743", {visible=0}), -- EVENTS
+
 		-- Sensors button
-		NewTaskbarCreatePrimaryButton("btnSensors", "$2703", {375, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eSensorsManager)", 54, "$2745"), -- SENSORS
+		NewTaskbarCreatePrimaryButton("btnSensors", "$2703", {(pSizeX / 2) - (buttonWidth / 2), 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eSensorsManager)", 54, "$2745"), -- SENSORS
+
+		-- Menu button
+		NewTaskbarCreatePrimaryButton("btnMenu", "$2702", {(pSizeX / 2) + (buttonWidth / 2) + buttonSpacing, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eMenu )", 4, "$2774", {toggleButton=0}), -- MENU
+
+		-- Menu button (wide version)
+		NewTaskbarCreatePrimaryButton("btnMenu_wide", "$2702", {(pSizeX / 2) + (buttonWidth / 2) + buttonSpacing, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eMenu )", 4, "$2774", {visible=0, toggleButton=0}), -- MENU
 
 		-- Diplomacy button
 		NewTaskbarCreatePrimaryButton("btnDiplomacy", "$2713", {495, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'DiplomacyScreen', 0)", 141, "$2746"), -- DIPLOMACY
@@ -597,12 +605,7 @@ function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 		-- Speech recall button
 		NewTaskbarCreatePrimaryButton("btnRecall", "$2762", {495, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'SpeechRecall', 0)", 142, "$2763", {visible=0}), -- RECALL
 
-		-- Menu button
-		NewTaskbarCreatePrimaryButton("btnMenu", "$2702", {435, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eMenu )", 4, "$2774", {toggleButton=0}), -- MENU
-
-		-- Menu button (wide version)
-		NewTaskbarCreatePrimaryButton("btnMenu_wide", "$2702", {435, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eMenu )", 4, "$2774", {visible=0, toggleButton=0}), -- MENU
-
+		-- Right Side
 		-- Build button
 		NewTaskbarCreatePrimaryButton("btnBuild", "$2700", {pSizeX - (buttonWidth * 3) - (buttonSpacing * 3), 1}, {buttonWidth, buttonHeight}, "MainUI_UserEventData( eBuildManager, 1)", 50, "$2748", {toggleButton=1}), -- BUILD
 
