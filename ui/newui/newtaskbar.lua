@@ -565,16 +565,16 @@ function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 		},
 
 		-- Fleet button
-		NewTaskbarCreatePrimaryButton("btnFleet", "$2705", {10, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'FleetMenu', 0)", nil, "$2740", {toggleButton=1}), -- FLEET
+		NewTaskbarCreatePrimaryButton("btnFleet", "$2705", {buttonSpacing, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'FleetMenu', 0)", nil, "$2740", {toggleButton=1}), -- FLEET
 
 		-- Strike group button
-		NewTaskbarCreatePrimaryButton("btnStrike", "$2714", {60, 1}, {buttonWidth, buttonHeight}, nil, nil, "$2741", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'StrikeGroupsMenu', 0)"}), -- STRIKE GRP
+		NewTaskbarCreatePrimaryButton("btnStrike", "$2714", {(buttonSpacing * 2) + buttonWidth, 1}, {buttonWidth, buttonHeight}, nil, nil, "$2741", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'StrikeGroupsMenu', 0)"}), -- STRIKE GRP
 
 		-- Tactics button
-		NewTaskbarCreatePrimaryButton("btnTactics", "$2715", {110, 1}, {buttonWidth, buttonHeight}, nil, nil, "$2742", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'TacticsMenu', 0)"}), -- TACTICS
+		NewTaskbarCreatePrimaryButton("btnTactics", "$2715", {(buttonSpacing * 3) + buttonWidth * 2, 1}, {buttonWidth, buttonHeight}, nil, nil, "$2742", {toggleButton=1, onMousePressed="UI_ToggleScreen( 'TacticsMenu', 0)"}), -- TACTICS
 
 		-- Orders button
-		NewTaskbarCreatePrimaryButton("btnOrders", "$3150", {160, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'OrdersMenu', 0)", 150, "$2729", {toggleButton=1}), -- ORDERS
+		NewTaskbarCreatePrimaryButton("btnOrders", "$3150", {(buttonSpacing * 4) + buttonWidth * 3, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'OrdersMenu', 0)", 150, "$2729", {toggleButton=1}), -- ORDERS
 
 		-- Events button
 		NewTaskbarCreatePrimaryButton("btnEvents", "$2707", {315, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743"), -- EVENTS
