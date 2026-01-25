@@ -579,10 +579,10 @@ function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 
 		-- Center
 		-- Objectives button
-		NewTaskbarCreatePrimaryButton("btnObjectives", "GOALS", {255, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'ObjectivesList', 0)", 137, "$2744"), -- OBJECTIVES
+		NewTaskbarCreatePrimaryButton("btnObjectives", "GOALS", {(pSizeX / 2) - (buttonWidth / 2) - (buttonSpacing * 2) - (buttonWidth * 2), 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'ObjectivesList', 0)", 137, "$2744"), -- OBJECTIVES
 
 		-- Chat button
-		NewTaskbarCreatePrimaryButton("btnChat", "$2716", {255, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'ChatScreen', 0)", 131, "$2747"), -- CHAT
+		NewTaskbarCreatePrimaryButton("btnChat", "$2716", {(pSizeX / 2) - (buttonWidth / 2) - (buttonSpacing * 2) - (buttonWidth * 2), 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'ChatScreen', 0)", 131, "$2747"), -- CHAT
 
 		-- Events button
 		NewTaskbarCreatePrimaryButton("btnEvents", "$2707", {(pSizeX / 2) - (buttonWidth / 2) - buttonSpacing - buttonWidth, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'EventsScreen', 0)", 140, "$2743"), -- EVENTS
@@ -600,10 +600,10 @@ function NewTaskbarCreateMenuBar(pName, pPositionX, pPositionY, pSizeX, pSizeY)
 		NewTaskbarCreatePrimaryButton("btnMenu_wide", "$2702", {(pSizeX / 2) + (buttonWidth / 2) + buttonSpacing, 1}, {buttonWidth, buttonHeight}, "MainUI_UserEvent( eMenu )", 4, "$2774", {visible=0, toggleButton=0}), -- MENU
 
 		-- Diplomacy button
-		NewTaskbarCreatePrimaryButton("btnDiplomacy", "$2713", {495, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'DiplomacyScreen', 0)", 141, "$2746"), -- DIPLOMACY
+		NewTaskbarCreatePrimaryButton("btnDiplomacy", "$2713", {(pSizeX / 2) + (buttonWidth / 2) + (buttonSpacing * 2) + (buttonWidth), 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'DiplomacyScreen', 0)", 141, "$2746"), -- DIPLOMACY
 
 		-- Speech recall button
-		NewTaskbarCreatePrimaryButton("btnRecall", "$2762", {495, 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'SpeechRecall', 0)", 142, "$2763", {visible=0}), -- RECALL
+		NewTaskbarCreatePrimaryButton("btnRecall", "$2762", {(pSizeX / 2) + (buttonWidth / 2) + (buttonSpacing * 2) + (buttonWidth), 1}, {buttonWidth, buttonHeight}, "UI_ToggleScreen( 'SpeechRecall', 0)", 142, "$2763", {visible=0}), -- RECALL
 
 		-- Right Side
 		-- Build button
