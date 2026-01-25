@@ -14,15 +14,15 @@ NewShipType.isTransferable =1
 NewShipType.useEngagementRanges =0 --1
 NewShipType.unitCapsNumber =2
 NewShipType.SquadronSize =1
-NewShipType.formationSpacing =250
+NewShipType.formationSpacing =500 -- Doubled for safer spacing
 NewShipType.passiveFormation ="Spear"
 NewShipType.defensiveFormation ="x"
 NewShipType.aggressiveFormation ="Claw"
 NewShipType.mass =100
 NewShipType.collisionMultiplier =1
-NewShipType.thrusterMaxSpeed =300 --161
-NewShipType.mainEngineMaxSpeed =330 --161
-NewShipType.rotationMaxSpeed =120 --22
+NewShipType.thrusterMaxSpeed =364 -- +30% speed boost
+NewShipType.mainEngineMaxSpeed =390 -- +30% speed boost
+NewShipType.rotationMaxSpeed =150 -- +25% maneuverability
 NewShipType.thrusterAccelTime =7
 NewShipType.thrusterBrakeTime =2
 NewShipType.mainEngineAccelTime =8
@@ -35,7 +35,7 @@ NewShipType.mirrorAngle =30 -- 0
 NewShipType.secondaryTurnAngle =45 -- 0
 NewShipType.maxBankingAmount =50 --20
 NewShipType.descendPitch =20
-NewShipType.goalReachEpsilon =30
+NewShipType.goalReachEpsilon =60 -- Doubled safe distance
 NewShipType.slideMoveRange =100
 NewShipType.controllerType ="Ship"
 NewShipType.tumbleStaticX =10
@@ -83,14 +83,14 @@ NewShipType.antiFighterValue =0
 NewShipType.antiCorvetteValue =0
 NewShipType.antiFrigateValue =12
 NewShipType.totalValue =12
-NewShipType.buildCost =700
-NewShipType.buildTime =45
+NewShipType.buildCost =850 -- Premium Hiigaran pricing
+NewShipType.buildTime =18.33 -- Slightly longer build time
 NewShipType.buildPriorityOrder =30
 NewShipType.retaliationRange =5500
 NewShipType.retaliationDistanceFromGoal =160
 NewShipType.visualRange =1000
-NewShipType.prmSensorRange =5000
-NewShipType.secSensorRange =6000
+NewShipType.prmSensorRange =10000
+NewShipType.secSensorRange =18000
 NewShipType.detectionStrength =1
 NewShipType.TOIcon ="Diamond"
 NewShipType.TOScale =1
@@ -152,7 +152,7 @@ addAbility(NewShipType, "RetireAbility", 1, 1)
 LoadSharedModel(NewShipType, "hgn_assaultfrigate")
 StartShipHardPointConfig(NewShipType,"T","Weapon_Top","Weapon","Innate","Indestructible","hgn_ff_ionbeamturret","","","","","","","","")
 StartShipHardPointConfig(NewShipType,"B","Weapon_Bottom","Weapon","Innate","Indestructible","hgn_ff_ionbeamturret","","","","","","","","")
-addShield(NewShipType, "EMP", 750, 20)
+addShield(NewShipType, "EMP", 500, 20) -- Balanced EMP shield
 NewShipType.battleScarMaxTriBase =75
 NewShipType.battleScarMaxTriInc =100
 NewShipType.sobDieTime =1
