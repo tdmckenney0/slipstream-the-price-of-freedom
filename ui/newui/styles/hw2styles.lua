@@ -18,6 +18,118 @@ HW2StyleSheet =
 	pixelUVCoords = 1,
 	StringAttributes =
 	{
+		-- TPOF Color Definitions
+		{
+			name = "TPOFWhite",
+			string = "255,255,255,255",
+		},
+		{
+			name = "TPOFBlack",
+			string = "0,0,0,255",
+		},
+		{
+			name = "TPOFWhiteHalfTransparent",
+			string = "255,255,255,128",
+		},
+
+		{
+			name = "TPOFTransparent",
+			string = "0,0,0,0",
+		},
+		{
+			name = "TPOFBlackHalfTransparent",
+			string = "0,0,0,128",
+		},
+		{
+			name = "TPOFBlackVeryTransparent",
+			string = "0,0,0,45",
+		},
+		{
+			name = "TPOFBlackMostlyOpaque",
+			string = "0,0,0,200",
+		},
+		{
+			name = "TPOFGrayHalfTransparent",
+			string = "127,127,127,127",
+		},
+		{
+			name = "TPOFGrayTransparent",
+			string = "127,127,127,0",
+		},
+		{
+			name = "TPOFGrayLight",
+			string = "152,152,152,255",
+		},
+		{
+			name = "TPOFGray50",
+			string = "50,50,50,255",
+		},
+		{
+			name = "TPOFGray55",
+			string = "55,55,55,255",
+		},
+		{
+			name = "TPOFGray80",
+			string = "80,80,80,255",
+		},
+		{
+			name = "TPOFGray100",
+			string = "100,100,100,255",
+		},
+		{
+			name = "TPOFGray100HalfTransparent",
+			string = "100,100,100,128",
+		},
+		{
+			name = "TPOFGray120VeryTransparent",
+			string = "120,120,120,50",
+		},
+		{
+			name = "TPOFGray140",
+			string = "140,140,140,255",
+		},
+		{
+			name = "TPOFGray140HalfTransparent",
+			string = "140,140,140,128",
+		},
+		{
+			name = "TPOFGray160",
+			string = "160,160,160,255",
+		},
+		{
+			name = "TPOFGray170",
+			string = "170,170,170,255",
+		},
+		{
+			name = "TPOFGray175",
+			string = "175,175,175,255",
+		},
+		{
+			name = "TPOFGray180",
+			string = "180,180,180,255",
+		},
+		{
+			name = "TPOFGray200",
+			string = "200,200,200,255",
+		},
+		{
+			name = "TPOFGray230",
+			string = "230,230,230,255",
+		},
+		{
+			name = "TPOFGray127",
+			string = "127,127,127,255",
+		},
+		{
+			name = "TPOFGray150",
+			string = "150,150,150,255",
+		},
+		{
+			name = "TPOFWhiteTransparent",
+			string = "255,255,255,0",
+		},
+
+		-- Stock Color Definitions
 		{
 			name = "FEColorHeading1",
 			string = "255,255,255,255",
@@ -116,7 +228,7 @@ HW2StyleSheet =
 		},
 		{
 			name = "IGColorButtonFlash",
-			string = "48,108,136,255",
+			string = "100,100,100,255",
 		},
 		{
 			name = "IGColorButtonFlashBorder",
@@ -132,11 +244,11 @@ HW2StyleSheet =
 		},
 		{
 			name = "IGColorButtonDisabledBorder",
-			string = "48,108,136,255",
+			string = "100,100,100,255",
 		},
 		{
 			name = "IGColorButtonDisabledText",
-			string = "48,108,136,255",
+			string = "100,100,100,255",
 		},
 		{
 			name = "IGColorFacilityDisabled",
@@ -146,13 +258,7 @@ HW2StyleSheet =
 	DefaultTextStyle =
 	{
 		type = "Text",
-		color =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
+		color = "TPOFBlack",
 		hAlign = "Left",
 		vAlign = "Middle",
 		font = "ButtonFont",
@@ -160,16 +266,8 @@ HW2StyleSheet =
 	DefaultStyle =
 	{
 		type = "InterfaceElement",
-		position =
-		{
-			0,
-			0,
-		},
-		size =
-		{
-			100,
-			100,
-		},
+		position = { 0, 0, },
+		size = { 100, 100, },
 		enabled = 1,
 		visible = 1,
 	},
@@ -179,44 +277,24 @@ HW2StyleSheet =
 		style = "DefaultStyle",
 		toggleButton = 0,
 		pressed = 0,
-		size =
-		{
-			120,
-			13,
-		},
+		size = { 120, 13, },
 	},
 	DefaultScrollBar_ScrollVertButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			13,
-			13,
-		},
+		size = { 13, 13, },
 		soundOnClicked = "SFX_ScrollButtonClick",
 	},
 	DefaultScrollBar_ScrollHorzButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			13,
-			13,
-		},
+		size = { 13, 13, },
 		soundOnClicked = "SFX_ScrollButtonClick",
 	},
 	DefaultScrollBar_TrackVertStyle =
 	{
-		size =
-		{
-			13,
-			17,
-		},
-		minSize =
-		{
-			13,
-			17,
-		},
+		size = { 13, 17, },
+		minSize = { 13, 17, },
 		borderWidth = 1,
 		backgroundColor = "FEColorScrollButtonDefault",
 		borderColor = "FEColorScrollButtonDefault",
@@ -228,42 +306,18 @@ HW2StyleSheet =
 		disabledBorderColor = "FEColorScrollButtonDisabled",
 		DefaultGraphic =
 		{
-			size =
-			{
-				11,
-				15,
-			},
+			size = { 11, 15, },
 			texture = "DATA:UI\\NewUI\\Styles\\ScrollGripVert.mres",
-			textureUV =
-			{
-				0,
-				0,
-				11,
-				15,
-			},
-			color =
-			{
-				0,
-				0,
-				0,
-				255,
-			},
+			textureUV = { 0, 0, 11, 15, },
+			color = "TPOFBlack",
 		},
 		soundOnClicked = "",
 		soundOnReleased = "SFX_ScrollBarPage",
 	},
 	DefaultScrollBar_TrackHorzStyle =
 	{
-		size =
-		{
-			17,
-			13,
-		},
-		minSize =
-		{
-			17,
-			13,
-		},
+		size = { 17, 13, },
+		minSize = { 17, 13, },
 		borderWidth = 1,
 		backgroundColor = "FEColorScrollButtonDefault",
 		borderColor = "FEColorScrollButtonDefault",
@@ -275,26 +329,10 @@ HW2StyleSheet =
 		disabledBorderColor = "FEColorScrollButtonDisabled",
 		DefaultGraphic =
 		{
-			size =
-			{
-				15,
-				11,
-			},
+			size = { 15, 11, },
 			texture = "DATA:UI\\NewUI\\Styles\\ScrollGripHorz.mres",
-			textureUV =
-			{
-				0,
-				0,
-				15,
-				11,
-			},
-			color =
-			{
-				0,
-				0,
-				0,
-				255,
-			},
+			textureUV = { 0, 0, 15, 11, },
+			color = "TPOFBlack",
 		},
 		soundOnClicked = "",
 		soundOnReleased = "SFX_ScrollBarPage",
@@ -302,11 +340,7 @@ HW2StyleSheet =
 	DefaultScrollBarStyle =
 	{
 		type = "ScrollBar",
-		range =
-		{
-			0,
-			100,
-		},
+		range = { 0, 100, },
 		scrollPosition = 0,
 		stepSize = 5,
 		pageSize = 20,
@@ -315,65 +349,27 @@ HW2StyleSheet =
 		TrackFrame =
 		{
 			type = "Frame",
-			backgroundColor =
-			{
-				53,
-				163,
-				250,
-				50,
-			},
+			backgroundColor = "TPOFGray120VeryTransparent",
 		},
 		UpButton =
 		{
 			type = "Button",
 			buttonStyle = "DefaultScrollBar_ScrollVertButtonStyle",
-			size =
-			{
-				13,
-				15,
-			},
-			disabledColor =
-			{
-				0,
-				0,
-				0,
-				0,
-			},
+			size = { 13, 15, },
+			disabledColor = "TPOFTransparent",
 			DisabledGraphic =
 			{
-				position =
-				{
-					0,
-					0,
-				},
-				size =
-				{
-					13,
-					13,
-				},
+				position = { 0, 0, },
+				size = { 13, 13, },
 				texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\vert_disabled.mres",
-				textureUV =
-				{
-					0,
-					0,
-					13,
-					13,
-				},
+				textureUV = { 0, 0, 13, 13, },
 				color = "FEColorScrollButtonDisabled",
 			},
 			;
 			{
 				type = "Button",
-				size =
-				{
-					13,
-					13,
-				},
-				position =
-				{
-					0,
-					0,
-				},
+				size = { 13, 13, },
+				position = { 0, 0, },
 				giveParentMouseInput = 1,
 				borderWidth = 1,
 				backgroundColor = "FEColorScrollButtonDefault",
@@ -386,51 +382,21 @@ HW2StyleSheet =
 				disabledBorderColor = "FEColorScrollButtonDisabled",
 				DefaultGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\vert_default.mres",
-					textureUV =
-					{
-						0,
-						0,
-						13,
-						13,
-					},
+					textureUV = { 0, 0, 13, 13, },
 				},
 				OverGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\vert_default.mres",
-					textureUV =
-					{
-						0,
-						0,
-						13,
-						13,
-					},
+					textureUV = { 0, 0, 13, 13, },
 				},
 				PressedGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\vert_pressed.mres",
-					textureUV =
-					{
-						0,
-						0,
-						13,
-						13,
-					},
+					textureUV = { 0, 0, 13, 13, },
 				},
 			},
 		},
@@ -438,53 +404,21 @@ HW2StyleSheet =
 		{
 			type = "Button",
 			buttonStyle = "DefaultScrollBar_ScrollVertButtonStyle",
-			size =
-			{
-				13,
-				15,
-			},
-			disabledColor =
-			{
-				0,
-				0,
-				0,
-				0,
-			},
+			size = { 13, 15, },
+			disabledColor = "TPOFTransparent",
 			DisabledGraphic =
 			{
-				position =
-				{
-					0,
-					2,
-				},
-				size =
-				{
-					13,
-					13,
-				},
+				position = { 0, 2, },
+				size = { 13, 13, },
 				texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\vert_disabled.mres",
-				textureUV =
-				{
-					0,
-					13,
-					13,
-					0,
-				},
+				textureUV = { 0, 13, 13, 0, },
 				color = "FEColorScrollButtonDisabled",
 			},
 			;
 			{
 				type = "Button",
-				size =
-				{
-					13,
-					13,
-				},
-				position =
-				{
-					0,
-					2,
-				},
+				size = { 13, 13, },
+				position = { 0, 2, },
 				giveParentMouseInput = 1,
 				borderWidth = 1,
 				backgroundColor = "FEColorScrollButtonDefault",
@@ -497,51 +431,21 @@ HW2StyleSheet =
 				disabledBorderColor = "FEColorScrollButtonDisabled",
 				DefaultGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\vert_default.mres",
-					textureUV =
-					{
-						0,
-						13,
-						13,
-						0,
-					},
+					textureUV = { 0, 13, 13, 0, },
 				},
 				OverGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\vert_default.mres",
-					textureUV =
-					{
-						0,
-						13,
-						13,
-						0,
-					},
+					textureUV = { 0, 13, 13, 0, },
 				},
 				PressedGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\vert_pressed.mres",
-					textureUV =
-					{
-						0,
-						13,
-						13,
-						0,
-					},
+					textureUV = { 0, 13, 13, 0, },
 				},
 			},
 		},
@@ -549,53 +453,21 @@ HW2StyleSheet =
 		{
 			type = "Button",
 			buttonStyle = "DefaultScrollBar_ScrollHorzButtonStyle",
-			size =
-			{
-				15,
-				13,
-			},
-			disabledColor =
-			{
-				0,
-				0,
-				0,
-				0,
-			},
+			size = { 15, 13, },
+			disabledColor = "TPOFTransparent",
 			DisabledGraphic =
 			{
-				position =
-				{
-					0,
-					0,
-				},
-				size =
-				{
-					13,
-					13,
-				},
+				position = { 0, 0, },
+				size = { 13, 13, },
 				texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\horz_disabled.mres",
-				textureUV =
-				{
-					0,
-					0,
-					13,
-					13,
-				},
+				textureUV = { 0, 0, 13, 13, },
 				color = "FEColorScrollButtonDisabled",
 			},
 			;
 			{
 				type = "Button",
-				size =
-				{
-					13,
-					13,
-				},
-				position =
-				{
-					0,
-					0,
-				},
+				size = { 13, 13, },
+				position = { 0, 0, },
 				giveParentMouseInput = 1,
 				borderWidth = 1,
 				backgroundColor = "FEColorScrollButtonDefault",
@@ -608,51 +480,21 @@ HW2StyleSheet =
 				disabledBorderColor = "FEColorScrollButtonDisabled",
 				DefaultGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\horz_default.mres",
-					textureUV =
-					{
-						0,
-						0,
-						13,
-						13,
-					},
+					textureUV = { 0, 0, 13, 13, },
 				},
 				OverGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\horz_default.mres",
-					textureUV =
-					{
-						0,
-						0,
-						13,
-						13,
-					},
+					textureUV = { 0, 0, 13, 13, },
 				},
 				PressedGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\horz_pressed.mres",
-					textureUV =
-					{
-						0,
-						0,
-						13,
-						13,
-					},
+					textureUV = { 0, 0, 13, 13, },
 				},
 			},
 		},
@@ -660,53 +502,21 @@ HW2StyleSheet =
 		{
 			type = "Button",
 			buttonStyle = "DefaultScrollBar_ScrollHorzButtonStyle",
-			size =
-			{
-				15,
-				13,
-			},
-			disabledColor =
-			{
-				0,
-				0,
-				0,
-				0,
-			},
+			size = { 15, 13, },
+			disabledColor = "TPOFTransparent",
 			DisabledGraphic =
 			{
-				position =
-				{
-					2,
-					0,
-				},
-				size =
-				{
-					13,
-					13,
-				},
+				position = { 2, 0, },
+				size = { 13, 13, },
 				texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\horz_disabled.mres",
-				textureUV =
-				{
-					13,
-					0,
-					0,
-					13,
-				},
+				textureUV = { 13, 0, 0, 13, },
 				color = "FEColorScrollButtonDisabled",
 			},
 			;
 			{
 				type = "Button",
-				size =
-				{
-					13,
-					13,
-				},
-				position =
-				{
-					2,
-					0,
-				},
+				size = { 13, 13, },
+				position = { 2, 0, },
 				giveParentMouseInput = 1,
 				borderWidth = 1,
 				backgroundColor = "FEColorScrollButtonDefault",
@@ -719,51 +529,21 @@ HW2StyleSheet =
 				disabledBorderColor = "FEColorScrollButtonDisabled",
 				DefaultGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\horz_default.mres",
-					textureUV =
-					{
-						13,
-						0,
-						0,
-						13,
-					},
+					textureUV = { 13, 0, 0, 13, },
 				},
 				OverGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\horz_default.mres",
-					textureUV =
-					{
-						13,
-						0,
-						0,
-						13,
-					},
+					textureUV = { 13, 0, 0, 13, },
 				},
 				PressedGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\horz_pressed.mres",
-					textureUV =
-					{
-						13,
-						0,
-						0,
-						13,
-					},
+					textureUV = { 13, 0, 0, 13, },
 				},
 			},
 		},
@@ -783,23 +563,11 @@ HW2StyleSheet =
 	{
 		type = "ScrollView",
 		name = "noNameScrollView",
-		size =
-		{
-			250,
-			250,
-		},
+		size = { 250, 250, },
 		scrollHorz = 1,
 		scrollVert = 1,
-		contentsSize =
-		{
-			500,
-			500,
-		},
-		scrollPosition =
-		{
-			0,
-			0,
-		},
+		contentsSize = { 500, 500, },
+		scrollPosition = { 0, 0, },
 		VertScrollBar =
 		{
 			type = "ScrollBar",
@@ -819,25 +587,13 @@ HW2StyleSheet =
 		cursorPosition = 0,
 		cursorDelay = 350,
 		cursorWidth = 1,
-		cursorColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		cursorColor = "TPOFWhite",
 		autosize = 0,
 		marginWidth = 3,
 		maxTextLength = 256,
 		Text =
 		{
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			color = "TPOFWhite",
 			font = "ButtonFont",
 			vAlign = "Middle",
 			hAlign = "Left",
@@ -852,11 +608,7 @@ HW2StyleSheet =
 		color = "FEColorHeading1",
 		vAlign = "Top",
 		hAlign = "Center",
-		offset =
-		{
-			0,
-			0,
-		},
+		offset = { 0, 0, },
 	},
 	FEHeading1 =
 	{
@@ -865,11 +617,7 @@ HW2StyleSheet =
 		color = "FEColorHeading1",
 		vAlign = "Middle",
 		hAlign = "Left",
-		offset =
-		{
-			0,
-			0,
-		},
+		offset = { 0, 0, },
 	},
 	FEHeading2 =
 	{
@@ -878,11 +626,7 @@ HW2StyleSheet =
 		color = "FEColorHeading2",
 		vAlign = "Middle",
 		hAlign = "Left",
-		offset =
-		{
-			0,
-			0,
-		},
+		offset = { 0, 0, },
 	},
 	FEHeading3 =
 	{
@@ -891,11 +635,7 @@ HW2StyleSheet =
 		color = "FEColorHeading3",
 		vAlign = "Middle",
 		hAlign = "Left",
-		offset =
-		{
-			0,
-			0,
-		},
+		offset = { 0, 0, },
 	},
 	FEHeading4 =
 	{
@@ -904,23 +644,13 @@ HW2StyleSheet =
 		color = "FEColorHeading4",
 		vAlign = "Middle",
 		hAlign = "Left",
-		offset =
-		{
-			0,
-			0,
-		},
+		offset = { 0, 0, },
 	},
 	FEHelpTipTextStyle =
 	{
 		type = "Text",
 		font = "ButtonFont",
-		color =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
+		color = "TPOFBlack",
 		vAlign = "Middle",
 		hAlign = "Left",
 	},
@@ -928,13 +658,7 @@ HW2StyleSheet =
 	{
 		type = "Text",
 		font = "ButtonFont",
-		color =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
+		color = "TPOFBlack",
 		vAlign = "Middle",
 		hAlign = "Center",
 	},
@@ -942,39 +666,19 @@ HW2StyleSheet =
 	{
 		type = "Text",
 		font = "ButtonFont",
-		color =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
+		color = "TPOFBlack",
 		vAlign = "Middle",
 		hAlign = "Left",
-		offset =
-		{
-			4,
-			0,
-		},
+		offset = { 4, 0, },
 	},
 	FETableTitleTextStyle =
 	{
 		type = "Text",
 		textStyle = "FEButtonTextStyle",
-		color =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
+		color = "TPOFBlack",
 		vAlign = "Middle",
 		hAlign = "Left",
-		offset =
-		{
-			4,
-			0,
-		},
+		offset = { 4, 0, },
 	},
 	FETableCellTextStyle =
 	{
@@ -982,18 +686,8 @@ HW2StyleSheet =
 		font = "ListBoxItemFont",
 		vAlign = "Middle",
 		hAlign = "Left",
-		offset =
-		{
-			4,
-			0,
-		},
-		color =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		offset = { 4, 0, },
+		color = "TPOFWhite",
 	},
 	SubtitleSPTextStyle =
 	{
@@ -1001,18 +695,8 @@ HW2StyleSheet =
 		font = "SPSubtitleFont",
 		vAlign = "Top",
 		hAlign = "Left",
-		offset =
-		{
-			4,
-			0,
-		},
-		color =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		offset = { 4, 0, },
+		color = "TPOFWhite",
 	},
 	SubtitleGenericTextStyle =
 	{
@@ -1020,18 +704,8 @@ HW2StyleSheet =
 		font = "GenericSubtitleFont",
 		vAlign = "Top",
 		hAlign = "Left",
-		offset =
-		{
-			4,
-			0,
-		},
-		color =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		offset = { 4, 0, },
+		color = "TPOFWhite",
 	},
 	SubtitleLocationCardTextStyle =
 	{
@@ -1039,47 +713,19 @@ HW2StyleSheet =
 		font = "LocationCardFont",
 		vAlign = "Top",
 		hAlign = "Center",
-		offset =
-		{
-			0,
-			0,
-		},
-		color =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		offset = { 0, 0, },
+		color = "TPOFWhite",
 	},
 	FEPopupBackgroundStyle =
 	{
 		type = "InterfaceElement",
-		backgroundColor =
-		{
-				162,
-				162,
-				162,
-				0,
-		},
+		backgroundColor = "TPOFTransparent",
 		BackgroundGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Clearbg.tga",
-			textureUV =
-			{
-				0,
-				0,
-				0, --16
-				0, --128
-			},
+			textureUV = { 0, 0, 0, 0, },
 			stretchOnDraw = 0,
-			color =
-			{
-				162,
-				162,
-				162,
-				0,
-			},
+			color = "TPOFTransparent",
 		},
 	},
 	--Mercury Button
@@ -1088,11 +734,7 @@ HW2StyleSheet =
 		type = "Button",
 		outerBorderWidth = 1,
 		borderColor = "FEColorHeading3",
-		size =
-		{
-			120,
-			12,
-		},
+		size = { 120, 12, },
 		--toggleButton = 1,
 		flashSpeed = 250,
 		disabledTextColor = "FEColorDisabled",
@@ -1106,162 +748,50 @@ HW2StyleSheet =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
 			color =
-				{ 175, 175, 175, 255, },
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+				"TPOFGray175",
+			textureUV = { 0, 0, 64, 13, },
 		},
 		OverGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		ClickedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		PressedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		FlashGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
-			color =
-			{
-				220,
-				220,
-				255,
-				255,
-			},
+			textureUV = { 0, 0, 64, 13, },
+			color = "TPOFGray230",
 		},
-		flashTextColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		flashColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		textColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		pressedTextColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		clickedTextColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		overTextColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
+		flashTextColor = "TPOFBlack",
+		flashColor = "TPOFWhite",
+		textColor = "TPOFBlack",
+		pressedTextColor = "TPOFBlack",
+		clickedTextColor = "TPOFWhite",
+		overTextColor = "TPOFBlack",
 		--outerBorderWidth = 1,
-		borderColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		overBorderColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		clickedBorderColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		pressedBorderColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		disabledColor =
-		{
-			127,
-			127,
-			127,
-			0,
-		},
-		disabledTextColor =
-		{
-			127,
-			127,
-			127,
-			0,
-		},
+		borderColor = "TPOFBlack",
+		overBorderColor = "TPOFBlack",
+		clickedBorderColor = "TPOFBlack",
+		pressedBorderColor = "TPOFBlack",
+		disabledColor = "TPOFGrayTransparent",
+		disabledTextColor = "TPOFGrayTransparent",
 	},
 	FEButtonStyle2 =
 	{
 		type = "Button",
 		outerBorderWidth = 1,
 		borderColor = "FEColorHeading3",
-		size =
-		{
-			120,
-			12,
-		},
+		size = { 120, 12, },
 		--toggleButton = 1,
 		flashSpeed = 250,
 		disabledTextColor = "FEColorDisabled",
@@ -1275,151 +805,43 @@ HW2StyleSheet =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
 			color =
-				{ 175, 175, 175, 255, },
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+				"TPOFGray175",
+			textureUV = { 0, 0, 64, 13, },
 		},
 		OverGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		ClickedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		PressedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		FlashGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
-			color =
-			{
-				220,
-				220,
-				255,
-				255,
-			},
+			textureUV = { 0, 0, 64, 13, },
+			color = "TPOFGray230",
 		},
-		flashTextColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		flashColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		textColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		pressedTextColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		clickedTextColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		overTextColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
+		flashTextColor = "TPOFBlack",
+		flashColor = "TPOFWhite",
+		textColor = "TPOFBlack",
+		pressedTextColor = "TPOFBlack",
+		clickedTextColor = "TPOFWhite",
+		overTextColor = "TPOFBlack",
 		--outerBorderWidth = 1,
-		borderColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		overBorderColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		clickedBorderColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		pressedBorderColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		disabledColor =
-		{
-			127,
-			127,
-			127,
-			0,
-		},
-		disabledTextColor =
-		{
-			127,
-			127,
-			127,
-			0,
-		},
+		borderColor = "TPOFBlack",
+		overBorderColor = "TPOFBlack",
+		clickedBorderColor = "TPOFBlack",
+		pressedBorderColor = "TPOFBlack",
+		disabledColor = "TPOFGrayTransparent",
+		disabledTextColor = "TPOFGrayTransparent",
 	},
 	--EndMercury
 	FEButtonStyle1NoEnterSound =
@@ -1437,153 +859,37 @@ HW2StyleSheet =
 	FETabButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			90,
-			15,
-		},
+		size = { 90, 15, },
 		borderWidth = 1,
-		backgroundColor =
-		{
-			0,
-			0,
-			0,
-			45,
-		},
+		backgroundColor = "TPOFBlackVeryTransparent",
 		borderColor = "FEColorHeading3",
 		textColor = "FEColorOutline",
-		overColor =
-		{
-			0,
-			0,
-			0,
-			127,
-		},
+		overColor = "TPOFBlackHalfTransparent",
 		overBorderColor = "FEColorHeading3",
-		overTextColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		pressedColor = 
-		{
-			0,
-			0,
-			0,
-			200,
-		},
+		overTextColor = "TPOFBlack",
+		pressedColor = "TPOFBlackMostlyOpaque",
 		pressedBorderColor = "FEColorHeading3",
-		pressedTextColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		disabledColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		disabledBorderColor =
-		{
-			152,
-			152,
-			152,
-			255,
-		},
-		disabledTextColor =
-		{
-			152,
-			152,
-			152,
-			255,
-		},
-		flashColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		pressedTextColor = "TPOFWhite",
+		disabledColor = "TPOFBlack",
+		disabledBorderColor = "TPOFGrayLight",
+		disabledTextColor = "TPOFGrayLight",
+		flashColor = "TPOFWhite",
 		soundOnEnter = "SFX_TabEnter",
 	},
 	FEListBoxItemButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			192,
-			13,
-		},
+		size = { 192, 13, },
 		borderWidth = 1,
-		borderColor =
-		{
-			0,
-			0,
-			0,
-			0,
-		},
-		backgroundColor =
-		{
-			255,
-			255,
-			255,
-			127,
-		},
-		overBorderColor =
-		{
-			0,
-			0,
-			0,
-			0,
-		},
-		overColor =
-		{
-			127,
-			127,
-			127,
-			127,
-		},
-		pressedBorderColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		pressedColor =
-		{
-			255,
-			255,
-			255,
-			127,
-		},
-		disabledColor =
-		{
-			50,
-			50,
-			50,
-			255,
-		},
-		disabledBorderColor =
-		{
-			152,
-			152,
-			152,
-			255,
-		},
-		disabledTextColor =
-		{
-			152,
-			152,
-			152,
-			255,
-		},
+		borderColor = "TPOFTransparent",
+		backgroundColor = "TPOFWhiteHalfTransparent",
+		overBorderColor = "TPOFTransparent",
+		overColor = "TPOFGrayHalfTransparent",
+		pressedBorderColor = "TPOFWhite",
+		pressedColor = "TPOFWhiteHalfTransparent",
+		disabledColor = "TPOFGray50",
+		disabledBorderColor = "TPOFGrayLight",
+		disabledTextColor = "TPOFGrayLight",
 		soundOnEnter = "SFX_ListBoxItemEnter",
 		soundOnClicked = "SFX_ListBoxItemClick",
 	},
@@ -1591,20 +897,8 @@ HW2StyleSheet =
 	{
 		backgroundColor = "FEColorOutline",
 		defaultColor = "FEColorOutline",
-		overColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		pressedColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		overColor = "TPOFBlack",
+		pressedColor = "TPOFWhite",
 		soundOnEnter = "SFX_ButtonEnter",
 		soundOnClicked = "SFX_ButtonClick",
 	},
@@ -1612,101 +906,29 @@ HW2StyleSheet =
 	{
 		type = "Button",
 		toggleButton = 1,
-		size =
-		{
-			13,
-			13,
-		},
-		backgroundColor =
-		{
-			33,
-			54,
-			77,
-			255,
-		},
-		borderColor =
-		{
-			56,
-			162,
-			250,
-			255,
-		},
+		size = { 13, 13, },
+		backgroundColor = "TPOFGray55",
+		borderColor = "TPOFGray160",
 		borderWidth = 2,
-		disabledColor =
-		{
-			50,
-			50,
-			50,
-			255,
-		},
-		disabledBorderColor =
-		{
-			152,
-			152,
-			152,
-			255,
-		},
-		disabledTextColor =
-		{
-			152,
-			152,
-			152,
-			255,
-		},
-		flashColor =
-		{
-			254,
-			116,
-			7,
-			255,
-		},
+		disabledColor = "TPOFGray50",
+		disabledBorderColor = "TPOFGrayLight",
+		disabledTextColor = "TPOFGrayLight",
+		flashColor = "TPOFGray200",
 		soundOnButtonPressed = "SFX_CheckBoxUnchecked",
 		soundOnButtonUnpressed = "SFX_CheckBoxChecked",
 		PressedGraphic =
 		{
-			size =
-			{
-				13,
-				13,
-			},
+			size = { 13, 13, },
 			texture = "DATA:\\UI\\NewUI\\Elements\\checkbox.mres",
-			textureUV =
-			{
-				0,
-				0,
-				13,
-				13,
-			},
-			color =
-			{
-				56,
-				162,
-				250,
-				255,
-			},
+			textureUV = { 0, 0, 13, 13, },
+			color = "TPOFGray160",
 		},
 		DisabledPressedGraphic =
 		{
-			size =
-			{
-				13,
-				13,
-			},
+			size = { 13, 13, },
 			texture = "DATA:\\UI\\NewUI\\Elements\\checkbox.mres",
-			textureUV =
-			{
-				0,
-				0,
-				13,
-				13,
-			},
-			color =
-			{
-				152,
-				152,
-				152,
-				255,
-			},
+			textureUV = { 0, 0, 13, 13, },
+			color = "TPOFGrayLight",
 		},
 	},
 	FERadioButtonStyle =
@@ -1729,11 +951,7 @@ HW2StyleSheet =
 	FEListBoxStyle =
 	{
 		type = "ListBox",
-		size =
-		{
-			256,
-			256,
-		},
+		size = { 256, 256, },
 		selected = 0,
 		leftScroll = 0,
 		showScrollBar = 1,
@@ -1748,11 +966,7 @@ HW2StyleSheet =
 	FEDropDownListBoxStyle =
 	{
 		type = "DropDownListBox",
-		size =
-		{
-			208,
-			13,
-		},
+		size = { 208, 13, },
 		itemsToShowOnDrop = 10,
 		soundOnClicked = "SFX_DropDownListClick",
 		ListBox =
@@ -1760,18 +974,8 @@ HW2StyleSheet =
 			type = "ListBox",
 			name = "listLevelsListBox",
 			listBoxStyle = "FEListBoxStyle",
-			size =
-			{
-				208,
-				130,
-			},
-			backgroundColor =
-			{
-				255,
-				255,
-				255,
-				127,
-			},
+			size = { 208, 130, },
+			backgroundColor = "TPOFWhiteHalfTransparent",
 			scrollBarSpace = 1,
 			soundOnExit = "",
 		},
@@ -1779,54 +983,22 @@ HW2StyleSheet =
 		{
 			type = "Button",
 			buttonStyle = "DefaultScrollBar_ScrollVertButtonStyle",
-			size =
-			{
-				15,
-				13,
-			},
-			disabledColor =
-			{
-				0,
-				0,
-				0,
-				0,
-			},
+			size = { 15, 13, },
+			disabledColor = "TPOFTransparent",
 			DisabledGraphic =
 			{
-				position =
-				{
-					2,
-					0,
-				},
-				size =
-				{
-					13,
-					13,
-				},
+				position = { 2, 0, },
+				size = { 13, 13, },
 				texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\vert_disabled.mres",
-				textureUV =
-				{
-					0,
-					13,
-					13,
-					0,
-				},
+				textureUV = { 0, 13, 13, 0, },
 				color = "FEColorScrollButtonDisabled",
 			},
 			soundOnClicked = "SFX_DropDownListClick",
 			;
 			{
 				type = "Button",
-				size =
-				{
-					13,
-					13,
-				},
-				position =
-				{
-					2,
-					0,
-				},
+				size = { 13, 13, },
+				position = { 2, 0, },
 				giveParentMouseInput = 1,
 				borderWidth = 1,
 				backgroundColor = "FEColorScrollButtonDefault",
@@ -1839,51 +1011,21 @@ HW2StyleSheet =
 				disabledBorderColor = "FEColorScrollButtonDisabled",
 				DefaultGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\vert_default.mres",
-					textureUV =
-					{
-						0,
-						13,
-						13,
-						0,
-					},
+					textureUV = { 0, 13, 13, 0, },
 				},
 				PressedGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\vert_pressed.mres",
-					textureUV =
-					{
-						0,
-						13,
-						13,
-						0,
-					},
+					textureUV = { 0, 13, 13, 0, },
 				},
 				OverGraphic =
 				{
-					size =
-					{
-						13,
-						13,
-					},
+					size = { 13, 13, },
 					texture = "DATA:UI\\NewUI\\Styles\\ArrowButtons\\vert_pressed.mres",
-					textureUV =
-					{
-						0,
-						13,
-						13,
-						0,
-					},
+					textureUV = { 0, 13, 13, 0, },
 				},
 			},
 		},
@@ -1892,36 +1034,14 @@ HW2StyleSheet =
 	FETextInputStyle =
 	{
 		type = "TextInput",
-		size =
-		{
-			120,
-			13,
-		},
+		size = { 120, 13, },
 		borderWidth = 1,
-		backgroundColor =
-		{
-			62,
-			86,
-			98,
-			255,
-		},
-		borderColor =
-		{
-			112,
-			157,
-			180,
-			255,
-		},
+		backgroundColor = "TPOFGray80",
+		borderColor = "TPOFGray150",
 		borderWidth = 1,
 		Text =
 		{
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			color = "TPOFWhite",
 			font = "ButtonFont",
 			vAlign = "Middle",
 			hAlign = "Left",
@@ -1930,23 +1050,13 @@ HW2StyleSheet =
 	FEChatTextInputStyle =
 	{
 		type = "TextInput",
-		size =
-		{
-			120,
-			21,
-		},
+		size = { 120, 21, },
 		borderColor = "FEColorOutline",
 		borderWidth = 2,
 		marginWidth = 5,
 		Text =
 		{
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			color = "TPOFWhite",
 			font = "ButtonFont",
 			vAlign = "Middle",
 			hAlign = "Left",
@@ -1955,42 +1065,20 @@ HW2StyleSheet =
 	FETableStyle =
 	{
 		type = "Table",
-		size =
-		{
-			300,
-			200,
-		},
-		backgroundColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
+		size = { 300, 200, },
+		backgroundColor = "TPOFBlack",
 		showColumnTitles = 1,
 		showRowTitles = 0,
 		headerSpacing = 6,
-		cellSpacing =
-		{
-			2,
-			2,
-		},
+		cellSpacing = { 2, 2, },
 		sortByColumn = 0,
 		defaultRowHeight = 15,
 		defaultColWidth = 100,
 		titleHeight = 15,
 		scrollHorz = 0,
 		scrollVert = 1,
-		contentsSize =
-		{
-			300,
-			400,
-		},
-		scrollPosition =
-		{
-			0,
-			0,
-		},
+		contentsSize = { 300, 400, },
+		scrollPosition = { 0, 0, },
 		selectedRowColor = "FEColorOutline",
 		DefaultColTitleCell =
 		{
@@ -2022,13 +1110,7 @@ HW2StyleSheet =
 					textStyle = "FEListBoxItemTextStyle",
 					vAlign = "Middle",
 					hAlign = "Left",
-					color =
-					{
-						255,
-						255,
-						255,
-						255,
-					},
+					color = "TPOFWhite",
 				},
 			},
 		},
@@ -2038,38 +1120,22 @@ HW2StyleSheet =
 		type = "ScrollBar",
 		orientation = "Horizontal",
 		resizeToParent = 0,
-		size =
-		{
-			212,
-			13,
-		},
-		range =
-		{
-			0,
-			100,
-		},
+		size = { 212, 13, },
+		range = { 0, 100, },
 		stepSize = 1,
 		pageSize = 20,
 		TrackVertButton =
 		{
 			type = "Button",
 			buttonStyle = "DefaultScrollBar_TrackVertStyle",
-			maxSize =
-			{
-				13,
-				17,
-			},
+			maxSize = { 13, 17, },
 		},
 		TrackHorzButton =
 		{
 			type = "Button",
 			name = "trackHorzButton",
 			buttonStyle = "DefaultScrollBar_TrackHorzStyle",
-			maxSize =
-			{
-				17,
-				13,
-			},
+			maxSize = { 17, 13, },
 		},
 	},
 	FESliderLabelStyle =
@@ -2077,41 +1143,21 @@ HW2StyleSheet =
 		type = "InterfaceElement",
 		borderColor = "FEColorScrollButtonDefault",
 		borderWidth = 1,
-		backgroundColor =
-		{
-			0,
-			175,
-			255,
-			127,
-		},
-		size =
-		{
-			40,
-			13,
-		},
+		backgroundColor = "TPOFGray140HalfTransparent",
+		size = { 40, 13, },
 		marginWidth = 4,
 		Text =
 		{
 			font = "ButtonFont",
 			vAlign = "Middle",
 			hAlign = "Right",
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			color = "TPOFWhite",
 		},
 	},
 	FEBorderListBoxStyle =
 	{
 		type = "ListBox",
-		size =
-		{
-			200,
-			100,
-		},
+		size = { 200, 100, },
 		borderColor = "IGColorOutline",
 		borderWidth = 1,
 		marginWidth = 3,
@@ -2121,63 +1167,24 @@ HW2StyleSheet =
 	FEInfoButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			16,
-			16,
-		},
+		size = { 16, 16, },
 		DefaultGraphic =
 		{
 			texture = "data:ui/newui/network/infobutton.mres",
-			textureUV =
-			{
-				0,
-				0,
-				16,
-				16,
-			},
-			color =
-			{
-				56,
-				162,
-				250,
-			},
+			textureUV = { 0, 0, 16, 16, },
+			color = "TPOFGray160",
 		},
 		OverGraphic =
 		{
 			texture = "data:ui/newui/network/infobutton.mres",
-			textureUV =
-			{
-				0,
-				0,
-				16,
-				16,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 0, 0, 16, 16, },
+			color = "TPOFWhite",
 		},
 		PressedGraphic =
 		{
 			texture = "data:ui/newui/network/infobutton.mres",
-			textureUV =
-			{
-				0,
-				0,
-				16,
-				16,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 0, 0, 16, 16, },
+			color = "TPOFWhite",
 		},
 	},
 	IGHeading1 =
@@ -2214,13 +1221,7 @@ HW2StyleSheet =
 	{
 		type = "Text",
 		font = "ButtonFont",
-		color =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		color = "TPOFWhite",
 		vAlign = "Middle",
 		hAlign = "Left",
 	},
@@ -2237,78 +1238,34 @@ HW2StyleSheet =
 	IGRadioButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			120,
-			30,
-		},
+		size = { 120, 30, },
 		toggleButton = 1,
 		DefaultGraphic =
 		{
-			size =
-			{
-				13,
-				13,
-			},
+			size = { 13, 13, },
 			texture = "data:ui\\newui\\elements\\radio_button.mres",
-			textureUV =
-			{
-				0,
-				0,
-				13,
-				13,
-			},
+			textureUV = { 0, 0, 13, 13, },
 			color = "FEColorScrollButtonDefault",
 		},
 		OverGraphic =
 		{
-			size =
-			{
-				13,
-				13,
-			},
+			size = { 13, 13, },
 			texture = "data:ui\\newui\\elements\\radio_button.mres",
-			textureUV =
-			{
-				0,
-				0,
-				13,
-				13,
-			},
+			textureUV = { 0, 0, 13, 13, },
 			color = "FEColorScrollButtonOver",
 		},
 		PressedGraphic =
 		{
-			size =
-			{
-				13,
-				13,
-			},
+			size = { 13, 13, },
 			texture = "data:ui\\newui\\elements\\radio_button.mres",
-			textureUV =
-			{
-				28,
-				0,
-				41,
-				13,
-			},
+			textureUV = { 28, 0, 41, 13, },
 			color = "FEColorScrollButtonOver",
 		},
 		DisabledGraphic =
 		{
-			size =
-			{
-				13,
-				13,
-			},
+			size = { 13, 13, },
 			texture = "data:ui\\newui\\elements\\radio_button.mres",
-			textureUV =
-			{
-				0,
-				0,
-				13,
-				13,
-			},
+			textureUV = { 0, 0, 13, 13, },
 			color = "FEColorScrollButtonDisabled",
 		},
 		soundOnClicked = "SFX_CheckBoxChecked",
@@ -2317,20 +1274,10 @@ HW2StyleSheet =
 	{
 		type = "Text",
 		font = "ButtonFont",
-		color =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		color = "TPOFWhite",
 		hAlign = "Left",
 		vAlign = "Middle",
-		offset =
-		{
-			16,
-			0,
-		},
+		offset = { 16, 0, },
 	},
 	IGListBoxStyle =
 	{
@@ -2356,23 +1303,13 @@ HW2StyleSheet =
 		overBorderColor = "FEColorPopupOutline",
 		pressedColor = "FEColorPopupOutline",
 		pressedBorderColor = "FEColorPopupOutline",
-		pressedTextColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
+		pressedTextColor = "TPOFBlack",
 	},
 	BuildManagerButton1 =
 	{
 		type = "Button",
 		buttonStyle = "IGButtonStyle1",
-		size =
-		{
-			23,
-			23,
-		},
+		size = { 23, 23, },
 	},
 	BuildManagerbutton1 =
 	{
@@ -2382,98 +1319,36 @@ HW2StyleSheet =
 	IGButtonFacility =
 	{
 		type = "Button",
-		size =
-		{
-			24,
-			25,
-		},
+		size = { 24, 25, },
 		soundOnEnter = "SFX_FacilityTabEnter",
-		flashColor =
-		{
-			0,
-			0,
-			0,
-			0,
-		},
-		flashBorderColor =
-		{
-			0,
-			0,
-			0,
-			0,
-		},
+		flashColor = "TPOFTransparent",
+		flashBorderColor = "TPOFTransparent",
 		borderWidth = 0,
 	},
 	IGButtonShowAll =
 	{
 		type = "Button",
 		buttonStyle = "IGButtonFacility",
-		size =
-		{
-			206,
-			15,
-		},
+		size = { 206, 15, },
 		DefaultGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_showall.mres",
-			textureUV =
-			{
-				0,
-				0,
-				206,
-				15,
-			},
+			textureUV = { 0, 0, 206, 15, },
 		},
 		PressedGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_showall.mres",
-			textureUV =
-			{
-				0,
-				15,
-				206,
-				30,
-			},
+			textureUV = { 0, 15, 206, 30, },
 		},
 		FlashGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_showall.mres",
-			textureUV =
-			{
-				0,
-				15,
-				206,
-				30,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 0, 15, 206, 30, },
+			color = "TPOFWhite",
 		},
-		textColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		overTextColor =
-		{
-			127,
-			127,
-			127,
-			255,
-		},
-		pressedTextColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		textColor = "TPOFBlack",
+		overTextColor = "TPOFGray127",
+		pressedTextColor = "TPOFWhite",
 		Text =
 		{
 			font = "ButtonFont",
@@ -2488,75 +1363,33 @@ HW2StyleSheet =
 		DefaultGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_norm.mres",
-			textureUV =
-			{
-				0,
-				0,
-				24,
-				25,
-			},
+			textureUV = { 0, 0, 24, 25, },
 		},
 		BackgroundGraphic2 =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_no_build.mres",
-			textureUV =
-			{
-				0,
-				0,
-				24,
-				25,
-			},
+			textureUV = { 0, 0, 24, 25, },
 		},
 		OverGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_over.mres",
-			textureUV =
-			{
-				0,
-				0,
-				24,
-				25,
-			},
+			textureUV = { 0, 0, 24, 25, },
 		},
 		PressedGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				0,
-				0,
-				24,
-				25,
-			},
+			textureUV = { 0, 0, 24, 25, },
 		},
 		FlashGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				0,
-				0,
-				24,
-				25,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 0, 0, 24, 25, },
+			color = "TPOFWhite",
 		},
 		DisabledGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_none.mres",
-			textureUV =
-			{
-				0,
-				0,
-				24,
-				25,
-			},
+			textureUV = { 0, 0, 24, 25, },
 			color = "IGColorFacilityDisabled",
 		},
 	},
@@ -2567,75 +1400,33 @@ HW2StyleSheet =
 		DefaultGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_norm.mres",
-			textureUV =
-			{
-				0,
-				25,
-				24,
-				50,
-			},
+			textureUV = { 0, 25, 24, 50, },
 		},
 		BackgroundGraphic2 =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_no_build.mres",
-			textureUV =
-			{
-				0,
-				25,
-				24,
-				50,
-			},
+			textureUV = { 0, 25, 24, 50, },
 		},
 		OverGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_over.mres",
-			textureUV =
-			{
-				0,
-				25,
-				24,
-				50,
-			},
+			textureUV = { 0, 25, 24, 50, },
 		},
 		FlashGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				0,
-				25,
-				24,
-				50,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 0, 25, 24, 50, },
+			color = "TPOFWhite",
 		},
 		PressedGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				0,
-				25,
-				24,
-				50,
-			},
+			textureUV = { 0, 25, 24, 50, },
 		},
 		DisabledGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_none.mres",
-			textureUV =
-			{
-				0,
-				25,
-				24,
-				50,
-			},
+			textureUV = { 0, 25, 24, 50, },
 			color = "IGColorFacilityDisabled",
 		},
 	},
@@ -2646,75 +1437,33 @@ HW2StyleSheet =
 		DefaultGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_norm.mres",
-			textureUV =
-			{
-				0,
-				50,
-				24,
-				75,
-			},
+			textureUV = { 0, 50, 24, 75, },
 		},
 		BackgroundGraphic2 =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_no_build.mres",
-			textureUV =
-			{
-				0,
-				50,
-				24,
-				75,
-			},
+			textureUV = { 0, 50, 24, 75, },
 		},
 		FlashGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				0,
-				50,
-				24,
-				75,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 0, 50, 24, 75, },
+			color = "TPOFWhite",
 		},
 		OverGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_over.mres",
-			textureUV =
-			{
-				0,
-				50,
-				24,
-				75,
-			},
+			textureUV = { 0, 50, 24, 75, },
 		},
 		PressedGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				0,
-				50,
-				24,
-				75,
-			},
+			textureUV = { 0, 50, 24, 75, },
 		},
 		DisabledGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_none.mres",
-			textureUV =
-			{
-				0,
-				50,
-				24,
-				75,
-			},
+			textureUV = { 0, 50, 24, 75, },
 			color = "IGColorFacilityDisabled",
 		},
 	},
@@ -2725,75 +1474,33 @@ HW2StyleSheet =
 		DefaultGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_norm.mres",
-			textureUV =
-			{
-				0,
-				75,
-				24,
-				100,
-			},
+			textureUV = { 0, 75, 24, 100, },
 		},
 		BackgroundGraphic2 =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_no_build.mres",
-			textureUV =
-			{
-				0,
-				75,
-				24,
-				100,
-			},
+			textureUV = { 0, 75, 24, 100, },
 		},
 		FlashGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				0,
-				75,
-				24,
-				100,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 0, 75, 24, 100, },
+			color = "TPOFWhite",
 		},
 		OverGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_over.mres",
-			textureUV =
-			{
-				0,
-				75,
-				24,
-				100,
-			},
+			textureUV = { 0, 75, 24, 100, },
 		},
 		PressedGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				0,
-				75,
-				24,
-				100,
-			},
+			textureUV = { 0, 75, 24, 100, },
 		},
 		DisabledGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_none.mres",
-			textureUV =
-			{
-				0,
-				75,
-				24,
-				100,
-			},
+			textureUV = { 0, 75, 24, 100, },
 			color = "IGColorFacilityDisabled",
 		},
 	},
@@ -2804,75 +1511,33 @@ HW2StyleSheet =
 		DefaultGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_norm.mres",
-			textureUV =
-			{
-				24,
-				0,
-				48,
-				25,
-			},
+			textureUV = { 24, 0, 48, 25, },
 		},
 		BackgroundGraphic2 =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_no_build.mres",
-			textureUV =
-			{
-				24,
-				0,
-				48,
-				25,
-			},
+			textureUV = { 24, 0, 48, 25, },
 		},
 		FlashGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				24,
-				0,
-				48,
-				25,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 24, 0, 48, 25, },
+			color = "TPOFWhite",
 		},
 		OverGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_over.mres",
-			textureUV =
-			{
-				24,
-				0,
-				48,
-				25,
-			},
+			textureUV = { 24, 0, 48, 25, },
 		},
 		PressedGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				24,
-				0,
-				48,
-				25,
-			},
+			textureUV = { 24, 0, 48, 25, },
 		},
 		DisabledGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_none.mres",
-			textureUV =
-			{
-				24,
-				0,
-				48,
-				25,
-			},
+			textureUV = { 24, 0, 48, 25, },
 			color = "IGColorFacilityDisabled",
 		},
 	},
@@ -2883,75 +1548,33 @@ HW2StyleSheet =
 		DefaultGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_norm.mres",
-			textureUV =
-			{
-				24,
-				25,
-				48,
-				50,
-			},
+			textureUV = { 24, 25, 48, 50, },
 		},
 		BackgroundGraphic2 =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_no_build.mres",
-			textureUV =
-			{
-				24,
-				25,
-				48,
-				50,
-			},
+			textureUV = { 24, 25, 48, 50, },
 		},
 		FlashGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				24,
-				25,
-				48,
-				50,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 24, 25, 48, 50, },
+			color = "TPOFWhite",
 		},
 		OverGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_over.mres",
-			textureUV =
-			{
-				24,
-				25,
-				48,
-				50,
-			},
+			textureUV = { 24, 25, 48, 50, },
 		},
 		PressedGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				24,
-				25,
-				48,
-				50,
-			},
+			textureUV = { 24, 25, 48, 50, },
 		},
 		DisabledGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_none.mres",
-			textureUV =
-			{
-				24,
-				25,
-				48,
-				50,
-			},
+			textureUV = { 24, 25, 48, 50, },
 			color = "IGColorFacilityDisabled",
 		},
 	},
@@ -2962,75 +1585,33 @@ HW2StyleSheet =
 		DefaultGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_norm.mres",
-			textureUV =
-			{
-				24,
-				50,
-				48,
-				75,
-			},
+			textureUV = { 24, 50, 48, 75, },
 		},
 		BackgroundGraphic2 =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_no_build.mres",
-			textureUV =
-			{
-				24,
-				50,
-				48,
-				75,
-			},
+			textureUV = { 24, 50, 48, 75, },
 		},
 		OverGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_over.mres",
-			textureUV =
-			{
-				24,
-				50,
-				48,
-				75,
-			},
+			textureUV = { 24, 50, 48, 75, },
 		},
 		FlashGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				24,
-				50,
-				48,
-				75,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 24, 50, 48, 75, },
+			color = "TPOFWhite",
 		},
 		PressedGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				24,
-				50,
-				48,
-				75,
-			},
+			textureUV = { 24, 50, 48, 75, },
 		},
 		DisabledGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_none.mres",
-			textureUV =
-			{
-				24,
-				50,
-				48,
-				75,
-			},
+			textureUV = { 24, 50, 48, 75, },
 			color = "IGColorFacilityDisabled",
 		},
 	},
@@ -3041,138 +1622,62 @@ HW2StyleSheet =
 		DefaultGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_norm.mres",
-			textureUV =
-			{
-				24,
-				75,
-				48,
-				100,
-			},
+			textureUV = { 24, 75, 48, 100, },
 		},
 		BackgroundGraphic2 =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_no_build.mres",
-			textureUV =
-			{
-				24,
-				75,
-				48,
-				100,
-			},
+			textureUV = { 24, 75, 48, 100, },
 		},
 		FlashGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				24,
-				75,
-				48,
-				100,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 24, 75, 48, 100, },
+			color = "TPOFWhite",
 		},
 		OverGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_over.mres",
-			textureUV =
-			{
-				24,
-				75,
-				48,
-				100,
-			},
+			textureUV = { 24, 75, 48, 100, },
 		},
 		PressedGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_down.mres",
-			textureUV =
-			{
-				24,
-				75,
-				48,
-				100,
-			},
+			textureUV = { 24, 75, 48, 100, },
 		},
 		DisabledGraphic =
 		{
 			texture = "data:ui\\newui\\facility\\facilities_icons_none.mres",
-			textureUV =
-			{
-				24,
-				75,
-				48,
-				100,
-			},
+			textureUV = { 24, 75, 48, 100, },
 			color = "IGColorFacilityDisabled",
 		},
 	},
 	IGPrevButton =
 	{
 		type = "Button",
-		size =
-		{
-			13,
-			72,
-		},
+		size = { 13, 72, },
 		DefaultGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\InGameIcons\\info_buttons.mres",
-			textureUV =
-			{
-				0,
-				31,
-				13,
-				103,
-			},
+			textureUV = { 0, 31, 13, 103, },
 			color = "FEColorScrollButtonDefault",
 		},
 		OverGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\InGameIcons\\info_buttons.mres",
-			textureUV =
-			{
-				0,
-				31,
-				13,
-				103,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 0, 31, 13, 103, },
+			color = "TPOFWhite",
 		},
 		PressedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\InGameIcons\\info_buttons.mres",
-			textureUV =
-			{
-				0,
-				31,
-				13,
-				103,
-			},
+			textureUV = { 0, 31, 13, 103, },
 			color = "FEColorScrollButtonPressed",
 		},
 		DisabledGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\InGameIcons\\info_buttons.mres",
-			textureUV =
-			{
-				0,
-				31,
-				13,
-				103,
-			},
+			textureUV = { 0, 31, 13, 103, },
 			color = "FEColorScrollButtonDisabled",
 		},
 		soundOnEnter = "SFX_ButtonEnter",
@@ -3181,63 +1686,29 @@ HW2StyleSheet =
 	IGNextButton =
 	{
 		type = "Button",
-		size =
-		{
-			13,
-			72,
-		},
+		size = { 13, 72, },
 		DefaultGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\InGameIcons\\info_buttons.mres",
-			textureUV =
-			{
-				13,
-				31,
-				0,
-				103,
-			},
+			textureUV = { 13, 31, 0, 103, },
 			color = "FEColorScrollButtonDefault",
 		},
 		OverGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\InGameIcons\\info_buttons.mres",
-			textureUV =
-			{
-				13,
-				31,
-				0,
-				103,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 13, 31, 0, 103, },
+			color = "TPOFWhite",
 		},
 		PressedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\InGameIcons\\info_buttons.mres",
-			textureUV =
-			{
-				13,
-				31,
-				0,
-				103,
-			},
+			textureUV = { 13, 31, 0, 103, },
 			color = "FEColorScrollButtonPressed",
 		},
 		DisabledGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\InGameIcons\\info_buttons.mres",
-			textureUV =
-			{
-				13,
-				31,
-				0,
-				103,
-			},
+			textureUV = { 13, 31, 0, 103, },
 			color = "FEColorScrollButtonDisabled",
 		},
 		soundOnEnter = "SFX_ButtonEnter",
@@ -3246,71 +1717,23 @@ HW2StyleSheet =
 	IGCloseButton =
 	{
 		type = "Button",
-		size =
-		{
-			15,
-			15,
-		},
+		size = { 15, 15, },
 		borderWidth = 1,
-		borderColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		overBorderColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		borderColor = "TPOFBlack",
+		overBorderColor = "TPOFWhite",
 		BackgroundGraphic =
 		{
-			size =
-			{
-				15,
-				15,
-			},
+			size = { 15, 15, },
 			texture = "DATA:UI\\NewUI\\InGameIcons\\close.mres",
-			textureUV =
-			{
-				0,
-				0,
-				15,
-				15,
-			},
-			color =
-			{
-				0,
-				0,
-				0,
-				255,
-			},
+			textureUV = { 0, 0, 15, 15, },
+			color = "TPOFBlack",
 		},
 		OverGraphic =
 		{
-			size =
-			{
-				15,
-				15,
-			},
+			size = { 15, 15, },
 			texture = "DATA:UI\\NewUI\\InGameIcons\\close.mres",
-			textureUV =
-			{
-				0,
-				0,
-				15,
-				15,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 0, 0, 15, 15, },
+			color = "TPOFWhite",
 		},
 		soundOnEnter = "SFX_ButtonEnter",
 		soundOnClicked = "SFX_ButtonClick",
@@ -3320,13 +1743,7 @@ HW2StyleSheet =
 		type = "Text",
 		font = "ButtonFont",
 		textStyle = "IGButtonTextStyle",
-		color =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
+		color = "TPOFBlack",
 		size = 8,
 		style = 1,
 		hAlign = "Center",
@@ -3336,13 +1753,7 @@ HW2StyleSheet =
 		type = "Text",
 		font = "ChatFont",
 		textStyle = "IGButtonTextStyle",
-		color =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
+		color = "TPOFBlack",
 		size = 8,
 		style = 1,
 		hAlign = "Center",
@@ -3350,160 +1761,52 @@ HW2StyleSheet =
 	Taskbar_PanelButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			68,
-			13,
-		},
+		size = { 68, 13, },
 		toggleButton = 1,
 		flashSpeed = 250,
 		DefaultGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		OverGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		ClickedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		PressedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		FlashGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\panelbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
-			color =
-			{
-				220,
-				220,
-				255,
-				255,
-			},
+			textureUV = { 0, 0, 64, 13, },
+			color = "TPOFGray230",
 		},
-		flashTextColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		flashColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		textColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		pressedTextColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		clickedTextColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		overTextColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
+		flashTextColor = "TPOFBlack",
+		flashColor = "TPOFWhite",
+		textColor = "TPOFBlack",
+		pressedColor = "TPOFWhite",
+		overColor = "TPOFGray127",
+		backgroundColor = "TPOFTransparent",
+		pressedTextColor = "TPOFBlack",
+		clickedTextColor = "TPOFWhite",
+		overTextColor = "TPOFBlack",
 		outerBorderWidth = 1,
-		borderColor =
-		{
-			0,
-			0,
-			0,
-			0,
-		},
-		overBorderColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		clickedBorderColor =
-		{
-			0,
-			0,
-			0,
-			0,
-		},
-		pressedBorderColor =
-		{
-			0,
-			0,
-			0,
-			255,
-		},
-		disabledColor =
-		{
-			127,
-			127,
-			127,
-			0,
-		},
-		disabledTextColor =
-		{
-			127,
-			127,
-			127,
-			0,
-		},
+		borderColor = "TPOFBlack",
+		overBorderColor = "TPOFBlack",
+		clickedBorderColor = "TPOFTransparent",
+		pressedBorderColor = "TPOFBlack",
+		disabledBorderColor = "TPOFBlack",
+		disabledColor = "TPOFGrayTransparent",
+		disabledTextColor = "TPOFGrayTransparent",
 		soundOnClicked = "SFX_ButtonClick",
 	},
 	Taskbar_MenuButtonTextStyle =
@@ -3518,276 +1821,104 @@ HW2StyleSheet =
 	Taskbar_MenuButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			132,
-			13,
-		},
+		size = { 132, 13, },
 		toggleButton = 1,
 		DefaultGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\hollowbutton.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		OverGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\hollowbutton_pressed.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		ClickedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\hollowbutton_clicked.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		PressedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\hollowbutton_pressed.tga",
-			textureUV =
-			{
-				0,
-				0,
-				64,
-				13,
-			},
+			textureUV = { 0, 0, 64, 13, },
 		},
 		flashSpeed = 250,
-		textColor =
-		{
-			0,
-			175,
-			255,
-			255,
-		},
-		overTextColor =
-		{
-			128,
-			215,
-			255,
-			255,
-		},
-		clickedTextColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		pressedTextColor =
-		{
-			128,
-			215,
-			255,
-			255,
-		},
+		textColor = "TPOFGray180",
+		overTextColor = "TPOFGray200",
+		clickedTextColor = "TPOFWhite",
+		pressedTextColor = "TPOFGray200",
 		outerBorderWidth = 1,
-		borderColor =
-		{
-			0,
-			0,
-			0,
-			0,
-		},
-		overBorderColor =
-		{
-			0,
-			0,
-			0,
-			0,
-		},
-		clickedBorderColor =
-		{
-			0,
-			0,
-			0,
-			0,
-		},
-		pressedBorderColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		borderColor = "TPOFTransparent",
+		overBorderColor = "TPOFTransparent",
+		clickedBorderColor = "TPOFTransparent",
+		pressedBorderColor = "TPOFWhite",
 		soundOnClicked = "SFX_ButtonClick",
 	},
 	Taskbar_MenuButtonStyle_Wide =
 	{
 		type = "Button",
 		buttonStyle = "Taskbar_MenuButtonStyle",
-		size =
-		{
-			132,
-			13,
-		},
+		size = { 132, 13, },
 		DefaultGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\hollowbutton_wide.tga",
-			textureUV =
-			{
-				0,
-				0,
-				128,
-				13,
-			},
+			textureUV = { 0, 0, 128, 13, },
 		},
 		OverGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\hollowbutton_wide_pressed.tga",
-			textureUV =
-			{
-				0,
-				0,
-				128,
-				13,
-			},
+			textureUV = { 0, 0, 128, 13, },
 		},
 		ClickedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\hollowbutton_wide_clicked.tga",
-			textureUV =
-			{
-				0,
-				0,
-				128,
-				13,
-			},
+			textureUV = { 0, 0, 128, 13, },
 		},
 		PressedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\hollowbutton_wide_pressed.tga",
-			textureUV =
-			{
-				0,
-				0,
-				128,
-				13,
-			},
+			textureUV = { 0, 0, 128, 13, },
 		},
 	},
 	Taskbar_SensorsButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			96,
-			13,
-		},
-		backgroundColor =
-		{
-			238,
-			188,
-			5,
-			255,
-		},
-		overColor =
-		{
-			187,
-			146,
-			4,
-			255,
-		},
-		flashColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		size = { 96, 13, },
+		backgroundColor = "TPOFGray180",
+		overColor = "TPOFGray140",
+		flashColor = "TPOFWhite",
 		flashSpeed = 250,
 		soundOnClicked = "SFX_ButtonClick",
 	},
 	Taskbar_ControlGroups1ButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			33,
-			11,
-		},
+		size = { 33, 11, },
 		OverGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\controlgroups.mres",
-			textureUV =
-			{
-				0,
-				0,
-				33,
-				11,
-			},
-			color =
-			{
-				0,
-				160,
-				255,
-				128,
-			},
+			textureUV = { 0, 0, 33, 11, },
+			color = "TPOFGray140HalfTransparent",
 		},
 		PressedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\controlgroups.mres",
-			textureUV =
-			{
-				0,
-				0,
-				33,
-				11,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 0, 0, 33, 11, },
+			color = "TPOFWhite",
 		},
 		FlashGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\controlgroups.mres",
-			textureUV =
-			{
-				0,
-				0,
-				33,
-				11,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 0, 0, 33, 11, },
+			color = "TPOFWhite",
 		},
 		flashSpeed = 150,
 		Text =
 		{
 			type = "Text",
 			font = "ButtonFont",
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			color = "TPOFWhite",
 			size = 8,
 			style = 1,
 			hAlign = "Center",
@@ -3800,77 +1931,31 @@ HW2StyleSheet =
 	Taskbar_ControlGroups2ButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			33,
-			11,
-		},
+		size = { 33, 11, },
 		OverGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\controlgroups.mres",
-			textureUV =
-			{
-				33,
-				0,
-				0,
-				11,
-			},
-			color =
-			{
-				0,
-				160,
-				255,
-				128,
-			},
+			textureUV = { 33, 0, 0, 11, },
+			color = "TPOFGray140HalfTransparent",
 		},
 		PressedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\controlgroups.mres",
-			textureUV =
-			{
-				33,
-				0,
-				0,
-				11,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 33, 0, 0, 11, },
+			color = "TPOFWhite",
 		},
 		FlashGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\controlgroups.mres",
-			textureUV =
-			{
-				33,
-				0,
-				0,
-				11,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			textureUV = { 33, 0, 0, 11, },
+			color = "TPOFWhite",
 		},
 		flashSpeed = 150,
 		Text =
 		{
 			type = "Text",
 			font = "ButtonFont",
-			color =
-			{
-				255,
-				255,
-				255,
-				255,
-			},
+			color = "TPOFWhite",
 			size = 8,
 			style = 1,
 			hAlign = "Center",
@@ -3880,183 +1965,30 @@ HW2StyleSheet =
 		soundOnEnter = "SFX_TaskbarControlGroupsEnter",
 		soundOnClicked = "SFX_ButtonClick",
 	},
-	Taskbar_ShipButtonStyle =
-	{
-		type = "Button",
-		toggleButton = 0,
-		outerBorderWidth = 1,
-		borderColor = "FEColorHeading3",
-		backgroundColor = "IGColorBackground1",
-		size =
-		{
-			83,
-			30,
-		},
-		DefaultGraphic =
-		{
-		color =
-            { 255, 255, 255, 255, },
-        texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
-        textureUV =
-            { 0, 0, 600, 600, }, },
-		OverGraphic =
-		{
-		color =
-            { 170, 170, 170, 255, },
-        texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
-        textureUV =
-            { 0, 0, 600, 600, }, },
-		PressedGraphic =
-		{
-		color =
-            { 0, 0, 0, 255, },
-        texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
-        textureUV =
-            { 0, 0, 600, 600, }, },
-		DisabledGraphic =
-		{
-			texture = "DATA:UI\\NewUI\\Taskbar\\ship_button.mres",
-			textureUV =
-			{
-				0,
-				0,
-				0,
-				0,
-			},
-		},
-		helpTipTextLabel = "commandsHelpTip",
-		soundOnClicked = "SFX_ButtonClick",
-		;
-		{
-			type = "Frame",
-			name = "shipIcon",
-			size =
-			{
-				81,
-				30,
-			},
-			giveParentMouseInput = 1,
-			backgroundGraphicHAlign = "Center",
-			backgroundGraphicVAlign = "Center",
-			;
-			{
-				type = "ProgressBar",
-				backgroundColor =
-				{
-					99,
-					101,
-					99,
-					255,
-				},
-				progressColor =
-				{
-					51,
-					255,
-					0,
-					255,
-				},
-				position =
-				{
-					10,
-					27,
-				},
-				size =
-				{
-					65,
-					2,
-				},
-				name = "shipHealth",
-				giveParentMouseInput = 1,
-			},
-			{
-				type = "TextLabel",
-				hAlign = "Right",
-				position =
-				{
-					 - 4,
-					14,
-				},
-				size =
-				{
-					30,
-					13,
-				},
-				name = "shipCount",
-				Text =
-				{
-					textStyle = "FEHeading4",
-					color =
-					{
-						255,
-						255,
-						255,
-						255,
-					},
-					hAlign = "Right",
-					vAlign = "Bottom",
-				},
-				giveParentMouseInput = 1,
-			},
-		},
-	},
 	Taskbar_CommandButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			30,
-			30,
-		},
+		size = { 30, 30, },
 		DefaultGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-			textureUV =
-			{
-				225,
-				1,
-				255,
-				0,
-			},
+			textureUV = { 225, 1, 255, 0, },
 		},
 		OverGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-			textureUV =
-			{
-				225,
-				33,
-				255,
-				0,
-			},
+			textureUV = { 225, 33, 255, 0, },
 		},
 		PressedGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-			textureUV =
-			{
-				225,
-				65,
-				255,
-				95,
-			},
+			textureUV = { 225, 65, 255, 95, },
 		},
 		DisabledGraphic =
 		{
 			texture = "DATA:UI\\NewUI\\Taskbar\\command_icons.mres",
-			textureUV =
-			{
-				225,
-				1,
-				255,
-				0,
-			},
-			color =
-			{
-				255,
-				255,
-				255,
-				0,
-			},
+			textureUV = { 225, 1, 255, 0, },
+			color = "TPOFWhiteTransparent",
 		},
 		soundOnClicked = "SFX_ButtonClick",
 	},
@@ -4064,36 +1996,23 @@ HW2StyleSheet =
 	{
 		type = "Button",
 		name = "subsystem1",
-		size =
-		{
-			32,
-			24,
-		},
+		borderWidth = 1,
+		overBorderColor = "TPOFBlack",
+		overColor = "TPOFGrayHalfTransparent",
+		pressedColor = "TPOFBlackMostlyOpaque",
+		pressedBorderColor = "FEColorHeading3",
+		pressedTextColor = "TPOFWhite",
+		disabledBorderColor = "TPOFBlackHalfTransparent",
+		disabledTextColor = "TPOFGrayLight",
+		size = { 15, 15, },
 		helpTipTextLabel = "commandsHelpTip",
 		soundOnClicked = "SFX_ButtonClick",
-		;
-		{
-			type = "Frame",
-			name = "icon",
-			size =
-			{
-				32,
-				24,
-			},
-			giveParentMouseInput = 1,
-		},
 	},
 	RightClickMenu_ButtonTextStyle =
 	{
 		type = "Text",
 		font = "ButtonFont",
-		color =
-		{
-			0,
-			175,
-			255,
-			255,
-		},
+		color = "TPOFBlack",
 		size = 8,
 		style = 1,
 		hAlign = "Center",
@@ -4103,61 +2022,22 @@ HW2StyleSheet =
 		type = "Button",
 		toggleButton = 1,
 		borderWidth = 1,
-		borderColor =
-		{
-			0,
-			175,
-			255,
-			255,
-		},
-		overColor =
-		{
-			48,
-			108,
-			136,
-			255,
-		},
-		overBorderColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		pressedColor =
-		{
-			48,
-			108,
-			136,
-			255,
-		},
-		disabledBorderColor =
-		{
-			0,
-			175,
-			255,
-			255,
-		},
-		disabledTextColor =
-		{
-			0,
-			175,
-			255,
-			128,
-		},
+		borderColor = "TPOFBlack",
+		overColor = "TPOFBlackHalfTransparent",
+		overBorderColor = "FEColorHeading3",
+		overTextColor = "TPOFBlack",
+		pressedColor = "TPOFBlackMostlyOpaque",
+		pressedBorderColor = "FEColorHeading3",
+		pressedTextColor = "TPOFWhite",
+		disabledBorderColor = "TPOFBlackHalfTransparent",
+		disabledTextColor = "TPOFGrayLight",
 		soundOnClicked = "SFX_RightClickMenuClick",
 	},
 	DiplomacyScreen_ButtonTextStyle =
 	{
 		type = "Text",
 		font = "ButtonFont",
-		color =
-		{
-			0,
-			175,
-			255,
-			255,
-		},
+		color = "TPOFGray180",
 		size = 8,
 		style = 1,
 		hAlign = "Center",
@@ -4171,13 +2051,7 @@ HW2StyleSheet =
 	{
 		type = "Text",
 		font = "ButtonFont",
-		color =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		color = "TPOFWhite",
 		size = 8,
 		style = 1,
 		hAlign = "Left",
@@ -4186,47 +2060,23 @@ HW2StyleSheet =
 	DiplomacyScreen_PlayerButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			219,
-			27,
-		},
+		size = { 219, 27, },
 		toggleButton = 1,
 		borderWidth = 1,
 		borderColor = "IGColorOutline",
 		disabledBorderColor = "IGColorOutline",
 		pressedColor = "IGColorButtonPressed",
-		overBorderColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		overBorderColor = "TPOFWhite",
 		flashColor = "IGColorButtonPressed",
-		flashBorderColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		flashBorderColor = "TPOFWhite",
 		flashSpeed = 250,
 		soundOnClicked = "SFX_ButtonClick",
 		;
 		{
 			type = "TextLabel",
 			name = "name",
-			position =
-			{
-				20,
-				0,
-			},
-			size =
-			{
-				135,
-				27,
-			},
+			position = { 20, 0, },
+			size = { 135, 27, },
 			Text =
 			{
 				textStyle = "DiplomacyScreen_PlayerButtonTextStyle",
@@ -4235,159 +2085,67 @@ HW2StyleSheet =
 		},
 		{
 			type = "Frame",
-			position =
-			{
-				155,
-				5,
-			},
-			size =
-			{
-				60,
-				16,
-			},
-			backgroundColor =
-			{
-				94,
-				151,
-				48,
-				255,
-			},
+			position = { 155, 5, },
+			size = { 60, 16, },
+			backgroundColor = "TPOFGray100",
 			outerBorderWidth = 1,
-			borderColor =
-			{
-				0,
-				0,
-				0,
-				255,
-			},
+			borderColor = "TPOFBlack",
 			name = "teamcolor",
 			visible = 0,
 			giveParentMouseInput = 1,
 			;
 			{
 				type = "Frame",
-				position =
-				{
-					20,
-					0,
-				},
-				size =
-				{
-					40,
-					16,
-				},
+				position = { 20, 0, },
+				size = { 40, 16, },
 				name = "teamstripe",
 				BackgroundGraphic =
 				{
-					size =
-					{
-						40,
-						16,
-					},
+					size = { 40, 16, },
 					texture = "DATA:UI\\NewUI\\PlayerSetup\\stripes_small.tga",
-					textureUV =
-					{
-						0,
-						0,
-						40,
-						16,
-					},
+					textureUV = { 0, 0, 40, 16, },
 				},
 				giveParentMouseInput = 1,
 			},
 			{
 				type = "Frame",
-				position =
-				{
-					3,
-					0,
-				},
-				size =
-				{
-					16,
-					16,
-				},
+				position = { 3, 0, },
+				size = { 16, 16, },
 				name = "emblem",
 				BackgroundGraphic =
 				{
-					size =
-					{
-						16,
-						16,
-					},
+					size = { 16, 16, },
 					texture = "DATA:Badges/Hiigaran.tga",
-					textureUV =
-					{
-						0,
-						0,
-						64,
-						64,
-					},
+					textureUV = { 0, 0, 64, 64, },
 				},
 				giveParentMouseInput = 1,
 			},
 		},
 		{
 			type = "Frame",
-			position =
-			{
-				4,
-				7,
-			},
-			size =
-			{
-				11,
-				11,
-			},
+			position = { 4, 7, },
+			size = { 11, 11, },
 			name = "iconrequest",
 			visible = 0,
 			BackgroundGraphic =
 			{
-				size =
-				{
-					11,
-					11,
-				},
+				size = { 11, 11, },
 				texture = "DATA:UI\\NewUI\\InGameIcons\\allyrequest.tga",
-				textureUV =
-				{
-					0,
-					0,
-					11,
-					11,
-				},
+				textureUV = { 0, 0, 11, 11, },
 			},
 			giveParentMouseInput = 1,
 		},
 		{
 			type = "Frame",
-			position =
-			{
-				4,
-				7,
-			},
-			size =
-			{
-				11,
-				11,
-			},
+			position = { 4, 7, },
+			size = { 11, 11, },
 			name = "iconallies",
 			visible = 0,
 			BackgroundGraphic =
 			{
-				size =
-				{
-					11,
-					11,
-				},
+				size = { 11, 11, },
 				texture = "DATA:UI\\NewUI\\InGameIcons\\allies.tga",
-				textureUV =
-				{
-					0,
-					0,
-					11,
-					11,
-				},
+				textureUV = { 0, 0, 11, 11, },
 			},
 			giveParentMouseInput = 1,
 		},
@@ -4396,75 +2154,23 @@ HW2StyleSheet =
 	{
 		type = "Text",
 		font = "ChatFont",
-		color =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
+		color = "TPOFWhite",
 		hAlign = "Left",
 	},
 	Chat_PlayerButtonStyle =
 	{
 		type = "Button",
-		size =
-		{
-			86,
-			13,
-		},
+		size = { 86, 13, },
 		borderWidth = 1,
 		borderColor = "IGColorOutline",
-		overColor =
-		{
-			48,
-			108,
-			136,
-			128,
-		},
-		pressedColor =
-		{
-			48,
-			108,
-			136,
-			255,
-		},
-		disabledColor =
-		{
-			0,
-			0,
-			0,
-			0,
-		},
+		overColor = "TPOFGray100HalfTransparent",
+		pressedColor = "TPOFGray100",
+		disabledColor = "TPOFTransparent",
 		disabledBorderColor = "IGColorOutline",
-		textColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		overTextColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		pressedTextColor =
-		{
-			255,
-			255,
-			255,
-			255,
-		},
-		disabledTextColor =
-		{
-			255,
-			255,
-			255,
-			128,
-		},
+		textColor = "TPOFWhite",
+		overTextColor = "TPOFWhite",
+		pressedTextColor = "TPOFWhite",
+		disabledTextColor = "TPOFWhiteHalfTransparent",
 		marginWidth = 6,
 		Text =
 		{

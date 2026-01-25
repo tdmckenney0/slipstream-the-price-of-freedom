@@ -32,7 +32,14 @@ FleetMenu =
         { 4, 514, },
     size =
         { 138, 65, },
+    outerBorderWidth = 1,
+    borderColor = "TPOFBlack",
     backgroundColor = "IGColorBackground1",
+    BackgroundGraphic =
+    {
+    texture = "DATA:UI\\NewUI\\Textures\\gradient.tga",
+    textureUV =
+        { 0, 0, 600, 600, }, },
 ;
 {
     type = "TextLabel",
@@ -40,17 +47,13 @@ FleetMenu =
         { -2, 0, },
     size =
         { 144, 18, },
-    borderColor =
-        { 170, 227, 255, 255, },
-    borderWidth = 2,
     Text =
     {
-        textStyle = "IGHeading2",
+        textStyle = "IGHeading1",
         hAlign = "Left",
         offset =
             { 8, 0, },
-        color =
-            { 255, 255, 255, 255, },
+        color = "TPOFBlack",
         text = "$5452", },
 },
 {
