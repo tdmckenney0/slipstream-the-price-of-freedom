@@ -67,21 +67,6 @@ PersistantData = {
             name = "",
             number = 1,
         },
-        -- Platforms
-        {
-            type = "Hgn_IonTurret",
-            subsystems = {},
-            shiphold = {},
-            name = "",
-            number = 5,
-        },
-        {
-            type = "Hgn_GunTurret",
-            subsystems = {},
-            shiphold = {},
-            name = "",
-            number = 5,
-        },
         -- Utility
         {
             type = "Hgn_ResourceCollector",

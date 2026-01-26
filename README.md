@@ -120,15 +120,11 @@ TPOF includes an original soundtrack by myself and DJZ4K; choose "Shuffle Slipst
 
 #### Hyperspace (Slipstream)
 
-Hiigaran and Vaygr capital ships are now equipped with Slipstream drives that make hyperspace fast and free. Strikecraft and Platforms can now be delivered to the battlefield via ships equipped with a Hyperspace Module.
+Hiigaran and Vaygr capital ships are now equipped with Slipstream drives that make hyperspace fast and free. Strikecraft can now be delivered to the battlefield via ships equipped with a Hyperspace Module.
 
 #### Strikecraft
 
 Strikecraft (Fighters, Corvettes) are faster, more evasive, and break formation often when attacking. Strikecraft are also now capable of being deployed via hyperspace when near a larger ship equipped with a Hyperspace Module subsystem. 
-
-#### Platforms
-
-Platforms can now be moved multiple times, delivered via hyperspace using a module, and also issued guard orders. However, they are slow, weakly armored, and do not engage enemies outside of range. A useful strategy is to have platforms accompany strikecraft when being deployed via hyperspace; Platforms will provide covering fire long enough for strikecraft to get up to speed and scatter.
 
 #### Capital Ships
 
