@@ -49,7 +49,7 @@ PersistantData = {
         },
         {
           index = 0,
-          name = "VGR_C_MODULE_PLATFORMCONTROL",
+          name = "VGR_C_MODULE_HYPERSPACE",
         },
         {
           index = 0,
@@ -59,21 +59,6 @@ PersistantData = {
       shiphold = {},
       name = "",
       number = 1,
-    },
-    -- Platforms
-    {
-      type = "vgr_weaponplatform_gun",
-      subsystems = {},
-      shiphold = {},
-      name = "",
-      number = 5,
-    },
-    {
-      type = "vgr_weaponplatform_missile",
-      subsystems = {},
-      shiphold = {},
-      name = "",
-      number = 5,
     },
     -- Utility
     {
