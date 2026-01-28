@@ -41,7 +41,7 @@ PersistantData = {
       subsystems = {
         {
           index = 0,
-          name = "VGR_C_PRODUCTION_FRIGATE",
+          name = "VGR_C_MODULE_CLOAKGENERATOR",
         },
         {
           index = 0,
@@ -49,7 +49,7 @@ PersistantData = {
         },
         {
           index = 0,
-          name = "VGR_C_MODULE_PLATFORMCONTROL",
+          name = "VGR_C_MODULE_HYPERSPACE",
         },
         {
           index = 0,
@@ -59,21 +59,6 @@ PersistantData = {
       shiphold = {},
       name = "",
       number = 1,
-    },
-    -- Platforms
-    {
-      type = "vgr_weaponplatform_gun",
-      subsystems = {},
-      shiphold = {},
-      name = "",
-      number = 5,
-    },
-    {
-      type = "vgr_weaponplatform_missile",
-      subsystems = {},
-      shiphold = {},
-      name = "",
-      number = 5,
     },
     -- Utility
     {
@@ -100,7 +85,7 @@ PersistantData = {
         },
         {
           index = 0,
-          name = "VGR_C_PRODUCTION_FIGHTER"
+          name = "VGR_C_MODULE_FIRECONTROL"
         }
       },
       shiphold = {},
@@ -112,7 +97,7 @@ PersistantData = {
       subsystems = {
         {
           index = 0,
-          name = "VGR_C_PRODUCTION_CORVETTE",
+          name = "VGR_C_Module_HyperspaceInhibitor",
         },
         {
           index = 0,
