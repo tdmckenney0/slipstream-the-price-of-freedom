@@ -6,6 +6,9 @@
 function RestrictOptions(playerid)
     local playerRace = Player_GetRace(playerid)
     if  playerRace==Race_Hiigaran then
+        Player_RestrictBuildOption(playerid, "Hgn_C_Production_Fighter")
+        Player_RestrictBuildOption(playerid, "Hgn_C_Production_Corvette")
+        Player_RestrictBuildOption(playerid, "Hgn_C_Production_Frigate")
         Player_RestrictBuildOption(playerid, "Hgn_MS_Production_CorvetteMover")
         Player_RestrictBuildOption(playerid, "Kpr_Mover")
         Player_RestrictBuildOption(playerid, "Hgn_Shipyard_SPG")

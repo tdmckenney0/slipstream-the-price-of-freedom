@@ -155,7 +155,7 @@ addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "munition, Capturer,
 {
     Mothership = "Flyround_destroyer",})
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
-addAbility(NewShipType, "CanBuildShips", 1,"Fighter_Vgr, Corvette_Vgr, SubSystem_Vgr, Battlecruiser_Vgr, SuperCap_Vgr","Fighter, Corvette, Capital, SubSystemModule")
+addAbility(NewShipType, "CanBuildShips", 1,"Fighter_Vgr, Corvette_Vgr, Frigate_Vgr,SubSystem_Vgr, Battlecruiser_Vgr, SuperCap_Vgr","Fighter, Corvette, Frigate, Capital, SubSystemModule")
 addAbility(NewShipType, "CanBeCaptured", 160, 0.1)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "MinelayerAbility",1,3.5)
@@ -176,8 +176,8 @@ StartShipWeaponConfig(NewShipType, "Vgr_BCForwardWeapon", "Weapon_BCUberPulse", 
 addShield(NewShipType, "EMP", 10000, 20)
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_BattleCruiserEngine", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Heavy Fusion Missile Launcher", "Weapon_MissileBattery", "Weapon", "Innate", "Damageable", "Vgr_HeavyFusionMissileLauncherBC", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System", "Generic", "Destroyable", "", "Vgr_C_Production_Fighter", "Vgr_C_Production_Corvette", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_FireControl", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Generic 2", "HardpointGeneric2", "System", "Generic", "Destroyable", "", "Vgr_C_Production_Fighter", "Vgr_C_Production_Corvette", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_FireControl", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_FireControl", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Generic 2", "HardpointGeneric2", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_FireControl", "", "", "", "")
 --boosters
 
 StartShipHardPointConfig(NewShipType, "Boost1", "Hardpoint_Boost1", "Weapon", "Innate", "Damageable", "vgr_bc_booster", "", "", "", "", "", "", "", "")
