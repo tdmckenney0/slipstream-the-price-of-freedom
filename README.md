@@ -140,6 +140,8 @@ You can mouse over each button to see a tooltip describing its function.
 
 #### Orders Menu
 
+The Orders Menu has replaced the orders button table found in the original game. 
+
 ![1440p_hgn_battlecruiser_orders_menu](./screenshots/1440p_hgn_battlecruiser_orders_menu.jpg)
 
 ### Gameplay
