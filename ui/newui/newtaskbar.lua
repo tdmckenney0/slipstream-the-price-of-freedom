@@ -441,6 +441,33 @@ function NewTaskbarCreateShipDetailsFrame(pName, pPositionX, pPositionY, pSizeX,
 
 		{
 			type = "Frame",
+			name = "subsystemselected",
+			position = { (pSizeX / 2), 1 },
+			size = { 100, 28 },
+			BackgroundGraphic = {
+				texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_pointer_tpof.tga",
+				textureUV = { 0, 0, 159, 45 },
+			},
+			;
+
+			{
+				type = "Frame",
+				position = {69, 9},
+				size = {32, 16},
+				name = "subsystemIcon",
+			},
+			{
+				type = "ProgressBar",
+				backgroundColor = { 0, 128, 0, 255},
+				progressColor = { 0, 255, 0, 255},
+				position = { 70, 6},
+				size = { 25, 2},
+				name = "subsystemProgress",
+			},
+		},
+
+		{
+			type = "Frame",
 			position = { pSizeX - 6 * 20, 0},
 			size = { 6 * 20, pSizeY },
 			;
@@ -487,33 +514,6 @@ function NewTaskbarCreateShipDetailsFrame(pName, pPositionX, pPositionY, pSizeX,
 				borderColor = "TPOFBlack",
 				helpTip = "$2814",
 				soundOnClicked = "SFX_ButtonClick",
-			},
-
-			{
-				type = "Frame",
-				name = "subsystemselected",
-				position = { 93, 7},
-				size = { 159, 45},
-				BackgroundGraphic = {
-					texture = "DATA:UI\\NewUI\\Taskbar\\subsystem_pointer_tpof.tga",
-					textureUV = { 0, 0, 159, 45 },
-				},
-				;
-
-				{
-					type = "Frame",
-					position = {104, 9},
-					size = {64, 32},
-					name = "subsystemIcon",
-				},
-				{
-					type = "ProgressBar",
-					backgroundColor = { 0, 128, 0, 255},
-					progressColor = { 0, 255, 0, 255},
-					position = { 111, 6},
-					size = { 40, 2},
-					name = "subsystemProgress",
-				},
 			},
 		},
 
