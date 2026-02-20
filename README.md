@@ -106,6 +106,15 @@ LAN multiplayer has been tested with TPOF on both Windows 7 and Windows 11, and 
 
 Direct Connection multiplayer can be used to directly connect to another network across the internet. For this method to work on modern networks, the following **UDP** ports need to be forwarded from the host's local network router or gateway to the machine TPOF is going to be running on: `6073`,`6500`,`13139`, and port range `2302` to `2400`. When joining a game, enter the host network's public IP address into the connection box, and click join. This method has also been tested on Windows 11, and "seems to work fine".
 
+### User Interface
+
+![1440p_hgn_battlecruiser_full_newui](./screenshots/1440p_hgn_battlecruiser_full_newui.jpg)
+![1440p_hgn_carrier_hidden_menubar](./screenshots/1440p_hgn_carrier_hidden_menubar.jpg)
+
+#### Orders Menu
+
+![1440p_hgn_battlecruiser_orders_menu](./screenshots/1440p_hgn_battlecruiser_orders_menu.jpg)
+
 ### Gameplay
 
 Though using the same game engine and assets, _Slipstream: The Price of Freedom_ is very different from Homeworld 2. Emphasis on fleet building and long-term strategy has been heavily reduced in favor of fast-paced tactical gameplay with a focus on combat.
@@ -270,6 +279,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 ![1440p_destroyer_dodges_green_beam](./screenshots/1440p_destroyer_dodges_green_beam.jpg)
 ![1440p_destroyer_does_a_flip](./screenshots/1440p_destroyer_does_a_flip.jpg)
 ![1440p_destroyer_fires_everything](./screenshots/1440p_destroyer_fires_everything.jpg)
+![1440p_hgn_dreadnaught_build_options](./screenshots/1440p_hgn_dreadnaught_build_options.jpg)
 ![1440p_destroyer_space_cowboy](./screenshots/1440p_destroyer_space_cowboy.jpg)
 ![1440p_mining_outpost_bentusi_trade_derelict](./screenshots/1440p_mining_outpost_bentusi_trade_derelict.jpg)
 ![1440p_research_outpost_hyperspace_module](./screenshots/1440p_research_outpost_hyperspace_module.jpg)
