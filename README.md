@@ -108,7 +108,34 @@ Direct Connection multiplayer can be used to directly connect to another network
 
 ### User Interface
 
+#### Taskbar
+
+The in-game taskbar has been split into two separate sections. Using the **backspace key**, the player can toggle between four different UI states: 
+
+1. All UI bars visible
+2. Menu bar hidden
+3. Menu and selection bars hidden
+4. Menu, selection, and resource bars hidden 
+
+##### Menu Bar
+
+The bottom section, or menu bar, contains the many different menus for the game.
+
 ![1440p_hgn_battlecruiser_full_newui](./screenshots/1440p_hgn_battlecruiser_full_newui.jpg)
+
+##### Selection bar
+
+The top section, or selection bar, contains the currently focused ships or subsystems. Here you'll also find four small bumper buttons:
+
+ - _Left Bumper_
+    + _Top:_ Return to ship list
+    + _Bottom:_ Previous Page (Ship List)
+ - _Right Bumper_
+    + _Top:_ Minimize/Maximize selection bar
+    + _Bottom:_ Next Page (Ship List)
+
+You can mouse over each button to see a tooltip describing its function.
+
 ![1440p_hgn_carrier_hidden_menubar](./screenshots/1440p_hgn_carrier_hidden_menubar.jpg)
 
 #### Orders Menu
