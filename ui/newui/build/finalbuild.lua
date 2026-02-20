@@ -122,7 +122,7 @@ NewBuildMenu =
     backgroundColor =
         { 0, 128, 0, 255, },
     progressColor =
-        { 0, 255, 0, 255, },
+        { 30, 252, 163, 255, },
     borderColor =
         { 0, 0, 0, 255, },
     outerBorderWidth = 1,
