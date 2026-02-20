@@ -87,13 +87,14 @@ function NewTaskbarCreateDummyButton(pName)
 end
 
 
-function NewTaskbarCreateBumperButton(pName, pHelpTip, pPositionX, pPositionY, pWidth, pHeight, pIsVisible)
+function NewTaskbarCreateBumperButton(pName, pHelpTip, pPositionX, pPositionY, pWidth, pHeight, pIsVisible, pHotKeyID)
 	return {
 		type = "Button",
 		buttonStyle = "Taskbar_PanelButtonStyle",
 		position = {pPositionX, pPositionY},
 		size = {pWidth, pHeight},
 		name = pName,
+		hotKeyID = pHotKeyID,
 		helpTip = pHelpTip,
 		helpTipTextLabel = "commandsHelpTip",
 		visible = pIsVisible,
@@ -657,9 +658,9 @@ function NewTaskbarCreateSelectionBar(pName, pPositionX, pPositionY, pSizeX, pSi
 		NewTaskbarCreateShipDetailsFrame("unitStats", bumperButtonWidth, 0, pSizeX - (bumperButtonWidth * 2), pSizeY),
 
 		-- back button, hide buttons
-		NewTaskbarCreateBumperButton("btnHide1", "$2738", pSizeX - bumperButtonWidth, 0, bumperButtonWidth, bumperButtonHeight, 1), -- Visible until the engine binding is used
-		NewTaskbarCreateBumperButton("btnHide2", "$2739", pSizeX - bumperButtonWidth, 0, bumperButtonWidth, bumperButtonHeight, 0), -- Invisible until the engine binding is used
-		NewTaskbarCreateBumperButton("btnShipBack", "$2732", 0, 0, bumperButtonWidth, bumperButtonHeight, 1),
+		NewTaskbarCreateBumperButton("btnHide1", "$2738", pSizeX - bumperButtonWidth, 0, bumperButtonWidth, bumperButtonHeight, 1, 55), -- Visible until the engine binding is used
+		NewTaskbarCreateBumperButton("btnHide2", "$2739", pSizeX - bumperButtonWidth, 0, bumperButtonWidth, bumperButtonHeight, 0, 55), -- Invisible until the engine binding is used
+		NewTaskbarCreateBumperButton("btnShipBack", "$2732", 0, 0, bumperButtonWidth, bumperButtonHeight, 1, nil),
 
 		-- next/prev ship dummy buttons to show when the selection bar is shown.
 		{
@@ -686,8 +687,8 @@ function NewTaskbarCreateSelectionBar(pName, pPositionX, pPositionY, pSizeX, pSi
 		},
 
 		-- next/prev ship buttons
-		NewTaskbarCreateBumperButton("btnShipPrev", "$2730", 0, bumperButtonHeight, bumperButtonWidth, bumperButtonHeight, 0),
-		NewTaskbarCreateBumperButton("btnShipNext", "$2731", pSizeX - bumperButtonWidth, bumperButtonHeight, bumperButtonWidth, bumperButtonHeight, 0),
+		NewTaskbarCreateBumperButton("btnShipPrev", "$2730", 0, bumperButtonHeight, bumperButtonWidth, bumperButtonHeight, 0, nil),
+		NewTaskbarCreateBumperButton("btnShipNext", "$2731", pSizeX - bumperButtonWidth, bumperButtonHeight, bumperButtonWidth, bumperButtonHeight, 0, nil),	
    };
 end
 
