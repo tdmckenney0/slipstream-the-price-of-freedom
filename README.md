@@ -285,6 +285,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 ![1440p_research_outpost_hyperspace_module](./screenshots/1440p_research_outpost_hyperspace_module.jpg)
 ![1440p_dreadnaught_chillin](./screenshots/1440p_dreadnaught_chillin.jpg)
 ![1440p_sri_sajuuk_attacks_1](./screenshots/1440p_sri_sajuuk_attacks_1.jpg)
+![1440p_research_outpost_down_range](./screenshots/1440p_research_outpost_down_range.jpg)
 ![1440p_sri_sajuuk_attacks_2](./screenshots/1440p_sri_sajuuk_attacks_2.jpg)
 ![1440p_sri_dreadnaught_cannon](./screenshots/1440p_sri_dreadnaught_cannon.jpg)
 ![1440p_dreadnaught_chillin_2](./screenshots/1440p_dreadnaught_chillin_2.jpg)
