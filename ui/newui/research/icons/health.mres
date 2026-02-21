@@ -1,0 +1,7 @@
+-- LuaDC version 0.9.20
+-- 12/20/2025 8:42:38 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+baseRes = 800
+res1600 = "data:ui/newui/research/icons/health_1600_tpof.tga"

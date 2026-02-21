@@ -106,6 +106,44 @@ LAN multiplayer has been tested with TPOF on both Windows 7 and Windows 11, and 
 
 Direct Connection multiplayer can be used to directly connect to another network across the internet. For this method to work on modern networks, the following **UDP** ports need to be forwarded from the host's local network router or gateway to the machine TPOF is going to be running on: `6073`,`6500`,`13139`, and port range `2302` to `2400`. When joining a game, enter the host network's public IP address into the connection box, and click join. This method has also been tested on Windows 11, and "seems to work fine".
 
+### User Interface
+
+#### Taskbar
+
+The in-game taskbar has been split into two separate sections. Using the **backspace key**, the player can toggle between four different UI states: 
+
+1. All UI bars visible
+2. Menu bar hidden
+3. Menu and selection bars hidden
+4. Menu, selection, and resource bars hidden 
+
+##### Menu Bar
+
+The bottom section, or menu bar, contains the many different menus for the game.
+
+![1440p_hgn_battlecruiser_full_newui](./screenshots/1440p_hgn_battlecruiser_full_newui.jpg)
+
+##### Selection bar
+
+The top section, or selection bar, contains the currently focused ships or subsystems. Here you'll also find four small bumper buttons:
+
+ - _Left Bumper_
+    + _Top:_ Return to ship list
+    + _Bottom:_ Previous Page (Ship List)
+ - _Right Bumper_
+    + _Top:_ Minimize/Maximize selection bar
+    + _Bottom:_ Next Page (Ship List)
+
+You can mouse over each button to see a tooltip describing its function.
+
+![1080p_hgn_carrier_hidden_menubar](./screenshots/1080p_hgn_carrier_hidden_menubar.jpg)
+
+#### Orders Menu
+
+The Orders Menu has replaced the orders button table found in the original game. 
+
+![1080p_hgn_battlecruiser_orders_menu](./screenshots/1080p_hgn_battlecruiser_orders_menu.jpg)
+
 ### Gameplay
 
 Though using the same game engine and assets, _Slipstream: The Price of Freedom_ is very different from Homeworld 2. Emphasis on fleet building and long-term strategy has been heavily reduced in favor of fast-paced tactical gameplay with a focus on combat.
@@ -267,22 +305,20 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 ## Screenshots
 
 ![1440p_battlecruiser_attacks_no_ui.jpg](./screenshots/1440p_battlecruiser_attacks_no_ui.jpg)
-![1440p_battlecruiser_ui_on_the_unbound.jpg](./screenshots/1440p_battlecruiser_ui_on_the_unbound.jpg)
-![1440p_dreadnaught_build_options.jpg](./screenshots/1440p_dreadnaught_build_options.jpg)
 ![1440p_destroyer_dodges_green_beam](./screenshots/1440p_destroyer_dodges_green_beam.jpg)
 ![1440p_destroyer_does_a_flip](./screenshots/1440p_destroyer_does_a_flip.jpg)
 ![1440p_destroyer_fires_everything](./screenshots/1440p_destroyer_fires_everything.jpg)
+![1080p_hgn_dreadnaught_build_options](./screenshots/1080p_hgn_dreadnaught_build_options.jpg)
 ![1440p_destroyer_space_cowboy](./screenshots/1440p_destroyer_space_cowboy.jpg)
-![1440p_research_outpost_hgn_start_with_ui](./screenshots/1440p_research_outpost_hgn_start_with_ui.jpg)
+![1080p_trigs_bones_hgn_fleet](./screenshots/1080p_trigs_bones_hgn_fleet.jpg)
 ![1440p_mining_outpost_bentusi_trade_derelict](./screenshots/1440p_mining_outpost_bentusi_trade_derelict.jpg)
-![1440p_research_outpost_hyperspace_module](./screenshots/1440p_research_outpost_hyperspace_module.jpg)
+![1080p_research_outpost_hyperspace_module](./screenshots/1080p_research_outpost_hyperspace_module.jpg)
 ![1440p_dreadnaught_chillin](./screenshots/1440p_dreadnaught_chillin.jpg)
 ![1440p_sri_sajuuk_attacks_1](./screenshots/1440p_sri_sajuuk_attacks_1.jpg)
+![1080p_research_outpost_down_range](./screenshots/1080p_research_outpost_down_range.jpg)
 ![1440p_sri_sajuuk_attacks_2](./screenshots/1440p_sri_sajuuk_attacks_2.jpg)
 ![1440p_sri_dreadnaught_cannon](./screenshots/1440p_sri_dreadnaught_cannon.jpg)
-![1440p_sri_sajuuk_at_shipyard](./screenshots/1440p_sri_sajuuk_at_shipyard.jpg)
 ![1440p_dreadnaught_chillin_2](./screenshots/1440p_dreadnaught_chillin_2.jpg)
 ![1440p_the_unbound_after_battle](./screenshots/1440p_the_unbound_after_battle.jpg)
-![1440p_trigs_bones_start_with_ui](./screenshots/1440p_trigs_bones_start_with_ui.jpg)
 ![1440p_vgr_battlecruiser_reposition](./screenshots/1440p_vgr_battlecruiser_reposition.jpg)
 ![1440p_starjumper_derelict](./screenshots/1440p_starjumper_derelict.jpg)
