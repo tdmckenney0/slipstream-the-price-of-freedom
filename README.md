@@ -121,7 +121,7 @@ The in-game taskbar has been split into two separate sections. Using the **backs
 
 The bottom section, or menu bar, contains the many different menus for the game.
 
-![1440p_hgn_battlecruiser_full_newui](./screenshots/1440p_hgn_battlecruiser_full_newui.jpg)
+![1080p_hgn_battlecruiser_full_newui](./screenshots/1080p_hgn_battlecruiser_full_newui.jpg)
 
 ##### Selection bar
 
