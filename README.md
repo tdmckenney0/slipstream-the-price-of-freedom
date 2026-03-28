@@ -1,4 +1,4 @@
-![Slipstream: The Price of Freedom](./slipstream-tpof-logo.png)
+![Slipstream: The Price of Freedom](./artwork/slipstream-tpof-logo.png)
 
 _Slipstream: The Price of Freedom_ is a mod for Homeworld 2 Classic, set in the Slipstream universe, an alternative timeline to _Homeworld_. It transform's Homeworld 2's gameplay into a fast-paced tactical arena with a dark sci-fi theme inspired by _Homeworld: Cataclysm_, _Halo_, and _Earth 2150_. _The Price of Freedom_ is designed around a mixture of cooperative and competitive multiplayer, with levels including set pieces and objectives-by-design. It is more difficult and chaotic compared to standard _Homeworld 2_, requiring less focus on climbing the tech tree, and more on ship loadouts and configuration. 
 
@@ -200,7 +200,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### As-Sirat
 
-![As-Sirat](./leveldata/multiplayer/slipstream/2p_as_sirat.jpg)
+![As-Sirat](./src/leveldata/multiplayer/slipstream/2p_as_sirat.jpg)
 
 > The Bentusi once guided travelers between these two Slipgates for those lost in the nebula do not return...
 
@@ -208,7 +208,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### Research Outpost
 
-![Research Outpost](./leveldata/multiplayer/slipstream/2p_research_outpost.jpg)
+![Research Outpost](./src/leveldata/multiplayer/slipstream/2p_research_outpost.jpg)
 
 > SRI has salvaged many ancient artifacts and brought them to this outpost for further study.
 
@@ -216,7 +216,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### The Graveyard
 
-![The Graveyard](./leveldata/multiplayer/slipstream/2p_the_graveyard.jpg)
+![The Graveyard](./src/leveldata/multiplayer/slipstream/2p_the_graveyard.jpg)
 
 > Historians are not quite sure why so many empires met their end in this system. 
 
@@ -224,7 +224,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### Assault
 
-![Assault](./leveldata/multiplayer/slipstream/3p_assault.jpg)
+![Assault](./src/leveldata/multiplayer/slipstream/3p_assault.jpg)
 
 > Formerly Hiigaran colonies, these moons now serve as a staging and resupply outpost for the Vaygr.
 
@@ -232,7 +232,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### Standoff
 
-![Standoff](./leveldata/multiplayer/slipstream/3p_standoff.jpg)
+![Standoff](./src/leveldata/multiplayer/slipstream/3p_standoff.jpg)
 
 > This system isn't expansive enough for three fleets of warships.
 
@@ -240,7 +240,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### Trig's Bones
 
-![Trig's Bones](./leveldata/multiplayer/slipstream/3p_trigs_bones.jpg)
+![Trig's Bones](./src/leveldata/multiplayer/slipstream/3p_trigs_bones.jpg)
 
 > The legendsmiths have long told the tale of Trig Soban, an accomplished Soban mercenary, who in the year 497 traveled to the northern lands to fight for a new employer. Upon arriving at the lord's town Trig found it under siege. Broken and defeated his employer told Trig that he was free to go, the battle obviously lost. But a Soban warrior is bound by honor to fight until the terms of a contract are fulfilled. The legendsmiths say that the lord's dismissal still hung in the air as Trig drew his sword, turned, and marched out of the town, where he proceeded to single-handedly cut a bloody swath to the middle of the enemy encampment. They say he managed to kill their general before he was cut down himself. They say the Soban never recovered the body of their brother. They say that in a rage, the enemy lord had Trig's body scattered across the continent. When we took to the stars the legends traveled with us and to this day, this strange area of space is referred to as Trig's Bones, a memorial to the legendary fighter.
 
@@ -248,7 +248,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### High Dive
 
-![High Dive](./leveldata/multiplayer/slipstream/4p_high_dive.jpg)
+![High Dive](./src/leveldata/multiplayer/slipstream/4p_high_dive.jpg)
 
 > This planetoid broke up as it began its fall into the black hole below.
 
@@ -256,7 +256,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### The Battlefield
 
-![The Battlefield](./leveldata/multiplayer/slipstream/4p_the_battlefield.jpg)
+![The Battlefield](./src/leveldata/multiplayer/slipstream/4p_the_battlefield.jpg)
 
 > They say it's an honorable place to meet, though don't expect a fair fight.
 
@@ -264,7 +264,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### The Unbound
 
-![The Unbound](./leveldata/multiplayer/slipstream/4p_the_unbound.jpg)
+![The Unbound](./src/leveldata/multiplayer/slipstream/4p_the_unbound.jpg)
 
 > Overwhelmed by the Beast, this is the final resting place of the Bentusi.
 
@@ -272,7 +272,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### Mining Outpost
 
-![Mining Outpost](./leveldata/multiplayer/slipstream/5p_mining_outpost.jpg)
+![Mining Outpost](./src/leveldata/multiplayer/slipstream/5p_mining_outpost.jpg)
 
 > This mining operation is key to Vaygr strategy in the region.
 
@@ -280,7 +280,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### The Final Battle
 
-![The Final Battle](./leveldata/multiplayer/slipstream/5p_the_final_battle.jpg)
+![The Final Battle](./src/leveldata/multiplayer/slipstream/5p_the_final_battle.jpg)
 
 > SRI has been secretly constructing a new flagship from salvaged Bentusi technology.
 
@@ -288,7 +288,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### The Badlands
 
-![The Badlands](./leveldata/multiplayer/slipstream/6p_badlands.jpg)
+![The Badlands](./src/leveldata/multiplayer/slipstream/6p_badlands.jpg)
 
 > Let us never forget those who journeyed into the howling dark and did not return.
 
@@ -296,7 +296,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### Garrison
 
-![Garrison](./leveldata/multiplayer/slipstream/6p_garrison.jpg)
+![Garrison](./src/leveldata/multiplayer/slipstream/6p_garrison.jpg)
 
 > This heavily defended Vaygr outpost is the last standing within the sector.
 
