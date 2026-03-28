@@ -15,7 +15,7 @@ This repository contains the source code for the **Slipstream: The Price of Free
 - `src/ship/`: Definitions for all ships, including custom SRI units.
 - `src/subsystem/`: Contains the various loadout options for ship weapon slots.
 - `src/scripts/building and research/`: Defines the buildable units for each race. Note that research is heavily simplified and mostly pre-granted.
-- `src/scripts/restrict.lua`: Crucial file that disables many vanilla HW2 units and techs.
+- `src/scripts/scar/restrict.lua`: Crucial file that disables many vanilla HW2 units and techs.
 - `src/leveldata/multiplayer/deathmatch.lua`: Contains the custom game rules and logic for the "Slipstream" game mode.
 - `src/scripts/music.lua`: Implements a custom music shuffle system for in-game soundtracks.
 

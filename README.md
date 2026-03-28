@@ -220,7 +220,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 > Historians are not quite sure why so many empires met their end in this system. 
 
-**The Graveyard** is a 2v2 symmetric map.
+**The Graveyard** is a 1v1 symmetric map.
 
 ### Assault
 
