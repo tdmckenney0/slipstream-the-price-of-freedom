@@ -45,3 +45,7 @@ Temporary Items
 # Homeworld 2 Files
 *.big
 src/Animatics/
+
+# Temporary Directories
+tmp
+temp
