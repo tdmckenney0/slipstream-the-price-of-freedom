@@ -3,8 +3,8 @@
 -- LuaDC by Age2uN
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
-StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "Vgr_Laser_Small", "Normal", 1200, 1200, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0.1, "Normal", 0, 0, 0)
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 30, 30, "")
+StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "Vgr_Laser_Small", "Normal", 1800, 1800, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0.1, "Normal", 0, 0, 0) -- +50% range
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 25, 25, "") -- Balanced damage
 setPenetration(NewWeaponType, 5, 1, 
 { 
     ResArmour = 0.8, 
@@ -19,7 +19,7 @@ setPenetration(NewWeaponType, 5, 1,
     resarmour = 0.6, })
 setAccuracy(NewWeaponType, 1, 
 { 
-    Fighter = 0.095, 
+    Fighter = 0.12, -- Improved anti-fighter 
 }, 
 { 
     Corvette = 0.13, 
