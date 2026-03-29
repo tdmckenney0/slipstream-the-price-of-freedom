@@ -90,7 +90,7 @@ Requires Photoshop 5.5 or above. Installation: see `RDN/Documents/HW2_PhotoshopA
 
 **Location**: `RDN/Maya/3.0/`
 
-16 plugins (`.mll`/`.dll`) for Maya 3.0 that enable HW2-native export/import:
+15 plugins (`.mll`/`.dll`) for Maya 3.0 that enable HW2-native export/import:
 
 | Plugin | Purpose |
 |--------|---------|
@@ -111,7 +111,7 @@ Requires Photoshop 5.5 or above. Installation: see `RDN/Documents/HW2_PhotoshopA
 
 `RDN/Maya/3.0/Maya.env` configures plugin and script paths. Installation: see `RDN/Documents/HW2_Maya_Install_Doc.pdf`.
 
-**MEL Scripts**: 132 `.mel` scripts covering ship setup, docking paths, shader attachment, subsystem attributes, level data, formations, and animation export. Key scripts:
+**MEL Scripts**: 134 `.mel` scripts covering ship setup, docking paths, shader attachment, subsystem attributes, level data, formations, and animation export. Key scripts:
 
 - `hw2exportall.mel` — Batch export tool
 - `hw2AttachShader.mel` / `hw2CreateShader.mel` — Shader workflow
@@ -140,14 +140,14 @@ All PDFs are in `RDN/Documents/`. The Lua API HTML reference is in `RDN/Document
 | `HW2_DockLaunchLatchPathsRDNHelp.pdf` | 474 KB | Docking, launching, and latching path mechanics |
 | `HW2_FlightManeuversHowTo.pdf` | 169 KB | Ship flight behavior setup |
 | `HW2_GameRuleMods.pdf` | 122 KB | Game rules modification |
-| `HW2_AttackStyles.pdf` | 100 KB | Combat AI behavior and attack styles |
+| `HW2_Attack Styles.pdf` | 100 KB | Combat AI behavior and attack styles |
 | `HW2_BuildandResearchScripting.pdf` | 265 KB | Build/research system scripting |
 | `HW2_InnateSubsystem.pdf` | 376 KB | Built-in subsystem types and configuration |
 | `HW2_MultipliersAndAbilitiesHowTo.pdf` | 168 KB | Ship abilities and stat multipliers |
 | `HW2_MadState.pdf` | 38 KB | State machine (MAD) documentation |
 | `HW2_LevelEdCurveTool.pdf` | 218 KB | Curve tool for level paths |
 | `HW2_ATI.pdf` | 421 KB | ATI/AMD graphics-specific settings |
-| `HW2_SensorsManager.pdf` | 246 KB | Sensor system documentation |
+| `HW2_Sensors Manager.pdf` | 246 KB | Sensor system documentation |
 | `HW2_Maya_Install_Doc.pdf` | 24 KB | Maya plugin installation guide |
 | `HW2_PhotoshopActionInstallation.pdf` | 73 KB | Photoshop plugin/action installation |
 
