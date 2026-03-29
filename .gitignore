@@ -49,3 +49,6 @@ src/Animatics/
 # Temporary Directories
 tmp
 temp
+
+# Agent Files
+.claude
