@@ -23,12 +23,12 @@ The mod is authored entirely in **Lua** (HW2's scripting language) plus HW2-prop
 | `.hod` | Binary 3D model (HOD format, not text-editable) |
 | `.tga` | Texture images |
 | `.miss` | Missile definition |
-| `.wf` | Weapon fire script |
+| `.wf` | Weapon fire script — global-assignment Lua defining bullet/hit/fire FX and sounds. See `docs/weaponfire_scripts.md`. |
 | `.st` | Shader definition |
 | `.fp` / `.fpa` / `.fpk` / `.fpz` | Fragment program (GPU shader) |
 | `.rot` | Binary particle/effect/texture file (not text-editable) |
 | `.anim` | Animation file |
-| `.events` | Ship/subsystem event bindings |
+| `.events` | Ship/subsystem event bindings — animation-driven death/damage/fire FX and sounds. See `docs/events_system.md`. |
 | `.mres` | Multi-resolution icon definition |
 
 ## Repository Layout
@@ -66,6 +66,10 @@ src/
 docs/
   loadout_system.md           # Hardpoint/weapon loadout system documentation
   research_tree.md            # Tech tree simplification documentation
+  events_system.md            # .events file format reference
+  weaponfire_scripts.md       # .wf file format reference + script catalog
+  relic_developers_network.md # RDN toolkit reference
+  tools_backlog.md            # Planned tools to build under tools/
 artwork/                      # ModDB/promotional artwork (Krita .kra files + exports)
 screenshots/                  # In-game screenshots
 legacy/                       # Legacy PDFs from original 2008 TPOF release
@@ -199,3 +203,14 @@ The `.big` file is gitignored. Binary assets (`.hod`, `.tga`, etc.) are committe
 - **Dreadnaughts** are irreplaceable (one per player, cannot rebuild) — losing one is catastrophic
 - Strikecraft (fighters/corvettes) are faster, more evasive, and break formation during combat
 - Platforms are mobile and can be hyperspace-deployed but are slow and weakly armored
+
+## Sub-directory CLAUDE.md Files
+
+Each major source subdirectory has its own CLAUDE.md with format details, field references, and catalogs specific to that area. Check these before working in that directory:
+
+| File | Covers |
+|------|--------|
+| `src/ship/CLAUDE.md` | `.ship` file structure, full ship roster by faction, ability syntax, death FX |
+| `src/subsystem/CLAUDE.md` | `.subs` file structure, full subsystem catalog, how to add a new weapon subsystem |
+| `src/scripts/CLAUDE.md` | Entry point wiring, `PersistantData` format, build table format, attack/weaponfire scripts |
+| `src/leveldata/CLAUDE.md` | `.level` file structure, full map roster, how to add a new map |

@@ -114,7 +114,7 @@ SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", count, chance, x, y, z, ...)
 | `vgr_destroyer` | `vgr_destroyer/` | 2 swappable primary turrets |
 | `vgr_carrier` | `vgr_carrier/` | |
 | `vgr_assaultfrigate` | `vgr_assaultfrigate/` | |
-| `vgr_heavymissilefrigate` | `vgr_heavymissilefrigate/` | |
+| `vgr_heavymissilefrigate` | `vgr_heavymissilefrigate/` | Heavy missile barrage frigate |
 | `vgr_interceptor` | `vgr_interceptor/` | |
 | `vgr_bomber` | `vgr_bomber/` | |
 | `vgr_lancefighter` | `vgr_lancefighter/` | |

@@ -69,7 +69,7 @@ TPOF-specific weapon subsystems use `DisplayPriority = 1000+` so they sort at th
 Attack behavior scripts (flyby patterns, dogfight, strafe, etc.). These define how different ship classes engage different target classes. Generally do not need modification unless adding a new ship class that requires custom combat behavior.
 
 ### `weaponfire/` scripts
-Weapon fire scripts (`.wf` format) for special weapons like ion beams, explosion VFX, thrusters.
+Weapon fire scripts. Each script lives in its own subdirectory (`weaponfire/{name}/{name}.wf`). The `.wf` extension is a Relic convention — the files use Lua global-assignment syntax (not SCAR game logic). They define bullet/hit/fire particle effects and sounds via named globals (`bulletfx`, `hitfx`, `firefx`, `fire_sfx`, etc.). See `docs/weaponfire_scripts.md` for the full field reference and script catalog.
 
 ### `teamcolour.lua`
 Team color definitions.
