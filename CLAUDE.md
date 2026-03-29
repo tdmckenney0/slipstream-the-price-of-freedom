@@ -1,8 +1,15 @@
 # CLAUDE.md — Slipstream: The Price of Freedom
 
-## Shell and Scripting
+## Development Environment
 
-All shell commands, scripts, and automation tasks outside of `src/` must use **PowerShell 7+** (`pwsh`). This applies to all agents (including Claude) operating in this repository. Do not use Windows PowerShell (5.x), bash, cmd, or Unix shell syntax for any scripting or shell activities.
+**This repository is developed exclusively on Windows (Windows 10/11).** All tooling, the game engine (Homeworld 2 Classic), the HW2 Workshop Tool, and the Relic Developer's Network (RDN) are Windows-only. There is no cross-platform support and none is planned.
+
+- **OS**: Windows 10/11 (x64)
+- **Shell / scripting**: PowerShell 7+ (`pwsh`) for all shell commands, scripts, and automation tasks outside of `src/`. Do not use Windows PowerShell 5.x, bash, cmd, or Unix shell syntax.
+- **File paths**: Use Windows-style paths with backslashes (e.g. `src\ship\hgn_battlecruiser\`) in scripts and documentation. Forward slashes are acceptable inside Lua source files (HW2 engine accepts both), but all host-side tooling uses backslashes.
+- **Text editor**: Any editor that runs on Windows; VS Code is the primary editor used in this project.
+
+Agents (including Claude) operating in this repository must assume a Windows environment and use PowerShell 7+ syntax for any shell operations.
 
 ## What This Project Is
 
