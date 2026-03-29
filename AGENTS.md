@@ -2,6 +2,10 @@
 
 This repository contains the source code for the **Slipstream: The Price of Freedom** mod for Homeworld 2 Classic. This mod transforms the game into a fast-paced tactical arena with a focus on ship loadouts and cooperative/competitive multiplayer.
 
+## Shell and Scripting
+
+All shell commands, scripts, and automation tasks outside of `src/` must use **PowerShell 7+** (`pwsh`). This applies to all agents (including Claude) operating in this repository. Do not use Windows PowerShell (5.x), bash, cmd, or Unix shell syntax for any scripting or shell activities.
+
 ## Core Concepts
 
 - **Fast-Paced Gameplay:** Ships have significantly higher speeds and rotation rates compared to vanilla HW2. For example, the Hiigaran Battlecruiser has a speed of 110 (up from 69).
