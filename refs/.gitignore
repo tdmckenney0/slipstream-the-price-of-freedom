@@ -1,0 +1,9 @@
+# Ignore Everything in this directory.
+*
+
+# Except the Gitignore
+!.gitignore
+
+# Except the README.
+!README.md
+
