@@ -1,5 +1,9 @@
 # CLAUDE.md — Slipstream: The Price of Freedom
 
+## Shell and Scripting
+
+All shell commands, scripts, and automation tasks outside of `src/` must use **PowerShell 7+** (`pwsh`). This applies to all agents (including Claude) operating in this repository. Do not use Windows PowerShell (5.x), bash, cmd, or Unix shell syntax for any scripting or shell activities.
+
 ## What This Project Is
 
 **Slipstream: The Price of Freedom (TPOF)** is a mod for **Homeworld 2 Classic** (HW2). It is packaged as a `.big` archive (compiled by the HW2 Workshop Tool using `src/config.txt`) and loaded by the game engine at runtime. The mod transforms HW2 into a fast-paced tactical arena focused on ship loadouts and cooperative/competitive multiplayer.
