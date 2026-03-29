@@ -35,31 +35,6 @@ PersistantData = {
       name = "",
       number = 1,
     },
-    -- Carrier
-    {
-      type = "Vgr_Carrier",
-      subsystems = {
-        {
-          index = 0,
-          name = "VGR_C_MODULE_CLOAKGENERATOR",
-        },
-        {
-          index = 0,
-          name = "VGR_C_MODULE_RESEARCH",
-        },
-        {
-          index = 0,
-          name = "VGR_C_MODULE_HYPERSPACE",
-        },
-        {
-          index = 0,
-          name = "VGR_C_SENSORS_ADVANCEDARRAY",
-        },
-      },
-      shiphold = {},
-      name = "",
-      number = 1,
-    },
     -- Utility
     {
       type = "Vgr_ResourceCollector",

@@ -34,39 +34,6 @@ PersistantData = {
             name = "",
             number = 1,
         },
-        -- Carrier
-        {
-            type = "Hgn_Carrier",
-            subsystems = {
-                {
-                    index = 0,
-                    name = "HGN_C_PRODUCTION_FIGHTER",
-                },
-                {
-                    index = 0,
-                    name = "HGN_C_PRODUCTION_CORVETTE",
-                },
-                {
-                    index = 0,
-                    name = "HGN_C_PRODUCTION_FRIGATE",
-                },
-                {
-                    index = 0,
-                    name = "HGN_C_MODULE_RESEARCH",
-                },
-                {
-                    index = 0,
-                    name = "HGN_C_MODULE_RESEARCHADVANCED",
-                },
-                {
-                    index = 0,
-                    name = "HGN_C_SENSORS_ADVANCEDARRAY",
-                },
-            },
-            shiphold = {},
-            name = "",
-            number = 1,
-        },
         -- Utility
         {
             type = "Hgn_ResourceCollector",
