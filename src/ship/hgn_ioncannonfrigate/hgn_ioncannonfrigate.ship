@@ -13,12 +13,12 @@ NewShipType.rearArmourDamage =1.2
 NewShipType.isTransferable =1
 NewShipType.useEngagementRanges =0 --1
 NewShipType.unitCapsNumber =2
-NewShipType.SquadronSize =1
+NewShipType.SquadronSize =2
 NewShipType.formationSpacing =500
 NewShipType.passiveFormation ="Spear"
 NewShipType.defensiveFormation ="x"
 NewShipType.aggressiveFormation ="Claw"
-NewShipType.mass =100
+NewShipType.mass = 55 -- slightly heavier than the assault frigate
 NewShipType.collisionMultiplier =1
 NewShipType.thrusterMaxSpeed =364
 NewShipType.mainEngineMaxSpeed =390
@@ -126,7 +126,7 @@ NewShipType.preciseATILimit =0
 NewShipType.selectionPriority =75
 NewShipType.militaryUnit =1
 addAbility(NewShipType, "MoveCommand", 1, 0)
-addAbility(NewShipType, "CanDock", 1, 0)
+addAbility(NewShipType, "CanDock", 1, 1)
 NewShipType.dockTimeBetweenTwoFormations =1
 NewShipType.dockTimeBeforeStart =2
 NewShipType.dockNrOfShipsInDockFormation =1

@@ -34,54 +34,6 @@ PersistantData = {
             name = "",
             number = 1,
         },
-        -- Carrier
-        {
-            type = "Hgn_Carrier",
-            subsystems = {
-                {
-                    index = 0,
-                    name = "HGN_C_PRODUCTION_FIGHTER",
-                },
-                {
-                    index = 0,
-                    name = "HGN_C_PRODUCTION_CORVETTE",
-                },
-                {
-                    index = 0,
-                    name = "HGN_C_PRODUCTION_FRIGATE",
-                },
-                {
-                    index = 0,
-                    name = "HGN_C_MODULE_RESEARCH",
-                },
-                {
-                    index = 0,
-                    name = "HGN_C_MODULE_RESEARCHADVANCED",
-                },
-                {
-                    index = 0,
-                    name = "HGN_C_SENSORS_ADVANCEDARRAY",
-                },
-            },
-            shiphold = {},
-            name = "",
-            number = 1,
-        },
-        -- Platforms
-        {
-            type = "Hgn_IonTurret",
-            subsystems = {},
-            shiphold = {},
-            name = "",
-            number = 5,
-        },
-        {
-            type = "Hgn_GunTurret",
-            subsystems = {},
-            shiphold = {},
-            name = "",
-            number = 5,
-        },
         -- Utility
         {
             type = "Hgn_ResourceCollector",
@@ -107,7 +59,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_bc_production_fighter",
+                    name = "Hgn_C_Module_FireControl",
                 },
                 {
                     index = 0,
@@ -131,7 +83,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_bc_production_corvette",
+                    name = "Hgn_C_Module_HyperspaceInhibitor",
                 },
                 {
                     index = 0,
@@ -200,18 +152,6 @@ PersistantData = {
         },
     },
     Research = {
-        {
-            name = "DestroyerTech",
-            progress = 1,
-        },
-        {
-            name = "BattlecruiserIonWeapons",
-            progress = 1,
-        },
-        {
-            name = "PlatformIonWeapons",
-            progress = 1,
-        },
         {
             name = "RepairAbility",
             progress = 1,

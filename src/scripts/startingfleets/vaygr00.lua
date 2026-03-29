@@ -35,46 +35,6 @@ PersistantData = {
       name = "",
       number = 1,
     },
-    -- Carrier
-    {
-      type = "Vgr_Carrier",
-      subsystems = {
-        {
-          index = 0,
-          name = "VGR_C_PRODUCTION_FRIGATE",
-        },
-        {
-          index = 0,
-          name = "VGR_C_MODULE_RESEARCH",
-        },
-        {
-          index = 0,
-          name = "VGR_C_MODULE_PLATFORMCONTROL",
-        },
-        {
-          index = 0,
-          name = "VGR_C_SENSORS_ADVANCEDARRAY",
-        },
-      },
-      shiphold = {},
-      name = "",
-      number = 1,
-    },
-    -- Platforms
-    {
-      type = "vgr_weaponplatform_gun",
-      subsystems = {},
-      shiphold = {},
-      name = "",
-      number = 5,
-    },
-    {
-      type = "vgr_weaponplatform_missile",
-      subsystems = {},
-      shiphold = {},
-      name = "",
-      number = 5,
-    },
     -- Utility
     {
       type = "Vgr_ResourceCollector",
@@ -100,7 +60,7 @@ PersistantData = {
         },
         {
           index = 0,
-          name = "VGR_C_PRODUCTION_FIGHTER"
+          name = "VGR_C_MODULE_FIRECONTROL"
         }
       },
       shiphold = {},
@@ -112,7 +72,7 @@ PersistantData = {
       subsystems = {
         {
           index = 0,
-          name = "VGR_C_PRODUCTION_CORVETTE",
+          name = "VGR_C_Module_HyperspaceInhibitor",
         },
         {
           index = 0,
@@ -193,46 +153,6 @@ PersistantData = {
     },
   },
   Research = {
-    {
-      name = "CorvetteTech",
-      progress = 1,
-    },
-    {
-      name = "FrigateTech",
-      progress = 1,
-    },
-    {
-      name = "LanceBeams",
-      progress = 1,
-    },
-    {
-      name = "PlasmaBombs",
-      progress = 1,
-    },
-    {
-      name = "CorvetteLaser",
-      progress = 1,
-    },
-    {
-      name = "PlatformHeavyMissiles",
-      progress = 1,
-    },
-    {
-      name = "FrigateAssault",
-      progress = 1,
-    },
-    {
-      name = "BattlecruiserIonWeapons",
-      progress = 1,
-    },
-    {
-      name = "DestroyerGuns",
-      progress = 1,
-    },
-    {
-      name = "HyperspaceGateTech",
-      progress = 1,
-    },
     {
       name = "RepairAbility",
       progress = 1,
