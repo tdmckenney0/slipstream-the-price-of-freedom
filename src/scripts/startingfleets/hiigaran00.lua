@@ -153,18 +153,6 @@ PersistantData = {
     },
     Research = {
         {
-            name = "DestroyerTech",
-            progress = 1,
-        },
-        {
-            name = "BattlecruiserIonWeapons",
-            progress = 1,
-        },
-        {
-            name = "PlatformIonWeapons",
-            progress = 1,
-        },
-        {
             name = "RepairAbility",
             progress = 1,
         },

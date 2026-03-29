@@ -154,46 +154,6 @@ PersistantData = {
   },
   Research = {
     {
-      name = "CorvetteTech",
-      progress = 1,
-    },
-    {
-      name = "FrigateTech",
-      progress = 1,
-    },
-    {
-      name = "LanceBeams",
-      progress = 1,
-    },
-    {
-      name = "PlasmaBombs",
-      progress = 1,
-    },
-    {
-      name = "CorvetteLaser",
-      progress = 1,
-    },
-    {
-      name = "PlatformHeavyMissiles",
-      progress = 1,
-    },
-    {
-      name = "FrigateAssault",
-      progress = 1,
-    },
-    {
-      name = "BattlecruiserIonWeapons",
-      progress = 1,
-    },
-    {
-      name = "DestroyerGuns",
-      progress = 1,
-    },
-    {
-      name = "HyperspaceGateTech",
-      progress = 1,
-    },
-    {
       name = "RepairAbility",
       progress = 1,
     },
