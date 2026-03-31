@@ -39,8 +39,8 @@ research =
         Icon = Icon_Tech, 
         ShortDisplayedName = "$7200", }, 
     { 
-        Name = "PlatformIonWeapons", 
-        Required = "", 
+        Name = "PlatformIonWeapons",
+        RequiredResearch = "",
         RequiredSubSystems = "", 
         Cost = 600, 
         Time = 100, 
