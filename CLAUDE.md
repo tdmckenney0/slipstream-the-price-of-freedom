@@ -8,6 +8,7 @@
 - **Shell / scripting**: PowerShell 7+ (`pwsh`) for all shell commands, scripts, and automation tasks outside of `src/`. Do not use Windows PowerShell 5.x, bash, cmd, or Unix shell syntax.
 - **File paths**: Use Windows-style paths with backslashes (e.g. `src\ship\hgn_battlecruiser\`) in scripts and documentation. Forward slashes are acceptable inside Lua source files (HW2 engine accepts both), but all host-side tooling uses backslashes.
 - **Text editor**: Any editor that runs on Windows or Linux/macOS; VS Code is the primary editor used in this project.
+- **Temp directory**: Always use `.tmp\` inside the repo root for temporary files — never the system temp directory (`%TEMP%`, `%TMP%`, or `$TMPDIR`). The `.tmp\` directory is gitignored. The `TEMP`, `TMP`, and `TMPDIR` environment variables are set to this path in `.claude\settings.local.json`, so they will be inherited automatically by all tools and subprocesses.
 
 Agents (including Claude) operating in this repository must assume a Windows environment and use PowerShell 7+ syntax for any shell operations. On Wine, paths and PowerShell conventions remain the same — Wine presents a Windows filesystem view to the tools it runs.
 

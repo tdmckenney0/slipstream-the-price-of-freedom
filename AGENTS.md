@@ -6,6 +6,10 @@ This repository contains the source code for the **Slipstream: The Price of Free
 
 All shell commands, scripts, and automation tasks outside of `src/` must use **PowerShell 7+** (`pwsh`). This applies to all agents (including Claude) operating in this repository. Do not use Windows PowerShell (5.x), bash, cmd, or Unix shell syntax for any scripting or shell activities.
 
+## Temp Directory
+
+Always write temporary files to `.tmp\` inside the repo root — never to the system temp directory (`%TEMP%`, `%TMP%`, or `$TMPDIR`). The directory is gitignored and is guaranteed to exist (a `SessionStart` hook recreates it automatically). The `TEMP`, `TMP`, and `TMPDIR` environment variables are pre-set to this path via `.claude\settings.local.json`, so subprocesses inherit it automatically.
+
 ## Core Concepts
 
 - **Fast-Paced Gameplay:** Ships have significantly higher speeds and rotation rates compared to vanilla HW2. For example, the Hiigaran Battlecruiser has a speed of 110 (up from 69).
