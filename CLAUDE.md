@@ -193,6 +193,36 @@ Maps live in `src/leveldata/multiplayer/slipstream/` and are named `{Np}_{map_na
 
 Only Hiigaran and Vaygr are playable (`Playable = 1` in `race.lua`). SRI Corp and Keeper units appear as special scenario ships on specific maps. The "Random" race option is also playable (selects either Hiigaran or Vaygr randomly).
 
+## Developer Tools (`tools/`)
+
+Use these scripts when debugging or validating the mod. All require PowerShell 7+ (`pwsh`).
+
+### `tools\parse-logs.ps1` — Log reader / crash analyzer
+
+When the user reports a crash, load error, or Lua error after launching HW2 with the mod, **run this script first** before reading any source files. It auto-detects the HW2 Classic install (via `HW2_ROOT` env var, Steam registry, or common paths) and reads `Bin\Release\Hw2.log`.
+
+```powershell
+# Show all errors and Lua errors
+pwsh tools\parse-logs.ps1 -Errors
+
+# Show only Lua output (LUA: lines + LUA ERROR lines)
+pwsh tools\parse-logs.ps1 -Lua
+
+# Show TPOF/slipstream mod-loading events
+pwsh tools\parse-logs.ps1 -Mod
+
+# Live-tail while the game is running
+pwsh tools\parse-logs.ps1 -Tail
+
+# Summarize crash dump artifacts
+pwsh tools\parse-logs.ps1 -Dumps
+
+# Specify install path manually
+pwsh tools\parse-logs.ps1 -HWPath 'D:\Steam\steamapps\common\Homeworld\Homeworld2Classic' -Errors
+```
+
+Exits with code 1 if any ERROR or LUA ERROR lines were found — useful for scripted checks.
+
 ## Release Workflow
 
 1. Edit source files in `src/`
