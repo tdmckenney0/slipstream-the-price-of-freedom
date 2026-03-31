@@ -1,15 +1,15 @@
 #Requires -Version 7.0
 <#
 .SYNOPSIS
-    Launches Requiem for Freedom from the HomeworldRM installation.
+    Launches The Price of Freedom from the HomeworldRM installation.
 
 .PARAMETER Hw2Path
     Path to the HomeworldRM Steam installation directory.
     If omitted, the script resolves it from the Steam registry key.
 
 .EXAMPLE
-    ./launch-rff.ps1
-    ./launch-rff.ps1 -Hw2Path "D:\Steam\steamapps\common\Homeworld\HomeworldRM"
+    ./launch-tpof.ps1
+    ./launch-tpof.ps1 -Hw2Path "D:\Steam\steamapps\common\Homeworld\Homeworld2Classic"
 #>
 
 param(
