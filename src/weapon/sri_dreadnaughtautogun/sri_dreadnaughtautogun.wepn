@@ -3,8 +3,8 @@
 -- LuaDC by Age2uN
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
-StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "Hddread", "Normal", 4500, 3000, 0, 0, 0, 0, 1, 1, 1, 0.6, 1.3, 1.8, 1, 1, 0, 0, 0.1, "Normal", 0, 0, 0)
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 150, 150, "")
+StartWeaponConfig(NewWeaponType, "Gimble", "Bullet", "Hddread", "Normal", 4500, 4000, 0, 0, 0, 0, 1, 1, 1, 0.6, 1.3, 1.8, 1, 1, 0, 0, 0.1, "Normal", 0, 0, 0)
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 250, 250, "")
 setPenetration(NewWeaponType, 0, 0, 
 { 
     TurretArmour = 0.5, 
