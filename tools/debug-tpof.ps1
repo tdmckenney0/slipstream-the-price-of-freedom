@@ -32,9 +32,11 @@
     Render resolution. Defaults to the primary monitor's physical resolution.
 
 .PARAMETER Unattended
-    Run cdb non-interactively: continue past the loader breakpoint, on
-    second-chance access violation write a full minidump and quit. Use for repro
-    automation; omit for live debugging.
+    Run cdb non-interactively: continue past the loader breakpoint, then on the
+    first access violation capture a full diagnostic snapshot to the log
+    (registers, nearest symbol, surrounding disasm, kb/kn call stacks, raw
+    stack walk, loaded modules, !analyze -v) and write a full minidump before
+    quitting. Use for repro automation; omit for live debugging.
 
 .PARAMETER LogFile
     Path to a cdb session log. Defaults to a timestamped file under the repo's
@@ -219,15 +221,45 @@ $gameArgs = @(
 )
 if ($ExtraArgs) { $gameArgs += $ExtraArgs }
 
-$dumpStem = Join-Path $DumpDir ("tpof-cdb-" + (Get-Date -Format 'yyyy-MM-dd_HHmmss') + '.dmp')
+$stamp    = Get-Date -Format 'yyyy-MM-dd_HHmmss'
+$dumpStem = Join-Path $DumpDir "tpof-cdb-$stamp.dmp"
 
-# Initial cdb commands. In unattended mode: catch second-chance access violation,
-# write a full minidump, quit. Otherwise: just continue past the loader bp and
-# leave the user at a prompt on first-chance exceptions.
-$cdbInit = if ($Unattended) {
-    ".logopen `"$LogFile`"; sxe -c `".dump /ma /u `"$dumpStem`"; .logclose; q`" av; g"
+# In Unattended mode, cdb needs a multi-line setup script (sxe handler with its
+# own quoted .dump path). Inline `-c "..."` quoting gets ugly fast — write the
+# setup to a real .cdb script file and source it via $$><.
+$scriptFile = Join-Path $tmpDir "cdb-init-$stamp.cdb"
+
+# cdb's $$><Filename loader does not support quoted paths — bail loudly if the
+# path has spaces so the user can override.
+foreach ($p in @($scriptFile, $LogFile, $dumpStem)) {
+    if ($p -match '\s') {
+        Write-Error "Path contains spaces and cdb cannot quote it: $p`nOverride with -LogFile / -DumpDir to a space-free path."
+        exit 1
+    }
+}
+
+if ($Unattended) {
+    # cdb interprets `\` as an escape inside quoted strings (so `\t` → tab,
+    # `\U` → `U`, mangling Windows paths) — `sxe -c "<handler>"` puts the dump
+    # path inside quotes regardless of how we write it. Win32 file APIs accept
+    # forward slashes, so swap the path separator for the dump file used inside
+    # the handler. The .logopen call at top level isn't quoted, so that path is
+    # safe as-is.
+    $dumpStemFwd = $dumpStem -replace '\\', '/'
+
+    $avHandler = ".echo === ACCESS VIOLATION ===; r; .echo --- nearest symbol ---; ln eip; .echo --- disasm ---; ub eip L8; u eip L8; .echo --- kb ---; kb 30; .echo --- kn ---; kn 30; .echo --- raw stack ---; dds esp L40; .echo --- modules ---; lmf; .echo --- !analyze -v ---; !analyze -v; .echo --- dump ---; .dump /ma /u $dumpStemFwd; .logclose; q"
+
+    $script = @"
+.logopen $LogFile
+.echo Unattended debug session — waiting for first AV.
+sxe -c "$avHandler" av
+g
+"@
+
+    Set-Content -Path $scriptFile -Value $script -Encoding ASCII
+    $cdbInit = "`$`$><$scriptFile"
 } else {
-    ".logopen `"$LogFile`"; .echo Debugger attached. Press 'g' to continue, Ctrl+B Enter to break.; g"
+    $cdbInit = ".logopen $LogFile; .echo Debugger attached. Press 'g' to continue, Ctrl+B Enter to break.; g"
 }
 
 $cdbArgs = @(

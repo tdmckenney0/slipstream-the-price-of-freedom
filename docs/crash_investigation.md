@@ -112,6 +112,97 @@ triggered by an init-time gap: whichever data file or scripted setup
 would normally cause the engine to construct the `+0x304` sub-manager
 is missing, renamed, or short-circuited by a TPOF override.
 
+## Full Call Chain (captured 2026-04-18 via unattended cdb session)
+
+Walked via saved-ebp chain out of the unattended dump
+`tpof-cdb-2026-04-18_203726_*.dmp`:
+
+| # | Site / Ret-addr | What it is |
+|---|-----------------|------------|
+| 0 | CRASH `0x004ae549` | `mov eax, [ebp+10h]`, `ebp = 0`, fault reading `0x10` |
+| 1 | ret `0x00594912` | **Sub-manager A's update** (`0x00594756`). Iterates entities, type-0 branch does the crashing call |
+| 2 | ret `0x00496445` | **Dispatcher** (`0x00496420`) calling `[this+2E4h]->update(dt)`. Null-checks each sub-manager cleanly before calling |
+| 3 | ret `0x00496135` | **Outer updater** — flat sequence of `update(this, dt)` calls (`00494164`, `00496516`, `004965dc`, `004962ab`, `004961c0`, `00496420`) |
+| 4 | ret `0x00605ddd` | **Virtual-call iterator** (`0x00605d7b+`) — for each elem in a list, check flag bit `0x100` at `+0x138h`, if clear call `vtable[16](dt)` |
+| 5 | ret `0x00605965` | **Top of tick** (`0x0060592f`) — iterates units at `[this+37Ch]` (count `[this+380h]`) |
+
+## Sub-manager A (`0x00594756`) dissected
+
+```asm
+00594756  [SEH prologue, install handler at 006dad2b]
+00594763  push ebx; mov ebx, ecx; mov [ebp-28h], ebx   ; ebx = this
+00594769  mov ecx, [ebx+28h]; call 00490ee4             ; container->check()
+00594771  test al, al; je bail                          ; — if false, bail
+00594779  mov ecx, [ebx+28h]; push 0Bh; call 004935eb   ; container->is_enabled(0x0B)
+00594783  test al, al; je bail                          ; — TPOF passes this
+0059478b  push esi; mov ecx, ebx; call 0059352c         ; this->prep()
+00594793  mov ecx, [ebx+20h]                            ; entity list sentinel
+00594796  mov ax, [ebx+2Dh]; mov [ebp-10h], ax          ; type-enable bitmap (16 byte-flags)
+0059479e  mov esi, [ecx]                                ; first entity
+...
+005947b5  mov eax, [entity+38h]; mov eax, [eax+68h]     ; type enum
+005947b8  cmp byte [ebp+eax-10h], 0; jne process        ; indexed byte-flag per type
+...
+005948a8  mov ecx, [ebx+28h]; push [edi+0Ch]            ; entity ID
+005948ae  add ecx, 294h                                 ; ecx = &container->field_294 (INLINE sub-object)
+005948b4  call 004e5ec5                                 ; works — the by-ID reporter
+...
+00594907  mov ecx, [eax+304h]                           ; ecx = *(container + 0x304) (POINTER)
+0059490d  call 004ae53c                                 ; CRASHES — pointer is NULL
+```
+
+**Crucial distinction**: `+0x294` is an **inline sub-object** (`add ecx, 294h` — address computation). `+0x304` is a **stored pointer** (`mov ecx, [eax+304h]` — dereference). The inline one is always present (statically allocated inside the container); the pointer is conditionally allocated at construction time.
+
+## The init site — gated allocation
+
+Scanning Homeworld2.exe for stores to `[reg+304h]` yielded **exactly one**
+write site across the entire binary: `0x004901e8`, inside a constructor
+at ~`0x00490174+`.
+
+```asm
+00490182  mov ecx, [edi+134h]         ; ecx = this->config
+00490188  mov byte [ebp-4], 6
+0049018c  mov [edi+2E4h], eax         ; ALWAYS: sub-manager A assigned
+00490192  cmp [ecx+5A8h], 0           ; ← GATE 1: config->vector_5A8 non-null?
+00490199  je  004901ee                ;     if NULL, skip — +0x304 stays 0
+0049019b  cmp byte [ecx+570h], 0      ; ← GATE 2: config->flag_570 non-zero?
+004901a2  je  004901ee                ;     if 0, skip — +0x304 stays 0
+004901a4  push 0B8h; call operator_new ; alloc 184-byte reporter
+004901bc  mov ecx, [edi+134h]
+004901c2  mov ecx, [ecx+5A8h]          ; deref vector
+004901c8  mov eax, [ecx+0Ch]; sub eax, [ecx+8]; sar eax, 2  ; vector element count
+004901d3  push eax; push edi           ; args: count, owner
+004901d5  call 004ad192                 ; reporter->construct(owner, count)
+004901e8  mov [edi+304h], eax           ; store reporter (or NULL/ebx)
+```
+
+**So the pluggable reporter at `+0x304` is only created if BOTH:**
+1. `config->field_5A8` is a non-null `std::vector` (of 4-byte elements)
+2. `config->field_570` is a non-zero byte
+
+Sub-manager A's runtime gate (`container->is_enabled(0x0B)`) does **not**
+check the pluggable reporter's presence. So it's entirely possible to
+have feature 0x0B enabled but the paired `+0x304` pointer NULL — which
+is exactly TPOF's state.
+
+The constructor at `~0x00490174+` is clearly a large aggregate init (the
+same function continues setting up `+0x320h`, `+0x324h`, etc. through
+similar gated branches). Identifying *what object this constructor
+creates* and *what `config->field_5A8` / `config->field_570` represent*
+is the next concrete step.
+
+## Candidate identities for config fields 5A8h / 570h
+
+Working hypotheses — the pair "non-null vector of 4-byte elements + a
+boolean enable flag" is a common shape for:
+
+- **Recording / replay**: `field_570` = "record replays", `field_5A8` = vector of tracked player/team ids. Replay recorders match the by-ID + by-name pair pattern.
+- **Match stats / scoreboard**: `field_570` = "collect stats", `field_5A8` = vector of scoreboard columns or stat ids.
+- **Campaign/mission tracking**: `field_570` = "track objectives", `field_5A8` = vector of objective ids. Less likely for multiplayer-only repro.
+- **Debug telemetry**: `field_570` = "emit telemetry", `field_5A8` = list of taps. Possible but Relic typically strips these in Release.
+
+The "**name**-keyed reporter at `+0x304` complementing an **ID**-keyed reporter at `+0x294`" strongly suggests a system that logs/reports per-entity events to two indexes simultaneously — replay or stats most likely.
+
 ## Constraints & Ruled-Out Hypotheses
 
 Anchored to v3.2 as the regression boundary (per maintainer recall).
@@ -206,3 +297,218 @@ Offset math: after the crashing function's prologue (`sub esp,10h` +
 five 4-byte pushes = `0x24` bytes), the caller's return address is at
 `crash_esp + 0x24`. The first two dwords after the return address are
 `arg1` (std::string pointer) and `arg2` (`0`).
+
+## Update 2026-04-19 — Empirical Confirmation
+
+Live-dump inspection of the second mini-dump confirmed the gate-field
+hypothesis and narrowed the failing code path to a single ability
+keyword.
+
+### Concrete state at crash time
+
+From the crashing thread's register snapshot and `dd` on the live
+pointers:
+
+- **Dispatcher object** (the one whose `+304h` vtable slot is read in
+  the crashing function): `0x435b3a50`, vtable `0x007188b4`.
+- **Config object** being walked by the dispatcher: `0x433992e8`,
+  vtable `0x00718b08`. This is the sim-container config for the
+  ship/subsystem under construction.
+- `[config + 0x5A8] = 0x00000000` — the NULL pointer that gets
+  dereferenced.
+- `[config + 0x570] = 0x00` — the "hold is valid" flag byte is also
+  zero.
+- `[config + 0x4B0] = 0x4339d4a0` — populated (not zero). This is a
+  different field set by a *different* ability handler (see below),
+  and proves the dispatcher infrastructure is working on this config.
+
+`+5A8h` is the pointer the crashing instruction dereferences; `+570h`
+is the "this hold/launcher is configured" gate byte that guards it.
+Both are zero at crash time.
+
+### ShipHold is the keyword that sets the gate
+
+Scanning `.text` for writers to `config + 0x5A8` found a single
+setter at `0x0049be42`:
+
+```
+mov eax, [esp+4]
+mov [ecx+5A8h], eax           ; write pointer
+mov byte [ecx+570h], 1        ; flip gate byte
+ret 4
+```
+
+That setter is only called from **one** site in the binary: inside
+the ability handler at `0x004ccb57` (call at `0x004ccd3d`), gated by
+a local flag that is only set when the handler takes the
+"first-time, allocate new vector" branch.
+
+The string-dispatch table that routes ability keywords to handlers
+lists `"ShipHold"` (string at `0x0071b18c`) as the first entry and
+dispatches it to `0x004ccb57`. Handler-local disassembly confirms it
+reads `[ebx+5A8h]` (where `ebx` is the config arg) and, on the
+allocate path, walks down to `call 0x0049be42` at `0x004ccd3d`.
+
+Therefore: **`+5A8h` is the ShipHold / "ships this object can hold"
+container pointer, and the only path that populates it is the
+`ShipHold` ability handler.**
+
+### CanBuildShips writes `+4B0h` — proves dispatch works under TPOF
+
+The same scan located a writer at `0x004cbc8a` that stores into
+`[config + 0x4B0]`. Backwalking places it inside the
+`"CanBuildShips"` handler (string at `0x00721c00`). Since
+`+4B0h` *is* populated on the crashing config (see above), this
+config was built from a ship that declared `CanBuildShips` and the
+dispatcher *did* route that keyword to its handler. The dispatcher
+and handler tables are functional under TPOF for at least this
+sibling keyword.
+
+In other words: the failure is specifically that `ShipHold` is not
+being reached / not taking the allocate branch for whichever ship's
+config is being constructed when the crash fires. It is not a
+wholesale dispatcher breakage.
+
+### TPOF ShipHold declarations are syntactically clean
+
+Grep of `src/` for `ShipHold` returned eight declarations. All match
+vanilla syntax:
+
+| File | Form |
+|------|------|
+| `hgn_battlecruiser.ship:143` | `ShipHold, 1, 0, 5, "rallypoint", "Fighter, Corvette", 25, {Fighter="12"}, {Corvette="75"}` |
+| `vgr_battlecruiser.ship:145` | same form |
+| `hgn_resourcecontroller.ship:137` | `ShipHold, 1, 40, 0, "rallypoint", "", 35` |
+| `vgr_resourcecontroller.ship:142` | same form |
+| `meg_chimera.ship:122` | `ShipHold, 1, 0, 0, "rallypoint", "", 0` |
+| `sri_dreadnaught.ship:148` | `ShipHold, 1, 0, 0, "rallypoint", "", 1` |
+| `sri_commandbase.ship:120` | full form with squadron tables |
+| `vgr_prisonstation.ship:124` | full form with squadron tables |
+
+`pwsh tools\parse-logs.ps1 -Errors` returns 0 errors — the handler
+is not throwing a visible Lua error. If it's bailing, it's bailing
+silently.
+
+### TPOF's flagship lacks ShipHold — and so does most of the roster
+
+The starting-fleet flagships are `hgn_heavybattlecruiser` and
+`vgr_heavybattlecruiser`. Neither `.ship` file declares `ShipHold`,
+though both declare `CanDock`, `CanLaunch`, `CanBuildShips`, and
+`ParadeCommand`. They expect to act like mini-carriers without the
+container that the engine's carrier-path code assumes exists.
+
+TPOF also has no `Carrier`, `Mothership`, or `Shipyard` ship types
+at all — the vanilla ships that always carry `ShipHold` and get
+spawned early in standard games are simply absent. The population
+of objects that *do* have `ShipHold` under TPOF
+(`hgn_battlecruiser`, `vgr_battlecruiser`, the resource controllers,
+the dreadnaught, the Keeper/scenario ships) is a much narrower set,
+and — for a standard deathmatch start — the first `CanDock`/`CanLaunch`-capable
+object to hit sim-init is the heavybattlecruiser flagship, which
+has no ShipHold at all.
+
+### Working hypothesis, refined
+
+The crash happens when engine code on a per-tick sim path
+(`0.1f` delta parameter observed repeatedly in stack frames) walks
+`[config + 0x5A8]` on a ship-config whose `ShipHold` handler never
+ran. The most-likely candidates, from most to least plausible
+given current evidence:
+
+1. **Heavybattlecruiser flagship + carrier-path sim code.** The
+   flagship has `CanDock` / `CanLaunch` / `CanBuildShips` /
+   `ParadeCommand` but no `ShipHold`. If the sim-tick code path
+   reached by any of those abilities assumes the `ShipHold`
+   container exists, it will deref NULL on this config.
+2. **Parse-order / timing.** ShipHold ships do exist in TPOF, but
+   if the sim-container constructor for the first-built ship
+   (flagship) runs before the `.ship` file's `addAbility(...,
+   "ShipHold", ...)` call has been applied, the config is
+   un-gated at tick time.
+3. **Silent handler bail.** The handler branches on its args —
+   if one of TPOF's trimmed `ShipHold, 1, 0, 0, ...` forms
+   (resourcecontroller, chimera, dreadnaught) hits a code path
+   that returns before the allocate branch, the setter never
+   fires and `+5A8h` stays NULL even for the ship that declared
+   it.
+
+Hypothesis (1) dominates because `+4B0h` *is* set on the crashing
+config (so `CanBuildShips` fired on it), which points directly at
+the flagship or another builder-capable object that lacks
+`ShipHold`.
+
+## Revised Next Steps
+
+The user has ruled out the simplest experimental fix — adding
+`ShipHold` to the heavybattlecruisers — on gameplay grounds:
+heavybattlecruisers are not meant to dock, launch, or hold ships.
+So the first experiment must be diagnostic rather than
+gameplay-altering.
+
+### Step A — Confirm which ship's config is on the dispatcher
+
+Instrument `.ship` files with `print()` calls keyed to the
+constructor entry so the log records the order in which
+sim-configs are built vs. the order in which `ShipHold` handlers
+fire. Suggested shape, added at the top of each suspect `.ship`
+file:
+
+```lua
+print("TPOF-TRACE: loading <filename>")
+```
+
+…and at the end, after the last `addAbility`:
+
+```lua
+print("TPOF-TRACE: finished <filename>")
+```
+
+Rebuild `TPOF.big`, reproduce, and capture `Hw2.log` from the
+crashing run (previous logs were from a later non-crashing
+session). The last `TPOF-TRACE` line before the engine cuts will
+name the ship whose sim-config is on the dispatcher at crash time.
+
+### Step B — If the flagship is implicated, remove the carrier-path abilities
+
+If Step A confirms the heavybattlecruiser is the culprit, the
+constraint "no ship hold" is compatible with also removing
+`CanDock` / `CanLaunch` / `CanBuildShips` / `ParadeCommand` from
+the flagship. Losing `CanBuildShips` on the flagship is a gameplay
+change, so this should be scoped and confirmed with the user
+before applying. An interim compromise — keep `CanBuildShips`,
+drop only `CanDock` / `CanLaunch` — may satisfy the engine
+without costing the "build from flagship" flow.
+
+### Step C — Audit every `CanDock` / `CanLaunch` / `CanBuildShips` declarer for missing `ShipHold`
+
+```powershell
+# Ships declaring dock/launch/build capability
+Select-String -Path 'src\ship' -Pattern 'CanDock|CanLaunch|CanBuildShips' -Recurse
+
+# Cross-reference: which of those also declare ShipHold?
+Select-String -Path 'src\ship' -Pattern 'ShipHold' -Recurse
+```
+
+Any ship on the first list not on the second is a latent crash
+candidate on the same code path. The flagship is the obvious one,
+but there may be others.
+
+### Step D — (Deferred) Decompile `0x004ccb57` branch conditions
+
+If Steps A–C don't resolve it, go back to the handler and fully
+map the conditions under which it *doesn't* take the allocate
+branch (i.e. doesn't set `+570h`). That tells us which
+`ShipHold, ...` arg form would cause a silent bail — which would
+move hypothesis (3) to the front of the queue. This is the
+slowest path and should only be taken if the faster
+instrumentation loop doesn't converge.
+
+### Supersedes
+
+The earlier "UI overhaul / sensors manager / pieplate" candidate
+hypotheses above remain technically possible but are now
+lower-probability: the dispatcher + config are on the
+ship-ability path, not the UI or sensors path, and the
+crashing config has a populated `CanBuildShips` field
+(`+4B0h`), which ties it specifically to a ship-type sim-config.
+Prioritize the ShipHold trail first.
