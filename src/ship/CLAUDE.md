@@ -81,6 +81,55 @@ addAbility(NewShipType, "MinelayerAbility", 1, 3.5)
 addAbility(NewShipType, "CloakAbility", ...)
 ```
 
+### ShipHold is required when CanBuildShips includes non-subsystem classes
+
+**Rule:** if a ship declares `CanBuildShips` with *any* ship class in its type list
+(`Fighter`, `Corvette`, `Frigate`, `Capital`, `Platform`, `Utility`, etc. — anything
+other than `SubSystemModule`/`SubSystemSensors`), it MUST also declare `ShipHold`.
+The engine allocates the ship-hold vector from the `ShipHold` handler and the
+`CanBuildShips` code path at sim-tick time dereferences that vector unconditionally.
+Without `ShipHold`, the first tick after the config is constructed crashes with a
+NULL read at the vector's field offset (`+0x5A8`).
+
+The vanilla-HW2 rule is empirical: the only three vanilla ships that declare
+`CanBuildShips` without `ShipHold` are `meg_asteroid`, `meg_asteroid_nosubs`, and
+`meg_asteroidmp` — all three build `SubSystemModule`/`SubSystemSensors` *only*.
+No vanilla ship that builds actual ships (Fighter/Corvette/Frigate/Capital/etc.)
+lacks `ShipHold`.
+
+`CanDock`, `CanLaunch`, and `ParadeCommand` have the same requirement in practice —
+they all walk the hold vector on the sim tick.
+
+**If the ship is not supposed to function as a carrier** (heavybattlecruiser
+flagships are the TPOF example — they build Capital-class ships but have no
+hangar), use the minimal zero-capacity form so the vector allocates but nothing
+can actually dock:
+
+```lua
+addAbility(NewShipType, "ShipHold", 1, 0, 0, "rallypoint", "", 0)
+--                                  ^  ^  ^  ^             ^   ^
+--                                  |  |  |  |             |   no squadron tables follow
+--                                  |  |  |  |             no ship classes accepted
+--                                  |  |  |  hold marker on the HOD
+--                                  |  |  launch count = 0
+--                                  |  hold size = 0
+--                                  version flag
+```
+
+This is copied from `meg_chimera`'s form — it allocates the engine's internal
+structures without letting any ship dock or launch. Omitting the trailing
+squadron-count tables (`{Fighter="12"}`, etc.) is fine when the accepted-classes
+string is empty.
+
+A real ShipHold with actual capacity looks like this (from `hgn_battlecruiser`):
+
+```lua
+addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 25,
+    {Fighter="12"}, {Corvette="75"})
+```
+
+Where the trailing `{Class="N"}` tables are per-class dock-time costs.
+
 ## Death FX
 
 ```lua

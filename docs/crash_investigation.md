@@ -512,3 +512,48 @@ ship-ability path, not the UI or sensors path, and the
 crashing config has a populated `CanBuildShips` field
 (`+4B0h`), which ties it specifically to a ship-type sim-config.
 Prioritize the ShipHold trail first.
+
+## Resolution 2026-04-20 — Flagship ShipHold
+
+**Root cause:** both `hgn_heavybattlecruiser` and `vgr_heavybattlecruiser`
+declared `CanBuildShips` with ship-class scope (`Battlecruiser_Hgn`,
+`SuperCap_Hgn`, and type `Capital`) but did not declare `ShipHold`. The
+engine's sim-tick code for `CanBuildShips`/`CanDock`/`CanLaunch`
+unconditionally reads `[config + 0x5A8]` (the ship-hold vector pointer),
+which is only populated by the `ShipHold` ability handler. With no
+handler having run, that pointer stayed NULL and the tick crashed on
+the dereference at `0x004ae549` (`mov eax, [ebp+0x10]` with
+`ebp = 0`).
+
+**Vanilla-HW2 confirms the rule empirically:** of all vanilla
+`.ship` files under `refs/homeworld2-big/ship/`, the only three that
+declare `CanBuildShips` without `ShipHold` are `meg_asteroid`,
+`meg_asteroid_nosubs`, and `meg_asteroidmp` — and all three build
+`SubSystemModule`/`SubSystemSensors` only, no ship classes. Every
+vanilla carrier/mothership/shipyard/battlecruiser/destroyer that
+builds actual ships has `ShipHold`.
+
+**Fix applied:** added a zero-capacity `ShipHold` to both flagship
+`.ship` files:
+
+```lua
+addAbility(NewShipType, "ShipHold", 1, 0, 0, "rallypoint", "", 0)
+```
+
+Form copied from `meg_chimera` — allocates the engine's internal
+hold structures but accepts no ship classes and reserves zero
+capacity, so nothing can actually dock or launch. Purely
+crash-avoidance, gameplay-neutral.
+
+**Verified:** after the fix, the startup crash at `0x004ae549` is
+gone. A new, unrelated crash now surfaces roughly 30+ minutes
+into gameplay at `0x0047fe80` (`mov edi, [ecx+0xAC]` with
+`ecx = 0xfeeefeee` — use-after-free), which is a different code
+path and a different bug. See future investigation notes.
+
+**Durable rule** (also captured in `src/ship/CLAUDE.md`): any
+`.ship` that declares `CanBuildShips` with any non-subsystem type
+in its class list (`Fighter`, `Corvette`, `Frigate`, `Capital`,
+`Platform`, `Utility`) MUST also declare `ShipHold`. Use the
+zero-capacity form above if the ship isn't supposed to
+function as a carrier.
