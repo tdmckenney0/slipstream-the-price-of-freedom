@@ -65,26 +65,25 @@ Variants `_1` and `_2` have slightly different stats/positions.
 | `hgn_ff_ionbeamturret` | |
 | `hgn_ff_pulsarturret` | |
 
-### Hiigaran Battlecruiser Modules
+### Hiigaran Sensors / Modules
 | Subsystem | Notes |
 |-----------|-------|
-| `hgn_bc_production_fighter` | Fighter bay for battlecruiser |
-| `hgn_bc_production_corvette` | Corvette bay for battlecruiser |
-
-### Hiigaran Carrier Sensors
-| Subsystem | Notes |
-|-----------|-------|
-| `hgn_c_sensors_advancedarray` | Grants sensors ping ability |
+| `hgn_c_sensors_advancedarray` | Advanced sensors module |
 
 ### Vaygr Destroyer Weapons (prefix: `vgr_dd_`)
-The Vaygr destroyer can swap its two primary turrets.
+Used by the Vaygr destroyer swappable primary turrets, and by both `vgr_heavybattlecruiser` starting-fleet loadouts.
 | Subsystem | Notes |
 |-----------|-------|
-| `vgr_dd_scattershotturret_1` | |
-| `vgr_dd_pulsecannonturret_1` | |
-| `vgr_dd_rapidlaserturret_1` | |
-| `vgr_dd_missileboxturret_1` | |
-| `vgr_dd_heavycannonturret_1` | |
+| `vgr_dd_scattershotturret_1/2` | |
+| `vgr_dd_pulsecannonturret_1/2` | |
+| `vgr_dd_rapidlaserturret_1/2` | |
+| `vgr_dd_missileboxturret_1/2` | |
+
+### Vaygr Sensors / Modules
+| Subsystem | Notes |
+|-----------|-------|
+| `vgr_c_sensors_advancedarray` | Advanced sensors module |
+| `vgr_c_module_research` | Research module (kept for research-tree hooks even though most research is restricted) |
 
 ### Misc
 | Subsystem | Notes |

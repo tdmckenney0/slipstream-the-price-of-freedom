@@ -157,10 +157,10 @@ StartSubSystemWeaponConfig(NewSubSystemType, "WeaponScriptName", "HardpointName"
 ## Starting Fleets (`src/scripts/startingfleets/`)
 
 Files define a `PersistantData` table with two sections:
-- `Squadrons`: list of `{type, subsystems, number}` — ships spawned at game start
+- `Squadrons`: list of `{type, subsystems, shiphold, name, number}` — ships spawned at game start (subsystem loadouts are set here via the `subsystems` array)
 - `Research`: list of `{name, progress=1}` — technologies pre-granted at game start
 
-This is how the simplified tech tree works: most key technologies are in the `Research` list with `progress = 1` so they are immediately available without any research needed.
+TPOF currently pre-grants only `RepairAbility` in both `hiigaran00.lua` and `vaygr00.lua`. The "no tech race" feel is achieved mainly by *disabling* research options via `restrict.lua`, not by pre-granting them — players start with the ships and tech they need already built into the starting fleet.
 
 ## Restriction System (`src/scripts/scar/restrict.lua`)
 
@@ -168,8 +168,11 @@ This is how the simplified tech tree works: most key technologies are in the `Re
 - `Player_RestrictBuildOption(playerid, "UnitName")` — hides a ship/subsystem from the build menu
 - `Player_RestrictResearchOption(playerid, "TechName")` — hides a research option
 
-Key restricted units (Hiigaran): Scout, AttackBomber, MarineFrigate, DefenseFieldFrigate, MinelayerCorvette, ECMProbe, ProximitySensor, Shipyard (standard)
-Key restricted units (Vaygr): Scout, MinelayerCorvette, InfiltratorFrigate, CommandCorvette, HyperSpacePlatform, Shipyard
+Key restricted Hiigaran units: `Hgn_Scout`, `Hgn_AttackBomber`, `Hgn_MarineFrigate`, `Hgn_DefenseFieldFrigate`, `Hgn_MinelayerCorvette`, `Hgn_ECMProbe`, `Hgn_ProximitySensor`, `Hgn_Probe`, `Hgn_Shipyard`, `Hgn_Carrier`, plus research/production modules (`Hgn_C_Module_Research`, `Hgn_MS_Module_Research`, `Hgn_C_Production_*`, `Hgn_MS_Production_CorvetteMover`).
+
+Key restricted Vaygr units: `Vgr_Scout`, `Vgr_MinelayerCorvette`, `Vgr_CommandCorvette`, `vgr_infiltratorfrigate`, `Vgr_HyperSpace_Platform`, `Vgr_Probe`, `Vgr_Probe_Ecm`, `Vgr_Probe_Prox`, `Vgr_ShipYard`, `Vgr_Carrier`, `Vgr_PlanetKillerMissile`, plus research modules (`Vgr_C_Module_Research`, `Vgr_MS_Module_Research`).
+
+Research restrictions on both sides are extensive (see `restrict.lua` for the full list) — most vanilla research is disabled outright.
 
 ## Build Lists (`src/scripts/building and research/*/build.lua`)
 
@@ -197,6 +200,16 @@ Only Hiigaran and Vaygr are playable (`Playable = 1` in `race.lua`). SRI Corp an
 ## Developer Tools (`tools/`)
 
 Use these scripts when debugging or validating the mod. All require PowerShell 7+ (`pwsh`).
+
+| Script | Purpose |
+|--------|---------|
+| `tools\parse-logs.ps1` | Read/tail `Hw2.log`, surface errors, summarize minidumps |
+| `tools\launch-tpof.ps1` | Launch HW2 Classic with TPOF active |
+| `tools\debug-tpof.ps1` | Launch HW2 under the `cdb` console debugger (crash capture) |
+| `tools\ship-stats.ps1` | Extract ship stats from all `.ship` files; can diff against a git ref |
+| `tools\link-src.ps1` | Symlink/junction this repo's `src/` into the HW2 install as `DataTPOF/` (for iterative testing without repacking) |
+| `tools\link-bin.ps1` | Link the HW2 `Bin/` directory into `refs/bin/` for log/minidump access |
+| `tools\link-rdn.ps1` | Link the RDN installation into `refs/rdn/` for reference access |
 
 ### `tools\parse-logs.ps1` — Log reader / crash analyzer
 
@@ -236,7 +249,7 @@ The `.big` file is gitignored. Binary assets (`.hod`, `.tga`, etc.) are committe
 ## Key Balance Philosophy
 
 - Ships are **significantly faster and more durable** than vanilla HW2
-- **No tech race** — most research is pre-granted at match start
+- **No tech race** — vanilla research is disabled outright, and starting fleets ship with the tech/ships players need
 - **Loadout decisions** happen in the build menu (swapping hardpoint weapons), not the research menu
 - **Dreadnaughts** are irreplaceable (one per player, cannot rebuild) — losing one is catastrophic
 - Strikecraft (fighters/corvettes) are faster, more evasive, and break formation during combat

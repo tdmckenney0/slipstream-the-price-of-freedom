@@ -139,55 +139,56 @@ SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", count, chance, x, y, z, ...)
 ## Ship Roster
 
 ### Hiigaran
-| Ship | File | Notes |
-|------|------|-------|
-| `hgn_battlecruiser` | `hgn_battlecruiser/` | 240k HP, speed 110, 2 swappable weapon hardpoints |
-| `hgn_heavybattlecruiser` | `hgn_heavybattlecruiser/` | Flagship (6 weapon hardpoints) |
-| `hgn_destroyer` | `hgn_destroyer/` | Fast, fixed config |
-| `hgn_carrier` | `hgn_carrier/` | Production platform |
-| `hgn_assaultfrigate` | `hgn_assaultfrigate/` | |
-| `hgn_torpedofrigate` | `hgn_torpedofrigate/` | |
-| `hgn_ioncannonfrigate` | `hgn_ioncannonfrigate/` | |
-| `hgn_interceptor` | `hgn_interceptor/` | Fast strikecraft |
-| `hgn_assaultcorvette` | `hgn_assaultcorvette/` | |
-| `hgn_pulsarcorvette` | `hgn_pulsarcorvette/` | |
-| `hgn_gunturret` | `hgn_gunturret/` | Platform |
-| `hgn_ionturret` | `hgn_ionturret/` | Platform |
-| `hgn_resourcecontroller` | `hgn_resourcecontroller/` | |
+| Ship | Notes |
+|------|-------|
+| `hgn_battlecruiser` | 240k HP, speed 110, swappable weapon hardpoints; `ShipHold` + `CanBuildShips` (Utility) |
+| `hgn_heavybattlecruiser` | Flagship (6 weapon hardpoints); zero-capacity `ShipHold` to satisfy the `CanBuildShips` constraint |
+| `hgn_destroyer` | Fast, fixed config; full custom `.events` (death + ion cannon fire) |
+| `hgn_interceptor` | Fast strikecraft; custom death `.events` |
+| `hgn_assaultcorvette` | |
+| `hgn_pulsarcorvette` | |
+| `hgn_assaultfrigate` | |
+| `hgn_torpedofrigate` | |
+| `hgn_ioncannonfrigate` | |
+| `hgn_resourcecollector` | |
+| `hgn_resourcecontroller` | Mobile refinery; declares `ShipHold` |
+
+TPOF does **not** ship `hgn_carrier`, `hgn_shipyard`, `hgn_gunturret`, or `hgn_ionturret` — those vanilla units are restricted via `restrict.lua` and have no TPOF `.ship` files.
 
 ### Vaygr
-| Ship | File | Notes |
-|------|------|-------|
-| `vgr_battlecruiser` | `vgr_battlecruiser/` | More armor/damage vs. HGN BC |
-| `vgr_heavybattlecruiser` | `vgr_heavybattlecruiser/` | Flagship |
-| `vgr_destroyer` | `vgr_destroyer/` | 2 swappable primary turrets |
-| `vgr_carrier` | `vgr_carrier/` | |
-| `vgr_assaultfrigate` | `vgr_assaultfrigate/` | |
-| `vgr_heavymissilefrigate` | `vgr_heavymissilefrigate/` | Heavy missile barrage frigate |
-| `vgr_interceptor` | `vgr_interceptor/` | |
-| `vgr_bomber` | `vgr_bomber/` | |
-| `vgr_lancefighter` | `vgr_lancefighter/` | |
-| `vgr_missilecorvette` | `vgr_missilecorvette/` | |
-| `vgr_lasercorvette` | `vgr_lasercorvette/` | |
-| `vgr_weaponplatform_gun` | `vgr_weaponplatform_gun/` | Platform |
-| `vgr_weaponplatform_missile` | `vgr_weaponplatform_missile/` | Platform |
-| `vgr_resourcecontroller` | `vgr_resourcecontroller/` | |
+| Ship | Notes |
+|------|-------|
+| `vgr_battlecruiser` | More armor/damage vs. HGN BC; declares `ShipHold` |
+| `vgr_heavybattlecruiser` | Flagship; zero-capacity `ShipHold` for the `CanBuildShips` constraint |
+| `vgr_destroyer` | Swappable primary turrets |
+| `vgr_assaultfrigate` | |
+| `vgr_heavymissilefrigate` | Heavy missile barrage frigate |
+| `vgr_interceptor` | |
+| `vgr_bomber` | |
+| `vgr_lancefighter` | |
+| `vgr_missilecorvette` | |
+| `vgr_lasercorvette` | |
+| `vgr_resourcecollector` | |
+| `vgr_resourcecontroller` | Mobile refinery; declares `ShipHold` |
+
+TPOF does **not** ship `vgr_carrier`, `vgr_shipyard`, or the vanilla weapon platforms — those are restricted via `restrict.lua`.
 
 ### SRI Corp (scenario-only)
 | Ship | Notes |
 |------|-------|
-| `sri_dreadnaught` | 500k HP, `unitCapsNumber=1`, cannot be rebuilt |
-| `sri_sajuuk` | Special flagship (The Final Battle map) |
-| `sri_commandbase` | |
+| `sri_dreadnaught` | 500k HP, `unitCapsNumber=1`, cannot be rebuilt; full custom death `.events` |
+| `sri_sajuuk` | Special flagship (The Final Battle map); full custom death `.events` |
+| `sri_commandbase` | Full custom death `.events` |
+| `sri_drone` | |
 
 ### Scenario Objects
 | Ship | Notes |
 |------|-------|
-| `meg_slipgate` | Triggers SlipstreamEffect FX |
+| `meg_slipgate` | Slipgate activation FX |
 | `meg_leviathan` | |
 | `meg_starjumper` | |
-| `meg_chimera` | |
-| `meg_bentus_ruins_core_*` | Bentusi ruins |
-| `meg_tanisstructure_medium*` | |
+| `meg_chimera` | Reference example for zero-capacity `ShipHold` form |
+| `meg_bentus_ruins_core_1/2/3` | Bentusi ruins |
+| `meg_tanisstructure_medium`, `meg_tanisstructure_medium2` | Tanis derelicts |
 | `meg_asteroid_inhibitor` | |
 | `vgr_prisonstation` | |
