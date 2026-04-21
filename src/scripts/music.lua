@@ -90,7 +90,7 @@ function RandomMusic(tPlaylist)
 		if (playedBin[k] == randNum) then
 			passBool = 0
 			-- if the end of the list has been reached, start over
-			if (k == listLen) then
+			if (binLen == listLen) then
 				playedBin = {}
 			end
 			break

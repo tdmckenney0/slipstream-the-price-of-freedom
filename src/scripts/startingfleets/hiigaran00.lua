@@ -43,7 +43,7 @@ PersistantData = {
             number = 6,
         },
         {
-            type = "Hgn_resourcecontroller",
+            type = "Hgn_ResourceController",
             subsystems = {},
             shiphold = {},
             name = "",
@@ -55,7 +55,7 @@ PersistantData = {
             subsystems = {
                 {
                     index = 0,
-                    name = "HGN_C_MODULE_HYPERSPACE",
+                    name = "Hgn_C_Module_Hyperspace",
                 },
                 {
                     index = 0,
@@ -79,7 +79,7 @@ PersistantData = {
             subsystems = {
                 {
                     index = 0,
-                    name = "HGN_C_MODULE_FIRECONTROL",
+                    name = "Hgn_C_Module_FireControl",
                 },
                 {
                     index = 0,

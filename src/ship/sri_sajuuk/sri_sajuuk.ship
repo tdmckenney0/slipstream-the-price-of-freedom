@@ -6,11 +6,14 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "SRI-Sajuuk"
 NewShipType.sobDescription = "$1627"
-NewShipType.maxhealth = 350000
-NewShipType.regentime = 350
-NewShipType.minRegenTime = 350
-NewShipType.sideArmourDamage = 1
-NewShipType.rearArmourDamage = 1
+NewShipType.maxhealth = 400000
+NewShipType.regentime = 1200
+NewShipType.minRegenTime = 400
+NewShipType.sideArmourDamage = 0.5
+NewShipType.rearArmourDamage = 0.55
+NewShipType.frontArmourDamage = 0.55
+NewShipType.topArmourDamage = 0.7
+NewShipType.bottomArmourDamage = 0.7
 NewShipType.isTransferable = 0
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 1
@@ -21,9 +24,9 @@ NewShipType.defensiveFormation = "Delta"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 1500
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 70
-NewShipType.mainEngineMaxSpeed = 100
-NewShipType.rotationMaxSpeed = 4
+NewShipType.thrusterMaxSpeed = 100
+NewShipType.mainEngineMaxSpeed = 130
+NewShipType.rotationMaxSpeed = 6
 NewShipType.thrusterAccelTime = 8
 NewShipType.thrusterBrakeTime = 2
 NewShipType.mainEngineAccelTime = 8
@@ -146,21 +149,21 @@ addAbility(NewShipType, "CanBeRepaired")
 AddShipMultiplier(NewShipType, "WeaponAccuracy", "OwnShipsWithinRadiusExcludingThisShip", "Linear", 1.15, 1.15, 15000)
 AddShipMultiplier(NewShipType, "WeaponDamage", "OwnShipsWithinRadiusExcludingThisShip", "Linear", 1.15, 1.15, 15000)
 LoadModel(NewShipType, 1)
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukNaniteCannon", "Weapon_TopR1", "Weapon_TopR1")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukKineticDriver", "Weapon_TopR2", "Weapon_TopR2")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukKineticDriver", "Weapon_TopR3", "Weapon_TopR3")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukNaniteCannon", "Weapon_TopR4", "Weapon_TopR4")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukNaniteCannon", "Weapon_TopL1", "Weapon_TopL1")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukKineticDriver", "Weapon_TopL2", "Weapon_TopL2")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukKineticDriver", "Weapon_TopL3", "Weapon_TopL3")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukNaniteCannon", "Weapon_TopL4", "Weapon_TopL4")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukKineticDriver", "Weapon_BotR1", "Weapon_BotR1")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukNaniteCannon", "Weapon_BotR2", "Weapon_BotR2")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukNaniteCannon", "Weapon_BotR3", "Weapon_BotR3")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukKineticDriver", "Weapon_BotL1", "Weapon_BotL1")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukNaniteCannon", "Weapon_BotL2", "Weapon_BotL2")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukNaniteCannon", "Weapon_BotL3", "Weapon_BotL3")
-StartShipWeaponConfig(NewShipType, "Kpr_SajuukHeavyCannon", "Weapon_BigGun", "Weapon_BigGun")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukNaniteCannon", "Weapon_TopR1", "Weapon_TopR1")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukKineticDriver", "Weapon_TopR2", "Weapon_TopR2")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukKineticDriver", "Weapon_TopR3", "Weapon_TopR3")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukNaniteCannon", "Weapon_TopR4", "Weapon_TopR4")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukNaniteCannon", "Weapon_TopL1", "Weapon_TopL1")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukKineticDriver", "Weapon_TopL2", "Weapon_TopL2")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukKineticDriver", "Weapon_TopL3", "Weapon_TopL3")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukNaniteCannon", "Weapon_TopL4", "Weapon_TopL4")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukKineticDriver", "Weapon_BotR1", "Weapon_BotR1")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukNaniteCannon", "Weapon_BotR2", "Weapon_BotR2")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukNaniteCannon", "Weapon_BotR3", "Weapon_BotR3")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukKineticDriver", "Weapon_BotL1", "Weapon_BotL1")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukNaniteCannon", "Weapon_BotL2", "Weapon_BotL2")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukNaniteCannon", "Weapon_BotL3", "Weapon_BotL3")
+StartShipWeaponConfig(NewShipType, "SRI_SajuukHeavyCannon", "Weapon_BigGun", "Weapon_BigGun")
 addShield(NewShipType, "EMP", 10000, 20)
 NewShipType.battleScarMaxTriBase = 200
 NewShipType.battleScarMaxTriInc = 300

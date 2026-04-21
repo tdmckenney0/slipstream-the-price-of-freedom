@@ -2,31 +2,42 @@
 
 In **Slipstream: The Price of Freedom**, the traditional Homeworld 2 research tree is heavily simplified to encourage immediate tactical engagement and ship configuration rather than a slow tech race.
 
-## Implementation Details
+## Implementation
 
-The tech tree is handled through a combination of two methods:
+The tech tree is simplified almost entirely through **restriction** — most vanilla research is disabled outright via `MPRestrict()` in [`src/scripts/scar/restrict.lua`](../src/scripts/scar/restrict.lua), and starting fleets ship with the units a player would otherwise need to research.
 
-### 1. Pre-granted Research
-Most essential technologies (like Destroyer production, advanced weapon tech, and abilities) are granted to players immediately at the start of a match. This is defined in the starting fleet files located in `src/scripts/startingfleets/`. 
+### 1. Restriction of vanilla research
 
-For example, in `hiigaran00.lua`:
-- `DestroyerTech` (progress = 1)
-- `BattlecruiserIonWeapons` (progress = 1)
-- `PlatformIonWeapons` (progress = 1)
+`RestrictOptions(playerid)` calls `Player_RestrictResearchOption(...)` for a long list of vanilla research entries on both sides. Highlights:
+
+**Hiigaran research disabled** includes: `DestroyerTech`, `BattlecruiserIonWeapons`, `PlatformIonWeapons`, `AssaultCorvetteEliteWeaponUpgrade`, `AttackBomberEliteWeaponUpgrade`, all sensor/mothership/shipyard/carrier speed/build/health upgrade chains, hyperspace cost upgrades, scout ping/EMP abilities, defense-field shield, ECM/prox-sensor probes, torpedo/bomb improvements, Keeper/AttackDroid SPGAME upgrades, and more.
+
+**Vaygr research disabled** includes: `CorvetteTech`, `FrigateTech`, `LanceBeams`, `PlasmaBombs`, `CorvetteLaser`, `PlatformHeavyMissiles`, `FrigateAssault`, `BattlecruiserIonWeapons`, `DestroyerGuns`, `HyperspaceGateTech`, capture-hack variants, radiation-immunity hack, carrier/mothership/shipyard/frigate/corvette upgrade chains, corvette-command, frigate-infiltration, probe variants, and more.
+
+See `restrict.lua` for the full authoritative list.
+
+### 2. Restriction of vanilla units
+
+The same file also restricts vanilla units that would otherwise clutter the build menu: standard carriers, shipyards, scouts, attack bombers, minelayer corvettes, research modules, mover-production modules, marine/defense-field/infiltrator frigates, command corvettes, hyperspace platforms, probe variants, and the Vaygr planet-killer missile. See the main [CLAUDE.md](../CLAUDE.md#restriction-system-srcscriptsscarrestrictlua) for the summary list.
+
+### 3. Pre-granted research
+
+Both [`hiigaran00.lua`](../src/scripts/startingfleets/hiigaran00.lua) and [`vaygr00.lua`](../src/scripts/startingfleets/vaygr00.lua) pre-grant exactly one research item:
+
 - `RepairAbility` (progress = 1)
 
-This means players don't have to spend resources or time researching these core technologies; they are available from the moment they have the necessary production facilities.
+Everything else either doesn't need research (because the vanilla gate has been removed by restriction) or is provided directly by the starting fleet's squadron list.
 
-### 2. Restriction of Vanilla Options
-To refine the gameplay and maintain the "tactical arena" feel, many vanilla HW2 units and research items are explicitly disabled. This is handled by the `MPRestrict()` function in `src/scripts/scar/restrict.lua`.
+### 4. Starting fleet contents
 
-**Examples of Restricted Items (Hiigaran):**
-- **Units:** Scouts, Attack Bombers, Marine Frigates, Defense Field Frigates, Proximity Sensors, ECM Probes, Minelayer Corvettes, and even the standard Shipyard.
-- **Research:** Upgrades to health and build speeds for Motherships and Shipyards, ability upgrades for Scouts, and elite weapon upgrades for fighters.
-
-**Examples of Restricted Items (Vaygr):**
-- **Units:** Scouts, Minelayer Corvettes, Infiltrator Frigates, Command Corvettes, and the standard Vaygr Shipyard.
-- **Abilities:** Capture hacks, radiation immunity, and various sensor/hyperspace upgrades.
+Because restriction — not pre-granting — is the main mechanism, each starting fleet ships with multiple squadrons of each ship class so the player has a usable force immediately. Hiigaran start, for example, includes a flagship (`hgn_heavybattlecruiser`), two `hgn_battlecruiser`, two `hgn_destroyer`, three types of frigate (4 each), interceptors, and two types of corvette — all with resource collectors and a controller.
 
 ## Gameplay Impact
-By removing these options, the mod directs the player's focus toward the core combat units and their specific loadouts. Players spend less time in the research menu and more time in the build menu, deciding which weapon configuration best suits the current battlefield situation.
+
+With vanilla research paths gone, there is no research menu to navigate for most of a match. Player focus shifts entirely to:
+
+- **Loadout choices** in the build menu (see [`loadout_system.md`](loadout_system.md))
+- **Tactical movement** and formation use
+- **Resource management** and positioning of the irreplaceable flagship
+
+The `.lua` data that actually drives this is in two files — `restrict.lua` and `startingfleets/<race>00.lua`. That pair is the source of truth; this document is a summary.

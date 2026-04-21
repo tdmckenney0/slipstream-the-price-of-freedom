@@ -41,9 +41,9 @@ Define `PersistantData` with:
   - `subsystems` is an array of `{index=0, name="subsystemName"}` — the loadout installed at spawn
 - `Research` — list of `{name, progress=1}` for pre-granted technologies
 
-**Pre-granted Hiigaran research:** `DestroyerTech`, `BattlecruiserIonWeapons`, `PlatformIonWeapons`, `RepairAbility`
+**Currently pre-granted research (both races):** only `RepairAbility`.
 
-**Pre-granted Vaygr research:** `CorvetteTech`, `FrigateTech`, `LanceBeams`, `PlasmaBombs`, `CorvetteLaser`, `PlatformHeavyMissiles`, `FrigateAssault`, `BattlecruiserIonWeapons`, `DestroyerGuns`, `HyperspaceGateTech`, `RepairAbility`
+The simplified tech tree is implemented primarily by *restricting* vanilla research in `scar/restrict.lua`, not by pre-granting. Starting fleets instead ship with the ships the player needs (destroyers, battlecruisers, frigates, corvettes, fighters) already built and fitted with their loadout.
 
 When modifying starting fleets, the `subsystems` array must exactly match the hardpoints defined in the ship's `.ship` file.
 

@@ -81,6 +81,55 @@ addAbility(NewShipType, "MinelayerAbility", 1, 3.5)
 addAbility(NewShipType, "CloakAbility", ...)
 ```
 
+### ShipHold is required when CanBuildShips includes non-subsystem classes
+
+**Rule:** if a ship declares `CanBuildShips` with *any* ship class in its type list
+(`Fighter`, `Corvette`, `Frigate`, `Capital`, `Platform`, `Utility`, etc. — anything
+other than `SubSystemModule`/`SubSystemSensors`), it MUST also declare `ShipHold`.
+The engine allocates the ship-hold vector from the `ShipHold` handler and the
+`CanBuildShips` code path at sim-tick time dereferences that vector unconditionally.
+Without `ShipHold`, the first tick after the config is constructed crashes with a
+NULL read at the vector's field offset (`+0x5A8`).
+
+The vanilla-HW2 rule is empirical: the only three vanilla ships that declare
+`CanBuildShips` without `ShipHold` are `meg_asteroid`, `meg_asteroid_nosubs`, and
+`meg_asteroidmp` — all three build `SubSystemModule`/`SubSystemSensors` *only*.
+No vanilla ship that builds actual ships (Fighter/Corvette/Frigate/Capital/etc.)
+lacks `ShipHold`.
+
+`CanDock`, `CanLaunch`, and `ParadeCommand` have the same requirement in practice —
+they all walk the hold vector on the sim tick.
+
+**If the ship is not supposed to function as a carrier** (heavybattlecruiser
+flagships are the TPOF example — they build Capital-class ships but have no
+hangar), use the minimal zero-capacity form so the vector allocates but nothing
+can actually dock:
+
+```lua
+addAbility(NewShipType, "ShipHold", 1, 0, 0, "rallypoint", "", 0)
+--                                  ^  ^  ^  ^             ^   ^
+--                                  |  |  |  |             |   no squadron tables follow
+--                                  |  |  |  |             no ship classes accepted
+--                                  |  |  |  hold marker on the HOD
+--                                  |  |  launch count = 0
+--                                  |  hold size = 0
+--                                  version flag
+```
+
+This is copied from `meg_chimera`'s form — it allocates the engine's internal
+structures without letting any ship dock or launch. Omitting the trailing
+squadron-count tables (`{Fighter="12"}`, etc.) is fine when the accepted-classes
+string is empty.
+
+A real ShipHold with actual capacity looks like this (from `hgn_battlecruiser`):
+
+```lua
+addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 25,
+    {Fighter="12"}, {Corvette="75"})
+```
+
+Where the trailing `{Class="N"}` tables are per-class dock-time costs.
+
 ## Death FX
 
 ```lua
@@ -90,55 +139,56 @@ SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", count, chance, x, y, z, ...)
 ## Ship Roster
 
 ### Hiigaran
-| Ship | File | Notes |
-|------|------|-------|
-| `hgn_battlecruiser` | `hgn_battlecruiser/` | 240k HP, speed 110, 2 swappable weapon hardpoints |
-| `hgn_heavybattlecruiser` | `hgn_heavybattlecruiser/` | Flagship (6 weapon hardpoints) |
-| `hgn_destroyer` | `hgn_destroyer/` | Fast, fixed config |
-| `hgn_carrier` | `hgn_carrier/` | Production platform |
-| `hgn_assaultfrigate` | `hgn_assaultfrigate/` | |
-| `hgn_torpedofrigate` | `hgn_torpedofrigate/` | |
-| `hgn_ioncannonfrigate` | `hgn_ioncannonfrigate/` | |
-| `hgn_interceptor` | `hgn_interceptor/` | Fast strikecraft |
-| `hgn_assaultcorvette` | `hgn_assaultcorvette/` | |
-| `hgn_pulsarcorvette` | `hgn_pulsarcorvette/` | |
-| `hgn_gunturret` | `hgn_gunturret/` | Platform |
-| `hgn_ionturret` | `hgn_ionturret/` | Platform |
-| `hgn_resourcecontroller` | `hgn_resourcecontroller/` | |
+| Ship | Notes |
+|------|-------|
+| `hgn_battlecruiser` | 240k HP, speed 110, swappable weapon hardpoints; `ShipHold` + `CanBuildShips` (Utility) |
+| `hgn_heavybattlecruiser` | Flagship (6 weapon hardpoints); zero-capacity `ShipHold` to satisfy the `CanBuildShips` constraint |
+| `hgn_destroyer` | Fast, fixed config; full custom `.events` (death + ion cannon fire) |
+| `hgn_interceptor` | Fast strikecraft; custom death `.events` |
+| `hgn_assaultcorvette` | |
+| `hgn_pulsarcorvette` | |
+| `hgn_assaultfrigate` | |
+| `hgn_torpedofrigate` | |
+| `hgn_ioncannonfrigate` | |
+| `hgn_resourcecollector` | |
+| `hgn_resourcecontroller` | Mobile refinery; declares `ShipHold` |
+
+TPOF does **not** ship `hgn_carrier`, `hgn_shipyard`, `hgn_gunturret`, or `hgn_ionturret` — those vanilla units are restricted via `restrict.lua` and have no TPOF `.ship` files.
 
 ### Vaygr
-| Ship | File | Notes |
-|------|------|-------|
-| `vgr_battlecruiser` | `vgr_battlecruiser/` | More armor/damage vs. HGN BC |
-| `vgr_heavybattlecruiser` | `vgr_heavybattlecruiser/` | Flagship |
-| `vgr_destroyer` | `vgr_destroyer/` | 2 swappable primary turrets |
-| `vgr_carrier` | `vgr_carrier/` | |
-| `vgr_assaultfrigate` | `vgr_assaultfrigate/` | |
-| `vgr_heavymissilefrigate` | `vgr_heavymissilefrigate/` | Heavy missile barrage frigate |
-| `vgr_interceptor` | `vgr_interceptor/` | |
-| `vgr_bomber` | `vgr_bomber/` | |
-| `vgr_lancefighter` | `vgr_lancefighter/` | |
-| `vgr_missilecorvette` | `vgr_missilecorvette/` | |
-| `vgr_lasercorvette` | `vgr_lasercorvette/` | |
-| `vgr_weaponplatform_gun` | `vgr_weaponplatform_gun/` | Platform |
-| `vgr_weaponplatform_missile` | `vgr_weaponplatform_missile/` | Platform |
-| `vgr_resourcecontroller` | `vgr_resourcecontroller/` | |
+| Ship | Notes |
+|------|-------|
+| `vgr_battlecruiser` | More armor/damage vs. HGN BC; declares `ShipHold` |
+| `vgr_heavybattlecruiser` | Flagship; zero-capacity `ShipHold` for the `CanBuildShips` constraint |
+| `vgr_destroyer` | Swappable primary turrets |
+| `vgr_assaultfrigate` | |
+| `vgr_heavymissilefrigate` | Heavy missile barrage frigate |
+| `vgr_interceptor` | |
+| `vgr_bomber` | |
+| `vgr_lancefighter` | |
+| `vgr_missilecorvette` | |
+| `vgr_lasercorvette` | |
+| `vgr_resourcecollector` | |
+| `vgr_resourcecontroller` | Mobile refinery; declares `ShipHold` |
+
+TPOF does **not** ship `vgr_carrier`, `vgr_shipyard`, or the vanilla weapon platforms — those are restricted via `restrict.lua`.
 
 ### SRI Corp (scenario-only)
 | Ship | Notes |
 |------|-------|
-| `sri_dreadnaught` | 500k HP, `unitCapsNumber=1`, cannot be rebuilt |
-| `sri_sajuuk` | Special flagship (The Final Battle map) |
-| `sri_commandbase` | |
+| `sri_dreadnaught` | 500k HP, `unitCapsNumber=1`, cannot be rebuilt; full custom death `.events` |
+| `sri_sajuuk` | Special flagship (The Final Battle map); full custom death `.events` |
+| `sri_commandbase` | Full custom death `.events` |
+| `sri_drone` | |
 
 ### Scenario Objects
 | Ship | Notes |
 |------|-------|
-| `meg_slipgate` | Triggers SlipstreamEffect FX |
+| `meg_slipgate` | Slipgate activation FX |
 | `meg_leviathan` | |
 | `meg_starjumper` | |
-| `meg_chimera` | |
-| `meg_bentus_ruins_core_*` | Bentusi ruins |
-| `meg_tanisstructure_medium*` | |
+| `meg_chimera` | Reference example for zero-capacity `ShipHold` form |
+| `meg_bentus_ruins_core_1/2/3` | Bentusi ruins |
+| `meg_tanisstructure_medium`, `meg_tanisstructure_medium2` | Tanis derelicts |
 | `meg_asteroid_inhibitor` | |
 | `vgr_prisonstation` | |

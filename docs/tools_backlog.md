@@ -18,36 +18,13 @@ Checks to implement:
 - Every `WeaponScriptName` in `StartShipWeaponConfig` / `StartSubSystemWeaponConfig` has a matching directory under `src/scripts/weaponfire/`
 - Every ship type listed in a starting fleet (`hiigaran00.lua`, `vaygr00.lua`) exists under `src/ship/`
 - Each `.ship` file that references a `.events` file (implicitly by its presence) actually has a corresponding `.hod`
+- Every ship that declares `CanBuildShips` with a non-subsystem class list also declares `ShipHold` (known crash trigger — see the note in `src/ship/CLAUDE.md`)
 
 Output: pass/fail per check, with file + line context for failures.
 
 ---
 
-## 2. `ship-stats.ps1` — Balance sheet extractor
-
-**Priority: Medium**
-
-Parses all `.ship` files and emits a CSV (or formatted table) of key stats for side-by-side balance review. Eliminates the need to open individual files when comparing ships.
-
-Columns to extract:
-
-| Column | Source field |
-|--------|-------------|
-| Ship name | directory name |
-| Faction | name prefix (`hgn_`, `vgr_`, `sri_`) |
-| `maxhealth` | `NewShipType.maxhealth` |
-| `mainEngineMaxSpeed` | `NewShipType.mainEngineMaxSpeed` |
-| `thrusterMaxSpeed` | `NewShipType.thrusterMaxSpeed` |
-| `rotationMaxSpeed` | `NewShipType.rotationMaxSpeed` |
-| `buildCost` | `NewShipType.buildCost` |
-| `buildTime` | `NewShipType.buildTime` |
-| `unitCapsNumber` | `NewShipType.unitCapsNumber` |
-
-Output: `docs/ship_stats.csv` (gitignored, generated on demand) or stdout table.
-
----
-
-## 3. `pack.ps1` — Workshop Tool launcher
+## 2. `pack.ps1` — Workshop Tool launcher
 
 **Priority: Low**
 

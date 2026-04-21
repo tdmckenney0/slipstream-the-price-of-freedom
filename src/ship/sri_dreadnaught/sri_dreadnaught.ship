@@ -6,11 +6,14 @@
 NewShipType = StartShipConfig()
 NewShipType.displayedName = "$1540"
 NewShipType.sobDescription = "$1633"
-NewShipType.maxhealth = 500000
-NewShipType.regentime = 0
-NewShipType.minRegenTime = 8000
-NewShipType.sideArmourDamage = 1.2
-NewShipType.rearArmourDamage = 1.2
+NewShipType.maxhealth = 550000
+NewShipType.regentime = 1500
+NewShipType.minRegenTime = 500
+NewShipType.sideArmourDamage = 0.55
+NewShipType.rearArmourDamage = 0.55
+NewShipType.frontArmourDamage = 0.5
+NewShipType.topArmourDamage = 0.7
+NewShipType.bottomArmourDamage = 0.7
 NewShipType.isTransferable = 0
 NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 1
@@ -21,8 +24,8 @@ NewShipType.defensiveFormation = "x"
 NewShipType.aggressiveFormation = "Claw"
 NewShipType.mass = 1000
 NewShipType.collisionMultiplier = 1
-NewShipType.thrusterMaxSpeed = 69
-NewShipType.mainEngineMaxSpeed = 69
+NewShipType.thrusterMaxSpeed = 95
+NewShipType.mainEngineMaxSpeed = 115
 NewShipType.rotationMaxSpeed = 8
 NewShipType.thrusterAccelTime = 6
 NewShipType.thrusterBrakeTime = 2
@@ -168,18 +171,18 @@ addAbility(NewShipType, "GuardCommand", 74, 3000, 1400)
 addAbility(NewShipType, "CanBeCaptured", 160, 0.5)
 addAbility(NewShipType, "CanBeRepaired")
 LoadModel(NewShipType, 1)
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense1", "Weapon_HullDefense1")
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense2", "Weapon_HullDefense2")
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense3", "Weapon_HullDefense3")
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense4", "Weapon_HullDefense4")
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense5", "Weapon_HullDefense5")
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense6", "Weapon_HullDefense6")
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense7", "Weapon_HullDefense7")
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense8", "Weapon_HullDefense8")
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense9", "Weapon_HullDefense9")
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtAutogun", "Weapon_HullDefense10", "Weapon_HullDefense10")
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtIonCannon", "Weapon_Triton1", "Weapon_Triton1")
-StartShipWeaponConfig(NewShipType, "Hgn_DreadnaughtChinTurret", "Weapon_DreadTurret", "Weapon_DreadTurret")
+StartShipWeaponConfig(NewShipType, "SRI_DreadnaughtAutogun", "Weapon_HullDefense1", "Weapon_HullDefense1")
+StartShipWeaponConfig(NewShipType, "SRI_DreadnaughtAutogun", "Weapon_HullDefense2", "Weapon_HullDefense2")
+StartShipWeaponConfig(NewShipType, "SRI_DreadnaughtAutogun", "Weapon_HullDefense3", "Weapon_HullDefense3")
+StartShipWeaponConfig(NewShipType, "SRI_DreadnaughtAutogun", "Weapon_HullDefense4", "Weapon_HullDefense4")
+StartShipWeaponConfig(NewShipType, "SRI_DreadnaughtAutogun", "Weapon_HullDefense5", "Weapon_HullDefense5")
+StartShipWeaponConfig(NewShipType, "SRI_DreadnaughtAutogun", "Weapon_HullDefense6", "Weapon_HullDefense6")
+StartShipWeaponConfig(NewShipType, "SRI_DreadnaughtAutogun", "Weapon_HullDefense7", "Weapon_HullDefense7")
+StartShipWeaponConfig(NewShipType, "SRI_DreadnaughtAutogun", "Weapon_HullDefense8", "Weapon_HullDefense8")
+StartShipWeaponConfig(NewShipType, "SRI_DreadnaughtAutogun", "Weapon_HullDefense9", "Weapon_HullDefense9")
+StartShipWeaponConfig(NewShipType, "SRI_DreadnaughtAutogun", "Weapon_HullDefense10", "Weapon_HullDefense10")
+StartShipWeaponConfig(NewShipType, "SRI_DreadnaughtIonCannon", "Weapon_Triton1", "Weapon_Triton1")
+StartShipWeaponConfig(NewShipType, "SRI_DreadnaughtChinTurret", "Weapon_DreadTurret", "Weapon_DreadTurret")
 addShield(NewShipType, "EMP", 10000, 20)
 NewShipType.battleScarMaxTriBase = 175
 NewShipType.battleScarMaxTriInc = 250

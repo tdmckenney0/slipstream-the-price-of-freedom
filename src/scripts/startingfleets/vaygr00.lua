@@ -56,11 +56,11 @@ PersistantData = {
       subsystems = {
         {
           index = 0,
-          name = "VGR_C_MODULE_HYPERSPACE",
+          name = "Vgr_C_Module_Hyperspace",
         },
         {
           index = 0,
-          name = "VGR_C_MODULE_FIRECONTROL"
+          name = "Vgr_C_Module_FireControl"
         }
       },
       shiphold = {},
@@ -72,7 +72,7 @@ PersistantData = {
       subsystems = {
         {
           index = 0,
-          name = "VGR_C_Module_HyperspaceInhibitor",
+          name = "Vgr_C_Module_HyperspaceInhibitor",
         },
         {
           index = 0,
