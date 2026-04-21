@@ -224,14 +224,12 @@ if ($ExtraArgs) { $gameArgs += $ExtraArgs }
 $stamp    = Get-Date -Format 'yyyy-MM-dd_HHmmss'
 $dumpStem = Join-Path $DumpDir "tpof-cdb-$stamp.dmp"
 
-# In Unattended mode, cdb needs a multi-line setup script (sxe handler with its
-# own quoted .dump path). Inline `-c "..."` quoting gets ugly fast — write the
-# setup to a real .cdb script file and source it via $$><.
-$scriptFile = Join-Path $tmpDir "cdb-init-$stamp.cdb"
+$scriptFile  = Join-Path $tmpDir "cdb-init-$stamp.cdb"
+$handlerFile = Join-Path $tmpDir "cdb-handler-$stamp.cdb"
 
 # cdb's $$><Filename loader does not support quoted paths — bail loudly if the
 # path has spaces so the user can override.
-foreach ($p in @($scriptFile, $LogFile, $dumpStem)) {
+foreach ($p in @($scriptFile, $handlerFile, $LogFile, $dumpStem)) {
     if ($p -match '\s') {
         Write-Error "Path contains spaces and cdb cannot quote it: $p`nOverride with -LogFile / -DumpDir to a space-free path."
         exit 1
@@ -240,19 +238,51 @@ foreach ($p in @($scriptFile, $LogFile, $dumpStem)) {
 
 if ($Unattended) {
     # cdb interprets `\` as an escape inside quoted strings (so `\t` → tab,
-    # `\U` → `U`, mangling Windows paths) — `sxe -c "<handler>"` puts the dump
-    # path inside quotes regardless of how we write it. Win32 file APIs accept
-    # forward slashes, so swap the path separator for the dump file used inside
-    # the handler. The .logopen call at top level isn't quoted, so that path is
-    # safe as-is.
-    $dumpStemFwd = $dumpStem -replace '\\', '/'
+    # `\U` → `U`, mangling Windows paths). The sxe -c / -c2 command strings
+    # include a $$><handlerFile path inside quotes, so use forward slashes for
+    # anything that ends up inside a quoted string.
+    $dumpFwd    = $dumpStem    -replace '\\', '/'
+    $handlerFwd = $handlerFile -replace '\\', '/'
 
-    $avHandler = ".echo === ACCESS VIOLATION ===; r; .echo --- nearest symbol ---; ln eip; .echo --- disasm ---; ub eip L8; u eip L8; .echo --- kb ---; kb 30; .echo --- kn ---; kn 30; .echo --- raw stack ---; dds esp L40; .echo --- modules ---; lmf; .echo --- !analyze -v ---; !analyze -v; .echo --- dump ---; .dump /ma /u $dumpStemFwd; .logclose; q"
+    # Full AV diagnostic handler — sourced via $$>< from the sxe command so the
+    # command string stays short and doesn't need escaping. Runs on both
+    # first-chance and second-chance so we still capture a dump if an SEH in
+    # the target swallows the first-chance (the 2026-04-20 crash only ever
+    # fired a second-chance break, with no handler attached — nothing captured).
+    $handler = @"
+.echo === ACCESS VIOLATION ===
+.echo --- registers ---
+r
+.echo --- nearest symbol ---
+ln @eip
+.echo --- disasm before eip ---
+ub @eip L10
+.echo --- disasm at eip ---
+u @eip L10
+.echo --- kb 40 ---
+kb 40
+.echo --- kn 40 ---
+kn 40
+.echo --- raw stack (L100 dwords) ---
+dds @esp L100
+.echo --- modules ---
+lmf
+.echo --- !analyze -v ---
+!analyze -v
+.echo --- writing minidump ---
+.dump /ma /u $dumpFwd
+.echo --- flushing log and quitting ---
+.logflush
+.logclose
+q
+"@
+
+    Set-Content -Path $handlerFile -Value $handler -Encoding ASCII
 
     $script = @"
 .logopen $LogFile
-.echo Unattended debug session — waiting for first AV.
-sxe -c "$avHandler" av
+.echo Unattended debug session waiting for AV (first or second chance).
+sxe -c "`$`$><$handlerFwd" -c2 "`$`$><$handlerFwd" av
 g
 "@
 
