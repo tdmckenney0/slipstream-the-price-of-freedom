@@ -24,14 +24,6 @@ Output: pass/fail per check, with file + line context for failures.
 
 ---
 
-## 2. `pack.ps1` — Workshop Tool launcher
-
-**Status: Superseded by `tools\build-tpof.ps1`**
-
-A headless CLI pack via the RDN `Archive.exe` is now in place (`tools\build-tpof.ps1`), so the Workshop Tool GUI is only needed for Steam Workshop publishing. If Workshop publishing ever needs automation, a thin wrapper could still be added — but the everyday "build and install" path is covered.
-
----
-
 ## Notes
 
 - All scripts must target PowerShell 7+ (`pwsh`). No `bash`, no `cmd`.
