@@ -207,6 +207,7 @@ Use these scripts when debugging or validating the mod. All require PowerShell 7
 | `tools\launch-tpof.ps1` | Launch HW2 Classic with TPOF active |
 | `tools\debug-tpof.ps1` | Launch HW2 under the `cdb` console debugger (crash capture) |
 | `tools\ship-stats.ps1` | Extract ship stats from all `.ship` files; can diff against a git ref |
+| `tools\build-tpof.ps1` | Pack `src/` into `TPOF.big` headlessly via the RDN `Archive.exe` (no Workshop Tool GUI required); `-Install` copies into the HW2 `Data/` dir |
 | `tools\link-src.ps1` | Symlink/junction this repo's `src/` into the HW2 install as `DataTPOF/` (for iterative testing without repacking) |
 | `tools\link-bin.ps1` | Link the HW2 `Bin/` directory into `refs/bin/` for log/minidump access |
 | `tools\link-rdn.ps1` | Link the RDN installation into `refs/rdn/` for reference access |
@@ -239,12 +240,24 @@ Exits with code 1 if any ERROR or LUA ERROR lines were found — useful for scri
 
 ## Release Workflow
 
-1. Edit source files in `src/`
-2. Use the HW2 Workshop Tool (Windows only) with `src/config.txt` to pack into `TPOF.big`
-3. Place `TPOF.big` in the `Homeworld2Classic\Data\` directory
-4. Launch with `-mod TPOF.big` flag
+Two equivalent ways to pack `src/` into `TPOF.big`:
+
+**A. CLI (recommended for iteration / CI)**
+
+```powershell
+pwsh tools\build-tpof.ps1 -Install
+```
+
+Generates a build script under `.tmp\`, invokes `refs\rdn\tools\bin\Archive\Archive.exe`, writes `.tmp\TPOF.big`, and (with `-Install`) copies it to `<HW2>\Data\TPOF.big`. Then launch with `-mod TPOF.big`.
+
+**B. Steam Workshop Tool (required for publishing to the Workshop)**
+
+1. Open the HW2 Workshop Tool (Windows only) and point it at `src/config.txt`
+2. Tool packs into `TPOF.big` and uploads using the `WorkshopID` in `config.txt`
 
 The `.big` file is gitignored. Binary assets (`.hod`, `.tga`, etc.) are committed directly to the repo.
+
+For day-to-day iteration without repacking at all, use `tools\link-src.ps1` to expose `src/` as `DataTPOF/` and launch via `tools\launch-tpof.ps1` (which uses `-moddatapath DataTPOF -overridebigfile`).
 
 ## Key Balance Philosophy
 

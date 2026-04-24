@@ -26,11 +26,9 @@ Output: pass/fail per check, with file + line context for failures.
 
 ## 2. `pack.ps1` — Workshop Tool launcher
 
-**Priority: Low**
+**Status: Superseded by `tools\build-tpof.ps1`**
 
-Launches the HW2 Workshop Tool pre-configured to pack `src/config.txt` into `TPOF.big` and place it in the correct `Data\` directory. If the Workshop Tool supports any CLI arguments, this becomes a single-command build step; if not, it at least opens the tool with the correct working directory.
-
-Also useful as a hook that could run post-pack validation (verify `.big` file size is within expected range, confirm output path).
+A headless CLI pack via the RDN `Archive.exe` is now in place (`tools\build-tpof.ps1`), so the Workshop Tool GUI is only needed for Steam Workshop publishing. If Workshop publishing ever needs automation, a thin wrapper could still be added — but the everyday "build and install" path is covered.
 
 ---
 

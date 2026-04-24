@@ -2,6 +2,22 @@
 
 All Lua game logic lives here. These scripts are loaded by the HW2 engine at runtime.
 
+## Lua API Reference
+
+Relic's doxygen-generated HTML is the authoritative source for SCAR function signatures. It lives in [refs/rdn/Documents/Scar/](../../refs/rdn/Documents/Scar/). When writing a new Rule or Event, check there first — module symbol counts and notable function names are already catalogued in §7 of [docs/rdn_modding_reference.md](../../docs/rdn_modding_reference.md).
+
+Fast path by need:
+
+| If you're doing... | Open... |
+|---|---|
+| Player state (race, RU, research, restrictions) | `_lua_player_8cpp.html` (`LuaPlayer.cpp`, 33 symbols) |
+| Ordering ships (move, attack, dock, ability activation) | `_lua_sob_group_actions_8cpp.html` (58 symbols) |
+| Querying ship groups (health, position, count, status) | `_lua_sob_group_query_8cpp.html` (51 symbols) |
+| Universe / environment / fleet spawning | `_lua_universe_8cpp.html` (30 symbols) |
+| Camera, hyperspace, subtitles, sound, objectives, ATI HUD | `_lua_camera_*`, `_lua_hyperspace_*`, `_lua_subtitle_*`, `_lua_sound_*`, `_lua_objectives_*`, `_lua_a_t_i_*` |
+
+`Rule_Add`, `Rule_AddInterval`, `Rule_Remove`, `Event_Start`, `OnInit`, `OnStartOrLoad`, and the `HW2_*` event helpers are described in §2 of [docs/rdn_modding_reference.md](../../docs/rdn_modding_reference.md) (sourced from `HW2_SCAR.pdf`).
+
 ## Entry Point
 
 `src/leveldata/multiplayer/deathmatch.lua` is the game rules file. It `dofilepath`s into several scripts here:

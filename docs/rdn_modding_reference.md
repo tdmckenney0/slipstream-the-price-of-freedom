@@ -85,7 +85,11 @@ C:\Temp\test\SampleData.test
 TOCEnd
 ```
 
-### 1.5 Loading mods at runtime
+### 1.5 TPOF build wrapper
+
+[tools/build-tpof.ps1](../tools/build-tpof.ps1) is the headless build wrapper for this repo. It generates a build script under `.tmp\` (using the compression categories from §1.3), invokes `refs\rdn\tools\bin\Archive\Archive.exe`, and writes `.tmp\TPOF.big`. Use `-Install` to copy it into `<HW2>\Data\TPOF.big`; `-KeepBuildScript` retains the generated script for inspection.
+
+### 1.6 Loading mods at runtime
 
 From appendix B of `HW2_ArchiveTool.pdf`:
 
