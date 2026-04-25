@@ -1500,7 +1500,9 @@ hgn_ff_ionbeamturret = Icon_Subsystem_IonTurret
 hgn_ioncannonfrigate = Hgn_AssaultFrigate
 hgn_interceptor_booster = Icon_Subsystem_Engine
 hgn_dd_gatlinggunturret_1 = Icon_Subsystem_FireControl
+hgn_dd_gatlinggunturret_2 = Icon_Subsystem_FireControl
 hgn_dd_plasmaburstturret_1 = Icon_Subsystem_IonTurret
+hgn_dd_plasmaburstturret_2 = Icon_Subsystem_IonTurret
 --Vaygr
 vgr_bc_booster = Icon_Subsystem_Engine
 vgr_c_missilebay = Icon_Subsystem_TorpedoLauncher

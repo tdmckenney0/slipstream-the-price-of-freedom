@@ -167,8 +167,8 @@ StartShipWeaponConfig(NewShipType, "hgn_dd_plasmaburstturret", "Weapon_TurretBac
 addShield(NewShipType, "EMP", 1000, 20)
 
 -- Hardpoints
-StartShipHardPointConfig(NewShipType, "TurretTop", "Weapon_TurretTop", "Weapon", "Generic", "Destroyable", "", "hgn_dd_gatlinggunturret_1", "hgn_dd_plasmaburstturret_1", "", "", "")
-StartShipHardPointConfig(NewShipType, "TurretBottom", "Weapon_TurretBottom", "Weapon", "Generic", "Destroyable", "", "hgn_dd_gatlinggunturret_1", "hgn_dd_plasmaburstturret_1", "", "", "")
+StartShipHardPointConfig(NewShipType, "TurretTop", "Weapon_TurretTop", "Weapon", "Generic", "Damageable", "", "hgn_dd_gatlinggunturret_1", "hgn_dd_gatlinggunturret_2", "hgn_dd_plasmaburstturret_1", "hgn_dd_plasmaburstturret_2", "", "")
+StartShipHardPointConfig(NewShipType, "TurretBottom", "Weapon_TurretBottom", "Weapon", "Generic", "Damageable", "", "hgn_dd_gatlinggunturret_1", "hgn_dd_gatlinggunturret_2", "hgn_dd_plasmaburstturret_1", "hgn_dd_plasmaburstturret_2", "", "")
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Hgn_Des_Engine", "", "", "", "", "", "", "", "")
 
 --Thrusters
