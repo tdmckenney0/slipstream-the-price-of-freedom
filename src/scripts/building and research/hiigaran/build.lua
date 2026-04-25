@@ -557,4 +557,22 @@ build =
         DisplayedName = "$2028",
         Description = "$2027",
     },
+    {
+        Type = SubSystem,
+        ThingToBuild = "hgn_dd_gatlinggunturret",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 1000,
+        DisplayedName = "$2044",
+        Description = "$2049",
+    },
+    {
+        Type = SubSystem,
+        ThingToBuild = "hgn_dd_plasmaburstturret",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 1100,
+        DisplayedName = "$2028",
+        Description = "$2027",
+    },
 }

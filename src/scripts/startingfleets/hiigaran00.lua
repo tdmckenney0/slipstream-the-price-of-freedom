@@ -100,7 +100,16 @@ PersistantData = {
         },
         {
             type = "hgn_destroyer",
-            subsystems = {},
+            subsystems = {
+                {
+                    index = 0,
+                    name = "hgn_dd_gatlinggunturret",
+                },
+                {
+                    index = 0,
+                    name = "hgn_dd_plasmaburstturret",
+                },
+            },
             shiphold = {},
             name = "",
             number = 2,
