@@ -1,6 +1,6 @@
 StartWeaponConfig(NewWeaponType,"AnimatedTurret","InstantHit","VgrBeam","Normal",0,7500,0,0.4,0,0,2,0,1,0.7,1.5,1,1,1,120,120,0.1,"Normal",1,0,300);
 
-AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",100,100,"");
+AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",200,250,"");
 
 setPenetration(NewWeaponType,100,1,
 {PlanetKillerArmour=0});
