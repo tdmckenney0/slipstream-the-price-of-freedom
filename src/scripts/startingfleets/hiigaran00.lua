@@ -103,11 +103,11 @@ PersistantData = {
             subsystems = {
                 {
                     index = 0,
-                    name = "hgn_dd_gatlinggunturret",
+                    name = "hgn_dd_gatlinggunturret_1",
                 },
                 {
                     index = 0,
-                    name = "hgn_dd_plasmaburstturret",
+                    name = "hgn_dd_plasmaburstturret_1",
                 },
             },
             shiphold = {},

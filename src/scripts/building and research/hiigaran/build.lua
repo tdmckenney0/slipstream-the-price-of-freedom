@@ -559,7 +559,7 @@ build =
     },
     {
         Type = SubSystem,
-        ThingToBuild = "hgn_dd_gatlinggunturret",
+        ThingToBuild = "hgn_dd_gatlinggunturret_1",
         RequiredResearch = "",
         RequiredShipSubSystems = "",
         DisplayPriority = 1000,
@@ -568,7 +568,7 @@ build =
     },
     {
         Type = SubSystem,
-        ThingToBuild = "hgn_dd_plasmaburstturret",
+        ThingToBuild = "hgn_dd_plasmaburstturret_1",
         RequiredResearch = "",
         RequiredShipSubSystems = "",
         DisplayPriority = 1100,

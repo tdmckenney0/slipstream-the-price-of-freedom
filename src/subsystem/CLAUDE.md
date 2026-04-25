@@ -55,8 +55,10 @@ Variants `_1` and `_2` have slightly different stats/positions.
 ### Hiigaran Destroyer Weapons (prefix: `hgn_dd_`)
 | Subsystem | Notes |
 |-----------|-------|
-| `hgn_dd_gatlinggunturret` | |
-| `hgn_dd_plasmaburstturret` | |
+| `hgn_dd_gatlinggunturret_1/2` | |
+| `hgn_dd_plasmaburstturret_1/2` | |
+
+Variants `_1` and `_2` have slightly different stats/positions.
 
 ### Hiigaran Frigate Weapons (prefix: `hgn_ff_`)
 | Subsystem | Notes |
