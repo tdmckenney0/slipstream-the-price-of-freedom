@@ -165,17 +165,6 @@ StartShipHardPointConfig(NewShipType, "TurretTop", "Weapon_TurretTop", "Weapon",
 StartShipHardPointConfig(NewShipType, "TurretBottom", "Weapon_TurretBottom", "Weapon", "Generic", "Damageable", "", "hgn_dd_gatlinggunturret_1", "hgn_dd_gatlinggunturret_2", "hgn_dd_plasmaburstturret_1", "hgn_dd_plasmaburstturret_2", "", "")
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Hgn_Des_Engine", "", "", "", "", "", "", "", "")
 
---Thrusters
-
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T1", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T2", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T3", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T4", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T5", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T6", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T7", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Thruster", "Hardpoint_T8", "System", "Innate", "Damageable", "neu_directionalthruster", "", "", "", "", "", "", "", "")
-
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg04", 1, 0.05, 50, 40, -150, 50, 65, 25, 5, 25, 0, 0, 0, 95, 0, 0, 0, 50)
