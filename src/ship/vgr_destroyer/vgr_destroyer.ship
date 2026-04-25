@@ -164,10 +164,6 @@ addShield(NewShipType, "EMP", 1000, 20)
 StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_Des_Engine", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Top_Turret", "Hardpoint_Turret_Top", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_pulsecannonturret_2", "vgr_dd_scattershotturret_1", "vgr_dd_scattershotturret_2", "vgr_dd_rapidlaserturret_1", "vgr_dd_rapidlaserturret_2", "vgr_dd_missileboxturret_1", "vgr_dd_missileboxturret_2")
 StartShipHardPointConfig(NewShipType, "Bottom_Turret", "Hardpoint_Turret_Bot", "Weapon", "Generic", "Damageable", "", "vgr_dd_pulsecannonturret_1", "vgr_dd_pulsecannonturret_2", "vgr_dd_scattershotturret_1", "vgr_dd_scattershotturret_2", "vgr_dd_rapidlaserturret_1", "vgr_dd_rapidlaserturret_2", "vgr_dd_missileboxturret_1", "vgr_dd_missileboxturret_2")
--- StartShipHardPointConfig(NewShipType, "Side_turret1", "Hardpoint_Turret_side1", "System", "Innate", "Damageable", "vgr_dd_scattershotturret_1", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Side_turret2", "Weapon_Turret_side2", "System", "Innate", "Damageable", "vgr_dd_scattershotturret_1", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Missile_turret1", "Hardpoint_Turret_front1", "System", "Innate", "Damageable", "", "", "", "", "", "", "", "", "")
--- StartShipHardPointConfig(NewShipType, "Missile_turret2", "Hardpoint_Turret_front2", "System", "Innate", "Damageable", "", "", "", "", "", "", "", "", "")
 
 --Thrusters
 
