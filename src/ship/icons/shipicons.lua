@@ -1478,7 +1478,9 @@ Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
 Vgr_PrisonStation = Vgr_CommStation
 -- TPOF
 hgn_heavybattlecruiser = Hgn_Destroyer
-vgr_heavybattlecruiser = Vgr_Destroyer
+vgr_helios = Vgr_Destroyer
+vgr_qwaarjetii = Vgr_BattleCruiser
+vgr_vanaarjet = Vgr_BattleCruiser
 --SUBSYSTEMS
 neu_directionalthruster = Icon_Subsystem_Engine
 --Hiigaran
