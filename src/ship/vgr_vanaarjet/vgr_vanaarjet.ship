@@ -151,22 +151,22 @@ addAbility(NewShipType, "RetireAbility", 1, 1)
 addAbility(NewShipType, "CloakAbility", 0, 2, 2000, 4000, 3, 100, 1, 1000)
 LoadModel(NewShipType, 1)
 
-StartShipWeaponConfig(NewShipType,"vgr_dd_pulsecannonturret","Weapon_gun1","null");
-StartShipWeaponConfig(NewShipType,"vgr_dd_pulsecannonturret","Weapon_gun2","null");
-StartShipWeaponConfig(NewShipType,"vgr_dd_pulsecannonturret","Weapon_gun3","null");
-StartShipWeaponConfig(NewShipType,"vgr_dd_pulsecannonturret","Weapon_gun4","null");
+StartShipWeaponConfig(NewShipType,"vgr_vj_pulsecannonturret","Weapon_gun1","null");
+StartShipWeaponConfig(NewShipType,"vgr_vj_pulsecannonturret","Weapon_gun2","null");
+StartShipWeaponConfig(NewShipType,"vgr_vj_pulsecannonturret","Weapon_gun3","null");
+StartShipWeaponConfig(NewShipType,"vgr_vj_pulsecannonturret","Weapon_gun4","null");
 
-StartShipWeaponConfig(NewShipType,"vgr_bclaser","Weapon_PDfl","null");
-StartShipWeaponConfig(NewShipType,"vgr_bclaser","Weapon_PDfr","null");
-StartShipWeaponConfig(NewShipType,"vgr_bclaser","Weapon_PDml","null");
-StartShipWeaponConfig(NewShipType,"vgr_bclaser","Weapon_PDmr","null");
-StartShipWeaponConfig(NewShipType,"vgr_bclaser","Weapon_PDrl","null");
-StartShipWeaponConfig(NewShipType,"vgr_bclaser","Weapon_PDrr","null");
+StartShipWeaponConfig(NewShipType,"vgr_vj_rapidlaserturret","Weapon_PDfl","null");
+StartShipWeaponConfig(NewShipType,"vgr_vj_rapidlaserturret","Weapon_PDfr","null");
+StartShipWeaponConfig(NewShipType,"vgr_vj_rapidlaserturret","Weapon_PDml","null");
+StartShipWeaponConfig(NewShipType,"vgr_vj_rapidlaserturret","Weapon_PDmr","null");
+StartShipWeaponConfig(NewShipType,"vgr_vj_rapidlaserturret","Weapon_PDrl","null");
+StartShipWeaponConfig(NewShipType,"vgr_vj_rapidlaserturret","Weapon_PDrr","null");
 
-StartShipWeaponConfig(NewShipType,"vgr_hbc_superlanceturret","Weapon_ion1","Fire_ion1");
-StartShipWeaponConfig(NewShipType,"vgr_hbc_superlanceturret","Weapon_ion2","Fire_ion2");
+StartShipWeaponConfig(NewShipType,"vgr_vj_superlanceturret","Weapon_ion1","Fire_ion1");
+StartShipWeaponConfig(NewShipType,"vgr_vj_superlanceturret","Weapon_ion2","Fire_ion2");
 
-StartShipWeaponConfig(NewShipType, "vgr_heavyfusionmissilelauncherhbc", "Weapon_missile1", "")
+StartShipWeaponConfig(NewShipType, "vgr_vj_heavyfusionmissilelauncher", "Weapon_missile1", "")
 
 addShield(NewShipType, "EMP", 10000, 20)
 
