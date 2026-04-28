@@ -4,33 +4,8 @@ PersistantData = {
   Squadrons = {
     -- Flagship
     {
-      type = "vgr_heavybattlecruiser",
-      subsystems = {
-        {
-          index = 0,
-          name = "vgr_dd_scattershotturret_1",
-        },
-        {
-          index = 0,
-          name = "vgr_dd_pulsecannonturret_1",
-        },
-        {
-          index = 0,
-          name = "vgr_dd_rapidlaserturret_1",
-        },
-        {
-          index = 0,
-          name = "vgr_dd_pulsecannonturret_1",
-        },
-        {
-          index = 0,
-          name = "vgr_dd_scattershotturret_1",
-        },
-        {
-          index = 0,
-          name = "vgr_dd_rapidlaserturret_1",
-        },
-      },
+      type = "vgr_qwaarjetii",
+      subsystems = {},
       shiphold = {},
       name = "",
       number = 1,
