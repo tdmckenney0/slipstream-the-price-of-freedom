@@ -162,10 +162,10 @@ StartShipWeaponConfig(NewShipType,"vgr_qj2_superlanceturretside","Weapon_Ion4","
 StartShipWeaponConfig(NewShipType,"vgr_qj2_superlanceturret","Weapon_Ion1","Fire_FrontTop");
 StartShipWeaponConfig(NewShipType,"vgr_qj2_superlanceturret","Weapon_Ion2","Fire_FrontBottom");
 
-StartShipWeaponConfig(NewShipType,"vgr_pulsecannon","Weapon_gun1","null");
-StartShipWeaponConfig(NewShipType,"vgr_pulsecannon","Weapon_gun2","null");
-StartShipWeaponConfig(NewShipType,"vgr_pulsecannon","Weapon_gun3","null");
-StartShipWeaponConfig(NewShipType,"vgr_pulsecannon","Weapon_gun4","null");
+StartShipWeaponConfig(NewShipType,"vgr_qj2_scattershotturret_left","Weapon_gun1","null"); -- Top right
+StartShipWeaponConfig(NewShipType,"vgr_qj2_scattershotturret_right","Weapon_gun2","null"); -- Bottom Right
+StartShipWeaponConfig(NewShipType,"vgr_qj2_scattershotturret_right","Weapon_gun3","null"); -- Top left
+StartShipWeaponConfig(NewShipType,"vgr_qj2_scattershotturret_left","Weapon_gun4","null"); -- Bottom left
 
 StartShipWeaponConfig(NewShipType,"vgr_bclaser","Weapon_def1","null");
 StartShipWeaponConfig(NewShipType,"vgr_bclaser","Weapon_def2","null");
