@@ -165,8 +165,6 @@ StartShipWeaponConfig(NewShipType,"vgr_vj_rapidlaserturret","Weapon_PDrr","null"
 StartShipWeaponConfig(NewShipType,"vgr_vj_superlanceturret","Weapon_ion1","Fire_ion1");
 StartShipWeaponConfig(NewShipType,"vgr_vj_superlanceturret","Weapon_ion2","Fire_ion2");
 
-StartShipWeaponConfig(NewShipType, "vgr_vj_heavyfusionmissilelauncher", "Weapon_missile1", "")
-
 addShield(NewShipType, "EMP", 10000, 20)
 
 AddShipMultiplier(NewShipType, "WeaponAccuracy", "OwnShipsWithinRadiusExcludingThisShip", "Linear", 1.15, 1.15, 8000)
