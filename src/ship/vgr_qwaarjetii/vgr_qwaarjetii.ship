@@ -152,10 +152,10 @@ addAbility(NewShipType,"RetireAbility",1,1);
 addAbility(NewShipType,"HyperspaceInhibitorAbility",0,12000);
 LoadModel(NewShipType,1);
 
-StartShipWeaponConfig(NewShipType,"vgr_pulsecannon","Weapon_Turret1","null");
-StartShipWeaponConfig(NewShipType,"vgr_pulsecannon","Weapon_Turret2","null");
-StartShipWeaponConfig(NewShipType,"vgr_pulsecannon","Weapon_Turret3","null");
-StartShipWeaponConfig(NewShipType,"vgr_pulsecannon","Weapon_Turret4","null");
+StartShipWeaponConfig(NewShipType,"vgr_qj2_pulsecannonturret_left","Weapon_Turret1","null"); -- Top right
+StartShipWeaponConfig(NewShipType,"vgr_qj2_pulsecannonturret_right","Weapon_Turret2","null"); -- top left
+StartShipWeaponConfig(NewShipType,"vgr_qj2_pulsecannonturret_right","Weapon_Turret3","null"); -- bottom left
+StartShipWeaponConfig(NewShipType,"vgr_qj2_pulsecannonturret_left","Weapon_Turret4","null"); -- bottom right
 
 StartShipWeaponConfig(NewShipType,"vgr_qj2_superlanceturretside","Weapon_Ion3","Fire_SideLeft");
 StartShipWeaponConfig(NewShipType,"vgr_qj2_superlanceturretside","Weapon_Ion4","Fire_SideRight");
