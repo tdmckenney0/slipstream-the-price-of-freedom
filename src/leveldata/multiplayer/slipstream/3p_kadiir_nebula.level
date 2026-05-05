@@ -38,7 +38,7 @@ function DetermChunk()
 
     addSquadron("meg_bigred", "meg_bigred",
         { -16684, 0, -5174, }, -1,
-        { -21.876, 35.207, 26.827, }, 0, 0)
+        { -11.876, 35.207, 6.827, }, 0, 0)
 
     addSquadron("Meg_Asteroid_NoSubs", "Meg_Asteroid_NoSubs",
         { -9958, 2647, 18556, }, -1,
