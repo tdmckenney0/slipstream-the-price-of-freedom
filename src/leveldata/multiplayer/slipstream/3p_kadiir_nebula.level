@@ -34,28 +34,12 @@ player[2] =
 function DetermChunk()
     addPoint("StartPos0", { 24280, 944, 38 }, { 0, 180, 0 })
     addPoint("StartPos1", { -14257, 2743, -11260 }, { 0, 43.601, 0, })
-    addPoint("StartPos2", { 15258, 1892, -15764 }, { 0, -43.601, 0 })
+    addPoint("StartPos2", { 18090, 2086, -18852, }, { 0, -43.601, 0 })
 
-    addSquadron("Vgr_Probe", "Vgr_Probe",
-        { 18090, 2086, -18852, }, -1,
-        { 0, -58.771, 0, }, 0, 0)
-
-    addSphere("Carrier_Entry_1",
-        { -14257, 2743, -11260, }, 551.633)
-    addSphere("Carrier_Entry_2",
-        { 15258, 1892, -15764, }, 389.077)
-    addSphere("Carrier_Entry_3",
-        { 24280, 944, 38, }, 769.284)
-    addSphere("probe_dest",
-        { -24229, -3674, -6186, }, 862.862)
-
-    addSquadron("Vgr_ShipYard", "Vgr_ShipYard",
-        { 28351, 0, 17868, }, -1,
-        { 0, 248.843, 0, }, 0, 0)
-
-    addSquadron("Meg_Foundry", "Meg_Foundry",
+    addSquadron("meg_bigred", "meg_bigred",
         { -16684, 0, -5174, }, -1,
-        { 21.876, -10.207, -26.827, }, 0, 0)
+        { -21.876, 10.207, 26.827, }, 0, 0)
+
     addSquadron("Meg_Asteroid_NoSubs", "Meg_Asteroid_NoSubs",
         { -9958, 2647, 18556, }, -1,
         { 63.505, -61.193, -88.671, }, 0, 0)
