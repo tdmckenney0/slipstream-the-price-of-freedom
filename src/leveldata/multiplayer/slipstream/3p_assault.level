@@ -35,12 +35,16 @@ player[2] =
     startPos = 0,
 }
 function DetermChunk()
-    addPoint("StartPos0", { 12, 0, 37072 }, { 0, 180, 0 })
+    addPoint("StartPos0", { 0, 0, 37072 }, { 0, 180, 0 })
     addPoint("StartPos1", { -8284, 0, -27596 }, { 0, 35, 0 })
     addPoint("StartPos2", { 2837, 0, -3008 }, { 0, 0, 0 })
 
     addSquadron("Vgr_CommStation", "vgr_commstation", { -1910, 0, -9723, }, -1, { 0, 0, 0, }, 0, 0)
     addSquadron("meg_asteroid_inhibitor", "meg_asteroid_inhibitor", { 4100, -350, -32456 }, -1, { 45, 0, 25 }, 1, 0);
+
+    addSquadron("sri_dreadnaught", "sri_dreadnaught", { 0, 0, 31072 }, 0, { 0, 180, 0, }, 0, 0)
+
+    addSquadron("meg_slipgate", "meg_slipgate", { -4, -10, 62000 }, -1, { -2, 178, -145, }, 0, 0)
 
     addAsteroid("Asteroid_3",
         { 8127, -249, -30277, }, 100, 0, 0, 0, 1)

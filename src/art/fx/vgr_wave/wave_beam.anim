@@ -1,0 +1,27 @@
+-- LuaDC version 0.9.20
+-- 12/20/2025 8:42:02 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+-- Hue -100 in GIMP
+fps = 30
+startFrame = 0
+loopCount = 20
+texture =
+{ 
+    "data:/ART/FX/Vgr_wave/wave_glow_00000_tpof.tga", 
+    "data:/ART/FX/Vgr_wave/wave_glow_00001_tpof.tga",
+    "data:/ART/FX/Vgr_wave/wave_glow_00002_tpof.tga", 
+    "data:/ART/FX/Vgr_wave/wave_glow_00003_tpof.tga",
+    "data:/ART/FX/Vgr_wave/wave_glow_00004_tpof.tga", 
+    "data:/ART/FX/Vgr_wave/wave_glow_00005_tpof.tga",
+    "data:/ART/FX/Vgr_wave/wave_glow_00006_tpof.tga", 
+    "data:/ART/FX/Vgr_wave/wave_glow_00007_tpof.tga",
+    "data:/ART/FX/Vgr_wave/wave_glow_00008_tpof.tga", 
+    "data:/ART/FX/Vgr_wave/wave_glow_00009_tpof.tga",
+    "data:/ART/FX/Vgr_wave/wave_glow_00010_tpof.tga", 
+    "data:/ART/FX/Vgr_wave/wave_glow_00011_tpof.tga",
+    "data:/ART/FX/Vgr_wave/wave_glow_00012_tpof.tga", 
+    "data:/ART/FX/Vgr_wave/wave_glow_00013_tpof.tga",
+    "data:/ART/FX/Vgr_wave/wave_glow_00014_tpof.tga",
+}

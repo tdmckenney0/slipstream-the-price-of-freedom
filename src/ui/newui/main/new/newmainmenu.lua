@@ -4,7 +4,7 @@ NewMainMenu =
     stylesheet = "HW2StyleSheet",
     RootElementSettings =
     {
-	backgroundColor = { 0, 0, 0, 0, }, 
+	backgroundColor = { 0, 0, 0, 0, },
     },
     pixelUVCoords = 1,
 ;
@@ -17,7 +17,7 @@ NewMainMenu =
    outerBorderWidth = 1,
    borderColor = "FEColorHeading3",
    backgroundColor = "FEColorBackground1",
-   BackgroundGraphic = 
+   BackgroundGraphic =
    {
 	color = { 255, 255, 255, 255, },
 	textureUV = {0,0,600,600},
@@ -29,7 +29,7 @@ NewMainMenu =
    visible = 1,
    position =  { 28, 5},
    size = {270, 68},
-   BackgroundGraphic = 
+   BackgroundGraphic =
    {
 	type = "Graphic",
 	size = {270, 68},
@@ -38,19 +38,19 @@ NewMainMenu =
 	texture = "Data:UI\\NewUI\\Textures\\logo.tga",
    },
 },
-{ 
-    type = "Line", 
-    p1 =  { 10, 80, }, 
-    p2 =  { 315, 80, }, 
-    lineWidth = 1, 
-    color = "FEColorHeading3", 
-}, 
+{
+    type = "Line",
+    p1 =  { 10, 80, },
+    p2 =  { 315, 80, },
+    lineWidth = 1,
+    color = "FEColorHeading3",
+},
 {
     type = "Frame",
     autosize = 1,
-    position = { 25, 85, }, 
+    position = { 25, 85, },
     autoarrange = 1,
-    autoarrangeWidth = 304, 
+    autoarrangeWidth = 304,
     autoarrangeSpace = 0,
     maxSize = { 276, 400, },
 ;
@@ -143,7 +143,7 @@ NewMainMenu =
 },
 {
     type = "Frame",
-    size = { 296, 10, }, 
+    size = { 296, 10, },
 },
 },
 {
@@ -154,7 +154,7 @@ NewMainMenu =
     Text =
     {
         textStyle = "FEHeading3",
-        text = "v4.3",
+        text = "v4.4",
         color = { 0, 0, 0, 255, },
         hAlign = "Center",
     },
@@ -169,4 +169,3 @@ NewMainMenu =
     width = 0,
 },
 }
-

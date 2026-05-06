@@ -40,4 +40,4 @@ NewSubSystemType.AttackFamily="Subsystem"
 NewSubSystemType.DockFamily="CantDock"
 NewSubSystemType.DisplayFamily="SubSystemModule"
 NewSubSystemType.ArmourFamily="SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType,"vgr_dd_rapidlaserturret","Weapon_DT","Weapon_Turret");
+StartSubSystemWeaponConfig(NewSubSystemType,"vgr_dd_rapidlaserturret","Weapon_DT","");

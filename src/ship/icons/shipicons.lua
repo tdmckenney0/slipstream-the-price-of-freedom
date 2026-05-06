@@ -1478,7 +1478,9 @@ Meg_Bentus_Ruined = Meg_Bentus_Ruin_1
 Vgr_PrisonStation = Vgr_CommStation
 -- TPOF
 hgn_heavybattlecruiser = Hgn_Destroyer
-vgr_heavybattlecruiser = Vgr_Destroyer
+vgr_helios = Vgr_Destroyer
+vgr_qwaarjetii = Vgr_BattleCruiser
+vgr_vanaarjet = Vgr_BattleCruiser
 --SUBSYSTEMS
 neu_directionalthruster = Icon_Subsystem_Engine
 --Hiigaran
@@ -1499,8 +1501,10 @@ hgn_bc_ionbeamturret_2 = Icon_Subsystem_IonTurret
 hgn_ff_ionbeamturret = Icon_Subsystem_IonTurret
 hgn_ioncannonfrigate = Hgn_AssaultFrigate
 hgn_interceptor_booster = Icon_Subsystem_Engine
-hgn_dd_gatlinggunturret = Icon_Subsystem_FireControl
-hgn_dd_plasmaburstturret = Icon_Subsystem_IonTurret
+hgn_dd_gatlinggunturret_1 = Icon_Subsystem_FireControl
+hgn_dd_gatlinggunturret_2 = Icon_Subsystem_FireControl
+hgn_dd_plasmaburstturret_1 = Icon_Subsystem_IonTurret
+hgn_dd_plasmaburstturret_2 = Icon_Subsystem_IonTurret
 --Vaygr
 vgr_bc_booster = Icon_Subsystem_Engine
 vgr_c_missilebay = Icon_Subsystem_TorpedoLauncher
