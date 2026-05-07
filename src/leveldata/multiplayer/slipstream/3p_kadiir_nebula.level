@@ -39,9 +39,9 @@ function DetermChunk()
     addSquadron("HyperspaceBridge", "meg_slipgate", { 0, 600, -105459 }, -1, { -33, 0, 120 }, 0, 0)
     addSquadron("HyperspaceBridge", "meg_slipgate", { 0, -600, 105459 }, -1, { 33, 120, -1 }, 0, 0)
 
-    addSquadron("meg_bigred", "meg_bigred",
+    addSquadron("meg_sajhulknose", "meg_sajhulknose",
         { -16684, 0, -5174, }, -1,
-        { -11.876, 35.207, 6.827, }, 0, 0)
+        { 84.876, 35.207, 6.827, }, 0, 0)
 
     addSquadron("Meg_Asteroid_NoSubs", "Meg_Asteroid_NoSubs",
         { -9958, 2647, 18556, }, -1,
