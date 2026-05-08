@@ -47,7 +47,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
-            number = 1,
+            number = 3,
         },
         -- Super-Caps
         {
