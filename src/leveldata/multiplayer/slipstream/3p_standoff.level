@@ -5,7 +5,7 @@ player[0] =
 {
     id = 0,
     name = "",
-    resources = 5000,
+    resources = 0,
     raceID = 1,
     startPos = 0,
 }
@@ -13,7 +13,7 @@ player[1] =
 {
     id = 1,
     name = "",
-    resources = 5000,
+    resources = 0,
     raceID = 1,
     startPos = 0,
 }
@@ -21,7 +21,7 @@ player[2] =
 {
     id = 2,
     name = "",
-    resources = 5000,
+    resources = 0,
     raceID = 1,
     startPos = 0,
 }
@@ -2517,7 +2517,7 @@ function NonDetermChunk()
         { 57869, 7147, 11668, }, 0, 0, 0)
     addPebble("Pebble_1",
         { 59742, 6383, 12071, }, 0, 0, 0)
-        
+
     fogSetActive(1)
     fogSetStart(10)
     fogSetEnd(20000)

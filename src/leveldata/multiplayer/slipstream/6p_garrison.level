@@ -23,193 +23,201 @@ maxPlayers = 6
 player = {}
 
 player[0] = {
-  resources = 150000,
-  startPos = 1,
-  raceID = 1,
-  id = 0,
-  name = "",
+    resources = 0,
+    startPos = 1,
+    raceID = 1,
+    id = 0,
+    name = "",
 }
 
 player[1] = {
-  resources = 150000,
-  startPos = 1,
-  raceID = 2,
-  id = 1,
-  name = "",
+    resources = 0,
+    startPos = 1,
+    raceID = 2,
+    id = 1,
+    name = "",
 }
 player[2] = {
-  resources = 150000,
-  startPos = 1,
-  raceID = 1,
-  id = 0,
-  name = "",
+    resources = 0,
+    startPos = 1,
+    raceID = 1,
+    id = 0,
+    name = "",
 }
 
 player[3] = {
-  resources = 150000,
-  startPos = 1,
-  raceID = 2,
-  id = 1,
-  name = "",
+    resources = 0,
+    startPos = 1,
+    raceID = 2,
+    id = 1,
+    name = "",
 }
 player[4] = {
-  resources = 150000,
-  startPos = 1,
-  raceID = 1,
-  id = 0,
-  name = "",
+    resources = 0,
+    startPos = 1,
+    raceID = 1,
+    id = 0,
+    name = "",
 }
 
 player[5] = {
-  resources = 150000,
-  startPos = 1,
-  raceID = 2,
-  id = 1,
-  name = "",
+    resources = 0,
+    startPos = 1,
+    raceID = 2,
+    id = 1,
+    name = "",
 }
 
 function DetermChunk()
-  addPoint("StartPos0", { 0, 0, 5000 }, { 0, 0, 0 })
-  addPoint("StartPos1", { -5333, 0, -5000 }, { 0, -135, 0 })
-  addPoint("StartPos2", { 5333, 0, -5000 }, { 0, 135, 0 })
-  addPoint("StartPos3", { -25333, 0, 20000 }, { 0, 135, 0 })
-  addPoint("StartPos4", { 25333, 0, 20000 }, { 0, -135, 0 })
-  addPoint("StartPos5", { 0, 0, -28000 }, { 0, 0, 0 })
+    addPoint("StartPos0", { 0, 0, 5000 }, { 0, 0, 0 })
+    addPoint("StartPos1", { -5333, 0, -5000 }, { 0, -135, 0 })
+    addPoint("StartPos2", { 5333, 0, -5000 }, { 0, 135, 0 })
+    addPoint("StartPos3", { -25333, 0, 20000 }, { 0, 135, 0 })
+    addPoint("StartPos4", { 25333, 0, 20000 }, { 0, -135, 0 })
+    addPoint("StartPos5", { 0, 0, -28000 }, { 0, 0, 0 })
 
-  local slipgateSpaceing = 2.75
+    local slipgateSpaceing = 2.75
 
-  addSquadron("slipgate1", "meg_slipgate", { -25333 * slipgateSpaceing, 0 * slipgateSpaceing, 20000 * slipgateSpaceing }, -1, { 56, 135, 23 }, 0, 0)
-  addSquadron("slipgate2", "meg_slipgate", { 25333 * slipgateSpaceing, 0 * slipgateSpaceing, 20000 * slipgateSpaceing }, -1, { -45, -135, -2 }, 0, 0)
-  addSquadron("slipgate3", "meg_slipgate", { 0 * slipgateSpaceing, 0 * slipgateSpaceing, -28000 * slipgateSpaceing }, -1, { 6, 14, 2 }, 0, 0)
+    addSquadron("slipgate1", "meg_slipgate",
+        { -25333 * slipgateSpaceing, 0 * slipgateSpaceing, 20000 * slipgateSpaceing }, -1, { 56, 135, 23 }, 0, 0)
+    addSquadron("slipgate2", "meg_slipgate", { 25333 * slipgateSpaceing, 0 * slipgateSpaceing, 20000 * slipgateSpaceing },
+        -1, { -45, -135, -2 }, 0, 0)
+    addSquadron("slipgate3", "meg_slipgate", { 0 * slipgateSpaceing, 0 * slipgateSpaceing, -28000 * slipgateSpaceing },
+        -1, { 6, 14, 2 }, 0, 0)
 
-  addSquadron("meg_leviathan", "meg_leviathan", { 17000, 17346, 9470 }, -1, { -6, -50, 150 }, 0, 0)
-  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { 27568, -3309, -11529 }, -1, { 1.648, -40.132, -29.45 }, 0, 0)
-  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { 27568, 1309, -12546 }, -1, { 120.108, -38.66, -149.942 }, 0, 0)
-  addSquadron("meg_starjumper", "meg_starjumper", { -27568, -3309, 11529 }, -1, { 1.648, -40.132, -29.45 }, 0, 0)
-  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { -27568, 1309, 12546 }, -1, { 120.108, -38.66, -149.942 }, 0, 0)
-  addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { -19000, 6273, 29099 }, -1, { -58.112, 0, -17.069 }, 0, 0)
+    addSquadron("meg_leviathan", "meg_leviathan", { 17000, 17346, 9470 }, -1, { -6, -50, 150 }, 0, 0)
+    addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { 27568, -3309, -11529 }, -1, { 1.648, -40.132, -29.45 }, 0,
+        0)
+    addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { 27568, 1309, -12546 }, -1, { 120.108, -38.66, -149.942 },
+        0, 0)
+    addSquadron("meg_starjumper", "meg_starjumper", { -27568, -3309, 11529 }, -1, { 1.648, -40.132, -29.45 }, 0, 0)
+    addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { -27568, 1309, 12546 }, -1, { 120.108, -38.66, -149.942 },
+        0, 0)
+    addSquadron("meg_asteroid_nosubs", "meg_asteroid_nosubs", { -19000, 6273, 29099 }, -1, { -58.112, 0, -17.069 }, 0, 0)
 
-  addSquadron("meg_asteroid_inhibitor", "meg_asteroid_inhibitor", { -10000, 14000, 8008, }, -1, { -17.069, -58.112, 0 }, 0, 0)
-  addSquadron("meg_asteroid_inhibitor", "meg_asteroid_inhibitor", { 7284, -7000, -10000 }, -1, { 0, -58.112, -17.069 }, 0, 0)
-  addSquadron("meg_asteroid_inhibitor", "meg_asteroid_inhibitor", { 25000, 0, 3008 }, -1, { -17.069, 0, -58.112 }, 0, 0)
+    addSquadron("meg_asteroid_inhibitor", "meg_asteroid_inhibitor", { -10000, 14000, 8008, }, -1, { -17.069, -58.112, 0 },
+        0, 0)
+    addSquadron("meg_asteroid_inhibitor", "meg_asteroid_inhibitor", { 7284, -7000, -10000 }, -1, { 0, -58.112, -17.069 },
+        0, 0)
+    addSquadron("meg_asteroid_inhibitor", "meg_asteroid_inhibitor", { 25000, 0, 3008 }, -1, { -17.069, 0, -58.112 }, 0, 0)
 
-  addSquadron("Garrison", "vgr_prisonstation", { 0, 0, 0 }, -1, { 0, 0, 0 }, 0, 0)
+    addSquadron("Garrison", "vgr_prisonstation", { 0, 0, 0 }, -1, { 0, 0, 0 }, 0, 0)
 
-  addSquadron("Guard", "sri_dreadnaught", { -25333, 1000, 20000 }, 3, { 0, 135, 0, }, 0, 0);
-  addSquadron("Guard", "sri_dreadnaught", { 25333, 1000, 20000 }, 4, { 0, -135, 0, }, 0, 0);
-  addSquadron("Guard", "sri_dreadnaught", { 0, 1000, -36000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "sri_dreadnaught", { 0, 2000, 6000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "sri_dreadnaught", { -6333, 2000, -6000 }, 1, { 0, -135, 0, }, 0, 0);
-  addSquadron("Guard", "sri_dreadnaught", { 6333, 2000, -6000 }, 2, { 0, 135, 0, }, 0, 0);
+    addSquadron("Guard", "sri_dreadnaught", { -25333, 1000, 20000 }, 3, { 0, 135, 0, }, 0, 0);
+    addSquadron("Guard", "sri_dreadnaught", { 25333, 1000, 20000 }, 4, { 0, -135, 0, }, 0, 0);
+    addSquadron("Guard", "sri_dreadnaught", { 0, 1000, -36000 }, 5, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "sri_dreadnaught", { 0, 2000, 6000 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "sri_dreadnaught", { -6333, 2000, -6000 }, 1, { 0, -135, 0, }, 0, 0);
+    addSquadron("Guard", "sri_dreadnaught", { 6333, 2000, -6000 }, 2, { 0, 135, 0, }, 0, 0);
 
-  addSquadron("Guard", "kpr_attackdroid", { -25333, 0, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -25333, 100, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -25333, 200, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -25333, 300, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -25333, 400, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -25333, 500, 20000 }, 3, { 0, 0, 0, }, 0, 0)
-  addSquadron("Guard", "kpr_attackdroid", { -25333, 600, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -25333, 700, 20000 }, 3, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -25333, 800, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -25333, 0, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -25333, 100, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -25333, 200, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -25333, 300, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -25333, 400, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -25333, 500, 20000 }, 3, { 0, 0, 0, }, 0, 0)
+    addSquadron("Guard", "kpr_attackdroid", { -25333, 600, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -25333, 700, 20000 }, 3, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -25333, 800, 20000 }, 3, { 0, 0, 0, }, 0, 0);
 
-  addSquadron("Guard", "kpr_attackdroid", { 25333, 0, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 25333, 100, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 25333, 200, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 25333, 300, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 25333, 400, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 25333, 500, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 25333, 600, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 25333, 700, 20000 }, 4, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 25333, 800, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 25333, 0, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 25333, 100, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 25333, 200, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 25333, 300, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 25333, 400, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 25333, 500, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 25333, 600, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 25333, 700, 20000 }, 4, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 25333, 800, 20000 }, 4, { 0, 0, 0, }, 0, 0);
 
-  addSquadron("Guard", "kpr_attackdroid", { 0, 0, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 100, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 200, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 300, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 400, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 500, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 600, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 700, -28000 }, 5, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 800, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 0, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 100, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 200, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 300, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 400, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 500, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 600, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 700, -28000 }, 5, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 800, -28000 }, 5, { 0, 0, 0, }, 0, 0);
 
-  addSquadron("Guard", "kpr_attackdroid", { -6333, 0, -6000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -6333, -1000, -6000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -6333, 1000, -6000 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, 0, -6000 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, -1000, -6000 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, 1000, -6000 }, 1, { 0, 0, 0, }, 0, 0);
 
-  addSquadron("Guard", "kpr_attackdroid", { 0, 0, 6000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 1000, 6000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, -1000, 6000 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 0, 6000 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 1000, 6000 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, -1000, 6000 }, 0, { 0, 0, 0, }, 0, 0);
 
-  addSquadron("Guard", "kpr_attackdroid", { 6333, 0, -6000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 6333, -1000, -6000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 6333, 1000, -6000 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, 0, -6000 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, -1000, -6000 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, 1000, -6000 }, 2, { 0, 0, 0, }, 0, 0);
 
-  addSquadron("Guard", "kpr_attackdroid", { -6333, 0, -5000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -6333, 100, -5000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -6333, 200, -5000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -6333, 300, -5000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -6333, 400, -5000 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 6333, 0, -5000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 6333, 100, -5000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 6333, 200, -5000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 6333, 300, -5000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 6333, 400, -5000 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 0, 5000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 100, 5000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 200, 5000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 300, 5000 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 400, 5000 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, 0, -5000 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, 100, -5000 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, 200, -5000 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, 300, -5000 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, 400, -5000 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, 0, -5000 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, 100, -5000 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, 200, -5000 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, 300, -5000 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, 400, -5000 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 0, 5000 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 100, 5000 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 200, 5000 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 300, 5000 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 400, 5000 }, 0, { 0, 0, 0, }, 0, 0);
 
-  addSquadron("Guard", "kpr_attackdroid", { 0, 0, 5500 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 100, 5500 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 200, 5500 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 300, 5500 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 0, 400, 5500 }, 0, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -6333, 100, -5500 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -6333, 0, -5500 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -6333, 200, -5500 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -6333, 300, -5500 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { -6333, 400, -5500 }, 1, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 6333, 100, -5500 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 6333, 0, -5500 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 6333, 200, -5500 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 6333, 300, -5500 }, 2, { 0, 0, 0, }, 0, 0);
-  addSquadron("Guard", "kpr_attackdroid", { 6333, 400, -5500 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 0, 5500 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 100, 5500 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 200, 5500 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 300, 5500 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 0, 400, 5500 }, 0, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, 100, -5500 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, 0, -5500 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, 200, -5500 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, 300, -5500 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { -6333, 400, -5500 }, 1, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, 100, -5500 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, 0, -5500 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, 200, -5500 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, 300, -5500 }, 2, { 0, 0, 0, }, 0, 0);
+    addSquadron("Guard", "kpr_attackdroid", { 6333, 400, -5500 }, 2, { 0, 0, 0, }, 0, 0);
 
-  setWorldBoundsInner({ 0, 0, 0 }, { 38000, 38000, 38000 });
+    setWorldBoundsInner({ 0, 0, 0 }, { 38000, 38000, 38000 });
 end
 
 function NonDetermChunk()
-  addPebble("Pebble_1", { 10000, -5809, -10876, }, 0, 0, 0)
-  addPebble("Pebble_1", { -10000, -19809, 1876, }, 0, 0, 0)
-  addPebble("Pebble_1", { 21000, 21809, 21876, }, 0, 0, 0)
-  addPebble("Pebble_1", { 10894, -21809, 50639, }, 0, 0, 0)
-  addPebble("Pebble_1", { 27894, -20809, -639, }, 0, 0, 0)
-  addPebble("Pebble_1", { 30687, -20587, -5000, }, 0, 0, 0)
-  addPebble("Pebble_1", { -35687, -26099, 7045, }, 0, 0, 0)
-  addPebble("Pebble_1", { -34967, -16709, 14085, }, 0, 0, 0)
-  addPebble("Pebble_1", { 14967, -36709, 19806, }, 0, 0, 0)
-  addPebble("Pebble_1", { -43907, 26709, 15806, }, 0, 0, 0)
+    addPebble("Pebble_1", { 10000, -5809, -10876, }, 0, 0, 0)
+    addPebble("Pebble_1", { -10000, -19809, 1876, }, 0, 0, 0)
+    addPebble("Pebble_1", { 21000, 21809, 21876, }, 0, 0, 0)
+    addPebble("Pebble_1", { 10894, -21809, 50639, }, 0, 0, 0)
+    addPebble("Pebble_1", { 27894, -20809, -639, }, 0, 0, 0)
+    addPebble("Pebble_1", { 30687, -20587, -5000, }, 0, 0, 0)
+    addPebble("Pebble_1", { -35687, -26099, 7045, }, 0, 0, 0)
+    addPebble("Pebble_1", { -34967, -16709, 14085, }, 0, 0, 0)
+    addPebble("Pebble_1", { 14967, -36709, 19806, }, 0, 0, 0)
+    addPebble("Pebble_1", { -43907, 26709, 15806, }, 0, 0, 0)
 
-  addPebble("Pebble_1", { 10000, 5809, -10876, }, 0, 0, 0)
-  addPebble("Pebble_1", { -9553, 14809, 7876, }, 0, 0, 0)
-  addPebble("Pebble_1", { 21000, 8569, 21876, }, 0, 0, 0)
-  addPebble("Pebble_1", { -29894, 49021, 50639, }, 0, 0, 0)
-  addPebble("Pebble_1", { -27594, 23867, -40956, }, 0, 0, 0)
-  addPebble("Pebble_1", { 30687, 20767, 25000, }, 0, 0, 0)
-  addPebble("Pebble_1", { -35687, 24934, -27045, }, 0, 0, 0)
-  addPebble("Pebble_1", { 39365, 41000, 24955, }, 0, 0, 0)
-  addPebble("Pebble_1", { -13657, 36709, -37806, }, 0, 0, 0)
-  addPebble("Pebble_1", { 47043, 26709, 28806, }, 0, 0, 0)
+    addPebble("Pebble_1", { 10000, 5809, -10876, }, 0, 0, 0)
+    addPebble("Pebble_1", { -9553, 14809, 7876, }, 0, 0, 0)
+    addPebble("Pebble_1", { 21000, 8569, 21876, }, 0, 0, 0)
+    addPebble("Pebble_1", { -29894, 49021, 50639, }, 0, 0, 0)
+    addPebble("Pebble_1", { -27594, 23867, -40956, }, 0, 0, 0)
+    addPebble("Pebble_1", { 30687, 20767, 25000, }, 0, 0, 0)
+    addPebble("Pebble_1", { -35687, 24934, -27045, }, 0, 0, 0)
+    addPebble("Pebble_1", { 39365, 41000, 24955, }, 0, 0, 0)
+    addPebble("Pebble_1", { -13657, 36709, -37806, }, 0, 0, 0)
+    addPebble("Pebble_1", { 47043, 26709, 28806, }, 0, 0, 0)
 
-  fogSetActive(1)
-  fogSetStart(1)
-  fogSetEnd(1)
-  fogSetColour(0, 0, 0, 1)
-  fogSetType("linear")
-  fogSetDensity(0.00)
-  setGlareIntensity(0.11)
-  setLevelShadowColour(0, 0, 0, 1)
-  loadBackground("tpof_interchange")
-  setSensorsManagerCameraDistances(12000, 60000)
+    fogSetActive(1)
+    fogSetStart(1)
+    fogSetEnd(1)
+    fogSetColour(0, 0, 0, 1)
+    fogSetType("linear")
+    fogSetDensity(0.00)
+    setGlareIntensity(0.11)
+    setLevelShadowColour(0, 0, 0, 1)
+    loadBackground("tpof_interchange")
+    setSensorsManagerCameraDistances(12000, 60000)
 end

@@ -5,7 +5,7 @@ player[0] =
 {
     id = 0,
     name = "",
-    resources = 10000,
+    resources = 0,
     raceID = 1,
     startPos = 0,
 }
@@ -13,7 +13,7 @@ player[1] =
 {
     id = 1,
     name = "",
-    resources = 10000,
+    resources = 0,
     raceID = 2,
     startPos = 0,
 }
@@ -21,7 +21,7 @@ player[2] =
 {
     id = 2,
     name = "",
-    resources = 10000,
+    resources = 0,
     raceID = 2,
     startPos = 0,
 }
