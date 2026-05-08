@@ -207,6 +207,9 @@ Use these scripts when debugging or validating the mod. All require PowerShell 7
 | `tools\launch-tpof.ps1` | Launch HW2 Classic with TPOF active |
 | `tools\debug-tpof.ps1` | Launch HW2 under the `cdb` console debugger (crash capture) |
 | `tools\ship-stats.ps1` | Extract ship stats from all `.ship` files; can diff against a git ref |
+| `tools\find-empty-weapon-effects.ps1` | Find `StartShipWeaponConfig` / `StartSubSystemWeaponConfig` calls whose 4th argument is `""` (no fire animation) |
+| `tools\export-weapon-events.ps1` | Export every weapon config in `src/` joined to its fire-animation events (local `.events` first, vanilla `refs\homeworld2-big\` fallback) as a CSV |
+| `tools\import-weapon-events.ps1` | Reverse of `export-weapon-events.ps1`: rewrite `.events` files in `src/` from an edited CSV (copies vanilla files into `src/` as a base when needed) |
 | `tools\build-tpof.ps1` | Pack `src/` into `TPOF.big` headlessly via the RDN `Archive.exe` (no Workshop Tool GUI required); `-Install` copies into the HW2 `Data/` dir |
 | `tools\link-src.ps1` | Symlink/junction this repo's `src/` into the HW2 install as `DataTPOF/` (for iterative testing without repacking) |
 | `tools\link-bin.ps1` | Link the HW2 `Bin/` directory into `refs/bin/` for log/minidump access |
