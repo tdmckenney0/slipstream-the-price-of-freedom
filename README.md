@@ -226,6 +226,14 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 **Assault** is a 1v2 asymmetric map based on _Thaddis Sabbah_ from the Homeworld 2 campaign. Hyperspace is disabled.
 
+### Kadiir Nebula
+
+![Kadiir Nebula](./src/leveldata/multiplayer/slipstream/3p_kadiir_nebula.jpg)
+
+> ...
+
+**Kadiir Nebula** is a 3-player FFA asymmetric map based on Homeworld 2's Mission 7.
+
 ### Standoff
 
 ![Standoff](./src/leveldata/multiplayer/slipstream/3p_standoff.jpg)
@@ -265,6 +273,14 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 > Overwhelmed by the Beast, this is the final resting place of the Bentusi.
 
 **The Unbound** is a 4-player CQB FFA map based on Homeworld 2's Mission 11.
+
+### Gulf Sector
+
+![Gulf Sector](./src/leveldata/multiplayer/slipstream/5p_gulf_sector.jpg)
+
+> ...
+
+**Gulf Sector** is a 3v2 asymmetrical map based on Homeworld 2's Mission 4.
 
 ### Mining Outpost
 
