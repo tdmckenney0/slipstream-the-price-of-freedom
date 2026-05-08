@@ -1,8 +1,3 @@
--- LuaDC version 0.9.20
--- 12/20/2025 8:42:04 PM
--- LuaDC by Age2uN
--- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
---
 levelDesc = "Gulf Sector"
 maxPlayers = 5
 player = {}
@@ -10,7 +5,7 @@ player = {}
 player[0] =
 {
     id = 0,
-    name = "Hiigaran",
+    name = "",
     resources = 5000,
     raceID = 1,
     startPos = 0,
@@ -18,7 +13,7 @@ player[0] =
 player[1] =
 {
     id = 1,
-    name = "Vaygr",
+    name = "",
     resources = 5000,
     raceID = 2,
     startPos = 0,
@@ -26,7 +21,7 @@ player[1] =
 player[2] =
 {
     id = 2,
-    name = "CommStation",
+    name = "",
     resources = 5000,
     raceID = 2,
     startPos = 0,
@@ -34,7 +29,7 @@ player[2] =
 player[3] =
 {
     id = 3,
-    name = "Vaygr",
+    name = "",
     resources = 5000,
     raceID = 2,
     startPos = 0,
@@ -42,7 +37,7 @@ player[3] =
 player[4] =
 {
     id = 4,
-    name = "Vaygr",
+    name = "",
     resources = 5000,
     raceID = 2,
     startPos = 0,

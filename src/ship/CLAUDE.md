@@ -159,7 +159,8 @@ TPOF does **not** ship `hgn_carrier`, `hgn_shipyard`, `hgn_gunturret`, or `hgn_i
 | Ship | Notes |
 |------|-------|
 | `vgr_battlecruiser` | More armor/damage vs. HGN BC; declares `ShipHold` |
-| `vgr_heavybattlecruiser` | Flagship; zero-capacity `ShipHold` for the `CanBuildShips` constraint |
+| `vgr_qwaarjetii` | Taiidan-derived "Qwaar-Jet II" heavy battlecruiser (240k HP, speed 163); 4 pulse-cannon + 4 super-lance turrets, no `ShipHold`, builds Battlecruiser/SuperCap |
+| `vgr_vanaarjet` | Taiidan-derived "Vanaar-Jet" carrier-class capital (280k HP, speed 163); 4 pulse-cannon turrets + 6 PD lasers |
 | `vgr_destroyer` | Swappable primary turrets |
 | `vgr_assaultfrigate` | |
 | `vgr_heavymissilefrigate` | Heavy missile barrage frigate |

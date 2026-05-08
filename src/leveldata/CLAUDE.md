@@ -50,11 +50,13 @@ Coordinates use HW2's 3D space (Y = vertical). Symmetrical maps mirror coordinat
 | `2p_research_outpost.level` | 2 | 1v1 asymmetric | Hyperspace **disabled** |
 | `2p_the_graveyard.level` | 2 | 1v1 symmetric | |
 | `3p_assault.level` | 3 | 1v2 asymmetric | Hyperspace **disabled**, based on HW2 mission Thaddis Sabbah |
+| `3p_kadiir_nebula.level` | 3 | 1v2 asymmetric | Ported from HWC; uses `meg_slipgate` for the connecting slipgate route |
 | `3p_standoff.level` | 3 | FFA asymmetric | 3-player FFA |
 | `3p_trigs_bones.level` | 3 | 3p FFA | Ported from HWC, high verticality |
 | `4p_high_dive.level` | 4 | 4p FFA | Ported from HWC ("Kristalzupacken") |
 | `4p_the_battlefield.level` | 4 | 2v2 symmetric | |
 | `4p_the_unbound.level` | 4 | 4p FFA CQB | Based on HW2 Mission 11 |
+| `5p_gulf_sector.level` | 5 | 1v4 asymmetric | Ported from HWC; special ship: `vgr_vanaarjet` |
 | `5p_mining_outpost.level` | 5 | 2v3 asymmetric | Hyperspace **disabled** |
 | `5p_the_final_battle.level` | 5 | 2v3 asymmetric | Special ship: `sri_sajuuk` (SRI flagship), remix of HW2 Mission 15 |
 | `6p_badlands.level` | 6 | 3v3 or FFA | Minimal resources, center-only |

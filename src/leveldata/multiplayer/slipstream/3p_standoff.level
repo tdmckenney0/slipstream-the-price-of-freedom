@@ -1,4 +1,4 @@
-levelDesc = "Standoff "
+levelDesc = "Standoff"
 maxPlayers = 3
 player = {}
 player[0] =
