@@ -8,6 +8,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
+            size = 1,
             number = 1,
         },
         -- Utility
@@ -16,6 +17,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
+            size = 1,
             number = 6,
         },
         {
@@ -23,6 +25,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
+            size = 1,
             number = 3,
         },
         -- Super-Caps
@@ -40,6 +43,7 @@ PersistantData = {
             },
             shiphold = {},
             name = "",
+            size = 1,
             number = 1,
         },
         {
@@ -56,6 +60,7 @@ PersistantData = {
             },
             shiphold = {},
             name = "",
+            size = 1,
             number = 1,
         },
         {
@@ -72,6 +77,7 @@ PersistantData = {
             },
             shiphold = {},
             name = "",
+            size = 1,
             number = 2,
         },
         -- Frigates
@@ -80,6 +86,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
+            size = 2,
             number = 4,
         },
         {
@@ -87,6 +94,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
+            size = 2,
             number = 4,
         },
         -- Fighters
@@ -95,6 +103,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
+            size = 7,
             number = 5,
         },
         {
@@ -102,6 +111,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
+            size = 6,
             number = 5,
         },
         {
@@ -109,6 +119,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
+            size = 5,
             number = 5,
         },
         -- Corvettes
@@ -117,6 +128,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
+            size = 4,
             number = 4,
         },
         {
@@ -124,6 +136,7 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
+            size = 4,
             number = 4,
         },
     },
