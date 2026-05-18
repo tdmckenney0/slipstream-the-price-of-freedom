@@ -30,13 +30,15 @@ SUB col0biased, col0, ambientBias;
 MAX col0biased, col0biased, miscValues.x;
 ADD col0biased, col0biased, coolTint;
 
-## combine
-ADD outColour, col0biased, spec;
+## combine into TEMP — outColour is write-only in ARB FP1.0
+ADD col0biased, col0biased, spec;
 
 ## fake fresnel rim — (1 - col0) modulated by glow.b, cool tint
 SUB rim, miscValues.z, col0;
 MUL rim, rim, glow.b;
 MUL rim, rim, rimTint;
-MAD outColour, rim, rimStrength.x, outColour;
+MAD col0biased, rim, rimStrength.x, col0biased;
+
+MOV outColour, col0biased;
 
 END

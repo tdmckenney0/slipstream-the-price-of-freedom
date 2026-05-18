@@ -59,14 +59,14 @@ MUL prim, col0biased, shadowColour;
 ADD prim, prim, coolTint;
 MUL spec, spec, shadowColour;
 
-ADD outColour, prim, spec;
-
 ## fake fresnel rim — (1 - col0) modulated by glow.b, cool tint
+## Accumulate into prim (a TEMP) — outColour is write-only in ARB FP1.0
 SUB rim, miscValues.z, col0;
 MUL rim, rim, glow.b;
 MUL rim, rim, rimTint;
-MAD outColour, rim, rimStrength.x, outColour;
+MAD prim, rim, rimStrength.x, prim;
 
+ADD outColour, prim, spec;
 MOV outColour.a, col0.a;
 
 END 
