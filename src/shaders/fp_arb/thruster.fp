@@ -6,14 +6,15 @@ ATTRIB col0 = fragment.color.primary;	#diffuse interpolated color
 ATTRIB col1 = fragment.color.secondary;	#specular interpolated color
 PARAM miscValues  = { 0, 0.5, 1, 2 };
 
-# TPOF shader refresh (phase 1): gritty / industrial look constants
-PARAM coolTint           = { 0.06, 0.07, 0.10, 0 };
+# TPOF shader refresh (phase 1 v2): gritty / industrial look constants
+# v2: cut cool tint, rim, glow boost, and spec doublings — v1 was much too hot
+PARAM coolTint           = { 0.015, 0.018, 0.025, 0 };
 PARAM rimTint            = { 0.50, 0.70, 1.00, 0 };
-PARAM rimStrength        = { 0.60, 0,    0,    0 };
+PARAM rimStrength        = { 0.15, 0,    0,    0 };
 PARAM ambientBias        = { 0.10, 0.10, 0.10, 0 };
 PARAM lumWeights         = { 0.299, 0.587, 0.114, 0 };
 PARAM desatAmt           = { 0.15, 0, 0, 0 };
-PARAM thrusterGlowBoost  = { 0.75, 0, 0, 0 };
+PARAM thrusterGlowBoost  = { 0.55, 0, 0, 0 };
 
 OUTPUT outColour = result.color;
 
@@ -55,11 +56,8 @@ SUB teamStripeAmount, miscValues.z, glow.a;
 LRP base.rgb, teamBaseAmount, teamBaseColour, diffuse;
 LRP base.rgb, teamStripeAmount, teamStripeColour, base;
 
-## lighting — hotter than ships: 4 specular doublings (vanilla had 0)
+## lighting — v2: 1 specular doubling (was 4, vanilla had 0) — gentle boost
 MUL spec, col1, glow.b;
-ADD spec, spec, spec;
-ADD spec, spec, spec;
-ADD spec, spec, spec;
 ADD spec, spec, spec;
 # hotter engine glow contribution: thrusterGlowBoost.x (0.75)
 MUL light, thrusterGlowBoost.x, glow.g;

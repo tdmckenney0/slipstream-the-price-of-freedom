@@ -8,10 +8,11 @@ ATTRIB col1 = fragment.color.secondary;	#specular interpolated color
 #ATTRIB pos = fragment.position;			#screen position
 PARAM miscValues  = { 0, 0.5, 1, 2 };
 
-# TPOF shader refresh (phase 1): gritty / industrial look constants
-PARAM coolTint    = { 0.06, 0.07, 0.10, 0 };
+# TPOF shader refresh (phase 1 v2): gritty / industrial look constants
+# v2: cut cool tint to ~25% and rim strength to 25% — v1 was way too bright
+PARAM coolTint    = { 0.015, 0.018, 0.025, 0 };
 PARAM rimTint     = { 0.50, 0.70, 1.00, 0 };
-PARAM rimStrength = { 0.60, 0,    0,    0 };
+PARAM rimStrength = { 0.15, 0,    0,    0 };
 PARAM ambientBias = { 0.10, 0.10, 0.10, 0 };
 
 OUTPUT outColour = result.color;
@@ -30,9 +31,8 @@ MUL R, coordShadow.z, R;
 SGE shadowAmount, shadowAmount, R;
 MOV shadowAmount.a, col0.a;
 
-## lighting — tighter specular (3 doublings, vanilla was 2)
+## lighting — v2: vanilla 2 specular doublings (was 3 in v1, too hot)
 MUL spec, col1, glow.b;
-ADD spec, spec, spec;
 ADD spec, spec, spec;
 ADD spec, spec, spec;
 ##shadow fade

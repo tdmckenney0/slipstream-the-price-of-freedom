@@ -6,10 +6,11 @@ ATTRIB col0 = fragment.color.primary;	#diffuse interpolated color
 ATTRIB col1 = fragment.color.secondary;	#specular interpolated color
 PARAM miscValues  = { 0, 0.5, 1, 2 };
 
-# TPOF shader refresh (phase 1): gritty / industrial look constants
-PARAM coolTint    = { 0.06, 0.07, 0.10, 0 };
+# TPOF shader refresh (phase 1 v2): gritty / industrial look constants
+# v2: cut cool tint to ~25% and rim strength to 25%
+PARAM coolTint    = { 0.015, 0.018, 0.025, 0 };
 PARAM rimTint     = { 0.50, 0.70, 1.00, 0 };
-PARAM rimStrength = { 0.60, 0,    0,    0 };
+PARAM rimStrength = { 0.15, 0,    0,    0 };
 PARAM ambientBias = { 0.10, 0.10, 0.10, 0 };
 
 OUTPUT outColour = result.color;
