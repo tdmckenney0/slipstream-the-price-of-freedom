@@ -4,10 +4,15 @@ OPTION ARB_precision_hint_fastest;
 ATTRIB tex = fragment.texcoord[0];      #first set of texture coordinates
 PARAM miscValues  = { 0, 0.5, 1, 2 };
 
+# TPOF shader refresh (phase 1): luminance desaturation constants
+PARAM lumWeights  = { 0.299, 0.587, 0.114, 0 };
+PARAM desatAmt    = { 0.15, 0, 0, 0 };
+
 OUTPUT outColour = result.color;
 
 TEMP glow, diffuse, base, teamBaseColour, teamStripeColour;
 TEMP teamBaseAmount, teamStripeAmount;
+TEMP lum;
 
 TEX diffuse, tex, texture[0], 2D;       #sample the texture
 TEX glow, tex, texture[1], 2D;       	#sample the texture
@@ -28,7 +33,11 @@ SUB teamStripeAmount, miscValues.z, glow.a;
 
 ##avaerge the team colour and base texture
 LRP base.rgb, teamBaseAmount, teamBaseColour, diffuse;
-LRP outColour, teamStripeAmount, teamStripeColour, base;
+LRP base.rgb, teamStripeAmount, teamStripeColour, base;
+
+## luminance desaturation (post-team-color so stripes stay saturated)
+DP3 lum, base, lumWeights;
+LRP outColour, desatAmt.x, lum, base;
 
 END
 
