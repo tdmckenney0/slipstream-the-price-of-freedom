@@ -33,11 +33,12 @@ SUB teamStripeAmount, miscValues.z, glow.a;
 
 ##avaerge the team colour and base texture
 LRP base.rgb, teamBaseAmount, teamBaseColour, diffuse;
-LRP base.rgb, teamStripeAmount, teamStripeColour, base;
+LRP base, teamStripeAmount, teamStripeColour, base;
 
-## luminance desaturation (post-team-color so stripes stay saturated)
+## luminance desaturation (post-team-color so stripes stay saturated; .rgb only so alpha matches vanilla)
 DP3 lum, base, lumWeights;
-LRP outColour, desatAmt.x, lum, base;
+LRP outColour.rgb, desatAmt.x, lum, base;
+MOV outColour.a, base.a;
 
 END
 
