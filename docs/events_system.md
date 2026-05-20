@@ -105,6 +105,22 @@ event32 = {
 }
 ```
 
+## Bulk-editing weapon FX via CSV
+
+For batch changes across many ships' fire animations, use the export/import pair under `tools/`:
+
+```powershell
+# Dump every weapon config + its matching events to a CSV.
+pwsh tools\export-weapon-events.ps1                              # → .tmp\weapon-events.csv
+pwsh tools\export-weapon-events.ps1 -OutputPath C:\out\fx.csv
+
+# After editing the CSV, write the changes back into src/<...>/<name>.events.
+pwsh tools\import-weapon-events.ps1
+pwsh tools\import-weapon-events.ps1 -DryRun
+```
+
+The export joins each `StartShipWeaponConfig` / `StartSubSystemWeaponConfig` to events whose `anim` matches the weapon's 4th argument. Events files are resolved next to the `.ship`/`.subs` first, then vanilla `refs\homeworld2-big\<ship|subsystem>\<name>\<name>.events`. The import reverses that: it copies vanilla files into `src/` on demand and only rewrites weapon-fire events — Death/damage events and the animations block are preserved. Identity columns (`Ship or Subs Path`, `Weapon Hardpoint`, `Weapon Name`) are read-only keys; `.ship`/`.subs` files are not modified by the import.
+
 ## Ships with Custom `.events` Files
 
 | Ship | Notes |

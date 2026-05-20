@@ -19,7 +19,21 @@ During the eradication of The Beast, naturally-occurring Slipgates were encounte
 The Daiamid is not exactly content with this arrangement, and frankly, neither are the various Vaygr warlords who simply want to conquer Hiigara and plunder it for themselves. However, the conquest of Hiigaran space would be extremely resource intensive and would require cooperation among the various factions of Vaygr, whom are constantly warring with each other over territory, and whom also see the Hiigarans as subdued and contained for now. It is SRI's obligation to share any discoveries made within Vaygr territory with them, but the Vaygr know that the Hiigarans do most of the advanced research work deep within their own territory, and have a better chance of reverse-engineering the occasional stray Hiigaran vessel. The benefits of this deal, and the Daiamid's reluctance to challenge the Vaygr directly, have left SRI to operate mostly without oversight deep within the more fringe regions of the galaxy where even the Vaygr do not want to venture.
 
 ### The Price of Freedom
-This political conundrum has been referred to as "the price of freedom" within the Daiamid chamber; A cold war locking themselves and the Vaygr in a perpetual staring contest until one of them blinks. Until that happens, both factions are under pressure to quickly gather resources and strengthen their forces without the other noticing. This has lead to an extremely tense and lawless borderland between the two factions, where entire fleets go missing in action; of course, destroyed in skirmishes that go completely ignored unless politically convenient. Though, that hasn't stopped the persistent and militarily minded from trying to secure resources and strategic positions in the region without repercussion. This is the true "Price of Freedom": deadlocked political machines fighting an unofficial war with no end in sight... 
+This political conundrum has been referred to as "the price of freedom" within the Daiamid chamber; A cold war locking themselves and the Vaygr in a perpetual staring contest until one of them blinks. Until that happens, both factions are under pressure to quickly gather resources and strengthen their forces without the other noticing. This has lead to an extremely tense and lawless borderland between the two factions, where entire fleets go missing in action; of course, destroyed in skirmishes that go completely ignored unless politically convenient. Though, that hasn't stopped the persistent and militarily minded from trying to secure resources and strategic positions in the region without repercussion. This is the true "Price of Freedom": deadlocked political machines fighting an unofficial war with no end in sight...
+
+## Influences
+
+### Homeworld: Cataclysm
+
+The original expansion to Homeworld, Cataclysm has a much different tone that Slipstream carrys forward. Exotic ship designs and locations make their return as an homage.
+
+### Halo
+
+The fast-paced arena and sandbox nature of Halo, as well as the scifi influences seen in Slipstream.
+
+### Earth: 2150
+
+This 90s RTS allowed your units to have many different weapon loadouts, and production of those units were streamlined. 
 
 ## Requirements
 
@@ -226,6 +240,14 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 **Assault** is a 1v2 asymmetric map based on _Thaddis Sabbah_ from the Homeworld 2 campaign. Hyperspace is disabled.
 
+### Kadiir Nebula
+
+![Kadiir Nebula](./src/leveldata/multiplayer/slipstream/3p_kadiir_nebula.jpg)
+
+> ...
+
+**Kadiir Nebula** is a 3-player FFA asymmetric map based on Homeworld 2's Mission 7.
+
 ### Standoff
 
 ![Standoff](./src/leveldata/multiplayer/slipstream/3p_standoff.jpg)
@@ -265,6 +287,14 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 > Overwhelmed by the Beast, this is the final resting place of the Bentusi.
 
 **The Unbound** is a 4-player CQB FFA map based on Homeworld 2's Mission 11.
+
+### Gulf Sector
+
+![Gulf Sector](./src/leveldata/multiplayer/slipstream/5p_gulf_sector.jpg)
+
+> ...
+
+**Gulf Sector** is a 3v2 asymmetrical map based on Homeworld 2's Mission 4.
 
 ### Mining Outpost
 
