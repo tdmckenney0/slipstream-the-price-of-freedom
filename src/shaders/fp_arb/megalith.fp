@@ -42,10 +42,6 @@ SUB teamStripeAmount, miscValues.z, glow.a;
 LRP base.rgb, teamBaseAmount, teamBaseColour, diffuse;
 LRP base.rgb, teamStripeAmount, teamStripeColour, base;
 
-## luminance desaturation of base (post-team-color so stripes stay saturated)
-DP3 lum, base, lumWeights;
-LRP base, desatAmt.x, lum, base;
-
 ## lighting
 # compute specular
 MUL spec, col1, glow.b;
@@ -61,6 +57,10 @@ MAX light, col0biased, miscValues.x;
 ADD light, light, coolTint;
 # add specular
 ADD light, light, spec;
+
+## luminance desaturation of base (post-team-color so stripes stay saturated)
+DP3 lum, base, lumWeights;
+LRP base, desatAmt.x, lum, base;
 
 ## final colour
 MUL unFoggedColour, base, light;
