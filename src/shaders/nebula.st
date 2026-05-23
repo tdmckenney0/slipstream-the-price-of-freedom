@@ -15,8 +15,9 @@ simple defaultPass(Texture $diffuse)
 	srcBlend oneBlend
     destBlend oneBlend
 
-    material specular  1 1 0.4 1
-    material shininess 97 97 97 97
+    -- TPOF shader refresh (phase 2b): cooler, dimmer specular for gritty deep-space nebulae
+    material specular  0.35 0.35 0.40 1
+    material shininess 40 40 40 40
 
     textureMode	modulateMode
     

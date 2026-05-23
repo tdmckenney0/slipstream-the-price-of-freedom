@@ -2,7 +2,7 @@
 OPTION ARB_precision_hint_fastest;
 
 ATTRIB tex = fragment.texcoord[0];      #first set of texture coordinates
-PARAM glowValue  = { 0.5, 0.5, 0.5, 0.5 };
+PARAM glowValue  = { 0.5, 0.55, 0.5, 0.5 };
 
 OUTPUT outColour = result.color;
 

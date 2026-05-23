@@ -4,11 +4,16 @@ OPTION ARB_precision_hint_fastest;
 ATTRIB tex = fragment.texcoord[0];      #first set of texture coordinates
 PARAM miscValues  = { 0, 0.5, 1, 2 };
 
+# TPOF shader refresh (phase 1): luminance desaturation constants
+PARAM lumWeights  = { 0.299, 0.587, 0.114, 0 };
+PARAM desatAmt    = { 0.15, 0, 0, 0 };
+
 OUTPUT outColour = result.color;
 
 TEMP glow, diffuse, badge, mask;
 TEMP base, teamBaseColour, teamStripeColour, badgeColour;
 TEMP teamBaseAmount, teamStripeAmount;
+TEMP lum;
 
 TEX diffuse, tex, texture[0], 2D;       #sample the texture
 TEX glow, tex, texture[1], 2D;       	#sample the texture
@@ -32,6 +37,10 @@ SUB teamStripeAmount, miscValues.z, glow.a;
 ##avaerge the team colour and base texture
 LRP base.rgb, teamBaseAmount, teamBaseColour, diffuse;
 LRP base.rgb, teamStripeAmount, teamStripeColour, base;
+
+## luminance desaturation BEFORE badge stamp so badges stay saturated
+DP3 lum, base, lumWeights;
+LRP base.rgb, desatAmt.x, lum, base;
 
 #invert the mask`s alpha and use it to discolour the badge texture
 SUB mask.a, miscValues.z, mask.a;

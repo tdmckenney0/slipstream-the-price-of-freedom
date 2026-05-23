@@ -21,12 +21,20 @@ PARAM miscValues  = { 0, 0.5, 1, 2 };
 PARAM c18 = { 0.0, 1.0, 0.0625, 0.15 };
 # </new>
 
+# TPOF shader refresh (phase 1 v2): gritty / industrial look constants
+# v2: cut cool tint to ~25% and rim strength to 25% — v1 was way too bright
+PARAM coolTint    = { 0.015, 0.018, 0.025, 0 };
+PARAM rimTint     = { 0.50, 0.70, 1.00, 0 };
+PARAM rimStrength = { 0.15, 0,    0,    0 };
+PARAM ambientBias = { 0.10, 0.10, 0.10, 0 };
+
 OUTPUT outColour = result.color;
 
 TEMP glow, shadowColour;#, shadowAmount;
 TEMP spec, prim;
 TEMP R;
 TEMP r0, r1, r2, r3, r4, r5, r6, r7, r9, r10;
+TEMP rim, col0biased;
 
 #sample the textures
 #TXP shadowAmount, coordShadow, texture[0], 2D;
@@ -118,8 +126,7 @@ ADD shadowColour, r10, r9;
 
 #</new>
 
-## lighting
-# compute specular
+## lighting — v2: vanilla 2 specular doublings (was 3 in v1, too hot)
 MUL spec, col1, glow.b;
 ADD spec, spec, spec;
 ADD spec, spec, spec;
@@ -137,9 +144,24 @@ ADD spec, spec, spec;
 #LRP shadowColour, program.local[4].a, shadowAmount, miscValues.z;
 LRP shadowColour, program.local[4].a, shadowColour, miscValues.z;
 
-## put lighting in
-MUL prim, col0, shadowColour;
+# fake-AO crease darkening by squaring PCF accumulator
+MUL shadowColour, shadowColour, shadowColour;
+
+## ambient floor cut on col0
+SUB col0biased, col0, ambientBias;
+MAX col0biased, col0biased, miscValues.x;
+
+## put lighting in — cool-blue fill on the diffuse term
+MUL prim, col0biased, shadowColour;
+ADD prim, prim, coolTint;
 MUL spec, spec, shadowColour;
+
+## fake fresnel rim — (1 - col0) modulated by glow.b, cool tint
+## Accumulate into prim (a TEMP) — outColour is write-only in ARB FP1.0
+SUB rim, miscValues.z, col0;
+MUL rim, rim, glow.b;
+MUL rim, rim, rimTint;
+MAD prim, rim, rimStrength.x, prim;
 
 ADD outColour, prim, spec;
 MOV outColour.a, col0.a;
