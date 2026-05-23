@@ -42,7 +42,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "vgr_bc_heavyfusionmissile"
+                    name = "vgr_bc_sunshattermissile"
                 }
             },
             shiphold = {},
@@ -63,7 +63,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "vgr_bc_heavyfusionmissile"
+                    name = "vgr_bc_swarmmissile"
                 }
             },
             shiphold = {},
