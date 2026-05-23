@@ -1,8 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
--- NewSubSystemType.displayedName = "Concussion Missile Launcher"
--- NewSubSystemType.sobDescription = "Anti-frigate explosive missile battery"
-NewSubSystemType.displayedName = "$2048"
-NewSubSystemType.sobDescription = "$2047"
+NewSubSystemType.displayedName = "Concussion Missile Launcher"
+NewSubSystemType.sobDescription = "Anti-frigate explosive missile battery"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045
@@ -36,4 +34,4 @@ NewSubSystemType.AttackFamily = "SubSystem"
 NewSubSystemType.DockFamily = "CantDock"
 NewSubSystemType.DisplayFamily = "SubSystemModule"
 NewSubSystemType.ArmourFamily = "SubSystemArmour"
-StartSubSystemWeaponConfig(NewSubSystemType, "vgr_heavyconcussionmissilelauncher", "Weapon_BCMissile", "Weapon_BCMissile")
+StartSubSystemWeaponConfig(NewSubSystemType, "vgr_bc_concussionmissile", "Weapon_BCMissile", "Weapon_BCMissile")
