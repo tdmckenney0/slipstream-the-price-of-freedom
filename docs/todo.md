@@ -1,1 +1,0 @@
- - VGR battlecruiser needs to be able to build subsystem weapons
