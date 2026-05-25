@@ -126,6 +126,73 @@ function std_maxTuple(a, b, c)
     return maxval
 end
 
+-- Pick the next weapon turret to install on a battlecruiser or destroyer that
+-- still has an empty weapon hardpoint. TPOF capitals spawn with their swappable
+-- weapon slots empty, so the AI must fit them. Returns a subsystem constant
+-- (engine constant = UPPERCASE of the .subs typeString) or 0 if nothing to do.
+--
+-- Balanced loadout: one anti-capital + one anti-strikecraft turret per ship.
+-- The two-entry lists fill the two slots with a mix; the has/canBuild checks stop
+-- once slots are full and re-arm a ship that loses a turret in combat.
+function CpuBuildSS_NextMissingTurret(buildShipId)
+    local shipType = BuildShipType(buildShipId)
+    local turrets = NIL
+
+    if s_race == Race_Hiigaran then
+        if shipType == kBattleCruiser then
+            -- Weapon Top + Bottom: ion beam (anti-cap) + gatling (anti-strike)
+            turrets = { BCIONBEAMTURRET1, BCGATLINGGUNTURRET1 }
+        elseif shipType == kDestroyer then
+            -- TurretTop + Bottom: plasma burst (anti-frig/cap) + gatling (anti-strike)
+            turrets = { DDPLASMABURSTTURRET1, DDGATLINGGUNTURRET1 }
+        end
+    else
+        if shipType == kBattleCruiser then
+            -- Single Missile Battery slot: heavy fusion missile (anti-capital)
+            turrets = { BCHEAVYFUSIONMISSILE }
+        elseif shipType == kDestroyer then
+            -- Top + Bottom Turret: pulse cannon (anti-cap) + scattershot (anti-strike)
+            turrets = { DDPULSECANNONTURRET1, DDSCATTERSHOTTURRET1 }
+        end
+    end
+
+    if turrets == NIL then
+        return 0
+    end
+
+    for i, t in turrets do
+        if t and BuildShipHasSubSystem(buildShipId, t) == 0 and BuildShipCanBuild(buildShipId, t) == 1 then
+            return t
+        end
+    end
+
+    return 0
+end
+
+-- Walk the build-ship list and fit one missing weapon turret onto a
+-- battlecruiser or destroyer. Kept independent of production-subsystem demand
+-- and the s_totalProdSS gate in CpuBuildSS_ProcessEachBuildShip, so a freshly
+-- built warship gets armed even before the AI has any production modules.
+-- Returns 1 if a turret was queued.
+function CpuBuildSS_ArmCapitalShips()
+    local bcount = BuildShipCount()
+    if bcount == 0 then
+        return 0
+    end
+
+    for i = 0, (bcount - 1), 1 do
+        local buildShipId = BuildShipAt(i)
+        local armTurret = CpuBuildSS_NextMissingTurret(buildShipId)
+        if armTurret ~= 0 then
+            aitrace("Arm capital: build turret")
+            BuildSubSystemOnShip(buildShipId, armTurret)
+            return 1
+        end
+    end
+
+    return 0
+end
+
 function CpuBuildSS_ProcessEachBuildShip()
     local bcount = BuildShipCount()
     if bcount == 0 then
@@ -273,6 +340,12 @@ function CpuBuildSS_ProcessEachBuildShip()
 end
 
 function CpuBuildSS_DoBuildSubSystem()
+    -- Arm new battlecruisers/destroyers first, before any production-demand
+    -- gating, so their empty weapon hardpoints get filled promptly.
+    if CpuBuildSS_ArmCapitalShips() == 1 then
+        return 1
+    end
+
     SubSystemDemandClear()
     
     if Override_SubSystemDemand then
