@@ -358,82 +358,36 @@ function CpuBuildSS_OtherMiscSubSystemDemand()
 end
 
 function DoSubSystemDemand_Hiigaran()
+    -- TPOF restricts all research / advanced-research modules, so the old
+    -- RESEARCH-module gating (which withheld corvette/frigate production until a
+    -- research module existed, and that module can never be built) permanently
+    -- limited the AI to fighter production. Demand all three production classes
+    -- directly instead.
     CpuBuildSS_DoSubSystemProductionDemand(FIGHTERPRODUCTION, eFighter, kUnitCapId_Fighter)
-    
-    NumSubSystemsQ(RESEARCH)
-    local highestCorvetteDemand = ShipDemandMaxByClass(eCorvette)
-    local highestFrigateDemand = ShipDemandMaxByClass(eFrigate)
-    local capdemand = ShipDemandMaxByClass(eCapital)
-    
-    -- Guard nil globals from NumSubSystemsQ
-    local resDemand = researchdemand or 0
-    if highestFrigateDemand > resDemand then
-        resDemand = highestFrigateDemand
-    elseif capdemand > resDemand then
-        resDemand = capdemand
-    end
-    researchdemand = resDemand
-    
-    local resCount = researchcount or 0
-    if resCount == 0 then
-        SubSystemDemandSet(RESEARCH, (researchdemand + 0.5))
-    else
-        CpuBuildSS_DoSubSystemProductionDemand(CORVETTEPRODUCTION, eCorvette, kUnitCapId_Corvette)
-        CpuBuildSS_DoSubSystemProductionDemand(FRIGATEPRODUCTION, eFrigate, kUnitCapId_Frigate)
-        
-        NumSubSystemsQ(ADVANCEDRESEARCH)
-        local doAdvResearch = 0
-        
-        if s_numFrSystems > 0 then
-            researchdemand = (researchdemand + 0.5)
-        end
-        
-        -- SLIPSTREAM: Earlier advanced research
-        if advresearchcount == 0 and researchdemand >= 0.25 and UnderAttackThreat() < -5 then
-            if s_militaryPop > 5 or s_selfTotalValue > 100 or s_militaryStrength > 25 then
-                SubSystemDemandSet(ADVANCEDRESEARCH, (researchdemand - 0.25))
-            end
-        end
-    end
-    
+    CpuBuildSS_DoSubSystemProductionDemand(CORVETTEPRODUCTION, eCorvette, kUnitCapId_Corvette)
+    CpuBuildSS_DoSubSystemProductionDemand(FRIGATEPRODUCTION, eFrigate, kUnitCapId_Frigate)
+
     CpuBuildSS_OtherMiscSubSystemDemand()
-    
+
     -- Guard nil globals
-    if (researchcount or 0) > 0 and (s_totalProdSS or 0) > 0 and (s_militaryPop or 0) > 5 and GetNumCollecting() > 4 and GetRU() > 500 then
+    if (s_totalProdSS or 0) > 0 and (s_militaryPop or 0) > 5 and GetNumCollecting() > 4 and GetRU() > 500 then
         CpuBuildSS_SpecialSubSystemDemand()
     end
 end
 
 function DoSubSystemDemand_Vaygr()
+    -- TPOF restricts CorvetteTech / FrigateTech and all research modules, so the
+    -- old IsResearchDone() gates here permanently blocked Vaygr corvette/frigate
+    -- production (those techs can never complete). Demand all three production
+    -- classes directly instead.
     CpuBuildSS_DoSubSystemProductionDemand(FIGHTERPRODUCTION, eFighter, kUnitCapId_Fighter)
-    
-    NumSubSystemsQ(RESEARCH)
-    local highestCorvetteDemand = ShipDemandMaxByClass(eCorvette)
-    local highestFrigateDemand = ShipDemandMaxByClass(eFrigate)
-    local capdemand = ShipDemandMaxByClass(eCapital)
-    
-    if researchcount == 0 then
-        if highestFrigateDemand > researchdemand then
-            researchdemand = highestFrigateDemand
-        elseif capdemand > researchdemand then
-            researchdemand = capdemand
-        end
-        
-        SubSystemDemandSet(RESEARCH, (researchdemand + 1))
-    end
-    
-    if IsResearchDone(CORVETTETECH) == 1 then
-        CpuBuildSS_DoSubSystemProductionDemand(CORVETTEPRODUCTION, eCorvette, kUnitCapId_Corvette)
-    end
-    
-    if IsResearchDone(FRIGATETECH) == 1 then
-        CpuBuildSS_DoSubSystemProductionDemand(FRIGATEPRODUCTION, eFrigate, kUnitCapId_Frigate)
-    end
-    
+    CpuBuildSS_DoSubSystemProductionDemand(CORVETTEPRODUCTION, eCorvette, kUnitCapId_Corvette)
+    CpuBuildSS_DoSubSystemProductionDemand(FRIGATEPRODUCTION, eFrigate, kUnitCapId_Frigate)
+
     CpuBuildSS_OtherMiscSubSystemDemand()
-    
+
     -- Guard nil globals
-    if (researchcount or 0) > 0 and (s_totalProdSS or 0) > 0 and (s_militaryPop or 0) > 5 and GetNumCollecting() > 4 and GetRU() > 500 then
+    if (s_totalProdSS or 0) > 0 and (s_militaryPop or 0) > 5 and GetNumCollecting() > 4 and GetRU() > 500 then
         CpuBuildSS_SpecialSubSystemDemand()
     end
 end
