@@ -269,7 +269,14 @@ Minimum: one `data`-alias TOC containing `LevelData\Multiplayer\<GameRules>.lua`
 
 Add a TOC with `alias="locale"` to the same `.big`. Pack multiple languages as multiple `locale`-alias TOCs in the same archive — only the one matching the running language (or English fallback) is mapped. This is why **different-language players can multiplayer without desync** on text.
 
-**Reserved locID range**: `8000–8999`. Stay within that range in mod `.dat` files.
+**Reserved locID range**: `8000–8999`. Stay within that range in mod `.dat` files. This is
+not optional — the engine ignores mod strings outside it, so an out-of-range `$<ID>` renders
+as the raw literal in-game.
+
+> **How TPOF actually does it:** TPOF skips the separate `locale`-alias TOC shown in the
+> `ResourceRace` sample. Instead it packs `slipstream.dat` + a `localedat.lua` override through
+> the normal `Data` TOC (overriding vanilla by path), which needs zero changes to
+> `build-tpof.ps1`. Both approaches work; see `docs/locale_system.md` for the as-built detail.
 
 ### 3.5 Displaying HUD widgets
 
