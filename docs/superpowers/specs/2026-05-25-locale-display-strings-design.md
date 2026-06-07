@@ -2,7 +2,19 @@
 
 **Date:** 2026-05-25
 **Branch:** polish-next-release
-**Status:** Approved (pending written-spec review)
+**Status:** ✅ Implemented (2026-06-06).
+
+> **Implementation corrections — read `docs/locale_system.md` for the authoritative, as-built
+> reference.** Three details in the original design below turned out to be wrong and were
+> changed during implementation:
+> 1. **ID range is 8000–8999, not 9000–9999.** The engine only resolves mod strings in the
+>    reserved 8000–8999 range; `9xxx` IDs render as raw `"$<ID>"` literals in-game.
+> 2. **No separate `locale`-alias TOC, and no `build-tpof.ps1` change.** `slipstream.dat` and
+>    `localedat.lua` pack through the normal `Data` TOC and override vanilla by path.
+> 3. Path **casing is irrelevant** (lowercase `locale/english/` works).
+>
+> The inventory, scope, conversion rules, and non-goals below are still accurate; only the
+> mechanism (range + packing) changed.
 
 ## Problem
 
