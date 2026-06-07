@@ -546,7 +546,7 @@ build =
         RequiredResearch = "",
         RequiredShipSubSystems = "",
         DisplayPriority = 1430,
-        DisplayedName = "Concussion Missile Launcher",
+        DisplayedName = "$8000",
         Description = "Anti-frigate explosive missile battery",
     },
 }
