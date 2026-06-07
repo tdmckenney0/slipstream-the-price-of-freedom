@@ -1,0 +1,8 @@
+// Slipstream: The Price of Freedom -- custom display strings
+filerange 8000 8999
+rangestart 8000 8999
+
+// Weapons
+8000	Concussion Missile Launcher
+
+rangeend
