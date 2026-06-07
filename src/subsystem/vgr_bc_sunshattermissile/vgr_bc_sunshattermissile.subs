@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "Sun-Shatter Missile Launcher"
-NewSubSystemType.sobDescription = "Long-range siege missile battery"
+NewSubSystemType.displayedName = "$8002"
+NewSubSystemType.sobDescription = "$8003"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045

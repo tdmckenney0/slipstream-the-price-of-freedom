@@ -436,7 +436,7 @@ build =
         RequiredResearch = "",
         RequiredShipSubSystems = "",
         DisplayPriority = 612,
-        DisplayedName = "Honking big planet killing missile",
+        DisplayedName = "$8008",
         Description = "",
     },
     -- TPOF Weapons
@@ -519,8 +519,8 @@ build =
         RequiredResearch = "",
         RequiredShipSubSystems = "",
         DisplayPriority = 1400,
-        DisplayedName = "Heavy Fusion Missile Launcher",
-        Description = "Heavy-yield anti-capital missile battery",
+        DisplayedName = "$8004",
+        Description = "$8005",
     },
     {
         Type = SubSystem,
@@ -528,8 +528,8 @@ build =
         RequiredResearch = "",
         RequiredShipSubSystems = "",
         DisplayPriority = 1410,
-        DisplayedName = "Sun-Shatter Missile Launcher",
-        Description = "Long-range siege missile battery",
+        DisplayedName = "$8002",
+        Description = "$8003",
     },
     {
         Type = SubSystem,
@@ -537,8 +537,8 @@ build =
         RequiredResearch = "",
         RequiredShipSubSystems = "",
         DisplayPriority = 1420,
-        DisplayedName = "Swarm Missile Burst",
-        Description = "Rapid-fire anti-strikecraft missile battery",
+        DisplayedName = "$8006",
+        Description = "$8007",
     },
     {
         Type = SubSystem,
@@ -547,6 +547,6 @@ build =
         RequiredShipSubSystems = "",
         DisplayPriority = 1430,
         DisplayedName = "$8000",
-        Description = "Anti-frigate explosive missile battery",
+        Description = "$8001",
     },
 }

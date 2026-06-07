@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "Concussion Missile Launcher"
-NewSubSystemType.sobDescription = "Anti-frigate explosive missile battery"
+NewSubSystemType.displayedName = "$8000"
+NewSubSystemType.sobDescription = "$8001"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045

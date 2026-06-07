@@ -1,6 +1,6 @@
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.displayedName = "Heavy Fusion Missile Launcher"
-NewSubSystemType.sobDescription = "Heavy-yield anti-capital missile battery"
+NewSubSystemType.displayedName = "$8004"
+NewSubSystemType.sobDescription = "$8005"
 NewSubSystemType.tacticalIcon = "hexagon"
 NewSubSystemType.tacticalIconMinSize = 0.0035
 NewSubSystemType.tacticalIconMinFadeSize = 0.0045
