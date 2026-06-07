@@ -9,6 +9,9 @@ Each subsystem lives in `src/subsystem/{subsysname}/` and contains:
 
 ```lua
 NewSubSystemType = StartSubSystemConfig()
+-- $<ID> = locale string in src/locale/english/slipstream.dat (IDs 8000-8999; see
+-- docs/locale_system.md). A weapon's name/description should reuse the SAME ID as its
+-- build.lua entry so the build menu and selection UI stay in sync.
 NewSubSystemType.displayedName = "$STRING_ID"
 NewSubSystemType.sobDescription = "$STRING_ID"
 

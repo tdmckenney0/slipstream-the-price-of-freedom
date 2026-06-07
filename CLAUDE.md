@@ -38,6 +38,7 @@ The mod is authored entirely in **Lua** (HW2's scripting language) plus HW2-prop
 | `.anim` | Animation file |
 | `.events` | Ship/subsystem event bindings — animation-driven death/damage/fire FX and sounds. See `docs/events_system.md`. |
 | `.mres` | Multi-resolution icon definition |
+| `.dat` | Locale dictionary — plain text (despite the extension): `<ID>⇥<text>` rows referenced via `$<ID>`. See `docs/locale_system.md`. |
 
 ## Repository Layout
 
@@ -61,8 +62,11 @@ src/
     attack/                   # Attack scripts (flyby, strafe, dogfight, etc.)
     weaponfire/               # Weapon fire scripts
   leveldata/multiplayer/
-    deathmatch.lua            # "Slipstream" game mode entry point (GameRulesName = "Slipstream")
+    deathmatch.lua            # "Slipstream" game mode entry point (GameRulesName = "$8300")
     slipstream/               # All multiplayer maps (.level + thumbnails + preview images)
+  locale/
+    localedat.lua             # Dictionary list (vanilla 8 + slipstream.dat)
+    english/slipstream.dat    # TPOF custom display strings (IDs 8000-8999)
   ai/
     classdef.lua              # AI ship class definitions
   art/fx/                     # Visual effects (Lua FX scripts + textures)
@@ -74,6 +78,7 @@ src/
 docs/
   loadout_system.md           # Hardpoint/weapon loadout system documentation
   research_tree.md            # Tech tree simplification documentation
+  locale_system.md            # Custom display strings ($<ID>) + slipstream.dat reference
   events_system.md            # .events file format reference
   weaponfire_scripts.md       # .wf file format reference + script catalog
   relic_developers_network.md # RDN toolkit reference
@@ -193,6 +198,22 @@ Maps live in `src/leveldata/multiplayer/slipstream/` and are named `{Np}_{map_na
 
 `src/scripts/music.lua` implements shuffle playlists. `Play(settingString)` dispatches to one of several `Shuffle*()` functions that load a playlist from `data:soundscripts/playlists/` and register the `RandomMusicRule` interval rule. **F1** skips to the next track.
 
+## Display Strings (Locale System)
+
+Player-facing text is **not** hardcoded as English literals — it lives in a TPOF-owned
+locale dictionary and is referenced by ID as `"$<ID>"`:
+
+- Dictionary: `src/locale/english/slipstream.dat` (plain text; `<ID>⇥<text>` rows).
+- Registered in `src/locale/localedat.lua` (vanilla 8 dictionaries + `slipstream.dat`).
+- **TPOF IDs must be in 8000–8999** — the engine ignores mod strings outside that range, so
+  an out-of-range `$<ID>` renders as the raw literal in-game.
+- Packed by `tools\build-tpof.ps1` through the normal `Data` TOC — no build-script changes.
+
+Use `$<ID>` for `displayedName`/`sobDescription` (`.ship`/`.subs`),
+`DisplayedName`/`Description` (`build.lua`/`research.lua`), and the game-rules/music strings
+in `deathmatch.lua`. Full format, ID map, and "how to add a string" are in
+`docs/locale_system.md`.
+
 ## Playable Races
 
 Only Hiigaran and Vaygr are playable (`Playable = 1` in `race.lua`). SRI Corp and Keeper units appear as special scenario ships on specific maps. The "Random" race option is also playable (selects either Hiigaran or Vaygr randomly).
@@ -281,3 +302,4 @@ Each major source subdirectory has its own CLAUDE.md with format details, field 
 | `src/subsystem/CLAUDE.md` | `.subs` file structure, full subsystem catalog, how to add a new weapon subsystem |
 | `src/scripts/CLAUDE.md` | Entry point wiring, `PersistantData` format, build table format, attack/weaponfire scripts |
 | `src/leveldata/CLAUDE.md` | `.level` file structure, full map roster, how to add a new map |
+| `src/locale/CLAUDE.md` | `slipstream.dat` format, ID range, how to add a display string |

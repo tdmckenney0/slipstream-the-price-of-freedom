@@ -6,6 +6,13 @@ All multiplayer maps live in `src/leveldata/multiplayer/`.
 
 `deathmatch.lua` — the "Slipstream" game rules file. **This is the central game logic entry point**, not a map file.
 
+Its player-facing strings (`GameRulesName`, setup `Description`, the Music option's
+`locName`/`tooltip`, and every music-`choices` display label) are `$<ID>` locale references
+(IDs 8300-8343) resolved against `src/locale/english/slipstream.dat`. The paired music
+*values* (`"slipstream"`, `"ambient\\amb_01"`, …) are not display text and stay literal. See
+`docs/locale_system.md`. Note: `.level` `levelDesc` map names are a separate concern and were
+not part of the locale conversion.
+
 ## Map Directory: `slipstream/`
 
 Each map has:

@@ -10,7 +10,8 @@ Each ship lives in its own subdirectory: `src/ship/{shipname}/`. The directory c
 ```lua
 NewShipType = StartShipConfig()
 
--- Identity
+-- Identity ($<ID> = locale string in src/locale/english/slipstream.dat, IDs 8000-8999;
+--           see docs/locale_system.md. New display text should use $<ID>, not raw literals.)
 NewShipType.displayedName = "$STRING_ID"      -- localized string reference
 NewShipType.sobDescription = "$STRING_ID"
 

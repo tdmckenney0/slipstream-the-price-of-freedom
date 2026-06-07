@@ -79,6 +79,11 @@ Flat `build` table of all buildable items. Each entry:
 
 TPOF-specific weapon subsystems use `DisplayPriority = 1000+` so they sort at the bottom.
 
+`DisplayedName`/`Description` use `$<ID>` locale references (IDs 8000-8999) resolved against
+`src/locale/english/slipstream.dat`. A weapon's build entry reuses the same ID as its `.subs`
+file. The game-rules/music strings in `deathmatch.lua` and the menu strings in `research.lua`
+are localized the same way. See `docs/locale_system.md`.
+
 `Player_NumberOfShips()` in `deathmatch.lua` loads this file dynamically to count fleet size. Only entries with `Type ~= 1` (i.e., `Type ~= SubSystem`) are counted.
 
 ### `attack/` scripts
