@@ -1,1 +1,2 @@
  - Salvaging is still broken.
+ - Fix heavy missile frigate animation
