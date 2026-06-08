@@ -1,5 +1,16 @@
 -- Slipstream: The Price of Freedom - Research Logic
--- Prioritizes capital ship upgrades and weapon research
+--
+-- TPOF restricts the research *modules*, but a set of "basic" upgrades remain
+-- always available: defined with RequiredSubSystems = "" and not listed in
+-- scar/restrict.lua, so a player (and the AI) can research them with no research
+-- module present. This module makes the AI pursue those upgrades, scaled by the
+-- ships it actually fields, and only when it has SPARE economy -- so research
+-- never starves ship production. Active on all difficulties, scaled by g_LOD.
+--
+-- NOTE: unlike stock HW2 AI, CpuResearch_Process() deliberately does NOT bail
+-- out on NumResearchSubSystems() == 0. In TPOF that count is always 0 (modules
+-- restricted), and the target upgrades need no module. See
+-- docs/superpowers/specs/2026-05-25-ai-basic-research-design.md.
 
 aitrace("LOADING SLIPSTREAM CPU RESEARCH")
 
@@ -7,198 +18,37 @@ function CpuResearch_Init()
     if s_race == Race_Hiigaran then
         dofilepath("data:ai/hiigaran_upgrades.lua")
         DoUpgradeDemand = DoUpgradeDemand_Hiigaran
-        DoResearchTechDemand = DoResearchTechDemand_Hiigaran
     else
         dofilepath("data:ai/vaygr_upgrades.lua")
         DoUpgradeDemand = DoUpgradeDemand_Vaygr
-        DoResearchTechDemand = DoResearchTechDemand_Vaygr
     end
-    
+
     sg_lastUpgradeTime = gameTime()
-    
-    -- SLIPSTREAM: Faster upgrade cycles
-    sg_upgradeDelayTime = (120 + Rand(60))
-    
-    cp_researchDemandRange = 0.25
-    if g_LOD == 1 then
-        cp_researchDemandRange = 0.5
+
+    -- Difficulty-scaled cadence between upgrade pushes (seconds). Hard upgrades
+    -- aggressively; Easy only occasionally.
+    if g_LOD >= 2 then
+        sg_upgradeDelayTime = (45 + Rand(30))
+    elseif g_LOD == 1 then
+        sg_upgradeDelayTime = (90 + Rand(45))
+    else
+        sg_upgradeDelayTime = (150 + Rand(60))
     end
-    if g_LOD == 0 then
-        cp_researchDemandRange = 1.5
+
+    -- Minimum collectors before any RU is diverted to research.
+    sg_minNumCollectors = 3
+    if g_LOD < 1 then
+        sg_minNumCollectors = 5
     end
-    
+
     if Override_ResearchInit then
         Override_ResearchInit()
     end
 end
 
-function CpuResearch_DefaultResearchDemandRules()
-    local threatlevel = UnderAttackThreat()
-    if threatlevel > 100 then
-        return
-    end
-    
-    DoResearchTechDemand()
-    
-    local curGameTime = gameTime()
-    local economicValue = 0
-    local numCollecting = GetNumCollecting()
-    local numRU = GetRU()
-    
-    -- SLIPSTREAM: Lower thresholds for upgrades
-    if numRU > 2000 and numCollecting > 6 or numRU > 8000 then
-        economicValue = 2
-    elseif numRU > 1000 and numCollecting > 4 or numRU > 4000 then
-        economicValue = 1
-    end
-    
-    if sg_doupgrades == 1 and threatlevel < -20 and s_militaryPop > 5 and economicValue > 0 then
-        local timeSinceUpgrade = (gameTime() - (sg_lastUpgradeTime or 0))
-        if timeSinceUpgrade > sg_upgradeDelayTime or economicValue > 1 then
-            DoUpgradeDemand()
-            sg_lastUpgradeTime = gameTime()
-        end
-    end
-end
-
-function CpuResearch_Process()
-    if GetNumCollecting() < sg_minNumCollectors and GetRU() < 1500 then
-        return 0
-    end
-    
-    if NumResearchSubSystems() == 0 then
-        return 0
-    end
-    
-    if IsResearchBusy() == 1 then
-        return 0
-    end
-    
-    ResearchDemandClear()
-    
-    if Override_ResearchDemand then
-        Override_ResearchDemand()
-    else
-        CpuResearch_DefaultResearchDemandRules()
-    end
-    
-    local bestResearch = FindHighDemandResearch()
-    if bestResearch ~= 0 then
-        Research(bestResearch)
-        return 1
-    end
-    
-    return 0
-end
-
-function DoResearchTechDemand_Vaygr()
-    -- Hyperspace gate tech
-    if Util_CheckResearch(HYPERSPACEGATETECH) then
-        local demand = ShipDemandGet(kShipYard)
-        if demand > 0 then
-            ResearchDemandSet(HYPERSPACEGATETECH, (demand + 0.75))
-        end
-    end
-    
-    -- Battlecruiser weapons
-    NumSquadronsQ(kShipYard)
-    local shipyardCount = numShipyards or 0
-    if shipyardCount > 0 and Util_CheckResearch(BATTLECRUISERIONWEAPONS) then
-        local battleCruiserDemand = ShipDemandGet(kBattleCruiser) or 0
-        local hbcDemand = ShipDemandGet(kHeavyBattleCruiser) or 0
-        if battleCruiserDemand > 0 or hbcDemand > 0 then
-            ResearchDemandSet(BATTLECRUISERIONWEAPONS, battleCruiserDemand + hbcDemand + 0.5)
-        end
-    end
-    
-    if Util_CheckResearch(DESTROYERGUNS) then
-        local demand = ShipDemandGet(VGR_DESTROYER)
-        if demand > 0 then
-            ResearchDemandSet(DESTROYERGUNS, demand)
-        end
-    end
-    
-    if Util_CheckResearch(LANCEBEAMS) then
-        local lancedemand = ShipDemandGet(VGR_LANCEFIGHTER)
-        if lancedemand > 0 then
-            ResearchDemandSet(LANCEBEAMS, (lancedemand + 0.5))
-        end
-    end
-    
-    if Util_CheckResearch(PLASMABOMBS) then
-        local bomberdemand = ShipDemandGet(VGR_BOMBER)
-        if bomberdemand > 0 then
-            ResearchDemandSet(PLASMABOMBS, (bomberdemand + 1))
-        end
-    end
-    
-    if Util_CheckResearch(CORVETTELASER) then
-        local laserdemand = ShipDemandGet(VGR_LASERCORVETTE)
-        if laserdemand > 0 then
-            ResearchDemandSet(CORVETTELASER, laserdemand)
-        end
-    end
-    
-    if Util_CheckResearch(FRIGATEASSAULT) then
-        local demand = ShipDemandGet(VGR_ASSAULTFRIGATE)
-        if demand > 0 then
-            ResearchDemandSet(FRIGATEASSAULT, demand)
-        end
-    end
-    
-    if Util_CheckResearch(PLATFORMHEAVYMISSILES) then
-        local demand = ShipDemandGet(VGR_WEAPONPLATFORM_MISSILE)
-        if demand > 0 then
-            ResearchDemandSet(PLATFORMHEAVYMISSILES, demand)
-        end
-    end
-    
-    if Util_CheckResearch(BOMBERIMPROVEDBOMBS) then
-        local numBombers = NumSquadrons(kBomber)
-        if numBombers > 1 then
-            ResearchDemandSet(BOMBERIMPROVEDBOMBS, numBombers * 1.5)
-        end
-    end
-    
-    if Util_CheckResearch(CORVETTETECH) then
-        local corvdemand = ShipDemandMaxByClass(eCorvette)
-        if corvdemand > 0 then
-            ResearchDemandSet(CORVETTETECH, (corvdemand + 0.5))
-        end
-    end
-    
-    if Util_CheckResearch(FRIGATETECH) then
-        local frigdemand = ShipDemandMaxByClass(eFrigate)
-        if frigdemand > 0 then
-            ResearchDemandSet(FRIGATETECH, (frigdemand + 0.5))
-        end
-    end
-    
-    -- Special research at higher pop
-    if s_militaryPop > 10 and GetRU() > 500 then
-        if Util_CheckResearch(CORVETTEGRAVITICATTRACTION) then
-            local mineLayerDemand = ShipDemandGet(VGR_MINELAYERCORVETTE)
-            if mineLayerDemand > 0 then
-                ResearchDemandSet(CORVETTEGRAVITICATTRACTION, mineLayerDemand)
-            end
-        end
-        
-        if Util_CheckResearch(CORVETTECOMMAND) then
-            local commanddemand = ShipDemandGet(VGR_COMMANDCORVETTE)
-            if commanddemand > 0 then
-                ResearchDemandSet(CORVETTECOMMAND, commanddemand)
-            end
-        end
-        
-        if Util_CheckResearch(FRIGATEINFILTRATIONTECH) then
-            local demand = ShipDemandGet(VGR_INFILTRATORFRIGATE)
-            if demand > 0 then
-                ResearchDemandSet(FRIGATEINFILTRATIONTECH, demand)
-            end
-        end
-    end
-end
-
+-- True only when an upgrade is currently researchable and not already done.
+-- Chained upgrades fail IsResearchAvailable until their prerequisite completes,
+-- so this naturally walks a chain one tier at a time.
 function Util_CheckResearch(researchId)
     if IsResearchDone(researchId) == 0 then
         if IsResearchAvailable(researchId) == 1 then
@@ -208,214 +58,7 @@ function Util_CheckResearch(researchId)
     return NIL
 end
 
-function DoResearchTechDemand_Hiigaran()
-    -- Battlecruiser weapons priority
-    NumSquadronsQ(kShipYard)
-    local shipyardCount = numShipyards or 0
-    if shipyardCount > 0 and Util_CheckResearch(BATTLECRUISERIONWEAPONS) then
-        local battleCruiserDemand = ShipDemandGet(kBattleCruiser) or 0
-        local hbcDemand = ShipDemandGet(kHeavyBattleCruiser) or 0
-        if battleCruiserDemand > 0 or hbcDemand > 0 then
-            ResearchDemandSet(BATTLECRUISERIONWEAPONS, battleCruiserDemand + hbcDemand + 0.5)
-        end
-    end
-    
-    if Util_CheckResearch(PLATFORMIONWEAPONS) then
-        local ionTurretDemand = ShipDemandGet(HGN_IONTURRET)
-        if ionTurretDemand > 0 then
-            ResearchDemandSet(PLATFORMIONWEAPONS, ionTurretDemand)
-        end
-    end
-    
-    if Util_CheckResearch(DESTROYERTECH) then
-        local destroyerDemand = ShipDemandGet(HGN_DESTROYER)
-        if destroyerDemand > 0 then
-            ResearchDemandSet(DESTROYERTECH, destroyerDemand)
-        end
-    end
-    
-    if Util_CheckResearch(ATTACKBOMBERIMPROVEDBOMBS) then
-        local numBombers = NumSquadrons(kBomber)
-        if numBombers > 1 then
-            ResearchDemandSet(ATTACKBOMBERIMPROVEDBOMBS, numBombers * 1.5)
-        end
-    end
-    
-    if Util_CheckResearch(IMPROVEDTORPEDO) then
-        local numTorpedoFrigs = NumSquadrons(HGN_TORPEDOFRIGATE)
-        if numTorpedoFrigs > 1 then
-            ResearchDemandSet(IMPROVEDTORPEDO, numTorpedoFrigs * 1.5)
-        end
-    end
-    
-    -- Special research at higher pop
-    if s_militaryPop > 10 and GetRU() > 500 then
-        if Util_CheckResearch(DEFENSEFIELDFRIGATESHIELD) then
-            local DFFDemand = ShipDemandGet(HGN_DEFENSEFIELDFRIGATE)
-            if DFFDemand > 0 then
-                ResearchDemandSet(DEFENSEFIELDFRIGATESHIELD, DFFDemand)
-            end
-        end
-        
-        if Util_CheckResearch(ECMPROBE) then
-            local ecmProbeDemand = ShipDemandGet(HGN_ECMPROBE)
-            if ecmProbeDemand > 0 then
-                ResearchDemandSet(ECMPROBE, ecmProbeDemand)
-            end
-        end
-        
-        if Util_CheckResearch(GRAVITICATTRACTIONMINES) then
-            local mineLayerDemand = ShipDemandGet(HGN_MINELAYERCORVETTE)
-            if mineLayerDemand > 0 then
-                ResearchDemandSet(GRAVITICATTRACTIONMINES, mineLayerDemand)
-            end
-        end
-    end
-end
-
-function DoUpgradeDemand_Hiigaran()
-    if s_militaryStrength > 5 or g_LOD == 0 then
-        inc_upgrade_demand(rt_mothership, 0.5)
-        ResearchDemandAdd(MOTHERSHIPBUILDSPEEDUPGRADE1, 0.5)
-        
-        local numPlatforms = numActiveOfClass(s_playerIndex, ePlatform)
-        if numPlatforms > 1 then
-            local numGunTurret = NumSquadrons(HGN_GUNTURRET)
-            if numGunTurret > 1 then
-                inc_upgrade_demand(rt_platform.gunturret, numGunTurret * 1)
-            end
-            
-            local numIonTurret = NumSquadrons(HGN_IONTURRET)
-            if numIonTurret > 1 then
-                inc_upgrade_demand(rt_platform.ionturret, numIonTurret * 1)
-            end
-        end
-        
-        local numCollectors = NumSquadrons(kCollector)
-        if numCollectors > 0 then
-            inc_upgrade_demand(rt_collector, numCollectors * 0.1)
-        end
-        
-        local numRefinery = NumSquadrons(kRefinery)
-        if numRefinery > 0 then
-            inc_upgrade_demand(rt_refinery, numRefinery * 1.5)
-        end
-        
-        local numCarrier = NumSquadrons(kCarrier)
-        if numCarrier > 0 then
-            inc_upgrade_demand(rt_carrier, numCarrier * 1)
-            ResearchDemandAdd(CARRIERBUILDSPEEDUPGRADE1, numCarrier * 1.25)
-        end
-        
-        local numShipYards = NumSquadrons(kShipYard)
-        if numShipYards > 0 then
-            inc_upgrade_demand(rt_shipyard, numShipYards * 1.5)
-            ResearchDemandAdd(SHIPYARDBUILDSPEEDUPGRADE1, numShipYards * 1.75)
-        end
-    end
-    
-    local numFighter = numActiveOfClass(s_playerIndex, eFighter)
-    if numFighter > 1 then
-        local numInterceptors = NumSquadrons(kInterceptor)
-        if numInterceptors > 1 then
-            inc_upgrade_demand(rt_fighter.interceptor, numInterceptors * 1)
-        end
-        
-        local numBombers = NumSquadrons(kBomber)
-        if numBombers > 1 then
-            inc_upgrade_demand(rt_fighter.bomber, numBombers * 1.5)
-        end
-    end
-    
-    -- SLIPSTREAM: Heavy Battlecruiser upgrade priority
-    local numBattleCruiser = NumSquadrons(kBattleCruiser) or 0
-    local numHeavyBC = 0
-    if kHeavyBattleCruiser then
-        numHeavyBC = NumSquadrons(kHeavyBattleCruiser) or 0
-    end
-    if numBattleCruiser > 0 or numHeavyBC > 0 then
-        inc_upgrade_demand(rt_battlecruiser, (numBattleCruiser + numHeavyBC * 1.5) * 2.5)
-    end
-    
-    local numDestroyers = NumSquadrons(kDestroyer)
-    if numDestroyers > 0 then
-        inc_upgrade_demand(rt_destroyer, numDestroyers * 2)
-    end
-    
-    local numCorvette = numActiveOfClass(s_playerIndex, eCorvette)
-    if numCorvette > 1 then
-        local numAssaultCorvette = NumSquadrons(HGN_ASSAULTCORVETTE)
-        if numAssaultCorvette > 2 then
-            inc_upgrade_demand(rt_corvette.assault, numAssaultCorvette * 1.25)
-        end
-        
-        local numPulsarCorvette = NumSquadrons(HGN_PULSARCORVETTE)
-        if numPulsarCorvette > 2 then
-            inc_upgrade_demand(rt_corvette.pulsar, numPulsarCorvette * 1.25)
-        end
-    end
-    
-    local numFrigate = numActiveOfClass(s_playerIndex, eFrigate)
-    if numFrigate > 2 then
-        local numTorpedoFrigate = NumSquadrons(HGN_TORPEDOFRIGATE)
-        if numTorpedoFrigate > 2 then
-            inc_upgrade_demand(rt_frigate.torpedo, numTorpedoFrigate * 1.5)
-        end
-        
-        local numIonFrigate = NumSquadrons(HGN_IONCANNONFRIGATE)
-        if numIonFrigate > 2 then
-            inc_upgrade_demand(rt_frigate.ioncannon, numIonFrigate * 1.5)
-        end
-        
-        local numAssaultFrigate = NumSquadrons(HGN_ASSAULTFRIGATE)
-        if numAssaultFrigate > 2 then
-            inc_upgrade_demand(rt_frigate.assault, numAssaultFrigate * 1.5)
-        end
-    end
-end
-
-function DoUpgradeDemand_Vaygr()
-    if s_militaryStrength > 5 or g_LOD == 0 then
-        inc_upgrade_demand(rt_mothership, 0.5)
-        ResearchDemandAdd(MOTHERSHIPBUILDSPEEDUPGRADE1, 0.5)
-        
-        local numCorvette = numActiveOfClass(s_playerIndex, eCorvette)
-        if numCorvette > 2 then
-            inc_upgrade_demand(rt_corvette, numCorvette)
-        end
-        
-        local numFrigate = numActiveOfClass(s_playerIndex, eFrigate)
-        if numFrigate > 2 then
-            inc_upgrade_demand(rt_frigate, numFrigate * 1)
-        end
-        
-        local numPlatforms = numActiveOfClass(s_playerIndex, ePlatform)
-        if numPlatforms > 0 then
-            inc_upgrade_demand(rt_platform, numPlatforms * 1)
-        end
-        
-        -- SLIPSTREAM: Capital ship upgrades including Heavy BCs
-        local numCapital = numActiveOfClass(s_playerIndex, eCapital) or 0
-        local numHeavyBC = 0
-        if kHeavyBattleCruiser then
-            numHeavyBC = NumSquadrons(kHeavyBattleCruiser) or 0
-        end
-        if numCapital > 1 or numHeavyBC > 0 then
-            inc_upgrade_demand(rt_capital, (numCapital + numHeavyBC) * 0.75)
-        end
-        
-        local numCarrier = NumSquadrons(kCarrier)
-        if numCarrier > 0 then
-            ResearchDemandAdd(CARRIERBUILDSPEEDUPGRADE1, numCarrier * 1.25)
-        end
-        
-        local numShipYards = NumSquadrons(kShipYard)
-        if numShipYards > 0 then
-            ResearchDemandAdd(SHIPYARDBUILDSPEEDUPGRADE1, numShipYards * 1.75)
-        end
-    end
-end
-
+-- Recurse into upgrade tables/chains, adding demand for each available item.
 function inc_research_demand(researchtype, val)
     local typeis = typeid(researchtype)
     if typeis == LT_TABLE then
@@ -427,6 +70,176 @@ function inc_research_demand(researchtype, val)
     end
 end
 
-function inc_upgrade_demand(upgradetype, val)
-    inc_research_demand(upgradetype, val)
+-- How much "spare economy" we have for research: 0 = none, 1 = some, 2 = plenty.
+-- Thresholds drop with difficulty so Hard starts upgrading earlier.
+function CpuResearch_EconomicValue()
+    local numCollecting = GetNumCollecting()
+    local numRU = GetRU()
+
+    local hiRU = 3000
+    local hiCol = 7
+    local loRU = 1800
+    local loCol = 5
+    if g_LOD >= 2 then
+        hiRU = 1500
+        hiCol = 5
+        loRU = 700
+        loCol = 3
+    elseif g_LOD == 1 then
+        hiRU = 2000
+        hiCol = 6
+        loRU = 1000
+        loCol = 4
+    end
+
+    if (numRU > hiRU and numCollecting > hiCol) or numRU > (hiRU * 3) then
+        return 2
+    elseif (numRU > loRU and numCollecting > loCol) or numRU > (loRU * 3) then
+        return 1
+    end
+    return 0
+end
+
+function DoUpgradeDemand_Hiigaran()
+    -- Strikecraft
+    local numInterceptors = NumSquadrons(kInterceptor)
+    if numInterceptors > 0 then
+        inc_research_demand(rt_interceptor.speed, numInterceptors * 1)
+    end
+
+    local numBombers = NumSquadrons(kBomber)
+    if numBombers > 0 then
+        inc_research_demand(rt_bomber.speed, numBombers * 1)
+    end
+
+    -- Corvettes
+    local numAssaultCorvette = NumSquadrons(HGN_ASSAULTCORVETTE)
+    if numAssaultCorvette > 0 then
+        inc_research_demand(rt_assaultcorvette, numAssaultCorvette * 1.25)
+    end
+
+    local numPulsarCorvette = NumSquadrons(HGN_PULSARCORVETTE)
+    if numPulsarCorvette > 0 then
+        inc_research_demand(rt_pulsarcorvette, numPulsarCorvette * 1.25)
+    end
+
+    -- Frigates
+    local numTorpedoFrigate = NumSquadrons(HGN_TORPEDOFRIGATE)
+    if numTorpedoFrigate > 0 then
+        inc_research_demand(rt_torpedofrigate, numTorpedoFrigate * 1.5)
+    end
+
+    -- Ion-cannon and assault frigate chains are gated behind the free
+    -- InstaAdvancedFrigateTech; demand it first when we field those frigates so
+    -- the chains unlock. Until it completes, the chain upgrades report
+    -- unavailable and pick up no demand.
+    local numIonFrigate = NumSquadrons(HGN_IONCANNONFRIGATE)
+    local numAssaultFrigate = NumSquadrons(HGN_ASSAULTFRIGATE)
+    if numIonFrigate > 0 or numAssaultFrigate > 0 then
+        inc_research_demand(rt_advancedfrigatetech, 5)
+        if numIonFrigate > 0 then
+            inc_research_demand(rt_ioncannonfrigate, numIonFrigate * 1.5)
+        end
+        if numAssaultFrigate > 0 then
+            inc_research_demand(rt_assaultfrigate, numAssaultFrigate * 1.5)
+        end
+    end
+
+    -- Economy (cheap, low priority)
+    local numCollectors = NumSquadrons(kCollector)
+    if numCollectors > 0 then
+        inc_research_demand(rt_collector, numCollectors * 0.3)
+    end
+
+    local numRefinery = NumSquadrons(kRefinery)
+    if numRefinery > 0 then
+        inc_research_demand(rt_controller, numRefinery * 0.5)
+    end
+end
+
+function DoUpgradeDemand_Vaygr()
+    -- Capital ships (family-wide; the Vaygr workhorse).
+    local numCapital = numActiveOfClass(s_playerIndex, eCapital) or 0
+    if numCapital > 0 then
+        inc_research_demand(rt_capital, numCapital * 2)
+    end
+
+    -- Fighters
+    local numFighter = numActiveOfClass(s_playerIndex, eFighter) or 0
+    if numFighter > 1 then
+        inc_research_demand(rt_fighter.speed, numFighter * 0.75)
+    end
+
+    -- Corvettes
+    local numCorvette = numActiveOfClass(s_playerIndex, eCorvette) or 0
+    if numCorvette > 1 then
+        inc_research_demand(rt_corvette, numCorvette * 1)
+    end
+
+    -- Frigates
+    local numFrigate = numActiveOfClass(s_playerIndex, eFrigate) or 0
+    if numFrigate > 1 then
+        inc_research_demand(rt_frigate, numFrigate * 1)
+    end
+
+    -- Utility (collectors / controllers; cheap, low priority).
+    inc_research_demand(rt_utility, 0.5)
+end
+
+function CpuResearch_DefaultResearchDemandRules()
+    -- Never research while under heavy attack.
+    if UnderAttackThreat() > -20 then
+        return
+    end
+
+    if sg_doupgrades ~= 1 then
+        return
+    end
+
+    -- Need a real fighting force before sinking RU into upgrades (skip the gate
+    -- on Easy so it still does something).
+    if (s_militaryPop or 0) < 5 and g_LOD > 0 then
+        return
+    end
+
+    local economicValue = CpuResearch_EconomicValue()
+    if economicValue <= 0 then
+        return
+    end
+
+    -- Respect the cadence delay unless the economy is flush (econ > 1).
+    local timeSinceUpgrade = (gameTime() - (sg_lastUpgradeTime or 0))
+    if timeSinceUpgrade > sg_upgradeDelayTime or economicValue > 1 then
+        DoUpgradeDemand()
+        sg_lastUpgradeTime = gameTime()
+    end
+end
+
+function CpuResearch_Process()
+    -- Spare-economy gate: require a working economy before any RU goes here.
+    if GetNumCollecting() < sg_minNumCollectors and GetRU() < 1500 then
+        return 0
+    end
+
+    -- One research at a time.
+    if IsResearchBusy() == 1 then
+        return 0
+    end
+
+    ResearchDemandClear()
+
+    if Override_ResearchDemand then
+        Override_ResearchDemand()
+    else
+        CpuResearch_DefaultResearchDemandRules()
+    end
+
+    local bestResearch = FindHighDemandResearch()
+    if bestResearch ~= 0 then
+        aitrace("Research: " .. bestResearch)
+        Research(bestResearch)
+        return 1
+    end
+
+    return 0
 end

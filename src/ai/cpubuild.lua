@@ -13,7 +13,6 @@ function CreateBuildDefinitions()
         kScout = HGN_SCOUT
         kInterceptor = HGN_INTERCEPTOR
         kBomber = HGN_ATTACKBOMBER
-        kCarrier = HGN_CARRIER
         kShipYard = HGN_SHIPYARD
         kDestroyer = HGN_DESTROYER
         kBattleCruiser = HGN_BATTLECRUISER
@@ -24,11 +23,13 @@ function CreateBuildDefinitions()
         kScout = VGR_SCOUT
         kInterceptor = VGR_INTERCEPTOR
         kBomber = VGR_BOMBER
-        kCarrier = VGR_CARRIER
         kShipYard = VGR_SHIPYARD
         kDestroyer = VGR_DESTROYER
         kBattleCruiser = VGR_BATTLECRUISER
-        kHeavyBattleCruiser = VGR_HEAVYBATTLECRUISER
+        -- VGR_HEAVYBATTLECRUISER was removed after v4.0; the Qwaar-Jet II is the
+        -- Vaygr heavy-battlecruiser flagship now. Not buildable (starting-fleet
+        -- unit), but this lets the AI count/recognize its own and enemy flagships.
+        kHeavyBattleCruiser = VGR_QWAARJETII
     end
 end
 
@@ -294,15 +295,9 @@ function DetermineSpecialDemand()
     
     -- SLIPSTREAM: Earlier frigate transition
     if s_selfTotalValue > 80 then
+        -- (Advanced-research modules are restricted in TPOF, so the old
+        -- ADVANCEDRESEARCH-gated frigate bonus could never fire and was removed.)
         local additionalFrigDemand = 0.75
-        if s_race == Race_Hiigaran then
-            NumSubSystemsQ(ADVANCEDRESEARCH)
-            -- Guard against nil from NumSubSystemsQ side-effect global
-            if (advresearchcount or 0) > 0 then
-                additionalFrigDemand = (additionalFrigDemand + 0.5)
-            end
-        end
-        
         ShipDemandAddByClass(eFrigate, additionalFrigDemand)
         ShipDemandAddByClass(eFighter, -0.25)
     end
@@ -331,41 +326,35 @@ function DetermineSpecialDemand()
     -- Hiigaran torpedo frigate
     if s_race == Race_Hiigaran then
         local torpedoDemand = -0.5
-        if IsResearchDone(IMPROVEDTORPEDO) == 1 or s_militaryStrength > 40 or GetRU() > 2500 then
+        if s_militaryStrength > 40 or GetRU() > 2500 then
             torpedoDemand = 0
         end
         ShipDemandAdd(HGN_TORPEDOFRIGATE, torpedoDemand)
     end
     
-    -- SLIPSTREAM: Heavy Battlecruiser priority (key unit in mod)
-    -- Much more aggressive capital ship building
+    -- SLIPSTREAM: Capital-ship priority. Heavy battlecruisers / flagships are NOT
+    -- buildable in TPOF (they are starting-fleet units only), so the buildable
+    -- capital ceiling is the standard Battlecruiser + Destroyer. Direct all of the
+    -- mod's aggressive capital demand there so it produces real ships.
     local numRUs = GetRU()
     local numCollecting = GetNumCollecting()
-    
+
     -- Always try to build capitals once basic economy is up
     if numCollecting >= 3 or numRUs > 500 then
-        -- Heavy Battlecruisers are the priority (check if type exists)
-        if kHeavyBattleCruiser then
-            ShipDemandAdd(kHeavyBattleCruiser, 3.0)
-        end
         if kBattleCruiser then
-            ShipDemandAdd(kBattleCruiser, 1.5)
+            ShipDemandAdd(kBattleCruiser, 3.0)
         end
         if kDestroyer then
-            ShipDemandAdd(kDestroyer, 1.0)
+            ShipDemandAdd(kDestroyer, 1.5)
         end
-        
-        if IsResearchDone(BATTLECRUISERIONWEAPONS) == 1 and kHeavyBattleCruiser then
-            ShipDemandAdd(kHeavyBattleCruiser, 1.5)
-        end
-        
+
         -- Even higher priority when we have RUs
         if numRUs > 2000 then
-            if kHeavyBattleCruiser then
-                ShipDemandAdd(kHeavyBattleCruiser, 2.0)
-            end
             if kBattleCruiser then
-                ShipDemandAdd(kBattleCruiser, 1.0)
+                ShipDemandAdd(kBattleCruiser, 2.0)
+            end
+            if kDestroyer then
+                ShipDemandAdd(kDestroyer, 1.0)
             end
         end
     end

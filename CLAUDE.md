@@ -2,25 +2,19 @@
 
 ## Development Environment
 
-**This repository is primarily developed on Windows (Windows 10/11).** The game engine (Homeworld 2 Classic), the HW2 Workshop Tool, and the Relic Developer's Network (RDN) are Windows-native. Wine (on Linux/macOS) is a supported fallback for running these tools when a Windows machine is not available.
+**Primarily developed on Windows 10/11 (x64).** The game engine (Homeworld 2 Classic), the HW2 Workshop Tool, and the Relic Developer's Network (RDN) are Windows-native. Wine on Linux/macOS is a supported fallback (it presents a Windows filesystem view, so paths and conventions are unchanged).
 
-- **OS**: Windows 10/11 (x64) — primary. Wine on Linux/macOS — fallback for running HW2 and the Workshop Tool.
-- **Shell / scripting**: PowerShell 7+ (`pwsh`) for all shell commands, scripts, and automation tasks outside of `src/`. Do not use Windows PowerShell 5.x, bash, cmd, or Unix shell syntax.
-- **File paths**: Use Windows-style paths with backslashes (e.g. `src\ship\hgn_battlecruiser\`) in scripts and documentation. Forward slashes are acceptable inside Lua source files (HW2 engine accepts both), but all host-side tooling uses backslashes.
-- **Text editor**: Any editor that runs on Windows or Linux/macOS; VS Code is the primary editor used in this project.
-- **Temp directory**: Always use `.tmp\` inside the repo root for temporary files — never the system temp directory (`%TEMP%`, `%TMP%`, or `$TMPDIR`). The `.tmp\` directory is gitignored. The `TEMP`, `TMP`, and `TMPDIR` environment variables are set to this path in `.claude\settings.local.json`, so they will be inherited automatically by all tools and subprocesses.
-
-Agents (including Claude) operating in this repository must assume a Windows environment and use PowerShell 7+ syntax for any shell operations. On Wine, paths and PowerShell conventions remain the same — Wine presents a Windows filesystem view to the tools it runs.
+- **Shell**: PowerShell 7+ (`pwsh`) for all host-side commands and scripts. Not PowerShell 5.x, bash, cmd, or Unix syntax.
+- **Paths**: Windows-style backslashes (e.g. `src\ship\hgn_battlecruiser\`) in scripts/docs. Forward slashes are fine inside Lua source (the engine accepts both).
+- **Temp dir**: Always `.tmp\` in the repo root — never the system temp. It's gitignored, and `TEMP`/`TMP`/`TMPDIR` are pointed at it in `.claude\settings.local.json`, so subprocesses inherit it.
 
 ## What This Project Is
 
-**Slipstream: The Price of Freedom (TPOF)** is a mod for **Homeworld 2 Classic** (HW2). It is packaged as a `.big` archive (compiled by the HW2 Workshop Tool using `src/config.txt`) and loaded by the game engine at runtime. The mod transforms HW2 into a fast-paced tactical arena focused on ship loadouts and cooperative/competitive multiplayer.
-
-Everything under `src/` is source content that gets compiled into `TPOF.big`. There is **no build script** — the HW2 Workshop Tool reads `src/config.txt` and packs all files in `src/` into the `.big` file. The `.big` file is gitignored.
+**Slipstream: The Price of Freedom (TPOF)** is a mod for **Homeworld 2 Classic** that turns HW2 into a fast-paced tactical arena focused on ship loadouts and multiplayer. Everything under `src/` is packed into `TPOF.big` and loaded at runtime. There is **no build script** in the traditional sense — the HW2 Workshop Tool (or `tools\build-tpof.ps1`) packs `src/` per `src/config.txt`. The `.big` is gitignored.
 
 ## Technology Stack
 
-The mod is authored entirely in **Lua** (HW2's scripting language) plus HW2-proprietary binary/text formats:
+Authored in **Lua** (HW2's scripting language) plus HW2-proprietary formats:
 
 | Extension | Purpose |
 |-----------|---------|
@@ -28,256 +22,164 @@ The mod is authored entirely in **Lua** (HW2's scripting language) plus HW2-prop
 | `.subs` | Subsystem definition (Lua-like HW2 DSL) |
 | `.level` | Multiplayer map layout (Lua) |
 | `.lua` | Game rules, AI, music, build lists, starting fleets |
-| `.hod` | Binary 3D model (HOD format, not text-editable) |
+| `.hod` | Binary 3D model (not text-editable) |
 | `.tga` | Texture images |
 | `.miss` | Missile definition |
-| `.wf` | Weapon fire script — global-assignment Lua defining bullet/hit/fire FX and sounds. See `docs/weaponfire_scripts.md`. |
-| `.st` | Shader definition |
-| `.fp` / `.fpa` / `.fpk` / `.fpz` | Fragment program (GPU shader) |
+| `.wf` | Weapon fire script (bullet/hit/fire FX + sounds). See `docs/weaponfire_scripts.md`. |
+| `.st` / `.fp` / `.fpa` / `.fpk` / `.fpz` | Shader definition / fragment programs (GPU shaders) |
 | `.rot` | Binary particle/effect/texture file (not text-editable) |
 | `.anim` | Animation file |
-| `.events` | Ship/subsystem event bindings — animation-driven death/damage/fire FX and sounds. See `docs/events_system.md`. |
+| `.events` | Animation-driven death/damage/fire FX + sound bindings. See `docs/events_system.md`. |
 | `.mres` | Multi-resolution icon definition |
+| `.dat` | Locale dictionary — plain text: `<ID>⇥<text>` rows referenced via `$<ID>`. See `docs/locale_system.md`. |
 
 ## Repository Layout
 
 ```
 src/
   config.txt                  # Workshop metadata and BigFilename (TPOF.big)
-  ship/                       # Ship type definitions (.ship + .hod + .events)
+  ship/                       # Ship definitions (.ship + .hod + .events)
   subsystem/                  # Subsystem definitions (.subs + .hod + .events)
   scripts/
-    building and research/
-      hiigaran/build.lua      # Hiigaran buildable unit/subsystem list
-      vaygr/build.lua         # Vaygr buildable unit/subsystem list
-    startingfleets/
-      hiigaran00.lua          # Hiigaran starting PersistantData (fleet + pre-granted research)
-      vaygr00.lua             # Vaygr starting PersistantData (fleet + pre-granted research)
-    scar/
-      restrict.lua            # MPRestrict() — disables vanilla units/research per-player
+    building and research/{hiigaran,vaygr}/build.lua  # Buildable unit/subsystem lists
+    startingfleets/{hiigaran00,vaygr00}.lua           # Starting PersistantData (fleet + research)
+    scar/restrict.lua         # MPRestrict() — disables vanilla units/research per-player
     music.lua                 # Music shuffle system; Play() entry point
     race.lua                  # Race table (Hiigaran=1, Vaygr=2, Keeper=3, Bentusi=4)
     teamcolour.lua            # Team color definitions
     attack/                   # Attack scripts (flyby, strafe, dogfight, etc.)
-    weaponfire/               # Weapon fire scripts
+    weaponfire/               # Weapon fire scripts (.wf)
   leveldata/multiplayer/
-    deathmatch.lua            # "Slipstream" game mode entry point (GameRulesName = "Slipstream")
-    slipstream/               # All multiplayer maps (.level + thumbnails + preview images)
-  ai/
-    classdef.lua              # AI ship class definitions
+    deathmatch.lua            # "Slipstream" game mode entry point
+    slipstream/               # All multiplayer maps (.level + thumbnails + previews)
+  locale/
+    localedat.lua             # Dictionary list (vanilla 8 + slipstream.dat)
+    english/slipstream.dat    # TPOF display strings (IDs 8000-8999)
+  ai/classdef.lua             # AI ship class definitions
   art/fx/                     # Visual effects (Lua FX scripts + textures)
-  background/                 # Skybox/background definitions
-  shaders/                    # GPU shader files (.st, .fp, etc.)
-  badges/                     # Player badge textures
-  effect/                     # Trail and lens flare effects
-  missile/                    # Missile definitions
-docs/
-  loadout_system.md           # Hardpoint/weapon loadout system documentation
-  research_tree.md            # Tech tree simplification documentation
-  events_system.md            # .events file format reference
-  weaponfire_scripts.md       # .wf file format reference + script catalog
-  relic_developers_network.md # RDN toolkit reference
-  tools_backlog.md            # Planned tools to build under tools/
-artwork/                      # ModDB/promotional artwork (Krita .kra files + exports)
-screenshots/                  # In-game screenshots
-legacy/                       # Legacy PDFs from original 2008 TPOF release
+  background/  shaders/  badges/  effect/  missile/   # Skybox, GPU shaders, badges, trails, missiles
+docs/                         # See the doc index in "Sub-directory CLAUDE.md Files" below + docs/*.md
+artwork/  screenshots/  legacy/   # Promotional art, screenshots, original 2008 PDFs
 ```
 
 ## Naming Conventions
 
-Ship/subsystem names follow a strict prefix scheme:
+Ship/subsystem name prefixes: `hgn_` Hiigaran · `vgr_` Vaygr · `sri_` SRI Corp (scenario) · `meg_` Megaliths/neutral scenario objects · `neu_` neutral/shared subsystems · `kpr_` Keeper (non-playable).
 
-| Prefix | Faction |
-|--------|---------|
-| `hgn_` | Hiigaran |
-| `vgr_` | Vaygr |
-| `sri_` | SRI Corp (special scenario ships) |
-| `meg_` | Megaliths / neutral scenario objects |
-| `neu_` | Neutral / shared subsystems (e.g. `neu_directionalthruster`) |
-| `kpr_` | Keeper (non-playable) |
-
-Ship-type identifiers within a name:
-- `_bc_` = Battlecruiser subsystem
-- `_dd_` = Destroyer subsystem
-- `_ff_` = Frigate subsystem
-- `_c_` = Carrier module
-- `_ms_` = Mothership module
+Ship-type infixes: `_bc_` Battlecruiser · `_dd_` Destroyer · `_ff_` Frigate subsystems · `_c_` Carrier module · `_ms_` Mothership module.
 
 ## Game Mode Entry Point
 
-`src/leveldata/multiplayer/deathmatch.lua` is the game rules file (`GameRulesName = "Slipstream"`). It:
-1. Calls `MPRestrict()` on init to disable unwanted vanilla units/research
-2. Calls `Play()` with the player's music selection
-3. Registers `findSlipgatesAndStartEvent` (activates slipgate FX on applicable maps)
-4. Registers `CheckTeamAnyShipsLeftRule` (kill a player when their entire team has no ships)
-5. Registers `MainRule` (ends game when all enemies are dead)
+`src/leveldata/multiplayer/deathmatch.lua` is the game rules file (`GameRulesName = "$8300"`). On init it: (1) `MPRestrict()` to disable vanilla units/research; (2) `Play()` for music; (3) registers `findSlipgatesAndStartEvent` (slipgate FX), `CheckTeamAnyShipsLeftRule` (kill a player whose team has no ships), and `MainRule` (ends the game when all enemies are dead). All maps in `slipstream/` use this mode.
 
-All maps in `src/leveldata/multiplayer/slipstream/` use this game mode.
+## Ship Definitions (`.ship`)
 
-## Ship Definitions (`.ship` files)
-
-Each ship file is a Lua script that calls HW2 built-in functions:
+A Lua script calling HW2 built-ins. Details and full roster: `src/ship/CLAUDE.md`.
 
 ```lua
 NewShipType = StartShipConfig()
-NewShipType.maxhealth = 240000         -- TPOF ships have significantly higher health than vanilla
-NewShipType.mainEngineMaxSpeed = 110   -- TPOF ships are significantly faster (vanilla was 69)
--- ... many more properties ...
-
--- Fixed weapons (always present):
-StartShipWeaponConfig(NewShipType, "WeaponScriptName", "HardpointName", "HardpointName")
-
--- Swappable hardpoints (player-configurable loadout slots):
-StartShipHardPointConfig(NewShipType, "Slot Label", "HardpointName", "Weapon|System",
-    "Generic|Innate", "Destroyable|Damageable|Indestructible",
-    "DefaultSubsystem", "Option1", "Option2", ...)
-
--- Abilities:
+NewShipType.maxhealth = 240000         -- TPOF ships far more durable than vanilla
+NewShipType.mainEngineMaxSpeed = 110   -- and far faster (vanilla BC was 69)
+StartShipWeaponConfig(NewShipType, "WeaponScript", "Hardpoint", "Hardpoint")  -- fixed weapons
+StartShipHardPointConfig(NewShipType, "Slot Label", "Hardpoint", "Weapon|System",
+    "Generic|Innate", "Destroyable|Damageable|Indestructible", "Default", "Opt1", ...)  -- swappable loadout slots
 addAbility(NewShipType, "HyperSpaceCommand", ...)
-addAbility(NewShipType, "CanBuildShips", ...)
 ```
 
-Key balance facts vs. vanilla HW2:
-- Hiigaran Battlecruiser: `mainEngineMaxSpeed = 110` (vanilla: 69), `maxhealth = 240000`
-- SRI Dreadnaught: `maxhealth = 500000`, `unitCapsNumber = 1` (hard cap: one per player)
-- Dreadnaughts cannot be rebuilt once destroyed
+Balance facts vs. vanilla: Hiigaran BC `mainEngineMaxSpeed=110` (vanilla 69), `maxhealth=240000`. SRI Dreadnaught `maxhealth=500000`, `unitCapsNumber=1` (one per player), cannot be rebuilt once destroyed.
 
-## Subsystem Definitions (`.subs` files)
+## Subsystem Definitions (`.subs`)
+
+Details and full catalog: `src/subsystem/CLAUDE.md`.
 
 ```lua
 NewSubSystemType = StartSubSystemConfig()
-NewSubSystemType.type = "Weapon"         -- or "System"
+NewSubSystemType.type = "Weapon"      -- or "System"
 NewSubSystemType.costToBuild = 500
-NewSubSystemType.timeToBuild = 35
 NewSubSystemType.isResearch = 0
--- ...
-StartSubSystemWeaponConfig(NewSubSystemType, "WeaponScriptName", "HardpointName", "HardpointName")
+StartSubSystemWeaponConfig(NewSubSystemType, "WeaponScript", "Hardpoint", "Hardpoint")
 ```
 
 ## Starting Fleets (`src/scripts/startingfleets/`)
 
-Files define a `PersistantData` table with two sections:
-- `Squadrons`: list of `{type, subsystems, shiphold, name, number}` — ships spawned at game start (subsystem loadouts are set here via the `subsystems` array)
-- `Research`: list of `{name, progress=1}` — technologies pre-granted at game start
-
-TPOF currently pre-grants only `RepairAbility` in both `hiigaran00.lua` and `vaygr00.lua`. The "no tech race" feel is achieved mainly by *disabling* research options via `restrict.lua`, not by pre-granting them — players start with the ships and tech they need already built into the starting fleet.
+Each file defines a `PersistantData` table with `Squadrons` (`{type, subsystems, shiphold, name, number}` — ships spawned at start, loadouts set via the `subsystems` array) and `Research` (`{name, progress=1}` — pre-granted tech). TPOF pre-grants only `RepairAbility`; the "no tech race" feel comes mainly from *disabling* research in `restrict.lua` while shipping needed ships/tech in the starting fleet.
 
 ## Restriction System (`src/scripts/scar/restrict.lua`)
 
-`MPRestrict()` iterates all players and calls `RestrictOptions(playerid)`, which uses:
-- `Player_RestrictBuildOption(playerid, "UnitName")` — hides a ship/subsystem from the build menu
-- `Player_RestrictResearchOption(playerid, "TechName")` — hides a research option
+`MPRestrict()` loops players and calls `RestrictOptions(playerid)`, using `Player_RestrictBuildOption(playerid, "Unit")` (hide a ship/subsystem) and `Player_RestrictResearchOption(playerid, "Tech")` (hide research).
 
-Key restricted Hiigaran units: `Hgn_Scout`, `Hgn_AttackBomber`, `Hgn_MarineFrigate`, `Hgn_DefenseFieldFrigate`, `Hgn_MinelayerCorvette`, `Hgn_ECMProbe`, `Hgn_ProximitySensor`, `Hgn_Probe`, `Hgn_Shipyard`, `Hgn_Carrier`, plus research/production modules (`Hgn_C_Module_Research`, `Hgn_MS_Module_Research`, `Hgn_C_Production_*`, `Hgn_MS_Production_CorvetteMover`).
+- **Restricted Hiigaran units**: `Hgn_Scout`, `Hgn_AttackBomber`, `Hgn_MarineFrigate`, `Hgn_DefenseFieldFrigate`, `Hgn_MinelayerCorvette`, `Hgn_ECMProbe`, `Hgn_ProximitySensor`, `Hgn_Probe`, `Hgn_Shipyard`, `Hgn_Carrier`, plus research/production modules (`Hgn_C_Module_Research`, `Hgn_MS_Module_Research`, `Hgn_C_Production_*`, `Hgn_MS_Production_CorvetteMover`).
+- **Restricted Vaygr units**: `Vgr_Scout`, `Vgr_MinelayerCorvette`, `Vgr_CommandCorvette`, `vgr_infiltratorfrigate`, `Vgr_HyperSpace_Platform`, `Vgr_Probe`, `Vgr_Probe_Ecm`, `Vgr_Probe_Prox`, `Vgr_ShipYard`, `Vgr_Carrier`, `Vgr_PlanetKillerMissile`, plus research modules (`Vgr_C_Module_Research`, `Vgr_MS_Module_Research`).
 
-Key restricted Vaygr units: `Vgr_Scout`, `Vgr_MinelayerCorvette`, `Vgr_CommandCorvette`, `vgr_infiltratorfrigate`, `Vgr_HyperSpace_Platform`, `Vgr_Probe`, `Vgr_Probe_Ecm`, `Vgr_Probe_Prox`, `Vgr_ShipYard`, `Vgr_Carrier`, `Vgr_PlanetKillerMissile`, plus research modules (`Vgr_C_Module_Research`, `Vgr_MS_Module_Research`).
-
-Research restrictions on both sides are extensive (see `restrict.lua` for the full list) — most vanilla research is disabled outright.
+Research restrictions are extensive on both sides — most vanilla research is disabled (see `restrict.lua` for the full list).
 
 ## Build Lists (`src/scripts/building and research/*/build.lua`)
 
-Each race has a `build` table — a flat list of `{Type, ThingToBuild, RequiredResearch, RequiredShipSubSystems, DisplayPriority, ...}` entries for all buildable ships and subsystems. TPOF weapons (hardpoint swaps) appear at `DisplayPriority = 1000+`.
+A flat `build` table of `{Type, ThingToBuild, RequiredResearch, RequiredShipSubSystems, DisplayPriority, ...}` for all buildable ships/subsystems. TPOF weapon swaps appear at `DisplayPriority = 1000+`. `deathmatch.lua` loads the race's `build.lua` dynamically to count fleet size.
 
-`deathmatch.lua` loads the race-appropriate `build.lua` dynamically when counting a player's fleet size.
+## Maps (`.level`)
 
-## Maps (`.level` files)
-
-Maps are Lua scripts defining:
-- `maxPlayers` — number of player slots
-- `player[]` — per-player start position, resources, raceID
-- `DetermChunk()` — places asteroids, start positions, and special ships
-
-Maps live in `src/leveldata/multiplayer/slipstream/` and are named `{Np}_{map_name}.level` where N is the player count.
+Lua scripts defining `maxPlayers`, per-player `player[]` (start pos, resources, raceID), and `DetermChunk()` (places asteroids, start positions, special ships). Maps live in `src/leveldata/multiplayer/slipstream/`, named `{Np}_{map_name}.level`. Details/roster: `src/leveldata/CLAUDE.md`.
 
 ## Music System
 
-`src/scripts/music.lua` implements shuffle playlists. `Play(settingString)` dispatches to one of several `Shuffle*()` functions that load a playlist from `data:soundscripts/playlists/` and register the `RandomMusicRule` interval rule. **F1** skips to the next track.
+`src/scripts/music.lua` implements shuffle playlists. `Play(settingString)` dispatches to `Shuffle*()` functions that load a playlist from `data:soundscripts/playlists/` and register `RandomMusicRule`. **F1** skips to the next track.
+
+## Display Strings (Locale)
+
+Player-facing text is referenced by ID as `"$<ID>"`, not hardcoded — resolved against the TPOF dictionary `src/locale/english/slipstream.dat` (registered in `localedat.lua`). **IDs must be 8000–8999**; outside that range the engine renders the raw literal. Packed through the normal `Data` TOC by `build-tpof.ps1` (no build-script changes). Use `$<ID>` for `displayedName`/`sobDescription` (`.ship`/`.subs`), `DisplayedName`/`Description` (`build.lua`/`research.lua`), and game-rules/music strings in `deathmatch.lua`. Full reference: `docs/locale_system.md`.
 
 ## Playable Races
 
-Only Hiigaran and Vaygr are playable (`Playable = 1` in `race.lua`). SRI Corp and Keeper units appear as special scenario ships on specific maps. The "Random" race option is also playable (selects either Hiigaran or Vaygr randomly).
+Only Hiigaran and Vaygr are playable (`Playable = 1` in `race.lua`); "Random" is also selectable. SRI Corp and Keeper units are scenario-only on specific maps.
 
 ## Developer Tools (`tools/`)
 
-Use these scripts when debugging or validating the mod. All require PowerShell 7+ (`pwsh`).
+PowerShell 7+ scripts for debugging/validating the mod:
 
 | Script | Purpose |
 |--------|---------|
-| `tools\parse-logs.ps1` | Read/tail `Hw2.log`, surface errors, summarize minidumps |
-| `tools\launch-tpof.ps1` | Launch HW2 Classic with TPOF active |
-| `tools\debug-tpof.ps1` | Launch HW2 under the `cdb` console debugger (crash capture) |
-| `tools\ship-stats.ps1` | Extract ship stats from all `.ship` files; can diff against a git ref |
-| `tools\find-empty-weapon-effects.ps1` | Find `StartShipWeaponConfig` / `StartSubSystemWeaponConfig` calls whose 4th argument is `""` (no fire animation) |
-| `tools\export-weapon-events.ps1` | Export every weapon config in `src/` joined to its fire-animation events (local `.events` first, vanilla `refs\homeworld2-big\` fallback) as a CSV |
-| `tools\import-weapon-events.ps1` | Reverse of `export-weapon-events.ps1`: rewrite `.events` files in `src/` from an edited CSV (copies vanilla files into `src/` as a base when needed) |
-| `tools\build-tpof.ps1` | Pack `src/` into `TPOF.big` headlessly via the RDN `Archive.exe` (no Workshop Tool GUI required); `-Install` copies into the HW2 `Data/` dir |
-| `tools\link-src.ps1` | Symlink/junction this repo's `src/` into the HW2 install as `DataTPOF/` (for iterative testing without repacking) |
-| `tools\link-bin.ps1` | Link the HW2 `Bin/` directory into `refs/bin/` for log/minidump access |
-| `tools\link-rdn.ps1` | Link the RDN installation into `refs/rdn/` for reference access |
+| `parse-logs.ps1` | Read/tail `Hw2.log`, surface errors, summarize minidumps |
+| `launch-tpof.ps1` | Launch HW2 Classic with TPOF active |
+| `debug-tpof.ps1` | Launch HW2 under the `cdb` console debugger (crash capture) |
+| `ship-stats.ps1` | Extract ship stats from all `.ship` files; can diff against a git ref |
+| `find-empty-weapon-effects.ps1` | Find weapon configs whose 4th arg is `""` (no fire animation) |
+| `export-weapon-events.ps1` / `import-weapon-events.ps1` | Export weapon configs joined to fire-animation events as CSV / rewrite `.events` from an edited CSV |
+| `build-tpof.ps1` | Pack `src/` into `TPOF.big` headlessly via RDN `Archive.exe`; `-Install` copies to the HW2 `Data/` dir |
+| `link-src.ps1` | Junction `src/` into the HW2 install as `DataTPOF/` (iterative testing without repacking) |
+| `link-bin.ps1` / `link-rdn.ps1` | Link the HW2 `Bin/` and RDN install into `refs/` for log/reference access |
 
-### `tools\parse-logs.ps1` — Log reader / crash analyzer
-
-When the user reports a crash, load error, or Lua error after launching HW2 with the mod, **run this script first** before reading any source files. It auto-detects the HW2 Classic install (via `HW2_ROOT` env var, Steam registry, or common paths) and reads `Bin\Release\Hw2.log`.
-
-```powershell
-# Show all errors and Lua errors
-pwsh tools\parse-logs.ps1 -Errors
-
-# Show only Lua output (LUA: lines + LUA ERROR lines)
-pwsh tools\parse-logs.ps1 -Lua
-
-# Show TPOF/slipstream mod-loading events
-pwsh tools\parse-logs.ps1 -Mod
-
-# Live-tail while the game is running
-pwsh tools\parse-logs.ps1 -Tail
-
-# Summarize crash dump artifacts
-pwsh tools\parse-logs.ps1 -Dumps
-
-# Specify install path manually
-pwsh tools\parse-logs.ps1 -HWPath 'D:\Steam\steamapps\common\Homeworld\Homeworld2Classic' -Errors
-```
-
-Exits with code 1 if any ERROR or LUA ERROR lines were found — useful for scripted checks.
+**When the user reports a crash, load error, or Lua error, run `parse-logs.ps1` first** before reading source. It auto-detects the install (`HW2_ROOT` env var, Steam registry, common paths) and reads `Bin\Release\Hw2.log`. Flags: `-Errors` (errors + Lua errors), `-Lua` (Lua output only), `-Mod` (mod-loading events), `-Tail` (live), `-Dumps` (crash artifacts), `-HWPath <path>` (manual install). Exits 1 if any ERROR/LUA ERROR found (useful for scripted checks).
 
 ## Release Workflow
 
-Two equivalent ways to pack `src/` into `TPOF.big`:
+Two ways to pack `src/` into `TPOF.big`:
 
-**A. CLI (recommended for iteration / CI)**
+- **CLI (iteration/CI):** `pwsh tools\build-tpof.ps1 -Install` — generates a build script in `.tmp\`, runs `refs\rdn\tools\bin\Archive\Archive.exe`, writes `.tmp\TPOF.big`, and (with `-Install`) copies it to `<HW2>\Data\TPOF.big`. Launch with `-mod TPOF.big`.
+- **Steam Workshop Tool (publishing):** point it at `src/config.txt`; it packs and uploads using the `WorkshopID`.
 
-```powershell
-pwsh tools\build-tpof.ps1 -Install
-```
-
-Generates a build script under `.tmp\`, invokes `refs\rdn\tools\bin\Archive\Archive.exe`, writes `.tmp\TPOF.big`, and (with `-Install`) copies it to `<HW2>\Data\TPOF.big`. Then launch with `-mod TPOF.big`.
-
-**B. Steam Workshop Tool (required for publishing to the Workshop)**
-
-1. Open the HW2 Workshop Tool (Windows only) and point it at `src/config.txt`
-2. Tool packs into `TPOF.big` and uploads using the `WorkshopID` in `config.txt`
-
-The `.big` file is gitignored. Binary assets (`.hod`, `.tga`, etc.) are committed directly to the repo.
-
-For day-to-day iteration without repacking at all, use `tools\link-src.ps1` to expose `src/` as `DataTPOF/` and launch via `tools\launch-tpof.ps1` (which uses `-moddatapath DataTPOF -overridebigfile`).
+For iteration without repacking, `tools\link-src.ps1` exposes `src/` as `DataTPOF/`; launch via `tools\launch-tpof.ps1` (`-moddatapath DataTPOF -overridebigfile`).
 
 ## Key Balance Philosophy
 
-- Ships are **significantly faster and more durable** than vanilla HW2
-- **No tech race** — vanilla research is disabled outright, and starting fleets ship with the tech/ships players need
-- **Loadout decisions** happen in the build menu (swapping hardpoint weapons), not the research menu
-- **Dreadnaughts** are irreplaceable (one per player, cannot rebuild) — losing one is catastrophic
-- Strikecraft (fighters/corvettes) are faster, more evasive, and break formation during combat
-- Platforms are mobile and can be hyperspace-deployed but are slow and weakly armored
+- Ships are **significantly faster and more durable** than vanilla.
+- **No tech race** — vanilla research is disabled; starting fleets ship with needed tech/ships.
+- **Loadout decisions** happen in the build menu (hardpoint weapon swaps), not research.
+- **Dreadnaughts** are irreplaceable (one per player, no rebuild) — losing one is catastrophic.
+- Strikecraft are fast and evasive and break formation in combat; platforms are mobile and hyperspace-deployable but slow and lightly armored.
 
 ## Sub-directory CLAUDE.md Files
 
-Each major source subdirectory has its own CLAUDE.md with format details, field references, and catalogs specific to that area. Check these before working in that directory:
+Each major source subdirectory has its own CLAUDE.md — check it before working there:
 
 | File | Covers |
 |------|--------|
-| `src/ship/CLAUDE.md` | `.ship` file structure, full ship roster by faction, ability syntax, death FX |
-| `src/subsystem/CLAUDE.md` | `.subs` file structure, full subsystem catalog, how to add a new weapon subsystem |
-| `src/scripts/CLAUDE.md` | Entry point wiring, `PersistantData` format, build table format, attack/weaponfire scripts |
-| `src/leveldata/CLAUDE.md` | `.level` file structure, full map roster, how to add a new map |
+| `src/ship/CLAUDE.md` | `.ship` structure, full ship roster, ability syntax (incl. the `ShipHold`/`CanBuildShips` crash rule), death FX |
+| `src/subsystem/CLAUDE.md` | `.subs` structure, full subsystem catalog, adding a weapon subsystem |
+| `src/scripts/CLAUDE.md` | Entry-point wiring, `PersistantData` format, build table, attack/weaponfire scripts |
+| `src/leveldata/CLAUDE.md` | `.level` structure, full map roster, adding a map |
+| `src/locale/CLAUDE.md` | `slipstream.dat` format, ID range, adding a display string |
+
+Other docs: `docs/loadout_system.md`, `research_tree.md`, `locale_system.md`, `events_system.md`, `weaponfire_scripts.md`, `crash_investigation.md`, `relic_developers_network.md` (RDN toolkit inventory), `rdn_modding_reference.md` (RDN API/format reference), `tools_backlog.md`.
+</content>
+</invoke>

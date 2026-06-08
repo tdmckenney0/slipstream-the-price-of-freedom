@@ -39,6 +39,10 @@ PersistantData = {
                 {
                     index = 0,
                     name = "Vgr_C_Module_FireControl"
+                },
+                {
+                    index = 0,
+                    name = "vgr_bc_sunshattermissile"
                 }
             },
             shiphold = {},
@@ -56,6 +60,10 @@ PersistantData = {
                 {
                     index = 0,
                     name = "Vgr_C_Module_FireControl"
+                },
+                {
+                    index = 0,
+                    name = "vgr_bc_swarmmissile"
                 }
             },
             shiphold = {},

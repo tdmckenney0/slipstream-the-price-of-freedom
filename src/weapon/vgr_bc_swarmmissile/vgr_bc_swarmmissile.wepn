@@ -1,0 +1,18 @@
+-- VGR Battlecruiser Swarm Missile Burst variant.
+-- Tuned to ~7500 dmg per burst (235 dmg x 32 missiles), matching the heavy fusion baseline.
+-- Role: anti-strikecraft burst. Many small missiles per volley, favors light targets.
+StartWeaponConfig(NewWeaponType, "Fixed", "SphereBurst", "Vgr_SmallMissile", "Normal", 0, 0, 32, 2, 0, 0, 10, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0.1, "Normal", 1, 0, 0)
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 635, 635, "")
+setPenetration(NewWeaponType, 5, 1,
+    { Unarmoured = 1, },
+    { LightArmour = 1, },
+    { MediumArmour = 0.6, },
+    { HeavyArmour = 0.4, },
+    { SubSystemArmour = 0.5, },
+    { TurretArmour = 1.5, },
+    { ResArmour = 0.6, },
+    { PlanetKillerArmour = 0, },
+    { MineArmour = 1, },
+    { ChunkArmour = 1, })
+setAngles(NewWeaponType, 180, 0, 0, 0, 0)

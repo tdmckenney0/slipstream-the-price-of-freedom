@@ -1,14 +1,12 @@
 # Weapon Fire Scripts (`.wf` files)
 
-`.wf` files define the visual and audio effects for a weapon's projectile lifecycle: what the bullet looks like in flight, what happens when it hits, and what sound it makes. They live in `src/scripts/weaponfire/{script_name}/{script_name}.wf`.
-
-A weapon script is referenced by name (the directory name, not the file path) in `StartShipWeaponConfig` and `StartSubSystemWeaponConfig` calls in `.ship` and `.subs` files.
+`.wf` files define a weapon's projectile-lifecycle FX/audio — how the bullet looks in flight, what happens on hit, and what it sounds like. They live in `src/scripts/weaponfire/{name}/{name}.wf` and are referenced by name (the directory name) in `StartShipWeaponConfig`/`StartSubSystemWeaponConfig` calls in `.ship`/`.subs` files.
 
 ## Format
 
-`.wf` files use Lua global-assignment syntax. They are **not** SCAR game logic — there are no functions, conditions, or loops. The engine reads the globals directly.
+`.wf` files use Lua global-assignment syntax — **not** SCAR game logic (no functions, conditions, or loops); the engine reads the globals directly.
 
-> Note: Existing `.wf` files in this mod were decompiled from compiled Lua bytecode using LuaDC 0.9.20 (2008). The decompiled output is structurally correct but may have minor formatting quirks.
+> Existing `.wf` files were decompiled from Lua bytecode with LuaDC 0.9.20 (2008): structurally correct, but may have minor formatting quirks.
 
 ```lua
 -- Projectile visuals

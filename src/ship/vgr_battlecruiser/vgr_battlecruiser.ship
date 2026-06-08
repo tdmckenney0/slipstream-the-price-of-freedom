@@ -24,15 +24,15 @@ NewShipType.collisionMultiplier = 1
 NewShipType.thrusterMaxSpeed = 156
 NewShipType.mainEngineMaxSpeed = 156
 NewShipType.rotationMaxSpeed = 10
-NewShipType.thrusterAccelTime = 10 -- 6
-NewShipType.thrusterBrakeTime = 10 -- 2
+NewShipType.thrusterAccelTime = 10   -- 6
+NewShipType.thrusterBrakeTime = 10   -- 2
 NewShipType.mainEngineAccelTime = 30 -- 6
 NewShipType.mainEngineBrakeTime = 30 -- 2
-NewShipType.rotationAccelTime = 8 -- 0.7
-NewShipType.rotationBrakeTime = 7 -- 0.5
+NewShipType.rotationAccelTime = 8    -- 0.7
+NewShipType.rotationBrakeTime = 7    -- 0.5
 NewShipType.thrusterUsage = 1
-NewShipType.accelerationAngle = 40 -- 30
-NewShipType.mirrorAngle = 30 -- 0
+NewShipType.accelerationAngle = 40   -- 30
+NewShipType.mirrorAngle = 30         -- 0
 NewShipType.secondaryTurnAngle = 0
 NewShipType.maxBankingAmount = 10
 NewShipType.descendPitch = 45 -- 10
@@ -142,23 +142,26 @@ NewShipType.launchTimeBetweenTwoFormations = 1
 NewShipType.launchTimeBeforeStart = 2
 NewShipType.launchNrOfShipsInDockFormation = 1
 NewShipType.launchFormation = "delta"
-addAbility(NewShipType, "ShipHold", 1, 0, 5, "rallypoint", "Fighter, Corvette", 25, 
-{ 
-    Fighter = "12", 
-}, 
-{ 
-    Corvette = "75", })
+addAbility(NewShipType, "ShipHold", 1, 40, 5, "rallypoint", "Fighter, Corvette, Utility", 25,
+    {
+        Fighter = "12",
+    },
+    {
+        Corvette = "75", })
 addAbility(NewShipType, "ParadeCommand", 1)
 addAbility(NewShipType, "WaypointMove")
-addAbility(NewShipType,"HyperSpaceCommand",1,0,0,0,0,3)
-addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2, "munition, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter", "flyby_destroyer",
-{
-    Mothership = "Flyround_destroyer",})
+addAbility(NewShipType, "HyperSpaceCommand", 1, 0, 0, 0, 0, 3)
+addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2,
+    "munition, Capturer, Frigate, SmallCapitalShip, BigCapitalShip, Mothership, Utility, Corvette, Fighter",
+    "flyby_destroyer",
+    {
+        Mothership = "Flyround_destroyer", })
 addAbility(NewShipType, "GuardCommand", 1, 3000, 1000)
-addAbility(NewShipType, "CanBuildShips", 1,"Fighter_Vgr, Corvette_Vgr, Frigate_Vgr, SubSystem_Vgr, Utility_Vgr","Fighter, Corvette, Frigate, Utility, SubSystemModule, SubSystemSensors")
+addAbility(NewShipType, "CanBuildShips", 1, "Fighter_Vgr, Corvette_Vgr, Frigate_Vgr, SubSystem_Vgr, Utility_Vgr",
+    "Fighter, Corvette, Frigate, Utility, SubSystemModule, SubSystemSensors")
 addAbility(NewShipType, "CanBeCaptured", 160, 0.1)
 addAbility(NewShipType, "CanBeRepaired")
-addAbility(NewShipType, "MinelayerAbility",1,3.5)
+addAbility(NewShipType, "MinelayerAbility", 1, 3.5)
 addAbility(NewShipType, "CloakAbility", 0, 2, 2000, 4000, 3, 100, 1, 1000)
 addAbility(NewShipType, "RetireAbility", 1, 1)
 addAbility(NewShipType, "HyperspaceInhibitorAbility", 0, 12000)
@@ -175,11 +178,19 @@ StartShipWeaponConfig(NewShipType, "Vgr_BCLaser", "Weapon_BCHeavyLaser3", "")
 StartShipWeaponConfig(NewShipType, "Vgr_BCLaser", "Weapon_BCHeavyLaser4", "")
 StartShipWeaponConfig(NewShipType, "Vgr_BCForwardWeapon", "Weapon_BCUberPulse", "Weapon_BCUberPulse")
 addShield(NewShipType, "EMP", 10000, 20)
-StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable", "Vgr_BattleCruiserEngine", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Heavy Fusion Missile Launcher", "Weapon_MissileBattery", "Weapon", "Innate", "Damageable", "Vgr_HeavyFusionMissileLauncherBC", "", "", "", "", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_FireControl", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Generic 2", "HardpointGeneric2", "System", "Generic", "Destroyable", "", "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor", "Vgr_C_Module_FireControl", "", "", "", "")
-StartShipHardPointConfig(NewShipType, "Sensors1", "Hardpoint_sensors", "System", "Sensors", "Destroyable", "", "Vgr_C_Sensors_AdvancedArray", "Vgr_C_Sensors_DetectHyperspace", "Vgr_C_Sensors_DetectCloaked", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "Innate", "Damageable",
+    "Vgr_BattleCruiserEngine", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Missile Battery", "Weapon_MissileBattery", "Weapon", "Generic", "Destroyable", "",
+    "vgr_bc_heavyfusionmissile", "vgr_bc_sunshattermissile", "vgr_bc_swarmmissile", "vgr_bc_concussionmissile", "", "",
+    "", "")
+StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System", "Generic", "Destroyable", "",
+    "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor",
+    "Vgr_C_Module_FireControl", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Generic 2", "HardpointGeneric2", "System", "Generic", "Destroyable", "",
+    "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor",
+    "Vgr_C_Module_FireControl", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "Sensors1", "Hardpoint_sensors", "System", "Sensors", "Destroyable", "",
+    "Vgr_C_Sensors_AdvancedArray", "Vgr_C_Sensors_DetectHyperspace", "Vgr_C_Sensors_DetectCloaked", "", "", "", "", "")
 
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)
@@ -199,6 +210,7 @@ NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
 NewShipType.deadSobFadeTime = 0
 NewShipType.trailLinger = 2
-setEngineGlow(NewShipType, 1, 1, 1.02, 20, 500, 200, 1, 
+setEngineGlow(NewShipType, 1, 1, 1.02, 20, 500, 200, 1,
     { 0.92, 0.21, 0.09, 0.25, })
-loadShipPatchList(NewShipType, "data:sound/sfx/ship/Vaygr/Carrier/", 0, "Engines/VDestroyerEng", "", 1, "Ambience/VBattleCrusierAmb", "")
+loadShipPatchList(NewShipType, "data:sound/sfx/ship/Vaygr/Carrier/", 0, "Engines/VDestroyerEng", "", 1,
+    "Ambience/VBattleCrusierAmb", "")

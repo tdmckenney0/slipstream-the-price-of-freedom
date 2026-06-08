@@ -22,12 +22,13 @@ function oninit()
     s_playerIndex = Player_Self()
     s_race = getRace()
     
-    -- Enable all AI systems
+    -- Enable all AI systems. TPOF restricts the research *modules*, but a set of
+    -- basic upgrades remain always available (see cpuresearch.lua) and the AI
+    -- pursues them from spare economy via sg_doupgrades.
     sg_dobuild = 1
     sg_dosubsystems = 1
-    sg_doresearch = 1
-    sg_doupgrades = 1
     sg_domilitary = 1
+    sg_doupgrades = 1
     cp_processResource = 1
     cp_processMilitary = 1
     
@@ -44,25 +45,18 @@ function oninit()
         end
     end
     
-    -- Initialize AI subsystems
+    -- Initialize AI subsystems (CpuResearch_Init after CpuBuild_Init: it relies
+    -- on the k* ship constants set up in CreateBuildDefinitions).
     ClassInitialize()
     CpuBuild_Init()
     CpuResearch_Init()
     CpuMilitary_Init()
-    
-    -- Research demand reset value
-    sg_kDemandResetValue = 4
-    if s_race == Race_Vaygr then
-        sg_kDemandResetValue = 2
-    end
-    
+
     -- Allow override hooks
     if Override_Init then
         Override_Init()
     end
-    
-    sg_reseachDemand = -(sg_kDemandResetValue)
-    
+
     -- SLIPSTREAM: Faster AI tick rate (1 second vs 2 seconds)
     Rule_AddInterval("doai", 1)
 end
@@ -132,33 +126,12 @@ function CacheCurrentState()
     end
 end
 
--- Spend resources on building and research
+-- Spend open build channels on ships and subsystems. Research/upgrades are
+-- handled separately by CpuResearch_Process() (called from doai) and only draw
+-- on spare economy, so they never compete for the build channels allocated here.
 function SpendMoney()
-    if s_numOpenBuildChannels > 0 then
-        local buildHasBeenDone = 0
-        
-        -- Try to build ships
-        if sg_dobuild == 1 and s_shipBuildQueuesFull == 0 and sg_reseachDemand < 0 then
-            if CpuBuild_Process() == 1 then
-                s_numOpenBuildChannels = (s_numOpenBuildChannels - 1)
-                sg_reseachDemand = (sg_reseachDemand + 1)
-                buildHasBeenDone = 1
-            end
-        end
-        
-        -- Try to research
-        if s_numOpenBuildChannels > 0 then
-            if sg_doresearch == 1 then
-                local didResearch = CpuResearch_Process()
-                if didResearch == 1 then
-                    sg_reseachDemand = -(sg_kDemandResetValue)
-                elseif sg_reseachDemand >= 0 and sg_dobuild == 1 and s_shipBuildQueuesFull == 0 and buildHasBeenDone == 0 then
-                    CpuBuild_Process()
-                end
-            else
-                sg_reseachDemand = -(sg_kDemandResetValue)
-            end
-        end
+    if s_numOpenBuildChannels > 0 and sg_dobuild == 1 and s_shipBuildQueuesFull == 0 then
+        CpuBuild_Process()
     end
 end
 
@@ -174,6 +147,12 @@ function doai()
     local timeSinceSpend = (curTime - (sg_lastSpendMoneyTime or 0))
     if timeSinceSpend >= sg_spendMoneyDelay then
         SpendMoney()
+        -- Research basic upgrades from spare economy. Does not use build
+        -- channels, so it runs alongside ship-building; CpuResearch_Process
+        -- self-gates on economy, threat, and its own cadence.
+        if sg_doupgrades == 1 then
+            CpuResearch_Process()
+        end
         sg_lastSpendMoneyTime = curTime
     end
     

@@ -1,6 +1,6 @@
 # Relic Developer's Network (RDN) — Reference Guide
 
-The Relic Developer's Network (RDN) is Relic Entertainment's official toolkit for modding Homeworld 2. It ships as a single installer (`homeworld2_rdn.exe`) and installs to `C:\Program Files (x86)\Relic Developer's Network\`. This document covers the toolkit's structure, tools, documentation, and Lua API coverage. All file paths are relative to the RDN root, prefixed `RDN/`.
+The Relic Developer's Network (RDN) is Relic Entertainment's official toolkit for modding Homeworld 2. It ships as a single installer (`homeworld2_rdn.exe`) and installs to `C:\Program Files (x86)\Relic Developer's Network\`. This document is the *inventory* of the toolkit (directory structure, tools, documentation, Lua API coverage). For the extracted *reference* — APIs, file formats, and workflows the RDN docs describe — see [rdn_modding_reference.md](rdn_modding_reference.md). All paths are relative to the RDN root, prefixed `RDN/`.
 
 ---
 
@@ -29,18 +29,9 @@ RDN/
 
 ### Archive Tool
 
-**Location**: `RDN/tools/bin/Archive/Archive.exe` (also `RDN/Archive.exe`)
+**Location**: `RDN/tools/bin/Archive/Archive.exe` (also `RDN/Archive.exe`). **Docs**: `RDN/Documents/HW2_ArchiveTool.pdf`.
 
-Creates and extracts `.big` archive files — the format used to package all HW2 game data. Required as a first step to extract the base game data for modding.
-
-**Typical usage** (from `readme.txt`):
-```
-archive -a Homeworld2.big -e %HW2_ROOT%\Data
-```
-
-**Documentation**: `RDN/Documents/HW2_ArchiveTool.pdf`
-
-The file `RDN/Data/` is produced by extracting `Homeworld2.big` with this tool. The file `RDN/tools/bin/Archive/Homeworld2.big.listing` (873 KB) provides a full index of the base game archive's contents.
+Creates and extracts `.big` archives — the format packaging all HW2 game data; needed first to extract the base game for modding (`archive -a Homeworld2.big -e %HW2_ROOT%\Data`). `RDN/Data/` is the result of extracting `Homeworld2.big`; `RDN/tools/bin/Archive/Homeworld2.big.listing` (873 KB) indexes the base archive's contents. **Full CLI, build-script syntax, and runtime mod-loading: [rdn_modding_reference.md](rdn_modding_reference.md) §1.**
 
 ---
 
@@ -153,27 +144,7 @@ All PDFs are in `RDN/Documents/`. The Lua API HTML reference is in `RDN/Document
 
 ### Lua API HTML Reference (`RDN/Documents/Scar/`)
 
-Doxygen-generated HTML covering the full scripting API exposed to SCAR (Lua) scripts:
-
-| File | Module |
-|------|--------|
-| `_lua_a_t_i_8cpp.html` | ATI/AMD graphics settings |
-| `_lua_camera_8cpp.html` | Camera control |
-| `_lua_campaign_8cpp.html` | Campaign state and progression |
-| `_lua_f_x_8cpp.html` / `_lua_f_x_8h.html` | Particle effects |
-| `_lua_fog_8cpp.html` | Fog of war |
-| `_lua_hyperspace_8cpp.html` | Hyperspace jump mechanics |
-| `_lua_light_8cpp.html` | Dynamic and static lighting |
-| `_lua_objectives_8cpp.html` | Mission objective tracking |
-| `_lua_ping_8cpp.html` | Ping/waypoint system |
-| `_lua_player_8cpp.html` | Player state management |
-| `_lua_sensor_8cpp.html` | Sensor queries and visibility |
-| `_lua_shadow_8cpp.html` | Shadow rendering settings |
-| `_lua_sob_group_actions_8cpp.html` | Ship/object group commands |
-| `_lua_sob_group_query_8cpp.html` | Ship/object group status queries |
-| `_lua_sound_8cpp.html` | Audio and music playback |
-| `_lua_subtitle_8cpp.html` | Subtitle/dialog display |
-| `_lua_universe_8cpp.html` | Universe/environment management |
+Doxygen-generated HTML covering the full SCAR (Lua) scripting API — one `.cpp.html` per exposed module (player, camera, FX, hyperspace, sensors, sob-group actions/queries, sound, subtitle, universe, etc.). **Per-module purpose and symbol counts, plus notable function names: [rdn_modding_reference.md](rdn_modding_reference.md) §7.**
 
 ---
 
@@ -240,12 +211,7 @@ Located in `RDN/DataSrc/Subsystem/`:
 
 ## Sample Mod (`RDN/ResourceRace/`)
 
-A minimal example mod demonstrating how to package modified content:
-
-- `ResourceRace.big` (22 KB) — Compiled archive, loadable by HW2
-- `ResourceRace.zip` (23 KB) — Source files showing the folder structure
-
-Useful as a template for creating a new `.big` mod archive.
+A minimal example mod for packaging modified content: `ResourceRace.big` (22 KB, loadable) + `ResourceRace.zip` (23 KB, source + build script). Useful as a template for a new `.big` mod. Walkthrough of its multi-TOC layout: [rdn_modding_reference.md](rdn_modding_reference.md) §8 (and §3 for Game Rule Mods generally).
 
 ---
 

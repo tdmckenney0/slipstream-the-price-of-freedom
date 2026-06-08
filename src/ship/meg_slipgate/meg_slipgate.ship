@@ -1,6 +1,6 @@
 NewShipType = StartShipConfig()
-NewShipType.displayedName = "Slipgate"
-NewShipType.sobDescription = "Slipgate"
+NewShipType.displayedName = "$8100"
+NewShipType.sobDescription = "$8100"
 NewShipType.maxhealth = 400000000.0
 NewShipType.regentime = 0
 NewShipType.minRegenTime = 0
