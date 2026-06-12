@@ -104,7 +104,7 @@ SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", count, chance, x, y, z, ...)
 | Ship | Notes |
 |------|-------|
 | `hgn_battlecruiser` | 240k HP, speed 110, swappable weapon hardpoints; `ShipHold` + `CanBuildShips` (Utility) |
-| `hgn_heavybattlecruiser` | Flagship (6 weapon hardpoints); zero-capacity `ShipHold` to satisfy the `CanBuildShips` rule |
+| `hgn_heavycruiser` | Flagship (6 weapon hardpoints); zero-capacity `ShipHold` to satisfy the `CanBuildShips` rule |
 | `hgn_destroyer` | Fast, fixed config; full custom `.events` (death + ion cannon fire) |
 | `hgn_interceptor` | Fast strikecraft; custom death `.events` |
 | `hgn_assaultcorvette`, `hgn_pulsarcorvette` | |

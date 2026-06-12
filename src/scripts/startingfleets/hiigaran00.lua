@@ -3,7 +3,7 @@ PersistantData = {
     Squadrons = {
         -- Flagship
         {
-            type = "hgn_heavybattlecruiser",
+            type = "hgn_heavycruiser",
             subsystems = {
                 {
                     index = 0,
