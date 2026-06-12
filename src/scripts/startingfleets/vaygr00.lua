@@ -34,7 +34,7 @@ PersistantData = {
             subsystems = {
                 {
                     index = 0,
-                    name = "Vgr_C_Module_Hyperspace",
+                    name = "vgr_c_module_cloakgenerator",
                 },
                 {
                     index = 0,
