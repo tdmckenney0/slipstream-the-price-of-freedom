@@ -4,13 +4,13 @@ NewShipType.sobDescription = "$1539"
 NewShipType.maxhealth = 320000
 NewShipType.regentime = 1500
 NewShipType.minRegenTime = 450
-NewShipType.sideArmourDamage = 0.45
-NewShipType.rearArmourDamage = 0.45
+NewShipType.sideArmourDamage = 1
+NewShipType.rearArmourDamage = 0.75
 NewShipType.topArmourDamage = 0.65
-NewShipType.bottomArmourDamage = 0.65
-NewShipType.frontArmourDamage = 0.6
+NewShipType.bottomArmourDamage = 1
+NewShipType.frontArmourDamage = 0.5
 NewShipType.isTransferable = 0
-NewShipType.useEngagementRanges = 0
+NewShipType.useEngagementRanges = 1
 NewShipType.unitCapsNumber = 8
 NewShipType.paradeData = "hgn_mothership_parade"
 NewShipType.SquadronSize = 1
@@ -24,18 +24,18 @@ NewShipType.mainEngineMaxSpeed = 150
 NewShipType.rotationMaxSpeed = 11
 NewShipType.thrusterAccelTime = 6
 NewShipType.thrusterBrakeTime = 2
-NewShipType.mainEngineAccelTime = 6
+NewShipType.mainEngineAccelTime = 8
 NewShipType.mainEngineBrakeTime = 2
-NewShipType.rotationAccelTime = 0.5
+NewShipType.rotationAccelTime = 0.75
 NewShipType.rotationBrakeTime = 0.3
 NewShipType.thrusterUsage = 1
-NewShipType.accelerationAngle = 30
-NewShipType.mirrorAngle = 30
+NewShipType.accelerationAngle = 60
+NewShipType.mirrorAngle = 0
 NewShipType.secondaryTurnAngle = 0
 NewShipType.maxBankingAmount = 20
-NewShipType.descendPitch = 10
-NewShipType.goalReachEpsilon = 25
-NewShipType.slideMoveRange = 350
+NewShipType.descendPitch = 20
+NewShipType.goalReachEpsilon = 30
+NewShipType.slideMoveRange = 100
 NewShipType.controllerType = "Ship"
 NewShipType.tumbleStaticX = 10
 NewShipType.tumbleStaticY = 20
@@ -46,20 +46,20 @@ NewShipType.tumbleDynamicZ = 5
 NewShipType.tumbleSpecialDynamicX = 2
 NewShipType.tumbleSpecialDynamicY = 10
 NewShipType.tumbleSpecialDynamicZ = 5
-NewShipType.relativeMoveFactor = 1
-NewShipType.swayUpdateTime = 6
+NewShipType.relativeMoveFactor = 3
+NewShipType.swayUpdateTime = 5
 NewShipType.swayOffsetRandomX = 10
 NewShipType.swayOffsetRandomY = 10
 NewShipType.swayOffsetRandomZ = 10
-NewShipType.swayBobbingFactor = 0
+NewShipType.swayBobbingFactor = 0.05
 NewShipType.swayRotateFactor = 0
 NewShipType.useTargetRandom = 1
-NewShipType.targetRandomPointXMin = -0.3
-NewShipType.targetRandomPointXMax = 0.3
+NewShipType.targetRandomPointXMin = -0.5
+NewShipType.targetRandomPointXMax = 0.5
 NewShipType.targetRandomPointYMin = -0.5
 NewShipType.targetRandomPointYMax = 0.5
-NewShipType.targetRandomPointZMin = -0.7
-NewShipType.targetRandomPointZMax = 0.8
+NewShipType.targetRandomPointZMin = -0.5
+NewShipType.targetRandomPointZMax = 0.5
 NewShipType.dustCloudDamageTime = 160
 NewShipType.nebulaDamageTime = 300
 NewShipType.MinimalFamilyToFindPathAround = "MotherShip"
@@ -92,23 +92,23 @@ NewShipType.secSensorRange = 15000
 NewShipType.detectionStrength = 1
 NewShipType.TOIcon = "Star"
 NewShipType.TOScale = 1
-NewShipType.TODistanceFade0 = 14000
-NewShipType.TODistanceDisappear0 = 12000
+NewShipType.TODistanceFade0 = 7000
+NewShipType.TODistanceDisappear0 = 8000
 NewShipType.TODistanceFade1 = 8500
-NewShipType.TODistanceDisappear1 = 7000
+NewShipType.TODistanceDisappear1 = 10000
 NewShipType.TODistanceFade2 = 12000
 NewShipType.TODistanceDisappear2 = 35000
 NewShipType.TOGroupScale = 1
 NewShipType.TOGroupMergeSize = 0
 NewShipType.mouseOverMinFadeSize = 0.045
 NewShipType.mouseOverMaxFadeSize = 0.1
-NewShipType.healthBarStyle = 2
-NewShipType.nlips = 0.00007
-NewShipType.nlipsRange = 6000
-NewShipType.nlipsFar = 0.000013
-NewShipType.nlipsFarRange = 10000
+NewShipType.healthBarStyle = 1
+NewShipType.nlips = 0
+NewShipType.nlipsRange = 10000
+NewShipType.nlipsFar = 0
+NewShipType.nlipsFarRange = 0
 NewShipType.SMRepresentation = "Mesh"
-NewShipType.meshRenderLimit = 15600
+NewShipType.meshRenderLimit = 13000
 NewShipType.dotRenderLimit = 10
 NewShipType.visibleInSecondary = 1
 NewShipType.minLOD = 0.5
@@ -200,16 +200,17 @@ SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Sml02", 1, 0.01, 25, 0, -125, 50, 80
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Sml03", 1, 0.01, 60, 95, 200, 50, 15, 200, 20, 125, 0, 0, 0, 60, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Sml04", 1, 0.01, 10, 60, -300, 25, 35, 80, 65, 75, 0, 0, 0, 60, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Sml05", 1, 0.01, 60, 10, 30, 75, 35, 25, 65, 75, 0, 0, 0, 60, 0, 0, 0, 50)
-NewShipType.battleScarMaxTriBase = 150
-NewShipType.battleScarMaxTriInc = 200
+NewShipType.battleScarMaxTriBase = 75
+NewShipType.battleScarMaxTriInc = 100
 NewShipType.sobDieTime = 1
 NewShipType.sobSpecialDieTime = 1
 NewShipType.specialDeathSpeed = 40
 NewShipType.chanceOfSpecialDeath = 0
-NewShipType.deadSobFadeTime = 0.1
-NewShipType.trailLinger = 3
-setEngineBurn(NewShipType, 9, 0.2, 0.5, 300, 1.02, 0.1, 0.25, 380)
-setEngineGlow(NewShipType, 1, 1, 1.02, 20, 500, 200, 1,
-    { 0.27, 0.47, 0.69, 0.25, })
+NewShipType.deadSobFadeTime = 1
+NewShipType.trailLinger = 2
+
+setEngineBurn(NewShipType, 9, 0.2, 0.5, 300, 1.02, 0.1, 0.25, 380);
+setEngineGlow(NewShipType, 1, 1, 1.02, 20, 300, 50, 1.5, { 0.27, 0.47, .69, 0.25 });
+
 loadShipPatchList(NewShipType, "data:sound/sfx/ship/Hiigaran/MegaShip/", 0, "Engines/HDreadnaughtEng", "", 1,
     "Ambience/HMotherShipAmb", "")
