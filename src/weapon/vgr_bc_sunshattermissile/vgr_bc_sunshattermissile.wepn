@@ -1,8 +1,8 @@
 -- VGR Battlecruiser Sun-Shatter Missile Launcher variant.
--- Tuned to ~750 dmg/cooldown-unit, matching the heavy fusion baseline.
+-- Tuned to the siege missile band ~550 DPS (4400 dmg / cooldown 8), matching the heavy fusion baseline.
 -- Role: long-range siege. Huge single hits, slow reload.
-StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Vgr_HeavyMissile", "Normal", 40, 14000, 0, 0, 0, 0, 1, 1, 1, 20, 0, 0, 1, 1, 0, 0, 0.1, "Normal", 1, 0, 0)
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 15000, 15000, "")
+StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Vgr_HeavyMissile", "Normal", 40, 14000, 0, 0, 0, 0, 1, 1, 1, 8, 0, 0, 1, 1, 0, 0, 0.1, "Normal", 1, 0, 0)
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 4400, 4400, "")
 AddWeaponResult(NewWeaponType, "Hit", "Push", "Target", 200, 200, "")
 setPenetration(NewWeaponType, 60, 1,
     {Unarmoured=1,},
