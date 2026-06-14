@@ -73,7 +73,6 @@ GameSetupOptions = {
             "$8316", "slipstream\\freedom",
             "$8317", "slipstream\\ambient",
             "$8318", "slipstream\\battle_01",
-            "$8319", "slipstream\\battle_02",
             "$8320", "ambient\\amb_01",
             "$8321", "ambient\\amb_02",
             "$8322", "ambient\\amb_03",
