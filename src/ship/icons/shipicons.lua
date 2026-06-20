@@ -1759,6 +1759,7 @@ hgn_dd_plasmaburstturret_1 = Icon_Subsystem_IonTurret
 hgn_dd_plasmaburstturret_2 = Icon_Subsystem_IonTurret
 hgn_c_sensors_distortion = Icon_Subsystem_DetectCloaked
 hgn_c_module_buildspeed = Icon_Subsystem_ResearchAdvanced
+hgn_c_module_maxspeed = Icon_Subsystem_ResearchAdvanced
 --Vaygr
 vgr_bc_booster = Icon_Subsystem_Engine
 vgr_c_missilebay = Icon_Subsystem_TorpedoLauncher
@@ -1777,6 +1778,7 @@ vgr_bc_swarmmissile = Icon_Subsystem_TorpedoLauncher
 vgr_c_sensors_detectcloaked = Icon_Subsystem_DetectCloaked
 vgr_c_sensors_distortion = Icon_Subsystem_DetectCloaked
 vgr_c_module_buildspeed = Icon_Subsystem_ResearchAdvanced
+vgr_c_module_maxspeed = Icon_Subsystem_ResearchAdvanced
 -- SRI
 sri_commandbase = Vgr_CommStation
 sri_dreadnaught = Hgn_Dreadnaught

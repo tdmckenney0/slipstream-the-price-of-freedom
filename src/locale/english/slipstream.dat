@@ -17,7 +17,11 @@ rangestart 8000 8999
 8010	<b>Description:</b> Scrambles nearby enemy sensors.  \n\n<b>Type:</b> Sensors (Takes 1 Sensors Slot) \n\n<b>Prerequisites:</b> None.
 
 8011	Manufacturing Controller
-8012	<b>Description:</b>  Increases production speed by 100%.  Affects this ship only.  \n\n<b>Type:</b> Module (Takes 1 Module Slot) \n\n<b>Prerequisites:</b> None.
+8012	<b>Description:</b> Increases production speed by 100%.  Affects this ship only.  \n\n<b>Type:</b> Module (Takes 1 Module Slot) \n\n<b>Prerequisites:</b> None.
+
+8013	Auxiliary Power Unit
+8014	<b>Description:</b> An APU removes the need for the primary power plant to drive the ships power grid. Increases ship speed by 50%. Affects this ship only. \n\n<b>Type:</b> Module (Takes 1 Module Slot) \n\n<b>Prerequisites:</b> None.
+
 
 // --- Ship names ---
 8100	Slipgate
@@ -38,5 +42,7 @@ rangestart 8000 8999
 8601    Scrambles enemy sensors
 8602    Manufacturing Controller
 8603    Improves Manufacturing Speed
+8604    Auxiliary Power Unit
+8605    Increases Ship Speed
 
 rangeend
