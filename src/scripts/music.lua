@@ -5,10 +5,10 @@ playedBin = {}
 PlayList =
 {
     -- filepath, title, length (s),			-- default
-    { "slipstream\\Ambient",   "Slipstream Ambient - DJZ4K",                        950, }, -- 64
-    { "slipstream\\Suite",     "Slipstream Suite 1 - SRI-Sajuuk",                   123, },
-    { "slipstream\\Freedom",   "Slipstream Suite 2 (The Price of Freedom) - DJZ4K", 175, }, -- 64
-    { "slipstream\\battle_01", "Slipstream Battle No.1 - SRI-Sajuuk",               552, }, -- 276
+    { "slipstream\\Ambient",   "Slipstream Ambient - DJZ4K",                        (15 * 60) + 50, },
+    { "slipstream\\Suite",     "Slipstream Suite 1 - SRI-Sajuuk",                   (1 * 60), },
+    { "slipstream\\Freedom",   "Slipstream Suite 2 (The Price of Freedom) - DJZ4K", (2 * 60) + 54, },
+    { "slipstream\\battle_01", "Slipstream Battle No.1 - SRI-Sajuuk",               (2 * 60) + 7, },
 }
 
 -- Game Rule Entry function
