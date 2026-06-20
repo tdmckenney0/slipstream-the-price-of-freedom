@@ -1565,6 +1565,7 @@ function NonDetermChunk()
 
     setGlareIntensity(0)
     setLevelShadowColour(0, 0, 0, 1)
+    setDefaultMusic("Data:sound/music/slipstream/ambient")
     loadBackground("tpof_companions")
     setSensorsManagerCameraDistances(10000, 45000)
 end

@@ -311,6 +311,7 @@ function NonDetermChunk()
     fogSetDensity(0.15)
     setGlareIntensity(0)
     setLevelShadowColour(0, 0, 0, 1)
+    setDefaultMusic("Data:sound/music/slipstream/ambient")
     loadBackground("hwc_naval_base_alpha")
     setSensorsManagerCameraDistances(32616, 90000)
 end

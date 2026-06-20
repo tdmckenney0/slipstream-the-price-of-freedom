@@ -381,5 +381,6 @@ end
 
 function NonDetermChunk()
     loadBackground("tpof_as_sirat")
+    setDefaultMusic("Data:sound/music/slipstream/ambient")
     setSensorsManagerCameraDistances(10000, 50000)
 end

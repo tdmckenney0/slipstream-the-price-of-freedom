@@ -2311,6 +2311,8 @@ function NonDetermChunk()
 
     setLevelShadowColour(0, 0, 0, 1)
 
+    setDefaultMusic("Data:sound/music/slipstream/ambient")
+
     loadBackground("hwc_koreths_debris_field")
 
     setSensorsManagerCameraDistances(10500, 20000)

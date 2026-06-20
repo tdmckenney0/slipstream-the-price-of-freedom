@@ -2584,6 +2584,7 @@ function NonDetermChunk()
     fogSetDensity(0.28)
     setGlareIntensity(0)
     setLevelShadowColour(0, 0, 0, 1)
+    setDefaultMusic("Data:sound/music/slipstream/ambient")
     loadBackground("hwc_kadiir_nebula")
     setSensorsManagerCameraDistances(12000, 50000)
 end

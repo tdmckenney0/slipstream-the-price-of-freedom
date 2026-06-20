@@ -131,6 +131,7 @@ function NonDetermChunk()
     fogSetDensity(0.00)
     setGlareIntensity(0.11)
     setLevelShadowColour(0, 0, 0, 1)
+    setDefaultMusic("Data:sound/music/slipstream/ambient")
     loadBackground("tpof_nebula")
     setSensorsManagerCameraDistances(12000, 60000)
 end
