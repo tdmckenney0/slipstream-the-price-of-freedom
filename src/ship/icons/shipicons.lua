@@ -1740,7 +1740,6 @@ neu_directionalthruster = Icon_Subsystem_Engine
 --Hiigaran
 hgn_bc_minelauncher_1 = Icon_Subsystem_TorpedoLauncher
 hgn_bc_minelauncher_2 = Icon_Subsystem_TorpedoLauncher
-hgn_c_module_build = Icon_Subsystem_ResearchAdvanced
 hgn_bc_plasmaburstturret_1 = Icon_Subsystem_IonTurret
 hgn_bc_plasmaburstturret_2 = Icon_Subsystem_IonTurret
 hgn_droneturret = Icon_Subsystem_FireControl
@@ -1749,7 +1748,6 @@ hgn_bc_gatlinggunturret_2 = Icon_Subsystem_FireControl
 hgn_ff_gatlinggunturret = Icon_Subsystem_FireControl
 hgn_ioncannon = Icon_Subsystem_IonTurret
 hgn_ff_pulsarturret = Icon_Subsystem_IonTurret
-hgn_ms_module_build = Icon_Subsystem_ResearchAdvanced
 hgn_bc_ionbeamturret_1 = Icon_Subsystem_IonTurret
 hgn_bc_ionbeamturret_2 = Icon_Subsystem_IonTurret
 hgn_ff_ionbeamturret = Icon_Subsystem_IonTurret
@@ -1760,6 +1758,7 @@ hgn_dd_gatlinggunturret_2 = Icon_Subsystem_FireControl
 hgn_dd_plasmaburstturret_1 = Icon_Subsystem_IonTurret
 hgn_dd_plasmaburstturret_2 = Icon_Subsystem_IonTurret
 hgn_c_sensors_distortion = Icon_Subsystem_DetectCloaked
+hgn_c_module_buildspeed = Icon_Subsystem_ResearchAdvanced
 --Vaygr
 vgr_bc_booster = Icon_Subsystem_Engine
 vgr_c_missilebay = Icon_Subsystem_TorpedoLauncher
@@ -1775,7 +1774,8 @@ vgr_bc_concussionmissile = Icon_Subsystem_TorpedoLauncher
 vgr_bc_heavyfusionmissile = Icon_Subsystem_TorpedoLauncher
 vgr_bc_sunshattermissile = Icon_Subsystem_TorpedoLauncher
 vgr_bc_swarmmissile = Icon_Subsystem_TorpedoLauncher
-hgn_c_sensors_distortion = Icon_Subsystem_DetectCloaked
+vgr_c_sensors_distortion = Icon_Subsystem_DetectCloaked
+vgr_c_module_buildspeed = Icon_Subsystem_ResearchAdvanced
 -- SRI
 sri_commandbase = Vgr_CommStation
 sri_dreadnaught = Hgn_Dreadnaught

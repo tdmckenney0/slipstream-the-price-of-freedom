@@ -494,6 +494,15 @@ build =
         DisplayedName = "$8009",
         Description = "$8010",
     },
+    {
+        Type = SubSystem,
+        ThingToBuild = "Hgn_C_Module_BuildSpeed",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 70,
+        DisplayedName = "$8011",
+        Description = "$8012",
+    },
     -- TPOF Weapons
     {
         Type = SubSystem,

@@ -16,6 +16,9 @@ rangestart 8000 8999
 8009	Sensors Distortion Generator
 8010	<b>Description:</b> Scrambles nearby enemy sensors.  \n\n<b>Type:</b> Sensors (Takes 1 Sensors Slot) \n\n<b>Prerequisites:</b> None.
 
+8011	Manufacturing Controller
+8012	<b>Description:</b>  Increases production speed by 100%.  Affects this ship only.  \n\n<b>Type:</b> Module (Takes 1 Module Slot) \n\n<b>Prerequisites:</b> None.
+
 // --- Ship names ---
 8100	Slipgate
 8101	SRI-Sajuuk
@@ -33,5 +36,7 @@ rangestart 8000 8999
 // --- General Subsystems ---
 8600    Sensors Distortion Generator
 8601    Scrambles enemy sensors
+8602    Manufacturing Controller
+8603    Improves Manufacturing Speed
 
 rangeend
