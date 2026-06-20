@@ -13,6 +13,9 @@ rangestart 8000 8999
 8007	Rapid-fire anti-strikecraft missile battery
 8008	Honking big planet killing missile
 
+8009	Sensors Distortion Generator
+8010	<b>Description:</b> Scrambles nearby enemy sensors.  \n\n<b>Type:</b> Sensors (Takes 1 Sensors Slot) \n\n<b>Prerequisites:</b> None.
+
 // --- Ship names ---
 8100	Slipgate
 8101	SRI-Sajuuk
@@ -26,5 +29,9 @@ rangestart 8000 8999
 
 // --- Vaygr research ---
 8500	Example
+
+// --- General Subsystems ---
+8600    Sensors Distortion Generator
+8601    Scrambles enemy sensors
 
 rangeend

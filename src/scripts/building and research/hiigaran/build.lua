@@ -484,6 +484,16 @@ build =
         DisplayedName = "$7058",
         Description = "$7059",
     },
+    -- TPOF subsystems
+    {
+        Type = SubSystem,
+        ThingToBuild = "Hgn_C_Sensors_Distortion",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 153,
+        DisplayedName = "$8009",
+        Description = "$8010",
+    },
     -- TPOF Weapons
     {
         Type = SubSystem,
