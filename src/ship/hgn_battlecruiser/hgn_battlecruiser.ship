@@ -186,12 +186,12 @@ StartShipHardPointConfig(NewShipType, "Engine", "Hardpoint_Engine", "System", "I
     "Hgn_BattleCruiserEngine", "", "", "", "", "", "", "", "")
 StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System", "Generic", "Destroyable", "",
     "Hgn_C_Module_Hyperspace", "Hgn_C_Module_CloakGenerator", "Hgn_C_Module_HyperspaceInhibitor",
-    "Hgn_C_Module_FireControl", "", "", "", "")
+    "Hgn_C_Module_FireControl", "hgn_c_module_buildspeed", "Hgn_C_Module_MaxSpeed", "", "")
 StartShipHardPointConfig(NewShipType, "Generic 2", "HardpointGeneric2", "System", "Generic", "Destroyable", "",
     "Hgn_C_Module_Hyperspace", "Hgn_C_Module_CloakGenerator", "Hgn_C_Module_HyperspaceInhibitor",
-    "Hgn_C_Module_FireControl", "", "", "", "")
+    "Hgn_C_Module_FireControl", "hgn_c_module_buildspeed", "Hgn_C_Module_MaxSpeed", "", "")
 StartShipHardPointConfig(NewShipType, "Sensors 1", "Hardpoint_Sensors", "System", "Sensors", "Destroyable", "",
-    "Hgn_C_Sensors_DetectHyperspace", "Hgn_C_Sensors_AdvancedArray", "Hgn_C_Sensors_DetectCloaked", "", "", "", "", "")
+    "Hgn_C_Sensors_DetectHyperspace", "Hgn_C_Sensors_AdvancedArray", "Hgn_C_Sensors_DetectCloaked", "hgn_c_sensors_distortion", "", "", "", "")
 
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)

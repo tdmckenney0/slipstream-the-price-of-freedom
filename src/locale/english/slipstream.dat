@@ -13,6 +13,16 @@ rangestart 8000 8999
 8007	Rapid-fire anti-strikecraft missile battery
 8008	Honking big planet killing missile
 
+8009	Sensors Distortion Generator
+8010	<b>Description:</b> Scrambles nearby enemy sensors.  \n\n<b>Type:</b> Sensors (Takes 1 Sensors Slot) \n\n<b>Prerequisites:</b> None.
+
+8011	Manufacturing Controller
+8012	<b>Description:</b> Increases production speed by 100%.  Affects this ship only.  \n\n<b>Type:</b> Module (Takes 1 Module Slot) \n\n<b>Prerequisites:</b> None.
+
+8013	Auxiliary Power Unit
+8014	<b>Description:</b> An APU removes the need for the primary power plant to drive the ships power grid. Increases ship speed by 50%. Affects this ship only. \n\n<b>Type:</b> Module (Takes 1 Module Slot) \n\n<b>Prerequisites:</b> None.
+
+
 // --- Ship names ---
 8100	Slipgate
 8101	SRI-Sajuuk
@@ -20,47 +30,19 @@ rangestart 8000 8999
 // --- MP game-rules ---
 8300	Slipstream
 8301	Game Options for Slipstream: The Price of Freedom
-8302	Music
-8303	Select the background music
-8310	Shuffle: Slipstream
-8311	Shuffle: All
-8312	Shuffle: Ambient
-8313	Shuffle: Staging
-8314	Shuffle: Battle
-8315	Slipstream: Suite 1
-8316	Slipstream: Suite 2
-8317	Slipstream: Ambience
-8318	Slipstream: Battle No.1
-8319	Slipstream: Battle No.2
-8320	Ambient: No.1
-8321	Ambient: No.2
-8322	Ambient: No.3
-8323	Ambient: No.4
-8324	Ambient: No.5
-8325	Ambient: No.6
-8326	Ambient: No.7
-8327	Ambient: No.8
-8328	Ambient: No.9
-8329	Ambient: No.10
-8330	Ambient: No.11
-8331	Battle: No.2
-8332	Battle: No.3, Alternate
-8333	Battle: No.4
-8334	Battle: Arrival
-8335	Battle: Keeper
-8336	Battle: Movers
-8337	Battle: Planet Killers
-8338	Battle: Sajuuk
-8339	Staging: No.1
-8340	Staging: No.2
-8341	Staging: No.3
-8342	Staging: No.4
-8343	Staging: No.5
 
 // --- Hiigaran research ---
 8400	Instant Tech!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // --- Vaygr research ---
 8500	Example
+
+// --- General Subsystems ---
+8600    Sensors Distortion Generator
+8601    Scrambles enemy sensors
+8602    Manufacturing Controller
+8603    Improves Manufacturing Speed
+8604    Auxiliary Power Unit
+8605    Increases Ship Speed
 
 rangeend

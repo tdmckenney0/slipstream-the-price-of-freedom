@@ -185,12 +185,12 @@ StartShipHardPointConfig(NewShipType, "Missile Battery", "Weapon_MissileBattery"
     "", "")
 StartShipHardPointConfig(NewShipType, "Generic 1", "HardpointGeneric1", "System", "Generic", "Destroyable", "",
     "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor",
-    "Vgr_C_Module_FireControl", "", "", "", "")
+    "Vgr_C_Module_FireControl", "vgr_c_module_buildspeed", "Vgr_C_Module_MaxSpeed", "", "")
 StartShipHardPointConfig(NewShipType, "Generic 2", "HardpointGeneric2", "System", "Generic", "Destroyable", "",
     "Vgr_C_Module_Hyperspace", "Vgr_C_Module_CloakGenerator", "Vgr_C_Module_HyperspaceInhibitor",
-    "Vgr_C_Module_FireControl", "", "", "", "")
+    "Vgr_C_Module_FireControl", "vgr_c_module_buildspeed", "Vgr_C_Module_MaxSpeed", "", "")
 StartShipHardPointConfig(NewShipType, "Sensors1", "Hardpoint_sensors", "System", "Sensors", "Destroyable", "",
-    "Vgr_C_Sensors_AdvancedArray", "Vgr_C_Sensors_DetectHyperspace", "Vgr_C_Sensors_DetectCloaked", "", "", "", "", "")
+    "Vgr_C_Sensors_AdvancedArray", "Vgr_C_Sensors_DetectHyperspace", "Vgr_C_Sensors_DetectCloaked", "vgr_c_sensors_distortion", "", "", "", "")
 
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", 1, 0.75, 0, 0, 0, 50, 0, 0, 0, 200, 0, 0, 0, 50, 0, 0, 0, 50)
 SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg02", 1, 0.05, 30, -20, 200, 25, 300, 150, 85, 50, 0, 0, 0, 85, 0, 0, 0, 50)

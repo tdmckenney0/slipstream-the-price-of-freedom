@@ -58,7 +58,7 @@ PersistantData = {
             subsystems = {
                 {
                     index = 0,
-                    name = "hgn_c_module_cloakgenerator",
+                    name = "hgn_c_module_maxspeed",
                 },
                 {
                     index = 0,
@@ -66,7 +66,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "hgn_c_sensors_detectcloaked",
+                    name = "hgn_c_sensors_distortion",
                 },
                 {
                     index = 0,

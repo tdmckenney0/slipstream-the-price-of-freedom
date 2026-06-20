@@ -439,6 +439,43 @@ build =
         DisplayedName = "$8008",
         Description = "",
     },
+    -- TPOF subsystems
+    {
+        Type = SubSystem,
+        ThingToBuild = "Vgr_C_Sensors_DetectCloaked",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 40,
+        DisplayedName = "$7024",
+        Description = "$7025",
+    },
+    {
+        Type = SubSystem,
+        ThingToBuild = "Vgr_C_Sensors_Distortion",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 50,
+        DisplayedName = "$8009",
+        Description = "$8010",
+    },
+    {
+        Type = SubSystem,
+        ThingToBuild = "Vgr_C_Module_BuildSpeed",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 70,
+        DisplayedName = "$8011",
+        Description = "$8012",
+    },
+    {
+        Type = SubSystem,
+        ThingToBuild = "Vgr_C_Module_MaxSpeed",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 80,
+        DisplayedName = "$8013",
+        Description = "$8014",
+    },
     -- TPOF Weapons
     {
         Type = SubSystem,
