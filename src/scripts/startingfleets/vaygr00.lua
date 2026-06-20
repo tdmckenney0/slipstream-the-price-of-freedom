@@ -34,7 +34,7 @@ PersistantData = {
             subsystems = {
                 {
                     index = 0,
-                    name = "vgr_c_module_cloakgenerator",
+                    name = "vgr_c_module_maxspeed",
                 },
                 {
                     index = 0,
@@ -42,7 +42,7 @@ PersistantData = {
                 },
                 {
                     index = 0,
-                    name = "vgr_c_sensors_detectcloaked"
+                    name = "vgr_c_sensors_distortion"
                 },
                 {
                     index = 0,
