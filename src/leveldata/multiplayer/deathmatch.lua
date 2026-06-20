@@ -54,52 +54,6 @@ GameSetupOptions = {
         visible = 0,
         choices = { "$3227", "fixed", },
     },
-
-    -- Allow players to pick their playlist
-    {
-        name = "randommusic",
-        locName = "$8302",
-        tooltip = "$8303",
-        default = 0,
-        visible = 1,
-        choices =
-        {
-            "$8310", "slipstream",
-            "$8311", "shuffle",
-            "$8312", "ambient",
-            "$8313", "staging",
-            "$8314", "battle",
-            "$8315", "slipstream\\suite",
-            "$8316", "slipstream\\freedom",
-            "$8317", "slipstream\\ambient",
-            "$8318", "slipstream\\battle_01",
-            "$8319", "slipstream\\battle_02",
-            "$8320", "ambient\\amb_01",
-            "$8321", "ambient\\amb_02",
-            "$8322", "ambient\\amb_03",
-            "$8323", "ambient\\amb_04",
-            "$8324", "ambient\\amb_05",
-            "$8325", "ambient\\amb_06",
-            "$8326", "ambient\\amb_07",
-            "$8327", "ambient\\amb_08",
-            "$8328", "ambient\\amb_12",
-            "$8329", "ambient\\amb_13",
-            "$8330", "ambient\\amb_14",
-            "$8331", "battle\\battle_04",
-            "$8332", "battle\\battle_04_alt",
-            "$8333", "battle\\battle_06",
-            "$8334", "battle\\battle_arrival",
-            "$8335", "battle\\battle_keeper",
-            "$8336", "battle\\battle_movers",
-            "$8337", "battle\\battle_planetkillers",
-            "$8338", "battle\\battle_sajuuk",
-            "$8339", "staging\\staging_01",
-            "$8340", "staging\\staging_04",
-            "$8341", "staging\\staging_05",
-            "$8342", "staging\\staging_08",
-            "$8343", "staging\\staging_11",
-        },
-    },
 }
 
 dofilepath("data:scripts/scar/restrict.lua")
@@ -116,7 +70,7 @@ Events.endGame =
 function OnInit()
     MPRestrict()
 
-    Play(GetGameSettingAsString("randommusic"))
+    ShufflePlaylist()
 
     Rule_Add("findSlipgatesAndStartEvent")
 

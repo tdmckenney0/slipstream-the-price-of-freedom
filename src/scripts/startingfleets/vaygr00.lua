@@ -34,11 +34,15 @@ PersistantData = {
             subsystems = {
                 {
                     index = 0,
-                    name = "Vgr_C_Module_Hyperspace",
+                    name = "vgr_c_module_cloakgenerator",
                 },
                 {
                     index = 0,
                     name = "Vgr_C_Module_FireControl"
+                },
+                {
+                    index = 0,
+                    name = "vgr_c_sensors_detectcloaked"
                 },
                 {
                     index = 0,
@@ -60,6 +64,10 @@ PersistantData = {
                 {
                     index = 0,
                     name = "Vgr_C_Module_FireControl"
+                },
+                {
+                    index = 0,
+                    name = "vgr_c_sensors_detecthyperspace"
                 },
                 {
                     index = 0,

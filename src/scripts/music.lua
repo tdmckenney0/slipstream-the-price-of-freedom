@@ -1,76 +1,28 @@
+-- Music already played.
 playedBin = {}
 
-function Play(Music)
+-- Playlist to shuffle.
+PlayList =
+{
+    -- filepath, title, length (s),			-- default
+    { "slipstream\\Ambient",   "Slipstream Ambient - DJZ4K",                        (15 * 60) + 50, },
+    { "slipstream\\Suite",     "Slipstream Suite 1 - SRI-Sajuuk",                   (1 * 60), },
+    { "slipstream\\Freedom",   "Slipstream Suite 2 (The Price of Freedom) - DJZ4K", (2 * 60) + 54, },
+    { "slipstream\\battle_01", "Slipstream Battle No.1 - SRI-Sajuuk",               (2 * 60) + 7, },
+}
 
-	if Music == nil then
-		ShuffleAll()
-				
-	elseif Music == "shuffle" then
-		ShuffleAll()
-		
-	elseif Music == "ambient" then
-		ShuffleAmbient()
-		
-	elseif Music == "battle" then
-		ShuffleBattle()
-		
-	elseif Music == "staging" then
-		ShuffleStaging()
-
-	elseif Music == "slipstream" then
-		ShuffleSlipstream()
-
-	else
-		Sound_MusicPlay("data:sound\\music\\" .. Music)
-	end
-	
-end
-
-function ShuffleAll()
-
-	UI_BindKeyEvent(F1KEY, "RandomMusicRule")
-	dofilepath("data:soundscripts/playlists/allmusic.lua")
-	Rule_Add("RandomMusicRule")
-end
-
-function ShuffleAmbient()
-	
-	UI_BindKeyEvent(F1KEY, "RandomMusicRule")
-	dofilepath("data:soundscripts/playlists/ambientonly.lua")
-	Rule_Add("RandomMusicRule")
-	
-end
-
-function ShuffleBattle()
-	
-	UI_BindKeyEvent(F1KEY, "RandomMusicRule")
-	dofilepath("data:soundscripts/playlists/battleonly.lua")
-	Rule_Add("RandomMusicRule")
-	
-end
-
-function ShuffleStaging()
-	
-	UI_BindKeyEvent(F1KEY, "RandomMusicRule")
-	dofilepath("data:soundscripts/playlists/stagingonly.lua")
-	Rule_Add("RandomMusicRule")
-	
-end
-
-function ShuffleSlipstream()
-	
-	UI_BindKeyEvent(F1KEY, "RandomMusicRule")
-	dofilepath("data:soundscripts/playlists/slipstream.lua")
-	Rule_Add("RandomMusicRule")
-	
-end
-    
---Keybinded functions.
+-- Game Rule Entry function
 function RandomMusicRule()
 	RandomMusic(PlayList)
 end
-	
 
+-- Enable Rule and Keybind
+function ShufflePlaylist()
+	UI_BindKeyEvent(F1KEY, "RandomMusicRule")
+	Rule_Add("RandomMusicRule")
+end
+    
+-- Random music function
 function RandomMusic(tPlaylist)
 	-- function created by Mikail, EvilleJedi
 	-- Input:	<tPlaylist>: the playlist (a table) of songs.

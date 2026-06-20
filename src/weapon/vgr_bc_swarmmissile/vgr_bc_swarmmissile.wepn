@@ -1,5 +1,8 @@
 -- VGR Battlecruiser Swarm Missile Burst variant.
--- Tuned to ~7500 dmg per burst (235 dmg x 32 missiles), matching the heavy fusion baseline.
+-- NOTE: SphereBurst with fireTime 0 (instant burst, no cooldown) -- effective DPS is
+--   not derivable from static config and must be measured in-game. Code deals 635 per
+--   impact (not the "235 x 32" an earlier comment claimed). Pending live measurement to
+--   balance into the ~450-550 DPS band; mechanics intentionally left unchanged.
 -- Role: anti-strikecraft burst. Many small missiles per volley, favors light targets.
 StartWeaponConfig(NewWeaponType, "Fixed", "SphereBurst", "Vgr_SmallMissile", "Normal", 0, 0, 32, 2, 0, 0, 10, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0.1, "Normal", 1, 0, 0)

@@ -1,8 +1,8 @@
 -- VGR Battlecruiser Concussion Missile Launcher variant.
--- Tuned to ~750 dmg/cooldown-unit (1500 dmg / cooldown 2), matching the heavy fusion baseline.
+-- Tuned to the standard missile band ~450 DPS (235 dmg + 125 burst / cooldown 0.8).
 -- Role: anti-frigate. Medium-rapid fire, medium range.
-StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Vgr_SmallMissile", "Normal", 40, 4000, 0, 0, 0, 2, 1, 0, 0, 2, 0, 0, 1, 1, 0, 0, 0.1, "Normal", 0, 0, 0)
-AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 1500, 1500, "")
+StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Vgr_SmallMissile", "Normal", 40, 4000, 0, 0, 0, 2, 1, 0, 0, 0.8, 0, 0, 1, 1, 0, 0, 0.1, "Normal", 0, 0, 0)
+AddWeaponResult(NewWeaponType, "Hit", "DamageHealth", "Target", 235, 235, "")
 AddWeaponResult(NewWeaponType, "Hit", "SpawnWeaponFire", "Target", 0, 0, "vgr_pulsecannonburst")
 AddWeaponResult(NewWeaponType, "Miss", "SpawnWeaponFire", "Target", 0, 0, "vgr_pulsecannonburst")
 setPenetration(NewWeaponType, 5, 1,
