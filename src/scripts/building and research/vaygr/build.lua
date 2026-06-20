@@ -442,10 +442,19 @@ build =
     -- TPOF subsystems
     {
         Type = SubSystem,
-        ThingToBuild = "Hgn_C_Sensors_Distortion",
+        ThingToBuild = "Vgr_C_Sensors_DetectCloaked",
         RequiredResearch = "",
         RequiredShipSubSystems = "",
-        DisplayPriority = 153,
+        DisplayPriority = 40,
+        DisplayedName = "$7024",
+        Description = "$7025",
+    },
+    {
+        Type = SubSystem,
+        ThingToBuild = "Vgr_C_Sensors_Distortion",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 50,
         DisplayedName = "$8009",
         Description = "$8010",
     },

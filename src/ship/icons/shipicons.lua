@@ -1774,6 +1774,7 @@ vgr_bc_concussionmissile = Icon_Subsystem_TorpedoLauncher
 vgr_bc_heavyfusionmissile = Icon_Subsystem_TorpedoLauncher
 vgr_bc_sunshattermissile = Icon_Subsystem_TorpedoLauncher
 vgr_bc_swarmmissile = Icon_Subsystem_TorpedoLauncher
+vgr_c_sensors_detectcloaked = Icon_Subsystem_DetectCloaked
 vgr_c_sensors_distortion = Icon_Subsystem_DetectCloaked
 vgr_c_module_buildspeed = Icon_Subsystem_ResearchAdvanced
 -- SRI
