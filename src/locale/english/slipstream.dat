@@ -45,4 +45,7 @@ rangestart 8000 8999
 8604    Auxiliary Power Unit
 8605    Increases Ship Speed
 
+// --- General Strings ---
+8700    Frerrn
+
 rangeend
