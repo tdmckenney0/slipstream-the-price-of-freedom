@@ -26,6 +26,8 @@ rangestart 8000 8999
 // --- Ship names ---
 8100	Slipgate
 8101	SRI-Sajuuk
+8102    Cloaking Frigate
+8103    Cloaking Frigate
 
 // --- MP game-rules ---
 8300	Slipstream
