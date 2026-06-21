@@ -52,6 +52,31 @@ PersistantData = {
             size = 1,
             number = 4,
         },
+        -- Strikcraft
+        {
+            type = "frn_interceptor",
+            subsystems = {},
+            shiphold = {},
+            name = "",
+            size = 1,
+            number = 5,
+        },
+        {
+            type = "frn_bomber",
+            subsystems = {},
+            shiphold = {},
+            name = "",
+            size = 1,
+            number = 5,
+        },
+        {
+            type = "frn_scout",
+            subsystems = {},
+            shiphold = {},
+            name = "",
+            size = 1,
+            number = 5,
+        },
     },
     Research = {},
 }

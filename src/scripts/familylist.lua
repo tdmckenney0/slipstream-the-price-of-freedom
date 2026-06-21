@@ -88,6 +88,8 @@ buildFamily =
     {
         name = "Frigate_Frn", },
     {
+        name = "Fighter_Frn", },
+    {
         name = "NotBuildable", },
 }
 displayFamily =
