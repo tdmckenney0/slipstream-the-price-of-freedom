@@ -86,6 +86,8 @@ buildFamily =
     {
         name = "SuperCap_Frn", },
     {
+        name = "Frigate_Frn", },
+    {
         name = "NotBuildable", },
 }
 displayFamily =
