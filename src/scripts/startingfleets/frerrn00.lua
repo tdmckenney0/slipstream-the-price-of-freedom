@@ -1,14 +1,23 @@
 PersistantData = {
     StrikeGroups = {},
     Squadrons = {
-        -- Flagship
+        -- Battlecruisers
         {
             type = "frn_battlecruiser",
             subsystems = {},
             shiphold = {},
             name = "",
             size = 1,
-            number = 1,
+            number = 2,
+        },
+        -- Destroyers
+        {
+            type = "frn_destroyer",
+            subsystems = {},
+            shiphold = {},
+            name = "",
+            size = 1,
+            number = 2,
         },
     },
     Research = {},

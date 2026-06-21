@@ -7,6 +7,7 @@ Ship = 0
 SubSystem = 1
 build =
 {
+    -- Subsystems
     -- {
     --     Type = SubSystem,
     --     ThingToBuild = "",
@@ -16,4 +17,23 @@ build =
     --     DisplayedName = "$7000",
     --     Description = "$7001",
     -- },
+    -- Ships
+    {
+        Type = Ship,
+        ThingToBuild = "Frn_Destroyer",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 10,
+        DisplayedName = "Frn_Destroyer",
+        Description = "Frn_Destroyer",
+    },
+    {
+        Type = Ship,
+        ThingToBuild = "Frn_Battlecruiser",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 20,
+        DisplayedName = "Frn_Battlecruiser",
+        Description = "Frn_Battlecruiser",
+    },
 }

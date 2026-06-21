@@ -84,6 +84,8 @@ buildFamily =
     {
         name = "Battlecruiser_Frn", },
     {
+        name = "SuperCap_Frn", },
+    {
         name = "NotBuildable", },
 }
 displayFamily =
