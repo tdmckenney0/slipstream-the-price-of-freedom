@@ -1,0 +1,81 @@
+--============================================================================
+--    Name    : HWAT FRN_CAStorm.madStates
+--    Purpose : Animation state data.
+--
+-- Created 110205.
+-- Copyright Relic Entertainment, Inc.  All rights reserved.
+-- Heresy and Terror! :3
+-- May contain traces of thoughts.
+--============================================================================
+
+-- Open/close animations.
+
+HWAT_FRN_CASTORM_Launched_OnSet = function(ship)
+	startTime = 0
+	if(isAnimRunning(ship, "Antennae_Close") ~= 0) then
+	startTime = getAnimLength(ship, "Antennae_Close") - getTime(ship, "Close")
+	stopAnim(ship, "Antennae_Close")
+	endEffect(ship, "Antennae_Close")
+	end
+	startAnim(ship, "Antennae_Open")
+	startEffect(ship, "Antennae_Open")
+	setTime(ship,"Antennae_Open",startTime)
+	setPauseTime(ship, "Antennae_Open", 1000)
+end
+
+HWAT_FRN_CASTORM_Docked_OnSet = function(ship)
+	startTime = 0
+	if(isAnimRunning(ship, "Antennae_Open") ~= 0) then
+	startTime = getAnimLength(ship, "Antennae_Open") - getTime(ship, "Antennae_Open")
+	stopAnim(ship, "Antennae_Open")
+	endEffect(ship, "Antennae_Open")
+	end
+	startAnim(ship, "Antennae_Close")
+	startEffect(ship, "Antennae_Close")
+	setTime(ship,"Antennae_Close",startTime)
+	setPauseTime(ship, "Antennae_Close", 1000)
+end
+
+HWAT_FRN_CASTORM_DockPathOpen_OnSet = function(ship)
+	setState(ship, "DockPathOpen", 0)
+	if(isAnimRunning(ship, "Door_Open") == 0) then
+--	print("Hgn_Mothership_DockPathOpen_OnSet")
+	startTime = 0
+	if(isAnimRunning(ship, "Door_Close") ~= 0) then
+	startTime = getAnimLength(ship, "Door_Close") - getTime(ship, "Door_Close")
+	stopAnim(ship, "Door_Close")
+	endEffect(ship, "Door_Close")
+	end
+	startAnim(ship, "Door_Open")
+	startEffect(ship, "Door_Open")
+	setTime(ship,"Door_Open",startTime)
+	setPauseTime(ship, "Door_Open", 1000)
+	end
+end
+
+HWAT_FRN_CASTORM_DockPathOpen_OnPause = function(ship)
+--	print("Hgn_Mothership_DockPathOpen_OnPause")
+	setState(ship, "DockPathOpen", 1)
+end
+
+HWAT_FRN_CASTORM_DockPathClosed_OnSet = function(ship)
+	setState(ship, "DockPathClose", 0)
+	if(isAnimRunning(ship, "Door_Close") == 0) then
+--	print("Hgn_Mothership_DockPathClose_OnSet")
+	startTime = 0
+	if(isAnimRunning(ship, "Door_Open") ~= 0) then
+	startTime = getAnimLength(ship, "Door_Open") - getTime(ship, "Door_Open")
+	stopAnim(ship, "Door_Open")
+	endEffect(ship, "Door_Open")
+	end
+	startAnim(ship, "Door_Close")
+	startEffect(ship, "Door_Close")
+	setTime(ship,"Door_Close",startTime)
+	setPauseTime(ship, "Door_Close", 1000)
+	end
+end
+
+HWAT_FRN_CASTORM_DockPathClosed_OnPause = function(ship)
+--	print("Hgn_Mothership_DockPathClose_OnPause")
+	setState(ship, "DockPathClose", 1)
+end
