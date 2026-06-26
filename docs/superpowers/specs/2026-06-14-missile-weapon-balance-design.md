@@ -57,7 +57,7 @@ on impact) is folded into the total so the spawned splash counts toward DPS.
 | `vgr_heavyfusionmissilelauncherbc` | 4 | DamageHealth | 7500 | **2200** | ~550 DPS |
 | `hgn_minelauncher` | 4 | DamageHealth | 500 | **1400** | ~380 DPS (+125 burst) |
 | `hgn_bc_minelauncher` | 4 | DamageHealth | 500 | **1400** | ~380 DPS (+125 burst) |
-| `hgn_nuclearminelauncher` | 6 | DamageHealth | 4400 | **1500** | ~580 single-target |
+| `hgn_hc_nucleartorpedolauncher` | 6 | DamageHealth | 4400 | **1500** | ~580 single-target |
 | `neu_nuclearblast` (nuke AoE, used only by the launcher above) | — | DamageHealth | 8500–10000 | **2000** | splash kept, no one-shot |
 
 ### Special cases
