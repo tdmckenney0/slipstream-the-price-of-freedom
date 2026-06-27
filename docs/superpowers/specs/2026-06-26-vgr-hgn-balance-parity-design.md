@@ -1,7 +1,8 @@
 # VGR→HGN Balance Parity Pass — Design Spec
 
 **Date:** 2026-06-26
-**Status:** Awaiting review
+**Status:** Implemented (pending playtest tuning)
+**Validated 2026-06-27:** Headless checks pass — `ship-stats.ps1` diff vs base `8146c6b` shows only the 5 intended VGR ships changed; `weapon-dps.ps1` confirms destroyer missilebox 1650 / scattershot 450 / interceptor pulsecannon 90, all other VGR weapons unchanged; `TPOF.big` packs cleanly (338 MB). Scenario combatants (sri_dreadnaught 550k, sri_sajuuk 400k, command base, prison station, meg furniture) remain coherent — no changes. **Pending:** in-engine `parse-logs` and a VGR-vs-HGN playtest to tune the flagged dials (destroyer `unitCapsNumber`, frigate rotation 80, interceptor damage, corvette nudge).
 **Author:** balance run (HGN identified as overpowered vs VGR; ref `docs/todo.md` "Balance Run — Yeah the Hiigarans obliterate the Vaygr")
 
 ## Goal
