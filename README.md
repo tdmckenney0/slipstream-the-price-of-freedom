@@ -242,7 +242,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ### Kadiir Nebula
 
-![Kadiir Nebula](./src/leveldata/multiplayer/slipstream/3p_kadiir_nebula.jpg)
+![Kadiir Nebula](./src/leveldata/multiplayer/slipstream/2p_kadiir_nebula.jpg)
 
 > ...
 
