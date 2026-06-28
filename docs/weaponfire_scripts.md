@@ -65,7 +65,6 @@ TPOF uses the global-assignment form throughout.
 | `explosion` | `deathCannon` | Used by the SRI Sajuuk superweapon; `bulletfx = "explosion_nuke"`, enormous hit sound |
 | `ionbeam` | `deathBeam` | Hiigaran/Vaygr ion cannon weapons; `scartype = "iontrail"`, continuous beam |
 | `ionbeam_kpr` | `deathBeam` | Keeper variant of the ion beam; separate sound path |
-| `thruster` | *(none)* | Used for thruster subsystems; minimal — only `nopenetratefx` defined |
 | `vgr_pulsecannonburst` | `deathCannon` | Vaygr pulse cannon; `bulletfx = "vgr_pulsecannonburst"` |
 
 ## Adding a New Weapon Fire Script

@@ -177,7 +177,6 @@ host mappings are flagged to confirm by reading the `.ship`/`.subs` during imple
 - **Spawned burst sub-weapons (no range/cadence pass; inherit parent profile, damage
   fixed):** `vgr_pulsecannonburst`, `vgr_bc_swarmmissile` burst, `hgn_plasmaburst`,
   `neu_nuclearblast`.
-- **Excluded (not combat):** `neu_thruster`, `vgr_booster_front`, `vgr_booster_rear`.
 
 ## Validation
 
