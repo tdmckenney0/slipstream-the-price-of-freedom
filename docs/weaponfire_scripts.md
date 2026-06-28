@@ -1,6 +1,6 @@
 # Weapon Fire Scripts (`.wf` files)
 
-`.wf` files define a weapon's projectile-lifecycle FX/audio — how the bullet looks in flight, what happens on hit, and what it sounds like. They live in `src/scripts/weaponfire/{name}/{name}.wf` and are referenced by name (the directory name) in `StartShipWeaponConfig`/`StartSubSystemWeaponConfig` calls in `.ship`/`.subs` files.
+`.wf` files define a weapon's projectile-lifecycle FX/audio — how the bullet looks in flight, what happens on hit, and what it sounds like. They live in `src/scripts/weaponfire/{name}/{name}.wf` and are referenced by name (the directory name) from the **3rd argument of `StartWeaponConfig`** inside a [`.wepn` weapon definition](weapon_definitions.md) — *not* directly from `.ship`/`.subs`. A `.ship`/`.subs` `StartShipWeaponConfig`/`StartSubSystemWeaponConfig` call names a `.wepn` (the weapon's mechanics); that `.wepn` in turn names the `.wf` (its FX). The same 3rd argument may also name a stock Homeworld 2 fire effect with no TPOF `.wf` file.
 
 ## Format
 
@@ -72,6 +72,6 @@ TPOF uses the global-assignment form throughout.
 
 1. Create `src/scripts/weaponfire/{name}/{name}.wf`
 2. Set the globals you need (at minimum `bulletfx` or `hitfx` to see something on screen)
-3. Reference it by `{name}` in `StartShipWeaponConfig` or `StartSubSystemWeaponConfig`
+3. Reference it by `{name}` from the 3rd argument of `StartWeaponConfig` in a [`.wepn`](weapon_definitions.md) weapon definition
 
 The engine discovers scripts by the directory name, so the directory and file must share the same name.
