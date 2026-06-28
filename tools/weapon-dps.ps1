@@ -4,12 +4,14 @@
 .SYNOPSIS
     Estimate sustained weapon DPS across all .wepn files.
 .DESCRIPTION
-    Parses every .wepn under src/weapon/ and reports per-hit DamageHealth, the
-    inter-shot interval (the 10th numeric argument of StartWeaponConfig, decoded
-    empirically), and naive sustained DPS = avgDamage / interval. Flags burst
-    weapons (SpawnWeaponFire spawn extra salvos -> DPS is a floor) and beam
-    weapons (continuous damage -> DPS under-counted). Final balance authority is
-    in-engine playtest, not this estimate.
+    Parses every .wepn under src/weapon/ and reports total per-hit DamageHealth
+    (summing every DamageHealth result -- a weapon may carry several), the
+    inter-shot interval (arg 14 of StartWeaponConfig -- the 10th numeric token),
+    and naive sustained DPS = damage / interval. Flags burst weapons
+    (SpawnWeaponFire spawn extra salvos -> DPS is a floor) and beam weapons
+    ("InstantHit" type, whose continuous damage the arg-14 interval does not
+    capture -> DPS unreliable). Final balance authority is in-engine playtest,
+    not this estimate.
 .PARAMETER Weapon
     Filter to weapons whose file name matches (partial, case-insensitive).
 .EXAMPLE
@@ -32,10 +34,17 @@ $rows = foreach ($f in $WepnFiles) {
     $tokens = $Matches[1] -split ',' | ForEach-Object { ($_ -replace '--.*$', '').Trim() }
     $nums = @($tokens | Where-Object { $_ -match '^-?[0-9.]+$' } | ForEach-Object { [double]$_ })
     $interval = if ($nums.Count -ge 10) { $nums[9] } else { $null }
+    # arg 2 is the weapon type (InstantHit | Bullet | Mine | Missile | SphereBurst).
+    $weaponType = if ($tokens.Count -ge 3) { $tokens[2].Trim('"') } else { '' }
 
+    # Sum every DamageHealth result; a weapon may carry several (see weapon_definitions.md).
+    $dmgMatches = [regex]::Matches($raw, 'AddWeaponResult\([^)]*?"DamageHealth"[^)]*?,\s*([0-9.]+)\s*,\s*([0-9.]+)\s*,')
     $dmg = $null
-    if ($raw -match 'AddWeaponResult\([^)]*"DamageHealth"[^)]*?,\s*([0-9.]+)\s*,\s*([0-9.]+)\s*,') {
-        $dmg = ([double]$Matches[1] + [double]$Matches[2]) / 2
+    if ($dmgMatches.Count -gt 0) {
+        $dmg = 0
+        foreach ($m in $dmgMatches) {
+            $dmg += ([double]$m.Groups[1].Value + [double]$m.Groups[2].Value) / 2
+        }
     }
     $dps = if ($dmg -and $interval -gt 0) { [math]::Round($dmg / $interval, 0) } else { $null }
 
@@ -45,7 +54,8 @@ $rows = foreach ($f in $WepnFiles) {
         Interval = $interval
         DPS      = $dps
         Burst    = if ($raw -match 'SpawnWeaponFire') { 'B' } else { '' }
-        Beam     = if ($raw -match '"Beam"') { 'beam' } else { '' }
+        # Beams are "InstantHit", not a "Beam" type; their continuous damage makes DPS unreliable.
+        Beam     = if ($weaponType -eq 'InstantHit') { 'beam' } else { '' }
     }
 }
 $rows | Sort-Object Weapon | Format-Table -AutoSize
