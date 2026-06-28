@@ -246,7 +246,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 > ...
 
-**Kadiir Nebula** is a 3-player FFA asymmetric map based on Homeworld 2's Mission 7.
+**Kadiir Nebula** is a 1v1 asymmetric map based on Homeworld 2's Mission 7.
 
 ### Standoff
 
