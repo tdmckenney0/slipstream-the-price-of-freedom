@@ -43,11 +43,7 @@ function CpuMilitary_Init()
     
     sg_moreEnemies = 0
     sg_militaryRand = Rand(100)
-    
-    -- SLIPSTREAM: Hyperspace attack settings
-    sg_lastHyperspaceTime = 0
-    sg_hyperspaceDelay = 30  -- Check hyperspace every 30 seconds
-    
+
     if Override_MilitaryInit then
         Override_MilitaryInit()
     end
@@ -61,9 +57,6 @@ function CpuMilitary_Process()
     Logic_military_groupvars()
     Logic_military_attackrules()
     Logic_military_setattacktimer()
-    
-    -- SLIPSTREAM: Use hyperspace for tactical jumps
-    Logic_military_hyperspace()
 end
 
 function Logic_military_groupvars()
@@ -75,7 +68,7 @@ function Logic_military_groupvars()
     if sg_moreEnemies > 0 and s_selfTotalValue < s_enemyTotalValue * 2 then
         cp_minSquadGroupSize = (cp_minSquadGroupSize + 1)
         cp_minSquadGroupValue = (cp_minSquadGroupValue + 50)
-    elseif s_militaryStrength > 120 then
+    elseif s_militaryStrength > 90 then
         -- We're strong, attack with smaller groups
         cp_minSquadGroupSize = 2
         cp_minSquadGroupValue = 75
@@ -97,68 +90,10 @@ function Logic_military_attackrules()
     end
 end
 
--- SLIPSTREAM: Hyperspace jump logic for capital ships
-function Logic_military_hyperspace()
-    local curTime = gameTime()
-    local timeSinceHyperspace = curTime - (sg_lastHyperspaceTime or 0)
-    
-    -- Only try hyperspace jumps periodically
-    if timeSinceHyperspace < sg_hyperspaceDelay then
-        return
-    end
-    
-    -- Need a valid enemy target
-    if s_enemyIndex == -1 then
-        return
-    end
-    
-    -- Don't hyperspace if we're being attacked (defend first)
-    local threat = UnderAttackThreat()
-    if threat > 50 then
-        return
-    end
-    
-    -- Check if we have enough military strength to attack
-    if s_militaryStrength < 0 and g_LOD > 0 then
-        return
-    end
-    
-    -- SLIPSTREAM: Hyperspace capital ships to enemy
-    -- Try to jump battlecruisers and destroyers to attack
-    local numBC = 0
-    local numHBC = 0
-    local numDest = 0
-    
-    if kBattleCruiser then
-        numBC = NumSquadrons(kBattleCruiser) or 0
-    end
-    if kHeavyBattleCruiser then
-        numHBC = NumSquadrons(kHeavyBattleCruiser) or 0
-    end
-    if kDestroyer then
-        numDest = NumSquadrons(kDestroyer) or 0
-    end
-    
-    local totalCapitals = numBC + numHBC + numDest
-    
-    -- If we have capital ships, log and update timer
-    -- Note: HW2 AI doesn't have direct hyperspace control API
-    -- Capital ships will hyperspace via normal attack behavior if they have modules
-    if totalCapitals > 0 then
-        if s_selfTotalValue > 100 or s_militaryStrength > 20 then
-            aitrace("SLIPSTREAM: Capital ships available for attack: " .. totalCapitals)
-            sg_lastHyperspaceTime = curTime
-        end
-    end
-end
-
 function attack_now_timer()
     aitrace("Script: calling attack_now_timer")
     AttackNow()
-    
-    -- SLIPSTREAM: Also trigger hyperspace attack when attacking
-    Logic_military_hyperspace()
-    
+
     Rule_Remove("attack_now_timer")
 end
 
@@ -178,11 +113,11 @@ function Logic_military_setattacktimer()
         timedelay = 240
         wavedelay = (90 + sg_militaryRand * 0.3)
     elseif g_LOD == 1 then
-        timedelay = 120
-        wavedelay = (60 + sg_militaryRand * 0.3)
+        timedelay = 90
+        wavedelay = (45 + sg_militaryRand * 0.3)
     else -- Hard
         timedelay = 0
-        wavedelay = (20 + sg_militaryRand * 0.2)
+        wavedelay = (15 + sg_militaryRand * 0.2)
     end
     
     local gametime = gameTime()
