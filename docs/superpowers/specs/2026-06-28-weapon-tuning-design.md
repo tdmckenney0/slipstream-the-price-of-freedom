@@ -1,7 +1,7 @@
 # Weapon Tuning — Design Spec
 
 - **Date:** 2026-06-28
-- **Status:** Approved framework, pending implementation plan
+- **Status:** Approved framework + reviewer addenda (2026-06-28), pending implementation plan
 - **Scope:** Re-tune non-damage weapon properties across `src/weapon/*.wepn` to a
   coherent, class-based system. **Per-hit damage values are NOT changed.**
 
@@ -60,8 +60,19 @@ standard weapon (it can see what it shoots).
 | Flagship | 9000 | 9500 |
 | Superweapon (Dreadnaught/Sajuuk) | 10000+ | top tier |
 
+> **Hiigaran heavy cruiser** is flagship-tier (320 000 HP — the tankiest hull). Its exact
+> turret list is to be confirmed from `hgn_heavycruiser.ship` during implementation; it
+> likely re-uses `hgn_bc_*` turrets. Apply the **Flagship** range band (9000 / 9500
+> sensor) to its standard weapons, and feed its own 320 000 HP into the cadence math.
+
 **Over-range specialist exceptions** (the *only* weapons allowed past their hull band):
 
+- **Anti-capital beams (sniper sub-band):** `InstantHit` anti-capital weapons (ion-beam
+  frigate, BC beam laser, flagship superlances) keep a reach premium of **×1.25 over the
+  hull band, capped at 9500**, preserving the established "out-range what you can't
+  outrun" beam identity. Examples: frigate ion 4500→5625, BC beam 7500→9375, flagship
+  superlance 9000→9500 (capped). They pay for the reach through slow tracking + low
+  small-target accuracy, *not* through shorter range.
 - **Siege / spinal** (torpedoes, sunshatter, BC forward ion): up to ≈ +40% over the hull
   band (e.g. a BC spinal ≈ 10500, BC siege missile long).
 - **Mines:** range is *deployment* distance, not engagement; left on a separate long value
@@ -83,6 +94,12 @@ knob**. Target same-class time-to-kill for a hull's *default* offensive loadout:
 | Destroyer | ~20s | 75000 ÷ 20 ≈ 3750 |
 | Battlecruiser | ~30s | 250000 ÷ 30 ≈ 8330 |
 | Flagship | ~40s | 240000 ÷ 40 ≈ 6000 |
+| Heavy cruiser (HGN flagship) | ~40s | 320000 ÷ 40 ≈ 8000 |
+
+> **Design artifact (conscious):** because flagships are both more durable *and* get the
+> longest TTK, their required DPS (~6000) lands *below* a BC's (~8330). Flagships
+> therefore grind slightly slower than BCs — a defensible "more HP, longer fight" outcome
+> consistent with the durability philosophy, called out so it's a choice, not a surprise.
 
 **Derivation method (per hull):**
 
@@ -124,6 +141,12 @@ table follows the canonical TPOF armour-class list (see `docs/weapon_definitions
 | Frigate / Destroyer | 30 | frigate + destroyer guns |
 | Capital | 60 | BC + flagship guns |
 | Siege / Superweapon | 100 | torpedoes, spinal ion, Sajuuk/Dread |
+
+> The strength number's exact engine effect is **undocumented** (see
+> `docs/weapon_definitions.md`). These tiers are a **consistency cleanup**, not a proven
+> balance lever — the per-armour multiplier profiles above do the real counter work.
+> Treat strength re-tiering as cosmetic until playtest shows otherwise; don't credit or
+> blame it for balance shifts the multipliers actually cause.
 
 ### Axis 4 — Supporting properties (so the counters actually work)
 
@@ -177,6 +200,8 @@ host mappings are flagged to confirm by reading the `.ship`/`.subs` during imple
 - **Spawned burst sub-weapons (no range/cadence pass; inherit parent profile, damage
   fixed):** `vgr_pulsecannonburst`, `vgr_bc_swarmmissile` burst, `hgn_plasmaburst`,
   `neu_nuclearblast`.
+- **Excluded (not combat — no pass):** `neu_thruster`, `vgr_booster_front`,
+  `vgr_booster_rear`.
 
 ## Validation
 
@@ -197,3 +222,8 @@ host mappings are flagged to confirm by reading the `.ship`/`.subs` during imple
 - Edit only the dictated values; leave `setMiscValues`, `addAnimTurretSound`, and FX names
   alone.
 - Per-hit `DamageHealth` bounds are immutable in this pass.
+- **Capital PD invariant:** every capital / flagship hull's *default* loadout must retain
+  at least one anti-strike / point-defense weapon, so the anti-capital counter stack (low
+  small-target accuracy + slow tracking + low light-armour multiplier) can't leave an
+  irreplaceable capital defenseless against cheap strikecraft. Verify when reading each
+  `.ship` / `.subs`.
