@@ -13,6 +13,69 @@ function CpuBuildSS_Init()
     sg_specialSubSysDelayTime = (100 + Rand(60))
     sg_retireCountCheck = 0
     sg_buildBCHyperspace = 1
+
+    sg_lastRefitTime = -9999
+    sg_refitCooldown = 60
+end
+
+-- Decide which turret bias to fit on capitals based on the chosen enemy's fleet.
+-- "antistrike" when the enemy leans fighters/corvettes; "anticap" when it leans
+-- frigates/capitals; "balanced" when mixed or the enemy is unknown.
+function CpuLoadout_Mode()
+    local e = s_enemyIndex
+    if e == -1 then
+        return "balanced"
+    end
+    local strike = PlayersMilitary_Fighter(e, player_max) + PlayersMilitary_Corvette(e, player_max)
+    local heavy = PlayersMilitary_Frigate(e, player_max)
+        + (PlayersUnitTypeCount(e, player_max, eBattleCruiser) or 0) * 80
+        + (PlayersUnitTypeCount(e, player_max, eHeavyBattleCruiser) or 0) * 120
+    if strike > (heavy * 1.6) and strike > 20 then
+        return "antistrike"
+    end
+    if heavy > (strike * 1.6) and heavy > 20 then
+        return "anticap"
+    end
+    return "balanced"
+end
+
+-- Desired turret list for a capital, given its type and the loadout mode.
+-- Turret constants are the same ones the prior fixed loadout used; they resolve
+-- at call time (the .subs are loaded by then). Returns NIL for non-capitals.
+function CpuLoadout_DesiredTurrets(shipType, mode)
+    if s_race == Race_Hiigaran then
+        if shipType == kBattleCruiser then
+            if mode == "anticap" then
+                return { BCIONBEAMTURRET1, BCPLASMABURSTTURRET1 }
+            elseif mode == "antistrike" then
+                return { BCGATLINGGUNTURRET1, BCPLASMABURSTTURRET1 }
+            else
+                return { BCIONBEAMTURRET1, BCGATLINGGUNTURRET1 }
+            end
+        elseif shipType == kDestroyer then
+            if mode == "anticap" then
+                return { DDPLASMABURSTTURRET1 }
+            elseif mode == "antistrike" then
+                return { DDGATLINGGUNTURRET1, DDPLASMABURSTTURRET1 }
+            else
+                return { DDPLASMABURSTTURRET1, DDGATLINGGUNTURRET1 }
+            end
+        end
+    else
+        if shipType == kBattleCruiser then
+            -- Single missile-battery slot; one anti-capital option.
+            return { BCHEAVYFUSIONMISSILE }
+        elseif shipType == kDestroyer then
+            if mode == "anticap" then
+                return { DDPULSECANNONTURRET1 }
+            elseif mode == "antistrike" then
+                return { DDSCATTERSHOTTURRET1, DDPULSECANNONTURRET1 }
+            else
+                return { DDPULSECANNONTURRET1, DDSCATTERSHOTTURRET1 }
+            end
+        end
+    end
+    return NIL
 end
 
 function CpuBuildSS_SpecialSubSystemDemand()
@@ -126,36 +189,12 @@ function std_maxTuple(a, b, c)
     return maxval
 end
 
--- Pick the next weapon turret to install on a battlecruiser or destroyer that
--- still has an empty weapon hardpoint. TPOF capitals spawn with their swappable
--- weapon slots empty, so the AI must fit them. Returns a subsystem constant
--- (engine constant = UPPERCASE of the .subs typeString) or 0 if nothing to do.
---
--- Balanced loadout: one anti-capital + one anti-strikecraft turret per ship.
--- The two-entry lists fill the two slots with a mix; the has/canBuild checks stop
--- once slots are full and re-arm a ship that loses a turret in combat.
+-- Pick the next desired turret missing from a capital's slots, chosen by the
+-- current loadout mode (which counters the enemy's fleet composition). Returns a
+-- subsystem constant (engine constant = UPPERCASE of the .subs typeString) or 0.
 function CpuBuildSS_NextMissingTurret(buildShipId)
     local shipType = BuildShipType(buildShipId)
-    local turrets = NIL
-
-    if s_race == Race_Hiigaran then
-        if shipType == kBattleCruiser then
-            -- Weapon Top + Bottom: ion beam (anti-cap) + gatling (anti-strike)
-            turrets = { BCIONBEAMTURRET1, BCGATLINGGUNTURRET1 }
-        elseif shipType == kDestroyer then
-            -- TurretTop + Bottom: plasma burst (anti-frig/cap) + gatling (anti-strike)
-            turrets = { DDPLASMABURSTTURRET1, DDGATLINGGUNTURRET1 }
-        end
-    else
-        if shipType == kBattleCruiser then
-            -- Single Missile Battery slot: heavy fusion missile (anti-capital)
-            turrets = { BCHEAVYFUSIONMISSILE }
-        elseif shipType == kDestroyer then
-            -- Top + Bottom Turret: pulse cannon (anti-cap) + scattershot (anti-strike)
-            turrets = { DDPULSECANNONTURRET1, DDSCATTERSHOTTURRET1 }
-        end
-    end
-
+    local turrets = CpuLoadout_DesiredTurrets(shipType, CpuLoadout_Mode())
     if turrets == NIL then
         return 0
     end
@@ -169,24 +208,76 @@ function CpuBuildSS_NextMissingTurret(buildShipId)
     return 0
 end
 
--- Walk the build-ship list and fit one missing weapon turret onto a
--- battlecruiser or destroyer. Kept independent of production-subsystem demand
--- and the s_totalProdSS gate in CpuBuildSS_ProcessEachBuildShip, so a freshly
--- built warship gets armed even before the AI has any production modules.
--- Returns 1 if a turret was queued.
+-- If a capital carries a turret that isn't in the desired list for a decisive
+-- mode, retire one such turret (next pass re-arms correctly). Cooldown-gated to
+-- prevent churn. Returns 1 if a turret was retired.
+function CpuBuildSS_RefitMismatchedTurret(buildShipId, desiredList)
+    if desiredList == NIL then
+        return 0
+    end
+    local now = gameTime()
+    if (now - (sg_lastRefitTime or -9999)) < (sg_refitCooldown or 60) then
+        return 0
+    end
+
+    -- All turret constants a TPOF capital could carry (both races, both types).
+    local allTurrets = {
+        BCIONBEAMTURRET1, BCGATLINGGUNTURRET1, BCPLASMABURSTTURRET1, BCHEAVYFUSIONMISSILE,
+        DDPLASMABURSTTURRET1, DDGATLINGGUNTURRET1, DDPULSECANNONTURRET1, DDSCATTERSHOTTURRET1,
+    }
+    for i, t in allTurrets do
+        if t and BuildShipHasSubSystem(buildShipId, t) == 1 then
+            local wanted = 0
+            for j, d in desiredList do
+                if d == t then
+                    wanted = 1
+                end
+            end
+            if wanted == 0 then
+                aitrace("Loadout refit: retire mismatched turret")
+                RetireSubSystem(buildShipId, t)
+                sg_lastRefitTime = now
+                return 1
+            end
+        end
+    end
+    return 0
+end
+
+-- Walk the build-ship list and fit one missing desired turret onto a
+-- battlecruiser or destroyer; if none is missing, consider one mismatch refit so
+-- the loadout tracks the enemy's composition. Kept independent of
+-- production-subsystem demand and the s_totalProdSS gate in
+-- CpuBuildSS_ProcessEachBuildShip, so a freshly built warship gets armed even
+-- before the AI has any production modules. Returns 1 if work was queued.
 function CpuBuildSS_ArmCapitalShips()
     local bcount = BuildShipCount()
     if bcount == 0 then
         return 0
     end
 
+    local mode = CpuLoadout_Mode()
+
     for i = 0, (bcount - 1), 1 do
         local buildShipId = BuildShipAt(i)
         local armTurret = CpuBuildSS_NextMissingTurret(buildShipId)
         if armTurret ~= 0 then
-            aitrace("Arm capital: build turret")
+            aitrace("Arm capital: build turret (mode " .. mode .. ")")
             BuildSubSystemOnShip(buildShipId, armTurret)
             return 1
+        end
+    end
+
+    -- Nothing missing to add: consider one mismatch refit (cooldown-gated, and
+    -- only when the mode is decisive so we don't thrash on a balanced enemy).
+    for i = 0, (bcount - 1), 1 do
+        local buildShipId = BuildShipAt(i)
+        local shipType = BuildShipType(buildShipId)
+        local desired = CpuLoadout_DesiredTurrets(shipType, mode)
+        if (mode == "antistrike" or mode == "anticap") and desired ~= NIL then
+            if CpuBuildSS_RefitMismatchedTurret(buildShipId, desired) == 1 then
+                return 1
+            end
         end
     end
 
@@ -346,34 +437,16 @@ function CpuBuildSS_DoBuildSubSystem()
         return 1
     end
 
-    SubSystemDemandClear()
-    
-    if Override_SubSystemDemand then
-        Override_SubSystemDemand()
-    else
-        CpuBuildSS_DefaultSubSystemDemandRules()
-    end
-    
-    local subSystemId = FindHighDemandSubSystem()
-    sg_subSystemOverflowDemand = 0
-    
-    if s_race == Race_Vaygr then
-        CpuBuildSS_RetireVaygrProductionSubSystems()
-    end
-    
-    if subSystemId > 0 then
-        if CpuBuildSS_ProcessEachBuildShip() == 1 then
-            return 1
-        end
-        
-        subSystemId = FindHighDemandSubSystem()
-        if subSystemId > 0 then
-            BuildSubSystem(subSystemId)
-        end
-        
-        return 1
-    end
-    
+    -- Production-module demand machinery removed. The entire path below
+    -- (CpuBuildSS_DefaultSubSystemDemandRules -> DoSubSystemDemand_*,
+    -- CpuBuildSS_ProcessEachBuildShip, CpuBuildSS_SpecialSubSystemDemand) is built
+    -- on the production-FAMILY subsystem constants
+    -- (FIGHTERPRODUCTION/CORVETTEPRODUCTION/FRIGATEPRODUCTION). Those are restricted
+    -- build options in TPOF, so passing them to SubSystemDemandSet/Get/NumSubSystems
+    -- raises an engine "parameter:" error that aborts the AI tick. Production
+    -- modules cannot be built here anyway, so the AI focuses on arming capitals
+    -- (handled above). The production-demand helpers remain defined below but are
+    -- intentionally unreachable.
     return 0
 end
 
@@ -409,25 +482,21 @@ function CpuBuildSS_OtherMiscSubSystemDemand()
     
     -- Platform production
     if s_militaryStrength < -50 or g_LOD < 1 or GetRU() > 3000 then
-        NumSubSystemsQ(PLATFORMPRODUCTION)
+        -- NumSubSystemsQ(PLATFORMPRODUCTION) removed: NumSubSystemsQ on a
+        -- production-family constant raises an engine error (see default.lua).
+        -- platCount falls back to 0 via the guard below.
         demand = ShipDemandMaxByClass(ePlatform)
-        -- Guard nil global from NumSubSystemsQ
         local platCount = platformsubsCount or 0
         if demand > 0.25 then
             SubSystemDemandSet(PLATFORMPRODUCTION, ((demand - 0.5) - platCount))
         end
     end
     
-    -- Hyperspace module priority
-    local numShipyards = NumSquadrons(kShipYard)
-    if numShipyards == 0 then
-        local SY_demand = ShipDemandGet(kShipYard)
-        if SY_demand > 0 and NumSubSystemsQ(HYPERSPACE) == 0 then
-            NumSubSystems(HYPERSPACE)
-            local hypDemand = SY_demand + 1
-            SubSystemDemandAdd(HYPERSPACE, hypDemand)
-        end
-    end
+    -- Hyperspace-module-on-shipyard demand removed: the Shipyard is restricted in
+    -- TPOF (restrict.lua), so NumSquadrons(kShipYard)/ShipDemandGet(kShipYard)
+    -- raise an engine "parameter:" error. Hyperspace modules are still fitted to
+    -- battlecruisers via CpuBuildSS_ProcessEachBuildShip and the special-subsystem
+    -- demand path.
 end
 
 function DoSubSystemDemand_Hiigaran()

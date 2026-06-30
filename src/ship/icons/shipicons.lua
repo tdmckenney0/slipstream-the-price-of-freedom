@@ -1736,7 +1736,6 @@ vgr_helios = Vgr_Destroyer
 vgr_qwaarjetii = Vgr_BattleCruiser
 vgr_vanaarjet = Vgr_BattleCruiser
 --SUBSYSTEMS
-neu_directionalthruster = Icon_Subsystem_Engine
 --Hiigaran
 hgn_bc_minelauncher_1 = Icon_Subsystem_TorpedoLauncher
 hgn_bc_minelauncher_2 = Icon_Subsystem_TorpedoLauncher
@@ -1761,7 +1760,6 @@ hgn_c_sensors_distortion = Icon_Subsystem_DetectCloaked
 hgn_c_module_buildspeed = Icon_Subsystem_ResearchAdvanced
 hgn_c_module_maxspeed = Icon_Subsystem_ResearchAdvanced
 --Vaygr
-vgr_bc_booster = Icon_Subsystem_Engine
 vgr_c_missilebay = Icon_Subsystem_TorpedoLauncher
 vgr_dd_pulsecannonturret_1 = Icon_Subsystem_IonTurret
 vgr_dd_pulsecannonturret_2 = Icon_Subsystem_IonTurret

@@ -1,5 +1,5 @@
 levelDesc = "Kadiir Nebula"
-maxPlayers = 3
+maxPlayers = 2
 player = {}
 player[0] =
 {
@@ -17,19 +17,10 @@ player[1] =
     raceID = 2,
     startPos = 0,
 }
-player[2] =
-{
-    id = 2,
-    name = "",
-    resources = 0,
-    raceID = 2,
-    startPos = 0,
-}
 
 function DetermChunk()
-    addPoint("StartPos0", { 24280, 944, 38 }, { 0, 180, 0 })
-    addPoint("StartPos1", { -14257, 2743, -11260 }, { 0, 43.601, 0, })
-    addPoint("StartPos2", { 18090, 2086, -18852 }, { 0, -43.601, 0 })
+    addPoint("StartPos0", { 3500, 1944, 35000 }, { 0, 180, 0 })
+    addPoint("StartPos1", { -3500, 1944, -35000 }, { 0, 0, 0 })
 
     addSquadron("HyperspaceBridge", "meg_slipgate", { 0, 600, -105459 }, -1, { -33, 0, 120 }, 0, 0)
     addSquadron("HyperspaceBridge", "meg_slipgate", { 0, -600, 105459 }, -1, { 33, 120, -1 }, 0, 0)

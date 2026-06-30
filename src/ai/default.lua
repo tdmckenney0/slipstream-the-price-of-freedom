@@ -106,10 +106,18 @@ end
 
 -- Cache current game state for decision making
 function CacheCurrentState()
-    -- Production subsystem counts
-    s_numFiSystems = (NumSubSystems(FIGHTERPRODUCTION) + NumSubSystemsQ(FIGHTERPRODUCTION))
-    s_numCoSystems = (NumSubSystems(CORVETTEPRODUCTION) + NumSubSystemsQ(CORVETTEPRODUCTION))
-    s_numFrSystems = (NumSubSystems(FRIGATEPRODUCTION) + NumSubSystemsQ(FRIGATEPRODUCTION))
+    -- Production subsystem counts.
+    -- IMPORTANT: NumSubSystems()/NumSubSystemsQ() called with a production-FAMILY
+    -- constant (FIGHTERPRODUCTION/CORVETTEPRODUCTION/FRIGATEPRODUCTION) raises an
+    -- engine error in HW2 Classic ("parameter:" + traceback). Because this runs
+    -- unconditionally first in every doai tick, that error aborted the entire AI
+    -- loop from game start, so the AI did nothing. The HW2 AI Toolkit hit the same
+    -- issue and hard-zeroed these (see refs/hwat-0-2-32-0-src/ai/default.lua:166).
+    -- TPOF is capital-ship-centric with production modules heavily restricted, so
+    -- treating these counts as 0 is consistent and unblocks the AI.
+    s_numFiSystems = 0
+    s_numCoSystems = 0
+    s_numFrSystems = 0
     s_totalProdSS = ((s_numFiSystems + s_numCoSystems) + s_numFrSystems)
     
     -- Military strength calculations

@@ -1,4 +1,4 @@
-StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","Vgr_Laser_Small","Normal",6000,5000,0,0,0,0,1,1,1,0.5,0,0,1,1,50,50,0.1,"Normal",1,0,0)
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","Bullet","Vgr_Laser_Small","Normal",6000,6000,0,0,0,0,1,1,1,0.5,0,0,1,1,50,50,0.1,"Normal",1,0,0)
 
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",20,25,"")
 

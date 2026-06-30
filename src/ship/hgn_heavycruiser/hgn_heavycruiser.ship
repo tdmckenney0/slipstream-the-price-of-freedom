@@ -17,10 +17,10 @@ NewShipType.SquadronSize = 1
 NewShipType.passiveFormation = "Spear"
 NewShipType.defensiveFormation = "x"
 NewShipType.aggressiveFormation = "Claw"
-NewShipType.mass = 1000
+NewShipType.mass = 1500
 NewShipType.collisionMultiplier = 1
 NewShipType.thrusterMaxSpeed = 130
-NewShipType.mainEngineMaxSpeed = 150
+NewShipType.mainEngineMaxSpeed = 204
 NewShipType.rotationMaxSpeed = 11
 NewShipType.thrusterAccelTime = 6
 NewShipType.thrusterBrakeTime = 2
@@ -87,8 +87,8 @@ NewShipType.buildPriorityOrder = 40
 NewShipType.retaliationRange = 6500
 NewShipType.retaliationDistanceFromGoal = 160
 NewShipType.visualRange = 10000
-NewShipType.prmSensorRange = 10000
-NewShipType.secSensorRange = 15000
+NewShipType.prmSensorRange = 9000
+NewShipType.secSensorRange = 22000
 NewShipType.detectionStrength = 1
 NewShipType.TOIcon = "Star"
 NewShipType.TOScale = 1
@@ -148,7 +148,7 @@ addAbility(NewShipType, "CanAttack", 1, 1, 0, 0, 0.35, 1.2,
 addAbility(NewShipType, "GuardCommand", 1, 3000, 800)
 addAbility(NewShipType, "HyperspaceViaGateCommand", 1, 3, 1, 0.3)
 addAbility(NewShipType, "ShipHold", 1, 0, 0, "rallypoint", "", 0)
-addAbility(NewShipType, "CanBuildShips", 1, "SubSystem_Hgn, Battlecruiser_Hgn, SuperCap_Hgn", "Capital, SubSystemModule")
+addAbility(NewShipType, "CanBuildShips", 1, "Battlecruiser_Hgn, SuperCap_Hgn", "Capital")
 addAbility(NewShipType, "CanBeCaptured", 90, 0.5)
 addAbility(NewShipType, "CanBeRepaired")
 addAbility(NewShipType, "RetireAbility", 1, 1)
@@ -156,37 +156,20 @@ addAbility(NewShipType, "MinelayerAbility", 1, 3.5)
 addAbility(NewShipType, "CloakAbility", 0, 2, 2000, 4000, 3, 100, 1, 1000)
 LoadModel(NewShipType, 1)
 
-StartShipWeaponConfig(NewShipType, "hgn_nuclearminelauncher", "Weapon_Torpedo_Tube", "Weapon_Torpedo");
+StartShipWeaponConfig(NewShipType, "hgn_hc_nucleartorpedolauncher", "Weapon_Torpedo_Tube", "Weapon_Torpedo");
 
-------------------------------Main--Turrets
+StartShipHardPointConfig(NewShipType, "TurretBack", "Hardpoint_DCTBack", "Weapon", "Innate", "Indestructible", "hgn_bc_gatlinggunturret_1", "")
+StartShipHardPointConfig(NewShipType, "TurretBottomRear", "Hardpoint_Turret_Bottom", "Weapon", "Innate", "Indestructible", "hgn_bc_gatlinggunturret_2", "")
 
-StartShipHardPointConfig(NewShipType, "TurretTop", "Hardpoint_DCTTop", "Weapon", "Generic", "Destroyable", "",
-    "hgn_bc_gatlinggunturret_1", "hgn_bc_gatlinggunturret_2", "hgn_bc_ionbeamturret_1", "hgn_bc_ionbeamturret_2",
-    "hgn_bc_minelauncher_1", "hgn_bc_minelauncher_2", "hgn_bc_plasmaburstturret_1", "hgn_bc_plasmaburstturret_2", "", "",
-    "")
-StartShipHardPointConfig(NewShipType, "TurretBottom", "Hardpoint_DCTBottom", "Weapon", "Generic", "Destroyable", "",
-    "hgn_bc_gatlinggunturret_1", "hgn_bc_gatlinggunturret_2", "hgn_bc_ionbeamturret_1", "hgn_bc_ionbeamturret_2",
-    "hgn_bc_minelauncher_1", "hgn_bc_minelauncher_2", "hgn_bc_plasmaburstturret_1", "hgn_bc_plasmaburstturret_2", "", "",
-    "")
-StartShipHardPointConfig(NewShipType, "TurretFront", "Hardpoint_DCTFront", "Weapon", "Generic", "Destroyable", "",
-    "hgn_bc_gatlinggunturret_1", "hgn_bc_gatlinggunturret_2", "hgn_bc_ionbeamturret_1", "hgn_bc_ionbeamturret_2",
-    "hgn_bc_minelauncher_1", "hgn_bc_minelauncher_2", "hgn_bc_plasmaburstturret_1", "hgn_bc_plasmaburstturret_2", "", "",
-    "")
-StartShipHardPointConfig(NewShipType, "TurretBack", "Hardpoint_DCTBack", "Weapon", "Generic", "Destroyable", "",
-    "hgn_bc_gatlinggunturret_1", "hgn_bc_gatlinggunturret_2", "hgn_bc_ionbeamturret_1", "hgn_bc_ionbeamturret_2",
-    "hgn_bc_minelauncher_1", "hgn_bc_minelauncher_2", "hgn_bc_plasmaburstturret_1", "hgn_bc_plasmaburstturret_2", "", "",
-    "")
-StartShipHardPointConfig(NewShipType, "TurretBottomBack", "Hardpoint_DCT_Left", "Weapon", "Generic", "Destroyable",
-    "", "hgn_bc_gatlinggunturret_1", "hgn_bc_gatlinggunturret_2", "hgn_bc_ionbeamturret_1", "hgn_bc_ionbeamturret_2",
-    "hgn_bc_minelauncher_1", "hgn_bc_minelauncher_2", "hgn_bc_plasmaburstturret_1", "hgn_bc_plasmaburstturret_2", "", "",
-    "")
-StartShipHardPointConfig(NewShipType, "TurretBottomFront", "Hardpoint_DCT_Right", "Weapon", "Generic", "Destroyable",
-    "", "hgn_bc_gatlinggunturret_1", "hgn_bc_gatlinggunturret_2", "hgn_bc_ionbeamturret_1", "hgn_bc_ionbeamturret_2",
-    "hgn_bc_minelauncher_1", "hgn_bc_minelauncher_2", "hgn_bc_plasmaburstturret_1", "hgn_bc_plasmaburstturret_2", "", "",
-    "")
+StartShipHardPointConfig(NewShipType, "TurretBottom", "Hardpoint_DCTBottom", "Weapon", "Innate", "Indestructible", "hgn_bc_plasmaburstturret_1", "")
+StartShipHardPointConfig(NewShipType, "TurretFront", "Hardpoint_DCTFront", "Weapon", "Innate", "Indestructible", "hgn_bc_plasmaburstturret_2", "")
 
-StartShipHardPointConfig(NewShipType, "HyperspaceModule", "Hardpoint_Hyperdrive", "System", "Innate", "Indestructible",
-    "Hgn_C_Module_Hyperspace", "", "", "", "", "", "", "", "")
+StartShipHardPointConfig(NewShipType, "TurretLeft", "Hardpoint_DCT_Left", "Weapon", "Innate", "Indestructible", "hgn_bc_ionbeamturret_1", "")
+StartShipHardPointConfig(NewShipType, "TurretRight", "Hardpoint_DCT_Right", "Weapon", "Innate", "Indestructible", "hgn_bc_ionbeamturret_2", "")
+
+StartShipHardPointConfig(NewShipType, "TurretTop", "Hardpoint_DCTTop", "Weapon", "Innate", "Indestructible", "hgn_bc_minelauncher_1", "")
+
+StartShipHardPointConfig(NewShipType, "HyperspaceModule", "Hardpoint_Hyperdrive", "System", "Innate", "Indestructible", "Hgn_C_Module_Hyperspace", "")
 
 addShield(NewShipType, "EMP", 1000, 20)
 
