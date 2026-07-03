@@ -1,3 +1,4 @@
+ - More maneuvers for capital ships
  - Fix Frigate starting formations.
  - Trigs Bones feels incomplete
  - Mining outpost feels like it needs something
@@ -18,3 +19,4 @@
    + Builds and reconfigures Ship loadouts depending on attack strategy
    + Aggresively builds more ships
    + More Arena-style
+   + Needs to have ships in build.lua to detect if all ships are dead.
