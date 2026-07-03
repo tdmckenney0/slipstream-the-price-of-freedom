@@ -22,9 +22,13 @@ function StrikeGroup_Update(p)
 
     -- Strike membership is refreshed only in real-space states. While the group is
     -- despawned (OUT/BACK) we must NOT re-fill it or we'd drop the in-hyperspace
-    -- ships and have nothing to bring back.
+    -- ships and have nothing to bring back. FORM re-rolls the weighted composition
+    -- every tick (so commit locks in whatever just rolled); ENGAGE/REGROUP keep
+    -- topping up from the full pool so reinforcements built mid-fight join in.
     local strikeCount
-    if st.state == "FORM" or st.state == "ENGAGE" or st.state == "REGROUP" then
+    if st.state == "FORM" then
+        strikeCount = Tactics_RollStrikeForce(p, st.strikeName)
+    elseif st.state == "ENGAGE" or st.state == "REGROUP" then
         strikeCount = Tactics_FillStrike(p, st.strikeName)
     else
         strikeCount = SobGroup_Count(st.strikeName)
@@ -67,14 +71,15 @@ function StrikeGroup_Update(p)
             st.lastAttackTime = now
             StrikeGroup_Enter(st, "ENGAGE", now)
         elseif (now - st.stateTime) > k.hyperMaxWait then
-            -- Never registered as in-hyperspace. If they're already in realspace,
-            -- just regroup; only attempt a recovery exit if they're not.
-            if SobGroup_AreAllInRealSpace(st.strikeName) ~= 1 then
-                Tactics_FillHome(p, st.homeName)
-                if SobGroup_Count(st.homeName) > 0 then
-                    SobGroup_ExitHyperSpaceSobGroup(st.strikeName, st.homeName, k.exitProximity)
-                end
-            end
+            -- Never registered as in-hyperspace. No recovery exit attempt here:
+            -- there's no query to confirm it would succeed (only the AreAll*
+            -- variants exist - no AreAny), and a group that's merely dead/empty
+            -- or a genuine partial mix (some in hyperspace, some not - e.g. a
+            -- wounded ship died mid-despawn) both fail ExitHyperSpaceSobGroup
+            -- with a hard Lua error that skips the state transition below,
+            -- leaving the state stuck re-erroring forever (confirmed in
+            -- Hw2.log). Just give up and regroup; the cpu brain reclaims
+            -- whatever's actually back in real space.
             Director_Trace("p" .. p .. " OUT watchdog -> REGROUP")
             StrikeGroup_Enter(st, "REGROUP", now)
         end
@@ -121,14 +126,15 @@ function StrikeGroup_Update(p)
             Director_Trace("p" .. p .. " HOME")
             StrikeGroup_Enter(st, "REGROUP", now)
         elseif (now - st.stateTime) > k.hyperMaxWait then
-            -- Timed out without registering as in-hyperspace; recover only if not
-            -- already back in realspace, then regroup either way.
-            if SobGroup_AreAllInRealSpace(st.strikeName) ~= 1 then
-                Tactics_FillHome(p, st.homeName)
-                if SobGroup_Count(st.homeName) > 0 then
-                    SobGroup_ExitHyperSpaceSobGroup(st.strikeName, st.homeName, k.exitProximity)
-                end
-            end
+            -- Timed out without registering as in-hyperspace. No recovery exit
+            -- attempt here: there's no query to confirm it would succeed (only
+            -- the AreAll* variants exist - no AreAny), and a group that's merely
+            -- dead/empty or a genuine partial mix (some in hyperspace, some not
+            -- - e.g. a wounded ship died mid-despawn) both fail
+            -- ExitHyperSpaceSobGroup with a hard Lua error that skips the state
+            -- transition below, leaving the state stuck re-erroring forever
+            -- (confirmed in Hw2.log). Just give up and regroup; the cpu brain
+            -- reclaims whatever's actually back in real space.
             Director_Trace("p" .. p .. " BACK watchdog -> REGROUP")
             StrikeGroup_Enter(st, "REGROUP", now)
         end

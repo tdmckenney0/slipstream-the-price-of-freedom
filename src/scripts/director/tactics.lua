@@ -8,13 +8,33 @@
 --   * Player_FillShipsByType CLEARS-and-fills, so union types via a temp group and
 --     SobGroup_SobGroupAdd.
 
--- Strike force: the expendable workhorse capitals (NOT the flagship, which is
--- irreplaceable and stays home as an anchor). Both races' type-strings are listed;
+-- Strike force ship classes, weighted for hit-n-run composition (NOT the
+-- flagship, which is irreplaceable and stays home as an anchor). Each class
+-- independently rolls its weight as a 0-100 chance to join a strike group each
+-- FORM tick (Tactics_RollStrikeForce) - cheap/small classes are near-certain,
+-- capitals are occasional reinforcements. Both races' type-strings are listed;
 -- filling a type a player doesn't field simply adds nothing.
-g_dirStrikeTypes = {
-    "hgn_battlecruiser", "vgr_battlecruiser",
-    "hgn_destroyer", "vgr_destroyer",
+g_dirStrikeClasses = {
+    { weight = 90, types = { "hgn_interceptor", "vgr_interceptor", "vgr_bomber", "vgr_lancefighter" } },
+    { weight = 75, types = { "hgn_assaultcorvette", "hgn_pulsarcorvette", "vgr_missilecorvette", "vgr_lasercorvette" } },
+    { weight = 55, types = { "hgn_assaultfrigate", "hgn_torpedofrigate", "hgn_ioncannonfrigate", "vgr_assaultfrigate", "vgr_heavymissilefrigate" } },
+    { weight = 35, types = { "hgn_destroyer", "vgr_destroyer" } },
+    { weight = 20, types = { "hgn_battlecruiser", "vgr_battlecruiser" } },
 }
+
+-- Flattened union of every g_dirStrikeClasses type - the full eligible pool,
+-- used to keep an already-committed strike topped up with reinforcements while
+-- ENGAGE/REGROUP (see StrikeGroup_Update). Derived so it can't drift out of
+-- sync with the class table above.
+g_dirStrikeTypes = {}
+local dirStrikeTypeCount = 0
+local dirStrikeClassIdx, dirStrikeClass, dirStrikeTypeIdx, dirStrikeType
+for dirStrikeClassIdx, dirStrikeClass in g_dirStrikeClasses do
+    for dirStrikeTypeIdx, dirStrikeType in dirStrikeClass.types do
+        dirStrikeTypeCount = dirStrikeTypeCount + 1
+        g_dirStrikeTypes[dirStrikeTypeCount] = dirStrikeType
+    end
+end
 
 -- Home anchor: stationary / base-bound ships that reliably exist.
 g_dirHomeTypes = {
@@ -61,6 +81,30 @@ function Tactics_FillStrike(p, outName)
     return Tactics_FillByTypes(p, outName, g_dirStrikeTypes)
 end
 
+-- Weighted-random roll of this cycle's strike composition: each class in
+-- g_dirStrikeClasses independently rolls its weight as a % chance to
+-- contribute, then every rolled-in type is filled/unioned into outName.
+-- Called every FORM tick, so the roll (and thus the composition actually
+-- despawned/attacked on commit) varies strike to strike.
+function Tactics_RollStrikeForce(p, outName)
+    SobGroup_Create(outName)
+    SobGroup_Clear(outName)
+    local tmp = outName .. "_tmp"
+    SobGroup_Create(tmp)
+    local i, cls
+    for i, cls in g_dirStrikeClasses do
+        if RandomIntMax(100) <= cls.weight then
+            local j, t
+            for j, t in cls.types do
+                SobGroup_Clear(tmp)
+                Player_FillShipsByType(tmp, p, t)
+                SobGroup_SobGroupAdd(outName, tmp)
+            end
+        end
+    end
+    return SobGroup_Count(outName)
+end
+
 function Tactics_FillHome(p, outName)
     return Tactics_FillByTypes(p, outName, g_dirHomeTypes)
 end
@@ -74,14 +118,31 @@ function Tactics_FillTarget(enemyIndex, outName)
     return Tactics_FillByTypes(enemyIndex, outName, g_dirTargetTypes)
 end
 
--- The weakest alive non-ally (fewest awake ships) - arena aggression: crack the
--- softest target first.
+-- How many OTHER directors are currently pressuring player q (actively OUT or
+-- ENGAGE against them). Scans the existing g_directorState table (set by
+-- director.lua) - no separate bookkeeping needed.
+function Tactics_TargetLoad(q)
+    local load = 0
+    local p2, st2
+    for p2, st2 in g_directorState do
+        if st2.targetPlayer == q and (st2.state == "OUT" or st2.state == "ENGAGE") then
+            load = load + 1
+        end
+    end
+    return load
+end
+
+-- Prefer the least-pressured alive non-ally first (so multiple AI directors
+-- spread out instead of dogpiling one player - e.g. a lone human on a mixed
+-- team), falling back to the weakest (fewest awake ships) as a tie-breaker.
 function Tactics_PickTargetPlayer(p)
     local best = -1
+    local bestLoad = 999999
     local bestShips = 999999
     local q
     for q = 0, Universe_PlayerCount() - 1 do
         if q ~= p and Player_IsAlive(q) == 1 and AreAllied(p, q) == 0 then
+            local load = Tactics_TargetLoad(q)
             -- Prefer the weakest enemy when the count fn is available; otherwise
             -- just take the first alive non-ally (guard: not used by campaign,
             -- so it may be absent in this VM like gameTime was).
@@ -89,7 +150,8 @@ function Tactics_PickTargetPlayer(p)
             if Player_NumberOfAwakeShips then
                 n = Player_NumberOfAwakeShips(q)
             end
-            if best == -1 or n < bestShips then
+            if best == -1 or load < bestLoad or (load == bestLoad and n < bestShips) then
+                bestLoad = load
                 bestShips = n
                 best = q
             end
