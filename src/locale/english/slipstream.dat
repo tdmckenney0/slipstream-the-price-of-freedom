@@ -30,6 +30,8 @@ rangestart 8000 8999
 // --- MP game-rules ---
 8300	Slipstream
 8301	Game Options for Slipstream: The Price of Freedom
+8302    Enhance CPU Players
+8303    ENABLE OR DISABLE AI ENHANCEMENTS FOR CPU PLAYERS
 
 // --- Hiigaran research ---
 8400	Instant Tech!!!!!!!!!!!!!!!!!!!!!!!!!!
