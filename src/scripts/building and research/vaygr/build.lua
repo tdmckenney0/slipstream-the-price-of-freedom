@@ -308,4 +308,23 @@ build =
         DisplayedName = "$7166",
         Description = "$7167",
     },
+    -- Unbuildable
+    {
+        Type = Ship,
+        ThingToBuild = "vgr_qwaarjetii",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 130,
+        DisplayedName = "$7158",
+        Description = "$7159",
+    },
+    {
+        Type = Ship,
+        ThingToBuild = "vgr_vanaarjet",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 130,
+        DisplayedName = "$7158",
+        Description = "$7159",
+    }
 }

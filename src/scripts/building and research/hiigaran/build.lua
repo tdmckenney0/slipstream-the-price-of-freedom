@@ -298,4 +298,14 @@ build =
         DisplayedName = "$7068",
         Description = "$7069",
     },
+    -- Unbuildable
+    {
+        Type = Ship,
+        ThingToBuild = "hgn_heavycruiser",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 130,
+        DisplayedName = "$7060",
+        Description = "$7061",
+    }
 }
