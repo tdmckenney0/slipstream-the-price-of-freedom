@@ -307,5 +307,24 @@ build =
         DisplayPriority = 130,
         DisplayedName = "$7060",
         Description = "$7061",
+    },
+    -- SRI Ships
+    {
+        Type = Ship,
+        ThingToBuild = "sri_dreadnaught",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 130,
+        DisplayedName = "$7060",
+        Description = "$7061",
+    },
+    {
+        Type = Ship,
+        ThingToBuild = "sri_sajuuk",
+        RequiredResearch = "",
+        RequiredShipSubSystems = "",
+        DisplayPriority = 130,
+        DisplayedName = "$7060",
+        Description = "$7061",
     }
 }
