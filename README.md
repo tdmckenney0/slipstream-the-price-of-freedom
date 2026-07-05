@@ -64,7 +64,7 @@ If you're using the Steam version of Homeworld Remastered, it is recommended to 
 5. Create a new shortcut to `Homeworld2.exe` named `Slipstream: The Price of Freedom`
 6. Open the properties of this new shortcut.
 7. In the Shortcut tab, locate the "Target" box.
-8. After the `Homeworld2.exe"`, append ` -mod <name of .big file>`; e.g. `"C:\Games\Homeworld Remastered\Homeworld2Classic\Bin\Release\Homeworld2.exe" -mod TPOFv4.0.big`
+8. After the `Homeworld2.exe"`, append ` -mod <name of .big file>`; e.g. `"C:\Games\Homeworld Remastered\Homeworld2Classic\Bin\Release\Homeworld2.exe" -mod TPOF.big`
 9. Add any additional command line parameters.
 10. Click the "OK" button.
 11. Move the shortcut to the desktop, or wherever you'd like to place it.
@@ -162,11 +162,11 @@ Though using the same game engine and assets, _Slipstream: The Price of Freedom_
 
 #### Music
 
-Based on your selection at the game setup screen, pressing the F1 key will allow you to skip through your chosen soundtrack.
+The soundtrack plays on shuffle during every match; press the F1 key at any time to skip to the next track.
 
 ##### Soundtrack
 
-TPOF includes an original soundtrack by myself and DJZ4K; choose "Shuffle Slipstream" at Game Setup to hear the full soundtrack! Tracks are also included in other playlists alongside the existing Homeworld 2 soundtrack.
+TPOF includes an original soundtrack by myself and DJZ4K.
 
 #### Hyperspace (Slipstream)
 
@@ -178,19 +178,19 @@ Strikecraft (Fighters, Corvettes) are faster, more evasive, and break formation 
 
 #### Capital Ships
 
-Capital ships now only require a Hyperspace module to build as opposed to the capital ship facility needed on motherships and shipyards from the original game.
+There are no motherships, shipyards, or capital ship facilities: your flagship builds new battlecruisers and destroyers directly, and your battlecruisers in turn build frigates, strikecraft, and utility ships in the field.
 
 ##### Destroyers
 
-Destroyers differ greatly between the two factions. The Vaygr destroyer is more of a light cruiser that can change its two primary weapon turrets when needed. The Hiigaran destroyer is fast and maneuverable with tons of coverage, but a fixed configuration.  
+Destroyers differ greatly between the two factions. The Vaygr destroyer is more of a light cruiser that can change its two primary weapon turrets when needed. The Hiigaran destroyer is fast and maneuverable with tons of coverage, and can also swap its two turrets (gatling or plasma) alongside its fixed repeater cannons.  
 
 ##### Battlecruisers
 
-Battlecruisers have become the workhorse of the capital ships. Both Hiigaran and Vaygr cruisers are faster, more maneuverable, and can now build both fighters and corvettes with the appropriate subsystems. Only the Hiigaran battlecruiser can change its two primary weapon turrets, however, the Vaygr cruiser makes up with more armor and more damage.
+Battlecruisers have become the workhorse of the capital ships. Both Hiigaran and Vaygr cruisers are faster, more maneuverable, and build fighters, corvettes, frigates, and utility ships directly. The Hiigaran battlecruiser can change its two primary weapon turrets; the Vaygr cruiser has a swappable missile battery and makes up the difference with more armor and more damage. Both carry swappable module and sensors slots (hyperspace, cloak, fire control, and more).
 
 ##### Dreadnaughts
 
-Dreadnaughts are the slow-moving heavy-hitters crucial to breaking through enemy lines. They carry six battlecruiser turrets that can be changed at any time, however, the only defense against strikecraft they have is their defense field ability. Dreadnaughts appear as star-shaped tactical overlays at a distance. Dreadnaughts cannot be rebuilt once destroyed, so ensure they are never left unescorted.  
+Dreadnaughts are the heavy-hitters crucial to breaking through enemy lines. Dreadnaughts appear as star-shaped tactical overlays at a distance. Dreadnaughts cannot be rebuilt once destroyed, so ensure they are never left unescorted. Dreadnaughts are the only units that can call in super capital ships.
 
 #### Subsystems
 
@@ -324,7 +324,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 > This heavily defended Vaygr outpost is the last standing within the sector.
 
-**Garrison** is a symmetrical 3v3 map with hyperspace disabled. Special ships include the Bentusi-derived Dreadnaught and Drones. 
+**Garrison** is a symmetrical 3v3 map with hyperspace disabled. A Vaygr prison station holds the center, and every player starts with a heavy guard ship — Vanaar-Jet carriers on one side, Bentusi-derived Dreadnaughts on the other. 
 
 ## Credits
 
