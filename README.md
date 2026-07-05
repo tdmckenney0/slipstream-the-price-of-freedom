@@ -150,8 +150,6 @@ The top section, or selection bar, contains the currently focused ships or subsy
 
 You can mouse over each button to see a tooltip describing its function.
 
-![1080p_hgn_carrier_hidden_menubar](./screenshots/1080p_hgn_carrier_hidden_menubar.jpg)
-
 #### Orders Menu
 
 The Orders Menu has replaced the orders button table found in the original game. 
