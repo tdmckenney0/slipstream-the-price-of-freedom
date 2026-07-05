@@ -16,18 +16,18 @@ NewShipType.displayedName = "$STRING_ID"
 NewShipType.sobDescription = "$STRING_ID"
 
 -- Combat
-NewShipType.maxhealth = 240000
+NewShipType.maxhealth = 250000
 NewShipType.regentime = 2000
 NewShipType.sideArmourDamage = 1.2            -- damage multiplier for side/rear hits
 NewShipType.rearArmourDamage = 1.2
 
--- Movement (TPOF capital values ~1.5x vanilla; vanilla BC was 69)
-NewShipType.mainEngineMaxSpeed = 110
-NewShipType.thrusterMaxSpeed = 100
-NewShipType.rotationMaxSpeed = 6
+-- Movement (TPOF capitals far faster than vanilla; vanilla BC was 69)
+NewShipType.mainEngineMaxSpeed = 195
+NewShipType.thrusterMaxSpeed = 117
+NewShipType.rotationMaxSpeed = 8
 
 -- Build
-NewShipType.buildCost = 4000
+NewShipType.buildCost = 5800
 NewShipType.buildTime = 280
 NewShipType.unitCapsNumber = 8                -- how many count toward unit cap
 
@@ -100,12 +100,15 @@ SpawnSalvageOnDeath(NewShipType, "Slv_Chunk_Lrg03", count, chance, x, y, z, ...)
 
 ## Ship Roster
 
+### Heavy capitals: the flagship class scheme
+`hgn_heavycruiser`, `vgr_qwaarjetii`, `vgr_vanaarjet`, and `sri_dreadnaught` share one class scheme: `BuildFamily = "Flagship_Hgn"/"Flagship_Vgr"`, `UnitCapsFamily = "Dreadnaught"`, `DockFamily = "UltraCap"`, `AvoidanceFamily`/`AutoFormationFamily = "SuperCap"`, `DisplayFamily = "Flagship"`. No production module builds the `Flagship_*` families, so these ships stay starting-fleet/scenario-only even though they have `build.lua` entries (listed under `-- Unbuildable` for fleet counting). `sri_sajuuk` matches except `UnitCapsFamily = "SinglePlayerMisc"`.
+
 ### Hiigaran
 | Ship | Notes |
 |------|-------|
-| `hgn_battlecruiser` | 240k HP, speed 110, swappable weapon hardpoints; `ShipHold` + `CanBuildShips` (Utility) |
-| `hgn_heavycruiser` | Flagship (6 weapon hardpoints); zero-capacity `ShipHold` to satisfy the `CanBuildShips` rule |
-| `hgn_destroyer` | Fast, fixed config; full custom `.events` (death + ion cannon fire) |
+| `hgn_battlecruiser` | 250k HP, speed 195; 2 swappable weapon slots + 2 module + 1 sensors slots; `ShipHold` + `CanBuildShips` (Fighter/Corvette/Frigate/SubSystem/Utility) |
+| `hgn_heavycruiser` | Flagship (320k HP, speed 204, 6 weapon hardpoints); zero-capacity `ShipHold` to satisfy the `CanBuildShips` rule; builds `Battlecruiser_Hgn`/`SuperCap_Hgn` |
+| `hgn_destroyer` | Fast; 2 swappable turret slots (gatling/plasma) + fixed ion cannons; builds its own turret SubSystems; full custom `.events` (death + ion cannon fire) |
 | `hgn_interceptor` | Fast strikecraft; custom death `.events` |
 | `hgn_assaultcorvette`, `hgn_pulsarcorvette` | |
 | `hgn_assaultfrigate`, `hgn_torpedofrigate`, `hgn_ioncannonfrigate` | |
@@ -117,9 +120,9 @@ TPOF does **not** ship `hgn_carrier`, `hgn_shipyard`, `hgn_gunturret`, or `hgn_i
 ### Vaygr
 | Ship | Notes |
 |------|-------|
-| `vgr_battlecruiser` | More armor/damage vs. HGN BC; declares `ShipHold` |
-| `vgr_qwaarjetii` | Taiidan "Qwaar-Jet II" heavy BC (240k HP, speed 163); 4 pulse-cannon + 4 super-lance turrets, no `ShipHold`, builds Battlecruiser/SuperCap |
-| `vgr_vanaarjet` | Taiidan "Vanaar-Jet" carrier-class capital (280k HP, speed 163); 4 pulse-cannon turrets + 6 PD lasers |
+| `vgr_battlecruiser` | More armor/damage vs. HGN BC; 1 swappable missile-battery slot + 2 module + 1 sensors slots; `ShipHold` + `CanBuildShips` (Fighter/Corvette/Frigate/SubSystem/Utility) |
+| `vgr_qwaarjetii` | Taiidan "Qwaar-Jet II" heavy BC (240k HP, speed 204); 4 pulse-cannon + 4 super-lance turrets, zero-capacity `ShipHold`, builds `Battlecruiser_Vgr`/`SuperCap_Vgr` |
+| `vgr_vanaarjet` | Taiidan "Vanaar-Jet" carrier-class capital (280k HP, speed 204); 4 pulse-cannon turrets + 6 PD lasers; real Fighter/Corvette `ShipHold` (no `CanBuildShips`) |
 | `vgr_destroyer` | Swappable primary turrets |
 | `vgr_assaultfrigate`, `vgr_heavymissilefrigate` | Heavy missile frigate barrages |
 | `vgr_interceptor`, `vgr_bomber`, `vgr_lancefighter` | |
@@ -132,10 +135,10 @@ TPOF does **not** ship `vgr_carrier`, `vgr_shipyard`, or the vanilla weapon plat
 ### SRI Corp (scenario-only)
 | Ship | Notes |
 |------|-------|
-| `sri_dreadnaught` | 500k HP, `unitCapsNumber=1`, cannot be rebuilt; full custom death `.events` |
+| `sri_dreadnaught` | 550k HP, speed 200, `unitCapsNumber=1`, cannot be rebuilt; fixed weapons (10 autogun hull-defense points + ion cannon + chin turret); full custom death `.events` |
 | `sri_sajuuk` | Special flagship (The Final Battle map); full custom death `.events` |
-| `sri_drone` | |
+| `sri_foundry` | Indestructible-in-practice megalith station (400M HP, `NotBuildable`); junkyard HQ on Research Outpost |
 
 ### Scenario Objects
-`meg_slipgate` (slipgate FX), `meg_leviathan`, `meg_starjumper`, `meg_chimera` (reference for the zero-capacity `ShipHold` form), `meg_bentus_ruins_core_1/2/3` (Bentusi ruins), `meg_tanisstructure_medium`/`_medium2` (Tanis derelicts), `meg_asteroid_inhibitor`, `vgr_prisonstation`.
+`meg_slipgate` (slipgate FX), `meg_leviathan`, `meg_starjumper`, `meg_chimera` (reference for the zero-capacity `ShipHold` form), `meg_bentus_ruins_core_1/2/3` (Bentusi ruins), `meg_tanisstructure_medium`/`_medium2` (Tanis derelicts), `meg_asteroid_inhibitor`, `vgr_prisonstation`. (`vgr_commstation` on 3p Assault is the vanilla type — no TPOF override; the empty `vgr_commstation/`/`sri_lighthouse/` folders are untracked leftovers.)
 </content>
