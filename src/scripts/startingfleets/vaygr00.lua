@@ -102,16 +102,16 @@ PersistantData = {
             subsystems = {},
             shiphold = {},
             name = "",
-            size = 2,
-            number = 4,
+            size = 1,
+            number = 6,
         },
         {
             type = "vgr_heavymissilefrigate",
             subsystems = {},
             shiphold = {},
             name = "",
-            size = 2,
-            number = 4,
+            size = 1,
+            number = 6,
         },
         -- Fighters
         {
