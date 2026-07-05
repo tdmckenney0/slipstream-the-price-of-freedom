@@ -357,3 +357,4 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 ![1080p_research_outpost_hyperspace_module](./screenshots/1080p_research_outpost_hyperspace_module.jpg)
 ![1440p_mining_outpost_bentusi_trade_derelict](./screenshots/1440p_mining_outpost_bentusi_trade_derelict.jpg)
 ![1440p_starjumper_derelict](./screenshots/1440p_starjumper_derelict.jpg)
+![1440p_vgr_qwaarjetii_battle_gulf_sector_1](./screenshots/1440p_vgr_qwaarjetii_battle_gulf_sector_1.jpg)
