@@ -56,12 +56,13 @@ Lowercase paths work fine; big-file path casing is not the deciding factor (an e
 
 | Range | Use |
 |---|---|
-| 8000–8099 | Weapon subsystems + matching build-menu entries (shared IDs) + planet-killer |
-| 8100–8199 | Ship names (`displayedName`/`sobDescription`) |
-| 8300–8399 | MP game-rules: `GameRulesName`, setup `Description`, Music `locName`/`tooltip` + the 34 music-choice labels |
-| 8400–8499 | Hiigaran research-menu strings |
-| 8500–8599 | Vaygr research-menu strings |
-| 8600–8999 | Reserve |
+| 8000–8099 | Weapon subsystems + matching build-menu entries (shared IDs) + planet-killer; 8009–8014 = the C-module build-menu entries (rich `<b>`-formatted descriptions) |
+| 8100–8199 | Ship names (`displayedName`/`sobDescription`): `$8100` slipgate, `$8101` SRI-Sajuuk |
+| 8300–8399 | MP game-rules: `GameRulesName` `$8300`, setup `Description` `$8301`, the "Enhance CPU Players" (AI-director) option's `locName`/`tooltip` `$8302`/`$8303` |
+| 8400–8499 | Hiigaran research-menu strings — currently only the orphan placeholder `$8400`; `research.lua` reuses vanilla `$7xxx` strings |
+| 8500–8599 | Vaygr research-menu strings — currently only the orphan placeholder `$8500`; same vanilla-`$7xxx` reuse |
+| 8600–8699 | General subsystems: the C-modules' `.subs`-side `displayedName`/`sobDescription` (terse; the matching build-menu entries use 8009–8014) |
+| 8700–8999 | Reserve |
 
 Each user-visible string gets **one** ID. If the same literal appears in both a `.subs` and its `build.lua` entry, both reference the same ID (keeps the build menu and in-fleet selection UI in sync); identical strings repeated within one file also share one ID.
 
@@ -86,7 +87,7 @@ To find dangling refs, compare `$8xxx` IDs grepped from `src/` against those def
 
 ## Scope notes (current pass)
 
-- **Converted**: ship + subsystem `displayedName`/`sobDescription`, the Vaygr `build.lua` weapon + planet-killer entries, `deathmatch.lua` game-rules + music labels, and the Hiigaran/Vaygr `research.lua` menu strings — all moved verbatim.
+- **Converted**: ship + subsystem `displayedName`/`sobDescription`, the Vaygr `build.lua` weapon + planet-killer entries, and the `deathmatch.lua` game-rules + AI-director option labels — all moved verbatim. (The music menu option was later removed outright; the current `research.lua` files reuse vanilla `$7xxx` strings instead of TPOF IDs.)
 - **Out of scope**: hardpoint slot labels (`StartShipHardPointConfig` args), fixing mismatched reused-vanilla `$<ID>` refs, rewording strings, and additional languages (the structure leaves room for parallel dictionaries later).
 
 ## References
