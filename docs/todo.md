@@ -5,6 +5,7 @@
  - Mining outpost feels like it needs something
  - Retool the vaygr bases as a sensor platform?
  - Final update of all documentation
+ - Update Map images
  - Update README!!
     + Add Credits Section!
  - Make _an trailer_.
