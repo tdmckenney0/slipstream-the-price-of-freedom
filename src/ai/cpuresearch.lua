@@ -107,10 +107,9 @@ function DoUpgradeDemand_Hiigaran()
         inc_research_demand(rt_interceptor.speed, numInterceptors * 1)
     end
 
-    local numBombers = NumSquadrons(kBomber)
-    if numBombers > 0 then
-        inc_research_demand(rt_bomber.speed, numBombers * 1)
-    end
+    -- Bomber upgrade demand removed: the Hiigaran AttackBomber is restricted in
+    -- TPOF (restrict.lua), so NumSquadrons(kBomber) raises an engine "parameter:"
+    -- error here (kBomber = HGN_ATTACKBOMBER on the Hiigaran path).
 
     -- Corvettes
     local numAssaultCorvette = NumSquadrons(HGN_ASSAULTCORVETTE)

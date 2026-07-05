@@ -87,5 +87,5 @@ Export joins each `StartShipWeaponConfig`/`StartSubSystemWeaponConfig` to events
 
 ## Ships with Custom `.events`
 
-`hgn_destroyer` (death + ion cannon fire), `hgn_heavybattlecruiser`, `hgn_interceptor`, `meg_slipgate` (activation FX), `sri_commandbase`, `sri_dreadnaught`, `sri_sajuuk`, `vgr_heavybattlecruiser` (all death sequences). Ships without `.events` fall back to vanilla engine defaults for their class.
+`hgn_destroyer` (death + ion cannon fire), `hgn_heavybattlecruiser`, `hgn_interceptor`, `meg_slipgate` (activation FX), `sri_dreadnaught`, `sri_sajuuk`, `vgr_heavybattlecruiser` (all death sequences). Ships without `.events` fall back to vanilla engine defaults for their class.
 </content>

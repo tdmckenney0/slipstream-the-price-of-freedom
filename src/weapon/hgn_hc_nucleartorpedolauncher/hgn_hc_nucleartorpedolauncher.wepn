@@ -1,0 +1,27 @@
+-- LuaDC version 0.9.20
+-- 12/20/2025 8:42:39 PM
+-- LuaDC by Age2uN
+-- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
+--
+StartWeaponConfig(NewWeaponType, "Fixed", "Missile", "Hgn_LongRangeTorpedo", "Normal Only", 120, 4500, 0, 0, 0, 0, 1, 0, 1, 16, 0, 0, 1, 0, 0, 0, 0.1, "Normal", 0, 0, 0)
+
+AddWeaponResult(NewWeaponType,"Hit","SpawnWeaponFire","Target",0,0,"neu_nuclearblast")
+AddWeaponResult(NewWeaponType,"Miss","SpawnWeaponFire","Target",0,0,"neu_nuclearblast")
+
+setPenetration(NewWeaponType, 5, 0.5, 
+{ 
+    ResArmour = 0.6, 
+}, 
+{ 
+    PlanetKillerArmour = 0, })
+setAccuracy(NewWeaponType, 1, 
+{ 
+    Fighter = 0, 
+}, 
+{ 
+    Corvette = 0, 
+}, 
+{ 
+    munition = 0, })
+setAngles(NewWeaponType, 179, 0, 0, 0, 0)
+setMiscValues(NewWeaponType, 0, 4)

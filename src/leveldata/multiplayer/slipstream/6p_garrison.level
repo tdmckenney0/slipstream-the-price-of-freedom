@@ -23,7 +23,7 @@ maxPlayers = 6
 player = {}
 
 player[0] = {
-    resources = 10000,
+    resources = 0,
     startPos = 1,
     raceID = 1,
     id = 0,
@@ -31,14 +31,14 @@ player[0] = {
 }
 
 player[1] = {
-    resources = 10000,
+    resources = 0,
     startPos = 1,
     raceID = 2,
     id = 1,
     name = "",
 }
 player[2] = {
-    resources = 10000,
+    resources = 0,
     startPos = 1,
     raceID = 1,
     id = 0,
@@ -46,14 +46,14 @@ player[2] = {
 }
 
 player[3] = {
-    resources = 10000,
+    resources = 0,
     startPos = 1,
     raceID = 2,
     id = 1,
     name = "",
 }
 player[4] = {
-    resources = 10000,
+    resources = 0,
     startPos = 1,
     raceID = 1,
     id = 0,
@@ -61,7 +61,7 @@ player[4] = {
 }
 
 player[5] = {
-    resources = 10000,
+    resources = 0,
     startPos = 1,
     raceID = 2,
     id = 1,

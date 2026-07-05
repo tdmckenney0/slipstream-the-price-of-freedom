@@ -80,7 +80,7 @@ function CpuBuild_Init()
 
     sg_subSystemOverflowDemand = 0
     sg_subSystemDemand = 0
-    sg_shipDemand = 8                  -- Much higher ship priority - build constantly!
+    sg_shipDemand = 12                 -- arena: keep ship queues saturated
     sg_militaryToBuildPerCollector = 2 -- Always prioritize military
 
     -- Default ship demand rules based on difficulty
@@ -288,8 +288,10 @@ function DetermineCounterDemand()
 end
 
 function DetermineSpecialDemand()
-    -- Interceptor priority when we have production
-    if ShipDemandGet(kInterceptor) > 0 and NumSubSystems(FIGHTERPRODUCTION) > 0 and NumSquadrons(kInterceptor) < 3 and s_militaryPop < 10 then
+    -- Interceptor priority when we have production. Use the cached s_numFiSystems
+    -- (set in CacheCurrentState) instead of NumSubSystems(FIGHTERPRODUCTION), which
+    -- raises an engine error on the production-family constant (see default.lua).
+    if ShipDemandGet(kInterceptor) > 0 and s_numFiSystems > 0 and NumSquadrons(kInterceptor) < 3 and s_militaryPop < 10 then
         ShipDemandAdd(kInterceptor, 0.5)
     end
 
@@ -340,16 +342,16 @@ function DetermineSpecialDemand()
     local numCollecting = GetNumCollecting()
 
     -- Always try to build capitals once basic economy is up
-    if numCollecting >= 3 or numRUs > 500 then
+    if numCollecting >= 3 or numRUs > 400 then
         if kBattleCruiser then
-            ShipDemandAdd(kBattleCruiser, 3.0)
+            ShipDemandAdd(kBattleCruiser, 3.5)
         end
         if kDestroyer then
-            ShipDemandAdd(kDestroyer, 1.5)
+            ShipDemandAdd(kDestroyer, 2.0)
         end
 
         -- Even higher priority when we have RUs
-        if numRUs > 2000 then
+        if numRUs > 1800 then
             if kBattleCruiser then
                 ShipDemandAdd(kBattleCruiser, 2.0)
             end
@@ -377,21 +379,9 @@ function DetermineSpecialDemand()
         end
     end
 
-    -- Shipyard demand
-    NumSquadronsQ(kShipYard)
-    local shipyardCount = numShipyards or 0
-    if shipyardCount == 0 and UnderAttackThreat() < -75 then
-        local bcDemand = 0
-        if kBattleCruiser then
-            bcDemand = bcDemand + (ShipDemandGet(kBattleCruiser) or 0)
-        end
-        if kHeavyBattleCruiser then
-            bcDemand = bcDemand + (ShipDemandGet(kHeavyBattleCruiser) or 0)
-        end
-        if bcDemand >= 0.5 and kShipYard then
-            ShipDemandAdd(kShipYard, (bcDemand - 0.5))
-        end
-    end
+    -- Shipyard demand removed: the Shipyard is restricted in TPOF (restrict.lua),
+    -- so kShipYard is not a valid build option. Passing a restricted type to
+    -- NumSquadronsQ/ShipDemandAdd raises an engine "parameter:" error.
 
     -- Platform priority adjustment
     if s_militaryStrength > 25 * sg_moreEnemies then
@@ -553,11 +543,10 @@ function DetermineScoutDemand()
         end
 
         if shipCount < numScoutsDemanded then
+            -- By-class demand only. The raw ShipDemandAdd(kScout, ...) was removed:
+            -- the Scout is restricted in TPOF (restrict.lua), and passing a
+            -- restricted type to ShipDemandAdd raises an engine "parameter:" error.
             ShipDemandAddByClass(eScout, 3.5)
-            local scoutRand = Rand(100)
-            if scoutRand > 30 then
-                ShipDemandAdd(kScout, 1.5)
-            end
             sg_randScoutStartBuildTime = (curGameTime + 40)
         end
     end

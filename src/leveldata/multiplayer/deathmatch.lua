@@ -54,10 +54,22 @@ GameSetupOptions = {
         visible = 0,
         choices = { "$3227", "fixed", },
     },
+
+    -- Enable or Disable the AI director
+    { 
+		name = "director", 
+		locName = "$8302", 
+		tooltip = "$8303", 
+		default = 0, 
+		visible = 1, 
+		choices = 
+		{ "$3222", 0, "$3221", 1, }, 
+	}, 
 }
 
 dofilepath("data:scripts/scar/restrict.lua")
 dofilepath("data:scripts/music.lua")
+dofilepath("data:scripts/director/director.lua")
 
 Events = {}
 Events.endGame =
@@ -79,6 +91,11 @@ function OnInit()
     Rule_Add("MainRule")
 
     SetStartFleetSuffix("")
+
+    if (GetGameSettingAsNumber("director") == 1) then
+        Director_Init()
+        Rule_AddInterval("Director_Tick", g_directorTickInterval)
+    end
 end
 
 AnyPlayerIndex = 0
@@ -87,15 +104,22 @@ AnyPlayerIndex = 0
 -- Kills a player if no team member has any ships
 --
 function CheckTeamAnyShipsLeftRule()
-    local bDead = 1
-    for otherPlayerIndex = 0, (Universe_PlayerCount() - 1) do
-        if ((AreAllied(AnyPlayerIndex, otherPlayerIndex) == 1) and (Player_IsAlive(otherPlayerIndex) == 1) and (Player_NumberOfShips(otherPlayerIndex) > 0)) then
-            bDead = 0
-            break
+    -- Guard on the player already being dead: without this, a player/team with
+    -- no ships and no living ally keeps re-failing the check below every time
+    -- the round-robin comes back to them, calling Player_Kill again forever
+    -- (confirmed in Hw2.log: "Killing player 1" repeating every ~3s for the
+    -- rest of the match on a 3-player FFA map).
+    if (Player_IsAlive(AnyPlayerIndex) == 1) then
+        local bDead = 1
+        for otherPlayerIndex = 0, (Universe_PlayerCount() - 1) do
+            if ((AreAllied(AnyPlayerIndex, otherPlayerIndex) == 1) and (Player_IsAlive(otherPlayerIndex) == 1) and (Player_NumberOfShips(otherPlayerIndex) > 0)) then
+                bDead = 0
+                break
+            end
         end
-    end
-    if (bDead == 1) then
-        Player_Kill(AnyPlayerIndex)
+        if (bDead == 1) then
+            Player_Kill(AnyPlayerIndex)
+        end
     end
     if (AnyPlayerIndex == (Universe_PlayerCount() - 1)) then
         AnyPlayerIndex = 0

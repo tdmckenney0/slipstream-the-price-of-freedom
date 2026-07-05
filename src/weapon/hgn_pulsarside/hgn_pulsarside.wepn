@@ -1,4 +1,4 @@
-StartWeaponConfig(NewWeaponType,"AnimatedTurret","InstantHit","Laser","Normal",0,6500,0,0.4,0,0,1,1,1,0.7,1.5,1,1,1,120,120,0.1,"Normal",1,0,300);
+StartWeaponConfig(NewWeaponType,"AnimatedTurret","InstantHit","Laser","Normal",0,7500,0,0.4,0,0,1,1,1,0.7,1.5,1,1,1,120,120,0.1,"Normal",1,0,300);
 AddWeaponResult(NewWeaponType,"Hit","DamageHealth","Target",200,250,"");
 setPenetration(NewWeaponType,5,1,
 {MineArmour=0.25},

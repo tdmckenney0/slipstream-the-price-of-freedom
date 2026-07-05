@@ -134,7 +134,6 @@ TPOF does **not** ship `vgr_carrier`, `vgr_shipyard`, or the vanilla weapon plat
 |------|-------|
 | `sri_dreadnaught` | 500k HP, `unitCapsNumber=1`, cannot be rebuilt; full custom death `.events` |
 | `sri_sajuuk` | Special flagship (The Final Battle map); full custom death `.events` |
-| `sri_commandbase` | Full custom death `.events` |
 | `sri_drone` | |
 
 ### Scenario Objects

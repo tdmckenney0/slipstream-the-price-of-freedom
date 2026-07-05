@@ -58,8 +58,6 @@ StartSubSystemWeaponConfig(NewSubSystemType, "WeaponScriptName", "HardpointName"
 
 **Vaygr sensors/modules**: `vgr_c_sensors_advancedarray`, `vgr_c_module_research` (kept for research-tree hooks even though most research is restricted).
 
-**Misc**: `neu_directionalthruster` (shared innate/indestructible thruster), `hgn_interceptor_booster`, `vgr_bc_booster`.
-
 ## Adding a New Weapon Subsystem
 
 1. Create `src/subsystem/{name}/{name}.subs` (structure above) and provide `{name}.hod`.

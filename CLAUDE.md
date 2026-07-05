@@ -24,6 +24,7 @@ Authored in **Lua** (HW2's scripting language) plus HW2-proprietary formats:
 | `.lua` | Game rules, AI, music, build lists, starting fleets |
 | `.hod` | Binary 3D model (not text-editable) |
 | `.tga` | Texture images |
+| `.wepn` | Weapon definition — damage, range, ROF, tracking, accuracy, penetration (Lua-like HW2 DSL). See `docs/weapon_definitions.md`. |
 | `.miss` | Missile definition |
 | `.wf` | Weapon fire script (bullet/hit/fire FX + sounds). See `docs/weaponfire_scripts.md`. |
 | `.st` / `.fp` / `.fpa` / `.fpk` / `.fpz` | Shader definition / fragment programs (GPU shaders) |
@@ -180,6 +181,6 @@ Each major source subdirectory has its own CLAUDE.md — check it before working
 | `src/leveldata/CLAUDE.md` | `.level` structure, full map roster, adding a map |
 | `src/locale/CLAUDE.md` | `slipstream.dat` format, ID range, adding a display string |
 
-Other docs: `docs/loadout_system.md`, `research_tree.md`, `locale_system.md`, `events_system.md`, `weaponfire_scripts.md`, `crash_investigation.md`, `relic_developers_network.md` (RDN toolkit inventory), `rdn_modding_reference.md` (RDN API/format reference), `tools_backlog.md`.
+Other docs: `docs/loadout_system.md`, `research_tree.md`, `locale_system.md`, `events_system.md`, `weapon_definitions.md` (`.wepn` mechanics), `weaponfire_scripts.md` (`.wf` FX), `crash_investigation.md`, `relic_developers_network.md` (RDN toolkit inventory), `rdn_modding_reference.md` (RDN API/format reference), `tools_backlog.md`.
 </content>
 </invoke>

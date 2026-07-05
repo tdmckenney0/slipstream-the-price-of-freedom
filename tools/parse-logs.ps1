@@ -107,9 +107,18 @@ function Resolve-HWInstall {
 
 # ── Line helpers ───────────────────────────────────────────────────────────────
 
+# Engine-thrown SCAR/Lua runtime errors (e.g. a bad SobGroup_* call) don't say
+# "LUA ERROR" or "ERROR:" - they log as "<luamodulename> <line>: <message>"
+# (e.g. "luasobgroupactions 1327: SobGroup_ExitHyperSpaceSobGroup: ...") followed
+# by a "stack traceback:" block. Without this, real runtime errors silently pass
+# as "0 errors found" - confirmed missed on a real crash-loop log. Not anchored
+# to line-start: these lines can have a stray leading NUL byte (not whitespace)
+# before the module name, seen in practice in Hw2.log.
+$script:LuaRuntimeErrorPattern = 'LUA ERROR|ERROR:|lua\w+ \d+:|stack traceback:'
+
 function Get-LineColor {
     param([string]$Line)
-    if ($Line -match 'LUA ERROR|ERROR:') { return 'Red' }
+    if ($Line -match $script:LuaRuntimeErrorPattern) { return 'Red' }
     if ($Line -match 'WARNING:?')        { return 'Yellow' }
     if ($Line -match 'LUA:')             { return 'Green' }
     if ($Line -match 'MOD:|TPOF|slipstream') { return 'Cyan' }
@@ -119,15 +128,15 @@ function Get-LineColor {
 function Test-LineMatch {
     param([string]$Line)
     if (-not ($Errors -or $Lua -or $Mod)) { return $true }
-    if ($Errors -and $Line -match 'LUA ERROR|ERROR:') { return $true }
-    if ($Lua    -and $Line -match 'LUA ERROR|LUA:')   { return $true }
+    if ($Errors -and $Line -match $script:LuaRuntimeErrorPattern) { return $true }
+    if ($Lua    -and $Line -match "LUA ERROR|LUA:|$script:LuaRuntimeErrorPattern") { return $true }
     if ($Mod    -and $Line -match 'MOD:|TPOF|slipstream')  { return $true }
     return $false
 }
 
 function Test-IsError {
     param([string]$Line)
-    return $Line -match 'LUA ERROR|ERROR:'
+    return $Line -match $script:LuaRuntimeErrorPattern
 }
 
 # ── Dump summary ───────────────────────────────────────────────────────────────

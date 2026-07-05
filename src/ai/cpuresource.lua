@@ -14,9 +14,9 @@ function CpuResource_Init()
     
     -- SLIPSTREAM: Reduced collector counts for faster military transition
     -- Stock: min=5, max=30
-    -- Slipstream: min=3, max=15
+    -- Slipstream: min=3, max=12 (arena rebuild: tighter ceiling)
     sg_minNumCollectors = 3
-    sg_maxNumCollectors = 15
+    sg_maxNumCollectors = 12
     
     if Override_ResourceInit then
         Override_ResourceInit()
@@ -102,8 +102,11 @@ function CalcDesiredNumCollectors()
         sg_militaryToBuildPerCollector = 2  -- Always build some military
     end
     
-    -- SLIPSTREAM: Increase military priority as game progresses
-    if gametime > 240 then
+    -- SLIPSTREAM: Increase military priority as game progresses (arena: earlier+steeper)
+    if gametime > 150 then
+        sg_militaryToBuildPerCollector = sg_militaryToBuildPerCollector + 2
+    end
+    if gametime > 360 then
         sg_militaryToBuildPerCollector = sg_militaryToBuildPerCollector + 2
     end
     

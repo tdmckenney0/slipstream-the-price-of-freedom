@@ -10,6 +10,10 @@ function DetermChunk()
     addPoint("StartPos0", { -13726.37, -1112.825, 14950.705 }, { 0, -225, 0 })
     addPoint("StartPos1", { 16392.705, -2257.71, -20497.085 }, { 0, -40, 0 })
 
+    addSquadron("JunkyardHQ0", "meg_veildebris_chunk_lighthouse", { 16725.155, 2744.15, -17949.585 }, -1, { -30, 0, -30 }, 0, 0)
+    addSquadron("JunkyardHQ1", "sri_foundry", { 17725.155, 1000, -23949.585 }, -1, { 15, 0, 5 }, 0, 0)
+    addSquadron("Slipgate", "meg_slipgate", { -35726.37, -1112.825, 36950.705 }, -1, { -10, -225, 10 }, 0, 0)
+
     addSquadron("LGun10", "meg_veildebris_bit1", { 13800.85, -2938.6, -8944.6 }, -1, { 0, -90, 0 }, 0, 0)
     addSquadron("LGun100", "meg_veildebris_bit1", { -3791.48, 3461.325, -11430.09 }, -1, { 0, -90, 0 }, 0, 0)
     addSquadron("LGun110", "meg_veildebris_bit1", { -2896.39, 1820.105, 4524.31 }, -1, { 0, -90, 0 }, 0, 0)
@@ -1664,8 +1668,6 @@ function DetermChunk()
         0)
     addSquadron("MultiGunCorvette_Group677", "meg_starjumper", { 7595.875, -5991.265, -21163.8 }, -1,
         { 0, -4.40000000000001, -64.9 }, 1, 0)
-    addSquadron("JunkyardHQ0", "sri_commandbase", { 17725.155, 1744.15, -21949.585 }, -1, { 0, -225, 0 }, 0, 0)
-    addSquadron("Slipgate", "meg_slipgate", { -35726.37, -1112.825, 36950.705 }, -1, { -10, -225, 10 }, 0, 0)
 
     addSquadron("UselessHyperspaceModules", "meg_bentus_ruins_core_1", { 13536.81, 3081.295, -8362.27 }, -1,
         { 22, -25, 143 },
@@ -1859,7 +1861,7 @@ function DetermChunk()
     addSalvage("Slv_Chunk_Lrg03", { -593.775, -7244.405, 3556.42 }, 500, 100.168, 63.141, 110.015, 0)
     addSalvage("Slv_Chunk_Lrg03", { 23200.66, -3755.675, -6618.955 }, 500, 100.168, 63.141, 110.015, 0)
 
-    setWorldBoundsInner({ 0, 0, 0 }, { 30000, 21000, 30000 })
+    setWorldBoundsInner({ 0, 0, 0 }, { 32000, 10000, 32000 })
     -- setWorldBoundsOuter({0, 0, 0}, {42000, 25200, 42000})
 end -- end of deterministic chunk
 
