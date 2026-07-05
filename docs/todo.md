@@ -1,11 +1,9 @@
  - Fix Frigate starting formations.
- - Mining outpost feels like it needs something
  - Final update of all documentation
+ - Fix mismatched weapon effects.
+ - Tune & Adjust slipstream director.
+ - Tune & Adjust AI
  - Update Map images
  - Update README!!
-    + Add Credits Section!
  - Make _an trailer_.
 
-## Weapons
-
- - Fix Effects
