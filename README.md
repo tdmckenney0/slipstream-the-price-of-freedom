@@ -348,7 +348,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
    + Models, Weapons
  - [DJZ4K](https://www.moddb.com/members/z4k)
    + Music
- - Homeworld: @ team
+ - [Homeworld: @ team](https://www.moddb.com/company/homeworld-team)
    + Reference
  - Enterprise-E
    + Models, Weapons
