@@ -1778,7 +1778,6 @@ vgr_c_sensors_distortion = Icon_Subsystem_DetectCloaked
 vgr_c_module_buildspeed = Icon_Subsystem_ResearchAdvanced
 vgr_c_module_maxspeed = Icon_Subsystem_ResearchAdvanced
 -- SRI
-sri_commandbase = Vgr_CommStation
 sri_dreadnaught = Hgn_Dreadnaught
 sri_sajuuk = Kpr_Sajuuk
 -- Megaliths
