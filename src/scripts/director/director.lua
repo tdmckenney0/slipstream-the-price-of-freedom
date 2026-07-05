@@ -18,25 +18,19 @@ g_directorTickInterval = 2
 -- do NOT reach Hw2.log in this VM, so Subtitle is our observability for tuning.
 g_directorDebug = 1
 
--- Player indices the director must NOT command (humans). Auto-detection of AI vs
--- human is not exposed by the engine (see spec open items); this exclusion list is
--- the reliable interim. In the test matrix the human is slot 0.
-g_directorHumanPlayers = { 0 }
-
 function Director_Trace(msg)
     if g_directorDebug == 1 and Subtitle_Message then
         Subtitle_Message("DIR: " .. msg, 4)
     end
 end
 
+-- CPU_Exist(playerIndex) is the real engine query for AI-vs-human (1 = CPU,
+-- 0 = human or empty slot) - it works for any number/arrangement of human
+-- players, unlike the old hardcoded "human is always slot 0" exclusion list
+-- (which caused the director to command a human's fleet whenever they weren't
+-- in slot 0, or in any match with more than one human).
 function Director_IsAIPlayer(p)
-    local i, h
-    for i, h in g_directorHumanPlayers do
-        if h == p then
-            return 0
-        end
-    end
-    return 1
+    return CPU_Exist(p)
 end
 
 -- Resolved once on the first tick (not in Init): map objects from the .level's

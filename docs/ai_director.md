@@ -132,6 +132,9 @@ enforced), so jumps are correctly *allowed* there — the same as for a human.
 - `g_directorDebug` (in `director.lua`) — `1` shows per-player state transitions
   on-screen via `Subtitle_Message`. `print`/`trace` do NOT reach `Hw2.log` in
   this VM, so Subtitle is the observability channel. Set `0` for release.
-- `g_directorHumanPlayers` — player slots the director must not command. AI-vs-
-  human detection isn't exposed by the engine, so this exclusion list is the
-  interim (the human is slot 0 in the test matrix).
+- AI-vs-human detection uses the engine's `CPU_Exist(playerIndex)` query
+  (1 = CPU, 0 = human/empty slot) in `Director_IsAIPlayer` — works for any
+  number/arrangement of human players. (An earlier version hardcoded a
+  human-slots exclusion list assuming the human was always slot 0; that broke
+  as soon as a human sat in any other slot, or a match had more than one
+  human — confirmed live as the director commanding a human's fleet.)
