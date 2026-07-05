@@ -122,6 +122,8 @@ Direct Connection multiplayer can be used to directly connect to another network
 
 ### User Interface
 
+![1440p_vgr_fleet_full_new_ui](./screenshots/1440p_vgr_fleet_full_new_ui.jpg)
+
 #### Taskbar
 
 The in-game taskbar has been split into two separate sections. Using the **backspace key**, the player can toggle between four different UI states: 
@@ -134,8 +136,6 @@ The in-game taskbar has been split into two separate sections. Using the **backs
 ##### Menu Bar
 
 The bottom section, or menu bar, contains the many different menus for the game.
-
-![1080p_hgn_battlecruiser_full_newui](./screenshots/1080p_hgn_battlecruiser_full_newui.jpg)
 
 ##### Selection bar
 
@@ -156,7 +156,7 @@ You can mouse over each button to see a tooltip describing its function.
 
 The Orders Menu has replaced the orders button table found in the original game. 
 
-![1080p_hgn_battlecruiser_orders_menu](./screenshots/1080p_hgn_battlecruiser_orders_menu.jpg)
+![1440p_vgr_fleet_orders_menu](./screenshots/1440p_vgr_fleet_orders_menu.jpg)
 
 ### Gameplay
 
