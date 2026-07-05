@@ -6,7 +6,9 @@ All multiplayer maps live in `src/leveldata/multiplayer/`.
 
 `deathmatch.lua` — the "Slipstream" game rules file. **This is the central game logic entry point**, not a map file.
 
-Its player-facing strings (`GameRulesName`, setup `Description`, the Music option's `locName`/`tooltip`, and every music-`choices` label) are `$<ID>` locale refs (IDs 8300-8343); the paired music *values* (`"slipstream"`, `"ambient\\amb_01"`, …) stay literal. See `docs/locale_system.md`. `.level` `levelDesc` map names are a separate concern, not part of the locale conversion.
+`GameSetupOptions` exposes: resource multiplier (1x/2x/3x), unit caps, lock teams, and **"Enhance CPU Players"** (`name = "director"`, default off) — the toggle that enables the AI Tactical Director (`src/scripts/director/`, see `docs/ai_director.md`). Starting resources and start locations are fixed via hidden options. There is no music option — music is a fixed shuffle playlist in `src/scripts/music.lua`.
+
+Its player-facing strings (`GameRulesName` `$8300`, setup `Description` `$8301`, and the director option's `locName`/`tooltip` `$8302`/`$8303`) are TPOF locale refs; the other setup options reuse vanilla `$32xx` strings. See `docs/locale_system.md`. `.level` `levelDesc` map names are a separate concern, not part of the locale conversion.
 
 ## Map Directory: `slipstream/`
 
@@ -49,10 +51,10 @@ Coordinates use HW2's 3D space (Y = vertical). Symmetrical maps mirror coordinat
 | File | Players | Type | Notes |
 |------|---------|------|-------|
 | `2p_as_sirat.level` | 2 | 1v1 symmetric | Resources abundant, no cover |
+| `2p_kadiir_nebula.level` | 2 | 1v1 asymmetric | Mirrored starts, one-sided terrain |
 | `2p_research_outpost.level` | 2 | 1v1 asymmetric | Hyperspace **disabled** |
 | `2p_the_graveyard.level` | 2 | 1v1 symmetric | |
-| `3p_assault.level` | 3 | 1v2 asymmetric | Hyperspace **disabled**, based on HW2 mission Thaddis Sabbah |
-| `3p_kadiir_nebula.level` | 3 | 1v2 asymmetric | Ported from HWC; uses `meg_slipgate` for the connecting slipgate route |
+| `3p_assault.level` | 3 | 1v2 asymmetric | Hyperspace **disabled**, based on HW2 mission Thaddis Sabbah; the solo player starts with an `sri_dreadnaught` |
 | `3p_standoff.level` | 3 | FFA asymmetric | 3-player FFA |
 | `3p_trigs_bones.level` | 3 | 3p FFA | Ported from HWC, high verticality |
 | `4p_high_dive.level` | 4 | 4p FFA | Ported from HWC ("Kristalzupacken") |
@@ -62,7 +64,9 @@ Coordinates use HW2's 3D space (Y = vertical). Symmetrical maps mirror coordinat
 | `5p_mining_outpost.level` | 5 | 2v3 asymmetric | Hyperspace **disabled** |
 | `5p_the_final_battle.level` | 5 | 2v3 asymmetric | Special ship: `sri_sajuuk` (SRI flagship), remix of HW2 Mission 15 |
 | `6p_badlands.level` | 6 | 3v3 or FFA | Minimal resources, center-only |
-| `6p_garrison.level` | 6 | 3v3 symmetric | Hyperspace **disabled**, special: Bentusi-derived dreadnaught + drones |
+| `6p_garrison.level` | 6 | 3v3 symmetric | Hyperspace **disabled** (3 inhibitors); central `vgr_prisonstation`; one team's players start with `vgr_vanaarjet` guards, the other's with `sri_dreadnaught` guards |
+
+"Hyperspace **disabled**" = the map places `meg_asteroid_inhibitor` (the engine-enforced mechanism; also the cross-VM signal the AI director keys off — see `docs/ai_director.md`).
 
 ## Adding a New Map
 
