@@ -328,6 +328,31 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 **Garrison** is a symmetrical 3v3 map with hyperspace disabled. Special ships include the Bentusi-derived Dreadnaught and Drones. 
 
+## Credits
+
+ - [SRI-Sajuuk](https://www.moddb.com/members/sri-sajuuk)
+   + Principal Engineer, Director, Concept
+ - [Aquemnun](https://www.moddb.com/members/aquemnun)
+   + Staff Engineer, Concept, Consultant
+ - HisDivineShadow
+   + Staff Engineer, Concept, Consultant
+ - [NSWMaps](https://www.moddb.com/members/nswmaps)
+   + Original level design, level concepts, Consultant
+ - [DoubleForte](https://www.moddb.com/members/doubleforte)
+   + Art Direction, Concept, Consultant
+ - Axel
+   + Models, Weapons
+ - Modernization Mod Team
+   + Models, Weapons
+ - Cannonjack
+   + Models, Weapons
+ - [DJZ4K](https://www.moddb.com/members/z4k)
+   + Music
+ - Homeworld: @ team
+   + Reference
+ - Enterprise-E
+   + Models, Weapons
+
 ## Screenshots
 
 ![1440p_battlecruiser_attacks_no_ui.jpg](./screenshots/1440p_battlecruiser_attacks_no_ui.jpg)
