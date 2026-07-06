@@ -290,7 +290,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ![Gulf Sector](./src/leveldata/multiplayer/slipstream/5p_gulf_sector.jpg)
 
-> ...
+> Treading water in the tropics.
 
 **Gulf Sector** is a 3v2 asymmetrical map based on Homeworld 2's Mission 4.
 
