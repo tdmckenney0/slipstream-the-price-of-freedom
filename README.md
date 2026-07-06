@@ -360,3 +360,5 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 ![1440p_vgr_qwaarjetii_battle_gulf_sector_1](./screenshots/1440p_vgr_qwaarjetii_battle_gulf_sector_1.jpg)
 ![1440p_assault_station](./screenshots/1440p_assault_station.jpg)
 ![1440p_assault_sri_dreadnaught_main_cannon](./screenshots/1440p_assault_sri_dreadnaught_main_cannon.jpg)
+![1440p_vgr_assaultfrigate_on_gulf_sector](./screenshots/1440p_vgr_assaultfrigate_on_gulf_sector.jpg)
+![1440p_hgn_battlecruiser_on_gulf_sector](./screenshots/1440p_hgn_battlecruiser_on_gulf_sector.jpg)
