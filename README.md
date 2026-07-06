@@ -214,6 +214,14 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 **As-Sirat** is a symmetrical 1v1 map with plenty of resources and nowhere to hide.
 
+### Kadiir Nebula
+
+![Kadiir Nebula](./src/leveldata/multiplayer/slipstream/2p_kadiir_nebula.jpg)
+
+> I can take you through the center of the dark...
+
+**Kadiir Nebula** is a 1v1 asymmetric map based on Homeworld 2's Mission 7.
+
 ### Research Outpost
 
 ![Research Outpost](./src/leveldata/multiplayer/slipstream/2p_research_outpost.jpg)
@@ -237,14 +245,6 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 > Formerly Hiigaran colonies, these moons now serve as a staging and resupply outpost for the Vaygr.
 
 **Assault** is a 1v2 asymmetric map based on _Thaddis Sabbah_ from the Homeworld 2 campaign. Hyperspace is disabled.
-
-### Kadiir Nebula
-
-![Kadiir Nebula](./src/leveldata/multiplayer/slipstream/2p_kadiir_nebula.jpg)
-
-> ...
-
-**Kadiir Nebula** is a 1v1 asymmetric map based on Homeworld 2's Mission 7.
 
 ### Standoff
 
