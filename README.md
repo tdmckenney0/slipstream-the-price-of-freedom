@@ -366,3 +366,4 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 ![1440p_starjumper_derelict](./screenshots/1440p_starjumper_derelict.jpg)
 ![1440p_hgn_heavycruiser_on_badlands](./screenshots/1440p_hgn_heavycruiser_on_badlands.jpg)
 ![1440p_hgn_destroyer_on_as_sirat](./screenshots/1440p_hgn_destroyer_on_as_sirat.jpg)
+![1440p_vanaar_jet_on_gulf_sector](./screenshots/1440p_vanaar_jet_on_gulf_sector.jpg)
