@@ -354,7 +354,6 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 ## Screenshots
 
 ![1080p_research_outpost_hyperspace_module](./screenshots/1080p_research_outpost_hyperspace_module.jpg)
-![1440p_starjumper_derelict](./screenshots/1440p_starjumper_derelict.jpg)
 ![1440p_vgr_qwaarjetii_battle_gulf_sector_1](./screenshots/1440p_vgr_qwaarjetii_battle_gulf_sector_1.jpg)
 ![1440p_assault_station](./screenshots/1440p_assault_station.jpg)
 ![1440p_assault_sri_dreadnaught_main_cannon](./screenshots/1440p_assault_sri_dreadnaught_main_cannon.jpg)
@@ -363,3 +362,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 ![1440p_hgn_battlecruiser_on_gulf_sector](./screenshots/1440p_hgn_battlecruiser_on_gulf_sector.jpg)
 ![1440p_mining_outpost_bentusi_trade_derelict](./screenshots/1440p_mining_outpost_bentusi_trade_derelict.jpg)
 ![1440p_hgn_battlecruiser_on_high_dive](./screenshots/1440p_hgn_battlecruiser_on_high_dive.jpg)
+![1440p_big_battle_on_as_sirat](./screenshots/1440p_big_battle_on_as_sirat.jpg)
+![1440p_starjumper_derelict](./screenshots/1440p_starjumper_derelict.jpg)
+![1440p_hgn_heavycruiser_on_badlands](./screenshots/1440p_hgn_heavycruiser_on_badlands.jpg)
+![1440p_hgn_destroyer_on_as_sirat](./screenshots/1440p_hgn_destroyer_on_as_sirat.jpg)
