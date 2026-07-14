@@ -42,7 +42,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 1,
-            number = 6,
+            number = 4,
         },
         {
             type = "Hgn_ResourceController",
@@ -50,7 +50,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 1,
-            number = 3,
+            number = 1,
         },
         -- Super-Caps
         {
@@ -83,35 +83,6 @@ PersistantData = {
             number = 1,
         },
         {
-            type = "Hgn_battlecruiser",
-            subsystems = {
-                {
-                    index = 0,
-                    name = "Hgn_C_Module_FireControl",
-                },
-                {
-                    index = 0,
-                    name = "Hgn_C_Module_HyperspaceInhibitor",
-                },
-                {
-                    index = 0,
-                    name = "hgn_c_sensors_detecthyperspace",
-                },
-                {
-                    index = 0,
-                    name = "hgn_bc_plasmaburstturret_1",
-                },
-                {
-                    index = 0,
-                    name = "hgn_bc_minelauncher_2",
-                }
-            },
-            shiphold = {},
-            name = "",
-            size = 1,
-            number = 1,
-        },
-        {
             type = "hgn_destroyer",
             subsystems = {
                 {
@@ -126,7 +97,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 1,
-            number = 2,
+            number = 1,
         },
         -- Frigates
         {
@@ -135,7 +106,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 1,
-            number = 6,
+            number = 3,
         },
         {
             type = "hgn_torpedofrigate",
@@ -143,7 +114,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 1,
-            number = 6,
+            number = 3,
         },
         {
             type = "hgn_ioncannonfrigate",
@@ -151,7 +122,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 1,
-            number = 6,
+            number = 3,
         },
         -- Fighters
         {
@@ -160,7 +131,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 5,
-            number = 5,
+            number = 3,
         },
         -- Corvettes
         {
@@ -169,7 +140,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 3,
-            number = 4,
+            number = 2,
         },
         {
             type = "hgn_pulsarcorvette",
@@ -177,13 +148,8 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 3,
-            number = 4,
+            number = 2,
         },
     },
-    Research = {
-        {
-            name = "RepairAbility",
-            progress = 1,
-        },
-    },
+    Research = {},
 }
