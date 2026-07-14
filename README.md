@@ -64,7 +64,7 @@ If you're using the Steam version of Homeworld Remastered, it is recommended to 
 5. Create a new shortcut to `Homeworld2.exe` named `Slipstream: The Price of Freedom`
 6. Open the properties of this new shortcut.
 7. In the Shortcut tab, locate the "Target" box.
-8. After the `Homeworld2.exe"`, append ` -mod <name of .big file>`; e.g. `"C:\Games\Homeworld Remastered\Homeworld2Classic\Bin\Release\Homeworld2.exe" -mod TPOFv4.0.big`
+8. After the `Homeworld2.exe"`, append ` -mod <name of .big file>`; e.g. `"C:\Games\Homeworld Remastered\Homeworld2Classic\Bin\Release\Homeworld2.exe" -mod TPOF.big`
 9. Add any additional command line parameters.
 10. Click the "OK" button.
 11. Move the shortcut to the desktop, or wherever you'd like to place it.
@@ -122,6 +122,8 @@ Direct Connection multiplayer can be used to directly connect to another network
 
 ### User Interface
 
+![1440p_vgr_fleet_full_new_ui](./screenshots/1440p_vgr_fleet_full_new_ui.jpg)
+
 #### Taskbar
 
 The in-game taskbar has been split into two separate sections. Using the **backspace key**, the player can toggle between four different UI states: 
@@ -134,8 +136,6 @@ The in-game taskbar has been split into two separate sections. Using the **backs
 ##### Menu Bar
 
 The bottom section, or menu bar, contains the many different menus for the game.
-
-![1080p_hgn_battlecruiser_full_newui](./screenshots/1080p_hgn_battlecruiser_full_newui.jpg)
 
 ##### Selection bar
 
@@ -150,13 +150,11 @@ The top section, or selection bar, contains the currently focused ships or subsy
 
 You can mouse over each button to see a tooltip describing its function.
 
-![1080p_hgn_carrier_hidden_menubar](./screenshots/1080p_hgn_carrier_hidden_menubar.jpg)
-
 #### Orders Menu
 
 The Orders Menu has replaced the orders button table found in the original game. 
 
-![1080p_hgn_battlecruiser_orders_menu](./screenshots/1080p_hgn_battlecruiser_orders_menu.jpg)
+![1440p_vgr_fleet_orders_menu](./screenshots/1440p_vgr_fleet_orders_menu.jpg)
 
 ### Gameplay
 
@@ -164,11 +162,11 @@ Though using the same game engine and assets, _Slipstream: The Price of Freedom_
 
 #### Music
 
-Based on your selection at the game setup screen, pressing the F1 key will allow you to skip through your chosen soundtrack.
+The soundtrack plays on shuffle during every match; press the F1 key at any time to skip to the next track.
 
 ##### Soundtrack
 
-TPOF includes an original soundtrack by myself and DJZ4K; choose "Shuffle Slipstream" at Game Setup to hear the full soundtrack! Tracks are also included in other playlists alongside the existing Homeworld 2 soundtrack.
+TPOF includes an original soundtrack by myself and DJZ4K.
 
 #### Hyperspace (Slipstream)
 
@@ -180,19 +178,19 @@ Strikecraft (Fighters, Corvettes) are faster, more evasive, and break formation 
 
 #### Capital Ships
 
-Capital ships now only require a Hyperspace module to build as opposed to the capital ship facility needed on motherships and shipyards from the original game.
+There are no motherships, shipyards, or capital ship facilities: your flagship builds new battlecruisers and destroyers directly, and your battlecruisers in turn build frigates, strikecraft, and utility ships in the field.
 
 ##### Destroyers
 
-Destroyers differ greatly between the two factions. The Vaygr destroyer is more of a light cruiser that can change its two primary weapon turrets when needed. The Hiigaran destroyer is fast and maneuverable with tons of coverage, but a fixed configuration.  
+Destroyers differ greatly between the two factions. The Vaygr destroyer is more of a light cruiser that can change its two primary weapon turrets when needed. The Hiigaran destroyer is fast and maneuverable with tons of coverage, and can also swap its two turrets (gatling or plasma) alongside its fixed repeater cannons.  
 
 ##### Battlecruisers
 
-Battlecruisers have become the workhorse of the capital ships. Both Hiigaran and Vaygr cruisers are faster, more maneuverable, and can now build both fighters and corvettes with the appropriate subsystems. Only the Hiigaran battlecruiser can change its two primary weapon turrets, however, the Vaygr cruiser makes up with more armor and more damage.
+Battlecruisers have become the workhorse of the capital ships. Both Hiigaran and Vaygr cruisers are faster, more maneuverable, and build fighters, corvettes, frigates, and utility ships directly. The Hiigaran battlecruiser can change its two primary weapon turrets; the Vaygr cruiser has a swappable missile battery and makes up the difference with more armor and more damage. Both carry swappable module and sensors slots (hyperspace, cloak, fire control, and more).
 
 ##### Dreadnaughts
 
-Dreadnaughts are the slow-moving heavy-hitters crucial to breaking through enemy lines. They carry six battlecruiser turrets that can be changed at any time, however, the only defense against strikecraft they have is their defense field ability. Dreadnaughts appear as star-shaped tactical overlays at a distance. Dreadnaughts cannot be rebuilt once destroyed, so ensure they are never left unescorted.  
+Dreadnaughts are the heavy-hitters crucial to breaking through enemy lines. Dreadnaughts appear as star-shaped tactical overlays at a distance. Dreadnaughts cannot be rebuilt once destroyed, so ensure they are never left unescorted. Dreadnaughts are the only units that can call in super capital ships.
 
 #### Subsystems
 
@@ -215,6 +213,14 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 > The Bentusi once guided travelers between these two Slipgates for those lost in the nebula do not return...
 
 **As-Sirat** is a symmetrical 1v1 map with plenty of resources and nowhere to hide.
+
+### Kadiir Nebula
+
+![Kadiir Nebula](./src/leveldata/multiplayer/slipstream/2p_kadiir_nebula.jpg)
+
+> I can take you through the center of the dark...
+
+**Kadiir Nebula** is a 1v1 asymmetric map based on Homeworld 2's Mission 7.
 
 ### Research Outpost
 
@@ -239,14 +245,6 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 > Formerly Hiigaran colonies, these moons now serve as a staging and resupply outpost for the Vaygr.
 
 **Assault** is a 1v2 asymmetric map based on _Thaddis Sabbah_ from the Homeworld 2 campaign. Hyperspace is disabled.
-
-### Kadiir Nebula
-
-![Kadiir Nebula](./src/leveldata/multiplayer/slipstream/2p_kadiir_nebula.jpg)
-
-> ...
-
-**Kadiir Nebula** is a 1v1 asymmetric map based on Homeworld 2's Mission 7.
 
 ### Standoff
 
@@ -292,7 +290,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ![Gulf Sector](./src/leveldata/multiplayer/slipstream/5p_gulf_sector.jpg)
 
-> ...
+> Treading water in the tropics.
 
 **Gulf Sector** is a 3v2 asymmetrical map based on Homeworld 2's Mission 4.
 
@@ -326,7 +324,7 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 > This heavily defended Vaygr outpost is the last standing within the sector.
 
-**Garrison** is a symmetrical 3v3 map with hyperspace disabled. Special ships include the Bentusi-derived Dreadnaught and Drones. 
+**Garrison** is a symmetrical 3v3 map with hyperspace disabled. A Vaygr prison station holds the center, and every player starts with a heavy guard ship — Vanaar-Jet carriers on one side, Bentusi-derived Dreadnaughts on the other. 
 
 ## Credits
 
@@ -355,21 +353,17 @@ Some Super-Capital ships can build and change weapon turrets, allowing the playe
 
 ## Screenshots
 
-![1440p_battlecruiser_attacks_no_ui.jpg](./screenshots/1440p_battlecruiser_attacks_no_ui.jpg)
-![1440p_destroyer_dodges_green_beam](./screenshots/1440p_destroyer_dodges_green_beam.jpg)
-![1440p_destroyer_does_a_flip](./screenshots/1440p_destroyer_does_a_flip.jpg)
-![1440p_destroyer_fires_everything](./screenshots/1440p_destroyer_fires_everything.jpg)
-![1080p_hgn_dreadnaught_build_options](./screenshots/1080p_hgn_dreadnaught_build_options.jpg)
-![1440p_destroyer_space_cowboy](./screenshots/1440p_destroyer_space_cowboy.jpg)
-![1080p_trigs_bones_hgn_fleet](./screenshots/1080p_trigs_bones_hgn_fleet.jpg)
-![1440p_mining_outpost_bentusi_trade_derelict](./screenshots/1440p_mining_outpost_bentusi_trade_derelict.jpg)
 ![1080p_research_outpost_hyperspace_module](./screenshots/1080p_research_outpost_hyperspace_module.jpg)
-![1440p_dreadnaught_chillin](./screenshots/1440p_dreadnaught_chillin.jpg)
-![1440p_sri_sajuuk_attacks_1](./screenshots/1440p_sri_sajuuk_attacks_1.jpg)
-![1080p_research_outpost_down_range](./screenshots/1080p_research_outpost_down_range.jpg)
-![1440p_sri_sajuuk_attacks_2](./screenshots/1440p_sri_sajuuk_attacks_2.jpg)
-![1440p_sri_dreadnaught_cannon](./screenshots/1440p_sri_dreadnaught_cannon.jpg)
-![1440p_dreadnaught_chillin_2](./screenshots/1440p_dreadnaught_chillin_2.jpg)
-![1440p_the_unbound_after_battle](./screenshots/1440p_the_unbound_after_battle.jpg)
-![1440p_vgr_battlecruiser_reposition](./screenshots/1440p_vgr_battlecruiser_reposition.jpg)
+![1440p_vgr_qwaarjetii_battle_gulf_sector_1](./screenshots/1440p_vgr_qwaarjetii_battle_gulf_sector_1.jpg)
+![1440p_assault_station](./screenshots/1440p_assault_station.jpg)
+![1440p_assault_sri_dreadnaught_main_cannon](./screenshots/1440p_assault_sri_dreadnaught_main_cannon.jpg)
+![1440p_vgr_assaultfrigate_on_gulf_sector](./screenshots/1440p_vgr_assaultfrigate_on_gulf_sector.jpg)
+![1440p_sri_sajuuk_at_shipyard](./screenshots/1440p_sri_sajuuk_at_shipyard.jpg)
+![1440p_hgn_battlecruiser_on_gulf_sector](./screenshots/1440p_hgn_battlecruiser_on_gulf_sector.jpg)
+![1440p_mining_outpost_bentusi_trade_derelict](./screenshots/1440p_mining_outpost_bentusi_trade_derelict.jpg)
+![1440p_hgn_battlecruiser_on_high_dive](./screenshots/1440p_hgn_battlecruiser_on_high_dive.jpg)
+![1440p_big_battle_on_as_sirat](./screenshots/1440p_big_battle_on_as_sirat.jpg)
 ![1440p_starjumper_derelict](./screenshots/1440p_starjumper_derelict.jpg)
+![1440p_hgn_heavycruiser_on_badlands](./screenshots/1440p_hgn_heavycruiser_on_badlands.jpg)
+![1440p_hgn_destroyer_on_as_sirat](./screenshots/1440p_hgn_destroyer_on_as_sirat.jpg)
+![1440p_vanaar_jet_on_gulf_sector](./screenshots/1440p_vanaar_jet_on_gulf_sector.jpg)

@@ -22,7 +22,11 @@ StartShipHardPointConfig(NewShipType, "Weapon Top", "Hardpoint_IonBeam1", "Weapo
 - **Mine Launcher** — deploys a mine field for area denial/ambush.
 - **Plasma Burst Turret** — high-damage burst, anti-frigate/capital.
 
+## System and Sensors Slots
+
+Capitals also carry swappable non-weapon hardpoints (same `StartShipHardPointConfig` mechanism, category `"System"`/`"Sensors"`). The Hiigaran BC, for example, has two Generic module slots (Hyperspace, Cloak Generator, Hyperspace Inhibitor, Fire Control, Manufacturing Controller `hgn_c_module_buildspeed`, Auxiliary Power Unit `Hgn_C_Module_MaxSpeed`) and one Sensors slot (Detect Hyperspace, Advanced Array, Detect Cloaked, Sensors Distortion). Starting fleets spawn capitals with these fitted (see `startingfleets/`); full catalog in `src/subsystem/CLAUDE.md`.
+
 ## Strategic Implementation
 
-Because the tech tree is simplified (see `research_tree.md`), players can build these subsystems immediately once they have a capital ship. The choice reshapes the ship's role — Ion Beam-heavy = capital killer; Gatling-heavy = anti-swarm screen; mixed = versatile all-rounder. SRI Corp units (e.g. the Dreadnaught) carry massive health and high-power systems that use this same loadout logic.
+Because the tech tree is simplified (see `research_tree.md`), players can build these subsystems immediately once they have a capital ship. The choice reshapes the ship's role — Ion Beam-heavy = capital killer; Gatling-heavy = anti-swarm screen; mixed = versatile all-rounder. (SRI Corp scenario units like the Dreadnaught instead carry massive health and fixed high-power weapons — no swappable slots.)
 </content>

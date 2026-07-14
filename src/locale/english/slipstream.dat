@@ -30,8 +30,8 @@ rangestart 8000 8999
 // --- MP game-rules ---
 8300	Slipstream
 8301	Game Options for Slipstream: The Price of Freedom
-8302    Enhance CPU Players
-8303    ENABLE OR DISABLE AI ENHANCEMENTS FOR CPU PLAYERS
+8302	Enhance CPU Players
+8303	ENABLE OR DISABLE AI ENHANCEMENTS FOR CPU PLAYERS
 
 // --- Hiigaran research ---
 8400	Instant Tech!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -40,11 +40,11 @@ rangestart 8000 8999
 8500	Example
 
 // --- General Subsystems ---
-8600    Sensors Distortion Generator
-8601    Scrambles enemy sensors
-8602    Manufacturing Controller
-8603    Improves Manufacturing Speed
-8604    Auxiliary Power Unit
-8605    Increases Ship Speed
+8600	Sensors Distortion Generator
+8601	Scrambles enemy sensors
+8602	Manufacturing Controller
+8603	Improves Manufacturing Speed
+8604	Auxiliary Power Unit
+8605	Increases Ship Speed
 
 rangeend

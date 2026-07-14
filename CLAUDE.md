@@ -41,24 +41,29 @@ src/
   config.txt                  # Workshop metadata and BigFilename (TPOF.big)
   ship/                       # Ship definitions (.ship + .hod + .events)
   subsystem/                  # Subsystem definitions (.subs + .hod + .events)
+  weapon/                     # Weapon definitions (.wepn)
   scripts/
-    building and research/{hiigaran,vaygr}/build.lua  # Buildable unit/subsystem lists
+    building and research/{hiigaran,vaygr}/{build,research}.lua  # Buildable lists + upgrade research
     startingfleets/{hiigaran00,vaygr00}.lua           # Starting PersistantData (fleet + research)
-    scar/restrict.lua         # MPRestrict() — disables vanilla units/research per-player
-    music.lua                 # Music shuffle system; Play() entry point
+    scar/restrict.lua         # MPRestrict() — currently a no-op stub (see Restriction System)
+    director/                 # AI Tactical Director (docs/ai_director.md)
+    music.lua                 # Fixed shuffle playlist; ShufflePlaylist() entry point
+    tuning.lua                # Engine-global tuning constants (shadows vanilla scripts/tuning.lua)
     race.lua                  # Race table (Hiigaran=1, Vaygr=2, Keeper=3, Bentusi=4)
     teamcolour.lua            # Team color definitions
     attack/                   # Attack scripts (flyby, strafe, dogfight, etc.)
     weaponfire/               # Weapon fire scripts (.wf)
+  ai/                         # Per-player CPU brain + classdef.lua (docs/ai_brain.md)
   leveldata/multiplayer/
     deathmatch.lua            # "Slipstream" game mode entry point
     slipstream/               # All multiplayer maps (.level + thumbnails + previews)
   locale/
     localedat.lua             # Dictionary list (vanilla 8 + slipstream.dat)
     english/slipstream.dat    # TPOF display strings (IDs 8000-8999)
-  ai/classdef.lua             # AI ship class definitions
+  ui/                         # Front-end screens (newui/ — displayed version lives in newui/main/new/newmainmenu.lua — plus ati/, sensorsmanager/)
+  sound/  soundscripts/       # Music + SFX assets; soundconfig.lua
   art/fx/                     # Visual effects (Lua FX scripts + textures)
-  background/  shaders/  badges/  effect/  missile/   # Skybox, GPU shaders, badges, trails, missiles
+  background/  shaders/  badges/  effect/  missile/  pebble/   # Skybox, GPU shaders, badges, trails, missiles, particles
 docs/                         # See the doc index in "Sub-directory CLAUDE.md Files" below + docs/*.md
 artwork/  screenshots/  legacy/   # Promotional art, screenshots, original 2008 PDFs
 ```
@@ -71,7 +76,7 @@ Ship-type infixes: `_bc_` Battlecruiser · `_dd_` Destroyer · `_ff_` Frigate su
 
 ## Game Mode Entry Point
 
-`src/leveldata/multiplayer/deathmatch.lua` is the game rules file (`GameRulesName = "$8300"`). On init it: (1) `MPRestrict()` to disable vanilla units/research; (2) `Play()` for music; (3) registers `findSlipgatesAndStartEvent` (slipgate FX), `CheckTeamAnyShipsLeftRule` (kill a player whose team has no ships), and `MainRule` (ends the game when all enemies are dead). All maps in `slipstream/` use this mode.
+`src/leveldata/multiplayer/deathmatch.lua` is the game rules file (`GameRulesName = "$8300"`). On init it: (1) `MPRestrict()` (currently a no-op stub); (2) `ShufflePlaylist()` for music; (3) registers `findSlipgatesAndStartEvent` (slipgate FX), `CheckTeamAnyShipsLeftRule` (kill a player whose team has no ships), and `MainRule` (ends the game when all enemies are dead); (4) if the "Enhance CPU Players" setup option is on (`name = "director"`, default off), starts the AI Tactical Director (`Director_Init()` + `Director_Tick` interval rule — see `docs/ai_director.md`). All maps in `slipstream/` use this mode.
 
 ## Ship Definitions (`.ship`)
 
@@ -79,15 +84,15 @@ A Lua script calling HW2 built-ins. Details and full roster: `src/ship/CLAUDE.md
 
 ```lua
 NewShipType = StartShipConfig()
-NewShipType.maxhealth = 240000         -- TPOF ships far more durable than vanilla
-NewShipType.mainEngineMaxSpeed = 110   -- and far faster (vanilla BC was 69)
+NewShipType.maxhealth = 250000         -- TPOF ships far more durable than vanilla
+NewShipType.mainEngineMaxSpeed = 195   -- and far faster (vanilla BC was 69)
 StartShipWeaponConfig(NewShipType, "WeaponScript", "Hardpoint", "Hardpoint")  -- fixed weapons
 StartShipHardPointConfig(NewShipType, "Slot Label", "Hardpoint", "Weapon|System",
     "Generic|Innate", "Destroyable|Damageable|Indestructible", "Default", "Opt1", ...)  -- swappable loadout slots
 addAbility(NewShipType, "HyperSpaceCommand", ...)
 ```
 
-Balance facts vs. vanilla: Hiigaran BC `mainEngineMaxSpeed=110` (vanilla 69), `maxhealth=240000`. SRI Dreadnaught `maxhealth=500000`, `unitCapsNumber=1` (one per player), cannot be rebuilt once destroyed.
+Balance facts vs. vanilla: Hiigaran BC `mainEngineMaxSpeed=195` (vanilla 69), `maxhealth=250000`. SRI Dreadnaught `maxhealth=550000`, `unitCapsNumber=1` (one per player), cannot be rebuilt once destroyed. Race flagships (`hgn_heavycruiser`, `vgr_qwaarjetii`, `vgr_vanaarjet`) share `UnitCapsFamily="Dreadnaught"`/`BuildFamily="Flagship_*"` and are starting-fleet/scenario-only — no production module builds the `Flagship_*` families.
 
 ## Subsystem Definitions (`.subs`)
 
@@ -103,16 +108,11 @@ StartSubSystemWeaponConfig(NewSubSystemType, "WeaponScript", "Hardpoint", "Hardp
 
 ## Starting Fleets (`src/scripts/startingfleets/`)
 
-Each file defines a `PersistantData` table with `Squadrons` (`{type, subsystems, shiphold, name, number}` — ships spawned at start, loadouts set via the `subsystems` array) and `Research` (`{name, progress=1}` — pre-granted tech). TPOF pre-grants only `RepairAbility`; the "no tech race" feel comes mainly from *disabling* research in `restrict.lua` while shipping needed ships/tech in the starting fleet.
+Each file defines a `PersistantData` table with `Squadrons` (`{type, subsystems, shiphold, name, size, number}` — ships spawned at start, loadouts set via the `subsystems` array; `size` = ships per squadron, `number` = squadron count) and `Research` (`{name, progress=1}` — pre-granted tech). TPOF pre-grants only `RepairAbility`; the "no tech race" feel comes from the trimmed `research.lua` data (only flat, always-available HP/speed upgrades — see `docs/research_tree.md`) while starting fleets ship pre-built, pre-fitted forces including each race's flagship.
 
 ## Restriction System (`src/scripts/scar/restrict.lua`)
 
-`MPRestrict()` loops players and calls `RestrictOptions(playerid)`, using `Player_RestrictBuildOption(playerid, "Unit")` (hide a ship/subsystem) and `Player_RestrictResearchOption(playerid, "Tech")` (hide research).
-
-- **Restricted Hiigaran units**: `Hgn_Scout`, `Hgn_AttackBomber`, `Hgn_MarineFrigate`, `Hgn_DefenseFieldFrigate`, `Hgn_MinelayerCorvette`, `Hgn_ECMProbe`, `Hgn_ProximitySensor`, `Hgn_Probe`, `Hgn_Shipyard`, `Hgn_Carrier`, plus research/production modules (`Hgn_C_Module_Research`, `Hgn_MS_Module_Research`, `Hgn_C_Production_*`, `Hgn_MS_Production_CorvetteMover`).
-- **Restricted Vaygr units**: `Vgr_Scout`, `Vgr_MinelayerCorvette`, `Vgr_CommandCorvette`, `vgr_infiltratorfrigate`, `Vgr_HyperSpace_Platform`, `Vgr_Probe`, `Vgr_Probe_Ecm`, `Vgr_Probe_Prox`, `Vgr_ShipYard`, `Vgr_Carrier`, `Vgr_PlanetKillerMissile`, plus research modules (`Vgr_C_Module_Research`, `Vgr_MS_Module_Research`).
-
-Research restrictions are extensive on both sides — most vanilla research is disabled (see `restrict.lua` for the full list).
+**Currently a no-op**: `MPRestrict()` loops players and calls `RestrictOptions(playerid)`, whose body is entirely commented out. Vanilla content is excluded data-side instead — the custom `build.lua`/`research.lua` files define only TPOF content, so there is nothing to hide at runtime. The hook stays wired into `deathmatch.lua`'s `OnInit()` so per-player restrictions (`Player_RestrictBuildOption`/`Player_RestrictResearchOption`) can be reintroduced without rewiring.
 
 ## Build Lists (`src/scripts/building and research/*/build.lua`)
 
@@ -124,11 +124,11 @@ Lua scripts defining `maxPlayers`, per-player `player[]` (start pos, resources, 
 
 ## Music System
 
-`src/scripts/music.lua` implements shuffle playlists. `Play(settingString)` dispatches to `Shuffle*()` functions that load a playlist from `data:soundscripts/playlists/` and register `RandomMusicRule`. **F1** skips to the next track.
+`src/scripts/music.lua` defines a fixed TPOF `PlayList` (4 tracks under `sound\music\slipstream\`) and shuffles it without repeats. `ShufflePlaylist()` (called from `OnInit()`) registers `RandomMusicRule` and binds **F1** to skip to the next track. There is no in-game music menu option.
 
 ## Display Strings (Locale)
 
-Player-facing text is referenced by ID as `"$<ID>"`, not hardcoded — resolved against the TPOF dictionary `src/locale/english/slipstream.dat` (registered in `localedat.lua`). **IDs must be 8000–8999**; outside that range the engine renders the raw literal. Packed through the normal `Data` TOC by `build-tpof.ps1` (no build-script changes). Use `$<ID>` for `displayedName`/`sobDescription` (`.ship`/`.subs`), `DisplayedName`/`Description` (`build.lua`/`research.lua`), and game-rules/music strings in `deathmatch.lua`. Full reference: `docs/locale_system.md`.
+Player-facing text is referenced by ID as `"$<ID>"`, not hardcoded — resolved against the TPOF dictionary `src/locale/english/slipstream.dat` (registered in `localedat.lua`). **IDs must be 8000–8999**; outside that range the engine renders the raw literal. Packed through the normal `Data` TOC by `build-tpof.ps1` (no build-script changes). Use `$<ID>` for `displayedName`/`sobDescription` (`.ship`/`.subs`), `DisplayedName`/`Description` (`build.lua`/`research.lua`), and the game-rules/setup-option strings in `deathmatch.lua`. Rows are `<ID><TAB><text>` — a real tab; space-separated rows silently render as raw `$<ID>` in-game. Full reference: `docs/locale_system.md`.
 
 ## Playable Races
 
@@ -146,6 +146,7 @@ PowerShell 7+ scripts for debugging/validating the mod:
 | `ship-stats.ps1` | Extract ship stats from all `.ship` files; can diff against a git ref |
 | `find-empty-weapon-effects.ps1` | Find weapon configs whose 4th arg is `""` (no fire animation) |
 | `export-weapon-events.ps1` / `import-weapon-events.ps1` | Export weapon configs joined to fire-animation events as CSV / rewrite `.events` from an edited CSV |
+| `weapon-dps.ps1` | Estimate sustained DPS for every `.wepn` (damage / arg-14 interval); flags burst and beam weapons whose real DPS the naive formula misstates |
 | `build-tpof.ps1` | Pack `src/` into `TPOF.big` headlessly via RDN `Archive.exe`; `-Install` copies to the HW2 `Data/` dir |
 | `link-src.ps1` | Junction `src/` into the HW2 install as `DataTPOF/` (iterative testing without repacking) |
 | `link-bin.ps1` / `link-rdn.ps1` | Link the HW2 `Bin/` and RDN install into `refs/` for log/reference access |
@@ -164,10 +165,10 @@ For iteration without repacking, `tools\link-src.ps1` exposes `src/` as `DataTPO
 ## Key Balance Philosophy
 
 - Ships are **significantly faster and more durable** than vanilla.
-- **No tech race** — vanilla research is disabled; starting fleets ship with needed tech/ships.
-- **Loadout decisions** happen in the build menu (hardpoint weapon swaps), not research.
-- **Dreadnaughts** are irreplaceable (one per player, no rebuild) — losing one is catastrophic.
-- Strikecraft are fast and evasive and break formation in combat; platforms are mobile and hyperspace-deployable but slow and lightly armored.
+- **No tech race** — the vanilla tree is replaced by a handful of flat, always-available HP/speed upgrades (no research modules); starting fleets ship with needed ships pre-fitted.
+- **Loadout decisions** happen in the build menu (hardpoint weapon/module/sensor swaps), not research.
+- **Flagships and dreadnaughts** are irreplaceable (not buildable, no rebuild) — losing one is catastrophic.
+- Strikecraft are fast and evasive and break formation in combat.
 
 ## Sub-directory CLAUDE.md Files
 
@@ -181,6 +182,6 @@ Each major source subdirectory has its own CLAUDE.md — check it before working
 | `src/leveldata/CLAUDE.md` | `.level` structure, full map roster, adding a map |
 | `src/locale/CLAUDE.md` | `slipstream.dat` format, ID range, adding a display string |
 
-Other docs: `docs/loadout_system.md`, `research_tree.md`, `locale_system.md`, `events_system.md`, `weapon_definitions.md` (`.wepn` mechanics), `weaponfire_scripts.md` (`.wf` FX), `crash_investigation.md`, `relic_developers_network.md` (RDN toolkit inventory), `rdn_modding_reference.md` (RDN API/format reference), `tools_backlog.md`.
+Other docs: `docs/loadout_system.md`, `research_tree.md`, `locale_system.md`, `events_system.md`, `weapon_definitions.md` (`.wepn` mechanics), `weaponfire_scripts.md` (`.wf` FX), `ai_brain.md` (per-player CPU brain), `ai_director.md` (AI Tactical Director), `crash_investigation.md`, `relic_developers_network.md` (RDN toolkit inventory), `rdn_modding_reference.md` (RDN API/format reference), `todo.md`.
 </content>
 </invoke>

@@ -23,8 +23,8 @@ player[1] = {
 }
 
 function DetermChunk()
-    addPoint("StartPos0", { 23084, 0, -25459 }, { 0, -90, 0 })
-    addPoint("StartPos1", { -23959, 0, 26466 }, { 0, 90, 0 })
+    addPoint("StartPos0", { 23084, 0, -25459 }, { 0, -45, 0 })
+    addPoint("StartPos1", { -23959, 0, 26466 }, { 0, 45, 0 })
 
     addAsteroid("Asteroid_3", { 37093, 0, -38710 }, 200, 0, 0, 0, 0)
     addAsteroid("Asteroid_3", { -37090, 0, 38714 }, 200, 0, 0, 0, 0)

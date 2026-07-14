@@ -216,6 +216,7 @@ $gameArgs = @(
     '-overridebigfile',
     '-hardwarecursor',
     '-nomovies',
+    '-luatrace',
     '-w', $Width,
     '-h', $Height
 )

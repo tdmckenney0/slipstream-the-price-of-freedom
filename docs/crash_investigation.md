@@ -77,7 +77,3 @@ The "writer in the engine binary" pass is the key move — engine-owned fields a
 - **Mid-game crash at `0x0047fe80`** (`mov edi, [ecx+0xAC]` with
   `ecx = 0xfeeefeee` — use-after-free) surfaces ~30+ minutes into
   gameplay. Different code path, different bug. Not yet investigated.
-- **Validator**: the "`CanBuildShips` without `ShipHold`" rule is a good
-  candidate for the planned `tools\validate-mod.ps1` (see
-  [`tools_backlog.md`](tools_backlog.md)) so this class of issue fails
-  loudly at author time rather than silently at sim tick.

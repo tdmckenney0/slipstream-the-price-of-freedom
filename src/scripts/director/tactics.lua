@@ -59,7 +59,7 @@ g_dirTargetTypes = {
 -- strand the strike group). meg_asteroid_inhibitor is the stock in-world blocker;
 -- add more types here as you tune (other inhibitor variants, per-map markers, etc).
 g_dirInhibitorTypes = {
-    "meg_asteroid_inhibitor",
+    "meg_asteroid_inhibitor", "sri_foundry",
 }
 
 -- Union all of playerIndex's ships whose type is in typeList into outName.

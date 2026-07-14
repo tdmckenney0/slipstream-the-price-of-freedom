@@ -1,31 +1,31 @@
 # Research Tree and Tech Simplification
 
-TPOF heavily simplifies the vanilla HW2 research tree to encourage immediate tactical play over a slow tech race. This is done almost entirely through **restriction** — most vanilla research is disabled via `MPRestrict()` in [`src/scripts/scar/restrict.lua`](../src/scripts/scar/restrict.lua), and starting fleets ship with the units a player would otherwise research.
+TPOF replaces the vanilla HW2 research tree with small custom `research.lua` files per race. The vanilla tech race is gone, but research is **not zero**: each race keeps a compact set of always-available stat upgrades.
 
-The source of truth is two files: `restrict.lua` and `startingfleets/<race>00.lua`. This document is a summary.
+The source of truth is [`src/scripts/building and research/{race}/research.lua`](../src/scripts/building%20and%20research/) plus [`startingfleets/<race>00.lua`](../src/scripts/startingfleets/). This document is a summary.
 
-## 1. Restricted vanilla research
+> **Historical note:** earlier TPOF versions kept the vanilla research/build data and disabled most of it at runtime via `Player_RestrictResearchOption`/`Player_RestrictBuildOption` in `restrict.lua`. That mechanism is retired — `MPRestrict()` is now an empty stub, and the custom `build.lua`/`research.lua` files simply define only TPOF content.
 
-`RestrictOptions(playerid)` calls `Player_RestrictResearchOption(...)` for a long list on both sides:
+## 1. What research exists now
 
-- **Hiigaran**: `DestroyerTech`, `BattlecruiserIonWeapons`, `PlatformIonWeapons`, elite corvette/bomber weapon upgrades, all sensor/mothership/shipyard/carrier speed-build-health upgrade chains, hyperspace cost upgrades, scout ping/EMP, defense-field shield, ECM/prox probes, torpedo/bomb improvements, Keeper/AttackDroid SPGAME upgrades, and more.
-- **Vaygr**: `CorvetteTech`, `FrigateTech`, `LanceBeams`, `PlasmaBombs`, `CorvetteLaser`, `PlatformHeavyMissiles`, `FrigateAssault`, `BattlecruiserIonWeapons`, `DestroyerGuns`, `HyperspaceGateTech`, capture/radiation-immunity hacks, carrier/mothership/shipyard/frigate/corvette upgrade chains, corvette-command, frigate-infiltration, probe variants, and more.
+Every entry is a **two-tier `MAXHEALTH` or `MAXSPEED` upgrade**. None has a subsystem prerequisite (`RequiredShipSubSystems` is empty) — no research module exists or is needed, so upgrades are researchable from match start. Tier 2 requires tier 1 (`RequiredResearch` chains); display strings reuse vanilla `$7xxx` locale IDs.
 
-See `restrict.lua` for the full authoritative list.
+- **Hiigaran** — per ship type: Interceptor (speed only); AssaultCorvette, PulsarCorvette, TorpedoFrigate, IonCannonFrigate, AssaultFrigate, Battlecruiser, Destroyer (health + speed); ResourceCollector, ResourceController (health only).
+- **Vaygr** — per class family (`TargetType` = family, so one upgrade covers every ship of that class): SuperCap/Capital (health + speed), Fighter (speed), Corvette (health + speed), Frigate (health + speed), Utility (health).
 
-## 2. Restricted vanilla units
+The AI researches these upgrades too — `src/ai/cpuresearch.lua`; see `docs/ai_brain.md`.
 
-The same file hides vanilla units that would clutter the build menu: carriers, shipyards, scouts, attack bombers, minelayer corvettes, research/mover-production modules, marine/defense-field/infiltrator frigates, command corvettes, hyperspace platforms, probe variants, and the Vaygr planet-killer missile. Summary list: [main CLAUDE.md](../CLAUDE.md#restriction-system-srcscriptsscarrestrictlua).
+## 2. Pre-granted research
 
-## 3. Pre-granted research
+Both [`hiigaran00.lua`](../src/scripts/startingfleets/hiigaran00.lua) and [`vaygr00.lua`](../src/scripts/startingfleets/vaygr00.lua) pre-grant exactly one item: `RepairAbility`.
 
-Both [`hiigaran00.lua`](../src/scripts/startingfleets/hiigaran00.lua) and [`vaygr00.lua`](../src/scripts/startingfleets/vaygr00.lua) pre-grant exactly one item: `RepairAbility`. Everything else either needs no research (the vanilla gate was removed by restriction) or comes from the starting fleet directly.
+## 3. Starting fleet contents
 
-## 4. Starting fleet contents
+Each fleet ships as an immediately usable force, flagship pre-fitted:
 
-Since restriction (not pre-granting) is the mechanism, each fleet ships with multiple squadrons of each class for an immediately usable force. The Hiigaran start, for example, includes a flagship (`hgn_heavybattlecruiser`), two `hgn_battlecruiser`, two `hgn_destroyer`, three frigate types (4 each), interceptors, two corvette types, plus resource collectors and a controller.
+- **Hiigaran**: 1 `hgn_heavycruiser` flagship (all 6 weapon hardpoints fitted), 2 `hgn_battlecruiser` (distinct module/sensor/weapon loadouts), 2 `hgn_destroyer`, 6 each of assault/torpedo/ion-cannon frigates, 25 interceptors (5 squadrons of 5), 12 assault + 12 pulsar corvettes (4 squadrons of 3), 6 collectors, 3 controllers.
+- **Vaygr**: 1 `vgr_qwaarjetii` flagship (fully fitted), 2 `vgr_battlecruiser`, 2 `vgr_destroyer`, 6 assault + 6 heavy-missile frigates, 35 interceptors (5×7), 30 bombers (5×6), 25 lance fighters (5×5), 16 missile + 16 laser corvettes (4×4), 6 collectors, 3 controllers.
 
 ## Gameplay Impact
 
-With vanilla research paths gone, there's no research menu to navigate for most of a match. Focus shifts to **loadout choices** in the build menu (see [`loadout_system.md`](loadout_system.md)), **tactical movement/formations**, and **resource management** and protecting the irreplaceable flagship.
-</content>
+There's no tech tree to climb — just cheap, flat stat upgrades that are worth queueing when RUs allow. Focus shifts to **loadout choices** in the build menu (see [`loadout_system.md`](loadout_system.md)), **tactical movement/formations**, **resource management**, and protecting the irreplaceable flagship.

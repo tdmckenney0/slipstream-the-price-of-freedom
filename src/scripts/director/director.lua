@@ -20,7 +20,7 @@ g_directorDebug = 1
 
 function Director_Trace(msg)
     if g_directorDebug == 1 and Subtitle_Message then
-        Subtitle_Message("DIR: " .. msg, 4)
+        print("Director: " .. msg)
     end
 end
 
