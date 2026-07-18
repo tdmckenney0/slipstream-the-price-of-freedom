@@ -302,7 +302,7 @@ function DetermChunk()
 end
 
 function NonDetermChunk()
-    setWorldBoundsInner({ 0, 0, 0 }, { 55000, 30000, 55000 })
+    setWorldBoundsInner({ 0, 0, 0 }, { 80000, 30000, 80000 })
     fogSetActive(1)
     fogSetStart(10)
     fogSetEnd(20000)

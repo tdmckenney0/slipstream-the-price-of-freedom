@@ -18,7 +18,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 1,
-            number = 6,
+            number = 4,
         },
         {
             type = "vgr_resourcecontroller",
@@ -26,7 +26,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 1,
-            number = 3,
+            number = 1,
         },
         -- Super-Caps
         {
@@ -55,31 +55,6 @@ PersistantData = {
             number = 1,
         },
         {
-            type = "vgr_battlecruiser",
-            subsystems = {
-                {
-                    index = 0,
-                    name = "Vgr_C_Module_HyperspaceInhibitor",
-                },
-                {
-                    index = 0,
-                    name = "Vgr_C_Module_FireControl"
-                },
-                {
-                    index = 0,
-                    name = "vgr_c_sensors_detecthyperspace"
-                },
-                {
-                    index = 0,
-                    name = "vgr_bc_swarmmissile"
-                }
-            },
-            shiphold = {},
-            name = "",
-            size = 1,
-            number = 1,
-        },
-        {
             type = "vgr_destroyer",
             subsystems = {
                 {
@@ -94,7 +69,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 1,
-            number = 2,
+            number = 1,
         },
         -- Frigates
         {
@@ -103,7 +78,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 1,
-            number = 6,
+            number = 3,
         },
         {
             type = "vgr_heavymissilefrigate",
@@ -111,7 +86,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 1,
-            number = 6,
+            number = 3,
         },
         -- Fighters
         {
@@ -120,7 +95,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 7,
-            number = 5,
+            number = 3,
         },
         {
             type = "vgr_bomber",
@@ -128,7 +103,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 6,
-            number = 5,
+            number = 2,
         },
         {
             type = "vgr_lancefighter",
@@ -136,7 +111,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 5,
-            number = 5,
+            number = 2,
         },
         -- Corvettes
         {
@@ -145,7 +120,7 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 4,
-            number = 4,
+            number = 2,
         },
         {
             type = "vgr_lasercorvette",
@@ -153,13 +128,8 @@ PersistantData = {
             shiphold = {},
             name = "",
             size = 4,
-            number = 4,
+            number = 2,
         },
     },
-    Research = {
-        {
-            name = "RepairAbility",
-            progress = 1,
-        },
-    },
+    Research = {},
 }
