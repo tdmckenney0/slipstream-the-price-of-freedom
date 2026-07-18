@@ -187,19 +187,24 @@ function Tactics_Knobs()
     end
     local k = {
         minStrikeShips = 2,    -- capitals required before a strike
-        jumpCooldown   = 25,   -- seconds between strikes (from regroup end)
+        jumpCooldown   = 60,   -- seconds between strikes (from regroup end)
         hyperMaxWait   = 12,   -- watchdog: max seconds to wait for in-hyperspace
-        engageMaxTime  = 25,   -- seconds before breaking off regardless
+        engageMaxTime  = 240,   -- seconds before breaking off regardless
         breakHealth    = 0.45, -- group HealthPercentage that triggers hit-n-run
-        regroupTime    = 15,   -- seconds parked home before re-forming
-        exitProximity  = 2000, -- distance to exit hyperspace from the anchor
+        regroupTime    = 120,   -- seconds parked home before re-forming
+        exitProximity  = 8000, -- distance to exit hyperspace from the anchor
         reissueAttack  = 4,    -- seconds between AttackPlayer re-issues
     }
     if lod == 0 then            -- Easy
-        k.minStrikeShips = 3; k.jumpCooldown = 70; k.engageMaxTime = 20
-        k.breakHealth = 0.60; k.regroupTime = 35
+        k.minStrikeShips = 3; -- capitals required before a strike
+        k.jumpCooldown = 180; -- seconds between strikes (from regroup end)
+        k.engageMaxTime = 120; -- seconds before breaking off regardless
+        k.breakHealth = 0.60; -- group HealthPercentage that triggers hit-n-run
+        k.regroupTime = 240; -- seconds parked home before re-forming
     elseif lod == 1 then        -- Medium
-        k.jumpCooldown = 45; k.breakHealth = 0.50; k.regroupTime = 25
+        k.jumpCooldown = 120; -- seconds between strikes (from regroup end)
+        k.breakHealth = 0.50; -- group HealthPercentage that triggers hit-n-run
+        k.regroupTime = 180; -- seconds parked home before re-forming
     end
     return k
 end
