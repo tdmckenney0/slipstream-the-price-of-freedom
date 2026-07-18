@@ -70,6 +70,41 @@ If you're using the Steam version of Homeworld Remastered, it is recommended to 
 11. Move the shortcut to the desktop, or wherever you'd like to place it.
 12. Double click the shortcut to launch the mod.
 
+## How to Play
+
+New to _The Price of Freedom_? This walkthrough covers your first match. There's no tech tree to climb and no mothership to babysit. You start with a battle-ready fleet, and matches are decided by how you fit, position, and fight it.
+
+### Setting Up a Match
+
+From the main menu, choose a multiplayer mode (LAN, Direct Connection) or a skirmish against the CPU, then pick the **Slipstream** game type and any map. Choose Hiigaran or Vaygr (or Random) for each player, then adjust the game options to taste:
+
+- **Resources**: scales resource abundance from 1x to 3x.
+- **Unit Caps**: Small, Normal, or Large maximum fleet sizes.
+- **Lock Teams**: alliances are fluid in the Slipstream timeline; lock them for a fixed team game.
+- **Enhance CPU Players**: enables the AI Tactical Director, which coordinates CPU fleets into hyperspace strike groups. Off by default; turn it on for a tougher fight.
+
+### Your Starting Fleet
+
+Every player begins with a full battle group: your **flagship**, a battlecruiser, a destroyer, several squadrons of frigates, fighters, and corvettes, plus resource collectors and a resource controller. Capital ships arrive pre-fitted with weapons and modules, so you can fight from the first minute.
+
+Your flagship is the heart of your fleet, and it can never be replaced. Neither can dreadnaughts. Escort them accordingly.
+
+### Building and Loadouts
+
+Production happens in the field. Your flagship builds new battlecruisers and destroyers; your battlecruisers build frigates, strikecraft, and utility ships. There are no research modules — the handful of available upgrades (hull and speed) can be researched at any time.
+
+The real decisions are **loadouts**: select a capital ship and open its build menu to swap weapon turrets (gatling, ion beam, plasma burst, mine launcher), modules (hyperspace, cloak, fire control, and more), and sensors. An ion-heavy battlecruiser is a capital killer; a gatling-heavy one is an anti-strikecraft screen. Refit between engagements to counter what your enemy is flying.
+
+### Combat
+
+Ships in TPOF are fast and durable, and fights are decided by positioning and matchups rather than attrition. Strikecraft are evasive and break formation when engaged; use them to harass and screen. Capital ships have fast, free Slipstream drives (on maps where hyperspace is enabled), and strikecraft near a ship fitted with a Hyperspace Module can jump with it — letting you deliver an entire strike force on top of a target.
+
+Keep your collectors harvesting and expect to lose ships. Everything except your flagship and dreadnaughts is replaceable.
+
+### Winning
+
+Destroy every enemy ship. A player whose team has nothing left is eliminated, and the match ends when only one team remains. There's no points, no timer, and the last fleet flying wins.
+
 ## Performance
 
 Homeworld 2 Classic was designed to run on machines from 2003, and has graphical defaults that makes sense for that time period. Thankfully, there are more than a handful of tricks to make Homeworld 2 Classic look and perform better on modern machines.
