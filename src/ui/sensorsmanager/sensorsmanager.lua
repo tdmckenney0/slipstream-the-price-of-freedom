@@ -42,72 +42,45 @@ horizonNumberAspect = 1.6
 worldGraphics =
 {
     {
-        scaleParam = SPI_WorldPlaneScale,
+        scaleParam = SPI_HorizonLineScale,
         colourParam = SPI_WorldLineColour,
         mesh =
         {
             colour =
-            { 1, 1, 1, 0.5, },
+            { 1, 1, 1, 1, },
             lineWeight = 1,
             LODs =
-            { 1, "UI\\SensorsManager\\Meshes\\WorldPlaneWireframe.hod", },
+            { 1, "UI\\SensorsManager\\Meshes\\HorizonAbove.hod", },
         },
         placement3D =
         {
             position =
             { 0, 0, 0, },
             scale =
-            { 1, 1, 1, },
-            visibility =
-            { 0, },
-            invisibility =
-            { "SVF_FlashOff", },
-        },
-    },
-    {
-        scaleParam = SPI_WorldPlaneScale,
-        colourParam = SPI_WorldPlaneColour,
-        mesh =
-        {
-            colour =
-            { 0.64, 0.46, 0, 0.2, },
-            lineWeight = 1,
-            LODs =
-            { 1, "UI\\SensorsManager\\Meshes\\DiskAbove.hod", },
-        },
-        placement3D =
-        {
-            position =
-            { 0, 0, 0, },
-            scale =
-            { 1, 1, 1, },
+            { 2, 2, 2, },
             visibility =
             { "SVF_Above", },
-            invisibility =
-            { "SVF_FlashOff", },
         },
     },
     {
-        scaleParam = SPI_WorldPlaneScale,
-        colourParam = SPI_WorldPlaneColour,
+        scaleParam = SPI_HorizonLineScale,
+        colourParam = SPI_WorldLineColour,
         mesh =
         {
             colour =
-            { 0.64, 0.46, 0, 0.2, },
+            { 1, 1, 1, 1, },
             lineWeight = 1,
             LODs =
-            { 1, "UI\\SensorsManager\\Meshes\\DiskBelow.hod", },
+            { 1, "UI\\SensorsManager\\Meshes\\HorizonBelow.hod", },
         },
         placement3D =
         {
             position =
             { 0, 0, 0, },
             scale =
-            { 1, 1, 1, },
+            { 2, 2, 2, },
             visibility =
             { "SVF_Below", },
-            invisibility =
-            { "SVF_FlashOff", },
         },
     },
 }
