@@ -35,7 +35,7 @@ SPI_HorizonLineScale = 2
 SPI_HorizonOrigin = 3
 SPI_WorldPlaneColour = 4
 SPI_WorldLineColour = 5
-horizonRadius = 120000
+horizonRadius = 400000
 horizonHeight = 0.07
 horizonNumberScale = 0.07
 horizonNumberAspect = 1.6
@@ -57,7 +57,7 @@ worldGraphics =
             position =
             { 0, 0, 0, },
             scale =
-            { 2, 2, 2, },
+            { 1, 1, 1, },
             visibility =
             { "SVF_Above", },
         },
@@ -78,7 +78,7 @@ worldGraphics =
             position =
             { 0, 0, 0, },
             scale =
-            { 2, 2, 2, },
+            { 1, 1, 1, },
             visibility =
             { "SVF_Below", },
         },
