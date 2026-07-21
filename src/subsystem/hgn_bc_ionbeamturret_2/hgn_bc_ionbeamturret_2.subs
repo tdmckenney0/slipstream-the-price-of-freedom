@@ -25,8 +25,8 @@ NewSubSystemType.typeString="BCIonBeamTurret2"
 NewSubSystemType.collateralDamage=100
 NewSubSystemType.inactiveTimeAfterDamage=90
 NewSubSystemType.activateHealthPercentage=0.1
-NewSubSystemType.costToBuild=500
-NewSubSystemType.timeToBuild=4
+NewSubSystemType.costToBuild=900
+NewSubSystemType.timeToBuild=6
 NewSubSystemType.isResearch=0
 NewSubSystemType.visible=1
 LoadHODFile(NewSubSystemType,1);

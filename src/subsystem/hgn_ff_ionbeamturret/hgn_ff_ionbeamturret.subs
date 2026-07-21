@@ -24,8 +24,8 @@ NewSubSystemType.typeString = "FrigateIonBeamTurret"
 NewSubSystemType.collateralDamage = 1000
 NewSubSystemType.inactiveTimeAfterDamage = 90
 NewSubSystemType.activateHealthPercentage = 0.1
-NewSubSystemType.costToBuild = 500
-NewSubSystemType.timeToBuild = 5
+NewSubSystemType.costToBuild = 900
+NewSubSystemType.timeToBuild = 6
 NewSubSystemType.isResearch = 0
 NewSubSystemType.visible = 1
 LoadHODFile(NewSubSystemType,1)

@@ -24,8 +24,8 @@ NewSubSystemType.typeString = "BCSunShatterMissile"
 NewSubSystemType.collateralDamage = 100
 NewSubSystemType.inactiveTimeAfterDamage = 80
 NewSubSystemType.activateHealthPercentage = 0.1
-NewSubSystemType.costToBuild = 2000
-NewSubSystemType.timeToBuild = 1
+NewSubSystemType.costToBuild = 1000
+NewSubSystemType.timeToBuild = 7
 NewSubSystemType.isResearch = 0
 NewSubSystemType.visible = 1
 LoadHODFile(NewSubSystemType, 1)
