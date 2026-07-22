@@ -24,8 +24,8 @@ NewSubSystemType.typeString="BCMinelauncher1"
 NewSubSystemType.collateralDamage=100
 NewSubSystemType.inactiveTimeAfterDamage=90
 NewSubSystemType.activateHealthPercentage=0.1
-NewSubSystemType.costToBuild=500
-NewSubSystemType.timeToBuild=12
+NewSubSystemType.costToBuild=300
+NewSubSystemType.timeToBuild=3
 NewSubSystemType.isResearch=0
 NewSubSystemType.visible=1
 LoadHODFile(NewSubSystemType,1);

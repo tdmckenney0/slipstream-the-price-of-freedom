@@ -2,9 +2,9 @@ smTwkBlinkTime = 0.3
 smTwkZoomTime = 0.5
 smTwkZoomMainView = 0.5
 smTwkZoomOutDistance = 12000
-smTwkMinZoomOutDistance = 0 --10000
+smTwkMinZoomOutDistance = 5000
 smTwkMaxZoomOutDistance = 45000
-smTwkNearClipPlane = 0      --4000
+smTwkNearClipPlane = 4000
 smTwkFarClipPlane = 200000
 smTwkFocusCull = 10000
 smTwkMaxMovementDistance = 60000
@@ -35,45 +35,22 @@ SPI_HorizonLineScale = 2
 SPI_HorizonOrigin = 3
 SPI_WorldPlaneColour = 4
 SPI_WorldLineColour = 5
-horizonRadius = 120000
+horizonRadius = 400000
 horizonHeight = 0.07
 horizonNumberScale = 0.07
 horizonNumberAspect = 1.6
 worldGraphics =
 {
     {
-        scaleParam = SPI_WorldPlaneScale,
+        scaleParam = SPI_HorizonLineScale,
         colourParam = SPI_WorldLineColour,
         mesh =
         {
             colour =
-            { 1, 1, 1, 0.5, },
+            { 1, 1, 1, 1, },
             lineWeight = 1,
             LODs =
-            { 1, "UI\\SensorsManager\\Meshes\\WorldPlaneWireframe.hod", },
-        },
-        placement3D =
-        {
-            position =
-            { 0, 0, 0, },
-            scale =
-            { 1, 1, 1, },
-            visibility =
-            { 0, },
-            invisibility =
-            { "SVF_FlashOff", },
-        },
-    },
-    {
-        scaleParam = SPI_WorldPlaneScale,
-        colourParam = SPI_WorldPlaneColour,
-        mesh =
-        {
-            colour =
-            { 0.64, 0.46, 0, 0.2, },
-            lineWeight = 1,
-            LODs =
-            { 1, "UI\\SensorsManager\\Meshes\\DiskAbove.hod", },
+            { 1, "UI\\SensorsManager\\Meshes\\HorizonAbove.hod", },
         },
         placement3D =
         {
@@ -83,20 +60,18 @@ worldGraphics =
             { 1, 1, 1, },
             visibility =
             { "SVF_Above", },
-            invisibility =
-            { "SVF_FlashOff", },
         },
     },
     {
-        scaleParam = SPI_WorldPlaneScale,
-        colourParam = SPI_WorldPlaneColour,
+        scaleParam = SPI_HorizonLineScale,
+        colourParam = SPI_WorldLineColour,
         mesh =
         {
             colour =
-            { 0.64, 0.46, 0, 0.2, },
+            { 1, 1, 1, 1, },
             lineWeight = 1,
             LODs =
-            { 1, "UI\\SensorsManager\\Meshes\\DiskBelow.hod", },
+            { 1, "UI\\SensorsManager\\Meshes\\HorizonBelow.hod", },
         },
         placement3D =
         {
@@ -106,8 +81,6 @@ worldGraphics =
             { 1, 1, 1, },
             visibility =
             { "SVF_Below", },
-            invisibility =
-            { "SVF_FlashOff", },
         },
     },
 }

@@ -4,9 +4,12 @@
 -- on error send source file (compiled lua) and this outputfile to Age2uN@gmx.net
 --
 function RestrictOptions(playerid)
-    -- local playerRace = Player_GetRace(playerid)
-    -- if  playerRace==Race_Hiigaran then
-    -- end 
+    local playerRace = Player_GetRace(playerid)
+    if  playerRace==Race_Hiigaran then
+        Player_RestrictBuildOption(playerid, "Hgn_Scout")
+        Player_RestrictBuildOption(playerid, "Hgn_C_Module_Research")
+        Player_RestrictResearchOption(playerid, "ScoutPingAbility")
+    end 
 
     -- if  playerRace==Race_Vaygr then
     -- end

@@ -30,8 +30,8 @@ NewSubSystemType.typeString="FrigateGatlingGun"
 NewSubSystemType.collateralDamage=100
 NewSubSystemType.inactiveTimeAfterDamage=80
 NewSubSystemType.activateHealthPercentage=0.1
-NewSubSystemType.costToBuild=800
-NewSubSystemType.timeToBuild=15
+NewSubSystemType.costToBuild=500
+NewSubSystemType.timeToBuild=4
 NewSubSystemType.isResearch=0
 NewSubSystemType.visible=1
 LoadHODFile(NewSubSystemType,1)

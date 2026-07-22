@@ -326,5 +326,24 @@ build =
         DisplayPriority = 130,
         DisplayedName = "$7060",
         Description = "$7061",
+    },
+    -- Needed for the tutorial to work
+    {
+        Type = Ship, 
+        ThingToBuild = "Hgn_Scout", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "", 
+        DisplayPriority = 10, 
+        DisplayedName = "$7030", 
+        Description = "$7031", 
+    },
+    {
+        Type = SubSystem, 
+        ThingToBuild = "Hgn_C_Module_Research", 
+        RequiredResearch = "", 
+        RequiredShipSubSystems = "", 
+        DisplayPriority = 0, 
+        DisplayedName = "$7010", 
+        Description = "$7011", 
     }
 }
